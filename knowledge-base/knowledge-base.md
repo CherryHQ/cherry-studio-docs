@@ -17,7 +17,11 @@ icon: book-open-cover
 
 <figure><img src="../.gitbook/assets/image.webp" alt=""><figcaption></figcaption></figure>
 
-{% include "../.gitbook/includes/zhu-yi-qian-ru-lei-mo-xing-dui-hua-lei-mo-xing-hui-hua-lei-mo-xing-deng-ge-zi-you-ge-zi-de-....md" %}
+{% hint style="danger" %} 注意：
+
+嵌入类模型、对话类模型、绘画类模型等各自有各自的功能，其请求方式跟返回内容、结构都有所不同，请勿强行将其他类别的模型作为嵌入模型使用；
+嵌入类模型CherryStudio会自动分类显示在嵌入模型列表中（如上图），如果确认为嵌入模型但未被正确分类，可到模型列表中点击对应模型后方的设置按钮勾选嵌入选项；
+如果无法确认哪些模型是嵌入模型可到对应服务商查询模型信息。 {% endhint %}
 
 ## 创建知识库
 
