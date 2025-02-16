@@ -4,8 +4,6 @@ icon: book-open-cover
 
 # 知识库教程
 
-知识库教程
-
 在 0.9.1 版本中，CherryStudio 带来了期待已久的知识库功能。
 
 下面我们将按步骤呈现 CherryStudio 的详细使用说明。
@@ -61,7 +59,7 @@ CherryStudio 支持多种添加数据的方式：
 
 1. 导入知识库的文档中的插图暂不支持转换为向量，需要手动转换为文本；
 2. 使用网址作为知识库来源时不一定会成功，有些网站有比较严格的反扒机制（或需要登录、授权等），因此该方式不一定能获取到准确内容。创建完成后建议先搜索测试一下。
-3. 一般网站都会提供sitemap，如CherryStudio的[sitemap](https://docs.cherry-ai.com/cherry-studio/sitemap-pages.xml)，一般情况下在网站的根地址（即网址）后加/sitemap.xml可以获取到相关信息。如`aaa.com/sitemap.xml` 。
+3. 一般网站都会提供sitemap，如CherryStudio的[sitemap](https://docs.cherry-ai.com/sitemap-pages.xml)，一般情况下在网站的根地址（即网址）后加/sitemap.xml可以获取到相关信息。如`aaa.com/sitemap.xml` 。
 4. 如果网站没提供sitemap或者网址比较杂可自行组合一个sitemap的xml文件使用，文件暂时需要使用公网可直接访问的直链的方式填入，本地文件链接不会被识别。
 
 > 1) 可以让AI生成sitemap文件或让AI写一个sitemap的HTML生成器工具；
