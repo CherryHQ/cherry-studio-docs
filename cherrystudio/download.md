@@ -16,7 +16,7 @@ icon: desktop-arrow-down
 
 主线路（GitHub）：
 
-【[下载](https://github.com/CherryHQ/cherry-studio/releases/downloadv0.9.30/Cherry-Studio-0.9.30-setup.exe)】
+【[下载](https://github.com/CherryHQ/cherry-studio/releases/download/v0.9.30/Cherry-Studio-0.9.30-setup.exe)】
 
 备用线路：
 
@@ -26,7 +26,7 @@ icon: desktop-arrow-down
 
 主线路（GitHub）：
 
-【[下载](https://github.com/CherryHQ/cherry-studio/releases/downloadv0.9.30/Cherry-Studio-0.9.30-portable.exe)】
+【[下载](https://github.com/CherryHQ/cherry-studio/releases/download/v0.9.30/Cherry-Studio-0.9.30-portable.exe)】
 
 备用线路：
 
@@ -40,7 +40,7 @@ icon: desktop-arrow-down
 
 主线路（GitHub）：
 
-【[下载](https://github.com/CherryHQ/cherry-studio/releases/downloadv0.9.30/Cherry-Studio-0.9.30-x64.dmg)】
+【[下载](https://github.com/CherryHQ/cherry-studio/releases/download/v0.9.30/Cherry-Studio-0.9.30-x64.dmg)】
 
 备用线路：
 
@@ -50,7 +50,7 @@ icon: desktop-arrow-down
 
 主线路（GitHub）：
 
-【[下载](https://github.com/CherryHQ/cherry-studio/releases/downloadv0.9.30/Cherry-Studio-0.9.30-arm64.dmg)】
+【[下载](https://github.com/CherryHQ/cherry-studio/releases/download/v0.9.30/Cherry-Studio-0.9.30-arm64.dmg)】
 
 备用线路：
 
@@ -64,7 +64,7 @@ icon: desktop-arrow-down
 
 主线路（GitHub）：
 
-【[下载](https://github.com/CherryHQ/cherry-studio/releases/downloadv0.9.30/Cherry-Studio-0.9.30-x86_64.AppImage)】
+【[下载](https://github.com/CherryHQ/cherry-studio/releases/download/v0.9.30/Cherry-Studio-0.9.30-x86_64.AppImage)】
 
 备用线路：
 
@@ -74,7 +74,7 @@ icon: desktop-arrow-down
 
 主线路（GitHub）：
 
-【[下载](https://github.com/CherryHQ/cherry-studio/releases/downloadv0.9.30/Cherry-Studio-0.9.30-arm64.AppImage)】
+【[下载](https://github.com/CherryHQ/cherry-studio/releases/download/v0.9.30/Cherry-Studio-0.9.30-arm64.AppImage)】
 
 备用线路：
 
