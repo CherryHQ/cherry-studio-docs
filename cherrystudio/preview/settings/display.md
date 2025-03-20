@@ -16,7 +16,7 @@ icon: table-columns
 
 该设置是针对对话界面的布局的设置。
 
-#### 话题设置
+#### 话题位置
 
 {% tabs %}
 {% tab title="左侧（默认）" %}
@@ -46,7 +46,7 @@ icon: table-columns
 
 
 
-### 显示话题时间
+#### 显示话题时间
 
 打开时会在话题下方显示话题<mark style="color:blue;">创建</mark>的时间。
 
