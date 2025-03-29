@@ -28,11 +28,11 @@ icon: message
 
 ![](../../.gitbook/assets/上传图片或文档.png) `上传图片或文档` 上传图片需要模型支持，上传文档会自动解析为文字作为上下文提供给模型。
 
-![](<../../.gitbook/assets/开启网络搜索.png>) `开启网络搜索` 须在设置中配置网络搜索相关信息，搜索结果作为上下文返回给大模型,详见[联网模式](../../../websearch/README.md)。
+![](<../../.gitbook/assets/开启网络搜索.png>) `开启网络搜索` 须在设置中配置网络搜索相关信息，搜索结果作为上下文返回给大模型，详见 [联网模式](../../../websearch/README.md)。
 
-![](<../../.gitbook/assets/知识库.png>) `知识库` 开启知识库，详见[知识库教程](../../../knowledge-base/knowledge-base.md)。
+![](<../../.gitbook/assets/知识库.png>) `知识库` 开启知识库，详见 [知识库教程](../../../knowledge-base/knowledge-base.md)。
 
-![](<../../.gitbook/assets/MCP 服务器.png>) `MCP 服务器` 开启 MCP 服务器功能，详见[MCP 使用教程](../../../advanced-basic/mcp.md)。
+![](<../../.gitbook/assets/MCP 服务器.png>) `MCP 服务器` 开启 MCP 服务器功能，详见 [MCP 使用教程](../../../advanced-basic/mcp.md)。
 
 ![](<../../.gitbook/assets/生成图片.png>) `生成图片` 默认不显示，对于支持生成图片的模型（如 Gemini），需手动点亮后才能生成图片。
 
@@ -60,7 +60,7 @@ icon: message
 
 ### 模型设置
 
-模型设置与助手设置当中的 `模型设置` 参数同步,详见 [助手设置](chat.md#bian-ji-zhu-shou)。
+模型设置与助手设置当中的 `模型设置` 参数同步，详见 [助手设置](chat.md#bian-ji-zhu-shou)。
 
 {% hint style="info" %}
 在对话设置当中，仅该模型设置作用于当前助手，其余设置作用于全局。如：设置消息样式为气泡后在任何助手的任何话题下都是气泡样式。
