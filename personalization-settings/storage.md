@@ -9,6 +9,8 @@ Cherry Studio 数据存储遵循系统规范，数据会自动放在用户目录
 > macOS: /Users/username/Library/Application Support/CherryStudioDev
 
 > Windows: C:\Users\username\AppData\Roaming\CherryStudio
+>
+> Linux: /home/username/.config/CherryStudio
 
 <figure><img src="../../.gitbook/assets/image (31).png" alt=""><figcaption></figcaption></figure>
 
