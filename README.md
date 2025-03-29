@@ -8,11 +8,12 @@ icon: cherries
 
 关注我们的社交账号:[推特(X)](https://x.com/CherryStudioAPP?t=DYR0ulaLur-bO4Us3bG79A\&s=05)、[小红书](https://www.xiaohongshu.com/user/profile/662b6853000000000b031d9a?xsec_token=YB_1nKvlH4r5hPYVVbbsNHF8Y6n6AKlm5-DaggPCtd2DQ%3D\&xsec_source=app_share\&xhsshare=CopyLink\&appuid=662b6853000000000b031d9a\&apptime=1738627324\&share_id=ace5db41b5954fab8d98a2a7865a62bc\&share_channel=copy_link)、[微博](https://weibo.com/u/7975656228)、[哔哩哔哩](https://space.bilibili.com/3546657515898892?plat_id=1\&share_from=space\&share_medium=android\&share_plat=android\&share_session_id=864e7c2b-5488-4564-9893-9a72f413811e\&share_source=COPY\&share_tag=s_i\&timestamp=1738627360\&unique_k=hIfGgDW)、[抖音](https://www.douyin.com/user/MS4wLjABAAAAmw9A54m5J0hHVMQY5eGrVJ-EHDoOS0hgJ6M1F9MN2Tn2V163A0xrC4_KVzfmQSxC?previous_page=app_code_link)
 
-加入我们的社群：[QQ群（472019156）](https://qm.qq.com/q/CbZiBWwCXu)、[Telegram](https://t.me/CherryStudioAI)、[discord](https://discord.gg/wez8HtpxqQ)、微信群(点击查看)[^1]
+加入我们的社群：[QQ群（472019156）](https://qm.qq.com/q/CbZiBWwCXu)、[Telegram](https://t.me/CherryStudioAI)、[Discord](https://discord.gg/wez8HtpxqQ)、微信群(点击查看)[^1]
 
 ***
 
-CherryStudio 是一款集多模型对话、知识库管理、AI 绘画、翻译等功能于一体的全能 AI 助手平台。 CherryStudio的高度自定义的设计、强大的扩展能力和友好的用户体验，使其成为专业用户和 AI 爱好者的理想选择。无论是零基础用户还是开发者，都能在 CherryStudio 中找到适合自己的AI功能，提升工作效率和创造力。
+CherryStudio 是一款集多模型对话、知识库管理、AI 绘画、翻译等功能于一体的全能 AI 助手平台。
+CherryStudio 高度自定义的设计、强大的扩展能力和友好的用户体验，使其成为专业用户和 AI 爱好者的理想选择。无论是零基础用户还是开发者，都能在 CherryStudio 中找到适合自己的AI功能，提升工作效率和创造力。
 
 ***
 
