@@ -6,27 +6,27 @@ icon: desktop-arrow-down
 
 ## 直链下载
 
-### Windows 版本:
+### Windows 版本：
 
 {% hint style="info" %}
-注意:Window 7系统不支持安装CherryStudio。
+注意：Windows 7 系统不支持安装 Cherry Studio。
 {% endhint %}
 
-* Windows 安装版 (Setup)
+* Windows 安装版（Setup）
 
-主线路（GitHub）：
+主线路：
 
-【[下载](https://github.com/CherryHQ/cherry-studio/releases/download/v1.1.17/Cherry-Studio-1.1.17-setup.exe)】
+【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.1.17/Cherry-Studio-1.1.17-setup.exe)】
 
 备用线路：
 
 【[线路1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.1.17/Cherry-Studio-1.1.17-setup.exe)】 【[线路2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.1.17/Cherry-Studio-1.1.17-setup.exe)】 【[线路3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.1.17/Cherry-Studio-1.1.17-setup.exe)】
 
-* Windows 便携版 (Portable)
+* Windows 便携版（Portable）
 
-主线路（GitHub）：
+主线路：
 
-【[下载](https://github.com/CherryHQ/cherry-studio/releases/download/v1.1.17/Cherry-Studio-1.1.17-portable.exe)】
+【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.1.17/Cherry-Studio-1.1.17-portable.exe)】
 
 备用线路：
 
@@ -34,23 +34,23 @@ icon: desktop-arrow-down
 
 ***
 
-### macOS 版本:
+### macOS 版本：
 
-* macOS Intel 版 (x64)
+* macOS Intel 版（x64）
 
-主线路（GitHub）：
+主线路：
 
-【[下载](https://github.com/CherryHQ/cherry-studio/releases/download/v1.1.17/Cherry-Studio-1.1.17-x64.dmg)】
+【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.1.17/Cherry-Studio-1.1.17-x64.dmg)】
 
 备用线路：
 
 【[线路1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.1.17/Cherry-Studio-1.1.17-x64.dmg)】 【[线路2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.1.17/Cherry-Studio-1.1.17-x64.dmg)】 【[线路3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.1.17/Cherry-Studio-1.1.17-x64.dmg)】
 
-* macOS Apple Silicon 版 (ARM64-M系列芯片)
+* macOS Apple Silicon 版（ARM64-M系列芯片）
 
-主线路（GitHub）：
+主线路：
 
-【[下载](https://github.com/CherryHQ/cherry-studio/releases/download/v1.1.17/Cherry-Studio-1.1.17-arm64.dmg)】
+【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.1.17/Cherry-Studio-1.1.17-arm64.dmg)】
 
 备用线路：
 
@@ -58,13 +58,13 @@ icon: desktop-arrow-down
 
 ***
 
-### Linux 版本:
+### Linux 版本：
 
 * Linux x86\_64 版本
 
-主线路（GitHub）：
+主线路：
 
-【[下载](https://github.com/CherryHQ/cherry-studio/releases/download/v1.1.17/Cherry-Studio-1.1.17-x86_64.AppImage)】
+【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.1.17/Cherry-Studio-1.1.17-x86_64.AppImage)】
 
 备用线路：
 
@@ -72,9 +72,9 @@ icon: desktop-arrow-down
 
 * Linux ARM64 版本
 
-主线路（GitHub）：
+主线路：
 
-【[下载](https://github.com/CherryHQ/cherry-studio/releases/download/v1.1.17/Cherry-Studio-1.1.17-arm64.AppImage)】
+【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.1.17/Cherry-Studio-1.1.17-arm64.AppImage)】
 
 备用线路：
 
