@@ -1,6 +1,6 @@
 # Table of contents
 
-## CherryStudio
+## Cherry Studio
 
 * [项目简介](README.md)
 * [客户端下载](cherrystudio/download.md)
