@@ -15,8 +15,6 @@ icon: book-open-cover
 
 <figure><img src="../.gitbook/assets/image.webp" alt=""><figcaption></figcaption></figure>
 
-{% include "../.gitbook/includes/zhu-yi-qian-ru-lei-mo-xing-dui-hua-lei-mo-xing-hui-hua-lei-mo-xing-deng-ge-zi-you-ge-zi-de-....md" %}
-
 ## 创建知识库
 
 1. 知识库入口：在 CherryStudio 左侧工具栏，点击知识库图标，即可进入管理页面；
