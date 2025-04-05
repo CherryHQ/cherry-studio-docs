@@ -12,7 +12,7 @@ icon: server
 
 目前数据备份只支持 WebDAV 的方式进行备份。你可以选择支持 WebDAV 的服务来进行云端备份。
 
-你也可以通过 `A电脑` $\xrightarrow{\text{备份}}$ `WebDav` $\xrightarrow{\text{恢复}}$ `B电脑` 的方式来实现多端数据同步。
+你也可以通过 `A电脑` $$\xrightarrow{\text{备份}}$$ `WebDav` $$\xrightarrow{\text{恢复}}$$ `B电脑` 的方式来实现多端数据同步。
 
 #### 以坚果云为例
 
