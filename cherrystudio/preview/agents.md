@@ -6,13 +6,11 @@ icon: head-side-gear
 
 智能体页面是一个助手广场，这里你可以选择或者搜索你想要的模型预设，点击卡片后即可将助手添加在对话页面的助手列表当中。
 
-
-
 你也可以在页面中编辑和创建自己的助手。
 
-* 点击`我的`点击创建智能体卡片即可开始创建自己的助手。
+* 点击 `我的` ，再点击 `创建智能体` 即可开始创建自己的助手。
 
 {% hint style="info" %}
-提示词输入框右上角按钮为AI优化提示词按钮，点击后会覆盖原文。所用模型为[全局默认助手模型](settings/default-models.md#mo-ren-zhu-shou-mo-xing)。
+提示词输入框右上角按钮为 AI 优化提示词按钮，点击后会覆盖原文。所用模型为 [全局默认助手模型](settings/default-models.md#mo-ren-zhu-shou-mo-xing)。
 {% endhint %}
 
