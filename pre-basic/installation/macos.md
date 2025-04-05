@@ -3,9 +3,9 @@ icon: apple
 description: macOS 版本安装教程
 ---
 
-# MacOS
+# macOS
 
-首先到首页点击下载 Mac 版本，或点击下方直达
+首先到官网下载页面点击下载 Mac 版本，或点击下方直达
 
 {% embed url="https://cherry-ai.com/download" %}
 
@@ -23,10 +23,10 @@ description: macOS 版本安装教程
 
 ### 如何确认下载什么版本?
 
-* 点击Mac左上角菜单栏Apple logo
+* 点击 Mac 左上角菜单栏 
 * 在展开菜单中点击关于本机
 * 在弹出窗口中查看处理器信息
 
-如果为Intel芯片则下载Intel版本安装包
+如果为 Intel 芯片则下载 Intel 版本安装包
 
-如果为Apple M\*芯片则下载Apple芯片安装包
+如果为 Apple M\* 芯片则下载 Apple 芯片安装包
