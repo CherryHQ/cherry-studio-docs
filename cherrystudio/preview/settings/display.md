@@ -4,7 +4,7 @@ icon: table-columns
 
 # 显示设置
 
-在此页面你可以设置软件的颜色主题、页面布局或者自定义css来进行一些个性化的设置。
+在此页面你可以设置软件的颜色主题、页面布局或者 [自定义 CSS](../../../personalization-settings/css.md) 来进行一些个性化的设置。
 
 ### 主题选择
 
@@ -42,7 +42,7 @@ icon: table-columns
 
 #### 显示话题时间
 
-打开时会在话题下方显示话题<mark style="color:blue;">创建</mark>的时间。
+打开时会在话题下方显示话题 **创建** 的时间。
 
 {% tabs %}
 {% tab title="关闭时" %}
@@ -54,6 +54,6 @@ icon: table-columns
 {% endtab %}
 {% endtabs %}
 
-### 自定义css
+### 自定义 CSS
 
-通过此设置可灵活的对界面做一些个性化的更改和设置。具体方法参考进阶教程中的[个性化设置](../../../personalization-settings/css.md)。
+通过此设置可灵活的对界面做一些个性化的更改和设置。具体方法参考进阶教程中的 [自定义 CSS](../../../personalization-settings/css.md)。
