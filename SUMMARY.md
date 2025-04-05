@@ -26,7 +26,7 @@
 
 * [安装教程](pre-basic/installation/README.md)
   * [Windows](pre-basic/installation/windows.md)
-  * [MacOS](pre-basic/installation/macos.md)
+  * [macOS](pre-basic/installation/macos.md)
 * [服务商配置](pre-basic/providers/README.md)
   * [阿里云百炼](pre-basic/providers/a-li-yun-bai-lian.md)
   * [硅基流动](pre-basic/providers/siliconcloud.md)
@@ -58,7 +58,7 @@
   * [自定义 CSS](personalization-settings/css.md)
   * [字体推荐](personalization-settings/font.md)
   * [修改存储位置](personalization-settings/storage.md)
-  * [清除css设置](personalization-settings/clear-css.md)
+  * [清除 CSS 设置](personalization-settings/clear-css.md)
 
 ## 知识库教程 <a href="#knowledge-base" id="knowledge-base"></a>
 
@@ -81,7 +81,7 @@
 * [常见问题](question-contact/questions.md)
 * [如何高效提问](question-contact/ask.md)
 * [知识科普](question-contact/knowledge.md)
-* [反馈&建议](question-contact/suggestions.md)
+* [反馈 & 建议](question-contact/suggestions.md)
 
 ## 联系我们 <a href="#contact-us" id="contact-us"></a>
 
