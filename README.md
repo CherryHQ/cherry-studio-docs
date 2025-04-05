@@ -6,14 +6,14 @@ icon: cherries
 
 <figure><img src=".gitbook/assets/docs-readme-banner1.png" alt=""><figcaption></figcaption></figure>
 
-关注我们的社交账号:[推特(X)](https://x.com/CherryStudioAPP?t=DYR0ulaLur-bO4Us3bG79A\&s=05)、[小红书](https://www.xiaohongshu.com/user/profile/662b6853000000000b031d9a?xsec_token=YB_1nKvlH4r5hPYVVbbsNHF8Y6n6AKlm5-DaggPCtd2DQ%3D\&xsec_source=app_share\&xhsshare=CopyLink\&appuid=662b6853000000000b031d9a\&apptime=1738627324\&share_id=ace5db41b5954fab8d98a2a7865a62bc\&share_channel=copy_link)、[微博](https://weibo.com/u/7975656228)、[哔哩哔哩](https://space.bilibili.com/3546657515898892?plat_id=1\&share_from=space\&share_medium=android\&share_plat=android\&share_session_id=864e7c2b-5488-4564-9893-9a72f413811e\&share_source=COPY\&share_tag=s_i\&timestamp=1738627360\&unique_k=hIfGgDW)、[抖音](https://www.douyin.com/user/MS4wLjABAAAAmw9A54m5J0hHVMQY5eGrVJ-EHDoOS0hgJ6M1F9MN2Tn2V163A0xrC4_KVzfmQSxC?previous_page=app_code_link)
+关注我们的社交账号：[推特(X)](https://x.com/CherryStudioAPP?t=DYR0ulaLur-bO4Us3bG79A\&s=05)、[小红书](https://www.xiaohongshu.com/user/profile/662b6853000000000b031d9a?xsec_token=YB_1nKvlH4r5hPYVVbbsNHF8Y6n6AKlm5-DaggPCtd2DQ%3D\&xsec_source=app_share\&xhsshare=CopyLink\&appuid=662b6853000000000b031d9a\&apptime=1738627324\&share_id=ace5db41b5954fab8d98a2a7865a62bc\&share_channel=copy_link)、[微博](https://weibo.com/u/7975656228)、[哔哩哔哩](https://space.bilibili.com/3546657515898892?plat_id=1\&share_from=space\&share_medium=android\&share_plat=android\&share_session_id=864e7c2b-5488-4564-9893-9a72f413811e\&share_source=COPY\&share_tag=s_i\&timestamp=1738627360\&unique_k=hIfGgDW)、[抖音](https://www.douyin.com/user/MS4wLjABAAAAmw9A54m5J0hHVMQY5eGrVJ-EHDoOS0hgJ6M1F9MN2Tn2V163A0xrC4_KVzfmQSxC?previous_page=app_code_link)
 
 加入我们的社群：[QQ群（472019156）](https://qm.qq.com/q/CbZiBWwCXu)、[Telegram](https://t.me/CherryStudioAI)、[Discord](https://discord.gg/wez8HtpxqQ)、微信群(点击查看)[^1]
 
 ***
 
-CherryStudio 是一款集多模型对话、知识库管理、AI 绘画、翻译等功能于一体的全能 AI 助手平台。
-CherryStudio 高度自定义的设计、强大的扩展能力和友好的用户体验，使其成为专业用户和 AI 爱好者的理想选择。无论是零基础用户还是开发者，都能在 CherryStudio 中找到适合自己的AI功能，提升工作效率和创造力。
+Cherry Studio 是一款集多模型对话、知识库管理、AI 绘画、翻译等功能于一体的全能 AI 助手平台。
+Cherry Studio 高度自定义的设计、强大的扩展能力和友好的用户体验，使其成为专业用户和 AI 爱好者的理想选择。无论是零基础用户还是开发者，都能在 Cherry Studio 中找到适合自己的AI功能，提升工作效率和创造力。
 
 ***
 
@@ -26,7 +26,7 @@ CherryStudio 高度自定义的设计、强大的扩展能力和友好的用户�
 <figure><img src=".gitbook/assets/docs-readme-1 (1).png" alt=""><figcaption></figcaption></figure>
 
 * **自动分组**：每个助手的对话记录会自动分组管理，便于用户快速查找历史对话。
-* **对话导出**：支持将完整对话导出为多种格式（如 Markdown、Word 等），方便储存与分享。
+* **对话导出**：支持将完整对话或部分对话导出为多种格式（如 Markdown、Word 等），方便储存与分享。
 * **高度自定义参数**：除了基础参数调整外，还支持用户填写自定义参数，满足个性化需求。
 
 <figure><img src=".gitbook/assets/docs-readme-2 (2).png" alt=""><figcaption></figcaption></figure>
@@ -61,7 +61,7 @@ CherryStudio 高度自定义的设计、强大的扩展能力和友好的用户�
 * **模型自动获取**：一键获取完整模型列表，无需手动配置。
 * **多秘钥轮询**：支持多个 API 秘钥轮换使用，避免速率限制问题。
 * **精准头像匹配**：为每个模型自动匹配专属头像，提升辨识度。
-* **自定义服务商**：支持符合 OpenAI、Gemini 、Anthropic等规范的三方服务商接入，兼容性强。
+* **自定义服务商**：支持符合 OpenAI、Gemini 、Anthropic 等规范的三方服务商接入，兼容性强。
 
 <figure><img src=".gitbook/assets/docs-readme-8.png" alt=""><figcaption></figcaption></figure>
 
@@ -101,7 +101,7 @@ CherryStudio 高度自定义的设计、强大的扩展能力和友好的用户�
 
 ### **项目优势**
 
-1. **小白友好**：CherryStudio 致力于降低技术门槛，零基础用户也能快速上手，让用户专注于工作、学习或者创作。
+1. **小白友好**：Cherry Studio 致力于降低技术门槛，零基础用户也能快速上手，让用户专注于工作、学习或者创作。
 2. **文档完善**：提供详细的使用文档和常见问题处理手册，帮助用户快速解决问题。
 3. **持续迭代**：项目团队积极响应用户反馈，持续优化功能，确保项目健康发展。
 4. **开源与扩展性**：支持用户通过开源代码进行定制和扩展，满足个性化需求。
