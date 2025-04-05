@@ -12,7 +12,7 @@ icon: server
 
 目前数据备份只支持 WebDAV 的方式进行备份。你可以选择支持 WebDAV 的服务来进行云端备份。
 
-你也可以通过 `A电脑` $$\xrightarrow{\text{备份}}$$ `WebDav` $$\xrightarrow{\text{恢复}}$$ `B电脑` 的方式来实现多端数据同步。
+你也可以通过 `A电脑` $$\xrightarrow{\text{备份}}$$ `WebDAV` $$\xrightarrow{\text{恢复}}$$ `B电脑` 的方式来实现多端数据同步。
 
 #### 以坚果云为例
 
@@ -36,7 +36,7 @@ icon: server
 
 <figure><img src="../../../.gitbook/assets/image (43).png" alt=""><figcaption></figcaption></figure>
 
-6. 在 CherryStudio 设置——数据设置中，填写 WebDAV 信息；
+6. 在 Cherry Studio 设置——数据设置中，填写 WebDAV 信息；
 
 <figure><img src="../../../.gitbook/assets/image (48).png" alt=""><figcaption></figcaption></figure>
 
@@ -45,7 +45,7 @@ icon: server
 <figure><img src="../../../.gitbook/assets/image (47).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="success" %}
-webdav服务门槛比较低的一般就是网盘：
+WebDAV 服务门槛比较低的一般就是网盘：
 
 * [坚果云](https://www.jianguoyun.com/)
 * [123盘](https://www.123pan.com/)（需要会员）
