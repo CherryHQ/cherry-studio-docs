@@ -23,7 +23,7 @@ icon: cloud-check
 </strong></code></pre>
 
 {% hint style="warning" %}
-必须使用**英文**逗号。
+必须使用 **英文** 逗号。
 {% endhint %}
 
 ### API 地址
