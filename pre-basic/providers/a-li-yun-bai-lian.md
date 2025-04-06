@@ -22,5 +22,5 @@
     
 8. 可以按照 [模型服务](../../cherrystudio/preview/settings/providers.md) 中的介绍调整相关设置，然后就能使用了。
 {% hint style="info" %}
-如果发现模型列表中没有阿里云百炼的模型，请确认已经按照 [模型服务](../../cherrystudio/preview/providers.md) 中的介绍添加模型，并开启了这个提供商。
+如果发现模型列表中没有阿里云百炼的模型，请确认已经按照 [模型服务](../../cherrystudio/preview/settings/providers.md) 中的介绍添加模型，并开启了这个提供商。
 {% endhint %}
