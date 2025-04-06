@@ -1,5 +1,6 @@
 # 阿里云百炼
-###获取 API Key
+
+
 1. 登录 [阿里云百炼]((https://bailian.console.aliyun.com/?tab=model#/api-key)，没有阿里云账号的话需要注册。
 
 2. 点击右上角的 `创建我的 API-KEY` 按钮。
@@ -15,7 +16,7 @@
    
 6. 点击 `复制` 按钮。
     <figure><img src="../../.gitbook/assets/阿里云百炼复制API密钥.png" alt=""><figcaption>阿里云百炼复制API密钥</figcaption></figure>
-    
+
 7. 转到 Cherry Studio，在 `设置` → `模型服务` → `阿里云百炼` 中找到 `API 密钥` ，将复制的 API 密钥粘贴到这里。
     <figure><img src="../../.gitbook/assets/阿里云百炼填入API密钥.png" alt=""><figcaption>阿里云百炼填入API密钥</figcaption></figure>
     
