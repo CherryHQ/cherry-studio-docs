@@ -20,7 +20,7 @@
 7. 转到 Cherry Studio，在 `设置` → `模型服务` → `阿里云百炼` 中找到 `API 密钥` ，将复制的 API 密钥粘贴到这里。
     <figure><img src="../../.gitbook/assets/阿里云百炼填入API密钥.png" alt=""><figcaption>阿里云百炼填入API密钥</figcaption></figure>
     
-8. 可以按照 [模型服务](../../cherrystudio/preview/providers.md) 中的介绍调整相关设置，然后就能使用了。
+8. 可以按照 [模型服务](../../cherrystudio/preview/settings/providers.md) 中的介绍调整相关设置，然后就能使用了。
 {% hint style="info" %}
 如果发现模型列表中没有阿里云百炼的模型，请确认已经按照 [模型服务](../../cherrystudio/preview/providers.md) 中的介绍添加模型，并开启了这个提供商。
 {% endhint %}
