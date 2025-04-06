@@ -1,7 +1,7 @@
 # 阿里云百炼
 
 
-1. 登录 [阿里云百炼]((https://bailian.console.aliyun.com/?tab=model#/api-key)，没有阿里云账号的话需要注册。
+1. 登录 [阿里云百炼](https://bailian.console.aliyun.com/?tab=model#/api-key)，没有阿里云账号的话需要注册。
 
 2. 点击右上角的 `创建我的 API-KEY` 按钮。
   <figure><img src="../../.gitbook/assets/阿里云百炼创建API密钥.png" alt=""><figcaption>阿里云百炼创建API密钥</figcaption></figure>
