@@ -33,7 +33,7 @@
   * [OpenAI](pre-basic/providers/openai.md)
   * [QwenLM](pre-basic/providers/qwenlm.md)
   * [字节跳动(豆包)](pre-basic/providers/doubao.md)
-  * [OneAPI及其分支项目](pre-basic/providers/oneapi/README.md)
+  * [OneAPI 及其分支项目](pre-basic/providers/oneapi/README.md)
     * [OneAPI](pre-basic/providers/oneapi/oneapi.md)
     * [NewAPI](pre-basic/providers/oneapi/newapi.md)
   * [华为云](pre-basic/providers/huawei.md)
@@ -96,5 +96,5 @@
 
 * [常见模型参考信息](other/models-info.md)
 * [模型榜单](other/model_rank/README.md)
-  * [lmarena.ai排行榜](other/model_rank/lmarena.md)
+  * [lmarena.ai 排行榜](other/model_rank/lmarena.md)
   * [ChatBOT arena](other/model_rank/chatbot-arena.md)
