@@ -47,6 +47,7 @@
 ***
 
 * [联网模式](websearch/README.md)
+  * [网络搜索黑名单配置](websearch/blacklist.md)
   * [火山引擎接入联网](websearch/volcengine.md)
   * [Tavily 联网登录注册教程](websearch/tavily.md)
   * [SearXNG 本地部署与配置](websearch/searxng.md)
