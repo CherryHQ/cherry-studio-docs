@@ -12,8 +12,10 @@ icon: downlaod
 注意：Windows 7 系统不支持安装 Cherry Studio。
 {% endhint %}
 
+#### 安装版（Setup）
+
 <details>
-  <summary>x64 版本 —— 安装版（Setup）</summary>
+  <summary>x64 版本</summary>
   主线路：
 
   【[Cherry Studio 官网](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.2.2/Cherry-Studio-1.2.2-x64-setup.exe)】
@@ -24,7 +26,20 @@ icon: downlaod
 </details>
 
 <details>
-  <summary>x64 版本 —— 便携版（Portable）</summary>
+  <summary>ARM64 版本</summary>
+  主线路：
+
+  【[Cherry Studio 官网](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.2.2/Cherry-Studio-1.2.2-arm64-setup.exe)】
+
+  备用线路：
+
+  【[线路1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.2.2/Cherry-Studio-1.2.2-arm64-setup.exe)】 【[线路2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.2.2/Cherry-Studio-1.2.2-arm64-setup.exe)】 【[线路3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.2.2/Cherry-Studio-1.2.2-arm64-setup.exe)】
+</details>
+
+#### 便携版（Portable）
+
+<details>
+  <summary>x64 版本</summary>
   主线路：
 
   【[Cherry Studio 官网](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.2.2/Cherry-Studio-1.2.2-x64-portable.exe)】
@@ -35,18 +50,7 @@ icon: downlaod
 </details>
 
 <details>
-  <summary>ARM64 版本 —— 安装版（Setup）</summary>
-  主线路：
-
-  【[Cherry Studio 官网](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.2.2/Cherry-Studio-1.2.2-arm64-setup.exe)】
-
-  备用线路：
-
-  【[线路1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.2.2/Cherry-Studio-1.2.2-arm64-setup.exe)】 【[线路2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.2.2/Cherry-Studio-1.2.2-arm64-setup.exe)】 【[线路3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.2.2/Cherry-Studio-1.2.2-arm64-setup.exe)】
-</details>
-
-<details>
-  <summary>ARM64 版本 —— 便携版（Portable）</summary>
+  <summary>ARM64 版本</summary>
   主线路：
 
   【[Cherry Studio 官网](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.2.2/Cherry-Studio-1.2.2-arm64-portable.exe)】
