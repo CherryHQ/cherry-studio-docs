@@ -92,7 +92,7 @@ icon: downlaod
 ### Linux 版本
 
 <details>
-  <summary>x86\_64 版本</summary>
+  <summary>x86_64 版本</summary>
   主线路：
 
   【[Cherry Studio 官网](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.2.2/Cherry-Studio-1.2.2-x86_64.AppImage)】
