@@ -119,7 +119,9 @@ Cherry Studio 高度自定义的设计、强大的扩展能力和友好的用户
 
 ### StarHistory
 
-<iframe style="width:100%;height:auto;min-width:600px;min-height:400px;" src="https://www.star-history.com/embed?secret=Z2l0aHViX3BhdF8xMUJBMzRYRFkwejF6OFdPTGlzd0huX2tzM2hzSFZmM0txMndmUkFOTjdUdVhwZGY5d2dQY0hTN1d5eUZGdjhGc3lERlFVT0xHM3M0SjM5andu#CherryHQ/cherry-studio&Date" frameBorder="0"></iframe>
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=CherryHQ/cherry-studio&type=Date)](https://www.star-history.com/#CherryHQ/cherry-studio&Date)
 
 ## 关注我们的社交账号
 
