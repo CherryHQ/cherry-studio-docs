@@ -65,7 +65,7 @@ icon: downlaod
 ### macOS 版本
 
 <details>
-  <summary>Intel 版（x64）</summary>
+  <summary>Intel 芯片版本（x64）</summary>
   主线路：
 
   【[Cherry Studio 官网](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.2.2/Cherry-Studio-1.2.2-x64.dmg)】
@@ -76,7 +76,7 @@ icon: downlaod
 </details>
 
 <details>
-  <summary>Apple Silicon 版（ARM64-M系列芯片）</summary>
+  <summary>Apple Silicon 版本（ARM64，M 系列芯片）</summary>
   主线路：
 
   【[Cherry Studio 官网](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.2.2/Cherry-Studio-1.2.2-arm64.dmg)】
