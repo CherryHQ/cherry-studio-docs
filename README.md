@@ -117,11 +117,9 @@ Cherry Studio 高度自定义的设计、强大的扩展能力和友好的用户
 * **翻译与办公自动化**：内置翻译助手和文件处理功能，适合需要跨语言交流或文档处理的用户。
 * **AI 绘画与设计**：通过自然语言描述生成图像，满足创意设计需求。
 
-### StarHistory
+### Star History
 
-## Star History
-
-[![Star History Chart](https://api.star-history.com/svg?repos=CherryHQ/cherry-studio&type=Date)](https://www.star-history.com/#CherryHQ/cherry-studio&Date)
+![Star History](https://urlscan.io/liveshot/?width=1300\&height=620\&url=https://cherrystarhistory.ocool.online/)
 
 ## 关注我们的社交账号
 
