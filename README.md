@@ -10,7 +10,8 @@ icon: cherries
 关注我们的社交账号：[推特(X)](https://x.com/CherryStudioAPP)、[小红书](https://www.xiaohongshu.com/user/profile/662b6853000000000b031d9a)、[微博](https://weibo.com/u/7975656228)、[哔哩哔哩](https://space.bilibili.com/3546657515898892)、[抖音](https://www.douyin.com/user/MS4wLjABAAAAmw9A54m5J0hHVMQY5eGrVJ-EHDoOS0hgJ6M1F9MN2Tn2V163A0xrC4_KVzfmQSxC)
 
 
-加入我们的社群：[QQ群（472019156）](https://qm.qq.com/q/CbZiBWwCXu)、[Telegram](https://t.me/CherryStudioAI)、[Discord](https://discord.gg/wez8HtpxqQ)、微信群（点击查看）[^1]
+加入我们的社群：[QQ群（472019156）](https://qm.qq.com/q/CbZiBWwCXu)、[Telegram](https://t.me/CherryStudioAI)、[Discord](https://discord.gg/wez8HtpxqQ)、[微信群(点击查看)](#user-content-fn-1)[^1]
+
 
 ***
 
