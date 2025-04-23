@@ -26,7 +26,7 @@ BRAVE_API_KEY=YOUR_API_KEY
 
 ### @cherry/fetch
 
-用于获取 URL/YouTube 视频字幕的 MCP 服务器。
+用于获取 URL 网页内容的 MCP 服务器。
 
 ### @cherry/filesystem
 
