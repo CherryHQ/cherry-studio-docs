@@ -22,33 +22,33 @@ icon: message
 
 ## 对话框内按钮
 
-<figure><img src="../../.gitbook/assets/对话框.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/对话界面/对话框.png" alt=""><figcaption></figcaption></figure>
 
-![](../../.gitbook/assets/新话题.png) `新话题` 在当前助手内创建一个新话题。
+![](../../.gitbook/assets/对话界面/新话题.png) `新话题` 在当前助手内创建一个新话题。
 
-![](../../.gitbook/assets/上传图片或文档.png) `上传图片或文档` 上传图片需要模型支持，上传文档会自动解析为文字作为上下文提供给模型。
+![](../../.gitbook/assets/对话界面/上传图片或文档.png) `上传图片或文档` 上传图片需要模型支持，上传文档会自动解析为文字作为上下文提供给模型。
 
-![](../../.gitbook/assets/开启网络搜索.png) `开启网络搜索` 须在设置中配置网络搜索相关信息，搜索结果作为上下文返回给大模型，详见 [联网模式](../../websearch/)。
+![](../../.gitbook/assets/对话界面/网络搜索.png) `网络搜索` 须在设置中配置网络搜索相关信息，搜索结果作为上下文返回给大模型，详见 [联网模式](../../websearch/)。
 
-![](../../.gitbook/assets/知识库.png) `知识库` 开启知识库，详见 [知识库教程](../../knowledge-base/knowledge-base.md)。
+![](../../.gitbook/assets/对话界面/知识库.png) `知识库` 开启知识库，详见 [知识库教程](../../knowledge-base/knowledge-base.md)。
 
-![](<../../.gitbook/assets/MCP 服务器.png>) `MCP 服务器` 开启 MCP 服务器功能，详见 [MCP 使用教程](../../advanced-basic/mcp/)。
+![](<../../.gitbook/assets/对话界面/MCP 服务器.png>) `MCP 服务器` 开启 MCP 服务器功能，详见 [MCP 使用教程](../../advanced-basic/mcp/)。
 
-![](../../.gitbook/assets/生成图片.png) `生成图片` 默认不显示，对于支持生成图片的模型（如 Gemini），需手动点亮后才能生成图片。
+![](../../.gitbook/assets/对话界面/生成图片.png) `生成图片` 默认不显示，对于支持生成图片的模型（如 Gemini），需手动点亮后才能生成图片。
 
 {% hint style="info" %}
 由于技术原因，您必须手动点亮按钮才能生成图片，该按钮在此功能优化后会移除。
 {% endhint %}
 
-![](../../.gitbook/assets/选择模型.png) `选择模型` 对于接下来的对话，切换成指定的模型，保留上下文。
+![](../../.gitbook/assets/对话界面/选择模型.png) `选择模型` 对于接下来的对话，切换成指定的模型，保留上下文。
 
-![](../../.gitbook/assets/清空消息.png) `清空消息` 删除该话题下所有内容。
+![](../../.gitbook/assets/对话界面/清空消息.png) `清空消息` 删除该话题下所有内容。
 
-![](../../.gitbook/assets/展开.png) `展开` 让对话框变得更大，以便输入长文。
+![](../../.gitbook/assets/对话界面/展开.png) `展开` 让对话框变得更大，以便输入长文。
 
-![](../../.gitbook/assets/清除上下文.png) `清除上下文` 在不删除内容的情况下，截断模型能获得的上下文，也就是说模型将“忘记”之前的对话内容。
+![](../../.gitbook/assets/对话界面/清除上下文.png) `清除上下文` 在不删除内容的情况下，截断模型能获得的上下文，也就是说模型将“忘记”之前的对话内容。
 
-![](<../../.gitbook/assets/预估 Token 数.png>) `预估 Token 数` 展示预估 Token 数，四个数据分别为 `当前上下文数` 、 `最大上下文数` （ ∞ 表示无限上下文）、 `当前输入框内消息字数` 、 `预估 Token 数` 。
+![](<../../.gitbook/assets/对话界面/预估 Token 数.png>) `预估 Token 数` 展示预估 Token 数，四个数据分别为 `当前上下文数` 、 `最大上下文数` （ ∞ 表示无限上下文）、 `当前输入框内消息字数` 、 `预估 Token 数` 。
 
 {% hint style="info" %}
 此功能仅用于预估 Token 数，实际 Token 数每个模型都是不一样的，请以模型提供商的数据为准。
