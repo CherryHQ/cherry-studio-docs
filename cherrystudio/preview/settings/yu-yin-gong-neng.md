@@ -5,10 +5,7 @@ icon: phone-arrow-up-right
 
 # 语音功能
 
-{% hint style="info" %}
-此功能暂未上线，敬请期待。
-{% endhint %}
-
+```
 Cherry Studio 语音功能使用说明
 
 一、语音功能概述
@@ -205,3 +202,4 @@ Cherry Studio 支持三种 ASR 服务类型：
    - 如果需要完整的语音对话体验，启用语音通话功能
 
 希望这份使用说明能帮助您充分利用 Cherry Studio 的语音功能，享受更自然、便捷的 AI 交互体验！
+```
