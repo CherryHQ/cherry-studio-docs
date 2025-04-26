@@ -8,7 +8,7 @@ icon: download
 
 ### Windows 版本
 
-{% hint style="info" %}
+{% hint style="warning" %}
 注意：Windows 7 系统不支持安装 Cherry Studio。
 {% endhint %}
 
