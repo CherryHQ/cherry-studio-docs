@@ -1,5 +1,5 @@
 ---
-icon: server
+icon: database
 ---
 
 # 数据设置

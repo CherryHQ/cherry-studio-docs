@@ -60,8 +60,8 @@ vLLM 是一个类似Ollama的快速且易于使用的 LLM 推理库。以下是�
 1.  **安装 vLLM：** 按照 vLLM 官方文档（[https://docs.vllm.ai/en/latest/getting\_started/quickstart.html](https://docs.vllm.ai/en/latest/getting_started/quickstart.html)）安装 vLLM。
 
     ```sh
-    pip install vllm # 如果你使用pip
-    uv pip install vllm # 如果你使用uv
+    pip install vllm # 如果你使用 pip
+    uv pip install vllm # 如果你使用 uv
     ```
 2.  **启动 vLLM 服务：** 使用 vLLM 提供的 OpenAI 兼容接口启动服务。主要有两种方式，分别如下：
 

@@ -1,8 +1,8 @@
 # 自动安装 MCP
 
-> 自动安装需要升级 Cherry Studio 到 v1.1.18 版本
+> 自动安装 MCP 需要将 Cherry Studio 升级至 v1.1.18 或更高版本。
 
-#### 功能简介
+## 功能简介
 
 除了手动安装外，Cherry Studio 还内置了 `@mcpmarket/mcp-auto-install` 工具，这是一个更便捷的 MCP 服务器安装方式。你只需要在支持 MCP 服务的大模型对话中输入相应的指令即可。
 
@@ -14,7 +14,7 @@
 * 目前搜索源是从 @modelcontextprotocol 中进行搜索，可以自行配置(下方说明)
 {% endhint %}
 
-#### 使用说明
+## 使用说明
 
 例如，你可以输入：
 
@@ -33,15 +33,15 @@
 * sqlite（数据库）
 * 等等...
 
-> MCP\_PACKAGE\_SCOPES 变量可以自定义 mcp 服务搜索源，默认值为：@modelcontextprotocol，可以自定义配置
+> MCP\_PACKAGE\_SCOPES 变量可以自定义 MCP 服务搜索源，默认值为：`@modelcontextprotocol`，可以自定义配置。
 
-#### @mcpmarket/mcp-auto-install 库的介绍
+## `@mcpmarket/mcp-auto-install` 库的介绍
 
 {% hint style="info" %}
 **默认配置参考：**
 
 ```json
-// axun-uUpaWEdMEMU8C61K mcp服务id,自定义即可
+// `axun-uUpaWEdMEMU8C61K` 为服务id,自定义即可
 "axun-uUpaWEdMEMU8C61K": {
   "name": "mcp-auto-install",
   "description": "Automatically install MCP services (Beta version)",
@@ -61,5 +61,5 @@
 }
 ```
 
-`@mcpmarket/mcp-auto-install` 是一个开源的 npm 包，你可以在 [npm 官方仓库](https://www.npmjs.com/package/@mcpmarket/mcp-auto-install) 查看其详细信息和使用文档。`@mcpmarket`为Cherry Studio官方MCP服务集合
+`@mcpmarket/mcp-auto-install` 是一个开源的 npm 包，你可以在 [npm 官方仓库](https://www.npmjs.com/package/@mcpmarket/mcp-auto-install) 查看其详细信息和使用文档。`@mcpmarket` 为 Cherry Studi 官方 MCP 服务集合。
 {% endhint %}

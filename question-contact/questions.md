@@ -11,7 +11,7 @@ icon: seal-question
 
 | 错误码          | 可能的情况                                                   | 解决方法                                                                                                                                                                                                                                                                                                                                                                                                                           |
 | ------------ | ------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| <h4>400</h4> | 请求体格式错误等                                                | <p>查看对话返回的错误内容或<a href="questions.md#kong-zhi-tai-bao-cuo-cha-kan-fang-fa">控制台</a>查看报错内容，根据提示操作。</p><p><mark style="color:purple;">【常见情况1】</mark>：如果是gemini模型，可能需要进行绑卡操作；<br><mark style="color:purple;">【常见情况2】</mark>：数据体积超限，常见于视觉模型，图片体积超过上游单个请求流量上限会返回该错误码；<br><mark style="color:purple;">【常见情况3】</mark>：加了不支持的参数或参数填写错误。尝试新建一个纯净的助手测试是否正常；<br><mark style="color:purple;">【常见情况4】：</mark>上下文超过限制，清除上下文或新建对话或减少上下文条数。</p> |
+| <h4>400</h4> | 请求体格式错误等                                                | <p>查看对话返回的错误内容或 <a href="questions.md#kong-zhi-tai-bao-cuo-cha-kan-fang-fa">控制台</a 查看报错内容，根据提示操作。</p><p><mark style="color:purple;">【常见情况1】</mark>：如果是gemini模型，可能需要进行绑卡操作；<br><mark style="color:purple;">【常见情况2】</mark>：数据体积超限，常见于视觉模型，图片体积超过上游单个请求流量上限会返回该错误码；<br><mark style="color:purple;">【常见情况3】</mark>：加了不支持的参数或参数填写错误。尝试新建一个纯净的助手测试是否正常；<br><mark style="color:purple;">【常见情况4】：</mark>上下文超过限制，清除上下文或新建对话或减少上下文条数。</p> |
 | <h4>401</h4> | 认证失败：模型不被支持或服务端账户被封禁等                                   | 联系或查看对应服务商账户状态                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | <h4>403</h4> | 请求操作无权限                                                 | 根据对话返回的错误信息或[控制台](questions.md#kong-zhi-tai-bao-cuo-cha-kan-fang-fa)错误信息提示进行相应操作                                                                                                                                                                                                                                                                                                                                               |
 | <h4>404</h4> | 无法找到请求资源                                                | 检查请求路径等                                                                                                                                                                                                                                                                                                                                                                                                                        |
@@ -31,16 +31,16 @@ icon: seal-question
 
 ## 控制台报错查看方法
 
-* 点击CherryStudio客户端窗口后按下快捷键<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>I</kbd>（Mac端：<kbd>Command</kbd>+<kbd>Option</kbd>+<kbd>I</kbd>）
+* 点击 Cherry Studio 客户端窗口后按下快捷键 <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>I</kbd>（Mac端：<kbd>Command</kbd> + <kbd>Option</kbd> + <kbd>I</kbd>）
 
 {% hint style="info" %}
-- 当前活动窗口必须为CherryStudio的客户端窗口才能调出控制台;
+- 当前活动窗口必须为 Cherry Studio 的客户端窗口才能调出控制台;
 - 需要先打开控制台，再点击测试或者发起对话等请求才能收集到请求信息。
 {% endhint %}
 
-* 在弹出的控制台窗口中点击<mark style="color:blue;">`Network`</mark> → 点击查看②处最后一个标有红色 <mark style="color:red;">`×`</mark>  的<mark style="color:red;">`completions`</mark>_（对话类、翻译、模型连通性检查等遇到错误时_） 或<mark style="color:red;">`generations`</mark>_（绘画遇到错误时）_ → 点击<mark style="color:blue;">`Response`</mark>查看完整的返回内容（图中④的区域）。
+* 在弹出的控制台窗口中点击 <mark style="color:blue;">`Network`</mark> → 点击查看②处最后一个标有红色 <mark style="color:red;">`×`</mark>  的 <mark style="color:red;">`completions`</mark>_（对话类、翻译、模型连通性检查等遇到错误时）_ 或 <mark style="color:red;">`generations`</mark>_（绘画遇到错误时）_ → 点击<mark style="color:blue;">`Response`</mark>查看完整的返回内容（图中④的区域）。
 
-> 如果你无法判断该错误的原因,请将该界面截图发送到[官方交流群](https://t.me/CherryStudioAI)中寻求帮助。
+> 如果你无法判断该错误的原因,请将该界面截图发送到 [官方交流群](https://t.me/CherryStudioAI) 中寻求帮助。
 
 <figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1).png" alt="" width="563"><figcaption></figcaption></figure>
 
@@ -80,7 +80,7 @@ icon: seal-question
 > * 示例: `$$\sum_{i=1}^n x_i$$`\
 >   $$\sum_{i=1}^n x_i$$
 
-* 公式渲染错误/乱码 常见在公式内包含中文内容时,尝试切换公式引擎为KateX。
+* 公式渲染错误/乱码 常见在公式内包含中文内容时,尝试切换公式引擎为 KateX。
 
 
 
@@ -100,11 +100,8 @@ icon: seal-question
 
 ## 模型不能识图/无法上传或选择图片
 
-首先需要确认模型是否支持识图，热门模型CherryStudio会对其分类，模型名称后带小眼睛图标的即支持识图。
+首先需要确认模型是否支持识图，热门模型 Cherry Studio 会对其分类，模型名称后带小眼睛图标的即支持识图。
 
 识图模型会支持图像文件的上传，如果模型功能未被正确匹配可在对应服务商的模型列表当中找到该模型，点击其名称后的设置按钮并勾选图像选项。
 
 模型具体的信息可以到对应服务商找到其信息查阅。同嵌入模型一样，不支持视觉的模型不需要强制开启图像功能，勾选了图像的选项也没有作用。
-
-
-

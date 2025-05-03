@@ -1,5 +1,5 @@
 ---
-icon: book
+icon: square-n
 ---
 
 # Notion 配置教程

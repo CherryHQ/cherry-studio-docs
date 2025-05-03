@@ -4,7 +4,7 @@
 
 ## 在 Cherry Studio 中使用 MCP
 
-下面以 `fetch` 功能为例，演示如何在 Cherry Studio 中使用 MCP，可以在[文档](https://github.com/modelcontextprotocol/servers/tree/main/src/fetch)中查找详情。
+下面以 `fetch` 功能为例，演示如何在 Cherry Studio 中使用 MCP，可以在 [文档](https://github.com/modelcontextprotocol/servers/tree/main/src/fetch) 中查找详情。
 
 ### **准备工作：安装 uv、bun**
 
@@ -20,7 +20,7 @@ Cherry Studio 目前只使用内置的 [uv](https://github.com/astral-sh/uv) 和
 
 Windows: `C:\Users\用户名\.cherrystudio\bin`
 
-macOS，Linux: `~/.cherrystudio/bin`
+macOS、Linux: `~/.cherrystudio/bin`
 
 <figure><img src="../../.gitbook/assets/MCP-cherrystudio_bin_文件夹.png" alt=""><figcaption><p>bin 目录</p></figcaption></figure>
 

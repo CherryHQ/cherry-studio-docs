@@ -21,7 +21,7 @@
     * [显示设置](cherrystudio/preview/settings/display.md)
     * [快捷键设置](cherrystudio/preview/settings/key-shortcut.md)
     * [数据设置](cherrystudio/preview/settings/data.md)
-    * [语音功能](cherry-studio/preview/settings/yu-yin-gong-neng.md)
+    * [语音功能](cherrystudio/preview/settings/yu-yin-gong-neng.md)
 
 ## 基础教程 <a href="#pre-basic" id="pre-basic"></a>
 
@@ -76,7 +76,7 @@
   * [配置和使用 MCP](advanced-basic/mcp/config.md)
   * [自动安装 MCP](advanced-basic/mcp/auto-install.md)
   * [内置 MCP 配置](advanced-basic/mcp/in-memory.md)
-  * [配置Dify知识库](advanced-basic/mcp/dify.md)
+  * [配置 Dify 知识库](advanced-basic/mcp/dify.md)
   * [添加 ModelScope MCP 服务器](advanced-basic/mcp/tian-jia-modelscope-mcp-fu-wu-qi.md)
 
 ## 项目贡献 <a href="#contribution" id="contribution"></a>
@@ -104,6 +104,4 @@
 ## 其他内容 <a href="#other" id="other"></a>
 
 * [常见模型参考信息](other/models-info.md)
-* [模型榜单](other/model_rank/README.md)
-  * [lmarena.ai 排行榜](other/model_rank/lmarena.md)
-  * [ChatBOT arena](other/model_rank/chatbot-arena.md)
+* [模型榜单](other/model_rank/chatbot-arena.md)

@@ -18,7 +18,7 @@ MEMORY_FILE_PATH=/path/to/your/file.json
 
 ### @cherry/brave-search
 
-一个集成了Brave 搜索 API 的 MCP 服务器实现，提供网页与本地搜索双重功能。
+一个集成了 Brave 搜索 API 的 MCP 服务器实现，提供网页与本地搜索双重功能。
 
 ```typescript
 BRAVE_API_KEY=YOUR_API_KEY
@@ -30,4 +30,4 @@ BRAVE_API_KEY=YOUR_API_KEY
 
 ### @cherry/filesystem
 
-实现文件系统操作的模型上下文协议（MCP）的Node.js服务器。
+实现文件系统操作的模型上下文协议（MCP）的 Node.js 服务器。

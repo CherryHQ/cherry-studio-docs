@@ -1,5 +1,5 @@
 ---
-icon: square-check
+icon: list-check
 ---
 
 # 项目规划

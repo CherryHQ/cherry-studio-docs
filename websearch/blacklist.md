@@ -1,5 +1,5 @@
 ---
-icon: list
+icon: ban
 ---
 
 # 网络搜索黑名单配置

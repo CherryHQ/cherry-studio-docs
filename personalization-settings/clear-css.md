@@ -1,5 +1,5 @@
 ---
-icon: soap
+icon: trash-xmark
 ---
 
 # 清除css设置

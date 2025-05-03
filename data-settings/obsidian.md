@@ -1,6 +1,6 @@
 ---
 description: 数据设置→Obsidian配置
-icon: book
+icon: gem
 ---
 
 # Obsidian 配置教程

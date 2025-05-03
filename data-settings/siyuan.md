@@ -1,5 +1,5 @@
 ---
-icon: book
+icon: map
 ---
 
 # 思源笔记配置教程
