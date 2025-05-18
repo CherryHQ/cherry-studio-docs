@@ -104,4 +104,4 @@
 ## 其他内容 <a href="#other" id="other"></a>
 
 * [常见模型参考信息](other/models-info.md)
-* [模型榜单](other/model_rank/chatbot-arena.md)
+* [模型榜单](other/model_rank/lmarena.md)
