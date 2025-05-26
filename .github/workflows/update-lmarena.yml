@@ -2,8 +2,8 @@
 name: Update LLM Arena Rankings
 
 on:
-  schedule:
-    - cron: '0 0 * * *'  # 每天 UTC 0:00 运行（北京时间 8:00）
+  # schedule:
+  #   - cron: '0 0 * * *'  # 每天 UTC 0:00 运行（北京时间 8:00）
   workflow_dispatch:      # 允许手动触发
 
 jobs:
