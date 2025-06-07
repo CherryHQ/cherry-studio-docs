@@ -1,0 +1,44 @@
+name: Update Download Version
+
+on:
+  repository_dispatch:
+    types: [update-download-version]
+
+jobs:
+  update-version:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install PyYAML # Assuming PyYAML might be needed for markdown parsing, or other libraries if the script becomes more complex
+
+      - name: Run Update Download Version Script
+        id: run_script
+        env:
+          NEW_VERSION: ${{ github.event.client_payload.version }}
+        run: python .github/scripts/update_download_version.py
+
+      - name: Commit and push if changes
+        if: success()
+        run: |
+          git diff --quiet cherrystudio/download.md || \
+          (
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git add cherrystudio/download.md
+            git commit -m "Auto: Update download links to ${{ github.event.client_payload.version }}"
+            git push
+          )
+          echo "No changes to commit or changes committed."
