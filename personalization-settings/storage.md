@@ -60,7 +60,7 @@ set user_data_dir=%current_path_dir%user-data-dir
 
 @echo 查找当前路径下 Cherry-Studio-*-portable.exe
 setlocal enabledelayedexpansion
-for /f "delims=" %%F in ('dir /b /a-d "Cherry-Studio-*-portable.exe" 2^>nul') do (
+for /f "delims=" %%F in ('dir /b /a-d "Cherry-Studio-*-portable*.exe" 2^>nul') do (
     set "target_file=!cd!\%%F"
     goto :break
 )
