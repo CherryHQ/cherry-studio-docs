@@ -6,11 +6,11 @@ icon: image
 Este documento ha sido traducido del chino por IA y aún no ha sido revisado.
 {% endhint %}
 
-# Pintura
+# Dibujo
 
-La función de pintura actualmente solo es compatible con los modelos de dibujo de SiliconFlow. Puedes registrarte para obtener una cuenta en [SiliconFlow](https://www.siliconflow.cn/) y [agregarla como proveedor](settings/providers.md) para usarla.
+Actualmente, la función de dibujo solo admite modelos de pintura de Silicon Flow. Puedes registrarte para obtener una cuenta en [Silicon Flow](https://www.siliconflow.cn/) y [agregarlo como proveedor](settings/providers.md) para utilizarlo.
 
-Para consultas sobre parámetros, puedes pasar el ratón sobre el símbolo `?` en el área correspondiente para ver las instrucciones.
+Para consultas sobre parámetros, pasa el cursor sobre el `?` en el área correspondiente para ver la descripción.
 
 {% hint style="info" %}
 Se agregarán más proveedores en el futuro. ¡Manténganse atentos!

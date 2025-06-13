@@ -6,18 +6,18 @@ icon: hexagon-exclamation
 यह दस्तावेज़ AI द्वारा चीनी से अनुवादित किया गया है और अभी तक इसकी समीक्षा नहीं की गई है।
 {% endhint %}
 
-# सामान्य प्रश्न
+# आम समस्याएँ (Common Problems)
 
 ### 1. mcp-server-time
 
-<figure><img src="../../.gitbook/assets/telegram-cloud-photo-size-5-6068931438453048569-y.jpg" alt=""><figcaption><p>त्रुटि स्क्रीनशॉट</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/telegram-cloud-photo-size-5-6068931438453048569-y.jpg" alt=""><figcaption><p>त्रुटि स्क्रीनशॉट (Error Screenshot)</p></figcaption></figure>
 
-**समाधान**  
+**समाधान (Solution)**&#x20;
 
-"पैरामीटर" कॉलम में निम्नांकित भरें:
+"पैरामीटर्स (Parameters)" सेक्शन में निम्न भरें:
 
 ```
 mcp-server-time
 --local-timezone
-<你的标准时区，例如：Asia/Shanghai>
+<आपका स्टैंडर्ड टाइमज़ोन, उदाहरण: Asia/Shanghai>
 ```

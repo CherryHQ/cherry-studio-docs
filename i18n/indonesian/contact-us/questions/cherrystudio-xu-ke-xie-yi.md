@@ -3,70 +3,70 @@
 Dokumen ini diterjemahkan dari bahasa Mandarin oleh AI dan belum ditinjau.
 {% endhint %}
 
-# Perjanjian Lisensi Cherry Studio
+# Lisensi Cherry Studio
 
-Dengan menggunakan atau mendistribusikan bagian atau elemen apa pun dari materi Cherry Studio, Anda dianggap telah menyetujui dan menerima isi perjanjian ini, yang mulai berlaku segera.
+Penggunaan atau pendistribusian setiap bagian atau elemen material Cherry Studio akan dianggap sebagai penerimaan dan persetujuan Anda terhadap isi perjanjian ini, yang berlaku segera.
 
 ## I. Definisi
 
-1. Perjanjian Lisensi Cherry Studio ini (selanjutnya disebut "Perjanjian") mengacu pada persyaratan dan ketentuan yang didefinisikan dalam perjanjian ini terkait penggunaan, penyalinan, distribusi, dan modifikasi materi.
-2. "Kami" mengacu pada Shanghai Qianhui Technology Co., Ltd.
-3. "Anda" mengacu pada individu atau entitas hukum yang menggunakan hak yang diberikan dalam perjanjian ini, dan/atau menggunakan materi untuk tujuan apa pun dan di bidang penggunaan apa pun.
-4. "Pihak Ketiga" mengacu pada individu atau entitas hukum yang tidak memiliki hubungan kontrol bersama dengan kami atau Anda.
-5. "Cherry Studio" mengacu pada rangkaian perangkat lunak ini, termasuk tetapi tidak terbatas pada [contoh: pustaka inti, editor, plugin, proyek sampel], serta kode sumber, dokumentasi, kode contoh, dan elemen lainnya yang kami distribusikan. (Harap jelaskan secara rinci sesuai dengan komposisi aktual CherryStudio)
-6. "Materi" secara kolektif mengacu pada Cherry Studio kepemilikan Shanghai Qianhui Technology Co., Ltd. dan dokumentasi (beserta bagian apa pun darinya), yang disediakan berdasarkan perjanjian ini.
-7. "Bentuk Sumber" mengacu pada bentuk yang disukai untuk modifikasi, termasuk tetapi tidak terbatas pada kode sumber, file sumber dokumen, dan file konfigurasi.
-8. "Bentuk Target" mengacu pada bentuk apa pun yang dihasilkan melalui transformasi atau terjemahan mekanis dari bentuk sumber, termasuk tetapi tidak terbatas pada kode objek yang dikompilasi, dokumen yang dihasilkan, dan bentuk yang dikonversi ke jenis media lain.
-9. "Penggunaan Komersial" mengacu pada tujuan yang mendatangkan manfaat atau keuntungan komersial secara langsung atau tidak langsung, termasuk tetapi tidak terbatas pada penjualan, lisensi, berlangganan, periklanan, pemasaran, pelatihan, layanan konsultasi, dll.
-10. "Modifikasi" mengacu pada perubahan, penyesuaian, derivatif, atau pengembangan lanjutan apa pun terhadap bentuk sumber materi, termasuk tetapi tidak terbatas pada modifikasi nama aplikasi, Logo, kode, fungsionalitas, antarmuka, dll.
+1. "Perjanjian Lisensi Cherry Studio" (selanjutnya disebut "Perjanjian") merujuk pada syarat dan ketentuan mengenai penggunaan, penyalinan, pendistribusian, dan modifikasi material sebagaimana didefinisikan dalam Perjanjian ini.
+2. "Kami" (atau "Pihak Kami") merujuk pada Shanghai Qianhui Technology Co., Ltd.
+3. "Anda" (atau "Pihak Anda") merujuk pada individu atau entitas hukum yang menggunakan hak yang diberikan berdasarkan Perjanjian ini dan/atau menggunakan material untuk tujuan apa pun dan dalam bidang penggunaan apa pun.
+4. "Pihak Ketiga" merujuk pada individu atau entitas hukum yang tidak memiliki kontrol bersama dengan Kami maupun Anda.
+5. "Cherry Studio" merujuk pada rangkaian perangkat lunak ini, termasuk namun tidak terbatas pada [contoh: perpustakaan inti, editor, plugin, proyek contoh], serta kode sumber, dokumentasi, kode contoh, dan elemen lainnya yang Kami distribusikan. (Harap jelaskan secara rinci sesuai komposisi aktual Cherry Studio)
+6. "Material" secara kolektif merujuk pada Cherry Studio milik Shanghai Qianhui Technology Co., Ltd. dan dokumentasi (serta bagian apa pun darinya), yang disediakan berdasarkan Perjanjian ini.
+7. "Bentuk Sumber" merujuk pada bentuk yang disukai untuk melakukan modifikasi, termasuk namun tidak terbatas pada kode sumber, file sumber dokumentasi, dan file konfigurasi.
+8. "Bentuk Sasaran" merujuk pada bentuk apa pun yang dihasilkan dari transformasi atau terjemahan mekanis bentuk sumber, termasuk namun tidak terbatas pada kode objek yang dikompilasi, dokumentasi yang dihasilkan, dan bentuk yang dikonversi ke jenis media lain.
+9. "Penggunaan Komersial" merujuk pada tujuan untuk keuntungan atau keunggulan komersial langsung/tidak langsung, termasuk namun tidak terbatas pada penjualan, lisensi, langganan, periklanan, pemasaran, pelatihan, layanan konsultasi, dll.
+10. "Modifikasi" merujuk pada perubahan, penyesuaian, turunan, atau pengembangan sekunder apa pun terhadap bentuk sumber material, termasuk namun tidak terbatas pada modifikasi nama aplikasi, Logo, kode, fungsi, antarmuka, dll.
 
 ## II. Pemberian Hak
 
-1. **Penggunaan Komersial Gratis (terbatas pada kode yang tidak dimodifikasi):** Kami dengan ini memberikan lisensi non-eksklusif, global, tidak dapat dialihkan, dan bebas royalti kepada Anda berdasarkan kekayaan intelektual atau hak lain yang kami miliki atau wakili dalam materi, untuk menggunakan, menyalin, mendistribusikan, menyalin ulang, dan mendistribusikan materi yang tidak dimodifikasi, termasuk untuk penggunaan komersial, tunduk pada persyaratan dan ketentuan perjanjian ini.
-2. **Lisensi Komersial (jika diperlukan):** Saat memenuhi kondisi yang diuraikan dalam Bagian III "Lisensi Komersial", Anda perlu mendapatkan lisensi komersial tertulis yang jelas dari kami untuk menjalankan hak berdasarkan perjanjian ini.
+1. **Penggunaan Komersial Gratis (terbatas pada kode tidak dimodifikasi):** Kami dengan ini memberikan lisensi non-eksklusif, global, tidak dapat dialihkan, dan bebas royalti kepada Anda untuk menggunakan, menyalin, mendistribusikan, menyalin, dan mendistribusikan material yang tidak dimodifikasi, termasuk untuk Penggunaan Komersial, tunduk pada syarat dan ketentuan Perjanjian ini.
+2. **Lisensi Komersial (jika diperlukan):** Ketika memenuhi kondisi yang dijelaskan dalam Bagian III "Lisensi Komersial", Anda harus memperoleh lisensi komersial tertulis eksplisit dari Kami untuk menjalankan hak berdasarkan Perjanjian ini.
 
 ## III. Lisensi Komersial
 
-Dalam salah satu situasi berikut, Anda perlu menghubungi kami dan mendapatkan lisensi komersial tertulis yang jelas sebelum melanjutkan penggunaan materi Cherry Studio:
+Dalam salah satu kondisi berikut, Anda harus menghubungi Kami dan memperoleh lisensi komersial tertulis eksplisit sebelum melanjutkan penggunaan material Cherry Studio:
 
-1. **Modifikasi dan Derivatif:** Anda melakukan modifikasi atau pengembangan derivatif berdasarkan materi Cherry Studio (termasuk tetapi tidak terbatas pada modifikasi nama aplikasi, Logo, kode, fungsionalitas, antarmuka, dll).
-2. **Layanan Perusahaan:** Dalam lingkungan internal perusahaan Anda, atau menyediakan layanan berbasis Cherry Studio untuk klien perusahaan, dengan layanan yang mendukung 10 pengguna kumulatif atau lebih.
-3. **Penjualan Bundel Perangkat Keras:** Anda memasang atau mengintegrasikan Cherry Studio secara prabayar ke dalam perangkat keras atau produk untuk dijual secara bundel.
-4. **Pengadaan Skala Besar Pemerintah atau Lembaga Pendidikan:** Skenario penggunaan Anda termasuk proyek pengadaan skala besar oleh pemerintah atau lembaga pendidikan, terutama yang melibatkan kebutuhan sensitif seperti keamanan dan privasi data.
-5. **Layanan Cloud untuk Publik:** Menyediakan layanan cloud berbasis Cherry Studio yang ditujukan untuk publik.
+1. **Modifikasi dan Turunan:** Anda melakukan modifikasi pada material Cherry Studio atau pengembangan turunan berdasarkan material tersebut (termasuk namun tidak terbatas pada modifikasi nama aplikasi, Logo, kode, fungsi, antarmuka, dll).
+2. **Layanan Perusahaan:** Menyediakan layanan berbasis Cherry Studio di dalam perusahaan Anda atau untuk klien perusahaan, dengan layanan yang mendukung penggunaan kumulatif oleh 10 pengguna atau lebih.
+3. **Penjualan Bundel Perangkat Keras:** Anda menginstal atau mengintegrasikan Cherry Studio ke dalam perangkat keras atau produk untuk dijual secara bundel.
+4. **Pengadaan Skala Besar Pemerintah/Lembaga Pendidikan:** Skenario penggunaan Anda termasuk dalam proyek pengadaan skala besar pemerintah atau lembaga pendidikan, terutama yang melibatkan persyaratan sensitif seperti keamanan atau privasi data.
+5. **Layanan Cloud Publik:** Menyediakan layanan cloud berbasis Cherry Studio yang ditujukan untuk publik.
 
 ## IV. Pendistribusian Ulang
 
-Anda dapat mendistribusikan salinan materi yang tidak dimodifikasi, atau menyediakannya sebagai bagian dari produk atau layanan yang mengandung materi yang tidak dimodifikasi, dalam bentuk sumber atau bentuk target, asalkan Anda memenuhi syarat berikut:
+Anda dapat mendistribusikan salinan material yang tidak dimodifikasi, atau menyediakannya sebagai bagian dari produk/layanan yang mengandung material tidak dimodifikasi, dalam bentuk sumber atau bentuk sasaran, dengan ketentuan:
 
-1. Anda harus menyediakan salinan perjanjian ini kepada setiap penerima materi lainnya;
-2. Anda harus mempertahankan pemberitahuan atribusi berikut di semua salinan materi yang Anda distribusikan, dan menempatkannya dalam file teks "NOTICE" atau serupa yang didistribusikan sebagai bagian dari salinan tersebut:  
+1. Anda harus menyediakan salinan Perjanjian ini kepada semua penerima material;
+2. Anda harus mempertahankan pernyataan atribusi berikut dalam semua salinan material yang Anda distribusikan, dan menempatkannya dalam file "NOTICE" atau teks serupa yang didistribusikan sebagai bagian dari salinan tersebut:  
    `"Cherry Studio is licensed under the Cherry Studio LICENSE AGREEMENT, Copyright (c) 上海千彗科技有限公司. All Rights Reserved."`
 
 ## V. Aturan Penggunaan
 
-1. Materi dapat tunduk pada kontrol atau pembatasan ekspor. Anda harus mematuhi hukum dan peraturan yang berlaku saat menggunakan materi.
-2. Jika Anda menggunakan materi atau hasil/outputnya untuk membuat, melatih, menyempurnakan, atau meningkatkan perangkat lunak atau model yang akan didistribusikan atau disediakan, kami menganjurkan Anda untuk menandai dengan jelas "Dibuat dengan Cherry Studio" atau "Didukung oleh Cherry Studio" dalam dokumentasi produk terkait.
+1. Material mungkin tunduk pada kontrol atau pembatasan ekspor. Anda harus mematuhi hukum dan peraturan yang berlaku saat menggunakan material.
+2. Jika Anda menggunakan material atau output/hasilnya untuk membuat, melatih, menyempurnakan, atau meningkatkan perangkat lunak/model yang akan didistribusikan/disediakan, Kami menganjurkan Anda untuk mencantumkan tanda "Built with Cherry Studio" atau "Powered by Cherry Studio" secara mencolok dalam dokumentasi produk terkait.
 
 ## VI. Kekayaan Intelektual
 
-1. Kami mempertahankan kepemilikan semua kekayaan intelektual atas materi dan karya turunan yang dibuat oleh atau untuk kami. Tunduk pada persyaratan dan ketentuan perjanjian ini, kepemilikan kekayaan intelektual atas modifikasi dan karya turunan materi yang Anda buat akan ditentukan sesuai kesepakatan lisensi komersial tertentu. Tanpa lisensi komersial, Anda tidak memiliki kepemilikan atas modifikasi dan karya turunan materi, dan kekayaan intelektualnya tetap menjadi milik kami.
-2. Tidak ada lisensi merek dagang yang diberikan untuk menggunakan nama dagang, merek dagang, tanda layanan, atau nama produk kami, kecuali sebagaimana diperlukan untuk memenuhi kewajiban pemberitahuan berdasarkan perjanjian ini atau untuk penggunaan yang wajar dan biasa dalam mendeskripsikan dan mendistribusikan ulang materi.
-3. Jika Anda mengajukan gugatan atau proses hukum lainnya (termasuk tuntutan balasan atau balasan dalam litigasi) terhadap kami atau entitas apa pun, menyatakan bahwa materi atau outputnya, atau bagian apa pun darinya, melanggar kekayaan intelektual atau hak lain yang Anda miliki atau dapat berikan lisensinya, semua lisensi yang diberikan kepada Anda berdasarkan perjanjian ini akan dihentikan pada tanggal dimulainya atau diajukannya gugatan atau proses hukum tersebut.
+1. Kami mempertahankan kepemilikan semua hak kekayaan intelektual atas material dan karya turunan yang dibuat oleh atau untuk Kami. Kepatuhan terhadap Perjanjian ini, kepemilikan KI untuk modifikasi dan karya turunan yang Anda buat akan diatur oleh perjanjian lisensi komersial spesifik. **Tanpa lisensi komersial, Anda tidak memiliki kepemilikan atas modifikasi/karya turunan material, dan hak KI tetap menjadi milik Kami.**
+2. Tidak ada lisensi merek dagang yang diberikan untuk menggunakan nama dagang, merek dagang, tanda layanan, atau nama produk Kami, kecuali untuk pemberitahuan yang diperlukan berdasarkan Perjanjian atau penggunaan wajar yang diperlukan dalam mendeskripsikan/mendistribusikan ulang material.
+3. Jika Anda mengajukan gugatan atau tindakan hukum lain (termasuk klaim balik atau tuntutan balik) terhadap Kami atau entitas apa pun, yang menyatakan bahwa material/outputnya melanggar hak KI/hak lain yang Anda miliki/lisensikan, semua lisensi yang diberikan kepada Anda berdasarkan Perjanjian ini akan berakhir pada tanggal dimulainya tindakan hukum tersebut.
 
-## VII. Penyangkalan dan Pembatasan Tanggung Jawab
+## VII. Penafian dan Pembatasan Tanggung Jawab
 
-1. Kami tidak berkewajiban untuk mendukung, memperbarui, memberikan pelatihan, atau mengembangkan versi lebih lanjut dari materi CherryStudio, juga tidak berkewajiban untuk memberikan lisensi terkait apa pun.
-2. Materi disediakan "SEBAGAIMANA ADANYA", tanpa jaminan apa pun, baik tersurat maupun tersirat, termasuk jaminan kelayakan jual, tidak melanggar hak, atau kesesuaian untuk tujuan tertentu. Kami tidak memberikan jaminan atau tanggung jawab apa pun terkait keamanan atau stabilitas materi dan outputnya.
-3. Dalam keadaan apa pun, kami tidak bertanggung jawab kepada Anda atas kerusakan apa pun yang timbul dari penggunaan atau ketidakmampuan Anda dalam menggunakan materi atau outputnya, termasuk tetapi tidak terbatas pada kerusakan langsung, tidak langsung, khusus, atau konsekuensial, bagaimanapun hal itu terjadi.
-4. Anda akan membela, mengganti rugi, dan membuat kami bebas dari tuntutan terkait klaim apa pun dari Pihak Ketiga yang timbul dari atau terkait dengan penggunaan atau pendistribusian materi oleh Anda.
+1. Kami tidak berkewajiban untuk mendukung, memperbarui, memberikan pelatihan, atau mengembangkan versi material CherryStudio lebih lanjut, maupun memberikan lisensi terkait.
+2. Material disediakan "SEBAGAIMANA ADANYA" tanpa jaminan tersurat/tersirat apa pun, termasuk jaminan kelayakan jual, ketiadaan pelanggaran, atau kesesuaian untuk tujuan tertentu. Kami tidak memberikan jaminan maupun tanggung jawab atas keamanan atau stabilitas material dan outputnya.
+3. Dalam keadaan apa pun, Kami tidak bertanggung jawab kepada Anda atas kerusakan apa pun yang timbul dari penggunaan/ketidakmampuan menggunakan material atau outputnya, termasuk namun tidak terbatas pada kerusakan langsung/tidak khusus/konsekuensial.
+4. Anda akan membela, mengganti rugi, dan melindungi Kami dari klaim apa pun oleh pihak ketiga yang timbul dari penggunaan/pendistribusian material oleh Anda.
 
-## VIII. Kelangsungan dan Pengakhiran
+## VIII. Keberlakuan dan Pengakhiran
 
-1. Masa berlaku perjanjian ini dimulai pada saat Anda menerima perjanjian ini atau mengakses materi, dan akan tetap berlaku hingga diakhiri sesuai dengan persyaratan dan ketentuan perjanjian ini.
-2. Kami dapat mengakhiri perjanjian ini jika Anda melanggar ketentuan atau persyaratan apa pun. Setelah pengakhiran perjanjian ini, Anda harus menghentikan penggunaan materi. Bagian VII, IX, dan "II. Perjanjian Kontributor" tetap berlaku setelah pengakhiran perjanjian ini.
+1. Masa berlaku Perjanjian ini dimulai saat Anda menerima Perjanjian atau mengakses material, dan akan terus berlaku hingga diakhiri sesuai syarat Perjanjian.
+2. Kami dapat mengakhiri Perjanjian jika Anda melanggar ketentuannya. Setelah pengakhiran, Anda harus menghentikan penggunaan material. Bagian VII, IX, dan **II. Perjanjian Kontributor** tetap berlaku setelah pengakhiran.
 
 ## IX. Hukum yang Berlaku dan Yurisdiksi
 
-1. Perjanjian ini dan sengketa apa pun yang timbul dari atau terkait dengannya akan diatur oleh hukum Tiongkok.
-2. Pengadilan Rakyat Shanghai memiliki yurisdiksi eksklusif atas sengketa apa pun yang timbul dari perjanjian ini.
+1. Perjanjian ini dan setiap sengketa yang timbul darinya akan diatur oleh hukum Tiongkok.
+2. Pengadilan Rakyat Kota Shanghai memiliki yurisdiksi eksklusif atas sengketa apa pun yang timbul dari Perjanjian ini.

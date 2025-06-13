@@ -31,14 +31,14 @@
 
 <figure><img src="../../.gitbook/assets/mcp-auto-install_shot2.png" alt=""><figcaption><p>MCP 伺服器配置介面</p></figcaption></figure>
 
-系統會自動識別你的需求，並透過 `@mcpmarket/mcp-auto-install` 完成安裝。這個工具支援多種類型的 MCP 伺服器，包括但不限於：
+系統會自動識別你的需求，並通過 `@mcpmarket/mcp-auto-install` 完成安裝。這個工具支援多種類型的 MCP 伺服器，包括但不限於：
 
 * filesystem（檔案系統）
 * fetch（網路請求）
 * sqlite（資料庫）
 * 等等...
 
-> MCP\_PACKAGE\_SCOPES 變數可以自訂 MCP 服務搜尋源，預設值為：`@modelcontextprotocol`，可以自訂配置。
+> MCP_PACKAGE_SCOPES 變數可以自定義 MCP 服務搜尋源，預設值為：`@modelcontextprotocol`，可以自定義配置。
 
 ## `@mcpmarket/mcp-auto-install` 函式庫的介紹
 
@@ -46,7 +46,7 @@
 **預設配置參考：**
 
 ```json
-// `axun-uUpaWEdMEMU8C61K` 為服務id,自訂即可
+// `axun-uUpaWEdMEMU8C61K` 為服務id,自定義即可
 "axun-uUpaWEdMEMU8C61K": {
   "name": "mcp-auto-install",
   "description": "Automatically install MCP services (Beta version)",
@@ -66,5 +66,5 @@
 }
 ```
 
-`@mcpmarket/mcp-auto-install` 是一個開源的 npm 套件，你可以在 [npm 官方倉庫](https://www.npmjs.com/package/@mcpmarket/mcp-auto-install) 查看其詳細資訊和使用文件。`@mcpmarket` 為 Cherry Studio 官方 MCP 服務集合。
+`@mcpmarket/mcp-auto-install` 是一個開源的 npm 套件，你可以在 [npm 官方倉庫](https://www.npmjs.com/package/@mcpmarket/mcp-auto-install) 查看其詳細資訊和使用文件。`@mcpmarket` 為 Cherry Studi 官方 MCP 服務集合。
 {% endhint %}

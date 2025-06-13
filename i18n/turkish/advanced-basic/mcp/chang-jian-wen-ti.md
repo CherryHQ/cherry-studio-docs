@@ -6,14 +6,14 @@ icon: hexagon-exclamation
 Bu belge Çince'den yapay zeka tarafından çevrilmiştir ve henüz incelenmemiştir.
 {% endhint %}
 
-# Sıkça Sorulan Sorular
+# Sık Sorulan Sorular
 
 ### 1. mcp-server-time
 
 <figure><img src="../../.gitbook/assets/telegram-cloud-photo-size-5-6068931438453048569-y.jpg" alt=""><figcaption><p>Hata ekran görüntüsü</p></figcaption></figure>
 
 **Çözüm**  
-"Parametreler" sütununa aşağıdakileri girin:
+"Parametreler" bölümüne aşağıdakileri yazın:
 
 ```
 mcp-server-time

@@ -8,21 +8,21 @@ Dieses Dokument wurde von einer KI aus dem Chinesischen übersetzt und ist noch 
 
 # Dateneinstellungen
 
-Diese Oberfläche ermöglicht Cloud- und lokale Datensicherungen, Abfrage des lokalen Datenverzeichnisses sowie Cache-Bereinigung für Client-Daten.
+Auf dieser Oberfläche können Sie Cloud- und lokale Backups von Client-Daten durchführen, lokale Datenverzeichnisse abfragen sowie den Cache löschen.
 
 ### Datensicherung
 
-Derzeit werden Datensicherungen nur über WebDAV unterstützt. Sie können WebDAV-fähige Dienste für Cloud-Sicherungen nutzen.
+Derzeit werden Backups nur über WebDAV unterstützt. Für Cloud-Backups können Sie einen WebDAV-fähigen Dienst nutzen.
 
-Daten können auch über das Schema `Computer A` $$\xrightarrow{\text{Sicherung}}$$ `WebDAV` $$\xrightarrow{\text{Wiederherstellung}}$$ `Computer B` zwischen verschiedenen Geräten synchronisiert werden.
+Alternativ können Sie Daten zwischen mehreren Geräten synchronisieren über: `Computer A` $$\xrightarrow{\text{Sichern}}$$ `WebDAV` $$\xrightarrow{\text{Wiederherstellen}}$$ `Computer B`.
 
-#### Beispiel mit Nutzeria Cloud
+#### Beispiel mit Nutstore
 
-1. Melden Sie sich bei Nutzeria Cloud an, klicken Sie auf den Benutzernamen oben rechts und wählen Sie „Kontoinformationen“:
+1. Melden Sie sich bei Nutstore an, klicken Sie oben rechts auf den Benutzernamen und wählen Sie "Kontoinformationen":
 
 <figure><img src="../../../.gitbook/assets/image (39).png" alt=""><figcaption></figcaption></figure>
 
-2. Wählen Sie „Sicherheitsoptionen“ und klicken Sie auf „Anwendung hinzufügen“:
+2. Wählen Sie "Sicherheitseinstellungen" und klicken Sie auf "Anwendung hinzufügen"
 
 <figure><img src="../../../.gitbook/assets/image (40).png" alt=""><figcaption></figcaption></figure>
 
@@ -30,34 +30,34 @@ Daten können auch über das Schema `Computer A` $$\xrightarrow{\text{Sicherung}
 
 <figure><img src="../../../.gitbook/assets/image (41).png" alt=""><figcaption></figcaption></figure>
 
-4. Notieren Sie das generierte Passwort:
+4. Notieren Sie das Passwort:
 
 <figure><img src="../../../.gitbook/assets/image (42).png" alt=""><figcaption></figcaption></figure>
 
-5. Rufen Sie Serveradresse, Benutzernamen und Passwort ab:
+5. Serveradresse, Benutzername und Passwort abrufen:
 
 <figure><img src="../../../.gitbook/assets/image (43).png" alt=""><figcaption></figcaption></figure>
 
-6. Tragen Sie die WebDAV-Informationen in Cherry Studio unter Einstellungen → Dateneinstellungen ein:
+6. Tragen Sie im Cherry Studio unter Einstellungen → Dateneinstellungen die WebDAV-Informationen ein:
 
 <figure><img src="../../../.gitbook/assets/image (48).png" alt=""><figcaption></figcaption></figure>
 
-7. Wählen Sie Daten-Sicherung oder Wiederherstellung und konfigurieren Sie ggf. automatische Sicherungsintervalle:
+7. Wählen Sie Backup oder Wiederherstellung aus und konfigurieren Sie bei Bedarf automatische Backups:
 
 <figure><img src="../../../.gitbook/assets/image (47).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="success" %}
-Niederschwellige WebDAV-Dienste bieten typischerweise Cloud-Speicher:
+Niedrigschwellige WebDAV-Dienste sind typischerweise Cloud-Speicher:
 
-* [Nutzeria Cloud](https://www.jianguoyun.com/)
-* [123Speicher](https://www.123pan.com/) (Premium erforderlich)
-* [Alibaba Cloud Disk](https://www.alipan.com/) (Kauf erforderlich)
-* [Box](https://www.box.com/) (10 GB kostenlos, 250 MB Dateigrößenlimit)
-* [Dropbox](https://www.dropbox.com/) (2 GB kostenlos, 16 GB durch Empfehlungen)
-* [TeraCloud](https://teracloud.jp/en/) (10 GB kostenlos + 5 GB durch Empfehlungen)
-* [Yandex Disk](https://disk.yandex.com/) (10 GB kostenlos)
+* [Nutstore](https://www.jianguoyun.com/)
+* [123Pan](https://www.123pan.com/) (Premium erforderlich)
+* [Alibaba Cloud Drive](https://www.alipan.com/) (Kauf erforderlich)
+* [Box](https://www.box.com/) (10GB kostenlos, Dateien bis 250MB)
+* [Dropbox](https://www.dropbox.com/) (2GB kostenlos, +16GB durch Empfehlungen)
+* [TeraCloud](https://teracloud.jp/en/) (10GB kostenlos, +5GB durch Empfehlungen)
+* [Yandex Disk](https://disk.yandex.com/) (10GB kostenlos)
 
-Selbstgehostete Alternativen:
+Optionen für selbst gehostete Lösungen:
 
 * [Alist](https://alist.nn.ci/zh/)
 * [Cloudreve](https://cloudreve.org/)

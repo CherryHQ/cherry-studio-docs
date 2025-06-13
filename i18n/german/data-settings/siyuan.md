@@ -8,7 +8,7 @@ Dieses Dokument wurde von einer KI aus dem Chinesischen übersetzt und ist noch 
 
 # Tutorial zur Konfiguration von SiYuan Notes
 
-Unterstützt den Export von Themen und Nachrichten zu SiYuan Notes.
+Ermöglicht den Export von Themen und Nachrichten in SiYuan Notes.
 
 ## Schritt 1
 
@@ -26,35 +26,35 @@ Unterstützt den Export von Themen und Nachrichten zu SiYuan Notes.
 
 ## Schritt 3
 
-Fügen Sie die kopierte Notizbuch-ID in die Einstellungen von Cherry Studio ein
+Fügen Sie die Notizbuch-ID in die Cherry Studio-Einstellungen ein
 
-<figure><img src="../.gitbook/assets/siyuan-image-4.png" alt=""><figcaption><p>Tragen Sie die Notizbuch-ID in die Dateneinstellungen ein</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/siyuan-image-4.png" alt=""><figcaption><p>Notizbuch-ID in Dateneinstellungen eintragen</p></figcaption></figure>
 
 ## Schritt 4
 
-Geben Sie die Adresse von SiYuan Notes ein
+Tragen Sie die SiYuan Notes-Adresse ein
 
 * **Lokal**\
   Normalerweise `http://127.0.0.1:6806`
-* **Selbst gehostet**\
+* **Selbstgehostet**\
   Ihre Domain `http://note.domain.com`
 
-<figure><img src="../.gitbook/assets/siyuan-image-5.png" alt=""><figcaption><p>Geben Sie Ihre SiYuan-Notes-Adresse ein</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/siyuan-image-5.png" alt=""><figcaption><p>SiYuan Notes-Adresse eintragen</p></figcaption></figure>
 
 ## Schritt 5
 
-Kopieren Sie den `API-Token` von SiYuan Notes
+Kopieren Sie das `API-Token` von SiYuan Notes
 
-<figure><img src="../.gitbook/assets/siyuan-image-6.png" alt=""><figcaption><p>SiYuan-Notes-Token kopieren</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/siyuan-image-6.png" alt=""><figcaption><p>SiYuan-Token kopieren</p></figcaption></figure>
 
-Fügen Sie ihn in die Cherry-Studio-Einstellungen ein und überprüfen Sie die Verbindung
+Tragen Sie es in die Cherry Studio-Einstellungen ein und prüfen Sie die Verbindung
 
-<figure><img src="../.gitbook/assets/siyuan-image-7.png" alt=""><figcaption><p>Datenbank-ID eingeben und auf "Prüfen" klicken</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/siyuan-image-7.png" alt=""><figcaption><p>Datenbank-ID eintragen und prüfen</p></figcaption></figure>
 
 ## Schritt 6
 
-Glückwunsch! Die Einrichtung von SiYuan Notes ist abgeschlossen ✅ Sie können nun Inhalte von Cherry Studio in Ihre SiYuan Notes exportieren
+Glückwunsch! Die Konfiguration von SiYuan Notes ist abgeschlossen ✅ Jetzt können Sie Cherry Studio-Inhalte in Ihre SiYuan Notes exportieren
 
-<figure><img src="../.gitbook/assets/siyuan-image-8.png" alt=""><figcaption><p>Nach SiYuan Notes exportieren</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/siyuan-image-8.png" alt=""><figcaption><p>In SiYuan Notes exportieren</p></figcaption></figure>
 
 <figure><img src="../.gitbook/assets/siyuan-image-9.png" alt=""><figcaption><p>Exportierte Ergebnisse anzeigen</p></figcaption></figure>

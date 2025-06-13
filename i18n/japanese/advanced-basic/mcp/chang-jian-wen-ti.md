@@ -12,12 +12,12 @@ icon: hexagon-exclamation
 
 <figure><img src="../../.gitbook/assets/telegram-cloud-photo-size-5-6068931438453048569-y.jpg" alt=""><figcaption><p>エラースクリーンショット</p></figcaption></figure>
 
-**解決方法**  
+**解決方法**
 
-「パラメータ」欄に以下のように入力してください：
+「パラメータ」欄に以下の内容を入力:
 
 ```
 mcp-server-time
 --local-timezone
-<あなたの標準タイムゾーン、例: Asia/Shanghai>
+# あなたの標準タイムゾーン、例: Asia/Shanghai
 ```

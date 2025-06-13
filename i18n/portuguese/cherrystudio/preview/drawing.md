@@ -6,14 +6,14 @@ icon: image
 Este documento foi traduzido do chinês por IA e ainda não foi revisado.
 {% endhint %}
 
-# Desenho
+# Pintura
 
-Atualmente, a função de desenho suporta apenas o modelo de desenho da SiliconFlow. Você pode criar uma conta em [SiliconFlow](https://www.siliconflow.cn/) e [adicioná-la aos provedores de serviço](settings/providers.md) para utilizar.
+Atualmente, o recurso de pintura suporta apenas os modelos de pintura da SiliconFlow. Você pode registrar uma conta em [SiliconFlow](https://www.siliconflow.cn/) e [adicioná-la como provedor](settings/providers.md) para usar.
 
-Em caso de dúvidas sobre os parâmetros, passe o mouse sobre o `?` na área correspondente para ver a explicação.
+Para dúvidas sobre parâmetros, passe o mouse sobre o símbolo `?` na área correspondente para ver as instruções.
 
 {% hint style="info" %}
-Mais provedores de serviço serão adicionados futuramente. Fique atento!
+Mais provedores serão adicionados posteriormente. Fique atento!
 {% endhint %}
 
 {% include "../../.gitbook/includes/Gemini图片生成注意事项.md" %}

@@ -7,16 +7,16 @@ Dokumen ini diterjemahkan dari bahasa Mandarin oleh AI dan belum ditinjau.
 
 > Instalasi otomatis MCP memerlukan upgrade Cherry Studio ke versi v1.1.18 atau lebih tinggi.
 
-## Pengenalan Fitur
+## Pengenalan Fungsi
 
-Selain instalasi manual, Cherry Studio juga menyertakan alat `@mcpmarket/mcp-auto-install`, metode instalasi server MCP yang lebih praktis. Anda hanya perlu memasukkan perintah yang sesuai pada dialog model besar yang mendukung layanan MCP.
+Selain instalasi manual, Cherry Studio juga dilengkapi dengan alat `@mcpmarket/mcp-auto-install`, yang merupakan cara instalasi server MCP yang lebih nyaman. Anda hanya perlu memasukkan perintah yang sesuai dalam dialog model besar yang mendukung layanan MCP.
 
 {% hint style="warning" %}
-**Peringatan tahap pengujian:**
+**Pengingat Tahap Pengujian:**
 
 * `@mcpmarket/mcp-auto-install` saat ini masih dalam tahap pengujian
-* Efektivitasnya bergantung pada "kecerdasan" model besar - beberapa akan menambahkan secara otomatis, beberapa masih **perlu diubah parameternya secara manual di pengaturan MCP**
-* Saat ini sumber pencarian berasal dari @modelcontextprotocol, dapat dikonfigurasi sendiri (penjelasan di bawah)
+* Efektivitas bergantung pada "kecerdasan" model besar, beberapa akan menambahkan secara otomatis, beberapa masih **perlu mengubah parameter tertentu secara manual di pengaturan MCP**
+* Saat ini sumber pencarian adalah dari @modelcontextprotocol, dapat dikonfigurasi sendiri (penjelasan di bawah)
 {% endhint %}
 
 ## Petunjuk Penggunaan
@@ -24,10 +24,10 @@ Selain instalasi manual, Cherry Studio juga menyertakan alat `@mcpmarket/mcp-aut
 Misalnya, Anda dapat memasukkan:
 
 ```
-帮我安装一个 filesystem mcp server
+Bantu saya menginstal server mcp filesystem
 ```
 
-<figure><img src="../../.gitbook/assets/mcp-auto-install_shot1.png" alt=""><figcaption><p>Memasukkan perintah untuk instalasi server MCP</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/mcp-auto-install_shot1.png" alt=""><figcaption><p>Memasukkan perintah untuk menginstal server MCP</p></figcaption></figure>
 
 <figure><img src="../../.gitbook/assets/mcp-auto-install_shot2.png" alt=""><figcaption><p>Antarmuka konfigurasi server MCP</p></figcaption></figure>
 
@@ -36,17 +36,17 @@ Sistem akan secara otomatis mengenali kebutuhan Anda dan menyelesaikan instalasi
 * filesystem (sistem file)
 * fetch (permintaan jaringan)
 * sqlite (basis data)
-* dan lainnya...
+* dll...
 
-> Variabel MCP_PACKAGE_SCOPES dapat menyesuaikan sumber pencarian layanan MCP, nilai default: `@modelcontextprotocol`, dapat dikonfigurasi sesuai kebutuhan.
+> Variabel MCP_PACKAGE_SCOPES dapat menyesuaikan sumber pencarian layanan MCP, nilai default: `@modelcontextprotocol`, dapat dikonfigurasi kustom.
 
-## Pengenalan Pustaka `@mcpmarket/mcp-auto-install`
+## Pengenalan Perpustakaan `@mcpmarket/mcp-auto-install`
 
 {% hint style="info" %}
 **Referensi konfigurasi default:**
 
 ```json
-// `axun-uUpaWEdMEMU8C61K` adalah ID layanan, bisa disesuaikan
+// `axun-uUpaWEdMEMU8C61K` adalah id layanan, bisa dikustom
 "axun-uUpaWEdMEMU8C61K": {
   "name": "mcp-auto-install",
   "description": "Menginstal layanan MCP secara otomatis (Versi Beta)",
@@ -66,5 +66,5 @@ Sistem akan secara otomatis mengenali kebutuhan Anda dan menyelesaikan instalasi
 }
 ```
 
-`@mcpmarket/mcp-auto-install` adalah paket npm sumber terbuka. Anda dapat melihat detail dan dokumentasi penggunaannya di [repositori resmi npm](https://www.npmjs.com/package/@mcpmarket/mcp-auto-install). `@mcpmarket` merupakan koleksi layanan MCP resmi Cherry Studio.
+`@mcpmarket/mcp-auto-install` adalah paket npm sumber terbuka, Anda dapat melihat informasi detail dan dokumentasi penggunaan di [repositori resmi npm](https://www.npmjs.com/package/@mcpmarket/mcp-auto-install). `@mcpmarket` adalah koleksi layanan MCP resmi Cherry Studio.
 {% endhint %}

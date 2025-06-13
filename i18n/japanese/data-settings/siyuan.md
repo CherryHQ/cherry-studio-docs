@@ -8,17 +8,17 @@ icon: map
 
 # 思源ノート設定チュートリアル
 
-トピックやメッセージを思源ノートにエクスポートする機能をサポートします。
+トピックやメッセージを思源ノートにエクスポートする方法を説明します。
 
 ## ステップ 1
 
 思源ノートを開き、新しいノートブックを作成します
 
-<figure><img src="../.gitbook/assets/siyuan-image-1.png" alt=""><figcaption><p>新規ノートブックを作成</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/siyuan-image-1.png" alt=""><figcaption><p>新しいノートブックをクリック</p></figcaption></figure>
 
 ## ステップ 2
 
-ノートブックの設定を開き、`ノートブックID` をコピーします
+ノートブックの設定を開き、「ノートブックID」をコピーします
 
 <figure><img src="../.gitbook/assets/siyuan-image-2.png" alt="" width="400"><figcaption><p>ノートブック設定を開く</p></figcaption></figure>
 
@@ -26,7 +26,7 @@ icon: map
 
 ## ステップ 3
 
-コピーしたノートブックIDを Cherry Studio の設定に入力します
+コピーしたノートブックIDを Cherry Studio の設定に貼り付けます
 
 <figure><img src="../.gitbook/assets/siyuan-image-4.png" alt=""><figcaption><p>データ設定にノートブックIDを入力</p></figcaption></figure>
 
@@ -35,25 +35,25 @@ icon: map
 思源ノートのアドレスを入力します
 
 * **ローカル**\
-  通常 `http://127.0.0.1:6806`
-* **自己デプロイ**\
-  ご自身のドメイン `http://note.domain.com`
+  通常は `http://127.0.0.1:6806`
+* **自己ホスト型**\
+  あなたのドメイン `http://note.domain.com`
 
-<figure><img src="../.gitbook/assets/siyuan-image-5.png" alt=""><figcaption><p>思源ノートアドレスを入力</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/siyuan-image-5.png" alt=""><figcaption><p>思源ノートのアドレスを入力</p></figcaption></figure>
 
 ## ステップ 5
 
-思源ノートの `APIトークン` をコピーします
+思源ノートの `API トークン` をコピーします
 
 <figure><img src="../.gitbook/assets/siyuan-image-6.png" alt=""><figcaption><p>思源ノートトークンをコピー</p></figcaption></figure>
 
-Cherry Studio の設定に入力してチェックします
+Cherry Studio の設定に貼り付け、接続を確認します
 
-<figure><img src="../.gitbook/assets/siyuan-image-7.png" alt=""><figcaption><p>データベースIDを入力してチェックをクリック</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/siyuan-image-7.png" alt=""><figcaption><p>データベースIDを入力しチェックをクリック</p></figcaption></figure>
 
 ## ステップ 6
 
-おめでとうございます！思源ノートの設定が完了しました ✅ これで Cherry Studio のコンテンツを思源ノートにエクスポートできます
+設定が完了しました ✅ Cherry Studio のコンテンツを思源ノートにエクスポートできるようになります
 
 <figure><img src="../.gitbook/assets/siyuan-image-8.png" alt=""><figcaption><p>思源ノートにエクスポート</p></figcaption></figure>
 

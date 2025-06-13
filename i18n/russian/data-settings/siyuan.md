@@ -6,15 +6,15 @@ icon: map
 Этот документ переведен с китайского языка с помощью ИИ и еще не был проверен.
 {% endhint %}
 
-# Руководство по настройке Siyuan Notes
+# Руководство по настройке SiYuan Note
 
-Поддерживает экспорт тем и сообщений в Siyuan Notes.
+Позволяет экспортировать темы и сообщения в SiYuan Note.
 
 ## Шаг 1
 
-Откройте Siyuan Notes и создайте новый блокнот
+Откройте SiYuan Note и создайте блокнот
 
-<figure><img src="../.gitbook/assets/siyuan-image-1.png" alt=""><figcaption><p>Нажмите "Создать новый блокнот"</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/siyuan-image-1.png" alt=""><figcaption><p>Нажмите "Создать блокнот"</p></figcaption></figure>
 
 ## Шаг 2
 
@@ -32,29 +32,29 @@ icon: map
 
 ## Шаг 4
 
-Укажите адрес Siyuan Notes
+Введите адрес SiYuan Note
 
 * **Локальный**\
   Обычно `http://127.0.0.1:6806`
-* **Собственный сервер**\
+* **Самостоятельное размещение**\
   Ваш домен `http://note.domain.com`
 
-<figure><img src="../.gitbook/assets/siyuan-image-5.png" alt=""><figcaption><p>Введите адрес вашего Siyuan Notes</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/siyuan-image-5.png" alt=""><figcaption><p>Введите адрес вашего SiYuan Note</p></figcaption></figure>
 
 ## Шаг 5
 
-Скопируйте `API Token` Siyuan Notes
+Скопируйте `API токен` SiYuan Note
 
-<figure><img src="../.gitbook/assets/siyuan-image-6.png" alt=""><figcaption><p>Скопируйте токен Siyuan Notes</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/siyuan-image-6.png" alt=""><figcaption><p>Скопируйте токен SiYuan Note</p></figcaption></figure>
 
-Введите его в настройки Cherry Studio и проверьте
+Вставьте в настройки Cherry Studio и проверьте подключение
 
 <figure><img src="../.gitbook/assets/siyuan-image-7.png" alt=""><figcaption><p>Введите ID базы данных и нажмите "Проверить"</p></figcaption></figure>
 
 ## Шаг 6
 
-Поздравляем! Настройка Siyuan Notes завершена ✅ Теперь вы можете экспортировать содержимое Cherry Studio в свой блокнот
+Поздравляем! Настройка SiYuan Note завершена ✅ Теперь вы можете экспортировать содержимое Cherry Studio в ваш блокнот
 
-<figure><img src="../.gitbook/assets/siyuan-image-8.png" alt=""><figcaption><p>Экспорт в Siyuan Notes</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/siyuan-image-8.png" alt=""><figcaption><p>Экспортировать в SiYuan Note</p></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/siyuan-image-9.png" alt=""><figcaption><p>Просмотр результатов экспорта</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/siyuan-image-9.png" alt=""><figcaption><p>Просмотреть результаты экспорта</p></figcaption></figure>

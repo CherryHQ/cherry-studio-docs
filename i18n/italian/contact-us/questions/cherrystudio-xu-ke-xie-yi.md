@@ -3,70 +3,70 @@
 Questo documento è stato tradotto dal cinese tramite IA e non è ancora stato revisionato.
 {% endhint %}
 
-# Cherry Studio License Agreement  
+# Accordo di Licenza Cherry Studio
 
-Utilizzando o distribuendo qualsiasi parte o elemento dei materiali Cherry Studio, si riconosce di aver accettato il contenuto di questo accordo, che ha effetto immediato.  
+Utilizzando o distribuendo qualsiasi parte o elemento di Cherry Studio, si riconosce di accettare e comprendere i termini del presente accordo, che diventa immediatamente efficace.
 
-## Art. I. Definizioni  
+## I. Definizioni
 
-1. Questo Cherry Studio License Agreement (di seguito "Accordo") si riferisce ai termini e condizioni definiti in questo documento riguardanti l'utilizzo, la riproduzione, la distribuzione e la modifica del Materiale.  
-2. "Noi" (o "Nostro") si riferisce a Shanghai Qianhui Technology Co., Ltd.  
-3. "Voi" (o "Vostro") si riferisce a individui o entità giuridiche che esercitano i diritti concessi da questo Accordo e/o utilizzano il Materiale per qualsiasi scopo e in qualsiasi ambito di utilizzo.  
-4. "Terzi" si riferisce a individui o entità giuridiche che non hanno un rapporto di controllo comune con Noi o con Voi.  
-5. "Cherry Studio" indica la suite software, inclusi ma non limitati a [esempio: librerie core, editor, plugin, progetti di esempio], codice sorgente, documentazione, codice campione e altri elementi da Noi distribuiti. (Descrivere dettagliatamente in base alla composizione effettiva di CherryStudio)  
-6. "Materiale" indica collettivamente la soluzione proprietaria Cherry Studio e la documentazione (e loro parti) di Shanghai Qianhui Technology Co., Ltd., fornite secondo questo Accordo.  
-7. "Forma Sorgente" indica la forma preferita per le modifiche, inclusi ma non limitati a codice sorgente, file sorgente di documentazione e file di configurazione.  
-8. "Forma Derivata" indica qualsiasi forma risultante da trasformazione meccanica o traduzione della Forma Sorgente, inclusi codice oggetto compilato, documentazione generata e forme convertite in altri media.  
-9. "Uso Commerciale" si riferisce a scopi che generano vantaggi commerciali diretti o indiretti, inclusi vendita, licenza, abbonamenti, pubblicità, marketing, formazione, consulenze, ecc.  
-10. "Modifiche" indica qualsiasi modifica, adattamento, derivato o sviluppo secondario della Forma Sorgente del Materiale, inclusi ma non limitati a: nome applicazione, logo, codice, funzionalità, interfaccia.  
+1. Il presente "Accordo di Licenza Cherry Studio" (di seguito "Accordo") si riferisce ai termini e condizioni relativi all'uso, copia, distribuzione e modifica dei Materiali qui definiti.
+2. "Noi" (o "Licenziante") indica Shanghai Qianhui Technology Co., Ltd.
+3. "Voi" (o "Licenziatario") indica il soggetto fisico o giuridico che esercita i diritti concessi dal presente accordo e/o utilizza i Materiali per qualsiasi scopo e in qualsiasi settore.
+4. "Terza Parte" indica qualsiasi soggetto fisico o giuridico che non sia sotto controllo comune con Noi o Voi.
+5. "Cherry Studio" indica la suite software, includendo senza limitazioni [ad esempio: librerie core, editor, plugin, progetti di esempio], e relativi codice sorgente, documentazione, codice di esempio e altri elementi distribuiti da Noi. (Descrivere in dettaglio in base all'effettiva composizione di CherryStudio)
+6. "Materiali" indica collettivamente il software proprietario Cherry Studio e la documentazione (o loro parti) forniti da Shanghai Qianhui Technology Co., Ltd. in base al presente accordo.
+7. "Formato Sorgente" indica la forma preferita per le modifiche, includendo codice sorgente, file sorgente di documentazione e file di configurazione.
+8. "Formato Compilato" indica qualsiasi formato derivante da conversione o traduzione meccanica del formato sorgente, incluso codice oggetto compilato, documentazione generata e conversioni in altri formati multimediali.
+9. "Uso Commerciale" indica l'uso per scopi di guadagno o vantaggio commerciale diretto/indiretto, inclusi vendita, licenze, abbonamenti, pubblicità, marketing, formazione, consulenze, ecc.
+10. "Modifica" indica qualsiasi alterazione, adattamento, derivato o sviluppo secondario del formato sorgente dei Materiali, inclusi cambiamenti a nome applicazione, logo, codice, funzionalità, interfacce, ecc.
 
-## Art. II. Diritti Concessi  
+## II. Diritti Concessi
 
-1. **Utilizzo Commerciale Gratuito (solo codice non modificato):** Concediamo una licenza globale, non esclusiva, non trasferibile, royalty-free per utilizzare, riprodurre, distribuire e copiare il Materiale non modificato, incluso l'uso commerciale, subordinata ai termini di questo Accordo.  
-2. **Autorizzazione Commerciale (se necessario):** Qualora applicabile l'Articolo III ("Autorizzazione Commerciale"), è necessaria un’esplicita autorizzazione scritta da parte Nostra per esercitare i diritti di questo Accordo.  
+1. Uso Commerciale Gratuito (solo per codice non modificato): Concediamo una licenza non esclusiva, globale, non trasferibile e royalty-free per usare, copiare, distribuire e ridistribuire Materiali non modificati, incluso l'uso commerciale, soggetta ai termini del presente accordo.
+2. Licenza Commerciale (quando necessario): Nei casi specificati nella Sezione III "Licenza Commerciale", è necessario ottenere un'autorizzazione scritta esplicita da Noi per esercitare i diritti qui concessi.
 
-## Art. III. Autorizzazione Commerciale  
+## III. Licenza Commerciale
 
-È necessario contattarci e ottenere un’esplicita autorizzazione scritta prima di utilizzare il Materiale Cherry Studio in uno dei seguenti casi:  
+Nei seguenti casi, è necessario contattarci e ottenere un'autorizzazione commerciale scritta per continuare l'uso dei Materiali Cherry Studio:
 
-1. **Modifiche e Derivati:** Realizzazione di modifiche o sviluppi derivati dal Materiale (inclusi nome applicazione, logo, codice, funzionalità, interfaccia, ecc.).  
-2. **Servizi Aziendali:** Fornitura di servizi basati su Cherry Studio a clienti aziendali o interni, supportando ≥10 utenti cumulativi.  
-3. **Vincolo Hardware:** Preinstallazione o integrazione di Cherry Studio in dispositivi hardware per vendita in bundle.  
-4. **Acquisti Istituzionali:** Utilizzo in progetti di acquisto su larga scala da parte di enti governativi o educativi, specie se coinvolgono sicurezza o privacy dati sensibili.  
-5. **Servizi Cloud Pubblici:** Offerta di servizi cloud pubblici basati su Cherry Studio.  
+1. Modifiche e Derivati: Effettuate modifiche o sviluppi derivati su Cherry Studio (inclusi cambi di nome, logo, codice, funzionalità, interfacce).
+2. Servizi Enterprise: Fornitura di servizi basati su Cherry Studio per uso interno aziendale o per clienti corporate con ≥10 utenti cumulativi.
+3. Vendita Bundled Hardware: Preinstallazione o integrazione di CherryStudio in dispositivi hardware per vendita bundle.
+4. Acquisti Istituzionali Massivi: Utilizzo in progetti di acquisto massivo da parte di enti governativi o educativi, specie se coinvolgono sicurezza o privacy dati.
+5. Servizi Cloud Pubblici: Offerta di servizi cloud pubblici basati su Cherry Studio.
 
-## Art. IV. Ridistribuzione  
+## IV. Ridistribuzione
 
-Potete ridistribuire copie non modificate del Materiale (in Forma Sorgente o Derivata) come parte di prodotti o servizi, purché:  
+Potete distribuire copie non modificate dei Materiali o includerle in prodotti/servizi che le contengano inalterate, in formato sorgente o compilato, rispettando:
 
-1. Forniate copia di questo Accordo a tutti i destinatari;  
-2. Manteniate in tutte le copie questa dichiarazione in un file "NOTICE":  
-   `"Cherry Studio è concesso in licenza ai sensi del Cherry Studio LICENSE AGREEMENT, Copyright (c) Shanghai Qianhui Technology Co., Ltd. Tutti i diritti riservati."`  
+1. Fornire copia del presente accordo a tutti i destinatari.
+2. Mantenere in tutte le copie l'attribuzione in un file "NOTICE":  
+   `"Cherry Studio è concesso in licenza tramite il Cherry Studio LICENSE AGREEMENT, Copyright (c) 上海千彗科技有限公司. Tutti i diritti riservati."`
 
-## Art. V. Regole di Utilizzo  
+## V. Regole d'Uso
 
-1. Il Materiale può essere soggetto a controlli sulle esportazioni. Dovete rispettare le leggi applicabili.  
-2. Se utilizzate output del Materiale per creare/trainare/migliorare software o modelli distribuiti pubblicamente, incoraggiamo ad indicare "Built with Cherry Studio" o "Powered by Cherry Studio" nella documentazione.  
+1. I Materiali possono essere soggetti a controlli all'esportazione. Si devono rispettare le leggi applicabili.
+2. Se usate Output dei Materiali per creare/allenare software/modelli distribuiti, indicate chiaramente "Built with Cherry Studio" o "Powered by Cherry Studio" nella documentazione.
 
-## Art. VI. Proprietà Intellettuale  
+## VI. Proprietà Intellettuale
 
-1. Conserviamo tutti i diritti sul Materiale e i lavori derivati da Noi realizzati. Le modifiche/derivati da Voi realizzati sono regolati da specifici accordi commerciali. Senza autorizzazione commerciale, i diritti IP rimangono Nostri.  
-2. Non è concessa alcuna licenza su marchi commerciali, nomi prodotto o loghi, salvo quanto necessario per gli obblighi contrattuali.  
-3. Qualora ci citaste in giudizio per violazione IP, tutte le licenze concesse qui termineranno alla notifica dell'azione legale.  
+1. Conserviamo tutti i diritti IP su Materiali e loro derivati. Le modifiche realizzate senza Licenza Commerciale restano di nostra proprietà IP.
+2. Nessuna licenza su marchi o nomi commerciali è concessa oltre quanto necessario per attribuzioni.
+3. Qualsiasi azione legale per violazione IP terminerà immediatamente le licenze concesse.
 
-## Art. VII. Limitazioni di Responsabilità  
+## VII. Disclaimer e Limitazione Responsabilità
 
-1. Non abbiamo obblighi di supporto, aggiornamento, formazione o sviluppo di nuove versioni.  
-2. Il Materiale è fornito "COSÌ COM'È", senza garanzie espresse o implicite (includendo commerciabilità, non violazione o idoneità specifica). Non garantiamo sicurezza/stabilità di output.  
-3. In nessun caso saremo responsabili per danni diretti/indiretti/conseguenziali derivanti dall'utilizzo.  
-4. Ci difenderete da qualsiasi reclamo di terzi relativo al vostro utilizzo/distribuzione del Materiale.  
+1. Non siamo obbligati a fornire supporto, aggiornamenti, formazione o nuove versioni.
+2. I Materiali sono forniti "COSÌ COME SONO" senza garanzie espresse o implicite, inclusa sicurezza o stabilità.
+3. Non siamo responsabili per danni diretti/indiretti derivanti dall'uso.
+4. Ci indennizzerete da qualsiasi reclamo di terze parti legato al vostro uso dei Materiali.
 
-## Art. VIII. Durata e Risoluzione  
+## VIII. Durata e Risoluzione
 
-1. Questo Accordo inizia all'accettazione o accesso al Materiale e rimane valido fino a risoluzione.  
-2. Violando i termini, potremo risolvere l'Accordo. Alla cessazione, dovrete cessare l'uso. Gli Art. VII, IX e la sezione "II. Accordo Collaboratori" sopravvivranno alla risoluzione.  
+1. L'accordo inizia all'accettazione e dura fino a risoluzione.
+2. Violazioni comportano risoluzione immediata. Le Sezioni VII, IX e l'Allegato restano efficaci post-risoluzione.
 
-## Art. IX. Legge Applicabile e Foro  
+## IX. Legge Applicabile e Giurisdizione
 
-1. Questo Accordo e le controversie correlate sono regolati dalla legge cinese.  
-2. Il Tribunale del Popolo di Shanghai ha giurisdizione esclusiva sulle controversie derivanti da questo Accordo.
+1. L'accordo è regolato dalle leggi cinesi.
+2. Le Corti di Shanghai hanno giurisdizione esclusiva per dispute relative.

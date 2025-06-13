@@ -6,38 +6,38 @@ icon: map
 Dokumen ini diterjemahkan dari bahasa Mandarin oleh AI dan belum ditinjau.
 {% endhint %}
 
-# Panduan Konfigurasi Catatan Siyuan
+# Tutorial Konfigurasi Catatan Siyuan
 
 Mendukung ekspor topik dan pesan ke Catatan Siyuan.
 
 ## Langkah Pertama
 
-Buka Catatan Siyuan, buat buku catatan baru
+Buka Catatan Siyuan, buat sebuah buku catatan baru
 
-<figure><img src="../.gitbook/assets/siyuan-image-1.png" alt=""><figcaption><p>Klik Buat Buku Catatan Baru</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/siyuan-image-1.png" alt=""><figcaption><p>Klik buat buku catatan baru</p></figcaption></figure>
 
 ## Langkah Kedua
 
-Buka pengaturan buku catatan dan salin `ID Buku Catatan`
+Buka buku catatan, akses pengaturan, dan salin `ID Buku Catatan`
 
 <figure><img src="../.gitbook/assets/siyuan-image-2.png" alt="" width="400"><figcaption><p>Buka pengaturan buku catatan</p></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/siyuan-image-3.png" alt=""><figcaption><p>Klik tombol Salin ID Buku Catatan</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/siyuan-image-3.png" alt=""><figcaption><p>Klik tombol salin ID buku catatan</p></figcaption></figure>
 
 ## Langkah Ketiga
 
-Tempelkan ID buku catatan ke pengaturan Cherry Studio
+Salin ID buku catatan dan isi di pengaturan Cherry Studio
 
-<figure><img src="../.gitbook/assets/siyuan-image-4.png" alt=""><figcaption><p>Tempel ID buku catatan di pengaturan data</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/siyuan-image-4.png" alt=""><figcaption><p>Isi ID buku catatan di pengaturan data</p></figcaption></figure>
 
 ## Langkah Keempat
 
-Masukkan alamat Catatan Siyuan
+Isi alamat Catatan Siyuan
 
 * **Lokal**\
   Biasanya `http://127.0.0.1:6806`
-* **Deployment Sendiri**\
-  Domain Anda `http://note.domain.com`
+* **Self-hosted**\
+  Gunakan domain Anda `http://note.domain.com`
 
 <figure><img src="../.gitbook/assets/siyuan-image-5.png" alt=""><figcaption><p>Masukkan alamat Catatan Siyuan Anda</p></figcaption></figure>
 
@@ -47,13 +47,13 @@ Salin `Token API` Catatan Siyuan
 
 <figure><img src="../.gitbook/assets/siyuan-image-6.png" alt=""><figcaption><p>Salin token Catatan Siyuan</p></figcaption></figure>
 
-Tempel ke pengaturan Cherry Studio dan verifikasi
+Isi di pengaturan Cherry Studio dan verifikasi
 
-<figure><img src="../.gitbook/assets/siyuan-image-7.png" alt=""><figcaption><p>Masukkan ID database dan klik Verifikasi</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/siyuan-image-7.png" alt=""><figcaption><p>Isi ID basis data dan klik verifikasi</p></figcaption></figure>
 
 ## Langkah Keenam
 
-Selamat! Konfigurasi Catatan Siyuan telah selesai ✅ Sekarang Anda dapat mengekspor konten Cherry Studio ke Catatan Siyuan Anda
+Selamat! Konfigurasi Catatan Siyuan telah selesai ✅ Sekarang Anda bisa mengekspor konten Cherry Studio ke Catatan Siyuan Anda
 
 <figure><img src="../.gitbook/assets/siyuan-image-8.png" alt=""><figcaption><p>Ekspor ke Catatan Siyuan</p></figcaption></figure>
 

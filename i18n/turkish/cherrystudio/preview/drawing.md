@@ -6,14 +6,14 @@ icon: image
 Bu belge Çince'den yapay zeka tarafından çevrilmiştir ve henüz incelenmemiştir.
 {% endhint %}
 
-# Çizim
+# Boyama
 
-Çizim özelliği şu anda yalnızca SiliconFlow'un çizim modellerini desteklemektedir. Kullanmak için [SiliconFlow](https://www.siliconflow.cn/) adresinden hesap oluşturup [Servis sağlayıcı ekle](settings/providers.md) bölümünden ekleyebilirsiniz.
+Boyama özelliği şu anda yalnızca Silicon Flow'un boyama modelini desteklemektedir. Kullanmak için [Silicon Flow](https://www.siliconflow.cn/) adresine gidip bir hesap oluşturabilir ve [servis sağlayıcılara ekleyebilirsiniz](settings/providers.md).
 
-Parametrelerle ilgili sorularınız için ilgili alandaki `?` işaretinin üzerine gelerek açıklamayı görüntüleyebilirsiniz.
+Parametrelerle ilgili sorularınız için ilgili alandaki `?` üzerine gelerek açıklamayı görüntüleyebilirsiniz.
 
 {% hint style="info" %}
-Yakında daha fazla servis sağlayıcı eklenmesi planlanmaktadır. Şimdilik bekleyin.
+Daha fazla servis sağlayıcı yakında eklenecektir, lütfen bekleyiniz.
 {% endhint %}
 
 {% include "../../.gitbook/includes/Gemini图片生成注意事项.md" %}

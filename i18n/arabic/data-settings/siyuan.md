@@ -6,19 +6,19 @@ icon: map
 تمت ترجمة هذا المستند من الصينية بواسطة الذكاء الاصطناعي ولم تتم مراجعته بعد.
 {% endhint %}
 
-# برنامج تعليمي لتهيئة ملاحظات Siyuan
+# دليل تهيئة Siyuan Note
 
-يدعم تصدير المواضيع والرسائل إلى ملاحظات Siyuan.
+يدعم تصدير الموضوعات والرسائل إلى Siyuan Note.
 
 ## الخطوة الأولى
 
-افتح ملاحظات Siyuan وأنشئ دفتر ملاحظات جديد
+افتح Siyuan Note وأنشئ دفتر ملاحظات
 
 <figure><img src="../.gitbook/assets/siyuan-image-1.png" alt=""><figcaption><p>انقر على إنشاء دفتر ملاحظات جديد</p></figcaption></figure>
 
 ## الخطوة الثانية
 
-افتح الدفتر ثم الإعدادات، وانسخ `معرف دفتر الملاحظات`
+افتح دفتر الملاحظات ثم الإعدادات، وانسخ `معرف دفتر الملاحظات`
 
 <figure><img src="../.gitbook/assets/siyuan-image-2.png" alt="" width="400"><figcaption><p>افتح إعدادات دفتر الملاحظات</p></figcaption></figure>
 
@@ -32,29 +32,29 @@ icon: map
 
 ## الخطوة الرابعة
 
-املأ عنوان ملاحظات Siyuan
+املأ عنوان Siyuan Note:
 
-* **محلياً**\
+* **محلي**\
   عادةً ما يكون `http://127.0.0.1:6806`
 * **نشر ذاتي**\
-  نطاقك الخاص `http://note.domain.com`
+  هو نطاقك `http://note.domain.com`
 
-<figure><img src="../.gitbook/assets/siyuan-image-5.png" alt=""><figcaption><p>أدخل عنوان ملاحظات Siyuan الخاص بك</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/siyuan-image-5.png" alt=""><figcaption><p>أدخل عنوان Siyuan Note الخاص بك</p></figcaption></figure>
 
 ## الخطوة الخامسة
 
-انسخ `رمز واجهة برمجة التطبيقات (API Token)` من ملاحظات Siyuan
+انسخ `رمز API` لـ Siyuan Note
 
-<figure><img src="../.gitbook/assets/siyuan-image-6.png" alt=""><figcaption><p>انسخ رمز ملاحظات Siyuan</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/siyuan-image-6.png" alt=""><figcaption><p>انسخ رمز Siyuan Note</p></figcaption></figure>
 
-املأه في إعدادات Cherry Studio وتحقق منه
+ألصقه في إعدادات Cherry Studio وافحص
 
-<figure><img src="../.gitbook/assets/siyuan-image-7.png" alt=""><figcaption><p>املأ معرف قاعدة البيانات وانقر على التحقق</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/siyuan-image-7.png" alt=""><figcaption><p>املأ معرف قاعدة البيانات وانقر على فحص</p></figcaption></figure>
 
 ## الخطوة السادسة
 
-مبروك! اكتملت تهيئة ملاحظات Siyuan ✅ الآن يمكنك تصدير محتوى Cherry Studio إلى دفتر ملاحظات Siyuan الخاص بك
+مبروك! لقد اكتملت تهيئة Siyuan Note ✅ الآن يمكنك تصدير محتوى Cherry Studio إلى دفتر ملاحظات Siyuan الخاص بك
 
-<figure><img src="../.gitbook/assets/siyuan-image-8.png" alt=""><figcaption><p>تصدير إلى ملاحظات Siyuan</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/siyuan-image-8.png" alt=""><figcaption><p>تصدير إلى Siyuan Note</p></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/siyuan-image-9.png" alt=""><figcaption><p>عرض نتيجة التصدير</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/siyuan-image-9.png" alt=""><figcaption><p>عرض نتائج التصدير</p></figcaption></figure>

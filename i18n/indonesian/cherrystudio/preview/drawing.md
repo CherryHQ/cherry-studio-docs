@@ -6,14 +6,14 @@ icon: image
 Dokumen ini diterjemahkan dari bahasa Mandarin oleh AI dan belum ditinjau.
 {% endhint %}
 
-# Melukis
+# Drawing
 
-Fungsi melukis saat ini hanya mendukung model melukis dari SiliconFlow. Anda dapat pergi ke [SiliconFlow](https://www.siliconflow.cn/) untuk mendaftarkan akun dan [tambahkan ke Penyedia Layanan](settings/providers.md) untuk digunakan.
+Fungsi gambar saat ini hanya mendukung model gambar dari SiliconFlow. Anda dapat mendaftarkan akun di [SiliconFlow](https://www.siliconflow.cn/) lalu [tambahkan ke penyedia layanan](settings/providers.md) untuk mulai menggunakan.
 
-Untuk pertanyaan terkait parameter, arahkan kursor ke `?` di area terkait untuk melihat penjelasan.
+Untuk pertanyaan terkait parameter, arahkan kursor ke ikon `?` di area terkait untuk melihat penjelasan.
 
 {% hint style="info" %}
-Penyedia layanan tambahan akan ditambahkan di masa mendatang, harap ditunggu.
+Akan ada lebih banyak penyedia layanan yang ditambahkan di kemudian hari, nantikan terus ya.
 {% endhint %}
 
 {% include "../../.gitbook/includes/Gemini图片生成注意事项.md" %}

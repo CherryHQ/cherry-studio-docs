@@ -7,16 +7,16 @@ Bu belge Çince'den yapay zeka tarafından çevrilmiştir ve henüz incelenmemi�
 
 > Otomatik MCP kurulumu için Cherry Studio'nun v1.1.18 veya üzeri sürüme yükseltilmesi gerekir.
 
-## Özellik Tanımı
+## Özellik Tanıtımı
 
-Manuel kuruluma ek olarak, Cherry Studio dahili `@mcpmarket/mcp-auto-install` aracını barındırır. Bu, MCP sunucularını kurmak için daha kolay bir yöntemdir. Desteklenen MCP hizmeti olan büyük dil modeli diyaloglarında ilgili komutu girmeniz yeterlidir.
+Manuel kuruluma ek olarak, Cherry Studio içinde `@mcpmarket/mcp-auto-install` aracı bulunmaktadır. Bu, MCP sunucusunu kurmak için daha kolay bir yöntemdir. MCP hizmetini destekleyen büyük dil modeli sohbetlerinde ilgili komutu girmeniz yeterlidir.
 
 {% hint style="warning" %}
-**Test Aşaması Uyarıları:**
+**Test Aşaması Hatırlatması:**
 
-* `@mcpmarket/mcp-auto-install` halen test aşamasındadır
-* Sonuçlar büyük dil modellerinin "zekasına" bağlıdır; bazıları otomatik eklerken bazı durumlarda **MCP ayarlarında bazı parametreleri manuel değiştirmek gerekebilir**
-* Şu anda arama kaynağı @modelcontextprotocol üzerinden yapılır, kendi yapılandırmanızı uygulayabilirsiniz (aşağıda açıklanmıştır)
+* `@mcpmarket/mcp-auto-install` şu anda hala test aşamasındadır
+* Sonuçlar büyük dil modellerinin "zekasına" bağlıdır; bazıları otomatik eklerken, bazılarında **MCP ayarlarında belirli parametreleri manuel değiştirmek gerekebilir**
+* Şu anda arama kaynağı @modelcontextprotocol üzerinden yapılmaktadır, elle yapılandırılabilir (aşağıda açıklanmıştır)
 {% endhint %}
 
 ## Kullanım Talimatları
@@ -27,29 +27,29 @@ Manuel kuruluma ek olarak, Cherry Studio dahili `@mcpmarket/mcp-auto-install` ar
 bana bir filesystem mcp sunucusu kur
 ```
 
-<figure><img src="../../.gitbook/assets/mcp-auto-install_shot1.png" alt=""><figcaption><p>MCP sunucusu kurmak için komut girin</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/mcp-auto-install_shot1.png" alt=""><figcaption><p>MCP sunucusunu kurmak için komut girin</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/mcp-auto-install_shot2.png" alt=""><figcaption><p>MCP sunucusu yapılandırma ekranı</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/mcp-auto-install_shot2.png" alt=""><figcaption><p>MCP sunucu yapılandırma arayüzü</p></figcaption></figure>
 
-Sistem gereksiniminizi otomatik algılayacak ve `@mcpmarket/mcp-auto-install` aracılığıyla kurulumu tamamlayacaktır. Bu araç çeşitli MCP sunucu türlerini destekler:
+Sistem ihtiyacınızı otomatik tanır ve `@mcpmarket/mcp-auto-install` ile kurulumu tamamlar. Bu araç çeşitli MCP sunucu türlerini destekler:
 
 * filesystem (dosya sistemi)
 * fetch (ağ isteği)
 * sqlite (veritabanı)
-* vb.
+* vb...
 
-> MCP_PACKAGE_SCOPES değişkeniyle MCP hizmet arama kaynakları özelleştirilebilir. Varsayılan değer: `@modelcontextprotocol`
+> MCP_PACKAGE_SCOPES değişkeni MCP hizmet arama kaynağını özelleştirebilir. Varsayılan değer: `@modelcontextprotocol`
 
-## `@mcpmarket/mcp-auto-install` Kütüphanesi Tanımı
+## `@mcpmarket/mcp-auto-install` Kütüphanesi Tanıtımı
 
 {% hint style="info" %}
-**Varsayılan yapılandırma referansı:**
+**Varsayılan Yapılandırma Referansı:**
 
 ```json
-// `axun-uUpaWEdMEMU8C61K` servis kimliğidir, özelleştirilebilir
+// `axun-uUpaWEdMEMU8C61K` hizmet kimliğidir, özelleştirilebilir
 "axun-uUpaWEdMEMU8C61K": {
   "name": "mcp-auto-install",
-  "description": "MCP hizmetlerini otomatik kur (Beta sürümü)",
+  "description": "MCP hizmetlerini otomatik kurar (Beta sürümü)",
   "isActive": false,
   "registryUrl": "https://registry.npmmirror.com",
   "command": "npx",
@@ -60,11 +60,11 @@ Sistem gereksiniminizi otomatik algılayacak ve `@mcpmarket/mcp-auto-install` ar
     "--json"
   ],
   "env": {
-    "MCP_REGISTRY_PATH": "Ayrıntılar için bkz: https://www.npmjs.com/package/@mcpmarket/mcp-auto-install"
+    "MCP_REGISTRY_PATH": "Detaylar için https://www.npmjs.com/package/@mcpmarket/mcp-auto-install"
   },
   "disabledTools": []
 }
 ```
 
-`@mcpmarket/mcp-auto-install` açık kaynaklı bir npm paketidir. Detaylı bilgi ve kullanım dokümanları için [npm resmi deposunu](https://www.npmjs.com/package/@mcpmarket/mcp-auto-install) inceleyebilirsiniz. `@mcpmarket`, Cherry Studio'nun resmi MCP hizmet koleksiyonunu temsil eder.
+`@mcpmarket/mcp-auto-install` açık kaynaklı bir npm paketidir. Detaylı bilgi ve kullanım dokümanları için [npm resmi deposuna](https://www.npmjs.com/package/@mcpmarket/mcp-auto-install) bakabilirsiniz. `@mcpmarket`, Cherry Studio'nun resmi MCP hizmet koleksiyonudur.
 {% endhint %}

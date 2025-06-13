@@ -10,14 +10,14 @@ icon: hexagon-exclamation
 
 ### 1. mcp-server-time
 
-<figure><img src="../../.gitbook/assets/telegram-cloud-photo-size-5-6068931438453048569-y.jpg" alt=""><figcaption><p>لقطة خطأ</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/telegram-cloud-photo-size-5-6068931438453048569-y.jpg" alt=""><figcaption><p>لقطة شاشة للخطأ</p></figcaption></figure>
 
-**الحل**  
+**الحل** 
 
-في عمود "المعلمات"، املأ ما يلي:
+في حقل "المعلمات"، املأ ما يلي:
 
 ```
 mcp-server-time
 --local-timezone
-<المنطقة الزمنية القياسية الخاصة بك، مثال: Asia/Shanghai>
+<你的标准时区，例如：Asia/Shanghai>
 ```

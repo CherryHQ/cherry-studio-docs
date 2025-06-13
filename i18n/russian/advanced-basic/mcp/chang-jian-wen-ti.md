@@ -12,12 +12,12 @@ icon: hexagon-exclamation
 
 <figure><img src="../../.gitbook/assets/telegram-cloud-photo-size-5-6068931438453048569-y.jpg" alt=""><figcaption><p>Скриншот ошибки</p></figcaption></figure>
 
-**Решение**&#x20;
+**Решение**  
 
 В разделе "Параметры" укажите:
 
 ```
 mcp-server-time
 --local-timezone
-<Ваш часовой пояс, например: Asia/Shanghai>
+<ваш часовой пояс, например: Asia/Shanghai>
 ```

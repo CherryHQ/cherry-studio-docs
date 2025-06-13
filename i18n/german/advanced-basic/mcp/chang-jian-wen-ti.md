@@ -10,14 +10,14 @@ Dieses Dokument wurde von einer KI aus dem Chinesischen übersetzt und ist noch 
 
 ### 1. mcp-server-time
 
-<figure><img src="../../.gitbook/assets/telegram-cloud-photo-size-5-6068931438453048569-y.jpg" alt="Fehlermeldungs-Screenshot"><figcaption><p>Fehlermeldungs-Screenshot</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/telegram-cloud-photo-size-5-6068931438453048569-y.jpg" alt=""><figcaption><p>Fehlermeldung Screenshot</p></figcaption></figure>
 
-**Lösung**
+**Lösung**&#x20;
 
-Tragen Sie im Abschnitt "Parameter" Folgendes ein:
+Tragen Sie im Abschnitt "Parameter" folgendes ein:
 
 ```
 mcp-server-time
 --local-timezone
-<Ihre Standardzeitzone, z. B.: Asia/Shanghai>
+<Ihre Standardzeitzone, z.B.: Asia/Shanghai>
 ```

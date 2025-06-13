@@ -3,26 +3,24 @@
 Tài liệu này được dịch từ tiếng Trung bằng AI và chưa được xem xét.
 {% endhint %}
 
-# Cài đặt MCP Tự động
+# Cài đặt tự động MCP
 
-> Cài đặt tự động MCP yêu cầu nâng cấp Cherry Studio lên phiên bản v1.1.18 hoặc cao hơn.
+> Cài đặt tự động MCP yêu cầu nâng cấp Cherry Studio lên phiên bản v1.1.18 trở lên.
 
-## Giới thiệu Tính năng
+## Giới thiệu tính năng
 
-Ngoài cài đặt thủ công, Cherry Studio còn tích hợp sẵn công cụ `@mcpmarket/mcp-auto-install`, một phương thức cài đặt máy chủ MCP thuận tiện hơn. Bạn chỉ cần nhập lệnh tương ứng khi trò chuyện với mô hình ngôn ngữ lớn hỗ trợ dịch vụ MCP.
+Ngoài cài đặt thủ công, Cherry Studio còn tích hợp sẵn công cụ `@mcpmarket/mcp-auto-install`, đây là cách cài đặt máy chủ MCP thuận tiện hơn. Bạn chỉ cần nhập lệnh tương ứng vào cuộc hội thoại mô hình lớn hỗ trợ dịch vụ MCP.
 
 {% hint style="warning" %}
 **Lưu ý giai đoạn thử nghiệm:**
-
 * `@mcpmarket/mcp-auto-install` hiện vẫn đang trong giai đoạn thử nghiệm
-* Hiệu quả phụ thuộc vào "trí thông minh" của mô hình ngôn ngữ lớn, một số sẽ tự động thêm cấu hình, một số **vẫn cần thay đổi thủ công các tham số trong cài đặt MCP**
-* Hiện tại nguồn tìm kiếm được thực hiện từ @modelcontextprotocol, có thể tự cấu hình (hướng dẫn bên dưới)
+* Hiệu quả phụ thuộc vào "chỉ số thông minh" của mô hình lớn, một số sẽ tự động thêm, một số **vẫn cần thay đổi thủ công một số tham số trong cài đặt MCP**
+* Hiện tại nguồn tìm kiếm là từ @modelcontextprotocol, có thể tự cấu hình (xem hướng dẫn bên dưới)
 {% endhint %}
 
-## Hướng dẫn Sử dụng
+## Hướng dẫn sử dụng
 
 Ví dụ, bạn có thể nhập:
-
 ```
 帮我安装一个 filesystem mcp server
 ```
@@ -31,9 +29,8 @@ Ví dụ, bạn có thể nhập:
 
 <figure><img src="../../.gitbook/assets/mcp-auto-install_shot2.png" alt=""><figcaption><p>Giao diện cấu hình máy chủ MCP</p></figcaption></figure>
 
-Hệ thống sẽ tự động nhận diện yêu cầu và hoàn tất cài đặt thông qua `@mcpmarket/mcp-auto-install`. Công cụ này hỗ trợ nhiều loại máy chủ MCP, bao gồm nhưng không giới hạn:
-
-* filesystem (hệ thống tập tin)
+Hệ thống sẽ tự động nhận diện nhu cầu của bạn và hoàn tất cài đặt thông qua `@mcpmarket/mcp-auto-install`. Công cụ này hỗ trợ nhiều loại máy chủ MCP, bao gồm nhưng không giới hạn:
+* filesystem (hệ thống tệp)
 * fetch (yêu cầu mạng)
 * sqlite (cơ sở dữ liệu)
 * v.v...
@@ -43,10 +40,10 @@ Hệ thống sẽ tự động nhận diện yêu cầu và hoàn tất cài đ�
 ## Giới thiệu thư viện `@mcpmarket/mcp-auto-install`
 
 {% hint style="info" %}
-**Cấu hình tham khảo mặc định:**
+**Tham khảo cấu hình mặc định:**
 
 ```json
-// `axun-uUpaWEdMEMU8C61K` là id dịch vụ, có thể tùy chỉnh
+// `axun-uUpaWEdMEMU8C61K` là id dịch vụ, tùy chỉnh theo ý muốn
 "axun-uUpaWEdMEMU8C61K": {
   "name": "mcp-auto-install",
   "description": "Automatically install MCP services (Beta version)",
@@ -60,11 +57,11 @@ Hệ thống sẽ tự động nhận diện yêu cầu và hoàn tất cài đ�
     "--json"
   ],
   "env": {
-    "MCP_REGISTRY_PATH": "详情见https://www.npmjs.com/package/@mcpmarket/mcp-auto-install"
+    "MCP_REGISTRY_PATH": "Xem chi tiết tại https://www.npmjs.com/package/@mcpmarket/mcp-auto-install"
   },
   "disabledTools": []
 }
 ```
 
-`@mcpmarket/mcp-auto-install` là gói npm mã nguồn mở, bạn có thể xem chi tiết và tài liệu sử dụng tại [kho chính thức npm](https://www.npmjs.com/package/@mcpmarket/mcp-auto-install). `@mcpmarket` là bộ sưu tập dịch vụ MCP chính thức của Cherry Studio.
+`@mcpmarket/mcp-auto-install` là một gói npm nguồn mở, bạn có thể xem thông tin chi tiết và tài liệu sử dụng tại [kho chính thức npm](https://www.npmjs.com/package/@mcpmarket/mcp-auto-install). `@mcpmarket` là bộ sưu tập dịch vụ MCP chính thức của Cherry Studio.
 {% endhint %}

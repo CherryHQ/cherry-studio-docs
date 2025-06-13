@@ -5,68 +5,67 @@ Ten dokument został przetłumaczony z chińskiego przez AI i nie został jeszcz
 
 # Cherry Studio Umowa Licencyjna
 
-Korzystając z jakiejkolwiek części lub elementów materiałów Cherry Studio lub je rozpowszechniając, uznaje się, że zaakceptowałeś/aś treść niniejszej umowy, która natychmiast wchodzi w życie.
+Korzystając lub rozpowszechniając jakąkolwiek część lub element materiałów Cherry Studio, uznaje się, że akceptujesz postanowienia niniejszej umowy, która wchodzi w życie natychmiast.
 
 ## I. Definicje
 
-1. **Niniejsza Umowa Licencyjna Cherry Studio** (zwana dalej "Umową") odnosi się do warunków regulujących użytkowanie, kopiowanie, rozpowszechnianie i modyfikację Materiałów, zgodnie z definicjami zawartymi w niniejszej Umowie.
-2. **"My"** (lub "Nas") odnosi się do 上海千彗科技有限公司.
-3. **"Ty"** (lub "Twój") oznacza osobę fizyczną lub podmiot prawny korzystający z praw przyznanych przez niniejszą Umowę i/lub używający Materiałów do jakichkolwiek celów i w dowolnych obszarach zastosowań.
-4. **"Trzecia Strona"** oznacza osobę lub podmiot prawny, który nie jest kontrolowany wspólnie przez Nas ani przez Ciebie.
-5. **"Cherry Studio"** oznacza niniejszy pakiet oprogramowania, w tym, lecz nie wyłącznie [przykładowo: biblioteki rdzenne, edytory, wtyczki, przykładowe projekty], kod źródłowy, dokumentację, przykładowy kod oraz inne elementy ww. składników dystrybuowanych przez Nas. (Opisz szczegółowo zgodnie z faktyczną strukturą CherryStudio).
-6. **"Materiały"** obejmuje całość zastrzeżonego Cherry Studio i dokumentacji (oraz ich części) należących do 上海千彗科技有限公司, dostarczanych na podstawie niniejszej Umowy.
-7. **"Forma źródłowa"** oznacza preferowaną formę wprowadzania modyfikacji, w tym, lecz nie wyłącznie kod źródłowy, pliki źródłowe dokumentacji i pliki konfiguracyjne.
-8. **"Forma wynikowa"** oznacza dowolną formę powstałą poprzez mechaniczną transformację lub tłumaczenie formy źródłowej, w tym, lecz nie wyłącznie skompilowany kod obiektowy, wygenerowaną dokumentację oraz formy przekonwertowane na inne typy mediów.
-9. **"Użycie komercyjne"** oznacza wykorzystanie w celach przynoszenia bezpośrednich lub pośrednich korzyści lub przewagi komercyjnej, w tym, lecz nie wyłącznie sprzedaży, licencjonowania, subskrypcji, reklamy, marketingu, szkoleń, usług konsultingowych itp.
-10. **"Modyfikacja"** oznacza jakąkolwiek zmianę, dostosowanie, dzieło pochodne lub wtórne opracowanie Materiałów w formie źródłowej, w tym, lecz nie wyłącznie modyfikację nazwy aplikacji, logo, kodu, funkcjonalności, interfejsu itp.
+1. "Niniejsza Umowa Licencyjna Cherry Studio" (zwana dalej "Umową") odnosi się do warunków i zasad dotyczących korzystania, kopiowania, rozpowszechniania i modyfikowania materiałów określonych w niniejszej Umowie.
+2. "My" (lub "Nas") oznacza Shanghai Qianhui Technology Co., Ltd.
+3. "Ty" (lub "Twój") oznacza osobę fizyczną lub podmiot prawny korzystający z praw przyznanych w niniejszej Umowie i/lub używający materiałów w dowolnym celu i obszarze.
+4. "Trzecia strona" oznacza osobę lub podmiot prawny niezwiązany wspólną kontrolą z Nami lub Tobą.
+5. "Cherry Studio" oznacza niniejszy pakiet oprogramowania, w tym między innymi [przykładowo: biblioteki podstawowe, edytor, wtyczki, przykładowe projekty], wraz z kodem źródłowym, dokumentacją, przykładowym kodem oraz innymi elementami powyższych dystrybuowanych przez Nas. (Opis należy dostosować do faktycznej struktury CherryStudio)
+6. "Materiały" oznacza zbiorczo zastrzeżone Cherry Studio i dokumentację (oraz ich części) Shanghai Qianhui Technology Co., Ltd., udostępnione na podstawie niniejszej Umowy.
+7. "Forma źródłowa" oznacza preferowaną formę dokonywania modyfikacji, w tym między innymi kod źródłowy, pliki źródłowe dokumentacji i pliki konfiguracyjne.
+8. "Forma wynikowa" oznacza każdą formę uzyskaną w wyniku mechanicznej transformacji lub tłumaczenia formy źródłowej, w tym między innymi skompilowany kod wynikowy, wygenerowaną dokumentację oraz formy przekonwertowane do innych typów mediów.
+9. "Użycie komercyjne" oznacza cele związane z bezpośrednią lub pośrednią korzyścią handlową lub przewagą handlową, w tym między innymi sprzedaż, licencjonowanie, subskrypcje, reklamę, marketing, szkolenia, usługi konsultingowe itp.
+10. "Modyfikacja" oznacza jakąkolwiek zmianę, adaptację, dzieło pochodne lub wtórny rozwój formy źródłowej materiałów, w tym między innymi zmianę nazwy aplikacji, loga, kodu, funkcji, interfejsu itp.
 
-## II. Przyznanie praw
+## II. Przyznane prawa
 
-1. **Darmowe użycie komercyjne (dotyczy niezmodyfikowanego kodu):** Niniejszym przyznajemy Ci niewyłączną, globalną, niezbywalną, bezpłatną licencję na użytkowanie, kopiowanie, rozpowszechnianie i kopiowanie oraz rozpowszechnianie niezmodyfikowanych Materiałów, w tym do użytku komercyjnego, pod warunkiem przestrzegania postanowień niniejszej Umowy, w oparciu o prawa własności intelektualnej lub inne Nasze prawa zawarte w Materiałach.
-2. **Licencja komercyjna (w razie potrzeby):** W sytuacjach opisanych w punkcie III "Licencja komercyjna", aby korzystać z praw przyznanych niniejszą Umową, wymagane jest uzyskanie od Nas pisemnej licencji komercyjnej.
+1. **Bezpłatne użytkowanie komercyjne (dotyczy niezmodyfikowanego kodu):** Niniejszym przyznajemy Ci niewyłączną, globalną, nieprzenaszalną, wolną od opłat licencję na korzystanie, kopiowanie, rozpowszechnianie i kopiowanie oraz rozpowszechnianie niezmodyfikowanych materiałów, w tym do użytku komercyjnego, z zastrzeżeniem postanowień niniejszej Umowy.
+2. **Licencja komercyjna (w razie potrzeby):** Aby skorzystać z praw przyznanych w niniejszej Umowie w sytuacjach określonych w sekcji III "Licencja komercyjna", konieczne jest uzyskanie od Nas wyraźnej pisemnej licencji komercyjnej.
 
 ## III. Licencja komercyjna
 
-W którymkolwiek z poniższych przypadków, aby kontynuować używanie Materiałów Cherry Studio, wymagane jest skontaktowanie się z Nami i uzyskanie pisemnej licencji komercyjnej:
+W każdej z poniższych sytuacji, przed kontynuowaniem użytkowania materiałów Cherry Studio, należy skontaktować się z Nami i uzyskać wyraźną pisemną licencję komercyjną:
 
-1. **Modyfikacje i dzieła pochodne:** Wprowadzasz modyfikacje do Materiałów Cherry Studio lub tworzysz opracowania na ich podstawie (w tym, lecz nie wyłącznie modyfikujesz nazwę aplikacji, logo, kod, funkcjonalność, interfejs itp.).
-2. **Usługi korporacyjne:** Świadczysz usługi oparte na Cherry Studio wewnątrz swojej organizacji lub dla klientów korporacyjnych, przy czym usługa obsługuje łącznie 10 lub więcej użytkowników.
-3. **Sprzedaż powiązana z hardwarem:** Integrujesz lub wstępnie instalujesz Cherry Studio ze sprzętem lub produktami sprzętowymi w celu ich sprzedaży powiązanej.
-4. **Masowe zamówienia rządowe lub edukacyjne:** Twoje zastosowanie obejmuje masowe zamówienia rządowe lub instytucji edukacyjnych, szczególnie w przypadku wymagań dotyczących bezpieczeństwa, prywatności danych lub innych wrażliwych kwestii.
-5. **Usługi chmurowe publiczne:** Świadczysz publiczne usługi chmurowe oparte na Cherry Studio.
+1. **Modyfikacje i utwory pochodne:** Dokonujesz modyfikacji materiałów Cherry Studio lub tworzysz na ich podstawie utwory pochodne (w tym m.in. zmianę nazwy aplikacji, loga, kodu, funkcji, interfejsu itp.).
+2. **Usługi dla przedsiębiorstw:** Świadczysz usługi oparte na Cherry Studio w ramach Twojego przedsiębiorstwa lub dla klientów biznesowych, przy czym usługa obsługuje 10 lub więcej skumulowanych użytkowników.
+3. **Sprzedaż wiązana z urządzeniami:** Integrujesz Cherry Studio ze sprzętem lub produktami w celu sprzedaży w pakiecie.
+4. **Zakupy instytucjonalne:** Użycie dotyczy projektów masowych zakupów rządowych lub edukacyjnych, szczególnie w przypadku wymagań związanych z bezpieczeństwem, prywatnością danych itp.
+5. **Usługi w chmurze publicznej:** Świadczenie publicznych usług w chmurze opartych na Cherry Studio.
 
-## IV. Dystrybucja
+## IV. Redystrybucja
 
-Możesz rozpowszechniać kopie niezmodyfikowanych Materiałów lub udostępniać je jako część produktów/usług zawierających niezmodyfikowane Materiały, w formie źródłowej lub wynikowej, pod warunkiem spełnienia następujących wymogów:
+Możesz rozpowszechniać kopie niezmodyfikowanych materiałów lub oferować je jako część produktów lub usług zawierających niezmodyfikowane materiały, w formie źródłowej lub wynikowej, pod warunkiem spełnienia następujących wymogów:
 
-1. Musisz dostarczyć kopię niniejszej Umowy wszystkim odbiorcom Materiałów.
-2. We wszystkich kopiach rozpowszechnianych Materiałów musisz zachować poniższe oświadczenie i umieścić je w pliku "NOTICE" lub podobnym, dołączonym do kopii:  
-   \`"Cherry Studio is licensed under the Cherry Studio LICENSE AGREEMENT, Copyright (c) 上海千彗科技有限公司. All Rights Reserved."\`
+1. Musisz dostarczyć kopię niniejszej Umowy wszystkim odbiorcom materiałów.
+2. We wszystkich kopiach materiałów musi znajdować się następująca informacja o prawach autorskich, umieszczona w pliku "NOTICE" lub podobnym dołączonym do kopii: \`"Cherry Studio jest objęty licencją Cherry Studio LICENSE AGREEMENT, Copyright (c) Shanghai Qianhui Technology Co., Ltd. Wszystkie prawa zastrzeżone."\`
 
 ## V. Zasady użytkowania
 
-1. Materiały mogą podlegać ograniczeniom eksportowym. Korzystając z Materiałów, zobowiązujesz się do przestrzegania obowiązujących przepisów.
-2. Jeżeli używasz Materiałów lub ich wyników do tworzenia, trenowania, dostrajania lub ulepszania oprogramowania/modeli, które mają być dystrybuowane lub udostępniane, zalecamy wyraźne oznaczenie w dokumentacji produktu: "Built with Cherry Studio" lub "Powered by Cherry Studio".
+1. Materiały mogą podlegać kontroli eksportu lub ograniczeniom. Korzystając z materiałów, musisz przestrzegać obowiązujących przepisów.
+2. Jeśli używasz materiałów lub ich wyników do tworzenia, trenowania, dostosowywania lub ulepszania oprogramowania lub modeli przeznaczonych do dystrybucji, zalecamy wyraźne oznaczenie w dokumentacji produktu: "Built with Cherry Studio" lub "Powered by Cherry Studio".
 
 ## VI. Własność intelektualna
 
-1. Zastrzegamy sobie wszelkie prawa własności intelektualnej do Materiałów oraz opracowań pochodnych stworzonych przez Nas lub dla Nas. Modifikacje i opracowania pochodne Materiałów wykonane przez Ciebie podlegają warunkom szczegółowej umowy licencji komercyjnej, o ile są objęte taką umową. Bez licencji komercyjnej, modyfikacje i opracowania pochodne nie stanowią Twojej własności; prawa pozostają przy Nas.
-2. Niniejsza Umowa nie udziela licencji na używanie Naszych znaków towarowych, znaków usługowych lub nazw produktów, poza wymogiem wypełnienia obowiązków notyfikacyjnych lub typowego użycia przy opisywaniu i dystrybucji Materiałów.
-3. Jeśli wniesiesz przeciwko Nam lub innemu podmiotowi powództwo lub inne postępowanie prawne (w tym powództwo wzajemne) twierdząc, że Materiały lub ich wyniki (lub ich części) naruszają Twoje prawa własności intelektualnej, wszystkie licencje przyznane niniejszą Umową wygasną z dniem wszczęcia takiego postępowania.
+1. Zachowujemy własność wszelkich praw własności intelektualnej do materiałów oraz utworów pochodnych stworzonych przez Nas. Modyfikacje i utwory pochodne materiałów stworzone przez Ciebie podlegają postanowieniom konkretnej umowy licencji komercyjnej. Bez licencji komercyjnej nie posiadasz praw własności do modyfikacji i utworów pochodnych – pozostają one Naszą własnością.
+2. Nie przyznano licencji na korzystanie z Naszych znaków towarowych, nazw handlowych lub produktów, poza niezbędnym użytkiem w ramach obowiązków wynikających z Umowy lub do celów opisu i redystrybucji materiałów.
+3. Wszystkie licencje przyznane niniejszą Umową wygasają, jeśli wszczynasz przeciwko Nam postępowanie prawne twierdząc, że materiały lub ich wyniki naruszają Twoje prawa własności intelektualnej.
 
 ## VII. Wyłączenie odpowiedzialności i ograniczenia
 
-1. Nie jesteśmy zobowiązani do wsparcia, aktualizacji, szkolenia ani rozwijania nowych wersji Materiałów Cherry Studio ani do udzielania jakichkolwiek powiązanych licencji.
-2. Materiały dostarczane są **"tak, jak są"**, bez jakichkolwiek gwarancji – dorozumianych ani wyraźnych – w tym gwarancji handlowości, niepowodowania naruszeń czy przydatności do określonego celu. Nie ponosimy odpowiedzialności ani nie udzielamy gwarancji dotyczących bezpieczeństwa lub stabilności Materiałów i ich wyników.
-3. W żadnym wypadku nie odpowiadamy za szkody wynikające z użycia lub niemożności użycia Materiałów lub ich wyników, w tym bezpośrednie, pośrednie, specjalne ani wtórne.
-4. Zobowiązujesz się bronić Nas i zwolnić od odpowiedzialności z tytułu roszczeń jakiejkolwiek Trzeciej Strony powstałych w związku z Twoim użyciem lub dystrybucją Materiałów.
+1. Nie mamy obowiązku wsparcia, aktualizacji, szkolenia ani rozwijania kolejnych wersji materiałów Cherry Studio.
+2. Materiały udostępniane są "TAK JAK SĄ" bez jakichkolwiek gwarancji, w tym m.in. co do przydatności handlowej czy zgodności z celem. Nie ponosimy odpowiedzialności za bezpieczeństwo lub stabilność materiałów.
+3. W żadnym wypadku nie ponosimy odpowiedzialności za szkody wynikłe z używania materiałów.
+4. Będziesz nas bronić i zwolnić od odpowiedzialności w przypadku roszczeń osób trzecich związanych z Twoim użyciem lub dystrybucją materiałów.
 
 ## VIII. Czas trwania i rozwiązanie
 
-1. Umowa wchodzi w życie z chwilą jej zaakceptowania lub uzyskania dostępu do Materiałów i trwa do momentu rozwiązania zgodnie z jej postanowieniami.
-2. Naruszenie postanowień Umowy uprawnia Nas do jej rozwiązania. Po rozwiązaniu, zobowiązujesz się zaprzestać używania Materiałów. Postanowienia punktów VII, IX oraz "II. Umowa współtwórców" zachowują ważność po rozwiązaniu.
+1. Umowa wchodzi w życie w momencie jej akceptacji i trwa do rozwiązania na jej podstawie.
+2. Możemy rozwiązać Umowę w przypadku naruszenia jej postanowień. Po rozwiązaniu musisz zaprzestać używania materiałów. Sekcje VII, IX oraz "II. Umowa współtwórcy" pozostają w mocy po rozwiązaniu.
 
 ## IX. Prawo właściwe i jurysdykcja
 
-1. Niniejsza Umowa oraz wszelkie spory wynikające z niej podlegają prawu chińskiemu.
-2. Wyłączną jurysdykcję w sprawach wynikających z niniejszej Umowy posiada Sąd Ludowy w Szanghaju.
+1. Niniejszą Umową i ewentualnymi sporami rządzi prawo chińskie.
+2. Właściwość w sprawach spornych należy do sądów w Szanghaju.

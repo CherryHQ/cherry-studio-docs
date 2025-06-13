@@ -12,9 +12,9 @@ Questo documento è stato tradotto dal cinese tramite IA e non è ancora stato r
 
 <figure><img src="../../.gitbook/assets/telegram-cloud-photo-size-5-6068931438453048569-y.jpg" alt=""><figcaption><p>Screenshot dell'errore</p></figcaption></figure>
 
-**Soluzione**&#x20;
+**Soluzione**
 
-Compila nella colonna "Parametri":
+Nella colonna "Parametri" inserire:
 
 ```
 mcp-server-time

@@ -6,13 +6,13 @@ icon: map
 Este documento foi traduzido do chinês por IA e ainda não foi revisado.
 {% endhint %}
 
-# Tutorial de Configuração do Siyuan Notes
+# Tutorial de Configuração do SiYuan Note
 
-Suporta exportar tópicos e mensagens para o Siyuan Notes.
+Suporta a exportação de tópicos e mensagens para o SiYuan Note.
 
 ## Passo 1
 
-Abra o Siyuan Notes e crie um caderno
+Abra o SiYuan Note e crie um caderno
 
 <figure><img src="../.gitbook/assets/siyuan-image-1.png" alt=""><figcaption><p>Clique em Novo Caderno</p></figcaption></figure>
 
@@ -28,33 +28,33 @@ Abra as configurações do caderno e copie o `ID do Caderno`
 
 Cole o ID do caderno nas configurações do Cherry Studio
 
-<figure><img src="../.gitbook/assets/siyuan-image-4.png" alt=""><figcaption><p>Preencha o ID do caderno nas configurações de dados</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/siyuan-image-4.png" alt=""><figcaption><p>Insira o ID do caderno nas configurações de dados</p></figcaption></figure>
 
 ## Passo 4
 
-Preencha o endereço do Siyuan Notes
+Insira o endereço do SiYuan Note
 
 * **Local**\
   Normalmente `http://127.0.0.1:6806`
 * **Auto-hospedado**\
-  Seu domínio, por exemplo `http://note.domain.com`
+  Seu domínio `http://note.domain.com`
 
-<figure><img src="../.gitbook/assets/siyuan-image-5.png" alt=""><figcaption><p>Insira o endereço do seu Siyuan Notes</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/siyuan-image-5.png" alt=""><figcaption><p>Insira seu endereço do SiYuan Note</p></figcaption></figure>
 
 ## Passo 5
 
-Copie o `Token de API` do Siyuan Notes
+Copie o `Token API` do SiYuan Note
 
-<figure><img src="../.gitbook/assets/siyuan-image-6.png" alt=""><figcaption><p>Copie o token do Siyuan Notes</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/siyuan-image-6.png" alt=""><figcaption><p>Copie o token do SiYuan Note</p></figcaption></figure>
 
-Preencha nas configurações do Cherry Studio e verifique
+Cole nas configurações do Cherry Studio e verifique
 
 <figure><img src="../.gitbook/assets/siyuan-image-7.png" alt=""><figcaption><p>Preencha o ID do banco de dados e clique em Verificar</p></figcaption></figure>
 
 ## Passo 6
 
-Parabéns! A configuração do Siyuan Notes está completa ✅ Agora você pode exportar conteúdo do Cherry Studio para seu Siyuan Notes
+Parabéns! A configuração do SiYuan Note está completa ✅ Agora você pode exportar conteúdo do Cherry Studio para seu SiYuan Note
 
-<figure><img src="../.gitbook/assets/siyuan-image-8.png" alt=""><figcaption><p>Exportar para o Siyuan Notes</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/siyuan-image-8.png" alt=""><figcaption><p>Exportar para SiYuan Note</p></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/siyuan-image-9.png" alt=""><figcaption><p>Verifique o resultado da exportação</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/siyuan-image-9.png" alt=""><figcaption><p>Verificar resultado da exportação</p></figcaption></figure>

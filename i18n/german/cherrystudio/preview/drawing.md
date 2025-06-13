@@ -8,12 +8,12 @@ Dieses Dokument wurde von einer KI aus dem Chinesischen übersetzt und ist noch 
 
 # Zeichnen
 
-Die Zeichenfunktion wird derzeit ausschließlich durch das Zeichenmodell von Silicon Flow unterstützt. Sie können auf [Silicon Flow](https://www.siliconflow.cn/) ein Konto registrieren und es [zu den Anbietern hinzufügen](settings/providers.md), um diese Funktion zu nutzen.
+Die Zeichenfunktion unterstützt derzeit nur die Malerei-Modelle von Silicon Flow. Du kannst dich auf [Silicon Flow](https://www.siliconflow.cn/) registrieren, ein Konto erstellen und es [zu den Dienstleistern hinzufügen](settings/providers.md), um die Funktion nutzen zu können.
 
-Bei Fragen zu Parametern können Sie die Einführungen anzeigen lassen, indem Sie mit der Maus über das `?` im entsprechenden Bereich fahren.
+Bei Fragen zu Parametern kannst du mit der Maus über das `?` im entsprechenden Bereich fahren, um die Beschreibung anzuzeigen.
 
 {% hint style="info" %}
-Es werden in Zukunft weitere Anbieter hinzugefügt. Bleiben Sie gespannt!
+In Zukunft werden weitere Dienstleister hinzugefügt, bleibt gespannt!
 {% endhint %}
 
 {% include "../../.gitbook/includes/Gemini图片生成注意事项.md" %}

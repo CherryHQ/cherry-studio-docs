@@ -6,6 +6,7 @@ icon: hexagon-exclamation
 이 문서는 AI에 의해 중국어에서 번역되었으며 아직 검토되지 않았습니다。
 {% endhint %}
 
+```markdown
 # 자주 묻는 질문
 
 ### 1. mcp-server-time
@@ -14,10 +15,10 @@ icon: hexagon-exclamation
 
 **해결 방법**
 
-"매개변수" 열에 다음을 입력하세요:
+"매개변수"란에 다음을 입력하세요:
 
 ```
 mcp-server-time
 --local-timezone
-<표준 시간대, 예: Asia/Shanghai>
+<당신의 표준 시간대, 예: Asia/Shanghai>
 ```

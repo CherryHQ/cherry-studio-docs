@@ -3,20 +3,20 @@
 Questo documento è stato tradotto dal cinese tramite IA e non è ancora stato revisionato.
 {% endhint %}
 
-# Installazione Automatica di MCP
+# Installazione Automatica MCP
 
-> L'installazione automatica di MCP richiede di aggiornare Cherry Studio alla versione v1.1.18 o superiore.
+> L'installazione automatica MCP richiede l'aggiornamento di Cherry Studio alla versione v1.1.18 o successiva.
 
-## Panoramica della Funzionalità
+## Introduzione alle Funzionalità
 
-Oltre all'installazione manuale, Cherry Studio include lo strumento integrato `@mcpmarket/mcp-auto-install`, che offre un metodo più rapido per configurare i server MCP. Ti basterà inserire il comando appropriato nella conversazione con un modello di grandi dimensioni che supporta i servizi MCP.
+Oltre all'installazione manuale, Cherry Studio include lo strumento integrato `@mcpmarket/mcp-auto-install`, un metodo più conveniente per installare i server MCP. Ti basterà inserire il comando appropriato nella chat di un modello linguistico di grandi dimensioni che supporti il servizio MCP.
 
 {% hint style="warning" %}
-**Avviso Fase di Test:**
+**Avviso fase di test:**
 
-* `@mcpmarket/mcp-auto-install` è attualmente in fase di test
-* L'efficacia dipende dalle capacità del modello linguistico: alcuni parametri vengono aggiunti automaticamente, altri richiedono **modifiche manuali nelle impostazioni MCP**
-* Attualmente le sorgenti vengono cercate in @modelcontextprotocol, configurabile manualmente (vedi sotto)
+* `@mcpmarket/mcp-auto-install` è attualmente ancora in fase di test
+* L'efficacia dipende dall'"intelligenza" del modello linguistico: alcuni aggiungono automaticamente i parametri, mentre altri richiedono **modifiche manuali nelle impostazioni MCP**
+* Attualmente le fonti di ricerca provengono da @modelcontextprotocol, ma sono configurabili (spiegato sotto)
 {% endhint %}
 
 ## Istruzioni per l'Uso
@@ -24,32 +24,32 @@ Oltre all'installazione manuale, Cherry Studio include lo strumento integrato `@
 Ad esempio, puoi inserire:
 
 ```
-Installa un server MCP per il filesystem
+帮我安装一个 filesystem mcp server
 ```
 
-<figure><img src="../../.gitbook/assets/mcp-auto-install_shot1.png" alt=""><figcaption><p>Inserimento comando per installare il server MCP</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/mcp-auto-install_shot1.png" alt=""><figcaption><p>Inserisci comando per installare il server MCP</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/mcp-auto-install_shot2.png" alt=""><figcaption><p>Interfaccia di configurazione del server MCP</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/mcp-auto-install_shot2.png" alt=""><figcaption><p>Interfaccia di configurazione server MCP</p></figcaption></figure>
 
-Il sistema riconoscerà automaticamente la richiesta e completerà l'installazione tramite `@mcpmarket/mcp-auto-install`. Questo strumento supporta diversi tipi di server MCP:
+Il sistema riconoscerà automaticamente la tua richiesta e completerà l'installazione tramite `@mcpmarket/mcp-auto-install`. Questo strumento supporta diversi tipi di server MCP, tra cui:
 
-* filesystem (sistema di file)
+* filesystem (file system)
 * fetch (richieste web)
 * sqlite (database)
 * ecc...
 
-> La variabile MCP_PACKAGE_SCOPES personalizza la sorgente per la ricerca dei servizi MCP. Il valore predefinito è `@modelcontextprotocol`.
+> La variabile MCP_PACKAGE_SCOPES consente di personalizzare le fonti di ricerca dei servizi MCP. Il valore predefinito è `@modelcontextprotocol`.
 
-## Presentazione della Libreria `@mcpmarket/mcp-auto-install`
+## Introduzione alla libreria `@mcpmarket/mcp-auto-install`
 
 {% hint style="info" %}
-**Configurazione Predefinita di Riferimento:**
+**Configurazione di riferimento predefinita:**
 
 ```json
-// `axun-uUpaWEdMEMU8C61K` è l'ID servizio (personalizzabile)
+// `axun-uUpaWEdMEMU8C61K` è l'ID del servizio, personalizzabile
 "axun-uUpaWEdMEMU8C61K": {
   "name": "mcp-auto-install",
-  "description": "Automatically install MCP services (Beta version)",
+  "description": "Installa automaticamente servizi MCP (versione Beta)",
   "isActive": false,
   "registryUrl": "https://registry.npmmirror.com",
   "command": "npx",
@@ -66,5 +66,5 @@ Il sistema riconoscerà automaticamente la richiesta e completerà l'installazio
 }
 ```
 
-`@mcpmarket/mcp-auto-install` è un pacchetto npm open source. Consulta dettagli e documentazione sul [repository ufficiale npm](https://www.npmjs.com/package/@mcpmarket/mcp-auto-install). `@mcpmarket` rappresenta la raccolta ufficiale di servizi MCP di Cherry Studio.
+`@mcpmarket/mcp-auto-install` è un pacchetto npm open source. Puoi trovare informazioni dettagliate e documentazione su [npm registry](https://www.npmjs.com/package/@mcpmarket/mcp-auto-install). `@mcpmarket` rappresenta la raccolta ufficiale di servizi MCP di Cherry Studio.
 {% endhint %}

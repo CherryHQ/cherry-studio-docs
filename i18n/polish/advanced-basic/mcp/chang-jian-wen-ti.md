@@ -6,18 +6,18 @@ icon: hexagon-exclamation
 Ten dokument został przetłumaczony z chińskiego przez AI i nie został jeszcze zweryfikowany.
 {% endhint %}
 
-# Często Zadawane Pytania
+# Często zadawane pytania
 
 ### 1. mcp-server-time
 
 <figure><img src="../../.gitbook/assets/telegram-cloud-photo-size-5-6068931438453048569-y.jpg" alt=""><figcaption><p>Zrzut ekranu błędu</p></figcaption></figure>
 
-**Rozwiązanie**&#x20;
+**Rozwiązanie**  
 
-W rubryce "Parametry" wprowadź:
+W sekcji "Parametry" wpisz:
 
 ```
 mcp-server-time
 --local-timezone
-<Twoja standardowa strefa czasowa, np.: Asia/Shanghai>
+<Twoja strefa czasowa, np.: Asia/Shanghai>
 ```

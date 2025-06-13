@@ -5,18 +5,17 @@
 
 # التثبيت التلقائي لـ MCP
 
-> يتطلب التثبيت التلقائي لـ MCP تحديث Cherry Studio إلى الإصدار v1.1.18 أو أحدث.
+> يتطلب التثبيت التلقائي لـ MCP ترقية Cherry Studio إلى الإصدار v1.1.18 أو أعلى.
 
-## نبذة عن الميزة
+## مقدمة عن الميزة
 
-بالإضافة إلى التثبيت اليدوي، يحتوي Cherry Studio على أداة `@mcpmarket/mcp-auto-install` المدمجة، وهي طريقة أكثر سهولة لتثبيت خادم MCP. كل ما عليك هو إدخال الأمر المناسب في حوار النموذج الكبير الذي يدعم خدمة MCP.
+بالإضافة إلى التثبيت اليدوي، يحتوي Cherry Studio على أداة `@mcpmarket/mcp-auto-install` مدمجة، وهي طريقة أكثر سهولة لتثبيت خادم MCP. كل ما عليك فعله هو إدخال الأمر المناسب في محادثة النموذج اللغوي الكبير الذي يدعم خدمة MCP.
 
 {% hint style="warning" %}
 **تذكير بمرحلة الاختبار:**
-
-* `@mcpmarket/mcp-auto-install` لا يزال في مرحلة الاختبار.
-* يعتمد التأثير على "ذكاء" النموذج الكبير، فالبعض يضيف تلقائيًا، والبعض الآخر **لا يزال يحتاج إلى تغيير بعض المعلمات يدويًا في إعدادات MCP**.
-* حاليًا، يتم البحث في المصدر من @modelcontextprotocol، ويمكن تكوينه بشكل مستقل (انظر الشرح أدناه).
+* `@mcpmarket/mcp-auto-install` لا يزال في مرحلة الاختبار
+* يعتمد الأداء على "ذكاء" النموذج اللغوي الكبير - فبعضها يضيف التكوين تلقائيًا بينما يتطلب البعض **تعديل بعض المعلمات يدويًا في إعدادات MCP**
+* حاليًا يتم البحث في المصادر من خلال @modelcontextprotocol، ويمكن تكوينه يدويًا (كما هو موضح أدناه)
 {% endhint %}
 
 ## تعليمات الاستخدام
@@ -24,21 +23,21 @@
 على سبيل المثال، يمكنك إدخال:
 
 ```
-ساعدني في تثبيت خادم filesystem mcp
+帮我安装一个 filesystem mcp server
 ```
 
 <figure><img src="../../.gitbook/assets/mcp-auto-install_shot1.png" alt=""><figcaption><p>إدخال أمر لتثبيت خادم MCP</p></figcaption></figure>
 
 <figure><img src="../../.gitbook/assets/mcp-auto-install_shot2.png" alt=""><figcaption><p>واجهة تكوين خادم MCP</p></figcaption></figure>
 
-سيتعرف النظام تلقائيًا على احتياجاتك ويكمل التثبيت عبر `@mcpmarket/mcp-auto-install`. تدعم هذه الأداة أنواعًا متعددة من خوادم MCP، بما في ذلك على سبيل المثال لا الحصر:
+سيتعرف النظام تلقائيًا على طلبك ويقوم بالتثبيت باستخدام `@mcpmarket/mcp-auto-install`. تدعم هذه الأداة أنواعًا متعددة من خوادم MCP، تشمل:
 
 * filesystem (نظام الملفات)
-* fetch (طلب الشبكة)
-* sqlite (قاعدة البيانات)
-* إلخ...
+* fetch (جلب البيانات)
+* sqlite (قاعدة بيانات)
+* وغيرها...
 
-> يمكن تخصيص متغير MCP_PACKAGE_SCOPES لمصدر بحث خدمة MCP، والقيمة الافتراضية هي: `@modelcontextprotocol`، ويمكن تكوينها حسب الحاجة.
+> يمكن تخصيص مصادر بحث خدمة MCP عبر متغير MCP_PACKAGE_SCOPES، حيث تكون القيمة الافتراضية: `@modelcontextprotocol`.
 
 ## مقدمة عن مكتبة `@mcpmarket/mcp-auto-install`
 
@@ -60,11 +59,11 @@
     "--json"
   ],
   "env": {
-    "MCP_REGISTRY_PATH": "للتفاصيل، راجع https://www.npmjs.com/package/@mcpmarket/mcp-auto-install"
+    "MCP_REGISTRY_PATH": "详情见https://www.npmjs.com/package/@mcpmarket/mcp-auto-install"
   },
   "disabledTools": []
 }
 ```
 
-`@mcpmarket/mcp-auto-install` هي حزمة npm مفتوحة المصدر، يمكنك الاطلاع على التفاصيل ووثائق الاستخدام في [npm official repository](https://www.npmjs.com/package/@mcpmarket/mcp-auto-install). `@mcpmarket` هو مجموعة خدمات MCP الرسمية لـ Cherry Studio.
+`@mcpmarket/mcp-auto-install` عبارة عن حزمة npm مفتوحة المصدر. يمكنك الاطلاع على التفاصيل والوثائق في [المستودع الرسمي لـ npm](https://www.npmjs.com/package/@mcpmarket/mcp-auto-install). يُعتبر `@mcpmarket` المجموعة الرسمية لخدمات MCP من Cherry Studio.
 {% endhint %}

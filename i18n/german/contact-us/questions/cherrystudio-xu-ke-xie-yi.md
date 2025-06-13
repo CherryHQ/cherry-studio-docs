@@ -3,69 +3,75 @@
 Dieses Dokument wurde von einer KI aus dem Chinesischen übersetzt und ist noch nicht überprüft worden.
 {% endhint %}
 
+```german
+---
+icon: cherries
+---
+
 # Cherry Studio Lizenzvereinbarung
 
-Durch die Nutzung oder Verbreitung irgendeines Teils oder Elements von Cherry Studio-Materialien gelten Sie als Nutzer, der die Inhalte dieser Vereinbarung anerkennt und akzeptiert. Diese Vereinbarung tritt sofort in Kraft.
+Durch die Nutzung oder Verbreitung eines Teils oder Elements der Cherry Studio-Materialien gelten Sie als mit dem Inhalt dieser Vereinbarung einverstanden und akzeptieren ihn, wobei diese Vereinbarung sofort in Kraft tritt.
 
 ## I. Definitionen
 
-1. Diese Cherry Studio Lizenzvereinbarung (im Folgenden "Vereinbarung") bezeichnet die in dieser Vereinbarung festgelegten Bedingungen bezüglich der Nutzung, Vervielfältigung, Verbreitung und Modifikation von Materialien.
-2. "Wir" (oder "unser") bezieht sich auf die Shanghai Qianhui Technology Co., Ltd.
-3. "Sie" (oder "Ihr") bezeichnet jede natürliche oder juristische Person, die die durch diese Vereinbarung gewährten Rechte ausübt und/oder Materialien für beliebige Zwecke und in beliebigen Nutzungsbereichen verwendet.
-4. "Dritter" bezeichnet jede natürliche oder juristische Person, die weder mit uns noch mit Ihnen unter gemeinsamer Kontrolle steht.
-5. "Cherry Studio" bezieht sich auf diese Software-Suite, einschließlich aber nicht beschränkt auf [Beispiel: Kernbibliotheken, Editor, Plugins, Beispielprojekte], sowie Quellcode, Dokumentation, Beispielcode und andere Elemente, die wir mit diesen verteilen. (Bitte detailliert basierend auf der tatsächlichen Zusammensetzung von CherryStudio beschreiben)
-6. "Materialien" bezeichnet kollektiv das proprietäre Cherry Studio und die Dokumentation (sowie deren Teile) der Shanghai Qianhui Technology Co., Ltd., bereitgestellt im Rahmen dieser Vereinbarung.
-7. "Quellform" bezeichnet die bevorzugte Form für Modifikationen, einschließlich aber nicht beschränkt auf Quellcode, Dokumentationsquelldateien und Konfigurationsdateien.
-8. "Zielform" bezeichnet jede durch mechanische Umwandlung oder Übersetzung der Quellform erzeugte Form, einschließlich aber nicht beschränkt auf kompilierter Objektcode, generierte Dokumentation und in andere Medientypen konvertierte Formen.
-9. "Kommerzielle Nutzung" bezeichnet Nutzung zu Zwecken, die direkt oder indirekt kommerziellen Nutzen oder Vorteil bringen, einschließlich aber nicht beschränkt auf Verkauf, Lizenzierung, Abonnements, Werbung, Marketing, Schulungen, Beratungsdienste, etc.
-10. "Modifikation" bezeichnet jegliche Änderung, Anpassung, Ableitung oder Weiterentwicklung der Materialien in Quellform, einschließlich aber nicht beschränkt auf Änderungen von Anwendungsnamen, Logos, Code, Funktionen, Schnittstellen, etc.
+1.  Diese Cherry Studio-Lizenzvereinbarung (im Folgenden "Vereinbarung") bezeichnet die in dieser Vereinbarung festgelegten Bedingungen für die Nutzung, Vervielfältigung, Verbreitung und Bearbeitung der Materialien.
+2.  "Wir" (oder "Unser") bezieht sich auf Shanghai Qianhui Technology Co., Ltd.
+3.  "Sie" (oder "Ihr") bezeichnet jede natürliche oder juristische Person, die die durch diese Vereinbarung gewährten Rechte ausübt und/oder die Materialien für jeden Zweck und in jedem Anwendungsbereich nutzt.
+4.  "Dritte" bezeichnet Personen oder juristische Einheiten, die weder unter unserer noch unter Ihrer gemeinsamen Kontrolle stehen.
+5.  "Cherry Studio" bezeichnet diese Software-Suite, einschließlich, aber nicht beschränkt auf [Beispiel: Kernbibliotheken, Editor, Plugins, Beispielprojekte], sowie Quellcode, Dokumentation, Beispielcode und andere Elemente der oben genannten Punkte, die von uns verteilt werden. (Bitte detailliert entsprechend der tatsächlichen Zusammensetzung von CherryStudio beschreiben)
+6.  "Materialien" bezeichnet kollektiv das proprietäre Cherry Studio und die Dokumentation (sowie deren Teile) der Shanghai Qianhui Technology Co., Ltd., die gemäß dieser Vereinbarung bereitgestellt werden.
+7.  "Quellform" bezeichnet die bevorzugte Form für die Durchführung von Änderungen, einschließlich, aber nicht beschränkt auf Quellcode, Dokumentationsquelldateien und Konfigurationsdateien.
+8.  "Zielform" bezeichnet jede Form, die durch mechanische Transformation oder Übersetzung der Quellform entsteht, einschließlich, aber nicht beschränkt auf kompilierten Objektcode, generierte Dokumentation und in andere Medientypen konvertierte Formen.
+9.  "Kommerzielle Nutzung" bezieht sich auf Zwecke mit direktem oder indirektem kommerziellem Nutzen oder Vorteil, einschließlich, aber nicht beschränkt auf Verkauf, Lizenzierung, Abonnements, Werbung, Marketing, Schulungen, Beratungsdienstleistungen usw.
+10. "Bearbeitung" bezeichnet jede Änderung, Anpassung, Ableitung oder Weiterentwicklung der Materialien in Quellform, einschließlich, aber nicht beschränkt auf Änderungen an App-Namen, Logos, Code, Funktionen, Benutzeroberflächen usw.
 
-## II. Rechteeinräumung
+## II. Gewährte Rechte
 
-1. Kostenlose kommerzielle Nutzung (beschränkt auf unveränderten Code): Wir räumen Ihnen hiermit - basierend auf unserem geistigen Eigentum oder anderen Rechten an den Materialien - eine nicht-exklusive, weltweite, nicht übertragbare, gebührenfreie Lizenz zur Nutzung, Vervielfältigung, Verbreitung, Kopie und Verteilung unveränderter Materialien, auch für kommerzielle Zwecke, ein, vorbehaltlich der Bedingungen dieser Vereinbarung.
-2. Kommerzielle Lizenzierung (falls erforderlich): Unter Erfüllung der in Abschnitt III "Kommerzielle Lizenzierung" beschriebenen Bedingungen benötigen Sie für die Ausübung der Rechte gemäß dieser Vereinbarung unsere ausdrückliche schriftliche kommerzielle Genehmigung.
+1.  **Kostenlose kommerzielle Nutzung (beschränkt auf unveränderten Code):** Wir gewähren Ihnen hiermit eine nicht-exklusive, weltweite, nicht übertragbare, gebührenfreie Lizenz, unveränderte Materialien gemäß den Bedingungen dieser Vereinbarung zu nutzen, zu vervielfältigen, zu verbreiten und zu kopieren, auch für kommerzielle Zwecke. Diese Lizenz wird unter Berücksichtigung der Rechte erteilt, die wir an geistigem Eigentum oder anderen Rechten besitzen, die in den Materialien verkörpert sind.
+2.  **Kommerzielle Lizenzierung (bei Bedarf):** Unter den in Abschnitt III ("Kommerzielle Lizenzierung") genannten Umständen müssen Sie eine ausdrückliche schriftliche kommerzielle Lizenz von uns einholen, um die Rechte gemäß dieser Vereinbarung auszuüben.
 
 ## III. Kommerzielle Lizenzierung
 
-In jedem der folgenden Fälle müssen Sie uns kontaktieren und eine ausdrückliche schriftliche kommerzielle Genehmigung einholen, bevor Sie die Cherry Studio-Materialien weiter nutzen:
+In einem der folgenden Fälle müssen Sie uns kontaktieren und eine ausdrückliche schriftliche kommerzielle Lizenz erwerben, um die Cherry Studio-Materialien weiterhin zu nutzen:
 
-1. Modifikation und Ableitung: Sie führen Modifikationen an Cherry Studio-Materialien durch oder entwickeln darauf basierende Derivate (einschließlich Änderungen von Anwendungsnamen, Logos, Code, Funktionen, Schnittstellen, etc.).
-2. Unternehmensdienstleistungen: Sie stellen in Ihrem Unternehmen oder für Unternehmenskunden services basierend auf Cherry Studio bereit, die für kumulativ 10 oder mehr Benutzer ausgelegt sind.
-3. Hardware-Bündelverkauf: Sie integrieren Cherry Studio vorinstalliert oder integriert in Hardware-Geräte oder Produkte für Bündelverkäufe.
-4. Masseneinkäufe staatlicher oder Bildungseinrichtungen: Ihr Nutzungsszenario betrifft Masseneinkaufsprojekte staatlicher oder akademischer Institutionen, insbesondere bei sensiblen Anforderungen wie Sicherheit oder Datenschutz.
-5. Öffentliche Cloud-Dienste: Bereitstellung öffentlich zugänglicher Cloud-Dienste basierend auf Cherry Studio.
+1.  **Bearbeitungen und Ableitungen:** Sie nehmen Änderungen an den Cherry Studio-Materialien vor oder entwickeln darauf basierende abgeleitete Werke (einschließlich, aber nicht beschränkt auf Änderungen an App-Namen, Logos, Code, Funktionen, Benutzeroberflächen usw.).
+2.  **Unternehmensdienste:** Sie stellen innerhalb Ihres Unternehmens oder für Unternehmenskunden Dienstleistungen auf Basis von Cherry Studio bereit, die für den kumulativen Einsatz durch 10 oder mehr Benutzer ausgelegt sind.
+3.  **Hardware-Bündelverkäufe:** Sie integrieren Cherry Studio vorinstalliert oder integriert in Hardwaregeräte oder -produkte für den gebündelten Verkauf.
+4.  **Großbeschaffungen durch Regierungs- oder Bildungseinrichtungen:** Ihr Einsatzzweck fällt unter Großbeschaffungsprojekte von Regierungen oder Bildungseinrichtungen, insbesondere bei sensiblen Anforderungen wie Sicherheit oder Datenschutz.
+5.  **Öffentliche Cloud-Dienste:** Sie bieten auf Cherry Studio basierende öffentliche Cloud-Dienste für die Allgemeinheit an.
 
-## IV. Weitergabe
+## IV. Weiterverteilung
 
-Sie dürfen Kopien unveränderter Materialien verteilen oder als Teil von Produkten/Dienstleistungen bereitstellen, in Quellform oder Zielform, wenn Sie folgende Bedingungen erfüllen:
+Sie dürfen unveränderte Kopien der Materialien verteilen oder als Teil von Produkten oder Dienstleistungen, die unveränderte Materialien enthalten, in Quellform oder Zielform zur Verfügung stellen, sofern Sie die folgenden Bedingungen erfüllen:
 
-1. Sie müssen jedem Empfänger der Materialien eine Kopie dieser Vereinbarung bereitstellen.
-2. Sie müssen in allen verteilten Kopien der Materialien den folgenden Hinweis anbringen und in einer mit diesen Kopien verteilten "NOTICE"-Datei oder ähnlichen Textdatei platzieren: \`"Cherry Studio is licensed under the Cherry Studio LICENSE AGREEMENT, Copyright (c) 上海千彗科技有限公司. All Rights Reserved."\`
+1.  Sie müssen jedem anderen Empfänger der Materialien eine Kopie dieser Vereinbarung zur Verfügung stellen.
+2.  Sie müssen den folgenden Namensnennungshinweis in allen von Ihnen verteilten Kopien der Materialien beibehalten und in einer "NOTICE"-Datei oder ähnlichen Textdatei platzieren, die als Teil einer solchen Kopie verteilt wird: `"Cherry Studio unterliegt der Cherry Studio LIZENZVEREINBARUNG, Copyright (c) Shanghai Qianhui Technology Co., Ltd. Alle Rechte vorbehalten."`
 
 ## V. Nutzungsregeln
 
-1. Materialien können Exportkontrollen oder Beschränkungen unterliegen. Sie verpflichten sich bei der Materialnutzung zur Einhaltung geltender Gesetze und Vorschriften.
-2. Wenn Sie Materialien oder deren Ergebnisse zur Erstellung, Trainierung, Feinabstimmung oder Verbesserung von Software oder Modellen verwenden, die verteilt oder bereitgestellt werden sollen, empfehlen wir Ihnen, in relevanten Produktdokumenten deutlich "Built with Cherry Studio" oder "Powered by Cherry Studio" zu kennzeichnen.
+1.  Materialien können Exportkontrollen oder -beschränkungen unterliegen. Sie müssen bei der Nutzung der Materialien alle anwendbaren Gesetze und Vorschriften einhalten.
+2.  Wenn Sie die Materialien oder deren Ausgaben bzw. Ergebnisse verwenden, um Software oder Modelle zu erstellen, zu trainieren, feinzutunen oder zu verbessern, die verteilt oder angeboten werden sollen, ermutigen wir Sie, in der zugehörigen Produktdokumentation deutlich "Erstellt mit Cherry Studio" oder "Powered by Cherry Studio" zu kennzeichnen.
 
 ## VI. Geistiges Eigentum
 
-1. Wir behalten uns alle Eigentumsrechte an den Materialien und von uns erstellten Derivaten vor. Vorbehaltlich dieser Vereinbarung wird die Rechtezuordnung für Ihre Modifikationen und Derivate individuell durch kommerzielle Lizenzvereinbarungen geregelt. Ohne kommerzielle Lizenzierung verbleiben sämtliche Rechte an Ihren Modifikationen bei uns.
-2. Keine Markenlizenzen werden erteilt, es sei denn für vereinbarungsgemäße Benachrichtigungspflichten oder übliche beschreibende Verwendung bei der Materialweiterleitung.
-3. Wenn Sie Klage oder Verfahren (einschließlich Widerklagen) gegen uns oder Dritte wegen Verletzung geistiger Eigentumsrechte durch Materialien oder deren Ergebnisse einleiten, erlöschen alle Lizenzen gemäß dieser Vereinbarung ab Einreichungsdatum.
+1.  Wir behalten uns das Eigentum an allen Rechten des geistigen Eigentums an den Materialien sowie an von uns oder für uns erstellten abgeleiteten Werken vor. Vorbehaltlich der Einhaltung der Bedingungen dieser Vereinbarung wird die Zugehörigkeit der Rechte des geistigen Eigentums an Ihren Bearbeitungen und abgeleiteten Werken der Materialien in der jeweiligen kommerziellen Lizenzvereinbarung festgelegt. Ohne eine kommerzielle Lizenzierung besitzen Sie keine Eigentumsrechte an Ihren Bearbeitungen und abgeleiteten Werken der Materialien; diese verbleiben bei uns.
+2.  Es wird keine Markenlizenz zur Nutzung unserer Handelsnamen, Marken, Dienstleistungsmarken oder Produktnamen gewährt, es sei denn, dies ist zur Erfüllung der Benachrichtigungspflichten gemäß dieser Vereinbarung oder für eine angemessene und übliche Verwendung bei der Beschreibung und Weiterverteilung der Materialien erforderlich.
+3.  Wenn Sie eine Klage oder ein anderes Rechtsverfahren (einschließlich einer Widerklage oder einem Gegenanspruch in einem Verfahren) gegen uns oder eine andere Einheit erheben und darin geltend machen, dass die Materialien, deren Ausgaben oder ein Teil davon geistiges Eigentum oder andere Rechte verletzt, an denen Sie Eigentumsrechte besitzen oder die Sie lizenzieren können, so enden alle Ihnen gemäß dieser Vereinbarung gewährten Lizenzen mit Einleitung oder Einreichung dieses Verfahrens.
 
-## VII. Haftungsausschluss und -beschränkung
+## VII. Haftungsausschluss und Haftungsbeschränkung
 
-1. Wir sind nicht verpflichtet, Materialien zu unterstützen, zu aktualisieren, Schulungen anzubieten oder neue Versionen zu entwickeln.
-2. Materialien werden "wie besehen" ohne Gewährleistung bereitgestellt, einschließlich impliziter Gewährleistungen von Marktgängigkeit oder Eignung. Wir übernehmen keine Gewähr für Sicherheit oder Stabilität der Materialien.
-3. Wir haften in keinem Fall für Schäden durch Ihre Materialnutzung, einschließlich direkter, indirekter oder Folgekosten.
-4. Sie verpflichten sich, uns von Ansprüchen Dritter wegen Ihrer Materialnutzung freizustellen und schadlos zu halten.
+1.  Wir sind nicht verpflichtet, CherryStudio-Materialien zu unterstützen, zu aktualisieren, Schulungen anzubieten oder neue Versionen zu entwickeln oder entsprechende Lizenzen zu gewähren.
+2.  Die Materialien werden "wie besehen" ohne jegliche ausdrückliche oder stillschweigende Gewährleistung bereitgestellt, einschließlich, aber nicht beschränkt auf Gewährleistungen der Marktgängigkeit, Nichtverletzung oder Eignung für einen bestimmten Zweck. Wir übernehmen keinerlei Gewährleistung oder Verantwortung für die Sicherheit oder Stabilität der Materialien oder deren Ausgaben.
+3.  In keinem Fall haften wir Ihnen gegenüber für Schäden, die aus Ihrer Nutzung oder Nichtnutzung der Materialien oder deren Ausgaben resultieren, einschließlich, aber nicht beschränkt auf direkte, indirekte, besondere oder Folgeschäden, unabhängig von deren Verursachung.
+4.  Sie werden uns gegen jegliche Ansprüche von Dritten verteidigen, entschädigen und schadlos halten, die in Verbindung mit Ihrer Nutzung oder Verbreitung der Materialien entstehen oder im Zusammenhang damit stehen.
 
 ## VIII. Geltungsdauer und Beendigung
 
-1. Diese Vereinbarung beginnt bei Ihrer Zustimmung oder Materialnutzung und gilt bis zur vereinbarungsgemäßen Beendigung.
-2. Verstöße gegen diese Bedingungen berechtigen uns zur Kündigung. Nach Beendigung müssen Sie die Materialnutzung einstellen. Die Abschnitte VII, IX und "II. Beitragende Vereinbarung" bleiben wirksam.
+1.  Diese Vereinbarung tritt mit Ihrer Annahme oder Ihrem Zugriff auf die Materialien in Kraft und bleibt bis zu ihrer Beendigung gemäß den Bestimmungen dieser Vereinbarung gültig.
+2.  Wir können diese Vereinbarung beenden, wenn Sie gegen irgendeine ihrer Bedingungen verstoßen. Nach Beendigung der Vereinbarung müssen Sie die Nutzung der Materialien einstellen. Die Abschnitte VII, IX und "II. Mitwirkendenvereinbarung" bleiben nach Beendigung der Vereinbarung wirksam.
 
 ## IX. Anwendbares Recht und Gerichtsstand
 
-1. Diese Vereinbarung und damit verbundene Streitigkeiten unterliegen chinesischem Recht.
-2. Ausschließlicher Gerichtsstand für vereinbarungsbezogene Streitigkeiten sind die Gerichte von Shanghai.
+1.  Diese Vereinbarung und sämtliche Streitigkeiten, die aus dieser Vereinbarung hervorgehen oder mit ihr zusammenhängen, unterliegen dem Recht der Volksrepublik China.
+2.  Die Gerichte in Shanghai haben die ausschließliche Zuständigkeit für alle Streitigkeiten, die aus dieser Vereinbarung hervorgehen oder mit ihr zusammenhängen.
+```

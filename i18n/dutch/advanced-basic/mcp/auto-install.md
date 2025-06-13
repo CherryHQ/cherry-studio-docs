@@ -5,18 +5,17 @@ Dit document is door AI vertaald vanuit het Chinees en is nog niet beoordeeld.
 
 # Automatische installatie van MCP
 
-> Voor de automatische installatie van MCP moet Cherry Studio worden bijgewerkt naar v1.1.18 of hoger.
+> Voor automatische installatie van MCP is Cherry Studio v1.1.18 of hoger vereist.
 
-## Functie-introductie
+## Functie-inleiding
 
-Naast handmatige installatie bevat Cherry Studio ook de ingebouwde tool `@mcpmarket/mcp-auto-install`, wat een eenvoudigere methode is voor het installeren van MCP-servers. Je hoeft alleen maar de juiste opdracht in te voeren binnen een grootmodeldialoog die MCP-services ondersteunt.
+Naast handmatige installatie heeft Cherry Studio de ingebouwde tool `@mcpmarket/mcp-auto-install`, een handigere methode om MCP-servers te installeren. Je hoeft alleen de bijbehorende opdracht in te voeren in een modeldialoog die MCP-services ondersteunt.
 
 {% hint style="warning" %}
-**Testfase waarschuwing:**
-
+**Testfase herinnering:**
 * `@mcpmarket/mcp-auto-install` bevindt zich momenteel nog in de testfase
-* Het resultaat hangt af van de "intelligentie" van het grootmodel - sommige worden automatisch toegevoegd, maar bij sommige moet je **nog steeds bepaalde parameters handmatig wijzigen in de MCP-instellingen**
-* Momenteel worden zoekbronnen gezocht in @modelcontextprotocol, wat handmatig kan worden geconfigureerd (zie uitleg hieronder)
+* Het resultaat hangt af van de "intelligentie" van het grote model - sommige worden automatisch toegevoegd, terwijl voor andere **bepaalde parameters handmatig moeten worden gewijzigd in de MCP-instellingen**
+* Momenteel wordt er gezocht vanuit @modelcontextprotocol als bron, je kunt dit zelf configureren (zie uitleg hieronder)
 {% endhint %}
 
 ## Gebruiksaanwijzing
@@ -29,27 +28,26 @@ Je kunt bijvoorbeeld invoeren:
 
 <figure><img src="../../.gitbook/assets/mcp-auto-install_shot1.png" alt=""><figcaption><p>Voer opdracht in om MCP-server te installeren</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/mcp-auto-install_shot2.png" alt=""><figcaption><p>MCP-server configuratiescherm</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/mcp-auto-install_shot2.png" alt=""><figcaption><p>Configuratiescherm van MCP-server</p></figcaption></figure>
 
-Het systeem herkent automatisch je vereisten en voltooit de installatie via `@mcpmarket/mcp-auto-install`. Deze tool ondersteunt verschillende soorten MCP-servers, waaronder maar niet beperkt tot:
-
+Het systeem herkent automatisch uw behoeften en voltooit de installatie via `@mcpmarket/mcp-auto-install`. Deze tool ondersteunt verschillende soorten MCP-servers, waaronder:
 * filesystem (bestandssysteem)
 * fetch (netwerkverzoek)
 * sqlite (database)
-* etc.
+* enz.
 
-> De variabele `MCP_PACKAGE_SCOPES` maakt het mogelijk om MCP-service zoekbronnen aan te passen. Standaardwaarde: `@modelcontextprotocol`, kan handmatig worden geconfigureerd.
+> De variabele MCP_PACKAGE_SCOPES kan de zoekbron voor MCP-services aanpassen. Standaardwaarde is: `@modelcontextprotocol`, configureerbaar naar wens.
 
 ## Introductie van `@mcpmarket/mcp-auto-install` bibliotheek
 
 {% hint style="info" %}
-**Standaard configuratieverwijzing:**
+**Standaard configuratie referentie:**
 
 ```json
-// `axun-uUpaWEdMEMU8C61K` is service-ID, kan naar wens worden aangepast
+// `axun-uUpaWEdMEMU8C61K` is de service-ID, aanpasbaar
 "axun-uUpaWEdMEMU8C61K": {
   "name": "mcp-auto-install",
-  "description": "Automatically install MCP services (Beta version)",
+  "description": "Automatisch MCP-services installeren (Betaversie)",
   "isActive": false,
   "registryUrl": "https://registry.npmmirror.com",
   "command": "npx",
@@ -60,11 +58,11 @@ Het systeem herkent automatisch je vereisten en voltooit de installatie via `@mc
     "--json"
   ],
   "env": {
-    "MCP_REGISTRY_PATH": "详情见https://www.npmjs.com/package/@mcpmarket/mcp-auto-install"
+    "MCP_REGISTRY_PATH": "Details op https://www.npmjs.com/package/@mcpmarket/mcp-auto-install"
   },
   "disabledTools": []
 }
 ```
 
-`@mcpmarket/mcp-auto-install` is een open-source npm-pakket. Je kunt de gedetailleerde informatie en gebruikersdocumentatie bekijken in de [officiële npm repository](https://www.npmjs.com/package/@mcpmarket/mcp-auto-install). `@mcpmarket` is de officiële Cherry Studio MCP-servicecollectie.
+`@mcpmarket/mcp-auto-install` is een open source npm-pakket. Bekijk details en documentatie in de [npm officiële repository](https://www.npmjs.com/package/@mcpmarket/mcp-auto-install). `@mcpmarket` is Cherry Studio's officiële collectie van MCP-services.
 {% endhint %}

@@ -10,13 +10,14 @@ Dokumen ini diterjemahkan dari bahasa Mandarin oleh AI dan belum ditinjau.
 
 ### 1. mcp-server-time
 
-<figure><img src="../../.gitbook/assets/telegram-cloud-photo-size-5-6068931438453048569-y.jpg" alt=""><figcaption><p>Tangkapan layar error</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/telegram-cloud-photo-size-5-6068931438453048569-y.jpg" alt=""><figcaption><p>Screenshot kesalahan</p></figcaption></figure>
 
-**Solusi**  
-Isi kolom "Parameter" dengan:
+**Solusi**&#x20;
+
+Isi di kolom "Parameter" dengan:
 
 ```
 mcp-server-time
 --local-timezone
-<zona waktu standar Anda, contoh: Asia/Shanghai>
+<Zona waktu standar Anda, misalnya: Asia/Shanghai>
 ```

@@ -9,14 +9,14 @@ Este documento ha sido traducido del chino por IA y aún no ha sido revisado.
 
 ## Introducción a la Función
 
-Además de la instalación manual, Cherry Studio incluye integrada la herramienta `@mcpmarket/mcp-auto-install`, que ofrece una forma más conveniente de instalar servidores MCP. Simplemente ingresa el comando correspondiente en un diálogo de modelo grande compatible con servicios MCP.
+Además de la instalación manual, Cherry Studio incluye la herramienta `@mcpmarket/mcp-auto-install`, una forma más conveniente de instalar servidores MCP. Solo necesitas ingresar el comando correspondiente en el diálogo de modelos grandes que admiten servicios MCP.
 
 {% hint style="warning" %}
-**Recordatorio de Fase de Pruebas:**
+**Recordatorio de fase de prueba:**
 
-* `@mcpmarket/mcp-auto-install` actualmente sigue en fase de prueba
-* Su efectividad depende de la "inteligencia" del modelo grande; algunos se configuran automáticamente, mientras que otros aún **requieren cambios manuales de parámetros en la configuración MCP**
-* Actualmente las fuentes de búsqueda se realizan en @modelcontextprotocol, pero pueden configurarse manualmente (explicado abajo)
+* `@mcpmarket/mcp-auto-install` aún está en fase de prueba
+* El efecto depende de la "inteligencia" del modelo grande; algunos se agregan automáticamente, mientras que otros **requieren ajustes manuales en la configuración de MCP**
+* Actualmente, la fuente de búsqueda es @modelcontextprotocol, pero puede configurarse manualmente (ver más abajo)
 {% endhint %}
 
 ## Instrucciones de Uso
@@ -24,21 +24,21 @@ Además de la instalación manual, Cherry Studio incluye integrada la herramient
 Por ejemplo, puedes ingresar:
 
 ```
-Ayúdame a instalar un servidor MCP de tipo filesystem
+帮我安装一个 filesystem mcp server
 ```
 
 <figure><img src="../../.gitbook/assets/mcp-auto-install_shot1.png" alt=""><figcaption><p>Ingresar comando para instalar servidor MCP</p></figcaption></figure>
 
 <figure><img src="../../.gitbook/assets/mcp-auto-install_shot2.png" alt=""><figcaption><p>Interfaz de configuración del servidor MCP</p></figcaption></figure>
 
-El sistema reconocerá automáticamente tu solicitud y completará la instalación mediante `@mcpmarket/mcp-auto-install`. Esta herramienta soporta varios tipos de servidores MCP, incluyendo:
+El sistema reconocerá automáticamente tus necesidades y completará la instalación mediante `@mcpmarket/mcp-auto-install`. Esta herramienta admite múltiples tipos de servidores MCP, incluyendo:
 
 * filesystem (sistema de archivos)
-* fetch (solicitudes web)
+* fetch (solicitudes de red)
 * sqlite (base de datos)
-* etc.
+* etc...
 
-> La variable MCP_PACKAGE_SCOPES permite personalizar las fuentes de búsqueda de servicios MCP. El valor predeterminado es: `@modelcontextprotocol`. Configuración personalizable.
+> La variable MCP_PACKAGE_SCOPES permite personalizar las fuentes de búsqueda de servicios MCP. El valor predeterminado es: `@modelcontextprotocol`.
 
 ## Introducción a la biblioteca `@mcpmarket/mcp-auto-install`
 
@@ -46,7 +46,7 @@ El sistema reconocerá automáticamente tu solicitud y completará la instalaci�
 **Configuración de referencia predeterminada:**
 
 ```json
-// `axun-uUpaWEdMEMU8C61K` es el ID del servicio, personalizable
+// `axun-uUpaWEdMEMU8C61K` es el ID de servicio, personalizable
 "axun-uUpaWEdMEMU8C61K": {
   "name": "mcp-auto-install",
   "description": "Automatically install MCP services (Beta version)",
@@ -66,5 +66,5 @@ El sistema reconocerá automáticamente tu solicitud y completará la instalaci�
 }
 ```
 
-`@mcpmarket/mcp-auto-install` es un paquete npm de código abierto. Puedes consultar información detallada y documentación en el [repositorio oficial de npm](https://www.npmjs.com/package/@mcpmarket/mcp-auto-install). `@mcpmarket` es la colección oficial de servicios MCP de Cherry Studio.
+`@mcpmarket/mcp-auto-install` es un paquete npm de código abierto. Puedes consultar detalles y documentación en el [repositorio oficial de npm](https://www.npmjs.com/package/@mcpmarket/mcp-auto-install). `@mcpmarket` es la colección oficial de servicios MCP de Cherry Studio.
 {% endhint %}

@@ -3,50 +3,50 @@
 このドキュメントはAIによって中国語から翻訳されており、まだレビューされていません。
 {% endhint %}
 
-# MCPの自動インストール
+# 自動インストール MCP
 
-> MCPの自動インストールには、Cherry Studioをv1.1.18以降にアップグレードする必要があります。
+> 自動インストールには、Cherry Studio を v1.1.18 以上にアップグレードする必要があります。
 
 ## 機能概要
 
-手動インストールに加え、Cherry Studioはより便利なMCPサーバーインストール方法として`@mcpmarket/mcp-auto-install`ツールを組み込んでいます。MCPサービスをサポートする大規模言語モデルとの対話で、対応するコマンドを入力するだけで利用できます。
+手動インストールに加え、Cherry Studio にはより便利な `@mcpmarket/mcp-auto-install` ツールが組み込まれており、MCP サーバーを簡単にインストールできます。MCP サービス対応の大規模言語モデル対話で適切なコマンドを入力するだけで設定可能です。
 
 {% hint style="warning" %}
-**テスト段階の注意点：**
+**テスト段階に関する注意:**
 
-* `@mcpmarket/mcp-auto-install`は現在ベータ版です
-* 効果は大規模言語モデルの「知能」に依存し、自動追加される場合もあれば、**MCP設定で一部パラメータを手動調整する必要がある場合もあります**
-* 現在の検索ソースは@modelcontextprotocolから取得しており、カスタム設定が可能です（後述）
+* `@mcpmarket/mcp-auto-install` は現在ベータテスト中です
+* 動作は大規模モデルの「知能レベル」に依存し、自動追加される場合もありますが、**一部設定はMCP設定で手動調整が必要**な場合があります
+* 現在の検索ソースは @modelcontextprotocol から取得しています（カスタマイズ方法は下記説明）
 {% endhint %}
 
-## 使用説明
+## 使用方法
 
-例えば、次のように入力できます：
+例えば、次のコマンドを入力：
 
 ```
-filesystem mcp serverをインストールしてください
+帮我安装一个 filesystem mcp server
 ```
 
-<figure><img src="../../.gitbook/assets/mcp-auto-install_shot1.png" alt=""><figcaption><p>MCPサーバーインストールコマンド入力</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/mcp-auto-install_shot1.png" alt=""><figcaption><p>MCP サーバーインストールコマンド入力画面</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/mcp-auto-install_shot2.png" alt=""><figcaption><p>MCPサーバー設定画面</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/mcp-auto-install_shot2.png" alt=""><figcaption><p>MCP サーバー設定インターフェース</p></figcaption></figure>
 
-システムは自動的に要求を認識し、`@mcpmarket/mcp-auto-install`を介してインストールを完了します。このツールは以下を含む様々なタイプのMCPサーバーをサポートしています：
+システムが自動的に要求を認識し、`@mcpmarket/mcp-auto-install` でインストールを完了します。このツールは次のような様々なタイプの MCP サーバーに対応しています：
 
 * filesystem（ファイルシステム）
 * fetch（ネットワークリクエスト）
 * sqlite（データベース）
 * など...
 
-> MCP_PACKAGE_SCOPES変数でMCPサービスの検索ソースをカスタマイズ可能です。デフォルト値は`@modelcontextprotocol`です。
+> MCP_PACKAGE_SCOPES 変数で MCP サービスの検索ソースをカスタマイズ可能（デフォルト値：`@modelcontextprotocol`）。
 
-## `@mcpmarket/mcp-auto-install`ライブラリの紹介
+## `@mcpmarket/mcp-auto-install` ライブラリ概要
 
 {% hint style="info" %}
-**デフォルト設定例：**
+**デフォルト設定例:**
 
 ```json
-// `axun-uUpaWEdMEMU8C61K`はサービスID（任意設定可）
+// `axun-uUpaWEdMEMU8C61K` はサービスID（任意の値に設定可）
 "axun-uUpaWEdMEMU8C61K": {
   "name": "mcp-auto-install",
   "description": "Automatically install MCP services (Beta version)",
@@ -66,5 +66,5 @@ filesystem mcp serverをインストールしてください
 }
 ```
 
-`@mcpmarket/mcp-auto-install`はオープンソースのnpmパッケージです。詳細情報と使用ドキュメントは[npm公式リポジトリ](https://www.npmjs.com/package/@mcpmarket/mcp-auto-install)で確認できます。`@mcpmarket`はCherry Studio公式のMCPサービスコレクションです。
+`@mcpmarket/mcp-auto-install` はオープンソースの npm パッケージです。詳細な情報と使用方法は [npm 公式リポジトリ](https://www.npmjs.com/package/@mcpmarket/mcp-auto-install) で確認できます。`@mcpmarket` は Cherry Studio 公式の MCP サービスコレクションです。
 {% endhint %}
