@@ -1,6 +1,0 @@
----
-icon: gear
----
-
-# Settings
-
