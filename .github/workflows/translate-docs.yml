@@ -1,12 +1,12 @@
 name: Translate Documentation
 
 on:
-  push:
-    branches:
-      - main
-    paths:
-      - '**/*.md'
-      - '.gitbook/**'
+  #push:
+    #branches:
+      #- main
+    #paths:
+      #- '**/*.md'
+      #- '.gitbook/**'
   workflow_dispatch: # 允许手动触发
 
 jobs:
