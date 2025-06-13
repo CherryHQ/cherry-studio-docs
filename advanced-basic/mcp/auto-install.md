@@ -63,4 +63,3 @@
 
 `@mcpmarket/mcp-auto-install` 是一个开源的 npm 包，你可以在 [npm 官方仓库](https://www.npmjs.com/package/@mcpmarket/mcp-auto-install) 查看其详细信息和使用文档。`@mcpmarket` 为 Cherry Studi 官方 MCP 服务集合。
 {% endhint %}
- 
