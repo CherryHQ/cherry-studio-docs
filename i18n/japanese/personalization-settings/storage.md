@@ -6,9 +6,9 @@ icon: floppy-disk
 このドキュメントはAIによって中国語から翻訳されており、まだレビューされていません。
 {% endhint %}
 
-# デフォルトの保存場所
+# デフォルト保存場所
 
-Cherry Studioのデータ保存はシステムの仕様に従い、データはユーザーディレクトリ下に自動的に保存されます。具体的なディレクトリの場所は次の通りです：
+Cherry Studioのデータ保存はシステム仕様に準拠しており、データは自動的にユーザーディレクトリに保存されます。具体的なディレクトリの場所は以下の通りです：
 
 > macOS: /Users/username/Library/Application Support/CherryStudioDev
 
@@ -19,21 +19,24 @@ Cherry Studioのデータ保存はシステムの仕様に従い、データは�
 以下の場所でも確認できます：
 <figure><img src="../../.gitbook/assets/image (31).png" alt=""><figcaption></figcaption></figure>
 
-# 保存場所の変更（参考情報）
 
-方法１：
 
-シンボリックリンクを作成することで実現できます。ソフトウェアを終了し、データを希望の保存場所に移動した後、元の場所に移動先を指すリンクを作成します。
+# 保存場所変更（参考用）
 
-具体的な操作手順はこちらを参照してください：[https://github.com/CherryHQ/cherry-studio/issues/621#issuecomment-2588652880](https://github.com/CherryHQ/cherry-studio/issues/621#issuecomment-2588652880)
+**方法1：**
 
-方法２：
-Electronアプリケーションの特性を活用し、起動パラメータを設定して保存場所を変更します。
+シンボリックリンクを作成することで変更できます。ソフトウェアを終了し、データを保存したい場所に移動後、元の場所に移動先を指すリンクを作成してください。
+
+具体的な操作手順は以下を参照：
+[https://github.com/CherryHQ/cherry-studio/issues/621#issuecomment-2588652880](https://github.com/CherryHQ/cherry-studio/issues/621#issuecomment-2588652880)
+
+**方法2：**
+Electronアプリケーションの特性を利用し、起動パラメータを設定して保存場所を変更します。
 
 > --user-data-dir
 > 例: Cherry-Studio-*-x64-portable.exe --user-data-dir="%user_data_dir%"
 
-> 実行例:
+> 例:
 
 ```shell
 PS D:\CherryStudio> dir
@@ -49,36 +52,37 @@ d-----         2025/4/18     14:05                user-data-dir
 -a----         2025/4/18     14:05            701 init_cherry_studio.bat
 ```
 
-> init_cherry_studio.bat (エンコーディング: ANSI)
+> init_cherry_studio.bat (エンコード: ANSI)
 
 ```bash
-@title CherryStudio 初期設定
+@title CherryStudio初期化
 @echo off
 
 set current_path_dir=%~dp0
-@echo 現在のパス:%current_path_dir%
+@echo カレントパス:%current_path_dir%
 set user_data_dir=%current_path_dir%user-data-dir
-@echo CherryStudio データパス:%user_data_dir%
+@echo CherryStudioデータパス:%user_data_dir%
 
-@echo 現在のパスでCherry-Studio-*-portable.exeを検索
+@echo カレントパス下のCherry-Studio-*-portable.exeを検索中
 setlocal enabledelayedexpansion
-for /f "delims=" %%F in ('dir /b /a-d "Cherry-Studio-*-portable.exe" 2^>nul') do ( #実際のダウンロードファイル名に変更してください。公式サイトとGithubのダウンロードでは名前が異なります
+
+for /f "delims=" %%F in ('dir /b /a-d "Cherry-Studio-*-portable*.exe" 2^>nul') do ( #このコードはGitHubと公式サイトからダウンロードしたバージョンに対応しています。その他の場合はご自身で変更してください
     set "target_file=!cd!\%%F"
     goto :break
 )
 :break
 if defined target_file (
-    echo ファイル発見: %target_file%
+    echo ファイルを検出: %target_file%
 ) else (
-    echo 一致するファイルが見つかりません。スクリプトを終了します
+    echo 該当ファイルが見つかりません、スクリプトを終了します
     pause
     exit
 )
 
-@echo 続行する場合は確認してください
+@echo 確認後、続行してください
 pause
 
-@echo CherryStudioを起動
+@echo CherryStudioを起動中
 start %target_file% --user-data-dir="%user_data_dir%"
 
 @echo 操作完了
@@ -86,7 +90,7 @@ start %target_file% --user-data-dir="%user_data_dir%"
 exit
 ```
 
-> ディレクトリ user-data-dir 初期化後の構造：
+> ディレクトリuser-data-dirの初期化後の構造：
 
 ```shell
 PS D:\CherryStudio> dir .\user-data-dir\

@@ -8,7 +8,7 @@ Este documento ha sido traducido del chino por IA y aún no ha sido revisado.
 
 # Ubicación de almacenamiento predeterminada
 
-El almacenamiento de datos de Cherry Studio sigue las normas del sistema. Los datos se colocarán automáticamente en el directorio del usuario. Las ubicaciones específicas son las siguientes:
+Cherry Studio sigue las normas del sistema para el almacenamiento de datos, colocándolos automáticamente en el directorio del usuario. Las rutas específicas son:
 
 > macOS: /Users/username/Library/Application Support/CherryStudioDev
 
@@ -16,24 +16,24 @@ El almacenamiento de datos de Cherry Studio sigue las normas del sistema. Los da
 
 > Linux: /home/username/.config/CherryStudio
 
-También se puede verificar en la siguiente ubicación:
+También se puede verificar en:
 <figure><img src="../../.gitbook/assets/image (31).png" alt=""><figcaption></figcaption></figure>
 
 
 
-# Modificar ubicación de almacenamiento (como referencia)
+# Modificar ubicación de almacenamiento (referencia)
 
 Método 1:
 
-Se puede lograr creando un enlace simbólico. Cierre el software, mueva los datos a la ubicación deseada y luego cree un enlace en la ubicación original que apunte a la nueva ubicación.
+Crea un enlace simbólico: cierra la aplicación, mueve los datos a la ubicación deseada, y crea un enlace en la ubicación original apuntando al nuevo destino.
 
-Los pasos específicos se pueden consultar en: [https://github.com/CherryHQ/cherry-studio/issues/621#issuecomment-2588652880](https://github.com/CherryHQ/cherry-studio/issues/621#issuecomment-2588652880)
+Consulta los pasos detallados: [https://github.com/CherryHQ/cherry-studio/issues/621#issuecomment-2588652880](https://github.com/CherryHQ/cherry-studio/issues/621#issuecomment-2588652880)
 
 Método 2:
-Basado en las características de la aplicación Electron, modifique la ubicación de almacenamiento configurando parámetros de inicio.
+Modifica la ubicación mediante parámetros de arranque, aprovechando las características de las aplicaciones Electron.
 
 > --user-data-dir
-> Ejemplo: Cherry-Studio-*-x64-portable.exe --user-data-dir="%user_data_dir%"
+> Ej: Cherry-Studio-*-x64-portable.exe --user-data-dir="%user_data_dir%"
 
 > Ejemplo:
 
@@ -58,13 +58,14 @@ d-----         2025/4/18     14:05                user-data-dir
 @echo off
 
 set current_path_dir=%~dp0
-@echo Ruta actual:%current_path_dir%
+@echo Ruta actual: %current_path_dir%
 set user_data_dir=%current_path_dir%user-data-dir
-@echo Ruta de datos de CherryStudio:%user_data_dir%
+@echo Ruta de datos de CherryStudio: %user_data_dir%
 
 @echo Buscando Cherry-Studio-*-portable.exe en la ruta actual
 setlocal enabledelayedexpansion
-for /f "delims=" %%F in ('dir /b /a-d "Cherry-Studio-*-portable.exe" 2^>nul') do ( #Cambie al nombre real del archivo descargado, el nombre es diferente entre la descarga oficial y de Github
+
+for /f "delims=" %%F in ('dir /b /a-d "Cherry-Studio-*-portable*.exe" 2^>nul') do ( #Este código es compatible con versiones de GitHub y oficiales, modificar si es necesario
     set "target_file=!cd!\%%F"
     goto :break
 )
@@ -72,12 +73,12 @@ for /f "delims=" %%F in ('dir /b /a-d "Cherry-Studio-*-portable.exe" 2^>nul') do
 if defined target_file (
     echo Archivo encontrado: %target_file%
 ) else (
-    echo No se encontraron archivos coincidentes, cerrando el script
+    echo No se encontraron archivos coincidentes, cerrando script
     pause
     exit
 )
 
-@echo Confirme para continuar
+@echo Confirmar para continuar
 pause
 
 @echo Iniciando CherryStudio

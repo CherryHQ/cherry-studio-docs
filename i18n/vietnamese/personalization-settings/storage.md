@@ -6,14 +6,14 @@ icon: floppy-disk
 Tài liệu này được dịch từ tiếng Trung bằng AI và chưa được xem xét.
 {% endhint %}
 
-# Vị trí lưu trữ mặc định
+# Vị Trí Lưu Trữ Mặc Định
 
-Cherry Studio tuân thủ các quy tắc hệ thống để lưu trữ dữ liệu. Dữ liệu sẽ tự động được lưu trong thư mục người dùng, với các vị trí cụ thể như sau:
+Cherry Studio tuân thủ quy chuẩn hệ thống khi lưu trữ dữ liệu, dữ liệu sẽ tự động được lưu vào thư mục người dùng với các vị trí cụ thể như sau:
 
 > macOS: /Users/username/Library/Application Support/CherryStudioDev
-
+>
 > Windows: C:\Users\username\AppData\Roaming\CherryStudio
-
+>
 > Linux: /home/username/.config/CherryStudio
 
 Bạn cũng có thể xem tại vị trí sau:
@@ -21,16 +21,16 @@ Bạn cũng có thể xem tại vị trí sau:
 
 
 
-# Thay đổi vị trí lưu trữ (Tham khảo)
+# Thay Đổi Vị Trí Lưu Trữ (Tham Khảo)
 
-**Phương pháp 1:**
+**Phương Pháp 1:**
 
-Có thể thực hiện bằng cách tạo liên kết mềm (symbolic link). Đóng phần mềm, di chuyển dữ liệu đến vị trí mong muốn, sau đó tạo liên kết từ vị trí gốc đến vị trí mới.
+Bạn có thể sử dụng symbolic link để thực hiện việc này. Hãy thoát ứng dụng, di chuyển dữ liệu đến vị trí mong muốn, sau đó tạo một liên kết tại vị trí gốc trỏ đến vị trí mới.
 
-Các bước thực hiện chi tiết tham khảo tại: [https://github.com/CherryHQ/cherry-studio/issues/621#issuecomment-2588652880](https://github.com/CherryHQ/cherry-studio/issues/621#issuecomment-2588652880)
+Các bước thực hiện chi tiết tham khảo: [https://github.com/CherryHQ/cherry-studio/issues/621#issuecomment-2588652880](https://github.com/CherryHQ/cherry-studio/issues/621#issuecomment-2588652880)
 
-**Phương pháp 2:**
-Dựa trên đặc điểm ứng dụng Electron, thay đổi vị trí lưu trữ bằng cách cấu hình tham số khởi động.
+**Phương Pháp 2:**
+Dựa trên đặc điểm ứng dụng Electron, sử dụng tham số khởi động để thay đổi vị trí lưu trữ.
 
 > --user-data-dir
 > Ví dụ: Cherry-Studio-*-x64-portable.exe --user-data-dir="%user_data_dir%"
@@ -64,26 +64,27 @@ set user_data_dir=%current_path_dir%user-data-dir
 
 @echo Tìm Cherry-Studio-*-portable.exe trong đường dẫn hiện tại
 setlocal enabledelayedexpansion
-for /f "delims=" %%F in ('dir /b /a-d "Cherry-Studio-*-portable.exe" 2^>nul') do ( #Vui lòng thay đổi thành tên tệp thực tế đã tải xuống, tên từ trang web chính thức và Github khác nhau
+
+for /f "delims=" %%F in ('dir /b /a-d "Cherry-Studio-*-portable*.exe" 2^>nul') do ( #Script này phù hợp với phiên bản tải từ GitHub và trang chủ, với các phiên bản khác vui lòng tự sửa đổi
     set "target_file=!cd!\%%F"
     goto :break
 )
 :break
 if defined target_file (
-    echo Tìm thấy tệp: %target_file%
+    echo Tìm thấy file: %target_file%
 ) else (
-    echo Không tìm thấy tệp phù hợp, thoát script
+    echo Không tìm thấy file phù hợp, thoát script
     pause
     exit
 )
 
-@echo Xác nhận để tiếp tục
+@echo Xác nhận tiếp tục
 pause
 
-@echo Khởi chạy CherryStudio
+@echo Khởi động CherryStudio
 start %target_file% --user-data-dir="%user_data_dir%"
 
-@echo Hoàn thành
+@echo Hoàn tất thao tác
 @echo on
 exit
 ```

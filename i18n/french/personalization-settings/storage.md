@@ -10,26 +10,25 @@ Ce document a été traducido del chino por IA y aún no ha sido revisado.
 
 Le stockage des données de Cherry Studio suit les normes système. Les données sont automatiquement placées dans le répertoire utilisateur, aux emplacements spécifiques suivants :
 
-> macOS: /Users/username/Library/Application Support/CherryStudioDev
->
-> Windows: C:\Users\username\AppData\Roaming\CherryStudio
->
-> Linux: /home/username/.config/CherryStudio
+> macOS: /Users/username/Library/Application Support/CherryStudioDev  
+> Windows: C:\Users\username\AppData\Roaming\CherryStudio  
+> Linux: /home/username/.config/CherryStudio  
 
-Vous pouvez également vérifier l'emplacement ici :
+Vous pouvez également consulter l'emplacement ici :  
 <figure><img src="../../.gitbook/assets/image (31).png" alt=""><figcaption></figcaption></figure>
+
+
 
 # Modifier l'emplacement de stockage (à titre indicatif)
 
-**Méthode 1 :**
+**Méthode 1 :**  
+Vous pouvez utiliser des liens symboliques. Fermez l'application, déplacez les données vers le nouvel emplacement, puis créez un lien symbolique pointant vers cet emplacement.
 
-Vous pouvez utiliser des liens symboliques. Fermez l'application, déplacez les données à l'emplacement souhaité, puis créez un lien depuis l'emplacement d'origine vers le nouvel emplacement.
-
-Les étapes détaillées sont disponibles ici :  
+Consultez les étapes détaillées :  
 [https://github.com/CherryHQ/cherry-studio/issues/621#issuecomment-2588652880](https://github.com/CherryHQ/cherry-studio/issues/621#issuecomment-2588652880)
 
 **Méthode 2 :**  
-En utilisant les caractéristiques des applications Electron, modifiez l'emplacement de stockage via les paramètres de démarrage.
+Modifiez l'emplacement via les paramètres de démarrage, en exploitant les caractéristiques des applications Electron.
 
 > --user-data-dir  
 > Exemple : Cherry-Studio-*-x64-portable.exe --user-data-dir="%user_data_dir%"
@@ -51,17 +50,18 @@ d-----         2025/4/18     14:05                user-data-dir
 > init_cherry_studio.bat (encodage : ANSI)
 
 ```bash
-@title Initialisation de CherryStudio
+@title Initialisation CherryStudio
 @echo off
 
 set current_path_dir=%~dp0
-@echo Chemin actuel :%current_path_dir%
+@echo Chemin actuel : %current_path_dir%
 set user_data_dir=%current_path_dir%user-data-dir
-@echo Chemin des données de CherryStudio :%user_data_dir%
+@echo Chemin des données CherryStudio : %user_data_dir%
 
 @echo Recherche de Cherry-Studio-*-portable.exe dans le chemin actuel
 setlocal enabledelayedexpansion
-for /f "delims=" %%F in ('dir /b /a-d "Cherry-Studio-*-portable.exe" 2^>nul') do ( #Veuillez modifier avec le nom réel du fichier téléchargé (les noms diffèrent entre le site officiel et GitHub)
+
+for /f "delims=" %%F in ('dir /b /a-d "Cherry-Studio-*-portable*.exe" 2^>nul') do ( # Ce code est compatible avec les versions GitHub et officielles, modifiez pour d'autres
     set "target_file=!cd!\%%F"
     goto :break
 )
@@ -74,7 +74,7 @@ if defined target_file (
     exit
 )
 
-@echo Confirmez pour continuer
+@echo Confirmer pour continuer
 pause
 
 @echo Lancement de CherryStudio

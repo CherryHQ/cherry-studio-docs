@@ -6,32 +6,31 @@ icon: floppy-disk
 Dit document is door AI vertaald vanuit het Chinees en is nog niet beoordeeld.
 {% endhint %}
 
-# Standaard Opslaglocatie
+# Standaard opslaglocatie
 
-Cherry Studio-gegevensopslag volgt de systeemnormen. Gegevens worden automatisch in de gebruikersmap geplaatst, op de volgende specifieke locaties:
+Cherry Studio-gegevensopslag volgt systeemnormen. Gegevens worden automatisch in de gebruikersmap geplaatst, met de volgende specifieke mappen:
 
 > macOS: /Users/username/Library/Application Support/CherryStudioDev  
 > Windows: C:\Users\username\AppData\Roaming\CherryStudio  
 > Linux: /home/username/.config/CherryStudio  
 
-De locatie is ook zichtbaar via:  
+Ook te zien op:  
 <figure><img src="../../.gitbook/assets/image (31).png" alt=""><figcaption></figcaption></figure>
 
-
-
-# Opslaglocatie Wijzigen (ter referentie)
+# Opslaglocatie wijzigen (ter referentie)
 
 **Methode 1:**  
-Maak een symbolische link aan. Sluit de software, verplaats de gegevens naar de gewenste locatie en maak vervolgens een link vanaf de oorspronkelijke locatie naar de nieuwe locatie.  
+Creëer een symbolische koppeling:  
+Sluit de software, verplaats gegevens naar gewenste locatie, maak vervolgens een koppeling vanaf de originele locatie naar de nieuwe locatie.  
 
-Zie voor gedetailleerde stappen:  
+Raadpleeg:  
 [https://github.com/CherryHQ/cherry-studio/issues/621#issuecomment-2588652880](https://github.com/CherryHQ/cherry-studio/issues/621#issuecomment-2588652880)
 
 **Methode 2:**  
-Pas opslaglocatie aan via opstartparameters (gebaseerd op Electron-applicatiekenmerken).
+Wijzig opslaglocatie via opstartparameters, gebruikmakend van Electron-applicatiekenmerken:
 
 > --user-data-dir  
-> Voorbeeld: Cherry-Studio-*-x64-portable.exe --user-data-dir="%user_data_dir%"
+> Bijv.: Cherry-Studio-*-x64-portable.exe --user-data-dir="%user_data_dir%"
 
 > Voorbeeld:
 
@@ -50,41 +49,42 @@ d-----         2025/4/18     14:05                user-data-dir
 > init_cherry_studio.bat (codering: ANSI)
 
 ```bash
-@title CherryStudio Initialisatie
+@title CherryStudio 初始化
 @echo off
 
 set current_path_dir=%~dp0
-@echo Huidig pad:%current_path_dir%
+@echo 当前路径:%current_path_dir%
 set user_data_dir=%current_path_dir%user-data-dir
-@echo CherryStudio gegevenspad:%user_data_dir%
+@echo CherryStudio 数据路径:%user_data_dir%
 
-@echo Zoeken naar Cherry-Studio-*-portable.exe in huidige pad
+@echo 查找当前路径下 Cherry-Studio-*-portable.exe
 setlocal enabledelayedexpansion
-for /f "delims=" %%F in ('dir /b /a-d "Cherry-Studio-*-portable.exe" 2^>nul') do ( #Wijzig naar daadwerkelijke bestandsnaam (officiële site en GitHub gebruiken verschillende namen)
+
+for /f "delims=" %%F in ('dir /b /a-d "Cherry-Studio-*-portable*.exe" 2^>nul') do ( #Deze code is geschikt voor GitHub en officiële website downloads, pas andere aan
     set "target_file=!cd!\%%F"
     goto :break
 )
 :break
 if defined target_file (
-    echo Bestand gevonden: %target_file%
+    echo 找到文件: %target_file%
 ) else (
-    echo Geen overeenkomend bestand gevonden, script wordt afgesloten
+    echo 未找到匹配文件，退出该脚本
     pause
     exit
 )
 
-@echo Bevestig om door te gaan
+@echo 确认请继续
 pause
 
-@echo CherryStudio opstarten
+@echo 启动 CherryStudio
 start %target_file% --user-data-dir="%user_data_dir%"
 
-@echo Operatie voltooid
+@echo 操作结束
 @echo on
 exit
 ```
 
-> Directorystructuur na initialisatie van user-data-dir:
+> Directorystructuur van user-data-dir na initialisatie:
 
 ```shell
 PS D:\CherryStudio> dir .\user-data-dir\

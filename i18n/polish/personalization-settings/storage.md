@@ -8,7 +8,7 @@ Ten dokument został przetłumaczony z chińskiego przez AI i nie został jeszcz
 
 # Domyślna lokalizacja przechowywania
 
-Cherry Studio przechowuje dane zgodnie ze specyfikacją systemu. Dane są automatycznie umieszczane w katalogu użytkownika w następujących lokalizacjach:
+Przechowywanie danych w Cherry Studio jest zgodne ze standardami systemowymi. Dane są automatycznie umieszczane w katalogu użytkownika, a dokładna lokalizacja katalogu wygląda następująco:
 
 > macOS: /Users/username/Library/Application Support/CherryStudioDev
 
@@ -16,24 +16,24 @@ Cherry Studio przechowuje dane zgodnie ze specyfikacją systemu. Dane są automa
 
 > Linux: /home/username/.config/CherryStudio
 
-Możesz także sprawdzić w następującej lokalizacji:
+Można również zobaczyć w następującej lokalizacji:
 <figure><img src="../../.gitbook/assets/image (31).png" alt=""><figcaption></figcaption></figure>
 
 
 
 # Zmiana lokalizacji przechowywania (informacyjnie)
 
-Metoda 1:
+**Metoda 1:**
 
-Można to osiągnąć poprzez utworzenie łącza symbolicznego. Zamknij aplikację, przenieś dane do żądanej lokalizacji, a następnie utwórz łącze w oryginalnym miejscu wskazujące na nową lokalizację.
+Można to osiągnąć poprzez utworzenie łącza symbolicznego. Zamknij aplikację, przenieś dane do żądanej lokalizacji, a następnie utwórz łącze w oryginalnej lokalizacji wskazujące na nową lokalizację.
 
-Szczegółowe instrukcje znajdziesz tutaj: [https://github.com/CherryHQ/cherry-studio/issues/621#issuecomment-2588652880](https://github.com/CherryHQ/cherry-studio/issues/621#issuecomment-2588652880)
+Szczegółowe kroki można znaleźć w: [https://github.com/CherryHQ/cherry-studio/issues/621#issuecomment-2588652880](https://github.com/CherryHQ/cherry-studio/issues/621#issuecomment-2588652880)
 
-Metoda 2:
-Opierając się na charakterystyce aplikacji Electron, zmień lokalizację przechowywania poprzez konfigurację parametrów uruchomieniowych.
+**Metoda 2:**
+Opierając się na charakterystyce aplikacji Electron, lokalizację przechowywania można zmienić poprzez skonfigurowanie parametrów uruchamiania.
 
 > --user-data-dir
-> Przykład: Cherry-Studio-*-x64-portable.exe --user-data-dir="%user_data_dir%"
+> np: Cherry-Studio-*-x64-portable.exe --user-data-dir="%user_data_dir%"
 
 > Przykład:
 
@@ -62,9 +62,10 @@ set current_path_dir=%~dp0
 set user_data_dir=%current_path_dir%user-data-dir
 @echo Ścieżka danych CherryStudio:%user_data_dir%
 
-@echo Wyszukiwanie Cherry-Studio-*-portable.exe w bieżącej ścieżce
+@echo Wyszukiwanie pliku Cherry-Studio-*-portable.exe w bieżącym katalogu
 setlocal enabledelayedexpansion
-for /f "delims=" %%F in ('dir /b /a-d "Cherry-Studio-*-portable.exe" 2^>nul') do ( #Zmień na rzeczywistą nazwę pliku, nazwy z oficjalnej strony i GitHub różnią się
+
+for /f "delims=" %%F in ('dir /b /a-d "Cherry-Studio-*-portable*.exe" 2^>nul') do ( #Ten kod jest dostosowany do wersji z GitHub i oficjalnej strony, dla innych wersji zmodyfikuj samodzielnie
     set "target_file=!cd!\%%F"
     goto :break
 )
@@ -77,7 +78,7 @@ if defined target_file (
     exit
 )
 
-@echo Kontynuuj, aby potwierdzić
+@echo Potwierdź, aby kontynuować
 pause
 
 @echo Uruchamianie CherryStudio

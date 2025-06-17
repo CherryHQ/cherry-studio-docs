@@ -6,34 +6,35 @@ icon: floppy-disk
 Этот документ переведен с китайского языка с помощью ИИ и еще не был проверен.
 {% endhint %}
 
-# Стандартное расположение хранилища
+# Умолчательные пути хранения данных
 
-Cherry Studio хранит данные в соответствии с системными нормами, автоматически размещая их в пользовательском каталоге. Конкретные пути:
+Данные Cherry Studio сохраняются согласно системным стандартам, автоматически размещаясь в пользовательских каталогах:
 
-> macOS: /Users/username/Library/Application Support/CherryStudioDev
+> macOS: /Users/username/Library/Application Support/CherryStudioDev  
+> Windows: C:\Users\username\AppData\Roaming\CherryStudio  
+> Linux: /home/username/.config/CherryStudio  
 
-> Windows: C:\Users\username\AppData\Roaming\CherryStudio
-
-> Linux: /home/username/.config/CherryStudio
-
-Также можно посмотреть здесь:
+Текущее расположение также можно посмотреть здесь:  
 <figure><img src="../../.gitbook/assets/image (31).png" alt=""><figcaption></figcaption></figure>
 
-# Изменение расположения хранилища (справочно)
 
-Способ 1:
 
-Реализуется созданием символической ссылки. Закройте приложение, переместите данные в нужное расположение, затем создайте в исходном месте ссылку на новое расположение.
+# Изменение пути хранения данных (справочно)
 
-Подробные шаги: [https://github.com/CherryHQ/cherry-studio/issues/621#issuecomment-2588652880](https://github.com/CherryHQ/cherry-studio/issues/621#issuecomment-2588652880)
+**Метод 1:**  
+Создание символической ссылки. Закройте приложение, переместите данные в нужное место, затем создайте ссылку из исходного расположения в новое.  
 
-Способ 2:
-Использование особенностей Electron-приложений для изменения хранилища через параметры запуска.
+Подробные инструкции:  
+[https://github.com/CherryHQ/cherry-studio/issues/621#issuecomment-2588652880](https://github.com/CherryHQ/cherry-studio/issues/621#issuecomment-2588652880)
 
-> --user-data-dir
+**Метод 2:**  
+Изменение через параметры запуска (особенность Electron-приложений):
+
+> Используйте параметр:
+> --user-data-dir  
 > Пример: Cherry-Studio-*-x64-portable.exe --user-data-dir="%user_data_dir%"
 
-> Пример:
+> Пример выполнения:
 
 ```shell
 PS D:\CherryStudio> dir
@@ -52,36 +53,37 @@ d-----         2025/4/18     14:05                user-data-dir
 > init_cherry_studio.bat (кодировка: ANSI)
 
 ```bash
-@title Инициализация CherryStudio
+@title CherryStudio 初始化
 @echo off
 
 set current_path_dir=%~dp0
-@echo Текущий путь:%current_path_dir%
+@echo 当前路径:%current_path_dir%
 set user_data_dir=%current_path_dir%user-data-dir
-@echo Путь данных CherryStudio:%user_data_dir%
+@echo CherryStudio 数据路径:%user_data_dir%
 
-@echo Поиск Cherry-Studio-*-portable.exe в текущей папке
+@echo 查找当前路径下 Cherry-Studio-*-portable.exe
 setlocal enabledelayedexpansion
-for /f "delims=" %%F in ('dir /b /a-d "Cherry-Studio-*-portable.exe" 2^>nul') do ( #Замените на фактическое имя загруженного файла (имена различаются на сайте и GitHub)
+
+for /f "delims=" %%F in ('dir /b /a-d "Cherry-Studio-*-portable*.exe" 2^>nul') do ( #此代码适配 GitHub 和官网下载的版本，其他请自行修改
     set "target_file=!cd!\%%F"
     goto :break
 )
 :break
 if defined target_file (
-    echo Найден файл: %target_file%
+    echo 找到文件: %target_file%
 ) else (
-    echo Файл не найден, завершение скрипта
+    echo 未找到匹配文件，退出该脚本
     pause
     exit
 )
 
-@echo Подтвердите для продолжения
+@echo 确认请继续
 pause
 
-@echo Запуск CherryStudio
+@echo 启动 CherryStudio
 start %target_file% --user-data-dir="%user_data_dir%"
 
-@echo Операция завершена
+@echo 操作结束
 @echo on
 exit
 ```

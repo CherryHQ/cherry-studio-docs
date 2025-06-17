@@ -6,9 +6,9 @@ icon: floppy-disk
 এই নথিটি এআই দ্বারা চীনা থেকে অনুবাদ করা হয়েছে এবং এখনও পর্যালোচনা করা হয়নি।
 {% endhint %}
 
-# ডিফল্ট স্টোরেজ অবস্থান
+# ডিফল্ট স্টোরেজ লোকেশন
 
-Cherry Studio ডেটা স্টোরেজ সিস্টেম স্ট্যান্ডার্ড অনুসরণ করে, ডেটা স্বয়ংক্রিয়ভাবে ব্যবহারকারীর ডিরেক্টরিতে সংরক্ষিত হয়। নির্দিষ্ট ডিরেক্টরি অবস্থান নিম্নরূপ:
+Cherry Studio ডেটা স্টোরেজ সিস্টেমের স্পেসিফিকেশন মেনে চলে, ডেটা স্বয়ংক্রিয়ভাবে ইউজার ডিরেক্টরিতে সংরক্ষিত হবে। নির্দিষ্ট ডিরেক্টরি লোকেশন নিম্নরূপ:
 
 > macOS: /Users/username/Library/Application Support/CherryStudioDev
 
@@ -16,24 +16,24 @@ Cherry Studio ডেটা স্টোরেজ সিস্টেম স্ট
 
 > Linux: /home/username/.config/CherryStudio
 
-আপনি নিম্নলিখিত স্থানে দেখতে পারেন:
+নিম্নলিখিত লোকেশনেও দেখা যেতে পারে:
 <figure><img src="../../.gitbook/assets/image (31).png" alt=""><figcaption></figcaption></figure>
 
 
 
-# স্টোরেজ অবস্থান পরিবর্তন (রেফারেন্সের জন্য)
+# স্টোরেজ লোকেশন পরিবর্তন (রেফারেন্সের জন্য)
 
-**পদ্ধতি ১:**
+পদ্ধতি ১:
 
-সিমলিংক তৈরি করে এটা করা যাবে। সফটওয়্যারটি বন্ধ করুন, ডেটা আপনার পছন্দসই স্থানে নিয়ে যান, তারপর মূল অবস্থানে একটি লিঙ্ক তৈরি করুন যা নতুন অবস্থানের দিকে নির্দেশ করে।
+সফট লিঙ্ক তৈরি করে পরিবর্তন করা যেতে পারে। সফটওয়্যার বন্ধ করে ডেটাকে আপনার পছন্দসই লোকেশনে সরিয়ে নিন, তারপর মূল লোকেশনে একটি লিঙ্ক তৈরি করুন যা সরানো লোকেশনের দিকে নির্দেশ করে।
 
-নির্দিষ্ট ধাপগুলি এই লিঙ্কে দেখা যাবে: [https://github.com/CherryHQ/cherry-studio/issues/621#issuecomment-2588652880](https://github.com/CherryHQ/cherry-studio/issues/621#issuecomment-2588652880)
+নির্দিষ্ট ধাপসমূহ এই লিঙ্কে দেখা যেতে পারে: [https://github.com/CherryHQ/cherry-studio/issues/621#issuecomment-2588652880](https://github.com/CherryHQ/cherry-studio/issues/621#issuecomment-2588652880)
 
-**পদ্ধতি ২:**
-ইলেক্ট্রন অ্যাপ্লিকেশনের বৈশিষ্ট্য ব্যবহার করে, স্টার্টআপ প্যারামিটার কনফিগার করে স্টোরেজ অবস্থান পরিবর্তন করুন।
+পদ্ধতি ২:
+ইলেক্ট্রন অ্যাপ্লিকেশনের বৈশিষ্ট্যের উপর ভিত্তি করে, স্টার্টআপ প্যারামিটার কনফিগার করে স্টোরেজ লোকেশন পরিবর্তন করা যেতে পারে।
 
 > --user-data-dir
-> উদাহরণ: Cherry-Studio-*-x64-portable.exe --user-data-dir="%user_data_dir%"
+> যেমন: Cherry-Studio-*-x64-portable.exe --user-data-dir="%user_data_dir%"
 
 > উদাহরণ:
 
@@ -54,7 +54,7 @@ d-----         2025/4/18     14:05                user-data-dir
 > init_cherry_studio.bat (এনকোডিং: ANSI)
 
 ```bash
-@title CherryStudio ইনিশিয়ালাইজেশন
+@title CherryStudio আন্তজালিক
 @echo off
 
 set current_path_dir=%~dp0
@@ -62,9 +62,10 @@ set current_path_dir=%~dp0
 set user_data_dir=%current_path_dir%user-data-dir
 @echo CherryStudio ডেটা পাথ:%user_data_dir%
 
-@echo বর্তমান পাথে Cherry-Studio-*-portable.exe খুঁজুন
+@echo বর্তমান পাথে Cherry-Studio-*-portable.exe অনুসন্ধান করুন
 setlocal enabledelayedexpansion
-for /f "delims=" %%F in ('dir /b /a-d "Cherry-Studio-*-portable.exe" 2^>nul') do ( #নাম পরিবর্তন করুন (অফিসিয়াল ওয়েবসাইট এবং GitHub এর নাম আলাদা)
+
+for /f "delims=" %%F in ('dir /b /a-d "Cherry-Studio-*-portable*.exe" 2^>nul') do ( #এই কোডটি GitHub এবং অফিসিয়াল ওয়েবসাইটের সংস্করণের সাথে সঙ্গতিপূর্ণ, অন্যান্য ক্ষেত্রে নিজে পরিবর্তন করুন
     set "target_file=!cd!\%%F"
     goto :break
 )
@@ -72,7 +73,7 @@ for /f "delims=" %%F in ('dir /b /a-d "Cherry-Studio-*-portable.exe" 2^>nul') do
 if defined target_file (
     echo ফাইল পাওয়া গেছে: %target_file%
 ) else (
-    echo কোন ম্যাচিং ফাইল পাওয়া যায়নি, স্ক্রিপ্ট বন্ধ হচ্ছে
+    echo কোন ম্যাচিং ফাইল পাওয়া যায়নি, স্ক্রিপ্ট থেকে প্রস্থান
     pause
     exit
 )
@@ -80,15 +81,15 @@ if defined target_file (
 @echo নিশ্চিত করতে চালিয়ে যান
 pause
 
-@echo CherryStudio চালু হচ্ছে
+@echo CherryStudio চালু করা হচ্ছে
 start %target_file% --user-data-dir="%user_data_dir%"
 
-@echo অপারেশন সম্পন্ন হয়েছে
+@echo অপারেশন সম্পন্ন
 @echo on
 exit
 ```
 
-> ডিরেক্টরি user-data-dir ইন্সটলের পরের স্ট্রাকচার:
+> user-data-dir ডিরেক্টরি ইন্সটলেশনের পরের স্ট্রাকচার:
 
 ```shell
 PS D:\CherryStudio> dir .\user-data-dir\

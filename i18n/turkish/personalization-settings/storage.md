@@ -8,41 +8,35 @@ Bu belge Çince'den yapay zeka tarafından çevrilmiştir ve henüz incelenmemi�
 
 # Varsayılan Depolama Konumu
 
-Cherry Studio veri depolama, sistem özelliklerini takip eder ve veriler otomatik olarak kullanıcı dizini altına yerleştirilir. Belirli dizin konumları aşağıdaki gibidir:
+Cherry Studio veri depolama işlemleri sistem standartlarını takip eder. Veriler otomatik olarak kullanıcı dizininde saklanır. Dizin konumları aşağıdaki gibidir:
 
-> macOS: /Users/username/Library/Application Support/CherryStudioDev
+> macOS: /Users/kullanıcıadı/Library/Application Support/CherryStudioDev  
+> Windows: C:\Users\kullanıcıadı\AppData\Roaming\CherryStudio  
+> Linux: /home/kullanıcıadı/.config/CherryStudio
 
-> Windows: C:\Users\username\AppData\Roaming\CherryStudio
-
-> Linux: /home/username/.config/CherryStudio
-
-Ayrıca şu konumda görüntüleyebilirsiniz:
+Ayrıca bu konumda da görüntüleyebilirsiniz:  
 <figure><img src="../../.gitbook/assets/image (31).png" alt=""><figcaption></figcaption></figure>
 
+# Depolama Konumunu Değiştirme (Referans Bilgisi)
 
+**Yöntem 1:**  
+Yazılımı kapatın, verileri istediğiniz konuma taşıyın, ardından orijinal konuma taşınan konumu işaret eden bir sembolik bağlantı oluşturun.
 
-# Depolama Konumunu Değiştirme (Referans İçin)
+Adımlar için şurayı inceleyebilirsiniz:  
+[https://github.com/CherryHQ/cherry-studio/issues/621#issuecomment-2588652880](https://github.com/CherryHQ/cherry-studio/issues/621#issuecomment-2588652880)
 
-**Yöntem 1:**
+**Yöntem 2:**  
+Electron uygulama özelliklerine göre başlangıç parametreleriyle depolama konumunu değiştirebilirsiniz.
 
-Yumuşak bağlantı oluşturularak gerçekleştirilebilir. Yazılımı kapatın, verileri saklamak istediğiniz konuma taşıyın ve ardından orijinal konumda, taşınan konuma işaret eden bir bağlantı oluşturun.
-
-Spesifik işlem adımları şurada referans alınabilir: [https://github.com/CherryHQ/cherry-studio/issues/621#issuecomment-2588652880](https://github.com/CherryHQ/cherry-studio/issues/621#issuecomment-2588652880)
-
-**Yöntem 2:**
-Electron uygulamasının özelliklerine dayanarak, başlatma parametrelerini yapılandırarak depolama konumu değiştirilebilir.
-
-> --user-data-dir
-> Örneğin: Cherry-Studio-*-x64-portable.exe --user-data-dir="%user_data_dir%"
+> --user-data-dir  
+> Örnek: Cherry-Studio-*-x64-portable.exe --user-data-dir="%user_data_dir%"
 
 > Örnek:
 
 ```shell
 PS D:\CherryStudio> dir
 
-
     目录: D:\CherryStudio
-
 
 Mode                 LastWriteTime         Length Name
 ----                 -------------         ------ ----
@@ -51,33 +45,34 @@ d-----         2025/4/18     14:05                user-data-dir
 -a----         2025/4/18     14:05            701 init_cherry_studio.bat
 ```
 
-> init_cherry_studio.bat (encoding: ANSI)
+> init_cherry_studio.bat (kodlama: ANSI)
 
 ```bash
 @title CherryStudio Başlatma
 @echo off
 
 set current_path_dir=%~dp0
-@echo Geçerli yol:%current_path_dir%
+@echo Geçerli konum:%current_path_dir%
 set user_data_dir=%current_path_dir%user-data-dir
-@echo CherryStudio veri yolu:%user_data_dir%
+@echo CherryStudio veri konumu:%user_data_dir%
 
-@echo Geçerli dizinde Cherry-Studio-*-portable.exe aranıyor
+@echo Geçerli konumda Cherry-Studio-*-portable.exe aranıyor
 setlocal enabledelayedexpansion
-for /f "delims=" %%F in ('dir /b /a-d "Cherry-Studio-*-portable.exe" 2^>nul') do ( #Lütfen gerçek indirilen dosya adına göre değiştirin, resmi web sitesinden indirilen ve Github'dan indirilen farklıdır
+
+for /f "delims=" %%F in ('dir /b /a-d "Cherry-Studio-*-portable*.exe" 2^>nul') do ( #Bu kod GitHub ve resmi siteden indirilen sürümlere uygundur, diğerleri için lütfen el ile düzenleyin
     set "target_file=!cd!\%%F"
     goto :break
 )
 :break
 if defined target_file (
-    echo Dosya bulundu: %target_file%
+    echo Bulundu: %target_file%
 ) else (
-    echo Eşleşen dosya bulunamadı, komut dosyasından çıkılıyor
+    echo Eşleşen dosya bulunamadı, betik sonlandırılıyor
     pause
     exit
 )
 
-@echo Devam etmek için onaylayın
+@echo Devam etmek için bir tuşa basın
 pause
 
 @echo CherryStudio başlatılıyor
@@ -88,14 +83,12 @@ start %target_file% --user-data-dir="%user_data_dir%"
 exit
 ```
 
-> Dizin user-data-dir başlatma sonrası yapısı:
+> user-data-dir dizini başlatıldıktan sonraki yapı:
 
 ```shell
 PS D:\CherryStudio> dir .\user-data-dir\
 
-
     目录: D:\CherryStudio\user-data-dir
-
 
 Mode                 LastWriteTime         Length Name
 ----                 -------------         ------ ----

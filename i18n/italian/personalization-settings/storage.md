@@ -8,7 +8,7 @@ Questo documento è stato tradotto dal cinese tramite IA e non è ancora stato r
 
 # Posizione di archiviazione predefinita
 
-La memorizzazione dei dati di Cherry Studio segue le specifiche del sistema. I dati vengono automaticamente posizionati nella directory utente nelle seguenti posizioni:
+Il salvataggio dei dati di Cherry Studio segue le specifiche del sistema. I dati vengono posizionati automaticamente nella directory utente nelle seguenti posizioni:
 
 > macOS: /Users/username/Library/Application Support/CherryStudioDev
 
@@ -16,7 +16,7 @@ La memorizzazione dei dati di Cherry Studio segue le specifiche del sistema. I d
 
 > Linux: /home/username/.config/CherryStudio
 
-Puoi anche verificare la posizione qui:
+Può anche essere visualizzato nella posizione:
 <figure><img src="../../.gitbook/assets/image (31).png" alt=""><figcaption></figcaption></figure>
 
 
@@ -25,12 +25,12 @@ Puoi anche verificare la posizione qui:
 
 Metodo 1:
 
-È possibile utilizzare un collegamento simbolico. Chiudi il software, sposta i dati nella posizione desiderata, quindi crea un collegamento alla nuova posizione nella posizione originale.
+Utilizzando collegamenti simbolici. Chiudi l'applicazione, sposta i dati nella nuova posizione desiderata, quindi crea un collegamento nella posizione originale che punti alla nuova posizione.
 
-Per passaggi dettagliati, consulta: [https://github.com/CherryHQ/cherry-studio/issues/621#issuecomment-2588652880](https://github.com/CherryHQ/cherry-studio/issues/621#issuecomment-2588652880)
+Per i passaggi operativi, fare riferimento a: [https://github.com/CherryHQ/cherry-studio/issues/621#issuecomment-2588652880](https://github.com/CherryHQ/cherry-studio/issues/621#issuecomment-2588652880)
 
 Metodo 2:
-Sfruttando le caratteristiche delle applicazioni Electron, modifica la posizione di archiviazione configurando i parametri di avvio.
+Modifica della posizione di archiviazione mediante parametri di avvio, sfruttando le caratteristiche delle applicazioni Electron.
 
 > --user-data-dir
 > Esempio: Cherry-Studio-*-x64-portable.exe --user-data-dir="%user_data_dir%"
@@ -58,13 +58,14 @@ d-----         2025/4/18     14:05                user-data-dir
 @echo off
 
 set current_path_dir=%~dp0
-@echo Percorso corrente: %current_path_dir%
+@echo Percorso corrente:%current_path_dir%
 set user_data_dir=%current_path_dir%user-data-dir
-@echo Percorso dati CherryStudio: %user_data_dir%
+@echo Percorso dati CherryStudio:%user_data_dir%
 
 @echo Ricerca di Cherry-Studio-*-portable.exe nel percorso corrente
 setlocal enabledelayedexpansion
-for /f "delims=" %%F in ('dir /b /a-d "Cherry-Studio-*-portable.exe" 2^>nul') do ( #Modificare con il nome effettivo del file scaricato, i nomi differiscono tra sito ufficiale e GitHub
+
+for /f "delims=" %%F in ('dir /b /a-d "Cherry-Studio-*-portable*.exe" 2^>nul') do ( #Questo codice è compatibile con le versioni scaricate da GitHub e dal sito ufficiale, modificare se necessario
     set "target_file=!cd!\%%F"
     goto :break
 )
@@ -72,15 +73,15 @@ for /f "delims=" %%F in ('dir /b /a-d "Cherry-Studio-*-portable.exe" 2^>nul') do
 if defined target_file (
     echo File trovato: %target_file%
 ) else (
-    echo Nessun file corrispondente trovato, script terminato
+    echo Nessun file corrispondente trovato, terminazione dello script
     pause
     exit
 )
 
-@echo Confermare per continuare
+@echo Conferma per continuare
 pause
 
-@echo Avvio CherryStudio
+@echo Avvio di CherryStudio
 start %target_file% --user-data-dir="%user_data_dir%"
 
 @echo Operazione completata

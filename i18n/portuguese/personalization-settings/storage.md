@@ -6,38 +6,33 @@ icon: floppy-disk
 Este documento foi traduzido do chinês por IA e ainda não foi revisado.
 {% endhint %}
 
-```markdown
----
-icon: cherries
----
+# Localização Padrão de Armazenamento
 
-# Local de Armazenamento Padrão
-
-O armazenamento de dados do Cherry Studio segue as especificações do sistema. Os dados são colocados automaticamente no diretório do usuário. Os locais específicos são os seguintes:
+O armazenamento de dados do Cherry Studio segue as normas do sistema. Os dados são automaticamente colocados no diretório do usuário, com as localizações específicas abaixo:
 
 > macOS: /Users/username/Library/Application Support/CherryStudioDev
-
+> 
 > Windows: C:\Users\username\AppData\Roaming\CherryStudio
-
+> 
 > Linux: /home/username/.config/CherryStudio
 
-Também pode visualizar nesta localização:
+Também é possível visualizar na seguinte localização:
 <figure><img src="../../.gitbook/assets/image (31).png" alt=""><figcaption></figcaption></figure>
 
-# Modificação do Local de Armazenamento (Referência)
+# Alterar Local de Armazenamento (para referência)
 
 Método 1:
 
-Isto pode ser realizado criando uma ligação simbólica. Feche o software, mova os dados para a localização desejada e crie um link simbólico no local original apontando para o novo local.
+É possível criar um link simbólico. Feche o software, mova os dados para o local desejado e crie um link na localização original apontando para o novo local.
 
-Passos detalhados podem ser consultados em:  
-[https://github.com/CherryHQ/cherry-studio/issues/621#issuecomment-2588652880](https://github.com/CherryHQ/cherry-studio/issues/621#issuecomment-2588652880)
+Para passos detalhados, consulte: [https://github.com/CherryHQ/cherry-studio/issues/621#issuecomment-2588652880](https://github.com/CherryHQ/cherry-studio/issues/621#issuecomment-2588652880)
 
 Método 2:
-Com base nas características do aplicativo Electron, modifique o local de armazenamento configurando parâmetros de inicialização.
+Com base nas características dos aplicativos Electron, modifique o local de armazenamento configurando parâmetros de inicialização.
 
 > --user-data-dir
-> ex: Cherry-Studio-*-x64-portable.exe --user-data-dir="%user_data_dir%"
+> 
+> Exemplo: Cherry-Studio-*-x64-portable.exe --user-data-dir="%user_data_dir%"
 
 > Exemplo:
 
@@ -55,39 +50,40 @@ d-----         2025/4/18     14:05                user-data-dir
 -a----         2025/4/18     14:05            701 init_cherry_studio.bat
 ```
 
-> init_cherry_studio.bat (codificação: ANSI)
+> init_cherry_studio.bat (encoding: ANSI)
 
 ```bash
-@title CherryStudio 初始化
+@title Inicialização do CherryStudio
 @echo off
 
 set current_path_dir=%~dp0
-@echo 当前路径:%current_path_dir%
+@echo Local atual: %current_path_dir%
 set user_data_dir=%current_path_dir%user-data-dir
-@echo CherryStudio 数据路径:%user_data_dir%
+@echo Diretório de dados do CherryStudio: %user_data_dir%
 
-@echo 查找当前路径下 Cherry-Studio-*-portable.exe
+@echo Localizando Cherry-Studio-*-portable.exe no diretório atual
 setlocal enabledelayedexpansion
-for /f "delims=" %%F in ('dir /b /a-d "Cherry-Studio-*-portable.exe" 2^>nul') do ( #Por favor, ajuste para o nome do arquivo baixado (os nomes são diferentes no site oficial e no Github)
+
+for /f "delims=" %%F in ('dir /b /a-d "Cherry-Studio-*-portable*.exe" 2^>nul') do ( # Este código é compatível com versões baixadas do GitHub e do site oficial. Para outras versões, modifique conforme necessário.
     set "target_file=!cd!\%%F"
     goto :break
 )
 :break
 if defined target_file (
-    echo 找到文件: %target_file%
+    echo Arquivo encontrado: %target_file%
 ) else (
-    echo 未找到匹配文件，退出该脚本
+    echo Nenhum arquivo correspondente encontrado, saindo do script
     pause
     exit
 )
 
-@echo 确认请继续
+@echo Confirme para continuar
 pause
 
-@echo 启动 CherryStudio
+@echo Iniciando CherryStudio
 start %target_file% --user-data-dir="%user_data_dir%"
 
-@echo 操作结束
+@echo Operação concluída
 @echo on
 exit
 ```

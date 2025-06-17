@@ -6,9 +6,9 @@ icon: floppy-disk
 تمت ترجمة هذا المستند من الصينية بواسطة الذكاء الاصطناعي ولم تتم مراجعته بعد.
 {% endhint %}
 
-# الموقع الإفتراضي للتخزين
+# الموقع التخزين الافتراضي
 
-تتبع تخزين بيانات Cherry Studio مواصفات النظام، حيث يتم وضع البيانات تلقائيًا في دليل المستخدم، وتكون مواقع الدلائل المحددة كما يلي:
+يتبع تخزين بيانات Cherry Studio مواصفات النظام، حيث يتم وضع البيانات تلقائيًا في دليل المستخدم. مواقع الدلائل المحددة كما يلي:
 
 > macOS: /Users/username/Library/Application Support/CherryStudioDev
 
@@ -19,19 +19,21 @@ icon: floppy-disk
 يمكن أيضًا الاطلاع عليها في الموقع التالي:
 <figure><img src="../../.gitbook/assets/image (31).png" alt=""><figcaption></figcaption></figure>
 
-# تغيير موقع التخزين (للرجوع)
 
-**الطريقة الأولى:**
 
-يمكن تحقيق ذلك عن طريق إنشاء رابط رمزي. قم بإغلاق البرنامج، ثم انقل البيانات إلى الموقع الذي ترغب في حفظها فيه، ثم إنشاء رابط في الموقع الأصلي يشير إلى الموقع المنقول.
+# تغيير موقع التخزين (للإشارة)
 
-خطوات التنفيذ المفصلة يمكن الرجوع إليها في: [https://github.com/CherryHQ/cherry-studio/issues/621#issuecomment-2588652880](https://github.com/CherryHQ/cherry-studio/issues/621#issuecomment-2588652880)
+الطريقة الأولى:
 
-**الطريقة الثانية:**
-بناءً على خصائص تطبيق Electron، يمكن تعديل موقع التخزين عن طريق تكوين معلمات بدء التشغيل.
+يمكن تحقيق ذلك عن طريق إنشاء وصلة لينة. أغلق البرنامج، ثم انقل البيانات إلى الموقع الذي ترغب في حفظها فيه، ثم أنشئ وصلة في الموقع الأصلي تشير إلى الموقع الجديد.
+
+يمكنك الرجوع إلى الخطوات التفصيلية هنا: [https://github.com/CherryHQ/cherry-studio/issues/621#issuecomment-2588652880](https://github.com/CherryHQ/cherry-studio/issues/621#issuecomment-2588652880)
+
+الطريقة الثانية:
+بناءً على خصائص تطبيق Electron، يمكن تعديل موقع التخزين عبر تكوين معلمات بدء التشغيل.
 
 > --user-data-dir
-> مثل: Cherry-Studio-*-x64-portable.exe --user-data-dir="%user_data_dir%"
+> مثال: Cherry-Studio-*-x64-portable.exe --user-data-dir="%user_data_dir%"
 
 > مثال:
 
@@ -49,20 +51,21 @@ d-----         2025/4/18     14:05                user-data-dir
 -a----         2025/4/18     14:05            701 init_cherry_studio.bat
 ```
 
-> init_cherry_studio.bat (ترميز: ANSI)
+> init_cherry_studio.bat (encoding: ANSI)
 
 ```bash
 @title تهيئة CherryStudio
 @echo off
 
 set current_path_dir=%~dp0
-@echo المسار الحالي:%current_path_dir%
+@echo المسار الحالي: %current_path_dir%
 set user_data_dir=%current_path_dir%user-data-dir
-@echo مسار بيانات CherryStudio:%user_data_dir%
+@echo مسار بيانات CherryStudio: %user_data_dir%
 
 @echo البحث عن Cherry-Studio-*-portable.exe في المسار الحالي
 setlocal enabledelayedexpansion
-for /f "delims=" %%F in ('dir /b /a-d "Cherry-Studio-*-portable.exe" 2^>nul') do ( #يرجى تغيير هذا إلى اسم الملف الذي تم تنزيله فعليًا، حيث تختلف الأسماء بين التنزيل من الموقع الرسمي ومن Github
+
+for /f "delims=" %%F in ('dir /b /a-d "Cherry-Studio-*-portable*.exe" 2^>nul') do ( # هذا الكود متوافق مع الإصدارات التي تم تنزيلها من GitHub والموقع الرسمي، يرجى تعديل الإصدارات الأخرى يدويًا
     set "target_file=!cd!\%%F"
     goto :break
 )
@@ -70,7 +73,7 @@ for /f "delims=" %%F in ('dir /b /a-d "Cherry-Studio-*-portable.exe" 2^>nul') do
 if defined target_file (
     echo تم العثور على الملف: %target_file%
 ) else (
-    echo لم يتم العثور على ملف مطابق، إنهاء هذا النص البرمجي
+    echo لم يتم العثور على ملف مطابق، الخروج من البرنامج النصي
     pause
     exit
 )
@@ -78,7 +81,7 @@ if defined target_file (
 @echo يرجى التأكيد للمتابعة
 pause
 
-@echo تشغيل CherryStudio
+@echo بدء تشغيل CherryStudio
 start %target_file% --user-data-dir="%user_data_dir%"
 
 @echo انتهت العملية

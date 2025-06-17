@@ -8,7 +8,7 @@ Dieses Dokument wurde von einer KI aus dem Chinesischen übersetzt und ist noch 
 
 # Standard-Speicherort
 
-Cherry Studio-Daten werden gemäß Systemstandards gespeichert und automatisch im Benutzerverzeichnis abgelegt. Die genauen Verzeichnispfade sind:
+Cherry Studio folgt den Systemkonventionen für die Datenspeicherung. Daten werden automatisch im Benutzerverzeichnis gespeichert, an folgenden Speicherorten:
 
 > macOS: /Users/username/Library/Application Support/CherryStudioDev
 
@@ -16,22 +16,18 @@ Cherry Studio-Daten werden gemäß Systemstandards gespeichert und automatisch i
 
 > Linux: /home/username/.config/CherryStudio
 
-Sie können auch an folgender Stelle nachsehen:
+Der Speicherort kann auch hier überprüft werden:
 <figure><img src="../../.gitbook/assets/image (31).png" alt=""><figcaption></figcaption></figure>
-
-
 
 # Speicherort ändern (Referenz)
 
-**Methode 1:**
+**Methode 1:**  
+Durch Erstellen einer symbolischen Verbindung. Beenden Sie die Software, verschieben Sie die Daten an den gewünschten Speicherort und erstellen Sie am ursprünglichen Ort eine Verknüpfung zum neuen Speicherort.
 
-Sie können eine symbolische Verknüpfung erstellen. Beenden Sie die Software, verschieben Sie die Daten an den gewünschten Speicherort und erstellen Sie am ursprünglichen Ort eine Verknüpfung zum neuen Speicherort.
-
-Einzelne Schritte können hier nachgelesen werden:  
-[https://github.com/CherryHQ/cherry-studio/issues/621#issuecomment-2588652880](https://github.com/CherryHQ/cherry-studio/issues/621#issuecomment-2588652880)
+Anleitung: [https://github.com/CherryHQ/cherry-studio/issues/621#issuecomment-2588652880](https://github.com/CherryHQ/cherry-studio/issues/621#issuecomment-2588652880)
 
 **Methode 2:**  
-Basierend auf den Eigenschaften von Electron-Anwendungen kann der Speicherort über Startparameter angepasst werden.
+Änderung des Speicherorts über Startparameter (basierend auf Electron-Anwendungscharakteristik).
 
 > --user-data-dir  
 > Beispiel: Cherry-Studio-*-x64-portable.exe --user-data-dir="%user_data_dir%"
@@ -52,39 +48,40 @@ d-----         2025/4/18     14:05                user-data-dir
 -a----         2025/4/18     14:05            701 init_cherry_studio.bat
 ```
 
-> init_cherry_studio.bat (Kodierung: ANSI)
+> init_cherry_studio.bat (encoding: ANSI)
 
 ```bash
-@title CherryStudio Initialisierung
+@title CherryStudio 初始化
 @echo off
 
 set current_path_dir=%~dp0
-@echo Aktueller Pfad:%current_path_dir%
+@echo 当前路径:%current_path_dir%
 set user_data_dir=%current_path_dir%user-data-dir
-@echo CherryStudio Datenpfad:%user_data_dir%
+@echo CherryStudio 数据路径:%user_data_dir%
 
-@echo Suche nach Cherry-Studio-*-portable.exe im aktuellen Pfad
+@echo 查找当前路径下 Cherry-Studio-*-portable.exe
 setlocal enabledelayedexpansion
-for /f "delims=" %%F in ('dir /b /a-d "Cherry-Studio-*-portable.exe" 2^>nul') do ( #Bitte an den tatsächlichen Dateinamen anpassen (unterschiedliche Namen bei Download von offizieller Website vs. Github)
+
+for /f "delims=" %%F in ('dir /b /a-d "Cherry-Studio-*-portable*.exe" 2^>nul') do ( #此代码适配 GitHub 和官网下载的版本，其他请自行修改
     set "target_file=!cd!\%%F"
     goto :break
 )
 :break
 if defined target_file (
-    echo Datei gefunden: %target_file%
+    echo 找到文件: %target_file%
 ) else (
-    echo Keine passende Datei gefunden, Skript wird beendet
+    echo 未找到匹配文件，退出该脚本
     pause
     exit
 )
 
-@echo Bestätigen Sie zum Fortfahren
+@echo 确认请继续
 pause
 
-@echo Starte CherryStudio
+@echo 启动 CherryStudio
 start %target_file% --user-data-dir="%user_data_dir%"
 
-@echo Vorgang abgeschlossen
+@echo 操作结束
 @echo on
 exit
 ```

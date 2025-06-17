@@ -6,9 +6,9 @@ icon: floppy-disk
 เอกสารนี้ได้รับการแปลจากภาษาจีนโดย AI และยังไม่ได้รับการตรวจสอบ
 {% endhint %}
 
-# ตำแหน่งเก็บข้อมูลเริ่มต้น
+# ตำแหน่งที่เก็บข้อมูลเริ่มต้น
 
-การจัดเก็บข้อมูล Cherry Studio เป็นไปตามข้อกำหนดของระบบ ข้อมูลจะถูกวางไว้ในไดเรกทอรีผู้ใช้โดยอัตโนมัติ ตำแหน่งไดเรกทอรีมีดังนี้:
+Cherry Studio จัดเก็บข้อมูลตามมาตรฐานระบบ โดยข้อมูลจะถูกเก็บไว้ในไดเรกทอรีผู้ใช้โดยอัตโนมัติ โดยมีตำแหน่งไดเรกทอรี่ดังนี้:
 
 > macOS: /Users/username/Library/Application Support/CherryStudioDev
 
@@ -16,25 +16,24 @@ icon: floppy-disk
 
 > Linux: /home/username/.config/CherryStudio
 
-ยังสามารถดูได้ที่ตำแหน่งต่อไปนี้:
+คุณยังสามารถดูได้ที่:
 <figure><img src="../../.gitbook/assets/image (31).png" alt=""><figcaption></figcaption></figure>
 
 
 
-# เปลี่ยนตำแหน่งจัดเก็บข้อมูล (สำหรับอ้างอิง)
+# การเปลี่ยนตำแหน่งที่เก็บข้อมูล (อ้างอิง)
 
 **วิธีที่ 1:**
 
-สามารถทำได้โดยการสร้าง symbolic link ออกจากซอฟต์แวร์ ย้ายข้อมูลไปยังตำแหน่งที่ต้องการ แล้วสร้างลิงก์ที่ตำแหน่งเดิมชี้ไปยังตำแหน่งใหม่
+สามารถทำได้โดยการสร้าง symbolic link ออกจากซอฟต์แวร์ ย้ายข้อมูลไปยังตำแหน่งที่ต้องการ จากนั้นสร้างลิงก์ในตำแหน่งเดิมที่ชี้ไปยังตำแหน่งใหม่
 
-ขั้นตอนการทำงานโดยละเอียดสามารถดูได้ที่:  
-[https://github.com/CherryHQ/cherry-studio/issues/621#issuecomment-2588652880](https://github.com/CherryHQ/cherry-studio/issues/621#issuecomment-2588652880)
+ขั้นตอนการดำเนินการสามารถดูได้ที่: [https://github.com/CherryHQ/cherry-studio/issues/621#issuecomment-2588652880](https://github.com/CherryHQ/cherry-studio/issues/621#issuecomment-2588652880)
 
 **วิธีที่ 2:**
-ใช้คุณสมบัติของแอปพลิเคชัน Electron โดยการกำหนดพารามิเตอร์เริ่มต้นเพื่อเปลี่ยนตำแหน่งจัดเก็บ
+ใช้คุณสมบัติของแอปพลิเคชัน Electron โดยกำหนดพารามิเตอร์การเริ่มทำงานเพื่อเปลี่ยนตำแหน่งเก็บข้อมูล
 
 > --user-data-dir
-> ตัวอย่าง: Cherry-Studio-*-x64-portable.exe --user-data-dir="%user_data_dir%"
+> เช่น: Cherry-Studio-*-x64-portable.exe --user-data-dir="%user_data_dir%"
 
 > ตัวอย่าง:
 
@@ -42,7 +41,7 @@ icon: floppy-disk
 PS D:\CherryStudio> dir
 
 
-    Directory: D:\CherryStudio
+    ไดเรกทอรี: D:\CherryStudio
 
 
 Mode                 LastWriteTime         Length Name
@@ -52,20 +51,21 @@ d-----         2025/4/18     14:05                user-data-dir
 -a----         2025/4/18     14:05            701 init_cherry_studio.bat
 ```
 
-> init_cherry_studio.bat (encoding: ANSI)
+> init_cherry_studio.bat (รูปแบบตัวอักษร: ANSI)
 
 ```bash
 @title เริ่มต้น CherryStudio
 @echo off
 
 set current_path_dir=%~dp0
-@echo PATH ปัจจุบัน:%current_path_dir%
+@echo เส้นทางปัจจุบัน:%current_path_dir%
 set user_data_dir=%current_path_dir%user-data-dir
-@echo PATH ข้อมูลของ CherryStudio:%user_data_dir%
+@echo เส้นทางข้อมูล CherryStudio:%user_data_dir%
 
-@echo กำลังค้นหา Cherry-Studio-*-portable.exe ใน PATH ปัจจุบัน
+@echo ค้นหาไฟล์ Cherry-Studio-*-portable.exe ในเส้นทางปัจจุบัน
 setlocal enabledelayedexpansion
-for /f "delims=" %%F in ('dir /b /a-d "Cherry-Studio-*-portable.exe" 2^>nul') do ( #โปรดเปลี่ยนเป็นชื่อไฟล์ที่ดาวน์โหลดได้จริง ชื่อที่ดาวน์โหลดจากเว็บไซต์ทางการและ Github มีความแตกต่าง
+
+for /f "delims=" %%F in ('dir /b /a-d "Cherry-Studio-*-portable*.exe" 2^>nul') do ( # รหัสนี้เข้ากันกับเวอร์ชันจาก GitHub และเว็บไซต์หลัก สำหรับเวอร์ชันอื่น ๆ โปรดปรับเปลี่ยนด้วยตนเอง
     set "target_file=!cd!\%%F"
     goto :break
 )
@@ -73,7 +73,7 @@ for /f "delims=" %%F in ('dir /b /a-d "Cherry-Studio-*-portable.exe" 2^>nul') do
 if defined target_file (
     echo พบไฟล์: %target_file%
 ) else (
-    echo ไม่พบไฟล์ที่ตรงกัน ออกจากสคริปต์นี้
+    echo ไม่พบไฟล์ที่ตรงกัน กำลังปิดสคริปต์
     pause
     exit
 )
@@ -81,21 +81,21 @@ if defined target_file (
 @echo ยืนยันเพื่อดำเนินการต่อ
 pause
 
-@echo กำลังเริ่ม CherryStudio
+@echo เริ่มต้น CherryStudio
 start %target_file% --user-data-dir="%user_data_dir%"
 
-@echo การดำเนินการสิ้นสุด
+@echo การดำเนินการเสร็จสิ้น
 @echo on
 exit
 ```
 
-> โครงสร้างไดเรกทอรี user-data-dir หลังการเริ่มต้น:
+> โครงสร้างไดเรกทอรี user-data-dir หลังเริ่มต้น:
 
 ```shell
 PS D:\CherryStudio> dir .\user-data-dir\
 
 
-    Directory: D:\CherryStudio\user-data-dir
+    ไดเรกทอรี: D:\CherryStudio\user-data-dir
 
 
 Mode                 LastWriteTime         Length Name

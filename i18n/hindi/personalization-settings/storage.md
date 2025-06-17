@@ -6,9 +6,9 @@ icon: floppy-disk
 यह दस्तावेज़ AI द्वारा चीनी से अनुवादित किया गया है और अभी तक इसकी समीक्षा नहीं की गई है।
 {% endhint %}
 
-# डिफ़ॉल्ट स्टोरेज स्थान
+# डिफ़ॉल्ट संग्रहण स्थान
 
-Cherry Studio डेटा भंडारण सिस्टम मानकों का पालन करता है। डेटा स्वचालित रूप से उपयोगकर्ता निर्देशिका के अंतर्गत संग्रहीत किया जाता है, विशिष्ट स्थान निम्नलिखित हैं:
+Cherry Studio डेटा संग्रहण सिस्टम मानकों का पालन करता है। डेटा स्वचालित रूप से उपयोगकर्ता डायरेक्टरी में संग्रहीत किया जाता है। विशिष्ट डायरेक्टरी स्थान निम्नलिखित हैं:
 
 > macOS: /Users/username/Library/Application Support/CherryStudioDev
 
@@ -16,21 +16,21 @@ Cherry Studio डेटा भंडारण सिस्टम मानको
 
 > Linux: /home/username/.config/CherryStudio
 
-इसे निम्न स्थान पर भी देखा जा सकता है:
+निम्नलिखित स्थान पर भी देखा जा सकता है:
 <figure><img src="../../.gitbook/assets/image (31).png" alt=""><figcaption></figcaption></figure>
 
 
 
-# स्टोरेज स्थान बदलना (संदर्भ हेतु)
+# संग्रहण स्थान बदलना (संदर्भ के लिए)
 
-विधि १:
+**विधि 1:**
 
-सॉफ्ट लिंक बनाकर इसे कार्यान्वित किया जा सकता है। सॉफ्टवेयर को बंद करें, डेटा को अपनी इच्छित स्थान पर स्थानांतरित करें, फिर मूल स्थान पर एक लिंक बनाएं जो नए स्थान की ओर संकेत करे।
+सॉफ्ट लिंक बनाकर इसे प्राप्त किया जा सकता है। सॉफ़्टवेयर बंद करें, डेटा को वांछित स्थान पर स्थानांतरित करें, फिर मूल स्थान पर नए स्थान की ओर इंगित करने वाला लिंक बनाएँ।
 
 विस्तृत चरणों के लिए देखें: [https://github.com/CherryHQ/cherry-studio/issues/621#issuecomment-2588652880](https://github.com/CherryHQ/cherry-studio/issues/621#issuecomment-2588652880)
 
-विधि २:
-इलेक्ट्रॉन एप्लिकेशन की विशेषताओं के आधार पर, स्टोरेज स्थान को लॉन्च पैरामीटर कॉन्फ़िगर करके संशोधित किया जा सकता है।
+**विधि 2:**
+इलेक्ट्रॉन एप्लिकेशन की विशेषताओं का उपयोग करते हुए, स्टार्टअप पैरामीटर कॉन्फ़िगर करके संग्रहण स्थान बदलें।
 
 > --user-data-dir
 > उदाहरण: Cherry-Studio-*-x64-portable.exe --user-data-dir="%user_data_dir%"
@@ -51,10 +51,10 @@ d-----         2025/4/18     14:05                user-data-dir
 -a----         2025/4/18     14:05            701 init_cherry_studio.bat
 ```
 
-> init_cherry_studio.bat (encoding: ANSI)
+> init_cherry_studio.bat (एन्कोडिंग: ANSI)
 
 ```bash
-@title CherryStudio इनिशियलाइजेशन
+@title CherryStudio आरंभीकरण
 @echo off
 
 set current_path_dir=%~dp0
@@ -64,7 +64,8 @@ set user_data_dir=%current_path_dir%user-data-dir
 
 @echo वर्तमान पथ में Cherry-Studio-*-portable.exe खोजें
 setlocal enabledelayedexpansion
-for /f "delims=" %%F in ('dir /b /a-d "Cherry-Studio-*-portable.exe" 2^>nul') do ( #कृपया वास्तविक डाउनलोड की गई फ़ाइल का नाम डालें, आधिकारिक साइट और GitHub डाउनलोड के नाम भिन्न होते हैं
+
+for /f "delims=" %%F in ('dir /b /a-d "Cherry-Studio-*-portable*.exe" 2^>nul') do ( #यह कोड GitHub और आधिकारिक वेबसाइट डाउनलोड के लिए अनुकूलित है, अन्य के लिए स्वयं संशोधित करें
     set "target_file=!cd!\%%F"
     goto :break
 )
@@ -72,23 +73,23 @@ for /f "delims=" %%F in ('dir /b /a-d "Cherry-Studio-*-portable.exe" 2^>nul') do
 if defined target_file (
     echo फ़ाइल मिली: %target_file%
 ) else (
-    echo मेल खाने वाली कोई फ़ाइल नहीं मिली, स्क्रिप्ट बंद करें
+    echo कोई मिलान फ़ाइल नहीं मिली, स्क्रिप्ट से बाहर निकलना
     pause
     exit
 )
 
-@echo जारी रखने के लिए कन्फर्म करें
+@echo पुष्टि करने के लिए जारी रखें
 pause
 
-@echo CherryStudio लॉन्च करें
+@echo CherryStudio प्रारंभ करें
 start %target_file% --user-data-dir="%user_data_dir%"
 
-@echo ऑपरेशन समाप्त
+@echo प्रक्रिया पूर्ण
 @echo on
 exit
 ```
 
-> निर्देशिका user-data-dir की इनिशियलाइजेशन के बाद संरचना:
+> user-data-dir डायरेक्टरी प्रारंभ होने के बाद संरचना:
 
 ```shell
 PS D:\CherryStudio> dir .\user-data-dir\

@@ -8,27 +8,29 @@ Dokumen ini diterjemahkan dari bahasa Mandarin oleh AI dan belum ditinjau.
 
 # Lokasi Penyimpanan Default
 
-Cherry Studio menyimpan data sesuai dengan standar sistem, dan data akan secara otomatis ditempatkan di direktori pengguna. Detail lokasi direktori adalah sebagai berikut:
+Penyimpanan data Cherry Studio mengikuti spesifikasi sistem, data akan otomatis ditempatkan di direktori pengguna. Lokasi spesifik direktori adalah sebagai berikut:
 
-> macOS: /Users/username/Library/Application Support/CherryStudioDev  
-> Windows: C:\Users\username\AppData\Roaming\CherryStudio  
-> Linux: /home/username/.config/CherryStudio  
+> macOS: /Users/username/Library/Application Support/CherryStudioDev
 
-Dapat juga dilihat di lokasi berikut:
+> Windows: C:\Users\username\AppData\Roaming\CherryStudio
+
+> Linux: /home/username/.config/CherryStudio
+
+Juga dapat dilihat di lokasi berikut:
 <figure><img src="../../.gitbook/assets/image (31).png" alt=""><figcaption></figcaption></figure>
 
-# Mengubah Lokasi Penyimpanan (Referensi)
+# Mengubah Lokasi Penyimpanan (Sebagai Referensi)
 
-**Metode 1:**  
-Dapat dilakukan dengan membuat symbolic link. Keluar dari aplikasi, pindahkan data ke lokasi yang diinginkan, kemudian buat link di lokasi asli yang mengarah ke lokasi baru.
+Metode 1:
 
-Langkah detail dapat merujuk:  
-[https://github.com/CherryHQ/cherry-studio/issues/621#issuecomment-2588652880](https://github.com/CherryHQ/cherry-studio/issues/621#issuecomment-2588652880)
+Dapat dilakukan dengan membuat tautan simbolis (symlink). Keluarkan aplikasi, pindahkan data ke lokasi penyimpanan yang diinginkan, lalu buat tautan di lokasi asli yang merujuk ke lokasi baru.
 
-**Metode 2:**  
-Berdasarkan karakteristik aplikasi Electron, ubah lokasi penyimpanan melalui parameter startup.
+Langkah operasional spesifik dapat merujuk: [https://github.com/CherryHQ/cherry-studio/issues/621#issuecomment-2588652880](https://github.com/CherryHQ/cherry-studio/issues/621#issuecomment-2588652880)
 
-> --user-data-dir  
+Metode 2:
+Berdasarkan karakteristik aplikasi Electron, modifikasi lokasi penyimpanan melalui konfigurasi parameter startup.
+
+> --user-data-dir
 > Contoh: Cherry-Studio-*-x64-portable.exe --user-data-dir="%user_data_dir%"
 
 > Contoh:
@@ -36,7 +38,9 @@ Berdasarkan karakteristik aplikasi Electron, ubah lokasi penyimpanan melalui par
 ```shell
 PS D:\CherryStudio> dir
 
-    目录: D:\CherryStudio
+
+    Direktori: D:\CherryStudio
+
 
 Mode                 LastWriteTime         Length Name
 ----                 -------------         ------ ----
@@ -54,19 +58,20 @@ d-----         2025/4/18     14:05                user-data-dir
 set current_path_dir=%~dp0
 @echo Lokasi saat ini:%current_path_dir%
 set user_data_dir=%current_path_dir%user-data-dir
-@echo Path data CherryStudio:%user_data_dir%
+@echo Jalur data CherryStudio:%user_data_dir%
 
-@echo Mencari Cherry-Studio-*-portable.exe di path saat ini
+@echo Mencari Cherry-Studio-*-portable.exe di jalur saat ini
 setlocal enabledelayedexpansion
-for /f "delims=" %%F in ('dir /b /a-d "Cherry-Studio-*-portable.exe" 2^>nul') do ( #Silakan sesuaikan dengan nama file unduhan aktual, berbeda antara unduhan resmi dan GitHub
+
+for /f "delims=" %%F in ('dir /b /a-d "Cherry-Studio-*-portable*.exe" 2^>nul') do ( #Kode ini disesuaikan untuk versi unduhan GitHub dan situs web resmi, silakan modifikasi sendiri untuk versi lain
     set "target_file=!cd!\%%F"
     goto :break
 )
 :break
 if defined target_file (
-    echo File ditemukan: %target_file%
+    echo Berkas ditemukan: %target_file%
 ) else (
-    echo File tidak ditemukan, keluar dari skrip
+    echo Berkas yang cocok tidak ditemukan, keluar dari skrip
     pause
     exit
 )
@@ -87,7 +92,9 @@ exit
 ```shell
 PS D:\CherryStudio> dir .\user-data-dir\
 
-    目录: D:\CherryStudio\user-data-dir
+
+    Direktori: D:\CherryStudio\user-data-dir
+
 
 Mode                 LastWriteTime         Length Name
 ----                 -------------         ------ ----
