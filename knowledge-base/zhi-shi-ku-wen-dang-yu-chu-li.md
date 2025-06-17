@@ -30,7 +30,7 @@ icon: face-viewfinder
 
 <figure><img src="../.gitbook/assets/CleanShot 2025-06-03 at 14.11.00@2x.jpg" alt=""><figcaption></figcaption></figure>
 
-> 知识库使用Tips: 使用**能力较强**的模型时可以将知识库搜索模式修改为意图识别，意图识别可以更准确、广泛的描述您的问题
+> 知识库使用Tips: 使用**能力较强**的模型时可以将知识库搜索模式修改为意图识别，意图识别可以更准确、广泛的描述您的问题。
 
 ### 开启知识库意图识别
 
