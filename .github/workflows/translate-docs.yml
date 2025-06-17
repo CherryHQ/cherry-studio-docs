@@ -46,9 +46,13 @@ jobs:
       - name: Upload translated docs artifact
         uses: actions/upload-artifact@v4
         with:
-          name: ${{ steps.run-translation.outputs.lang_dir }} # 直接使用语言目录名作为 artifact 名称
-          path: i18n/${{ steps.run-translation.outputs.lang_dir }}/ # 使用 Python 脚本输出的目录名
-          retention-days: 1 # 仅保留一天，减少存储占用
+          name: ${{ steps.run-translation.outputs.lang_dir }}
+          # 使用多行字符串来定义路径，包括一个包含模式和排除模式
+          path: |
+            i18n/${{ steps.run-translation.outputs.lang_dir }}/**
+            !i18n/${{ steps.run-translation.outputs.lang_dir }}/.github/**
+          retention-days: 1
+          include-hidden-files: true # 确保包含以点开头的文件夹（如 .gitbook）
 
       - name: Upload translation status artifact
         uses: actions/upload-artifact@v4
