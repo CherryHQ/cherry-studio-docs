@@ -2,58 +2,62 @@
 icon: table-columns
 ---
 
+{% hint style="warning" %}
+This document was translated from Chinese by AI and has not yet been reviewed.
+{% endhint %}
+
 # Display Settings
 
-On this page, you can set the software's color theme, page layout, or customize CSS for personalized settings.
+On this page, you can set the software's color theme, page layout, or use [Custom CSS](../../../personalization-settings/css.md) for personalized adjustments.
 
-## Theme Selection
+### Theme Selection
 
-You can set the default interface color mode here (Light Mode, Dark Mode, or Follow System).
+Here you can set the default interface color mode (Light Mode, Dark Mode, or Follow System).
 
-## Topic Settings
+### Topic Settings
 
 This setting is for the layout of the conversation interface.
 
-**Topic Layout**
+#### Topic Position
 
 {% tabs %}
-{% tab title="Left Side (Default)" %}
-<figure><img src="../../../.gitbook/assets/topic-layout-left (1).png" alt=""><figcaption></figcaption></figure>
+{% tab title="Left (Default)" %}
+<figure><img src="../../../.gitbook/assets/image (10).png" alt=""><figcaption></figcaption></figure>
 {% endtab %}
 
-{% tab title="Right Side" %}
-<figure><img src="../../../.gitbook/assets/topic-layout-right.png" alt=""><figcaption></figcaption></figure>
+{% tab title="Right" %}
+<figure><img src="../../../.gitbook/assets/image (11).png" alt=""><figcaption></figcaption></figure>
 {% endtab %}
 {% endtabs %}
 
-## **Automatically Switch to Topic**
+#### Auto-switch to Topic
 
-When this setting is enabled, clicking on the assistant name will automatically switch to the corresponding topic page.
+When this setting is enabled, clicking on the assistant's name will automatically switch to the corresponding topic page.
 
 {% tabs %}
-{% tab title="Off (Default)" %}
-<figure><img src="../../../.gitbook/assets/automatically-switch-to-topic-off.gif" alt=""><figcaption></figcaption></figure>
+{% tab title="When Off (Default)" %}
+<figure><img src="../../../.gitbook/assets/Honeycam 2025-01-04 17-35-43.gif" alt=""><figcaption></figcaption></figure>
 {% endtab %}
 
-{% tab title="On" %}
-<figure><img src="../../../.gitbook/assets/automatically-switch-to-topic-on.gif" alt=""><figcaption></figcaption></figure>
+{% tab title="When On" %}
+<figure><img src="../../../.gitbook/assets/Honeycam 2025-01-04 17-38-18.gif" alt=""><figcaption></figcaption></figure>
 {% endtab %}
 {% endtabs %}
 
-## Display Topic Time
+#### Show Topic Time
 
-When enabled, it will display the topic <mark style="color:blue;">creation</mark> time below the topic title.
+When enabled, the **creation** time of the topic will be displayed below the topic.
 
 {% tabs %}
-{% tab title="Off" %}
-<figure><img src="../../../.gitbook/assets/display-topic-time-off.png" alt=""><figcaption></figcaption></figure>
+{% tab title="When Off" %}
+<figure><img src="../../../.gitbook/assets/image (14).png" alt=""><figcaption></figcaption></figure>
 {% endtab %}
 
-{% tab title="On" %}
-<figure><img src="../../../.gitbook/assets/display-topic-time-on.png" alt=""><figcaption></figcaption></figure>
+{% tab title="When On" %}
+<figure><img src="../../../.gitbook/assets/image (12).png" alt=""><figcaption></figcaption></figure>
 {% endtab %}
 {% endtabs %}
 
-## Custom CSS
+### Custom CSS
 
-Through this setting, you can flexibly make personalized changes and settings to the interface. For specific methods, refer to the Personalization Settings in the advanced tutorials.
+This setting allows for flexible and personalized changes to the interface. For specific methods, please refer to [Custom CSS](../../../personalization-settings/css.md) in the advanced tutorials.

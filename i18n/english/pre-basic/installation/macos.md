@@ -1,36 +1,39 @@
 ---
-description: MacOS Installation Tutorial
 icon: apple
+description: macOS 版本安装教程
 ---
 
-# MacOS
+{% hint style="warning" %}
+This document was translated from Chinese by AI and has not yet been reviewed.
+{% endhint %}
 
+# macOS
 
+1. First, go to the official website's download page to download the Mac version, or click the direct link below.
 
-First, go to the homepage and click to download the Mac version, or click below to go directly:
+Please make sure to download the **correct chip version for your Mac**.
+{% hint style="info" %}
+If you don't know which chip version your Mac uses:
+
+*   Click the  in the menu bar at the top-left corner of your Mac.
+*   Click "About This Mac" in the dropdown menu.
+*   Check the processor information in the pop-up window.
+
+If it's an Intel chip, download the Intel version installer.
+
+If it's an Apple M\* chip, download the Apple chip installer.
+{% endhint %}
 
 {% embed url="https://cherry-ai.com/download" %}
 
-Download completed, click here:
+2. After the download is complete, click here.
 
-<figure><img src="../../.gitbook/assets/2024-07-30-14-04-35.webp" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Mac下载.png" alt=""><figcaption></figcaption></figure>
 
+3. Drag the icon to install.
 
+<figure><img src="../../.gitbook/assets/Mac拖拽安装.png" alt=""><figcaption></figcaption></figure>
 
-Drag and drop the icon to install:
+Go to Launchpad, find the Cherry Studio icon, and click it. If the Cherry Studio main interface opens, the installation is successful.
 
-<figure><img src="../../.gitbook/assets/2024-07-30-14-03-49.webp" alt=""><figcaption></figcaption></figure>
-
-Installation complete:
-
-<figure><img src="../../.gitbook/assets/2024-07-30-14-05-07.webp" alt=""><figcaption></figcaption></figure>
-
-#### How to confirm which version to download?
-
-* Click the Apple logo in the top left corner of your screen.
-* Click "About This Mac" in the expanded menu.
-* View processor information in the pop-up window.
-
-If it is an Intel chip, download the Intel version installer.
-
-If it is an Apple M\* chip, download the Apple silicon installer.
+<figure><img src="../../.gitbook/assets/Mac安装成功.png" alt=""><figcaption></figcaption></figure>

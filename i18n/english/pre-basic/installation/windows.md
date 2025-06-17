@@ -1,36 +1,40 @@
 ---
-description: Windows Installation Tutorial
+description: Windows 版本安装教程
 icon: windows
 ---
 
-# Windows
-
-### Visit the Official Website
-
-{% hint style="info" %}
-Note: Windows 7 is not supported for installing CherryStudio.
+{% hint style="warning" %}
+This document was translated from Chinese by AI and has not yet been reviewed.
 {% endhint %}
 
-Click "Download" to choose the appropriate version.
+# Windows
 
-{% embed url="https://cherry-ai.com" %}
+## Open the Official Website
 
-<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
+{% hint style="warning" %}
+Note: Cherry Studio cannot be installed on Windows 7.
+{% endhint %}
 
-### Wait for the Download to Complete
+Click download and select the appropriate version
 
-<figure><img src="../../.gitbook/assets/download.webp" alt=""><figcaption></figcaption></figure>
+{% embed url="https://cherry-ai.com/download" %}
 
-> If your browser displays a warning that the file is not trusted, choose to keep it.
+<figure><img src="../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption><p>Open the official website</p></figcaption></figure>
+
+## Wait for the Download to Complete
+
+<figure><img src="../../.gitbook/assets/download.webp" alt="" width="563"><figcaption><p>Downloading in Edge browser</p></figcaption></figure>
+
+> If the browser prompts that the file is not trusted, choose to keep it.
 >
-> `Select "Keep"` → `Trust "Cherry-Studio"`
+> `Choose Keep` → `Trust Cherry-Studio`
 
-<figure><img src="../../.gitbook/assets/file.excalidraw (1) (1) (1).svg" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-### Open File
+## Open the File
 
-<figure><img src="../../.gitbook/assets/download (1).webp" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/download (1).webp" alt="" width="563"><figcaption><p>Edge download list</p></figcaption></figure>
 
-### Installation
+## Install
 
-<figure><img src="../../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1).png" alt=""><figcaption><p>Software installation interface</p></figcaption></figure>

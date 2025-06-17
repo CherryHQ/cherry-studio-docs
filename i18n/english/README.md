@@ -2,126 +2,129 @@
 icon: cherries
 ---
 
-# Introduction
+{% hint style="warning" %}
+This document was translated from Chinese by AI and has not yet been reviewed.
+{% endhint %}
 
-## CherryStudio: Your All-in-One AI Assistant Platform
+# Project Introduction
 
 <figure><img src=".gitbook/assets/docs-readme-banner1.png" alt=""><figcaption></figcaption></figure>
 
-Follow us on social media: [Twitter (X)](https://x.com/CherryStudioAPP?t=DYR0ulaLur-bO4Us3bG79A%5C\&s=05),[Rednote](https://www.xiaohongshu.com/user/profile/662b6853000000000b031d9a?xsec_token=YB_1nKvlH4r5hPYVVbbsNHF8Y6n6AKlm5-DaggPCtd2DQ%3D\&xsec_source=app_share\&xhsshare=CopyLink\&appuid=662b6853000000000b031d9a\&apptime=1738627324\&share_id=ace5db41b5954fab8d98a2a7865a62bc\&share_channel=copy_link), [Weibo](https://weibo.com/u/7975656228), [Bilibili](https://space.bilibili.com/3546657515898892?plat_id=1%5C\&share_from=space%5C\&share_medium=android%5C\&share_plat=android%5C\&share_session_id=864e7c2b-5488-4564-9893-9a72f413811e%5C\&share_source=COPY%5C\&share_tag=s_i%5C\&timestamp=1738627360%5C\&unique_k=hIfGgDW), [Douyin](https://www.douyin.com/user/MS4wLjABAAAAmw9A54m5J0hHVMQY5eGrVJ-EHDoOS0hgJ6M1F9MN2Tn2V163A0xrC4_KVzfmQSxC?previous_page=app_code_link)
+Follow our social accounts: [Twitter(X)](https://x.com/CherryStudioAPP), [Xiaohongshu](https://www.xiaohongshu.com/user/profile/662b6853000000000b031d9a), [Weibo](https://weibo.com/u/7975656228), [Bilibili](https://space.bilibili.com/3546657515898892), [Douyin](https://www.douyin.com/user/MS4wLjABAAAAmw9A54m5J0hHVMQY5eGrVJ-EHDoOS0hgJ6M1F9MN2Tn2V163A0xrC4_KVzfmQSxC)
 
-Join our communities: [QQ Group (575014769)](https://qm.qq.com/q/lo0D4qVZKi), [Telegram](https://t.me/CherryStudioAI), [Discord](https://discord.gg/wez8HtpxqQ), [WeChat Group(Click to view)](#user-content-fn-1)[^1]
-
-***
-
-CherryStudio is a versatile AI assistant platform integrating multi-model dialogue, knowledge base management, AI art generation, translation, and more. With its highly customizable design, powerful extensibility, and user-friendly experience, CherryStudio is the ideal choice for both professional users and AI enthusiasts. Whether you are a beginner or a developer, you can find suitable AI functionalities in CherryStudio to enhance your work efficiency and creativity.
+Join our communities: [QQ Group(575014769)](https://qm.qq.com/q/lo0D4qVZKi), [Telegram](https://t.me/CherryStudioAI), [Discord](https://discord.gg/wez8HtpxqQ), WeChat Group(click to view)[^1]
 
 ***
 
-## **Features and Highlights**
+Cherry Studio is an all-in-one AI assistant platform integrating multi-model conversations, knowledge base management, AI painting, translation, and more.
+Cherry Studio's highly customizable design, powerful extensibility, and user-friendly experience make it an ideal choice for professional users and AI enthusiasts. Whether you are a beginner or a developer, you can find suitable AI functions in Cherry Studio to enhance your work efficiency and creativity.
 
-### **1. Basic Dialogue Functionality**
+***
 
-* **One Question, Multiple Answers**: Supports generating responses from multiple models simultaneously for the same question, allowing users to easily compare the performance of different models.
+### **Core Features & Highlights**
 
-<figure><img src=".gitbook/assets/docs-readme-1 (1) (1).png" alt=""><figcaption></figcaption></figure>
+#### **1. Basic Chat Functionality**
 
-* **Automatic Grouping**: Dialogue history for each assistant is automatically grouped for easy and quick access to past conversations.
-* **Dialogue Export**: Supports exporting complete dialogues in various formats (e.g., Markdown, PDF, etc.) for convenient storage and sharing.
-* **Highly Customizable Parameters**: In addition to basic parameter adjustments, users can also fill in custom parameters to meet personalized needs.​
+*   **One Question, Multiple Answers**: Supports generating replies from multiple models simultaneously for the same question, allowing users to compare the performance of different models. For details, see [Chat Interface](cherrystudio/preview/chat.md).
+
+<figure><img src=".gitbook/assets/docs-readme-1 (1).png" alt=""><figcaption></figcaption></figure>
+
+*   **Automatic Grouping**: Conversation records for each assistant are automatically grouped and managed, making it easy for users to quickly find historical conversations.
+*   **Conversation Export**: Supports exporting full or partial conversations to various formats (e.g., Markdown, Word) for easy storage and sharing.
+*   **Highly Customizable Parameters**: In addition to basic parameter adjustments, it also supports custom parameters to meet personalized needs.
 
 <figure><img src=".gitbook/assets/docs-readme-2 (2).png" alt=""><figcaption></figcaption></figure>
 
-* **Assistant Marketplace**: Built-in marketplace with over a thousand industry-specific assistants, covering fields such as translation, programming, and writing, while also supporting user-defined assistants.​
+*   **Assistant Market**: Built-in with over a thousand industry-specific assistants, covering fields like translation, programming, and writing, while also supporting user-defined assistants.
 
 <figure><img src=".gitbook/assets/docs-readme-4.png" alt=""><figcaption></figcaption></figure>
 
-* **Multiple Format Rendering**: Supports Markdown rendering, formula rendering, HTML real-time preview, and other features to enhance content presentation.
+*   **Multiple Format Rendering**: Supports Markdown rendering, formula rendering, real-time HTML preview, and other functions to enhance content display.
 
 <figure><img src=".gitbook/assets/docs-readme-3 (1).png" alt=""><figcaption></figcaption></figure>
 
-### **2. Integration of Diverse Feature Functions**
+#### **2. Integration of Various Special Features**
 
-* **AI Art Generation**: Provides a dedicated drawing panel, allowing users to generate high-quality images through natural language descriptions.
+*   **AI Painting**: Provides a dedicated painting panel where users can generate high-quality images through natural language descriptions.
 
 <figure><img src=".gitbook/assets/docs-readme-5.png" alt=""><figcaption></figcaption></figure>
 
-* **AI Mini-Programs**: Integrates various free web-based AI tools, allowing direct use without switching browsers.
-* **Translation Function**: Supports dedicated translation panels, dialogue translation, prompt translation, and other translation scenarios.
-* **File Management**: Unified and categorized management of files from dialogues, art generation, and knowledge bases, avoiding tedious searching.
+*   **AI Mini-programs**: Integrates various free web-based AI tools, allowing direct use without switching browsers.
+*   **Translation Function**: Supports a dedicated translation panel, in-conversation translation, prompt translation, and other translation scenarios.
+*   **File Management**: Files from conversations, paintings, and knowledge bases are managed in a unified and classified manner, avoiding tedious searches.
 
 <figure><img src=".gitbook/assets/docs-readme-6.png" alt=""><figcaption></figcaption></figure>
 
-* **Global Search**: Supports quickly locating historical records and knowledge base content, improving work efficiency.
+*   **Global Search**: Supports quick location of historical records and knowledge base content, improving work efficiency.
 
 <figure><img src=".gitbook/assets/docs-readme-7.png" alt=""><figcaption></figcaption></figure>
 
-### **3. Unified Management Mechanism for Multiple Service Providers**
+#### **3. Unified Management for Multiple Service Providers**
 
-* **Service Provider Model Aggregation**: Supports unified calling of models from mainstream service providers such as OpenAI, Gemini, Anthropic, Azure, etc.
-* **Automatic Model Acquisition**: One-click acquisition of the complete model list, eliminating the need for manual configuration.
-* **Multi-Key Rotation**: Supports the use of multiple API keys in rotation to avoid rate limit issues.
-* **Precise Avatar Matching**: Automatically matches exclusive avatars for each model, enhancing recognition.
-* **Custom Service Providers**: Supports the接入 (jiē rù - integration/access) of third-party service providers that comply with OpenAI, Gemini, Anthropic, and other specifications, ensuring strong compatibility. _(Keeping "接入" as "integration/access" for technical accuracy, could also be "connecting to")_
+*   **Service Provider Model Aggregation**: Supports unified calling of models from major service providers like OpenAI, Gemini, Anthropic, and Azure.
+*   **Automatic Model Fetching**: One-click to get a complete list of models without manual configuration.
+*   **Multi-key Polling**: Supports rotating multiple API keys to avoid rate limit issues.
+*   **Precise Avatar Matching**: Automatically matches each model with an exclusive avatar for better recognition.
+*   **Custom Service Providers**: Supports third-party service providers that comply with specifications like OpenAI, Gemini, and Anthropic, offering strong compatibility.
 
 <figure><img src=".gitbook/assets/docs-readme-8.png" alt=""><figcaption></figcaption></figure>
 
-### **4. Highly Customizable Interface and Layout**
+#### **4. Highly Customizable Interface and Layout**
 
-* **Custom CSS**: Supports global style customization to create an exclusive interface style.
-* **Custom Dialogue Layout**: Supports list or bubble style layouts, and customizable message styles (such as code snippet styles).
-* **Custom Avatars**: Supports setting personalized avatars for both the software and assistants.
-* **Custom Sidebar Menu**: Users can hide or sort sidebar functions according to their needs, optimizing the user experience.
+*   **Custom CSS**: Supports global style customization to create a unique interface style.
+*   **Custom Chat Layout**: Supports list or bubble style layouts and allows customization of message styles (e.g., code snippet styles).
+*   **Custom Avatars**: Supports setting personalized avatars for the software and assistants.
+*   **Custom Sidebar Menu**: Users can hide or reorder sidebar functions according to their needs to optimize the user experience.
 
 <figure><img src=".gitbook/assets/docs-readme-9.png" alt=""><figcaption></figcaption></figure>
 
-### **5. Local Knowledge Base System**
+#### **5. Local Knowledge Base System**
 
-* **Multiple Format Support**: Supports importing various file formats such as PDF, DOCX, PPTX, XLSX, TXT, MD, etc.
-* **Multiple Data Source Support**: Supports local files, URLs, sitemaps, and even manual input as knowledge base sources.
-* **Knowledge Base Export**: Supports exporting processed knowledge bases and sharing them with others.
-* **Search and Check Support**: After importing the knowledge base, users can perform real-time search tests to view processing results and segmentation effects.
+*   **Multiple Format Support**: Supports importing various file formats such as PDF, DOCX, PPTX, XLSX, TXT, and MD.
+*   **Multiple Data Source Support**: Supports local files, URLs, sitemaps, and even manually entered content as knowledge base sources.
+*   **Knowledge Base Export**: Supports exporting processed knowledge bases to share with others.
+*   **Search and Check Support**: After importing a knowledge base, users can perform real-time retrieval tests to check the processing results and segmentation effects.
 
 <figure><img src=".gitbook/assets/docs-readme-10.png" alt=""><figcaption></figcaption></figure>
 
-### **6. Featured Focus Functions**
+#### **6. Special Focus Features**
 
-* **Quick Q\&A**: Invoke a quick assistant in any scenario (such as WeChat, browser) to quickly obtain answers.
-* **Quick Translation**: Supports quickly translating words or text in other scenarios.
-* **Content Summarization**: Quickly summarize lengthy text content to improve information extraction efficiency.
-* **Explanation**: No need for complex prompts, one-click explanation of questions you don't understand.
+*   **Quick Q&A**: Summon a quick assistant in any context (e.g., WeChat, browser) to get answers quickly.
+*   **Quick Translation**: Supports quick translation of words or text from other contexts.
+*   **Content Summarization**: Quickly summarizes long text content to improve information extraction efficiency.
+*   **Explanation**: Explains complex issues with one click, without needing complicated prompts.
 
 <figure><img src=".gitbook/assets/docs-readme-11.png" alt=""><figcaption></figcaption></figure>
 
-### **7. Data Security**
+#### **7. Data Security**
 
-* **Multiple Backup Solutions**: Supports local backup, WebDAV backup, and scheduled backups to ensure data security.
-* **Data Security**: Supports full local usage scenarios, combined with local large models, to avoid data leakage risks.
-
-***
-
-## **Project Advantages**
-
-1. **Beginner-Friendly**: CherryStudio is committed to lowering the technical threshold, allowing users with no prior experience to get started quickly, so users can focus on work, study, or creation.
-2. **Comprehensive Documentation**: Provides detailed user documentation and troubleshooting manuals to help users quickly solve problems.
-3. **Continuous Iteration**: The project team actively responds to user feedback and continuously optimizes features to ensure the healthy development of the project.
-4. **Open Source & Extensibility**: Supports users to customize and extend through open-source code to meet personalized needs.
+*   **Multiple Backup Solutions**: Supports local backup, WebDAV backup, and scheduled backups to ensure data safety.
+*   **Data Security**: Supports fully local usage scenarios, combined with local large models, to avoid data leakage risks.
 
 ***
 
-## **Applicable Scenarios**
+### **Project Advantages**
 
-* **Knowledge Management and Query**: Quickly build and query exclusive knowledge bases through the local knowledge base function, suitable for research, education, and other fields.
-* **Multi-Model Dialogue and Creation**: Supports simultaneous dialogue with multiple models, helping users quickly obtain information or generate content.
-* **Translation and Office Automation**: Built-in translation assistant and file processing functions, suitable for users who need cross-language communication or document processing.
-* **AI Art Generation and Design**: Generate images through natural language descriptions, meeting creative design needs.
+1.  **Beginner-Friendly**: Cherry Studio is committed to lowering the technical barrier, allowing even users with no prior experience to get started quickly, focusing on their work, study, or creation.
+2.  **Comprehensive Documentation**: Provides detailed user manuals and FAQs to help users solve problems quickly.
+3.  **Continuous Iteration**: The project team actively responds to user feedback and continuously optimizes features to ensure the project's healthy development.
+4.  **Open Source and Extensibility**: Supports customization and extension through open-source code to meet personalized needs.
 
-## StarHistory
+***
 
-<figure><img src="https://urlscan.io/liveshot/?width=1300&#x26;height=620&#x26;url=https://cherrystarhistory.ocool.online/" alt=""><figcaption></figcaption></figure>
+### **Applicable Scenarios**
 
-## Follow Our Social Media Accounts
+*   **Knowledge Management and Query**: Quickly build and query exclusive knowledge bases using the local knowledge base feature, suitable for research, education, and other fields.
+*   **Multi-model Conversation and Creation**: Supports simultaneous conversation with multiple models, helping users quickly obtain information or generate content.
+*   **Translation and Office Automation**: Built-in translation assistants and file processing functions are suitable for users who need cross-lingual communication or document processing.
+*   **AI Painting and Design**: Generate images from natural language descriptions to meet creative design needs.
 
-<table data-view="cards"><thead><tr><th></th><th data-hidden></th><th data-hidden data-card-cover data-type="files"></th></tr></thead><tbody><tr><td><a href="https://www.xiaohongshu.com/user/profile/662b6853000000000b031d9a?xsec_token=YB_1nKvlH4r5hPYVVbbsNHF8Y6n6AKlm5-DaggPCtd2DQ%3D&#x26;xsec_source=app_share&#x26;xhsshare=CopyLink&#x26;appuid=662b6853000000000b031d9a&#x26;apptime=1738627324&#x26;share_id=ace5db41b5954fab8d98a2a7865a62bc&#x26;share_channel=copy_link">Rednote</a></td><td></td><td><a href=".gitbook/assets/1.png">1.png</a></td></tr><tr><td><a href="https://b23.tv/hIfGgDW">Bilibili</a></td><td></td><td><a href=".gitbook/assets/3.png">3.png</a></td></tr><tr><td><a href="https://weibo.com/u/7975656228">Weibo</a></td><td></td><td><a href=".gitbook/assets/2.png">2.png</a></td></tr><tr><td><a href="https://v.douyin.com/ifTpX4X7">Douyin</a></td><td></td><td><a href=".gitbook/assets/4.png">4.png</a></td></tr><tr><td><a href="https://x.com/CherryStudioAPP?t=DYR0ulaLur-bO4Us3bG79A&#x26;s=05">Twitter (X)</a></td><td></td><td><a href=".gitbook/assets/5.png">5.png</a></td></tr></tbody></table>
+### Star History
 
-[^1]: ![](.gitbook/assets/image.avif)
+![Star History](https://urlscan.io/liveshot/?width=1300\&height=620\&url=https://cherrystarhistory.ocool.online/)
+
+## Follow Our Social Accounts
+
+<table data-view="cards"><thead><tr><th></th><th data-hidden data-card-cover data-type="files"></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><a href="https://www.xiaohongshu.com/user/profile/662b6853000000000b031d9a?xsec_token=YB_1nKvlH4r5hPYVVbbsNHF8Y6n6AKlm5-DaggPCtd2DQ%3D&#x26;xsec_source=app_share&#x26;xhsshare=CopyLink&#x26;appuid=662b6853000000000b031d9a&#x26;apptime=1738627324&#x26;share_id=ace5db41b5954fab8d98a2a7865a62bc&#x26;share_channel=copy_link">Xiaohongshu</a></td><td><a href=".gitbook/assets/1.png">1.png</a></td><td><a href="https://www.xiaohongshu.com/user/profile/662b6853000000000b031d9a?xsec_token=YB_1nKvlH4r5hPYVVbbsNHF8Y6n6AKlm5-DaggPCtd2DQ%3D&#x26;xsec_source=app_share&#x26;xhsshare=CopyLink&#x26;appuid=662b6853000000000b031d9a&#x26;apptime=1738627324&#x26;share_id=ace5db41b5954fab8d98a2a7865a62bc&#x26;share_channel=copy_link">https://www.xiaohongshu.com/user/profile/662b6853000000000b031d9a?xsec_token=YB_1nKvlH4r5hPYVVbbsNHF8Y6n6AKlm5-DaggPCtd2DQ%3D&#x26;xsec_source=app_share&#x26;xhsshare=CopyLink&#x26;appuid=662b6853000000000b031d9a&#x26;apptime=1738627324&#x26;share_id=ace5db41b5954fab8d98a2a7865a62bc&#x26;share_channel=copy_link</a></td></tr><tr><td><a href="https://b23.tv/hIfGgDW">Bilibili</a></td><td><a href=".gitbook/assets/3.png">3.png</a></td><td><a href="https://b23.tv/hIfGgDW">https://b23.tv/hIfGgDW</a></td></tr><tr><td><a href="https://weibo.com/u/7975656228">Weibo</a></td><td><a href=".gitbook/assets/2.png">2.png</a></td><td><a href="https://weibo.com/u/7975656228">https://weibo.com/u/7975656228</a></td></tr><tr><td><a href="https://v.douyin.com/ifTpX4X7">Douyin</a></td><td><a href=".gitbook/assets/4.png">4.png</a></td><td><a href="https://v.douyin.com/ifTpX4X7">https://v.douyin.com/ifTpX4X7</a></td></tr><tr><td><a href="https://x.com/CherryStudioAPP?t=DYR0ulaLur-bO4Us3bG79A&#x26;s=05">Twitter(X)</a></td><td><a href=".gitbook/assets/5.png">5.png</a></td><td><a href="https://x.com/CherryStudioAPP?t=DYR0ulaLur-bO4Us3bG79A&#x26;s=05">https://x.com/CherryStudioAPP?t=DYR0ulaLur-bO4Us3bG79A&#x26;s=05</a></td></tr></tbody></table>
+
+[^1]: <img src=".gitbook/assets/微信群二维码.png" alt="" data-size="original">

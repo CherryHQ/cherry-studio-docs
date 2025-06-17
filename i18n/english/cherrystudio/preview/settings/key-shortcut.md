@@ -2,6 +2,10 @@
 icon: keyboard
 ---
 
-# Shortcut Settings
+{% hint style="warning" %}
+This document was translated from Chinese by AI and has not yet been reviewed.
+{% endhint %}
 
-On this page, you can enable/disable and configure keyboard shortcuts for various functions. Please follow the instructions on the interface to set them up.
+# Shortcut Key Settings
+
+On this interface, you can enable (or disable) and set shortcut keys for some functions. Please follow the instructions on the interface for setup.

@@ -1,30 +1,23 @@
 ---
-icon: square-check
-layout:
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
+icon: list-check
 ---
 
-# Planning
+{% hint style="warning" %}
+This document was translated from Chinese by AI and has not yet been reviewed.
+{% endhint %}
 
-## Todo List
+# Project Plan
 
-* [x] Quick Pop-up Window (Read clipboard, quick question, explain, translate, summarize)
-* [x] Multi-model Answer Comparison
-* [x] Support Login using SSO provided by service providers
-* [ ] Support Network Access for All Models (Under development...)
-* [ ] Release the First Official Version
-* [ ] Plugin Functionality (JavaScript)
-* [ ] Browser Extension (Highlight and Translate, Summarize, Add to Knowledge Base)
-* [ ] iOS & Android Clients
-* [ ] AI Notes
-* [ ] Voice Input and Output (AI Call)
-* [ ] Data Backup Supports Customizing Backup Content
+## To-Do List
+
+*   [x] Quick Popup (read clipboard, quick question, explain, translate, summarize)
+*   [x] Multi-model response comparison
+*   [x] Support logging in with SSO provided by service providers
+*   [x] All models support internet connectivity
+*   [x] Release the first official version
+*   [ ] Plugin functionality (JavaScript)
+*   [ ] Browser extension (select text to translate, summarize, add to knowledge base)
+*   [ ] iOS & Android clients
+*   [ ] AI Notes
+*   [ ] Voice input/output (AI calls)
+*   [ ] Data backup supports custom content backup

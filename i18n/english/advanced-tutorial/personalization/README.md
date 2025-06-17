@@ -1,6 +1,0 @@
----
-icon: pen-swirl
----
-
-# Personalization
-

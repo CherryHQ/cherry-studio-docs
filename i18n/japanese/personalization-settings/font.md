@@ -1,0 +1,11 @@
+---
+icon: book-font
+---
+
+{% hint style="warning" %}
+このドキュメントはAIによって中国語から翻訳されており、まだレビューされていません。
+{% endhint %}
+
+# おすすめフォント
+
+<table data-column-title-hidden data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-type="content-ref"></th><th data-hidden data-type="content-ref"></th><th data-hidden data-type="files"></th><th data-hidden data-card-target data-type="content-ref"></th><th data-hidden data-card-cover data-type="files"></th><th data-hidden data-type="files"></th><th data-hidden><select></select></th><th data-hidden data-type="rating" data-max="5"></th><th data-hidden data-type="files"></th><th data-hidden data-type="rating" data-max="5"></th><th data-hidden data-type="content-ref"></th><th data-hidden data-type="files"></th><th data-hidden data-type="users" data-multiple></th><th data-hidden><select></select></th><th data-hidden data-type="users" data-multiple></th><th data-hidden data-type="checkbox"></th></tr></thead><tbody><tr><td><p><mark style="color:blue;"><strong>Monaspace</strong></mark></p><p><code>英語フォント</code> <code>商用可能</code></p></td><td>GitHub はオープンソースのフォントファミリー Monaspace をリリースしました。5つのスタイルを提供：Neon（現代風）、Argon（人文風）、Xenon（セリフ風）、Radon（手書き風）、Krypton（機械風）。</td><td></td><td></td><td></td><td></td><td><a href="https://github.com/githubnext/monaspace">https://github.com/githubnext/monaspace</a></td><td><a href="../../.gitbook/assets/5ad38bb33425c9c4992e8a89bb9c45d.png">5ad38bb33425c9c4992e8a89bb9c45d.png</a></td><td></td><td></td><td>null</td><td></td><td>4</td><td></td><td></td><td></td><td></td><td></td><td>false</td></tr><tr><td><p><mark style="color:blue;"><strong>MiSans Global</strong></mark></p><p><code>多言語</code> <code>商用可能</code></p></td><td><p>MiSans Global はXiaomiが主導し、モナタイプ・フォントと漢儀字庫（Hanyi）と共同開発したグローバル言語フォントプロジェクト。</p><p>20以上の書記体系をカバーし、600以上の言語をサポートする大規模なフォントファミリー。</p></td><td></td><td></td><td></td><td></td><td><a href="https://hyperos.mi.com/font/zh/">https://hyperos.mi.com/font/zh/</a></td><td><a href="../../.gitbook/assets/b42878132e2124d96ad6296af6d1d8e.png">b42878132e2124d96ad6296af6d1d8e.png</a></td><td></td><td></td><td>null</td><td></td><td>null</td><td></td><td></td><td></td><td></td><td></td><td>false</td></tr></tbody></table>

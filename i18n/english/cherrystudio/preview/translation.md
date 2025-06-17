@@ -2,54 +2,57 @@
 icon: language
 ---
 
+{% hint style="warning" %}
+This document was translated from Chinese by AI and has not yet been reviewed.
+{% endhint %}
+
 # Translation
 
-Cherry Studio's **Translation** feature provides you with fast and accurate text translation services, supporting mutual translation between multiple languages.
+Cherry Studio's translation feature provides you with fast and accurate text translation services, supporting mutual translation between multiple languages.
 
 ### Interface Overview
 
+<figure><img src="../../.gitbook/assets/翻译.png" alt=""><figcaption></figcaption></figure>
+
 The translation interface mainly consists of the following parts:
 
-1. **Source Language Selection Area:**
-   * Automatic Detection: Cherry Studio will automatically detect the source language and perform the translation.
-2. **Target Language Selection Area:**
-   * Drop-down Menu: Select the language you want to translate the text into.
-3. **Configuration Button**
-   * Allows you to set the default model for translation.
-4. **Text Input Box (Left):**
-   * Enter or paste the text you need to translate.
-5. **Translation Result Box (Right):**
-   * Displays the translated text.
-   * Copy Button: Click the button to copy the translation result to the clipboard.
-6. **Translate Button:**
-   * Click this button to start translation.
+1.  **Source Language Selection Area**:
+    *   Any Language: Cherry Studio will automatically detect the source language and translate it.
+2.  **Target Language Selection Area**:
+    *   Dropdown Menu: Select the language you want to translate the text into.
+3.  **Settings Button**:
+    *   Clicking it will take you to the [Default Model Settings](settings/default-models.md).
+4.  **Scroll Sync**:
+    *   Click to toggle scroll sync (scrolling on one side will also scroll the other side).
+5.  **Text Input Box (Left)**:
+    *   Enter or paste the text you need to translate.
+6.  **Translation Result Box (Right)**:
+    *   Displays the translated text.
+    *   Copy Button: Click the button to copy the translation result to the clipboard.
+7.  **Translate Button**:
+    *   Click this button to start the translation.
+8.  **Translation History (Top Left)**:
+    *   Click to view the translation history.
 
-### Usage Steps
+### How to Use
 
-1. **Select Languages:**
-   * In the Source Language Selection Area (1), select the original language (or choose "Automatic Detection").
-   * In the Target Language Selection Area (2), select the language you want to translate to.
-2. **Enter Text:**
-   * Enter or paste the text you want to translate in the text input box (4) on the left.
-3. **Start Translation:**
-   * Click the "Translate" button (6).
-4. **View and Copy Results:**
-   * The translation result will be displayed in the Translation Result Box (5) on the right.
-   * Click the copy button to copy the translation result to the clipboard.
-
-### Advanced Features & Tips
-
-* **Automatic Detection:** Make full use of the "Automatic Detection" feature to avoid the hassle of manually selecting the source language.
-* **Long Text Translation:** Cherry Studio's translation function supports long text translation. If the text is too long, you may need to wait a moment.
-* **Settings:** You can select a model for the translation function via the settings button.
+1.  **Select the Target Language**:
+    *   In the target language selection area, choose the language you want to translate into.
+2.  **Enter or Paste Text**:
+    *   Enter or paste the text you want to translate into the text input box on the left.
+3.  **Start Translation**:
+    *   Click the `Translate` button.
+4.  **View and Copy the Result**:
+    *   The translation result will be displayed in the result box on the right.
+    *   Click the copy button to copy the translation result to the clipboard.
 
 ### Frequently Asked Questions (FAQ)
 
-* **Q: What if the translation is inaccurate?**
-  * A: Although AI translation is powerful, it is not perfect. For texts in professional fields or complex contexts, manual proofreading is recommended. You can also try switching to different models.
-* **Q: Which languages are supported?**
-  * A: Cherry Studio's translation function supports multiple mainstream languages. For a list of supported languages, please refer to the official Cherry Studio website or the in-app instructions.
-* **Q: Can I translate an entire file?**
-  * A: The current interface is mainly for text translation. For file translation, you may need to go to the chat page of Cherry Studio and add the file for translation.
-* **Q: What if the translation speed is slow?**
-  * A: Translation speed may be affected by factors such as network connection, text length, and server load. Please ensure your network connection is stable and wait patiently.
+*   **Q: What should I do if the translation is inaccurate?**
+    *   A: While AI translation is powerful, it is not perfect. For professional fields or texts with complex context, manual proofreading is recommended. You can also try switching to different models.
+*   **Q: Which languages are supported?**
+    *   A: The Cherry Studio translation feature supports various major languages. For a specific list of supported languages, please refer to the official Cherry Studio website or in-app instructions.
+*   **Q: Can I translate an entire file?**
+    *   A: The current interface is primarily for text translation. For file translation, you may need to go to the Cherry Studio chat page and add the file to translate it.
+*   **Q: What if the translation speed is slow?**
+    *   A: Translation speed can be affected by factors such as network connection, text length, and server load. Please ensure your network connection is stable and wait patiently.

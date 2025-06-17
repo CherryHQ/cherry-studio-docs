@@ -1,13 +1,19 @@
 ---
-icon: image-landscape
+icon: image
 ---
 
-# Drawing
-
-The drawing feature currently only supports drawing models from Silicon Flow. You can register an account at [Silicon Flow](https://www.siliconflow.cn/) and add it to Providers to use this feature.
-
-{% hint style="info" %}
-More providers will be added in the future, so stay tuned.
+{% hint style="warning" %}
+This document was translated from Chinese by AI and has not yet been reviewed.
 {% endhint %}
 
-If you have questions about the parameters, you can hover your mouse over the `?` icon in the corresponding area to view the description.
+# Painting
+
+The painting feature currently only supports the painting models from SiliconFlow. You can go to [SiliconFlow](https://www.siliconflow.cn/) to register an account and [add it to the providers](settings/providers.md) to use it.
+
+For questions about the parameters, you can hover over the `?` in the corresponding area to see the description.
+
+{% hint style="info" %}
+More service providers will be added in the future. Please stay tuned.
+{% endhint %}
+
+{% include "../../.gitbook/includes/Gemini图片生成注意事项.md" %}
