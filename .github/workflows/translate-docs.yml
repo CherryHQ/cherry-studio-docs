@@ -43,10 +43,6 @@ jobs:
         id: run-translation # 添加 id 以便引用输出
         run: python .github/scripts/translate_docs.py ${{ matrix.lang_code }}
 
-      - name: ls
-        run: |
-          ls -alR i18n/
-
       - name: Upload translated docs artifact
         uses: actions/upload-artifact@v4
         with:
@@ -91,10 +87,6 @@ jobs:
         with:
           pattern: translation-status-* # 使用 pattern 参数下载所有匹配的 artifact
           path: translation_status_output/ # 下载到临时目录
-
-      - name: ls
-        run: |
-          ls -alR i18n/
 
       - name: Summarize translation results
         run: |
