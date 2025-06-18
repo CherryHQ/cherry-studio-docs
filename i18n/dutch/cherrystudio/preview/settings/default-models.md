@@ -8,13 +8,15 @@ Dit document is door AI vertaald vanuit het Chinees en is nog niet beoordeeld.
 
 # Standaard modelinstellingen
 
-## Standaard assistentmodel  
-Wanneer een assistent geen standaard model heeft ingesteld, wordt voor nieuwe gesprekken standaard het hier ingestelde model geselecteerd.  
+## Standaard assistentmodel
+Wanneer de assistent geen standaard model heeft ingesteld, is het model dat standaard wordt geselecteerd in nieuwe conversaties het hier ingestelde model.  
+Het model dat wordt gebruikt voor het optimaliseren van prompts en de selectie-assistent is ook het hier ingestelde model.
 
-Bij het aanmaken van een nieuwe assistent wordt het model voor het optimaliseren van prompts en het model voor snelstart-assistenten eveneens gebaseerd op de hier ingestelde waarde.
+## Onderwerp naamgevingsmodel
+Na elke conversatie wordt een model aangeroepen om een onderwerpnaam voor de conversatie te genereren. Het hier ingestelde model is het model dat voor de naamgeving wordt gebruikt.
 
-## Model voor conversatietitels  
-Na elk gesprek wordt een model aangeroepen om automatisch een titel voor de conversatie te genereren. Het hier ingestelde model wordt gebruikt voor deze titelgeneratie.
+## Vertaalmodel
+Het vertaalmodel dat wordt gebruikt voor de vertaalfunctie in gespreks-, teken- en andere invoervelden, evenals het vertaalinterface, is het hier ingestelde model.
 
-## Vertaalmodel  
-De vertaalfunctie in gespreks- en tekeninvoervelden, evenals het vertaalmodel in de vertaalinterface, maken gebruik van het hier ingestelde model.
+## Snelkoppeling assistentmodel
+Het model dat wordt gebruikt voor de snelkoppeling assistentfunctie. Zie voor details [Snelkoppeling assistent](../kuai-jie-zhu-shou.md)

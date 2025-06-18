@@ -6,18 +6,22 @@ icon: robot
 Este documento foi traduzido do chinês por IA e ainda não foi revisado.
 {% endhint %}
 
-# Configurações Padrão do Modelo
+# Configurações Padrão de Modelo
 
 ## Modelo Padrão do Assistente
 
-Quando um assistente não possui um modelo padrão configurado, o modelo selecionado por padrão em novas conversas será o modelo definido aqui.
+Quando um assistente não possui um modelo padrão configurado, o modelo selecionado por padrão em novos diálogos será o definido aqui.
 
-Ao criar um novo assistente, o modelo usado para otimizar prompts e o usado pelos assistentes rápidos também será o modelo configurado nesta seção.
+O modelo definido aqui também é usado para otimização de prompts e pelo assistente de seleção de texto.
 
-## Modelo de Nomeação de Tópicos
+## Modelo de Nomenclatura de Tópicos
 
-Após cada conversa, um modelo será chamado para gerar um nome para o tópico da conversa. O modelo configurado aqui será utilizado durante esse processo de nomeação.
+Após cada diálogo, um modelo é chamado para gerar um nome para o tópico da conversa. O modelo configurado aqui é usado para essa nomeação.
 
 ## Modelo de Tradução
 
-As funcionalidades de tradução em campos de entrada de conversas, pintura etc., bem como o modelo de tradução na interface de tradução, utilizam o modelo configurado nesta seção.
+As funções de tradução nas caixas de entrada de diálogo, pintura e outros recursos, bem como o modelo de tradução na interface de tradução, utilizam o modelo configurado aqui.
+
+## Modelo do Assistente Rápido
+
+Modelo usado pela funcionalidade Assistente Rápido. Para mais detalhes, consulte [Assistente Rápido](../kuai-jie-zhu-shou.md)

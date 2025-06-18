@@ -10,14 +10,17 @@ Ce document a été traducido del chino por IA y aún no ha sido revisado.
 
 ## Modèle d'assistant par défaut
 
-Lorsqu'un assistant n'a pas de modèle d'assistant par défaut configuré, le modèle sélectionné par défaut pour ses nouvelles conversations est celui défini ici.
+Lorsque l'assistant ne dispose pas d'un modèle par défaut configuré, le modèle sélectionné par défaut pour ses nouvelles conversations est celui défini ici.  
+L'optimisation des invites et l'assistant de sélection de texte utilisent également ce modèle configuré ici.
 
-Lors de la création d'un nouvel assistant, le modèle utilisé pour optimiser les invites et celui utilisé par les assistants rapides est également celui défini ici.
+## Modèle de dénomination des conversations
 
-## Modèle de dénomination des sujets
-
-Après chaque conversation, un modèle est appelé pour générer un nom de sujet pour la conversation. Le modèle défini ici est celui utilisé pour cette dénomination.
+Après chaque conversation, un modèle est appelé pour générer un nom de sujet pour la discussion. Le modèle défini ici est celui utilisé pour cette attribution de nom.
 
 ## Modèle de traduction
 
-La fonction de traduction dans les zones de saisie de conversation, de dessin, etc., ainsi que le modèle de traduction de l'interface de traduction utilisent tous le modèle défini ici.
+La fonction de traduction dans les zones de saisie (conversation, dessin, etc.) ainsi que le modèle de traduction de l'interface de traduction utilisent tous le modèle configuré ici.
+
+## Modèle d'assistant rapide
+
+Modèle utilisé par la fonctionnalité d'assistant rapide. Pour plus de détails, consultez [Assistant rapide](../kuai-jie-zhu-shou.md)

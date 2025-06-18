@@ -10,14 +10,18 @@ This document was translated from Chinese by AI and has not yet been reviewed.
 
 ## Default Assistant Model
 
-When an assistant has not set a default assistant model, the model selected by default in its new conversations is the model set here.
+When an assistant does not have a default assistant model set, the model selected by default in a new conversation will be the one set here.
 
-When creating a new assistant, the model used for prompt optimization and by quick assistants is also the model set here.
+The model set here is also used for optimizing prompts and the pop-up text assistant.
 
 ## Topic Naming Model
 
-After each conversation, a model is called to generate a topic name for the conversation. The model set here is the one used for the naming process.
+After each conversation, a model is called to generate a topic name for the conversation. The model set here is the one used for naming.
 
 ## Translation Model
 
-The translation function in input boxes for conversations, painting, etc., and the translation model on the translation interface all use the model set here.
+The translation function in input boxes for conversations, drawing, etc., and the translation model on the translation interface all use the model set here.
+
+## Quick Assistant Model
+
+The model used by the quick assistant feature. For details, see [Quick Assistant](../kuai-jie-zhu-shou.md)

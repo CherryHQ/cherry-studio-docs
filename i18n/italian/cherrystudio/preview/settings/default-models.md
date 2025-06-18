@@ -6,20 +6,22 @@ icon: robot
 Questo documento è stato tradotto dal cinese tramite IA e non è ancora stato revisionato.
 {% endhint %}
 
-# Impostazioni predefinite del modello
+# Impostazioni Predefinite del Modello
 
-## Modello assistente predefinito
+## Modello Assistente Predefinito
 
-Quando un assistente non ha impostato un modello predefinito, il modello selezionato per impostazione predefinita nelle nuove conversazioni sarà quello configurato qui.
+Quando un assistente non ha un modello predefinito configurato, il modello selezionato per impostazione predefinita nelle nuove conversazioni sarà quello impostato qui.
 
-Quando si crea un nuovo assistente, il modello utilizzato per ottimizzare i prompt e per le funzionalità rapide sarà anch'esso quello configurato qui.
+Anche l'ottimizzazione delle istruzioni e l'assistente di selezione del testo utilizzano il modello impostato qui.
 
-## Modello di denominazione degli argomenti
+## Modello per la Denominazione degli Argomenti
 
-Dopo ogni conversazione, viene chiamato un modello per generare un nome per l'argomento della discussione. Il modello configurato qui è quello utilizzato per questa funzione di denominazione.
+Dopo ogni conversazione, viene chiamato un modello per generare un nome per l'argomento della conversazione. Il modello impostato qui è quello utilizzato per questa denominazione.
 
-## Modello di traduzione
+## Modello di Traduzione
 
-Il modello impostato qui viene utilizzato per:
-- La funzionalità di traduzione nelle caselle di input delle conversazioni, disegno AI, ecc.
-- Il modello di traduzione nell'interfaccia di traduzione dedicata.
+La funzione di traduzione nelle caselle di input per conversazioni, disegno, ecc., e il modello di traduzione nell'interfaccia di traduzione utilizzano tutti il modello impostato qui.
+
+## Modello per l'Assistente Rapido
+
+Il modello utilizzato per la funzionalità dell'assistente rapido. Per maggiori dettagli, consultare [Assistente Rapido](../kuai-jie-zhu-shou.md)

@@ -6,18 +6,18 @@ icon: robot
 Ten dokument został przetłumaczony z chińskiego przez AI i nie został jeszcze zweryfikowany.
 {% endhint %}
 
-# Domyślne ustawienia modelu
+# Domyślne ustawienia modeli
 
-## Domyślny model asystenta
+## Domyślny model asystenta  
+Gdy asystent nie ma ustawionego domyślnego modelu, model domyślnie wybierany w nowych rozmowach jest tym ustawionym tutaj.
 
-Gdy asystent nie ma ustawionego domyślnego modelu asystenta, model domyślnie wybierany w nowych rozmowach to model ustawiony tutaj.
+Optymalizacja podpowiedzi i asystent zaznaczania tekstu również korzystają z modelu ustawionego tutaj.
 
-Podczas tworzenia nowego asystenta, model używany do optymalizacji podpowiedzi oraz model wykorzystywany przez szybkiego asystenta również są ustawione tutaj.
+## Model nazewnictwa tematów  
+Po każdej rozmowie wywoływany jest model w celu wygenerowania nazwy tematu konwersacji. Model ustawiony tutaj jest używany do tego nazewnictwa.
 
-## Model do nazywania tematów
+## Model tłumaczeń  
+Funkcja tłumaczenia w polach wprowadzania rozmów, malowania AI itp. oraz model tłumaczeniowy w interfejsie tłumaczenia korzystają z modelu ustawionego tutaj.
 
-Po każdej rozmowie model jest wywoływany w celu wygenerowania nazwy tematu rozmowy, a model ustawiony tutaj jest wykorzystywany podczas nazywania.
-
-## Model tłumaczenia
-
-Funkcja tłumaczenia w polach wprowadzania (takich jak rozmowa, malowanie itp.) oraz model tłumaczenia w interfejsie tłumaczenia wykorzystują model ustawiony tutaj.
+## Model szybkiego asystenta  
+Model używany przez funkcję szybkiego asystenta. Więcej szczegółów w [Szybki asystent](../kuai-jie-zhu-shou.md)
