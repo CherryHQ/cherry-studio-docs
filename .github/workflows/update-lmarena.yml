@@ -20,7 +20,7 @@ jobs:
       - name: Set up Python # 设置 Python 环境
         uses: actions/setup-python@v5
         with:
-          python-version: '3.12' # 将 Python 版本固定为 3.12
+          python-version: '3.13' # 将 Python 版本固定为 3.13
 
       - name: Install dependencies # 安装必要的 Python 库
         run: |
