@@ -8,37 +8,37 @@ Bu belge Çince'den yapay zeka tarafından çevrilmiştir ve henüz incelenmemi�
 
 # Vertex AI
 
-## Öğretici Genel Bakışı
+## Eğitim Genel Bakışı
 
-### 1. APIKey Alma
+### 1. API Anahtarını Alın
 
-* Gemini için API anahtarı almadan önce bir Google Cloud projenizin olması gerekir (zaten varsa bu adım atlanabilir)
-* [Google Cloud](https://console.cloud.google.com/projectcreate) adresine gidin, proje adınızı yazın ve "Proje oluştur"a tıklayın
+* Gemini API Anahtarını almadan önce bir Google Cloud projenizin olması gerekir (zaten varsa bu adım atlanabilir)
+* [Google Cloud](https://console.cloud.google.com/projectcreate) üzerinden proje oluşturun, proje adını girerek "Proje Oluştur"u tıklayın
 
 <figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
-* [Vertex AI kontrol paneli](https://console.cloud.google.com/vertex-ai)ne gidin
-* Oluşturduğunuz projede [Vertex AI API](ttps://console.cloud.google.com/apis/library/aiplatform.googleapis.com?inv=1\&invt=Ab0iBA) etkinleştirin
+* [Vertex AI kontrol paneline](https://console.cloud.google.com/vertex-ai) gidin
+* Oluşturduğunuz projede [Vertex AI API'yi etkinleştirin](https://console.cloud.google.com/apis/library/aiplatform.googleapis.com?inv=1\&invt=Ab0iBA)
 
 <figure><img src="../../.gitbook/assets/image (78).png" alt=""><figcaption></figcaption></figure>
 
-## 2. API Erişim İzinlerini Ayarlama
+## 2. API Erişim İzinlerini Yapılandırın
 
-* [Hizmet hesapları](https://console.cloud.google.com/iam-admin/serviceaccounts) izin sayfasını açın, yeni bir hizmet hesabı oluşturun
+* [Servis hesapları](https://console.cloud.google.com/iam-admin/serviceaccounts) sayfasına giderek servis hesabı oluşturun
 
 <figure><img src="../../.gitbook/assets/image (79).png" alt=""><figcaption></figcaption></figure>
 
-* Hizmet hesabı yönetim sayfasında yeni oluşturduğunuz hesabı bulun, `Anahtarlar` bölümüne girin ve JSON formatında yeni bir anahtar oluşturun
+* Servis hesap yönetim sayfasında yeni oluşturduğunuz hesabı bulun, `Anahtarlar` seçeneğine tıklayarak yeni bir JSON formatında anahtar oluşturun
 
 <figure><img src="../../.gitbook/assets/image (80).png" alt=""><figcaption></figcaption></figure>
 
-* Başarıyla oluşturulduğunda, anahtar dosyası JSON formatında bilgisayarınıza otomatik indirilecektir, lütfen **dikkatle saklayın**
+* Başarıyla oluşturulduktan sonra anahtar dosyası JSON formatında otomatik olarak bilgisayarınıza kaydedilecektir, lütfen **bu dosyayı güvenli şekilde saklayın**
 
-## 3. Vertex AI'yi Cherry Studio'da Yapılandırma
+## 3. Vertex AI'yi Cherry Studio'da Yapılandırın
 
-* Vertex AI sağlayıcısını seçin
+* Vertex AI servis sağlayıcısını seçin
 * JSON dosyasındaki ilgili alanları karşılık gelen yerlere girin
 
 <figure><img src="../../.gitbook/assets/image (81).png" alt=""><figcaption></figcaption></figure>
 
-[Model ekle](https://console.cloud.google.com/vertex-ai/model-garden) düğmesine tıklayın ve kullanmaya başlayın! 🎉
+[Model ekleyin](https://console.cloud.google.com/vertex-ai/model-garden) seçeneğine tıklayarak kullanmaya başlayabilirsiniz!

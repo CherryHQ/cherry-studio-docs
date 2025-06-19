@@ -8,31 +8,31 @@ description: 暂时不支持Claude模型
 
 # Vertex AI
 
-## Обзор инструкции
+## Обзор учебного руководства
 
-### 1. Получение APIKey
+### 1. Получение API-ключа
 
-* Перед получением api key для Gemini необходим проект Google Cloud (если у вас уже есть проект, этот шаг можно пропустить)
-* Перейдите в [Google Cloud](https://console.cloud.google.com/projectcreate), создайте проект, введите название проекта и нажмите "Создать проект"
+* Перед получением API-ключа Gemini вам необходимо иметь проект Google Cloud (если он уже есть, этот шаг можно пропустить)
+* Перейдите в [Google Cloud](https://console.cloud.google.com/projectcreate) для создания проекта, введите название проекта и нажмите "Создать проект"
 
 <figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
 * Перейдите в [консоль Vertex AI](https://console.cloud.google.com/vertex-ai)
-* В созданном проекте активируйте [Vertex AI API](https://console.cloud.google.com/apis/library/aiplatform.googleapis.com?inv=1\&invt=Ab0iBA)
+* В созданном проекте активируйте [Vertex AI API](ttps://console.cloud.google.com/apis/library/aiplatform.googleapis.com?inv=1\&invt=Ab0iBA)
 
 <figure><img src="../../.gitbook/assets/image (78).png" alt=""><figcaption></figcaption></figure>
 
-## 2. Настройка прав доступа API
+## 2. Настройка прав доступа к API
 
-* Откройте раздел [управления учётными записями сервисов](https://console.cloud.google.com/iam-admin/serviceaccounts) и создайте учётную запись сервиса
+* Откройте интерфейс управления правами [сервисного аккаунта](https://console.cloud.google.com/iam-admin/serviceaccounts) и создайте сервисный аккаунт
 
 <figure><img src="../../.gitbook/assets/image (79).png" alt=""><figcaption></figcaption></figure>
 
-* В разделе управления учётными записями найдите созданную учётную запись, нажмите `Ключи` и создайте новый ключ в формате JSON
+* На странице управления сервисными аккаунтами найдите созданный аккаунт, нажмите `Ключи` и создайте новый ключ в формате JSON
 
 <figure><img src="../../.gitbook/assets/image (80).png" alt=""><figcaption></figcaption></figure>
 
-* После успешного создания ключ автоматически сохранится на вашем компьютере в виде JSON-файла — **обязательно сохраните его**
+* После успешного создания файл ключа автоматически сохранится на вашем компьютере в формате JSON - **обязательно сохраните его в надежном месте**
 
 ## 3. Настройка Vertex AI в Cherry Studio
 

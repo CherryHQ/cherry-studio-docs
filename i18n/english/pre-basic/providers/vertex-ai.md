@@ -10,19 +10,19 @@ This document was translated from Chinese by AI and has not yet been reviewed.
 
 ## Tutorial Overview
 
-### 1. Obtain API Key
+### 1. Get API Key
 
-*   Before obtaining a Gemini API key, you need to have a Google Cloud project (you can skip this step if you already have one).
+*   Before getting a Gemini API Key, you need to have a Google Cloud project (you can skip this step if you already have one).
 *   Go to [Google Cloud](https://console.cloud.google.com/projectcreate) to create a project, fill in the project name, and click create.
 
 <figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
 *   Go to the [Vertex AI Console](https://console.cloud.google.com/vertex-ai).
-*   Enable the [Vertex AI API](https://console.cloud.google.com/apis/library/aiplatform.googleapis.com?inv=1&invt=Ab0iBA) in the created project.
+*   Enable the [Vertex AI API](https://console.cloud.google.com/apis/library/aiplatform.googleapis.com?inv=1\&invt=Ab0iBA) in the created project.
 
 <figure><img src="../../.gitbook/assets/image (78).png" alt=""><figcaption></figcaption></figure>
 
-## 2. Set Up API Access Permissions
+## 2. Set API Access Permissions
 
 *   Open the [Service Accounts](https://console.cloud.google.com/iam-admin/serviceaccounts) permissions page and create a service account.
 
@@ -41,4 +41,4 @@ This document was translated from Chinese by AI and has not yet been reviewed.
 
 <figure><img src="../../.gitbook/assets/image (81).png" alt=""><figcaption></figcaption></figure>
 
-Click to add a [model](https://console.cloud.google.com/vertex-ai/model-garden), and you can start using it
+Click to add a [model](https://console.cloud.google.com/vertex-ai/model-garden), and you can happily start using it

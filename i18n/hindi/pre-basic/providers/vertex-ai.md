@@ -10,35 +10,35 @@ description: 暂时不支持Claude模型
 
 ## ट्यूटोरियल अवलोकन
 
-### 1. APIKey प्राप्त करना
+### 1. API कुंजी प्राप्त करें
 
-* Gemini का API key प्राप्त करने से पहले, आपके पास एक Google Cloud प्रोजेक्ट होना आवश्यक है (यदि पहले से है तो छोड़ें)
-* प्रोजेक्ट बनाने के लिए [Google Cloud](https://console.cloud.google.com/projectcreate) पर जाएं, प्रोजेक्ट नाम भरें और "प्रोजेक्ट बनाएं" क्लिक करें
+* जेमिनी की API कुंजी प्राप्त करने से पहले, आपके पास एक Google Cloud प्रोजेक्ट होना चाहिए (यदि आपके पास पहले से है तो इस चरण को छोड़ सकते हैं)
+* [Google Cloud](https://console.cloud.google.com/projectcreate) पर जाएँ और प्रोजेक्ट बनाएँ, प्रोजेक्ट नाम भरें और "बनाएँ" पर क्लिक करें
 
 <figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
-* [Vertex AI कंसोल](https://console.cloud.google.com/vertex-ai) पर जाएं
-* बनाए गए प्रोजेक्ट में [Vertex AI API](ttps://console.cloud.google.com/apis/library/aiplatform.googleapis.com?inv=1\&invt=Ab0iBA) सक्षम करें
+* [Vertex AI कंसोल](https://console.cloud.google.com/vertex-ai) में जाएँ
+* निर्मित प्रोजेक्ट में [Vertex AI API](ttps://console.cloud.google.com/apis/library/aiplatform.googleapis.com?inv=1\&invt=Ab0iBA) सक्षम करें
 
 <figure><img src="../../.gitbook/assets/image (78).png" alt=""><figcaption></figcaption></figure>
 
-## 2. API एक्सेस अनुमतियाँ सेट करना
+## 2. API एक्सेस अनुमतियाँ सेट करें
 
-* [सर्विस अकाउंट](https://console.cloud.google.com/iam-admin/serviceaccounts) अनुमतियों वाले पेज पर जाकर नया सर्विस अकाउंट बनाएं
+* [सर्विस खाता](https://console.cloud.google.com/iam-admin/serviceaccounts) अनुमति इंटरफ़ेस खोलें और एक सर्विस खाता बनाएँ
 
 <figure><img src="../../.gitbook/assets/image (79).png" alt=""><figcaption></figcaption></figure>
 
-* सर्विस अकाउंट प्रबंधन पेज पर नए बनाए गए सर्विस अकाउंट में `कुंजी` पर क्लिक कर JSON फॉर्मेट में नई कुंजी बनाएं
+* सर्विस खाता प्रबंधन पृष्ठ पर अभी बनाया गया सर्विस खाता ढूँढें, `कुंजी` पर क्लिक करें और एक नई JSON प्रारूप की कुंजी बनाएँ
 
 <figure><img src="../../.gitbook/assets/image (80).png" alt=""><figcaption></figcaption></figure>
 
-* सफलतापूर्वक बनने पर कुंजी फाइल JSON फॉर्मेट में आपके कंप्यूटर पर स्वतः सेव हो जाएगी, कृपया **इसे सुरक्षित रखें**
+* सफलतापूर्वक बनाने के बाद, कुंजी फ़ाइल स्वचालित रूप से JSON फ़ाइल प्रारूप में आपके कंप्यूटर पर सहेजी जाएगी, कृपया **इसे सावधानी से सुरक्षित रखें**
 
-## 3. Cherry Studio में Vertex AI कॉन्फ़िगर करना
+## 3. Cherry Studio में Vertex AI कॉन्फ़िगर करें
 
-* Vertex AI प्रदाता चुनें
-* JSON फाइल के संबंधित फ़ील्ड भरें
+* Vertex AI सेवा प्रदाता चुनें
+* JSON फ़ाइल के संबंधित फ़ील्ड भरें
 
 <figure><img src="../../.gitbook/assets/image (81).png" alt=""><figcaption></figcaption></figure>
 
-[मॉडल](https://console.cloud.google.com/vertex-ai/model-garden) जोड़ने पर क्लिक करें, और फिर आप बढ़िया उपयोग शुरू कर सकते हैं!\
+[मॉडल](https://console.cloud.google.com/vertex-ai/model-garden) जोड़ने पर क्लिक करें, और आप खुशी-खुशी उपयोग शुरू कर सकते हैं!
