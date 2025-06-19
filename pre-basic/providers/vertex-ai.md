@@ -6,9 +6,9 @@ description: 暂时不支持Claude模型
 
 ## 教程概述
 
-### 1. 获取APIKey
+### 1. 获取API Key
 
-* 获取 Gemini 的 api key 前，你需要有一个 Google Cloud 项目（如果你已有，此过程可跳过）
+* 获取 Gemini 的 API Key 前，你需要有一个 Google Cloud 项目（如果你已有，此过程可跳过）
 * 进入 [Google Cloud](https://console.cloud.google.com/projectcreate) 创建项目，填写项目名称并点击创建项目
 
 <figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
