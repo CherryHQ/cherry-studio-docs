@@ -10,14 +10,35 @@ Este documento foi traduzido do chinês por IA e ainda não foi revisado.
 
 ## Visão Geral do Tutorial
 
-### 1. Obter a Chave da API
+### 1. Obter API Key
 
-* Antes de obter a chave da API do Gemini, você precisa ter um projeto no Google Cloud (se já tiver, esta etapa pode ser ignorada).
-* Acesse o [Google Cloud](https://console.cloud.google.com/projectcreate) para criar um projeto, preencha o nome do projeto e clique em "Criar projeto".
+* Antes de obter a chave de API do Gemini, você precisa ter um projeto no Google Cloud (se já tiver, este passo pode ser ignorado)
+* Acesse o [Google Cloud](https://console.cloud.google.com/projectcreate) para criar um projeto, preencha o nome do projeto e clique em "Criar projeto"
 
 <figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
-* Acesse o [Console Vertex AI](https://console.cloud.google.com/vertex-ai) 
-* Ative a API Vertex AI no projeto criado ([https://console.cloud.google.com/apis/library/aiplatform.googleapis.com?inv=1\&invt=Ab0iBA](https://console.cloud.google.com/apis/library/aiplatform.googleapis.com?inv=1\&invt=Ab0iBA))
+* Acesse o [Console Vertex AI](https://console.cloud.google.com/vertex-ai)
+* No projeto criado, ative a [API Vertex AI](ttps://console.cloud.google.com/apis/library/aiplatform.googleapis.com?inv=1\&invt=Ab0iBA)
 
 <figure><img src="../../.gitbook/assets/image (78).png" alt=""><figcaption></figcaption></figure>
+
+## 2. Configurar Permissões de Acesso à API
+
+* Abra a interface de permissões de [contas de serviço](https://console.cloud.google.com/iam-admin/serviceaccounts) e crie uma conta de serviço
+
+<figure><img src="../../.gitbook/assets/image (79).png" alt=""><figcaption></figcaption></figure>
+
+* Na página de gerenciamento de contas de serviço, localize a conta recém-criada, clique em `Chaves` e crie uma nova chave no formato JSON
+
+<figure><img src="../../.gitbook/assets/image (80).png" alt=""><figcaption></figcaption></figure>
+
+* Após a criação bem-sucedida, o arquivo de chave será salvo automaticamente no seu computador como arquivo JSON - **armazene-o com segurança**
+
+## 3. Configurar Vertex AI no Cherry Studio
+
+* Selecione o provedor Vertex AI
+* Preencha os campos correspondentes do arquivo JSON
+
+<figure><img src="../../.gitbook/assets/image (81).png" alt=""><figcaption></figcaption></figure>
+
+Clique em adicionar [modelo](https://console.cloud.google.com/vertex-ai/model-garden) e comece a usar!\)
