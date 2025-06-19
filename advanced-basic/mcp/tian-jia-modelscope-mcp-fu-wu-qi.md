@@ -10,19 +10,19 @@
 
 点击设置中的 MCP 服务器设置，选 `同步服务器`
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
 
 ### 发现 MCP 服务：
 
 选择 ModelScope，并浏览发现 MCP 服务
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (4).png" alt=""><figcaption></figcaption></figure>
 
 ### 查看 MCP 服务器详情
 
 注册登录 ModelScope，并查看 MCP 服务详情；
 
-<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (6).png" alt=""><figcaption></figcaption></figure>
 
 ### 连接服务器
 

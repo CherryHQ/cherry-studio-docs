@@ -44,6 +44,7 @@
   * [Ollama](pre-basic/providers/ollama.md)
   * [GitHub Copilot](pre-basic/providers/github-copilot.md)
   * [PPIO 派欧云](pre-basic/providers/ppio.md)
+  * [Vertex AI](pre-basic/providers/vertex-ai.md)
 
 ***
 
