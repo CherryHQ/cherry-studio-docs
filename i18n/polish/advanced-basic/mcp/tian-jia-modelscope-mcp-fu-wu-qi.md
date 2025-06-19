@@ -7,32 +7,37 @@ Ten dokument został przetłumaczony z chińskiego przez AI i nie został jeszcz
 
 > Serwer ModelScope MCP wymaga aktualizacji Cherry Studio do wersji v1.2.9 lub nowszej.
 
-W wersji v1.2.9 Cherry Studio nawiązało oficjalną współpracę z ModelScope MCP, co znacznie uprościło proces dodawania serwerów MCP, eliminując ryzyko błędów konfiguracyjnych i umożliwiając dostęp do ogromnej liczby serwerów MCP w społeczności ModelScope. Poniżej znajduje się instrukcja synchronizacji serwerów MCP ModelScope w Cherry Studio.
+W wersji v1.2.9 Cherry Studio nawiązało oficjalną współpracę z platformą ModelScope Moda, znacznie upraszczając proces dodawania serwerów MCP. Eliminuje to potencjalne błędy podczas konfiguracji i umożliwia odkrywanie ogromnej liczby serwerów MCP w społeczności ModelScope. Poniższe kroki pokazują, jak synchronizować serwery MCP ModelScope w Cherry Studio.
 
-## Kroki operacyjne
+## Kroki
 
 ### Punkt synchronizacji:
+
 Kliknij ustawienia serwerów MCP i wybierz `Synchronizuj serwery`
-
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
-
-### Odkrywanie usług MCP:
-Wybierz ModelScope i przeglądaj dostępne usługi MCP
-
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
-
-### Przegląd szczegółów serwera MCP
-Zarejestruj się/zaloguj w ModelScope i sprawdź szczegóły usługi MCP;
 
 <figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
 
-### Połączenie z serwerem
-W sekcji szczegółów usługi MCP wybierz "Połącz usługę";
+### Odkrywanie usług MCP:
+
+Wybierz ModelScope i przeglądaj dostępne usługi MCP
+
+<figure><img src="../../.gitbook/assets/image (1) (4).png" alt=""><figcaption></figcaption></figure>
+
+### Przeglądanie szczegółów serwera MCP
+
+Zaloguj się lub zarejestruj w ModelScope, a następnie sprawdź szczegóły usługi MCP;
+
+<figure><img src="../../.gitbook/assets/image (2) (6).png" alt=""><figcaption></figcaption></figure>
+
+### Podłączanie serwera
+
+W szczegółach usługi MCP wybierz połączenie z usługą;
 
 <figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
 
-### Uzyskanie i wklejenie tokena API
-Kliknij "Pobierz token API" w Cherry Studio, przejdź do strony ModelScope, skopiuj token API i wklej go w Cherry Studio.
+### Zgłaszanie i kopiowanie tokenu API
+
+Kliknij "Pobierz API" w Cherry Studio, przejdź do strony ModelScope, skopiuj token API i wklej go w Cherry Studio.
 
 <figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
 
@@ -41,15 +46,17 @@ Kliknij "Pobierz token API" w Cherry Studio, przejdź do strony ModelScope, skop
 <figure><img src="../../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
 
 ### Pomyślna synchronizacja
-Na liście serwerów MCP w Cherry Studio widoczne są połączone usługi ModelScope MCP gotowe do użytku w rozmowach.
+
+Na liście serwerów MCP w Cherry Studio zobaczysz usługi MCP połączone z ModelScope, które możesz wykorzystać w rozmowach.
 
 <figure><img src="../../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
 
-### Aktualizacje przyrostowe
-W przypadku nowych serwerów MCP dodanych przez stronę ModelScope w przyszłości, wystarczy kliknąć `Synchronizuj serwery`, aby dodać je przyrostowo.
+### Aktualizacja przyrostowa
+
+W przypadku nowo dodanych serwerów MCP w interfejsie ModelScope, kliknij `Synchronizuj serwery`, aby dodać je przyrostowo.
 
 <figure><img src="../../.gitbook/assets/image (148).png" alt=""><figcaption></figcaption></figure>
 
-Wykonanie powyższych kroków pozwala sprawnie synchronizować serwery MCP ModelScope w Cherry Studio. Proces konfiguracji jest znacząco uproszczony, eliminując ryzyko błędów przy ręcznej konfiguracji oraz zapewniając dostęp do bogatych zasobów serwerów MCP społeczności ModelScope.
+Dzięki powyższym krokom opanowałeś intuicyjną synchronizację serwerów MCP ModelScope w Cherry Studio. Proces ten został znacznie uproszczony, eliminując zawiłości i potencjalne błędy ręcznej konfiguracji, jednocześnie dając dostęp do ogromnych zasobów serwerów MCP społeczności ModelScope.
 
-Zacznij odkrywać i wykorzystywać potężne możliwości usług MCP, dodając nowy wymiar funkcjonalności do Twojego doświadczenia z Cherry Studio!
+Rozpocznij eksplorację i korzystanie z tych potężnych usług MCP, aby odkryć nowe możliwości i komfort w korzystaniu z Cherry Studio!

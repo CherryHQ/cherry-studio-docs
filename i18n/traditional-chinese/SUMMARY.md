@@ -8,16 +8,16 @@
 ## Cherry Studio
 
 * [專案簡介](README.md)
-* [用戶端下載](cherrystudio/download.md)
+* [客戶端下載](cherrystudio/download.md)
 * [專案規劃](cherrystudio/planning.md)
 * [功能介紹](cherrystudio/preview/README.md)
   * [對話介面](cherrystudio/preview/chat.md)
-  * [智慧代理](cherrystudio/preview/agents.md)
-  * [繪圖功能](cherrystudio/preview/drawing.md)
-  * [翻譯功能](cherrystudio/preview/translation.md)
-  * [小程式](cherrystudio/preview/app.md)
+  * [智能體](cherrystudio/preview/agents.md)
+  * [繪畫](cherrystudio/preview/drawing.md)
+  * [翻譯](cherrystudio/preview/translation.md)
+  * [小程序](cherrystudio/preview/app.md)
   * [知識庫](cherrystudio/preview/knowledge-base.md)
-  * [檔案管理](cherrystudio/preview/files.md)
+  * [檔案](cherrystudio/preview/files.md)
   * [快捷助手](cherrystudio/preview/kuai-jie-zhu-shou.md)
   * [設定](cherrystudio/preview/settings/README.md)
     * [模型服務設定](cherrystudio/preview/settings/providers.md)
@@ -49,12 +49,13 @@
   * [Ollama](pre-basic/providers/ollama.md)
   * [GitHub Copilot](pre-basic/providers/github-copilot.md)
   * [PPIO 派歐雲](pre-basic/providers/ppio.md)
+  * [Vertex AI](pre-basic/providers/vertex-ai.md)
 
 ***
 
 * [聯網模式](websearch/README.md)
   * [免費聯網模式](websearch/mian-fei-lian-wang-mo-shi.md)
-  * [網路搜尋黑名單配置](websearch/blacklist.md)
+  * [網路搜索黑名單配置](websearch/blacklist.md)
   * [火山引擎接入聯網](websearch/volcengine.md)
   * [Tavily 聯網登入註冊教學](websearch/tavily.md)
   * [SearXNG 本地部署與配置](websearch/searxng.md)
@@ -83,7 +84,7 @@
   * [自動安裝 MCP](advanced-basic/mcp/auto-install.md)
   * [內建 MCP 配置](advanced-basic/mcp/in-memory.md)
   * [配置 Dify 知識庫](advanced-basic/mcp/dify.md)
-  * [添加 ModelScope MCP 伺服器](advanced-basic/mcp/tian-jia-modelscope-mcp-fu-wu-qi.md)
+  * [新增 ModelScope MCP 伺服器](advanced-basic/mcp/tian-jia-modelscope-mcp-fu-wu-qi.md)
   * [常見問題](advanced-basic/mcp/chang-jian-wen-ti.md)
 
 ## 專案貢獻 <a href="#contribution" id="contribution"></a>
@@ -102,11 +103,11 @@
 ## 聯絡我們 <a href="#contact-us" id="contact-us"></a>
 
 * [商務合作](contact-us/questions.md)
-  * [Cherry Studio 商用授權協議](contact-us/questions/cherrystudio-xu-ke-xie-yi.md)
+  * [Cherry Studio 商用許可協議](contact-us/questions/cherrystudio-xu-ke-xie-yi.md)
 
 ## 關於 <a href="#about" id="about"></a>
 
-* [隱私權協議](about/privacypolicy.md)
+* [隱私協議](about/privacypolicy.md)
 
 ## 其他內容 <a href="#other" id="other"></a>
 

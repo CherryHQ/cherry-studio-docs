@@ -5,39 +5,39 @@
 
 # إضافة خادم ModelScope MCP
 
-> يتطلب إضافة خادم ModelScope MCP ترقية Cherry Studio إلى الإصدار v1.2.9 أو أحدث.
+> يتطلب خادم ModelScope MCP تحديث Cherry Studio إلى الإصدار v1.2.9 أو أحدث.
 
-في الإصدار v1.2.9، أبرمت Cherry Studio شراكة رسمية مع ModelScope 魔搭، مما ساهم في تبسيط خطوات إضافة خادم MCP بشكل كبير وتجنب الأخطاء في عملية التهيئة، كما يمكنك اكتشاف عدد كبير من خوادم MCP في مجتمع ModelScope. اتبع الخطوات التالية لمعرفة كيفية مزامنة خادم MCP الخاص بـ ModelScope في Cherry Studio.
+في الإصدار v1.2.9، أبرمت Cherry Studio شراكة رسمية مع ModelScope (موضة)، مما أدى إلى تبسيط كبير في خطوات إضافة خادم MCP، وتجنب أخطاء التكوين، بالإضافة إلى إمكانية اكتشاف عدد هائل من خوادم MCP في مجتمع ModelScope. تابع الخطوات التالية لمعرفة كيفية مزامنة خوادم MCP الخاصة بـ ModelScope في Cherry Studio.
 
-## خطوات العملية
+## خطوات التنفيذ
 
 ### نقطة الدخول للمزامنة:
 
-انقر على إعدادات خادم MCP في الإعدادات، واختر `同步服务器`
-
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
-
-### اكتشاف خدمة MCP:
-
-اختر ModelScope، وتصفح لاكتشاف خدمات MCP
-
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
-
-### عرض تفاصيل خادم MCP
-
-سجل الدخول إلى ModelScope، وعرض تفاصيل خدمة MCP؛
+انقر على إعدادات خادم MCP، واختر `مزامنة الخوادم`
 
 <figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
 
-### الاتصال بالخادم
+### اكتشاف خدمة MCP:
 
-في تفاصيل خدمة MCP، اختر "اتصال بالخدمة"؛
+اختر ModelScope، واستعرض لاكتشاف خدمات MCP
+
+<figure><img src="../../.gitbook/assets/image (1) (4).png" alt=""><figcaption></figcaption></figure>
+
+### عرض تفاصيل خادم MCP
+
+سجّل الدخول إلى ModelScope، وعرض تفاصيل خدمة MCP؛
+
+<figure><img src="../../.gitbook/assets/image (2) (6).png" alt=""><figcaption></figcaption></figure>
+
+### توصيل الخادم
+
+في تفاصيل خدمة MCP، اختر "توصيل الخدمة"؛
 
 <figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
 
-### طلب ولصق رمز API
+### التقديم ونسخ لصق رمز API
 
-انقر على "الحصول على api" في Cherry Studio، انتقل إلى الموقع الرسمي لـ ModelScope، انسخ رمز API، ثم عُد إلى Cherry Studio والصقه.
+انقر على "الحصول على api" في Cherry Studio، انتقل إلى موقع ModelScope الرسمي، انسخ رمز API، ثم عد إلى Cherry Studio والصقه.
 
 <figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
 
@@ -45,18 +45,18 @@
 
 <figure><img src="../../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
 
-### مزامنة ناجحة
+### المزامنة الناجحة
 
-في قائمة خوادم MCP الخاصة بـ Cherry Studio، يمكنك رؤية خدمات MCP المتصلة بـ ModelScope واستدعائها في المحادثة.
+في قائمة خوادم MCP داخل Cherry Studio، يمكنك رؤية خادم MCP المتصل بـ ModelScale واستدعاؤه في المحادثات.
 
 <figure><img src="../../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
 
-### تحديث تدريجي
+### التحديث التدريجي
 
-بالنسبة لخوادم MCP الجديدة التي تتصل بها عبر صفحة ModelScope لاحقًا، ما عليك سوى النقر على `同步服务器` لإضافة خوادم MCP بشكل تدريجي.
+لخوادم MCP الجديدة المتصلة عبر صفحة ModelScale في المستقبل، انقر مباشرة على `مزامنة الخوادم` لإضافة خوادم MCP بشكل تدريجي.
 
 <figure><img src="../../.gitbook/assets/image (148).png" alt=""><figcaption></figcaption></figure>
 
-من خلال الخطوات المذكورة أعلاه، لقد تعلمت بنجاح كيفية مزامنة خوادم MCP من ModelScope في Cherry Studio بسهولة. هذه العملية ليست فقط أكثر تبسيطًا وتجنب التعقيدات والأخطاء المحتملة في التهيئة اليدوية، بل تتيح لك أيضًا الوصول بسهولة إلى الموارد الهائلة لخوادم MCP التي يوفرها مجتمع ModelScope.
+من خلال هذه الخطوات، أصبحت الآن قادرًا على مزامنة خوادم MCP من ModelScope في Cherry Studio بسهولة. لم يتم تبسيط عملية التكوين فحسب، بل تم تجنب التعقيدات والأخطاء المحتملة في التكوين اليدوي، مما يتيح لك الوصول بسهولة إلى الموارد الهائلة لخوادم MCP التي يوفرها مجتمع ModelScope.
 
-ابدأ في استكشاف واستخدام خدمات MCP القوية هذه، لتجلب المزيد من الراحة والإمكانيات إلى تجربة استخدامك لـ Cherry Studio!
+ابدأ في استكشاف واستخدام خدمات MCP القوية هذه، لتجلب المزيد من الراحة والإمكانيات لخبرتك في استخدام Cherry Studio!
