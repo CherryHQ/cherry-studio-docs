@@ -8,12 +8,12 @@ Dieses Dokument wurde von einer KI aus dem Chinesischen übersetzt und ist noch 
 
 # Zeichnen
 
-Die Zeichenfunktion unterstützt derzeit nur die Malerei-Modelle von Silicon Flow. Du kannst dich auf [Silicon Flow](https://www.siliconflow.cn/) registrieren, ein Konto erstellen und es [zu den Dienstleistern hinzufügen](settings/providers.md), um die Funktion nutzen zu können.
+Die Zeichenfunktion unterstützt derzeit Zeichenmodelle von DMXAPI, TokenFlux, AiHubMix und [SiliconFlow](../../pre-basic/providers/siliconcloud.md). Sie können auf [SiliconFlow](https://www.siliconflow.cn/) ein Konto registrieren und es [als Anbieter hinzufügen](settings/providers.md), um es zu nutzen.
 
-Bei Fragen zu Parametern kannst du mit der Maus über das `?` im entsprechenden Bereich fahren, um die Beschreibung anzuzeigen.
+Bei Fragen zu Parametern können Sie den Mauszeiger über das `?` im jeweiligen Bereich bewegen, um die Beschreibung anzuzeigen.
 
 {% hint style="info" %}
-In Zukunft werden weitere Dienstleister hinzugefügt, bleibt gespannt!
+Es werden in Zukunft weitere Anbieter hinzugefügt. Bleiben Sie gespannt!
 {% endhint %}
 
 {% include "../../.gitbook/includes/Gemini图片生成注意事项.md" %}

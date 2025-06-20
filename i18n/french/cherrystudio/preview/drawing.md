@@ -6,11 +6,11 @@ icon: image
 Ce document a été traducido del chino por IA y aún no ha sido revisado.
 {% endhint %}
 
-# Peinture
+# Dessin
 
-Actuellement, la fonctionnalité de peinture ne prend en charge que les modèles de peinture de SiliconFlow. Vous pouvez vous inscrire sur [SiliconFlow](https://www.siliconflow.cn/) pour créer un compte et l'[ajouter aux fournisseurs](settings/providers.md) pour l'utiliser.
+La fonction de dessin prend actuellement en charge les modèles de génération d'images de DMXAPI, TokenFlux, AiHubMix et [SiliconFlow](../../pre-basic/providers/siliconcloud.md). Vous pouvez créer un compte sur [SiliconFlow](https://www.siliconflow.cn/) et [l'ajouter comme fournisseur](settings/providers.md) pour l'utiliser.
 
-Pour toute question concernant les paramètres, placez votre souris sur le symbole `?` dans la zone correspondante pour consulter les explications.
+Pour toute question sur les paramètres, survolez avec votre souris l'icône `?` dans la zone correspondante pour voir les explications.
 
 {% hint style="info" %}
 D'autres fournisseurs seront ajoutés ultérieurement, restez à l'écoute.

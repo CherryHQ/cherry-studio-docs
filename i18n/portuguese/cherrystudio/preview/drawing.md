@@ -8,12 +8,12 @@ Este documento foi traduzido do chinês por IA e ainda não foi revisado.
 
 # Pintura
 
-Atualmente, o recurso de pintura suporta apenas os modelos de pintura da SiliconFlow. Você pode registrar uma conta em [SiliconFlow](https://www.siliconflow.cn/) e [adicioná-la como provedor](settings/providers.md) para usar.
+Atualmente, a funcionalidade de pintura suporta modelos de pintura do DMXAPI, TokenFlux, AiHubMix e [Silicon Flow](../../pre-basic/providers/siliconcloud.md). Você pode se registrar no [Silicon Flow](https://www.siliconflow.cn/), criar uma conta e [adicionar ao provedor de serviços](settings/providers.md) para usar.
 
-Para dúvidas sobre parâmetros, passe o mouse sobre o símbolo `?` na área correspondente para ver as instruções.
+Se houver dúvidas sobre os parâmetros, passe o mouse sobre o `?` na área correspondente para ver a descrição.
 
 {% hint style="info" %}
-Mais provedores serão adicionados posteriormente. Fique atento!
+Mais provedores de serviços serão adicionados no futuro. Fique atento.
 {% endhint %}
 
 {% include "../../.gitbook/includes/Gemini图片生成注意事项.md" %}

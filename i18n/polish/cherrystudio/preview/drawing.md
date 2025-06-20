@@ -6,14 +6,14 @@ icon: image
 Ten dokument został przetłumaczony z chińskiego przez AI i nie został jeszcze zweryfikowany.
 {% endhint %}
 
-# Rysowanie
+# Malowanie
 
-Funkcja rysowania obecnie obsługuje tylko modele graficzne SiliconFlow. Możesz zarejestrować konto na [SiliconFlow](https://www.siliconflow.cn/) i [dodać je jako dostawcę](settings/providers.md) w celu korzystania.
+Funkcja malowania obecnie obsługuje modele malowania od DMXAPI, TokenFlux, AiHubMix oraz [硅基流动](../../pre-basic/providers/siliconcloud.md). Możesz zarejestrować konto na [硅基流动](https://www.siliconflow.cn/) i [dodać do dostawców](settings/providers.md), aby z niego korzystać.
 
-W przypadku wątpliwości dotyczących parametrów, najedź myszką na symbol `?` w odpowiednim obszarze, aby zobaczyć opis.
+W przypadku wątpliwości dotyczących parametrów, najedź myszką na `?` w odpowiednim obszarze, aby zobaczyć opis.
 
 {% hint style="info" %}
-W przyszłości dodamy więcej dostawców. Bądźcie czujni!
+W przyszłości planujemy dodać więcej dostawców. Bądźcie czujni!
 {% endhint %}
 
 {% include "../../.gitbook/includes/Gemini图片生成注意事项.md" %}

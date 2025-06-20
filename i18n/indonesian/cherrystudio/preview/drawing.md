@@ -6,14 +6,14 @@ icon: image
 Dokumen ini diterjemahkan dari bahasa Mandarin oleh AI dan belum ditinjau.
 {% endhint %}
 
-# Drawing
+# Gambar
 
-Fungsi gambar saat ini hanya mendukung model gambar dari SiliconFlow. Anda dapat mendaftarkan akun di [SiliconFlow](https://www.siliconflow.cn/) lalu [tambahkan ke penyedia layanan](settings/providers.md) untuk mulai menggunakan.
+Fitur gambar saat ini mendukung model gambar dari DMXAPI, TokenFlux, AiHubMix, dan [SiliconFlow](../../pre-basic/providers/siliconcloud.md). Anda dapat mendaftar akun di [SiliconFlow](https://www.siliconflow.cn/) lalu [tambahkan ke penyedia layanan](settings/providers.md) untuk menggunakannya.
 
-Untuk pertanyaan terkait parameter, arahkan kursor ke ikon `?` di area terkait untuk melihat penjelasan.
+Untuk pertanyaan mengenai parameter, arahkan kursor ke ikon `?` di area terkait untuk melihat penjelasan.
 
 {% hint style="info" %}
-Akan ada lebih banyak penyedia layanan yang ditambahkan di kemudian hari, nantikan terus ya.
+Penyedia layanan tambahan akan segera ditambahkan di kemudian hari.
 {% endhint %}
 
 {% include "../../.gitbook/includes/Gemini图片生成注意事项.md" %}

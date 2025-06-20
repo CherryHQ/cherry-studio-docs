@@ -8,9 +8,9 @@ icon: image
 
 # 繪畫
 
-繪畫功能目前僅支援矽基流動的繪畫模型，你可以到 [矽基流動](https://www.siliconflow.cn/) 註冊一個帳戶 [新增到服務商](settings/providers.md) 來使用。
+繪畫功能目前支援 DMXAPI、TokenFlux、AiHubMix 與 [矽基流動](../../pre-basic/providers/siliconcloud.md) 的繪畫模型，你可以至 [矽基流動](https://www.siliconflow.cn/) 註冊帳戶並[新增至服務商](settings/providers.md)以使用此功能。
 
-有關參數的疑問可以滑鼠懸停在對應區域的 `?` 處查看介紹。
+有關參數的疑問，可將滑鼠懸停在對應區域的 `?` 圖示處查看說明。
 
 {% hint style="info" %}
 後續將會增加更多服務商，敬請期待。

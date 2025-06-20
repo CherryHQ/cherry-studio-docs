@@ -8,12 +8,12 @@ Questo documento è stato tradotto dal cinese tramite IA e non è ancora stato r
 
 # Disegno
 
-Attualmente, la funzione di disegno supporta solo i modelli di disegno di Silicon Flow. Puoi registrare un account su [Silicon Flow](https://www.siliconflow.cn/) e [aggiungerlo come provider](settings/providers.md) per utilizzarlo.
+La funzione di disegno attualmente supporta modelli da DMXAPI, TokenFlux, AiHubMix e [Silicon Flow](../../pre-basic/providers/siliconcloud.md). Puoi registrarti su [Silicon Flow](https://www.siliconflow.cn/) [aggiungerlo come provider](settings/providers.md) per utilizzarlo.
 
-Per dubbi sui parametri, passa il mouse sul `?` nell'area corrispondente per visualizzare le spiegazioni.
+Per dubbi sui parametri, posiziona il cursore sul simbolo `?` nelle aree corrispondenti per visualizzare le istruzioni.
 
 {% hint style="info" %}
-Aggiungeremo ulteriori provider in futuro, rimanete sintonizzati.
+Aggiungeremo ulteriori provider in futuro, rimani sintonizzato.
 {% endhint %}
 
 {% include "../../.gitbook/includes/Gemini图片生成注意事项.md" %}

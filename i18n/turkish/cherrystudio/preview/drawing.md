@@ -6,14 +6,14 @@ icon: image
 Bu belge Çince'den yapay zeka tarafından çevrilmiştir ve henüz incelenmemiştir.
 {% endhint %}
 
-# Boyama
+# Çizim
 
-Boyama özelliği şu anda yalnızca Silicon Flow'un boyama modelini desteklemektedir. Kullanmak için [Silicon Flow](https://www.siliconflow.cn/) adresine gidip bir hesap oluşturabilir ve [servis sağlayıcılara ekleyebilirsiniz](settings/providers.md).
+Çizim özelliği şu anda DMXAPI, TokenFlux, AiHubMix ve [SiliconFlow](../../pre-basic/providers/siliconcloud.md) çizim modellerini desteklemektedir. Kullanmak için [SiliconFlow](https://www.siliconflow.cn/) üzerinden bir hesap oluşturup [sağlayıcılar bölümüne ekleyebilirsiniz](settings/providers.md).
 
-Parametrelerle ilgili sorularınız için ilgili alandaki `?` üzerine gelerek açıklamayı görüntüleyebilirsiniz.
+Parametrelerle ilgili sorularınız için ilgili alandaki `?` işaretinin üzerine gelerek açıklamaları görüntüleyebilirsiniz.
 
 {% hint style="info" %}
-Daha fazla servis sağlayıcı yakında eklenecektir, lütfen bekleyiniz.
+İlerleyen dönemlerde daha fazla servis sağlayıcı eklenecektir, bekleyin.
 {% endhint %}
 
 {% include "../../.gitbook/includes/Gemini图片生成注意事项.md" %}
