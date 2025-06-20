@@ -9,44 +9,44 @@ icon: download
 # クライアントダウンロード
 
 {% hint style="info" %}
-最新安定版：v1.4.3
+現在の最新安定版：v1.4.4
 {% endhint %}
 
-## 直リンクダウンロード
+## 直接ダウンロード
 
 ### Windows 版
 
 {% hint style="warning" %}
-注意：Windows 7 システムは Cherry Studio のインストールをサポートしていません。
+注意：Windows 7 では Cherry Studio のインストールはサポートされていません。
 {% endhint %}
 
 #### インストーラー版（Setup）
 
 <details>
 
-<summary>x64版</summary>
+<summary>x64 版</summary>
 
-メイン回線：
+**メインリンク：**
 
-【[Cherry Studio公式サイト](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.3/Cherry-Studio-1.4.3-x64-setup.exe)】
+【[Cherry Studio 公式サイト](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.4/Cherry-Studio-1.4.4-x64-setup.exe)】
 
-代替回線：
+**代替リンク：**
 
-【[回線1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.3/Cherry-Studio-1.4.3-x64-setup.exe)】 【[回線2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.3/Cherry-Studio-1.4.3-x64-setup.exe)】 【[回線3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.3/Cherry-Studio-1.4.3-x64-setup.exe)】
+【[ライン1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.4/Cherry-Studio-1.4.4-x64-setup.exe)】 【[ライン2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.4/Cherry-Studio-1.4.4-x64-setup.exe)】 【[ライン3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.4/Cherry-Studio-1.4.4-x64-setup.exe)】
 
 </details>
 
 <details>
 
-<summary>ARM64版</summary>
+<summary>ARM64 版</summary>
 
-メイン回線：
+**メインリンク：**
 
-【[Cherry Studio公式サイト](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.3/Cherry-Studio-1.4.3-arm64-setup.exe)】
+【[Cherry Studio 公式サイト](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.4/Cherry-Studio-1.4.4-arm64-setup.exe)】
 
-代替回線：
+**代替リンク：**
 
-【[回線1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.3/Cherry-Studio-1.4.3-arm64-setup.exe)】 【[回線2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.3/Cherry-Studio-1.4.3-arm64-setup.exe)】 【[回線3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.3/Cherry-Studio-1.4.3-arm64-setup.exe)】
+【[ライン1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.4/Cherry-Studio-1.4.4-arm64-setup.exe)】 【[ライン2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.4/Cherry-Studio-1.4.4-arm64-setup.exe)】 【[ライン3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.4/Cherry-Studio-1.4.4-arm64-setup.exe)】
 
 </details>
 
@@ -54,29 +54,29 @@ icon: download
 
 <details>
 
-<summary>x64版</summary>
+<summary>x64 版</summary>
 
-メイン回線：
+**メインリンク：**
 
-【[Cherry Studio公式サイト](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.3/Cherry-Studio-1.4.3-x64-portable.exe)】
+【[Cherry Studio 公式サイト](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.4/Cherry-Studio-1.4.4-x64-portable.exe)】
 
-代替回線：
+**代替リンク：**
 
-【[回線1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.3/Cherry-Studio-1.4.3-x64-portable.exe)】 【[回線2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.3/Cherry-Studio-1.4.3-x64-portable.exe)】 【[回線3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.3/Cherry-Studio-1.4.3-x64-portable.exe)】
+【[ライン1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.4/Cherry-Studio-1.4.4-x64-portable.exe)】 【[ライン2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.4/Cherry-Studio-1.4.4-x64-portable.exe)】 【[ライン3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v极4.4/Cherry-Studio-1.4.4-x64-portable.exe)】
 
 </details>
 
 <details>
 
-<summary>ARM64版</summary>
+<summary>ARM64 版</summary>
 
-メイン回線：
+**メインリンク：**
 
-【[Cherry Studio公式サイト](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.3/Cherry-Studio-1.4.3-arm64-portable.exe)】
+【[Cherry Studio 公式サイト](https://cherry-ai.com/download)】 【[GitHub](https://github.com/C极rryHQ/cherry-studio/releases/download/v1.4.4/Cherry-Studio-1.4.4-arm64-portable.exe)】
 
-代替回線：
+**代替リンク：**
 
-【[回線1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.3/Cherry-Studio-1.4.3-arm64-portable.exe)】 【[回線2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.3/Cherry-Studio-1.4.3-arm64-portable.exe)】 【[回線3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.3/Cherry-Studio-1.4.3-arm64-portable.exe)】
+【[ライン1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.4/Cherry-Studio-1.4.4-arm64-portable.exe)】 【[ライン2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.4/Cherry-Studio-1.4.4-arm64-portable.exe)】 【[ライン3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.4/Cherry-Studio-1.4.4-arm64-portable.exe)】
 
 </details>
 
@@ -86,29 +86,29 @@ icon: download
 
 <details>
 
-<summary>Intelチップ版（x64）</summary>
+<summary>Intel チップ版（x64）</summary>
 
-メイン回線：
+**メインリンク：**
 
-【[Cherry Studio公式サイト](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.3/Cherry-Studio-1.4.3-x64.dmg)】
+【[Cherry Studio 公式サイト](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.4/Cherry-Studio-1.4.4-x64.dmg)】
 
-代替回線：
+**代替リンク：**
 
-【[回線1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.3/Cherry-Studio-1.4.3-x64.dmg)】 【[回線2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.3/Cherry-Studio-1.4.3-x64.dmg)】 【[回線3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.3/Cherry-Studio-1.4.3-x64.dmg)】
+【[ライン1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.4/Cherry-Studio-1.4.4-x64.dmg)】 【[ライン2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.4/Cherry-Studio-1.4.4-x64.dmg)】 【[ライン3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.4/Cherry-Studio-1.4.4-x64.dmg)】
 
 </details>
 
 <details>
 
-<summary>Apple Silicon版（ARM64，Mシリーズチップ）</summary>
+<summary>Apple Silicon 版（ARM64，Mシリーズチップ）</summary>
 
-メイン回線：
+**メインリンク：**
 
-【[Cherry Studio公式サイト](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.3/Cherry-Studio-1.4.3-arm64.dmg)】
+【[Cherry Studio 公式サイト](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.4/Cherry-Studio-1.4.4-arm64.dmg)】
 
-代替回線：
+**代替リンク：**
 
-【[回線1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.3/Cherry-Studio-1.4.3-arm64.dmg)】 【[回線2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.3/Cherry-Studio-1.4.3-arm64.dmg)】 【[回線3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.3/Cherry-Studio-1.4.3-arm64.dmg)】
+【[ライン1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.4/Cherry-Studio-1.4.4-arm64.dmg)】 【[ライン2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.4/Cherry-Studio-1.4.4-arm64.dmg)】 【[ライン3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.4/Cherry-Studio-1.4.4-arm64.dmg)】
 
 </details>
 
@@ -118,34 +118,34 @@ icon: download
 
 <details>
 
-<summary>x86_64版</summary>
+<summary>x86_64 版</summary>
 
-メイン回線：
+**メインリンク：**
 
-【[Cherry Studio公式サイト](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.3/Cherry-Studio-1.4.3-x86_64.AppImage)】
+【[Cherry Studio 公式サイト](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.4/Cherry-Studio-1.4.4-x86_64.AppImage)】
 
-代替回線：
+**代替リンク：**
 
-【[回線1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.3/Cherry-Studio-1.4.3-x86_64.AppImage)】 【[回線2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.3/Cherry-Studio-1.4.3-x86_64.AppImage)】 【[回線3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.3/Cherry-Studio-1.4.3-x86_64.AppImage)】
+【[ライン1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.4/Cherry-Studio-1.4.4-x86_64.AppImage)】 【[ライン2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.4/Cherry-Studio-1.4.4-x86_64.AppImage)】 【[ライン3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.4/Cherry-Studio-1.4.4-x86_64.AppImage)】
 
 </details>
 
 <details>
 
-<summary>ARM64版</summary>
+<summary>ARM64 版</summary>
 
-メイン回線：
+**メインリンク：**
 
-【[Cherry Studio公式サイト](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.3/Cherry-Studio-1.4.3-arm64.AppImage)】
+【[Cherry Studio 公式サイト](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.4/Cherry-Studio-1.4.4-arm64.AppImage)】
 
-代替回線：
+**代替リンク：**
 
-【[回線1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.3/Cherry-Studio-1.4.3-arm64.AppImage)】 【[回線2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.3/Cherry-Studio-1.4.3-arm64.AppImage)】 【[回線3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.3/Cherry-Studio-1.4.3-arm64-AppImage)】
+【[ライン1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.4/Cherry-Studio-1.4.4-arm64.AppImage)】 【[ライン2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.4/Cherry-Studio-1.4.4-arm64.AppImage)】 【[ライン3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.4/Cherry-Studio-1.4.4-arm64-AppImage)】
 
 </details>
 
 ***
 
-## オンラインストレージダウンロード
+## クラウドストレージからのダウンロード
 
-[Quark](https://pan.quark.cn/s/c8533a1ec63e#/list/share)
+[Quark（夸克）](https://pan.quark.cn/s/c8533a1ec63e#/list/share)

@@ -6,146 +6,130 @@ icon: download
 เอกสารนี้ได้รับการแปลจากภาษาจีนโดย AI และยังไม่ได้รับการตรวจสอบ
 {% endhint %}
 
-# การดาวน์โหลดไคลเอ็นต์
+# ดาวน์โหลดไคลเอนต์
 
 {% hint style="info" %}
-เวอร์ชั่นล่าสุดอย่างเป็นทางการ: v1.4.3
+เวอร์ชันล่าสุดที่เป็นทางการ: v1.4.4
 {% endhint %}
 
 ## ดาวน์โหลดโดยตรง
 
-### เวอร์ชั่น Windows
+### เวอร์ชัน Windows
 
 {% hint style="warning" %}
-หมายเหตุ: ระบบปฏิบัติการ Windows 7 ไม่รองรับการติดตั้ง Cherry Studio
+หมายเหตุ: ระบบ Windows 7 ไม่รองรับการติดตั้ง Cherry Studio
 {% endhint %}
 
-#### เวอร์ชั่นติดตั้ง (Setup)
+#### เวอร์ชันติดตั้ง (Setup)
 
 <details>
 
-<summary>เวอร์ชั่น x64</summary>
+<summary>เวอร์ชัน x64</summary>
 
-ลิงค์หลัก:
+เส้นทางหลัก:
+【[เว็บไซต์อย่างเป็นทางการของ Cherry Studio](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.4/Cherry-Studio-1.4.4-x64-setup.exe)】
 
-【[เว็บไซต์อย่างเป็นทางการของ Cherry Studio](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.3/Cherry-Studio-1.4.3-x64-setup.exe)】
-
-ลิงค์สำรอง:
-
-【[เส้นทางสำรอง 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.3/Cherry-Studio-1.4.3-x64-setup.exe)】 【[เส้นทางสำรอง 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.3/Cherry-Studio-1.4.3-x64-setup.exe)】 【[เส้นทางสำรอง 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.3/Cherry-Studio-1.4.3-x64-setup.exe)】
+เส้นทางสำรอง:
+【[เส้นทาง1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.4/Cherry-Studio-1.4.4-x64-setup.exe)】 【[เส้นทาง2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.4/Cherry-Studio-1.4.4-x64-setup.exe)】 【[เส้นทาง3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.4/Cherry-Studio-1.4.4-x64-setup.exe)】
 
 </details>
 
 <details>
 
-<summary>เวอร์ชั่น ARM64</summary>
+<summary>เวอร์ชัน ARM64</summary>
 
-ลิงค์หลัก:
+เส้นทางหลัก:
+【[เว็บไซต์อย่างเป็นทางการของ Cherry Studio](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.4/Cherry-Studio-1.4.4-arm64-setup.exe)】
 
-【[เว็บไซต์อย่างเป็นทางการของ Cherry Studio](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.3/Cherry-Studio-1.4.3-arm64-setup.exe)】
-
-ลิงค์สำรอง:
-
-【[เส้นทางสำรอง 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.3/Cherry-Studio-1.4.3-arm64-setup.exe)】 【[เส้นทางสำรอง 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.3/Cherry-Studio-1.4.3-arm64-setup.exe)】 【[เส้นทางสำรอง 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.3/Cherry-Studio-1.4.3-arm64-setup.exe)】
+เส้นทางสำรอง:
+【[เส้นทาง1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.4/Cherry-Studio-1.4.4-arm64-setup.exe)】 【[เส้นทาง2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.4/Cherry-Studio-1.4.4-arm64-setup.exe)】 【[เส้นทาง3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.4/Cherry-Studio-1.4.4-arm64-setup.exe)】
 
 </details>
 
-#### เวอร์ชั่นพกพา (Portable)
+#### เวอร์ชันพกพา (Portable)
 
 <details>
 
-<summary>เวอร์ชั่น x64</summary>
+<summary>เวอร์ชัน x64</summary>
 
-ลิงค์หลัก:
+เส้นทางหลัก:
+【[เว็บไซต์อย่างเป็นทางการของ Cherry Studio](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.4/Cherry-Studio-1.4.4-x64-portable.exe)】
 
-【[เว็บไซต์อย่างเป็นทางการของ Cherry Studio](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.3/Cherry-Studio-1.4.3-x64-portable.exe)】
-
-ลิงค์สำรอง:
-
-【[เส้นทางสำรอง 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.3/Cherry-Studio-1.4.3-x64-portable.exe)】 【[เส้นทางสำรอง 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.3/Cherry-Studio-1.4.3-x64-portable.exe)】 【[เส้นทางสำรอง 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.3/Cherry-Studio-1.4.3-x64-portable.exe)】
+เส้นทางสำรอง:
+【[เส้นทาง1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.4/Cherry-Studio-1.4.4-x64-portable.exe)】 【[เส้นทาง2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.4/Cherry-Studio-1.4.4-x64-portable.exe)】 【[เส้นทาง3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.4/Cherry-Studio-1.4.4-x64-portable.exe)】
 
 </details>
 
 <details>
 
-<summary>เวอร์ชั่น ARM64</summary>
+<summary>เวอร์ชัน ARM64</summary>
 
-ลิงค์หลัก:
+เส้นทางหลัก:
+【[เว็บไซต์อย่างเป็นทางการของ Cherry Studio](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.4/Cherry-Studio-1.4.4-arm64-portable.exe)】
 
-【[เว็บไซต์อย่างเป็นทางการของ Cherry Studio](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.3/Cherry-Studio-1.4.3-arm64-portable.exe)】
-
-ลิงค์สำรอง:
-
-【[เส้นทางสำรอง 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.3/Cherry-Studio-1.4.3-arm64-portable.exe)】 【[เส้นทางสำรอง 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.3/Cherry-Studio-1.4.3-arm64-portable.exe)】 【[เส้นทางสำรอง 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.3/Cherry-Studio-1.4.3-arm64-portable.exe)】
+เส้นทางสำรอง:
+【[เส้นทาง1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.4/Cherry-Studio-1.4.4-arm64-portable.exe)】 【[เส้นทาง2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.4/Cherry-Studio-1.4.4-arm64-portable.exe)】 【[เส้นทาง3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.4/Cherry-Studio-1.4.4-arm64-portable.exe)】
 
 </details>
 
 ***
 
-### เวอร์ชั่น macOS
+### เวอร์ชัน macOS
 
 <details>
 
-<summary>เวอร์ชั่นสำหรับชิป Intel (x64)</summary>
+<summary>เวอร์ชันชิป Intel (x64)</summary>
 
-ลิงค์หลัก:
+เส้นทางหลัก:
+【[เว็บไซต์อย่างเป็นทางการของ Cherry Studio](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.4/Cherry-Studio-1.4.4-x64.dmg)】
 
-【[เว็บไซต์อย่างเป็นทางการของ Cherry Studio](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.3/Cherry-Studio-1.4.3-x64.dmg)】
-
-ลิงค์สำรอง:
-
-【[เส้นทางสำรอง 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.3/Cherry-Studio-1.4.3-x64.dmg)】 【[เส้นทางสำรอง 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.3/Cherry-Studio-1.4.3-x64.dmg)】 【[เส้นทางสำรอง 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.3/Cherry-Studio-1.4.3-x64.dmg)】
+เส้นทางสำรอง:
+【[เส้นทาง1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.4/Cherry-Studio-1.4.4-x64.dmg)】 【[เส้นทาง2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.4/Cherry-Studio-1.4.4-x64.dmg)】 【[เส้นทาง3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.4/Cherry-Studio-1.4.4-x64.dmg)】
 
 </details>
 
 <details>
 
-<summary>เวอร์ชั่นสำหรับ Apple Silicon (ARM64, ชิปซีรีย์ M)</summary>
+<summary>เวอร์ชัน Apple Silicon (ARM64, ชิปซีรีย์ M)</summary>
 
-ลิงค์หลัก:
+เส้นทางหลัก:
+【[เว็บไซต์อย่างเป็นทางการของ Cherry Studio](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.4/Cherry-Studio-1.4.4-arm64.dmg)】
 
-【[เว็บไซต์อย่างเป็นทางการของ Cherry Studio](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.3/Cherry-Studio-1.4.3-arm64.dmg)】
-
-ลิงค์สำรอง:
-
-【[เส้นทางสำรอง 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.3/Cherry-Studio-1.4.3-arm64.dmg)】 【[เส้นทางสำรอง 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.3/Cherry-Studio-1.4.3-arm64.dmg)】 【[เส้นทางสำรอง 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.3/Cherry-Studio-1.4.3-arm64.dmg)】
+เส้นทางสำรอง:
+【[เส้นทาง1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.4/Cherry-Studio-1.4.4-arm64.dmg)】 【[เส้นทาง2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.4/Cherry-Studio-1.4.4-arm64.dmg)】 【[เส้นทาง3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.4/Cherry-Studio-1.4.4-arm64.dmg)】
 
 </details>
 
 ***
 
-### เวอร์ชั่น Linux
+### เวอร์ชัน Linux
 
 <details>
 
-<summary>เวอร์ชั่น x86_64</summary>
+<summary>เวอร์ชัน x86_64</summary>
 
-ลิงค์หลัก:
+เส้นทางหลัก:
+【[เว็บไซต์อย่างเป็นทางการของ Cherry Studio](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.4/Cherry-Studio-1.4.4-x86_64.AppImage)】
 
-【[เว็บไซต์อย่างเป็นทางการของ Cherry Studio](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.3/Cherry-Studio-1.4.3-x86_64.AppImage)】
-
-ลิงค์สำรอง:
-
-【[เส้นทางสำรอง 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.3/Cherry-Studio-1.4.3-x86_64.AppImage)】 【[เส้นทางสำรอง 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.3/Cherry-Studio-1.4.3-x86_64.AppImage)】 【[เส้นทางสำรอง 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.3/Cherry-Studio-1.4.3-x86_64.AppImage)】
+เส้นทางสำรอง:
+【[เส้นทาง1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.4/Cherry-Studio-1.4.4-x86_64.AppImage)】 【[เส้นทาง2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.4/Cherry-Studio-1.4.4-x86_64.AppImage)】 【[เส้นทาง3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.4/Cherry-Studio-1.4.4-x86_64.AppImage)】
 
 </details>
 
 <details>
 
-<summary>เวอร์ชั่น ARM64</summary>
+<summary>เวอร์ชัน ARM64</summary>
 
-ลิงค์หลัก:
+เส้นทางหลัก:
+【[เว็บไซต์อย่างเป็นทางการของ Cherry Studio](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.4/Cherry-Studio-1.4.4-arm64.AppImage)】
 
-【[เว็บไซต์อย่างเป็นทางการของ Cherry Studio](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.3/Cherry-Studio-1.4.3-arm64.AppImage)】
-
-ลิงค์สำรอง:
-
-【[เส้นทางสำรอง 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.3/Cherry-Studio-1.4.3-arm64.AppImage)】 【[เส้นทางสำรอง 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.3/Cherry-Studio-1.4.3-arm64.AppImage)】 【[เส้นทางสำรอง 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.3/Cherry-Studio-1.4.3-arm64-AppImage)】
+เส้นทางสำรอง:
+【[เส้นทาง1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.4/Cherry-Studio-1.4.4-arm64.AppImage)】 【[เส้นทาง2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.4/Cherry-Studio-1.4.4-arm64.AppImage)】 【[เส้นทาง3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.4/Cherry-Studio-1.4.4-arm64-AppImage)】
 
 </details>
 
 ***
 
-## ดาวน์โหลดจากคลาวด์
+## ดาวน์โหลดผ่านคลาวด์
 
 [Quark](https://pan.quark.cn/s/c8533a1ec63e#/list/share)

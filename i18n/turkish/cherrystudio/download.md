@@ -9,15 +9,15 @@ Bu belge Çince'den yapay zeka tarafından çevrilmiştir ve henüz incelenmemi�
 # İstemci İndirme
 
 {% hint style="info" %}
-Mevcut en son kararlı sürüm: v1.4.3
+Şu anki en son resmi sürüm: v1.4.4
 {% endhint %}
 
-## Doğrudan İndirme Bağlantıları
+## Doğrudan Bağlantı İndirme
 
 ### Windows Sürümü
 
 {% hint style="warning" %}
-Uyarı: Windows 7, Cherry Studio'yu desteklemez.
+Dikkat: Windows 7 sistemi, Cherry Studio kurulumunu desteklemez.
 {% endhint %}
 
 #### Kurulum Sürümü (Setup)
@@ -26,13 +26,13 @@ Uyarı: Windows 7, Cherry Studio'yu desteklemez.
 
 <summary>x64 Sürümü</summary>
 
-Ana Bağlantılar:
+Ana hat:
 
-【[Cherry Studio Resmi Sitesi](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.3/Cherry-Studio-1.4.3-x64-setup.exe)】
+【[Cherry Studio Resmi Sitesi](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.4/Cherry-Studio-1.4.4-x64-setup.exe)】
 
-Yedek Bağlantılar:
+Yedek hatlar:
 
-【[Yedek 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.3/Cherry-Studio-1.4.3-x64-setup.exe)】 【[Yedek 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.3/Cherry-Studio-1.4.3-x64-setup.exe)】 【[Yedek 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.3/Cherry-Studio-1.4.3-x64-setup.exe)】
+【[Hat 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.4/Cherry-Studio-1.4.4-x64-setup.exe)】 【[Hat 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.4/Cherry-Studio-1.4.4-x64-setup.exe)】 【[Hat 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.4/Cherry-Studio-1.4.4-x64-setup.exe)】
 
 </details>
 
@@ -40,13 +40,13 @@ Yedek Bağlantılar:
 
 <summary>ARM64 Sürümü</summary>
 
-Ana Bağlantılar:
+Ana hat:
 
-【[Cherry Studio Resmi Sitesi](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.3/Cherry-Studio-1.4.3-arm64-setup.exe)】
+【[Cherry Studio Resmi Sitesi](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.4/Cherry-Studio-1.4.4-arm64-setup.exe)】
 
-Yedek Bağlantılar:
+Yedek hatlar:
 
-【[Yedek 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.3/Cherry-Studio-1.4.3-arm64-setup.exe)】 【[Yedek 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.3/Cherry-Studio-1.4.3-arm64-setup.exe)】 【[Yedek 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.3/Cherry-Studio-1.4.3-arm64-setup.exe)】
+【[Hat 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.4/Cherry-Studio-1.4.4-arm64-setup.exe)】 【[Hat 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.4/Cherry-Studio-1.4.4-arm64-setup.exe)】 【[Hat 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.4/Cherry-Studio-1.4.4-arm64-setup.exe)】
 
 </details>
 
@@ -56,13 +56,13 @@ Yedek Bağlantılar:
 
 <summary>x64 Sürümü</summary>
 
-Ana Bağlantılar:
+Ana hat:
 
-【[Cherry Studio Resmi Sitesi](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.3/Cherry-Studio-1.4.3-x64-portable.exe)】
+【[Cherry Studio Resmi Sitesi](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.4/Cherry-Studio-1.4.4-x64-portable.exe)】
 
-Yedek Bağlantılar:
+Yedek hatlar:
 
-【[Yedek 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.3/Cherry-Studio-1.4.3-x64-portable.exe)】 【[Yedek 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.3/Cherry-Studio-1.4.3-x64-portable.exe)】 【[Yedek 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.3/Cherry-Studio-1.4.3-x64-portable.exe)】
+【[Hat 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.4/Cherry-Studio-1.4.4-x64-portable.exe)】 【[Hat 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.4/Cherry-Studio-1.4.4-x64-portable.exe)】 【[Hat 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.4/Cherry-Studio-1.4.4-x64-portable.exe)】
 
 </details>
 
@@ -70,13 +70,13 @@ Yedek Bağlantılar:
 
 <summary>ARM64 Sürümü</summary>
 
-Ana Bağlantılar:
+Ana hat:
 
-【[Cherry Studio Resmi Sitesi](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.3/Cherry-Studio-1.4.3-arm64-portable.exe)】
+【[Cherry Studio Resmi Sitesi](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.4/Cherry-Studio-1.4.4-arm64-portable.exe)】
 
-Yedek Bağlantılar:
+Yedek hatlar:
 
-【[Yedek 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.3/Cherry-Studio-1.4.3-arm64-portable.exe)】 【[Yedek 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.3/Cherry-Studio-1.4.3-arm64-portable.exe)】 【[Yedek 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.3/Cherry-Studio-1.4.3-arm64-portable.exe)】
+【[Hat 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.4/Cherry-Studio-1.4.4-arm64-portable.exe)】 【[Hat 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.4/Cherry-Studio-1.4.4-arm64-portable.exe)】 【[Hat 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.4/Cherry-Studio-1.4.4-arm64-portable.exe)】
 
 </details>
 
@@ -86,29 +86,29 @@ Yedek Bağlantılar:
 
 <details>
 
-<summary>Intel Çip Sürümü (x64)</summary>
+<summary>Intel çipli sürüm (x64)</summary>
 
-Ana Bağlantılar:
+Ana hat:
 
-【[Cherry Studio Resmi Sitesi](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.3/Cherry-Studio-1.4.3-x64.dmg)】
+【[Cherry Studio Resmi Sitesi](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.4/Cherry-Studio-1.4.4-x64.dmg)】
 
-Yedek Bağlantılar:
+Yedek hatlar:
 
-【[Yedek 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.3/Cherry-Studio-1.4.3-x64.dmg)】 【[Yedek 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.3/Cherry-Studio-1.4.3-x64.dmg)】 【[Yedek 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.3/Cherry-Studio-1.4.3-x64.dmg)】
+【[Hat 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.4/Cherry-Studio-1.4.4-x64.dmg)】 【[Hat 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.4/Cherry-Studio-1.4.4-x64.dmg)】 【[Hat 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.4/Cherry-Studio-1.4.4-x64.dmg)】
 
 </details>
 
 <details>
 
-<summary>Apple Silicon Sürümü (ARM64, M Serisi Çipler)</summary>
+<summary>Apple Silicon sürümü (ARM64, M serisi çipler)</summary>
 
-Ana Bağlantılar:
+Ana hat:
 
-【[Cherry Studio Resmi Sitesi](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.3/Cherry-Studio-1.4.3-arm64.dmg)】
+【[Cherry Studio Resmi Sitesi](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.4/Cherry-Studio-1.4.4-arm64.dmg)】
 
-Yedek Bağlantılar:
+Yedek hatlar:
 
-【[Yedek 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.3/Cherry-Studio-1.4.3-arm64.dmg)】 【[Yedek 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.3/Cherry-Studio-1.4.3-arm64.dmg)】 【[Yedek 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.3/Cherry-Studio-1.4.3-arm64.dmg)】
+【[Hat 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.4/Cherry-Studio-1.4.4-arm64.dmg)】 【[Hat 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.4/Cherry-Studio-1.4.4-arm64.dmg)】 【[Hat 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.4/Cherry-Studio-1.4.4-arm64.dmg)】
 
 </details>
 
@@ -120,13 +120,13 @@ Yedek Bağlantılar:
 
 <summary>x86_64 Sürümü</summary>
 
-Ana Bağlantılar:
+Ana hat:
 
-【[Cherry Studio Resmi Sitesi](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.3/Cherry-Studio-1.4.3-x86_64.AppImage)】
+【[Cherry Studio Resmi Sitesi](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.4/Cherry-Studio-1.4.4-x86_64.AppImage)】
 
-Yedek Bağlantılar:
+Yedek hatlar:
 
-【[Yedek 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.3/Cherry-Studio-1.4.3-x86_64.AppImage)】 【[Yedek 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.3/Cherry-Studio-1.4.3-x86_64.AppImage)】 【[Yedek 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.3/Cherry-Studio-1.4.3-x86_64.AppImage)】
+【[Hat 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.4/Cherry-Studio-1.4.4-x86_64.AppImage)】 【[Hat 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.4/Cherry-Studio-1.4.4-x86_64.AppImage)】 【[Hat 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.4/Cherry-Studio-1.4.4-x86_64.AppImage)】
 
 </details>
 
@@ -134,13 +134,13 @@ Yedek Bağlantılar:
 
 <summary>ARM64 Sürümü</summary>
 
-Ana Bağlantılar:
+Ana hat:
 
-【[Cherry Studio Resmi Sitesi](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.3/Cherry-Studio-1.4.3-arm64.AppImage)】
+【[Cherry Studio Resmi Sitesi](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.4/Cherry-Studio-1.4.4-arm64.AppImage)】
 
-Yedek Bağlantılar:
+Yedek hatlar:
 
-【[Yedek 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.3/Cherry-Studio-1.4.3-arm64.AppImage)】 【[Yedek 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.3/Cherry-Studio-1.4.3-arm64.AppImage)】 【[Yedek 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.3/Cherry-Studio-1.4.3-arm64-AppImage)】
+【[Hat 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.4/Cherry-Studio-1.4.4-arm64.AppImage)】 【[Hat 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.4/Cherry-Studio-1.4.4-arm64.AppImage)】 【[Hat 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.4/Cherry-Studio-1.4.4-arm64-AppImage)】
 
 </details>
 
@@ -148,4 +148,4 @@ Yedek Bağlantılar:
 
 ## Bulut Depolama İndirme
 
-[Quark](https://pan.quark.cn/s/c8533a1ec63e#/list/share)
+[夸克](https://pan.quark.cn/s/c8533a1ec63e#/list/share)

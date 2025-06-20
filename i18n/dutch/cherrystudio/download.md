@@ -6,10 +6,10 @@ icon: download
 Dit document is door AI vertaald vanuit het Chinees en is nog niet beoordeeld.
 {% endhint %}
 
-# Client Download
+# Download Client
 
 {% hint style="info" %}
-Huidige laatste stabiele versie: v1.4.3
+Huidige laatste stabiele versie: v1.4.4
 {% endhint %}
 
 ## Directe Downloadlinks
@@ -17,7 +17,7 @@ Huidige laatste stabiele versie: v1.4.3
 ### Windows-versie
 
 {% hint style="warning" %}
-Opmerking: Windows 7 ondersteunt de installatie van Cherry Studio niet.
+Let op: Windows 7-systeem ondersteunt de installatie van Cherry Studio niet.
 {% endhint %}
 
 #### Installatieversie (Setup)
@@ -28,11 +28,11 @@ Opmerking: Windows 7 ondersteunt de installatie van Cherry Studio niet.
 
 Primaire links:
 
-【[Cherry Studio Officiële Website](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.3/Cherry-Studio-1.4.3-x64-setup.exe)】
+【[Cherry Studio Officiële Website](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.4/Cherry-Studio-1.4.4-x64-setup.exe)】
 
 Alternatieve links:
 
-【[Link 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.3/Cherry-Studio-1.4.3-x64-setup.exe)】 【[Link 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.3/Cherry-Studio-1.4.3-x64-setup.exe)】 【[Link 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.3/Cherry-Studio-1.4.3-x64-setup.exe)】
+【[Link 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.4/Cherry-Studio-1.4.4-x64-setup.exe)】 【[Link 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.4/Cherry-Studio-1.4.4-x64-setup.exe)】 【[Link 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.4/Cherry-Studio-1.4.4-x64-setup.exe)】
 
 </details>
 
@@ -42,11 +42,11 @@ Alternatieve links:
 
 Primaire links:
 
-【[Cherry Studio Officiële Website](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.3/Cherry-Studio-1.4.3-arm64-setup.exe)】
+【[Cherry Studio Officiële Website](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.4/Cherry-Studio-1.4.4-arm64-setup.exe)】
 
 Alternatieve links:
 
-【[Link 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.3/Cherry-Studio-1.4.3-arm64-setup.exe)】 【[Link 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.3/Cherry-Studio-1.4.3-arm64-setup.exe)】 【[Link 极](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.3/Cherry-Studio-1.4.3-arm64-setup.exe)】
+【[Link 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.4/Cherry-Studio-1.4.4-arm64-setup.exe)】 【[Link 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.4/Cherry-Studio-1.4.4-arm64-setup.exe)】 【[Link 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.4/Cherry-Studio-1.4.4-arm64-setup.exe)】
 
 </details>
 
@@ -58,11 +58,11 @@ Alternatieve links:
 
 Primaire links:
 
-【[Cherry Studio Officiële Website](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.3/Cherry-Studio-1.4.3-x64-portable.exe)】
+【[Cherry Studio Officiële Website](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.4/Cherry-Studio-1.4.4-x64-portable.exe)】
 
 Alternatieve links:
 
-【[Link 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v极.4.3/Cherry-Studio-1.4.3-x64-portable.exe)】 【[Link 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.3/Cherry-Studio-1.4.3-x64-portable.exe)】 【[Link 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.3/Cherry-Studio-1.4.3-x64-portable.exe)】
+【[Link 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.4/Cherry-Studio-1.4.4-x64-portable.exe)】 【[Link 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.4/Cherry-Studio-1.4.4-x64-portable.exe)】 【[Link 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.4/Cherry-Studio-1.4.4-x64-portable.exe)】
 
 </details>
 
@@ -72,11 +72,11 @@ Alternatieve links:
 
 Primaire links:
 
-【[Cherry Studio Officiële Website](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.3/Cherry-Studio-1.4.3-arm64-portable.exe)】
+【[Cherry Studio Officiële Website](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.4/Cherry-Studio-1.4.4-arm64-portable.exe)】
 
 Alternatieve links:
 
-【[Link 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.3/Cherry-Studio-1.4.3-arm64-portable.exe)】 【[Link 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.3/Cherry-Studio-1.4.3-arm64-portable.exe)】 【[Link 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.3/Cherry-Studio-1.4.3-arm64-portable.exe)】
+【[Link 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.4/Cherry-Studio-1.4.4-arm64-portable.exe)】 【[Link 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.4/Cherry-Studio-1.4.4-arm64-portable.exe)】 【[Link 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.4/Cherry-Studio-1.4.4-arm64-portable.exe)】
 
 </details>
 
@@ -90,11 +90,11 @@ Alternatieve links:
 
 Primaire links:
 
-【[Cherry Studio Officiële Website](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.3/Cherry-Studio-1.4.3-x64.dmg)】
+【[Cherry Studio Officiële Website](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.4/Cherry-Studio-1.4.4-x64.dmg)】
 
 Alternatieve links:
 
-【[Link 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.3/Cherry-Studio-1.4.3-x64.dmg)】 【[Link 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.3/Cherry-Studio-1.4.3-x64.dmg)】 【[Link 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.3/Cherry-Studio-1.4.3-x64.dmg)】
+【[Link 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.4/Cherry-Studio-1.4.4-x64.dmg)】 【[Link 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.4/Cherry-Studio-1.4.4-x64.dmg)】 【[Link 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.4/Cherry-Studio-1.4.4-x64.dmg)】
 
 </details>
 
@@ -104,11 +104,11 @@ Alternatieve links:
 
 Primaire links:
 
-【[Cherry Studio Officiële Website](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.3/Cherry-Studio-1.4.3-arm64.dmg)】
+【[Cherry Studio Officiële Website](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.4/Cherry-Studio-1.4.4-arm64.dmg)】
 
 Alternatieve links:
 
-【[Link 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.3/Cherry-Studio-1.4.3-arm64.dmg)】 【[Link 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.3/Cherry-Studio-1.4.3-arm64.dmg)】 【[Link 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.3/Cherry-Studio-1.4.3-arm64.dmg)】
+【[Link 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.4/Cherry-Studio-1.4.4-arm64.dmg)】 【[Link 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.4/Cherry-Studio-1.4.4-arm64.dmg)】 【[Link 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.4/Cherry-Studio-1.4.4-arm64.dmg)】
 
 </details>
 
@@ -122,11 +122,11 @@ Alternatieve links:
 
 Primaire links:
 
-【[Cherry Studio Officiële Website](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.3/Cherry-Studio-1.4.3-x86_64.AppImage)】
+【[Cherry Studio Officiële Website](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.4/Cherry-Studio-1.4.4-x86_64.AppImage)】
 
 Alternatieve links:
 
-【[Link 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.3/Cherry-Studio-1.4.3-x86_64.AppImage)】 【[Link 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.3/Cherry-Studio-1.4.3-x86_64.AppImage)】 【[Link 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.3/Cherry-Studio-1.4.3-x86_64.AppImage)】
+【[Link 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.4/Cherry-Studio-1.4.4-x86_64.AppImage)】 【[Link 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.4/Cherry-Studio-1.4.4-x86_64.AppImage)】 【[Link 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.4/Cherry-Studio-1.4.4-x86_64.AppImage)】
 
 </details>
 
@@ -136,11 +136,11 @@ Alternatieve links:
 
 Primaire links:
 
-【[Cherry Studio Officiële Website](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.3/Cherry-Studio-1.4.3-arm64.AppImage)】
+【[Cherry Studio Officiële Website](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.4/Cherry-Studio-1.4.4-arm64.AppImage)】
 
 Alternatieve links:
 
-【[Link 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.3/Cherry-Studio-1.4.3-arm64.AppImage)】 【[Link 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.3/Cherry-Studio-1.4.3-arm64.AppImage)】 【[Link 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.3/Cherry-Studio-1.4.3-arm64-AppImage)】
+【[Link 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.4/Cherry-Studio-1.4.4-arm64.AppImage)】 【[Link 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.4/Cherry-Studio-1.4.4-arm64.AppImage)】 【[Link 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.4/Cherry-Studio-1.4.4-arm64-AppImage)】
 
 </details>
 
