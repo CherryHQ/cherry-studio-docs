@@ -6,7 +6,7 @@ description: 暂时不支持Claude模型
 
 ## 教程概述
 
-### 1. 获取API Key
+### 1. 获取 API Key
 
 * 获取 Gemini 的 API Key 前，你需要有一个 Google Cloud 项目（如果你已有，此过程可跳过）
 * 进入 [Google Cloud](https://console.cloud.google.com/projectcreate) 创建项目，填写项目名称并点击创建项目
@@ -18,9 +18,9 @@ description: 暂时不支持Claude模型
 
 <figure><img src="../../.gitbook/assets/image (78).png" alt=""><figcaption></figcaption></figure>
 
-## 2. 设置API 访问权限
+## 2. 设置 API 访问权限
 
-* 打开[服务账号](https://console.cloud.google.com/iam-admin/serviceaccounts)权限界面，创建服务账号
+* 打开 [服务账号](https://console.cloud.google.com/iam-admin/serviceaccounts) 权限界面，创建服务账号
 
 <figure><img src="../../.gitbook/assets/image (79).png" alt=""><figcaption></figcaption></figure>
 
@@ -28,7 +28,7 @@ description: 暂时不支持Claude模型
 
 <figure><img src="../../.gitbook/assets/image (80).png" alt=""><figcaption></figcaption></figure>
 
-* 创建成功后，密钥文件将会以 JSON 文件的格式自动保存到你的电脑上，请**妥善保存**
+* 创建成功后，密钥文件将会以 JSON 文件的格式自动保存到你的电脑上，请 **妥善保存**
 
 ## 3. 在Cherry Studio中配置Vertex AI
 
@@ -37,4 +37,4 @@ description: 暂时不支持Claude模型
 
 <figure><img src="../../.gitbook/assets/image (81).png" alt=""><figcaption></figcaption></figure>
 
-点击添加[模型](https://console.cloud.google.com/vertex-ai/model-garden)，就可以愉快地开始使用了！\
+点击添加 [模型](https://console.cloud.google.com/vertex-ai/model-garden)，就可以愉快地开始使用了！
