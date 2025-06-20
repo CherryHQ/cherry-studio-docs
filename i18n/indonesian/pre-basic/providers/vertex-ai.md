@@ -8,17 +8,17 @@ Dokumen ini diterjemahkan dari bahasa Mandarin oleh AI dan belum ditinjau.
 
 # Vertex AI
 
-## Ikhtisar Tutorial
+## Ringkasan Tutorial
 
-### 1. Mendapatkan Kunci API
+### 1. Mendapatkan API Key
 
-* Sebelum mendapatkan Kunci API Gemini, Anda perlu memiliki proyek Google Cloud (jika sudah ada, langkah ini bisa dilewati)
-* Buka [Google Cloud](https://console.cloud.google.com/projectcreate) untuk membuat proyek, isi nama proyek lalu klik "Buat Proyek"
+* Sebelum memperoleh API Key Gemini, Anda harus memiliki proyek Google Cloud (lewati langkah ini jika sudah punya)
+* Kunjungi [Google Cloud](https://console.cloud.google.com/projectcreate) untuk membuat proyek, isi nama proyek lalu klik "Buat Proyek"
 
 <figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
-* Buka [Konsol Vertex AI](https://console.cloud.google.com/vertex-ai)
-* Aktifkan [Vertex AI API](https://console.cloud.google.com/apis/library/aiplatform.googleapis.com?inv=1\&invt=Ab0iBA) dalam proyek yang telah dibuat
+* Masuk ke [Konsol Vertex AI](https://console.cloud.google.com/vertex-ai)
+* Aktifkan [Vertex AI API](https://console.cloud.google.com/apis/library/aiplatform.googleapis.com?inv=1\&invt=Ab0iBA) di proyek yang telah dibuat
 
 <figure><img src="../../.gitbook/assets/image (78).png" alt=""><figcaption></figcaption></figure>
 
@@ -28,17 +28,17 @@ Dokumen ini diterjemahkan dari bahasa Mandarin oleh AI dan belum ditinjau.
 
 <figure><img src="../../.gitbook/assets/image (79).png" alt=""><figcaption></figcaption></figure>
 
-* Di halaman manajemen akun layanan, temukan akun layanan yang baru dibuat, klik `Kunci` dan buat kunci format JSON baru
+* Di halaman manajemen akun layanan, temukan akun yang baru dibuat, klik `Kunci` dan buat kunci baru format JSON
 
 <figure><img src="../../.gitbook/assets/image (80).png" alt=""><figcaption></figcaption></figure>
 
-* Setelah berhasil dibuat, file kunci akan otomatis disimpan di komputer Anda dalam format JSON, silakan **simpan dengan baik**
+* Setelah berhasil dibuat, file kunci akan otomatis tersimpan di komputer Anda dalam format JSON – **simpan dengan baik**
 
 ## 3. Mengonfigurasi Vertex AI di Cherry Studio
 
 * Pilih penyedia layanan Vertex AI
-* Isi field yang sesuai dari file JSON
+* Isi kolom sesuai dengan field di file JSON
 
 <figure><img src="../../.gitbook/assets/image (81).png" alt=""><figcaption></figcaption></figure>
 
-Klik tambah [model](https://console.cloud.google.com/vertex-ai/model-garden), dan Anda dapat mulai menggunakannya dengan senang hati!
+Klik tambah [model](https://console.cloud.google.com/vertex-ai/model-garden), dan Anda bisa mulai menggunakannya dengan senang!

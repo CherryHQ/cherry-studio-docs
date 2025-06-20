@@ -8,37 +8,37 @@ Dieses Dokument wurde von einer KI aus dem Chinesischen übersetzt und ist noch 
 
 # Vertex AI
 
-## Tutorial Übersicht
+## Tutorial-Überblick
 
-### 1. API-Schlüssel abrufen
+### 1. API Key beziehen
 
-*   Bevor Sie den Gemini-API-Schlüssel erhalten, benötigen Sie ein Google Cloud-Projekt (falls Sie bereits eines haben, kann dieser Schritt übersprungen werden)
-*   Gehen Sie zu [Google Cloud](https://console.cloud.google.com/projectcreate) um ein Projekt zu erstellen. Füllen Sie den Projektnamen aus und klicken Sie auf "Projekt erstellen"
+* Vor dem Beziehen des Gemini API Keys benötigst du ein Google Cloud Projekt (falls bereits vorhanden, kann dieser Schritt übersprungen werden)
+* Gehe zu [Google Cloud](https://console.cloud.google.com/projectcreate), erstelle ein Projekt, gib den Projektnamen ein und klicke auf "Projekt erstellen"
 
 <figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
-*   Wechseln Sie zur [Vertex AI-Konsole](https://console.cloud.google.com/vertex-ai)
-*   Aktivieren Sie die [Vertex AI API](ttps://console.cloud.google.com/apis/library/aiplatform.googleapis.com?inv=1\&invt=Ab0iBA) in Ihrem erstellten Projekt
+* Öffne die [Vertex AI Konsole](https://console.cloud.google.com/vertex-ai)
+* Aktiviere die [Vertex AI API](https://console.cloud.google.com/apis/library/aiplatform.googleapis.com?inv=1\&invt=Ab0iBA) in deinem erstellten Projekt
 
 <figure><img src="../../.gitbook/assets/image (78).png" alt=""><figcaption></figcaption></figure>
 
 ## 2. API-Zugriffsberechtigungen einrichten
 
-*   Öffnen Sie die [Servicekonto](https://console.cloud.google.com/iam-admin/serviceaccounts)-Berechtigungsseite und erstellen Sie ein Servicekonto
+* Öffne die [Servicekonten](https://console.cloud.google.com/iam-admin/serviceaccounts) Berechtigungsoberfläche und erstelle ein Servicekonto
 
 <figure><img src="../../.gitbook/assets/image (79).png" alt=""><figcaption></figcaption></figure>
 
-*   Suchen Sie auf der Servicekonto-Verwaltungsseite das neu erstellte Servicekonto, klicken Sie auf `Schlüssel` und erstellen Sie einen neuen JSON-formatierte Schlüssel
+* Finde das neu erstellte Servicekonto auf der Verwaltungsseite, klicke auf `Schlüssel` und erstelle einen neuen Schlüssel im JSON-Format
 
 <figure><img src="../../.gitbook/assets/image (80).png" alt=""><figcaption></figcaption></figure>
 
-*   Nach erfolgreicher Erstellung wird die Schlüsseldatei automatisch als JSON-Datei auf Ihrem Computer gespeichert - **bewahren Sie diese sicher auf**
+* Nach erfolgreicher Erstellung wird die Schlüsseldatei automatisch als JSON-Datei auf deinem Computer gespeichert. **Bewahre diese sicher auf**
 
 ## 3. Vertex AI in Cherry Studio konfigurieren
 
-*   Wählen Sie den Vertex AI-Anbieter
-*   Füllen Sie die entsprechenden Felder der JSON-Datei ein
+* Wähle den Anbieter Vertex AI aus
+* Trage die entsprechenden Felder aus der JSON-Datei ein
 
 <figure><img src="../../.gitbook/assets/image (81).png" alt=""><figcaption></figcaption></figure>
 
-Klicken Sie auf [Modell hinzufügen](https://console.cloud.google.com/vertex-ai/model-garden), und schon können Sie loslegen!\
+Klicke auf "Modell hinzufügen" [Model Garden](https://console.cloud.google.com/vertex-ai/model-garden) und du kannst loslegen!

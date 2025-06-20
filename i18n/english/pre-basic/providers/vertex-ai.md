@@ -17,12 +17,12 @@ This document was translated from Chinese by AI and has not yet been reviewed.
 
 <figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
-*   Go to the [Vertex AI Console](https://console.cloud.google.com/vertex-ai).
-*   Enable the [Vertex AI API](https://console.cloud.google.com/apis/library/aiplatform.googleapis.com?inv=1\&invt=Ab0iBA) in the created project.
+*   Go to the [Vertex AI Console](https://console.cloud.google.com/vertex-ai)
+*   In the newly created project, enable the [Vertex AI API](https://console.cloud.google.com/apis/library/aiplatform.googleapis.com?inv=1&invt=Ab0iBA)
 
 <figure><img src="../../.gitbook/assets/image (78).png" alt=""><figcaption></figcaption></figure>
 
-## 2. Set API Access Permissions
+## 2. Set Up API Access Permissions
 
 *   Open the [Service Accounts](https://console.cloud.google.com/iam-admin/serviceaccounts) permissions page and create a service account.
 
@@ -32,13 +32,13 @@ This document was translated from Chinese by AI and has not yet been reviewed.
 
 <figure><img src="../../.gitbook/assets/image (80).png" alt=""><figcaption></figcaption></figure>
 
-*   After successful creation, the key file will be automatically saved to your computer in JSON format. Please **keep it safe**.
+*   After successful creation, the key file will be automatically saved to your computer as a JSON file. Please **keep it safe**.
 
 ## 3. Configure Vertex AI in Cherry Studio
 
-*   Select the Vertex AI provider.
+*   Select Vertex AI as the provider.
 *   Fill in the corresponding fields from the JSON file.
 
 <figure><img src="../../.gitbook/assets/image (81).png" alt=""><figcaption></figcaption></figure>
 
-Click to add a [model](https://console.cloud.google.com/vertex-ai/model-garden), and you can happily start using it
+Click to add a [Model](https://console.cloud.google.com/vertex-ai/model-garden), and you're ready to start using it
