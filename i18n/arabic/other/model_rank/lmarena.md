@@ -3,25 +3,19 @@
 تمت ترجمة هذا المستند من الصينية بواسطة الذكاء الاصطناعي ولم تتم مراجعته بعد.
 {% endhint %}
 
-# LLM Arena Leaderboard (Updated in Real Time)
+# ترتيب ساحة الذكاء الاصطناعي (تحديث مباشر)
 
-{% hint style="warning" %}
-هذه الوثيقة مترجمة من اللغة الصينية بواسطة الذكاء الاصطناعي ولم تتم مراجعتها بعد. سأحاول التحقق من الوثائق واحدة تلو الأخرى للتأكد من معقولية الترجمة.
-{% endhint %}
+يشير هذا الترتيب إلى بيانات مستمدة من منصة الدردشة الذكية lmarena.ai، يتم توليده تلقائياً عبر عمليات آلية.
 
-## لوحة الصدارة (التحديث المباشر)
-
-هذه لوحة صدارة تستند إلى بيانات من Chatbot Arena (lmarena.ai)، تم إنشاؤها عبر عمليات آلية.
-
-> **وقت تحديث البيانات**: 2025-06-21 09:44:44 UTC / 2025-06-21 17:44:44 CST (بالتوقيت المحلي للصين)
+> **تاريخ تحديث البيانات**: 2025-06-21 11:41:45 UTC / 2025-06-21 19:41:45 CST (بتوقيت بكين)
 
 {% hint style="info" %}
-انقر على **اسم النموذج** في لوحة الصدارة للانتقال إلى صفحة تفاصيله أو صفحة تجربته.
+انقر على **اسم النموذج** في الجدول للانتقال إلى صفحة التفاصيل أو التجربة.
 {% endhint %}
 
-### لوحة الصدارة
+## جدول الترتيب
 
-| الترتيب (UB) | الترتيب (StyleCtrl) | اسم النموذج                                                                                                                                       |   النقاط | فاصل الثقة     | عدد الأصوات      | مزود الخدمة                    | اتفاقية الترخيص                    | تاريخ قطع المعرفة   |
+| الترتيب (UB) | الترتيب (StyleCtrl) | اسم النموذج                                                                                                                                       |   النقاط | مدى الثقة    | عدد الأصوات      | المزود                    | الرخصة                    | تاريخ تحديث المعرفة   |
 |:---|:---|:---|:---|:---|:---|:---|:---|:---|
 |        1 |               1 | [Gemini-2.5-Pro-Preview-06-05](http://aistudio.google.com/app/prompts/new_chat?model=gemini-2.5-pro-preview-06-05)                        | 1480 | +6/-6   | 8,825   | Google                 | Proprietary             | لا توجد بيانات     |
 |        2 |               2 | [Gemini-2.5-Pro-Preview-05-06](http://aistudio.google.com/app/prompts/new_chat?model=gemini-2.5-pro-preview-05-06)                        | 1446 | +5/-5   | 13,025  | Google                 | Proprietary             | لا توجد بيانات     |
@@ -40,7 +34,7 @@
 |       13 |               6 | [Claude Opus 4 (20250514)](https://www.anthropic.com/news/claude-4)                                                                       | 1373 | +4/-4   | 15,254  | Anthropic              | Proprietary             | لا توجد بيانات     |
 |       13 |              12 | [DeepSeek-R1](https://api-docs.deepseek.com/news/news250120)                                                                              | 1373 | +4/-5   | 19,430  | DeepSeek               | MIT                     | لا توجد بيانات     |
 |       14 |              18 | [Mistral Medium 3](https://mistral.ai/news/mistral-medium-3)                                                                              | 1365 | +4/-5   | 13,385  | Mistral                | Proprietary             | لا توجد بيانات     |
-|       16 |              12 | [o1-2024-12-17](https://openai.com/index/o1-and-new-tools-for-developers/)                                                                | 1365 | +3/-3   | 29,038  | OpenAI                 | Proprietary             | 2023/10  |
+|       16 |              12 | [o1-2024-12-17](https://openai.com/index/o1-and-new-tools-for-developers/)                                                                | 1365 | +3/-3   | 29,038  | OpenAI                 | Proprietary             | لا توجد بيانات     |
 |       16 |              22 | [Qwen3-235B-A22B](https://qwenlm.github.io/blog/qwen3/)                                                                                   | 1363 | +5/-6   | 11,429  | Alibaba                | Apache 2.0              | لا توجد بيانات     |
 |       16 |              26 | [Grok-3-Mini-beta](https://docs.x.ai/docs/models)                                                                                         | 1361 | +7/-6   | 6,984   | xAI                    | Proprietary             | لا توجد بيانات     |
 |       17 |              25 | [Gemini-2.0-Flash-001](https://aistudio.google.com/app/prompts/new_chat?instructions=lmsys-1121&model=gemini-2.0-flash-001)               | 1363 | +3/-3   | 34,803  | Google                 | Proprietary             | لا توجد بيانات     |
@@ -76,4 +70,6 @@
 |       43 |              51 | [Deepseek-v2.5-1210](https://huggingface.co/deepseek-ai/DeepSeek-V2.5-1210)                                                               | 1294 | +6/-4   | 7,243   | DeepSeek               | DeepSeek                | لا توجد بيانات     |
 |       44 |              66 | [Gemma-3-4B-it](http://aistudio.google.com/app/prompts/new_chat?model=gemma-3-4b-it)                                                      | 1290 | +9/-7   | 4,321   | Google                 | Gemma                   | لا توجد بيانات     |
 |       48 |              45 | [Hunyuan-Large-2025-02-10](https://cloud.tencent.com/document/product/1729/104753)                                                        | 1287 | +11/-8  | 3,856   | Tencent                | Proprietary             | لا توجد بيانات     |
-|       50 |              58 | [Athene-v2-Chat-72B](https://huggingface.co/Nexusflow/Athene-V2-Chat)                                                                     | 1291 | +3/-4   | 26,074  | NexusFlow              | NexusFlow
+|       50 |              58 | [Athene-v2-Chat-72B](https://huggingface.co/Nexusflow/Athene-V2-Chat)                                                                     | 1291 | +3/-4   | 26,074  | NexusFlow              | NexusFlow               | لا توجد بيانات     |
+|       50 |              56 | [GLM-4-Plus](https://bigmodel.cn/dev/howuse/glm-4)                                                                                        | 1289 | +3/-3   | 27,788  | Zhipu AI               | Proprietary             | لا توجد بيانات     |
+|       50 |

@@ -3,39 +3,67 @@
 यह दस्तावेज़ AI द्वारा चीनी से अनुवादित किया गया है और अभी तक इसकी समीक्षा नहीं की गई है।
 {% endhint %}
 
-# एलएलएम एरीना रैंकिंग (रियल-टाइम अपडेट)
+# LLM Arena लीडरबोर्ड (रियल-टाइम अपडेट)
 
-यह चैटबॉट एरीना (lmarena.ai) के डेटा पर आधारित एक रियल-टाइम रैंकिंग है जो स्वचालित प्रक्रिया द्वारा जनरेट की गई है।
+यह चैटबॉट एरिना (lmarena.ai) डेटा पर आधारित एक स्वचालित रूप से जनरेट किया गया लीडरबोर्ड है।
 
-> **डेटा अद्यतन समय**: 2025-06-21 09:44:44 UTC / 2025-06-21 17:44:44 CST (बीजिंग समय)
+> **डेटा अपडेट समय**: 2025-06-21 11:41:45 UTC / 2025-06-21 19:41:45 CST (बीजिंग समय)
 
 {% hint style="info" %}
-रैंकिंग में **मॉडल नाम** पर क्लिक करके आप उसके विवरण या ट्रायल पेज पर जा सकते हैं।
+लीडरबोर्ड में **मॉडल नाम** पर क्लिक करके उसके विवरण या परीक्षण पृष्ठ पर जाएँ।
 {% endhint %}
 
-## रैंकिंग
+## लीडरबोर्ड
 
-| रैंक (UB) | रैंक (स्टाइलCtrl) | मॉडल नाम                                                                                                                                       | स्कोर | कॉन्फिडेंस इंटरवल | वोट्स     | प्रदाता               | लाइसेंस               | ज्ञान कटऑफ तिथि |
-|:---------|:---------------|:---------------------------------------------------------------------------------------------------------------------------------------------|:-----|:---------------|:---------|:---------------------|:---------------------|:-------------|
-| 1        | 1              | [Gemini-2.5-Pro-Preview-06-05](http://aistudio.google.com/app/prompts/new_chat?model=gemini-2.5-pro-preview-06-05)                          | 1480 | +6/-6          | 8,825    | Google               | Proprietary          | -            |
-| ... (मूल तालिका अपरिवर्तित रखें, केवल शीर्षक पंक्ति अनुवादित) ... |
-
-## व्याख्या
-
-- **रैंक (UB)**: ब्रैडली-टेरी मॉडल पर आधारित रैंकिंग। यह मॉडल की समग्र प्रदर्शन क्षमता और उसके एलो स्कोर के **अपर बाउंड** का प्रतिनिधित्व करता है।
-- **रैंक (स्टाइलCtrl)**: संवाद शैली नियंत्रण के बाद की रैंकिंग। यह मॉडल की मूल क्षमताओं का शुद्ध मूल्यांकन करने के लिए डिज़ाइन की गई है।
-- **मॉडल नाम**: एलएलएम का नाम (लिंक के साथ)।
-- **स्कोर**: उपयोगकर्ता वोटों से प्राप्त एलो रेटिंग। उच्च स्कोर बेहतर प्रदर्शन दर्शाता है।
-- **कॉन्फिडेंस इंटरवल**: एलो स्कोर का 95% विश्वास अंतराल। छोटा इंटरवल अधिक विश्वसनीय स्कोर दर्शाता है।
-- **वोट्स**: इस मॉडल को प्राप्त कुल वोटों की संख्या।
-- **प्रदाता**: मॉडल प्रदाता संगठन/कंपनी।
-- **लाइसेंस**: मॉडल लाइसेंस प्रकार (जैसे Proprietary, MIT, Apache 2.0)।
-- **ज्ञान कटऑफ तिथि**: ट्रेनिंग डेटा की अंतिम तिथि। "-" अज्ञात को दर्शाता है।
-
-## डेटा स्रोत और अद्यतन आवृत्ति
-
-यह रैंकिंग [fboulnois/llm-leaderboard-csv](https://github.com/fboulnois/llm-leaderboard-csv) प्रोजेक्ट द्वारा [lmarena.ai](https://lmarena.ai/) के डेटा से स्वचालित रूप से जनरेट की जाती है। GitHub Actions प्रतिदिन इस रैंकिंग को अपडेट करता है।
-
-## अस्वीकरण
-
-यह रिपोर्ट केवल सूचनात्मक उद्देश्यों के लिए है। रैंकिंग डेटा गतिशील है और Chatbot Arena पर उपयोगकर्ता प्राथमिकताओं पर आधारित है। डेटा की शुद्धता मूल स्रोतों पर निर्भर करती है। विभिन्न मॉडल अलग-अलग लाइसेंस के तहत उपलब्ध हैं - उपयोग से पहले आधिकारिक दिशानिर्देश जांचें।
+| रैंक(UB) | रैंक(StyleCtrl) | मॉडल नाम                                                                                                                                   | स्कोर | कॉन्फिडेंस इंटरवल | वोट्स     | प्रदाता               | लाइसेंस               | ज्ञान कटऑफ तिथि   |
+|:---|:---|:---|:---|:---|:---|:---|:---|:---|
+|        1 |               1 | [Gemini-2.5-Pro-Preview-06-05](http://aistudio.google.com/app/prompts/new_chat?model=gemini-2.5-pro-preview-06-05)                        | 1480 | +6/-6   | 8,825   | Google                 | Proprietary             | डेटा उपलब्ध नहीं |
+|        2 |               2 | [Gemini-2.5-Pro-Preview-05-06](http://aistudio.google.com/app/prompts/new_chat?model=gemini-2.5-pro-preview-05-06)                        | 1446 | +5/-5   | 13,025  | Google                 | Proprietary             | डेटा उपलब्ध नहीं |
+|        3 |               2 | [o3-2025-04-16](https://openai.com/index/introducing-o3-and-o4-mini/)                                                                     | 1427 | +4/-4   | 16,019  | OpenAI                 | Proprietary             | डेटा उपलब्ध नहीं |
+|        3 |               3 | [ChatGPT-4o-latest (2025-03-26)](https://x.com/OpenAI/status/1905331956856050135)                                                         | 1426 | +5/-5   | 20,638  | OpenAI                 | Proprietary             | डेटा उपलब्ध नहीं |
+|        3 |               6 | [DeepSeek-R1-0528](https://api-docs.deepseek.com/news/news250528)                                                                         | 1421 | +7/-7   | 8,423   | DeepSeek               | MIT                     | डेटा उपलब्ध नहीं |
+|        3 |               6 | [Gemini-2.5-Flash-Preview-05-20](http://aistudio.google.com/app/prompts/new_chat?model=gemini-2.5-flash-preview-05-20)                    | 1420 | +5/-5   | 14,034  | Google                 | Proprietary             | डेटा उपलब्ध नहीं |
+|        3 |               8 | [Grok-3-Preview-02-24](https://x.ai/blog/grok-3)                                                                                          | 1419 | +4/-5   | 22,643  | xAI                    | Proprietary             | डेटा उपलब्ध नहीं |
+|        5 |               4 | [GPT-4.5-Preview](https://openai.com/index/introducing-gpt-4-5/)                                                                          | 1413 | +4/-4   | 15,271  | OpenAI                 | Proprietary             | डेटा उपलब्ध नहीं |
+|        9 |               8 | [Gemini-2.5-Flash-Preview-04-17](http://aistudio.google.com/app/prompts/new_chat?model=gemini-2.5-flash-preview-04-17)                    | 1398 | +4/-4   | 14,812  | Google                 | Proprietary             | डेटा उपलब्ध नहीं |
+|        9 |              11 | [Qwen3-235B-A22B-no-thinking](https://qwenlm.github.io/blog/qwen3/)                                                                       | 1387 | +7/-6   | 7,837   | Alibaba                | Apache 2.0              | डेटा उपलब्ध नहीं |
+|       10 |               6 | [GPT-4.1-2025-04-14](https://openai.com/index/gpt-4-1/)                                                                                   | 1385 | +6/-4   | 14,635  | OpenAI                 | Proprietary             | डेटा उपलब्ध नहीं |
+|       10 |              12 | [DeepSeek-V3-0324](https://api-docs.deepseek.com/news/news250325)                                                                         | 1384 | +5/-3   | 17,365  | DeepSeek               | MIT                     | डेटा उपलब्ध नहीं |
+|       10 |              12 | [Gemini-2.5-Flash-Lite-Preview-06-17-Thinking](http://aistudio.google.com/app/prompts/new_chat?model=gemini-2.5-flash-lite-preview-06-17) | 1377 | +10/-8  | 3,905   | Google                 | Proprietary             | डेटा उपलब्ध नहीं |
+|       10 |              18 | [Hunyuan-Turbos-20250416](https://cloud.tencent.com/document/product/1729/104753)                                                         | 1373 | +7/-7   | 6,747   | Tencent                | Proprietary             | डेटा उपलब्ध नहीं |
+|       13 |               6 | [Claude Opus 4 (20250514)](https://www.anthropic.com/news/claude-4)                                                                       | 1373 | +4/-4   | 15,254  | Anthropic              | Proprietary             | डेटा उपलब्ध नहीं |
+|       13 |              12 | [DeepSeek-R1](https://api-docs.deepseek.com/news/news250120)                                                                              | 1373 | +4/-5   | 19,430  | DeepSeek               | MIT                     | डेटा उपलब्ध नहीं |
+|       14 |              18 | [Mistral Medium 3](https://mistral.ai/news/mistral-medium-3)                                                                              | 1365 | +4/-5   | 13,385  | Mistral                | Proprietary             | डेटा उपलब्ध नहीं |
+|       16 |              12 | [o1-2024-12-17](https://openai.com/index/o1-and-new-tools-for-developers/)                                                                | 1365 | +3/-3   | 29,038  | OpenAI                 | Proprietary             | 2023/10  |
+|       16 |              22 | [Qwen3-235B-A22B](https://qwenlm.github.io/blog/qwen3/)                                                                                   | 1363 | +5/-6   | 11,429  | Alibaba                | Apache 2.0              | डेटा उपलब्ध नहीं |
+|       16 |              26 | [Grok-3-Mini-beta](https://docs.x.ai/docs/models)                                                                                         | 1361 | +7/-6   | 6,984   | xAI                    | Proprietary             | डेटा उपलब्ध नहीं |
+|       17 |              25 | [Gemini-2.0-Flash-001](https://aistudio.google.com/app/prompts/new_chat?instructions=lmsys-1121&model=gemini-2.0-flash-001)               | 1363 | +3/-3   | 34,803  | Google                 | Proprietary             | डेटा उपलब्ध नहीं |
+|       17 |              12 | [o4-mini-2025-04-16](https://openai.com/index/introducing-o3-and-o4-mini/)                                                                | 1362 | +4/-4   | 14,392  | OpenAI                 | Proprietary             | डेटा उपलब्ध नहीं |
+|       17 |              23 | [Qwen2.5-Max](https://qwenlm.github.io/blog/qwen2.5-max/)                                                                                 | 1360 | +3/-3   | 30,065  | Alibaba                | Proprietary             | डेटा उपलब्ध नहीं |
+|       19 |              26 | [Gemma-3-27B-it](http://aistudio.google.com/app/prompts/new_chat?model=gemma-3-27b-it)                                                    | 1356 | +4/-3   | 22,300  | Google                 | Gemma                   | डेटा उपलब्ध नहीं |
+|       25 |              18 | [o1-preview](https://platform.openai.com/docs/models/o1)                                                                                  | 1350 | +3/-4   | 33,177  | OpenAI                 | Proprietary             | 2023/10  |
+|       25 |              12 | [Claude Sonnet 4 (20250514)](https://www.anthropic.com/news/claude-4)                                                                     | 1346 | +5/-5   | 12,143  | Anthropic              | Proprietary             | डेटा उपलब्ध नहीं |
+|       26 |              25 | [o3-mini-high](https://platform.openai.com/docs/guides/reasoning#reasoning-effort)                                                        | 1340 | +4/-3   | 19,404  | OpenAI                 | Proprietary             | डेटा उपलब्ध नहीं |
+|       26 |              21 | [GPT-4.1-mini-2025-04-14](https://openai.com/index/gpt-4-1/)                                                                              | 1338 | +4/-5   | 13,519  | OpenAI                 | Proprietary             | डेटा उपलब्ध नहीं |
+|       26 |              33 | [Gemma-3-12B-it](http://aistudio.google.com/app/prompts/new_chat?model=gemma-3-12b-it)                                                    | 1336 | +8/-10  | 3,976   | Google                 | Gemma                   | डेटा उपलब्ध नहीं |
+|       27 |              30 | [DeepSeek-V3](https://huggingface.co/deepseek-ai/DeepSeek-V3)                                                                             | 1334 | +4/-4   | 22,841  | DeepSeek               | DeepSeek                | डेटा उपलब्ध नहीं |
+|       28 |              37 | [QwQ-32B](https://huggingface.co/Qwen/QwQ-32B)                                                                                            | 1332 | +4/-5   | 16,438  | Alibaba                | Apache 2.0              | डेटा उपलब्ध नहीं |
+|       29 |              32 | [Gemini-2.0-Flash-Lite](https://aistudio.google.com/prompts/new_chat?model=gemini-2.0-flash-lite)                                         | 1328 | +3/-3   | 26,104  | Google                 | Proprietary             | डेटा उपलब्ध नहीं |
+|       29 |              36 | [GLM-4-Plus-0111](https://bigmodel.cn/dev/howuse/glm-4)                                                                                   | 1326 | +6/-9   | 6,028   | Zhipu                  | Proprietary             | डेटा उपलब्ध नहीं |
+|       29 |              33 | [Qwen-Plus-0125](https://www.alibabacloud.com/help/en/model-studio/developer-reference/what-is-qwen-llm)                                  | 1326 | +6/-7   | 6,055   | Alibaba                | Proprietary             | डेटा उपलब्ध नहीं |
+|       29 |              33 | [Command A (03-2025)](https://cohere.com/blog/command-a)                                                                                  | 1325 | +6/-3   | 21,092  | Cohere                 | CC-BY-NC-4.0            | डेटा उपलब्ध नहीं |
+|       30 |              38 | [Step-2-16K-Exp](https://platform.stepfun.com/docs/llm/text)                                                                              | 1320 | +9/-7   | 5,126   | StepFun                | Proprietary             | डेटा उपलब्ध नहीं |
+|       30 |              31 | [Hunyuan-TurboS-20250226](https://cloud.tencent.com/document/product/1729/104753)                                                         | 1318 | +11/-10 | 2,452   | Tencent                | Proprietary             | डेटा उपलब्ध नहीं |
+|       31 |              38 | [Llama-3.3-Nemotron-Super-49B-v1](https://huggingface.co/nvidia/Llama-3_3-Nemotron-Super-49B-v1)                                          | 1312 | +15/-13 | 2,371   | Nvidia                 | Nvidia                  | डेटा उपलब्ध नहीं |
+|       33 |              32 | [o3-mini](https://openai.com/index/openai-o3-mini/)                                                                                       | 1321 | +3/-2   | 33,256  | OpenAI                 | Proprietary             | डेटा उपलब्ध नहीं |
+|       34 |              39 | [o1-mini](https://platform.openai.com/docs/models/o1)                                                                                     | 1319 | +3/-3   | 54,951  | OpenAI                 | Proprietary             | 2023/10  |
+|       34 |              33 | [Gemini-1.5-Pro-002](https://aistudio.google.com/app/prompts/new_chat?instructions=lmsys&model=gemini-1.5-pro-002)                        | 1317 | +2/-3   | 58,645  | Google                 | Proprietary             | डेटा उपलब्ध नहीं |
+|       34 |              18 | [Claude 3.7 Sonnet (thinking-32k)](https://www.anthropic.com/news/claude-3-7-sonnet)                                                      | 1315 | +5/-3   | 22,385  | Anthropic              | Proprietary             | डेटा उपलब्ध नहीं |
+|       34 |              33 | [Hunyuan-Turbo-0110](https://cloud.tencent.com/document/product/1729/104753)                                                              | 1311 | +11/-12 | 2,510   | Tencent                | Proprietary             | डेटा उपलब्ध नहीं |
+|       40 |              56 | [Gemma-3n-e4b-it](http://aistudio.google.com/app/prompts/new_chat?model=gemma-3n-e4b-it)                                                  | 1303 | +9/-9   | 3,913   | Google                 | Gemma                   | डेटा उपलब्ध नहीं |
+|       41 |              21 | [Claude 3.7 Sonnet](https://www.anthropic.com/news/claude-3-7-sonnet)                                                                     | 1307 | +4/-3   | 26,866  | Anthropic              | Proprietary             | डेटा उपलब्ध नहीं |
+|       42 |              45 | [Grok-2-08-13](https://x.ai/blog/grok-2)                                                                                                  | 1303 | +2/-3   | 67,084  | xAI                    | Proprietary             | 2024/3   |
+|       42 |              48 | [Yi-Lightning](https://platform.lingyiwanwu.com/docs#%E6%A8%A1%E5%9E%8B%E4%B8%8E%E8%AE%A1%E8%B4%B9)                                       | 1302 | +3/-3   | 28,968  | 01 AI                  | Proprietary             | डेटा उपलब्ध नहीं |
+|       43 |              35 | [GPT-4o-2024-05-13](https://openai.com/index/hello-gpt-4o/)                                                                               | 1300 | +2/-2   | 117,747 | OpenAI                 | Proprietary             | 2023/10  |
+|       43 |              25 | [Claude 3.5 Sonnet (20241022)](https://www.anthropic.com/news/3-5-models-and-computer-use)                                                | 1299 | +2/-2   | 74,230  | Anthropic              | Proprietary             | 2024/4   |
+|       43 |              57 | [Qwen2.5-plus-1127](https://help.aliyun.com/zh/model-studio/getting-started/models?spm=a2c4g.11186623.0.i7)                               | 1297 | +5/-7   | 10,

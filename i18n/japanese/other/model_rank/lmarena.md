@@ -3,19 +3,19 @@
 このドキュメントはAIによって中国語から翻訳されており、まだレビューされていません。
 {% endhint %}
 
-# LLM Arena ランキング (リアルタイム更新)
+# LLM Arena リーダーボード (リアルタイム更新)
 
-これは Chatbot Arena (lmarena.ai) のデータに基づいた自動生成されるランキングです。
+これはChatbot Arena (lmarena.ai)のデータに基づくリーダーボードで、自動化プロセスによって生成されています。
 
-> **データ更新時刻**: 2025-06-21 09:44:44 UTC / 2025-06-21 17:44:44 CST (北京時間)
+> **データ更新時刻**: 2025-06-21 11:41:45 UTC / 2025-06-21 19:41:45 CST (北京時間)
 
 {% hint style="info" %}
-ランキング内の **モデル名** をクリックすると、詳細情報または試用ページに遷移します。
+ランキング内の**モデル名**をクリックすると、詳細情報や試用ページに移動します。
 {% endhint %}
 
-## ランキング
+## リーダーボード
 
-|   順位(UB) |   順位(StyleCtrl) | モデル名                                                                                                                                       |   スコア | 信頼区間    | 投票数      | プロバイダー                    | ライセンス                    | 知識カットオフ日   |
+|   ランク(UB) |   ランク(StyleCtrl) | モデル名                                                                                                                                       |   スコア | 信頼区間    | 投票数      | プロバイダー                    | ライセンス                    | ナレッジカットオフ   |
 |:---|:---|:---|:---|:---|:---|:---|:---|:---|
 |        1 |               1 | [Gemini-2.5-Pro-Preview-06-05](http://aistudio.google.com/app/prompts/new_chat?model=gemini-2.5-pro-preview-06-05)                        | 1480 | +6/-6   | 8,825   | Google                 | Proprietary             | データなし     |
 |        2 |               2 | [Gemini-2.5-Pro-Preview-05-06](http://aistudio.google.com/app/prompts/new_chat?model=gemini-2.5-pro-preview-05-06)                        | 1446 | +5/-5   | 13,025  | Google                 | Proprietary             | データなし     |
@@ -44,8 +44,8 @@
 |       25 |              18 | [o1-preview](https://platform.openai.com/docs/models/o1)                                                                                  | 1350 | +3/-4   | 33,177  | OpenAI                 | Proprietary             | 2023/10  |
 |       25 |              12 | [Claude Sonnet 4 (20250514)](https://www.anthropic.com/news/claude-4)                                                                     | 1346 | +5/-5   | 12,143  | Anthropic              | Proprietary             | データなし     |
 |       26 |              25 | [o3-mini-high](https://platform.openai.com/docs/guides/reasoning#reasoning-effort)                                                        | 1340 | +4/-3   | 19,404  | OpenAI                 | Proprietary             | データなし     |
-|       26 |              21 | [GPT-4.1-mini-2025-04-14](https://openai.com/index/gpt-4-极1/)                                                                              | 1338 | +4/-5   | 13,519  | OpenAI                 | Proprietary             | データなし     |
-|       26 |              33 | [Gemma-3-12B-it](http://aistudio.google.com/app/prompts/new_chat?model=gemma-3-12b-it)                                                    | 1336 | +8/-10  | 3,976  极 | Google                 | Gemma                   | データなし     |
+|       26 |              21 | [GPT-4.1-mini-2025-04-14](https://open极ai.com/index/gpt-4-1/)                                                                              | 1338 | +4/-5   | 13,519  | OpenAI                 | Proprietary             | データなし     |
+|       26 |              33 | [Gemma-3-12B-it](http://aistudio.google.com/app/prompts/new_chat?model=gemma-3-12b-it)                                                    | 133极6 | +8/-10  | 3,976   | Google                 | Gemma                   | データなし     |
 |       27 |              30 | [DeepSeek-V3](https://huggingface.co/deepseek-ai/DeepSeek-V3)                                                                             | 1334 | +4/-4   | 22,841  | DeepSeek               | DeepSeek                | データなし     |
 |       28 |              37 | [QwQ-32B](https://huggingface.co/Qwen/QwQ-32B)                                                                                            | 1332 | +4/-5   | 16,438  | Alibaba                | Apache 2.0              | データなし     |
 |       29 |              32 | [Gemini-2.0-Flash-Lite](https://aistudio.google.com/prompts/new_chat?model=gemini-2.0-flash-lite)                                         | 1328 | +3/-3   | 26,104  | Google                 | Proprietary             | データなし     |
@@ -54,9 +54,9 @@
 |       29 |              33 | [Command A (03-2025)](https://cohere.com/blog/command-a)                                                                                  | 1325 | +6/-3   | 21,092  | Cohere                 | CC-BY-NC-4.0            | データなし     |
 |       30 |              38 | [Step-2-16K-Exp](https://platform.stepfun.com/docs/llm/text)                                                                              | 1320 | +9/-7   | 5,126   | StepFun                | Proprietary             | データなし     |
 |       30 |              31 | [Hunyuan-TurboS-20250226](https://cloud.tencent.com/document/product/1729/104753)                                                         | 1318 | +11/-10 | 2,452   | Tencent                | Proprietary             | データなし     |
-|       31 |              38 | [Llama-3.3-Nemotron-Super-49B-v1](https://huggingface.co/nvidia/Llama-3_3-Nemotron-Super-49B-v1)                                          | 1312 | +15/-13 | 2,371   | Nvidia                 | Nvidia                  | データなし     |
+|       31 |              38 | [Llama-3.3-Nemotron-Super-49B-v1](极ttps://huggingface.co/nvidia/Llama-3_3-Nemotron-Super-49B-v1)                                          | 1312 | +15/-13 | 2,371   | Nvidia                 | Nvidia                  | データなし     |
 |       33 |              32 | [o3-mini](https://openai.com/index/openai-o3-mini/)                                                                                       | 1321 | +3/-2   | 33,256  | OpenAI                 | Proprietary             | データなし     |
-|       34 |              39 | [o1-mini](极platform.openai.com/docs/models/o1)                                                                                     | 1319 | +3/-3   | 54,951  | OpenAI                 | Proprietary             | 2023/10  |
+|       34 |              39 | [o1-mini](https://platform.openai.com/docs/models/o1)                                                                                     | 1319 | +3/-3   | 54,951  | OpenAI                 | Proprietary             | 2023/10  |
 |       34 |              33 | [Gemini-1.5-Pro-002](https://aistudio.google.com/app/prompts/new_chat?instructions=lmsys&model=gemini-1.5-pro-002)                        | 1317 | +2/-3   | 58,645  | Google                 | Proprietary             | データなし     |
 |       34 |              18 | [Claude 3.7 Sonnet (thinking-32k)](https://www.anthropic.com/news/claude-3-7-sonnet)                                                      | 1315 | +5/-3   | 22,385  | Anthropic              | Proprietary             | データなし     |
 |       34 |              33 | [Hunyuan-Turbo-0110](https://cloud.tencent.com/document/product/1729/104753)                                                              | 1311 | +11/-12 | 2,510   | Tencent                | Proprietary             | データなし     |
@@ -72,4 +72,4 @@
 |       48 |              45 | [Hunyuan-Large-2025-02-10](https://cloud.tencent.com/document/product/1729/104753)                                                        | 1287 | +11/-8  | 3,856   | Tencent                | Proprietary             | データなし     |
 |       50 |              58 | [Athene-v2-Chat-72B](https://huggingface.co/Nexusflow/Athene-V2-Chat)                                                                     | 1291 | +3/-4   | 26,074  | NexusFlow              | NexusFlow               | データなし     |
 |       50 |              56 | [GLM-4-Plus](https://bigmodel.cn/dev/howuse/glm-4)                                                                                        | 1289 | +3/-3   | 27,788  | Zhipu AI               | Proprietary             | データなし     |
-|       50 |              43 | [Llama-4-Maverick-17B-128E-Instruct](https://huggingface.co/meta-llama/Llama-4-Maverick-17B-128E-Instruct)                                | 1288 | +5/-4   | 14,164
+|       50 |              43 | [Llama-4-Maverick-17B-128E-Instruct](https://huggingface.co/meta-llama/Llama-4-Maverick-17B-128E-Instruct)
