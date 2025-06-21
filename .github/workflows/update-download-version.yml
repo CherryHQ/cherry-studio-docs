@@ -65,10 +65,6 @@ jobs:
       - name: Get current and previous commit SHAs
         id: get_shas
         run: |
-          echo "Current working directory:"
-          pwd
-          echo "Files in current directory:"
-          ls -la
           AFTER_SHA=$(git rev-parse HEAD)
           if git rev-parse --verify HEAD^ >/dev/null 2>&1; then
             BEFORE_SHA=$(git rev-parse HEAD^)
