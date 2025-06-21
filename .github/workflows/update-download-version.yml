@@ -9,6 +9,8 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+    outputs:
+      latest_sha: ${{ steps.get_latest_sha.outputs.sha }}
 
     steps:
       - name: Checkout repository
@@ -33,6 +35,7 @@ jobs:
         run: python .github/scripts/update_download_version.py
 
       - name: Commit and push if changes
+        id: commit_push
         if: success()
         run: |
           git diff --quiet cherrystudio/download.md || \
@@ -44,6 +47,10 @@ jobs:
             git push
           )
           echo "No changes to commit or changes committed."
+      - name: Get latest SHA after push
+        id: get_latest_sha
+        if: success()
+        run: echo "sha=$(git rev-parse HEAD)" >> $GITHUB_OUTPUT
 
   dispatch-translation-workflow:
     needs: update-version
@@ -53,6 +60,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
+          ref: ${{ needs.update-version.outputs.latest_sha }} # 检出 update-version job 推送后的最新提交
           fetch-depth: 0 # 获取完整的历史记录，以便进行文件差异比较
       - name: Get current and previous commit SHAs
         id: get_shas
