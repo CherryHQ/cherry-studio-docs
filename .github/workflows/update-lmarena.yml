@@ -12,6 +12,8 @@ on:
 jobs:
   update-data:
     runs-on: ubuntu-latest # 使用最新的 Ubuntu 操作系统环境
+    outputs:
+      latest_sha: ${{ steps.get_latest_sha.outputs.sha }}
 
     steps:
       - name: Checkout repository # 检出您的仓库代码
@@ -36,6 +38,7 @@ jobs:
         # 如果脚本没有更新文件或出错（返回非0），则此步骤失败，后续步骤可能不会运行
 
       - name: Commit and push if changes # 如果文件有变化，则提交并推送
+        id: commit_push
         # 只有当上一步（运行脚本）成功时才执行此步骤
         if: success() # 确保上一步没有因为错误而失败
         run: |
@@ -50,6 +53,10 @@ jobs:
             git push
           )
           echo "No changes to commit or changes committed."
+      - name: Get latest SHA after push
+        id: get_latest_sha
+        if: success()
+        run: echo "sha=$(git rev-parse HEAD)" >> $GITHUB_OUTPUT
 
   dispatch-translation-workflow:
     needs: update-data
@@ -59,6 +66,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
+          ref: ${{ needs.update-data.outputs.latest_sha }} # 检出 update-data job 推送后的最新提交
           fetch-depth: 0 # 获取完整的历史记录，以便进行文件差异比较
       - name: Get current and previous commit SHAs
         id: get_shas
