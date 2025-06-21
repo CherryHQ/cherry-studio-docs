@@ -75,6 +75,6 @@ jobs:
         uses: peter-evans/repository-dispatch@v3
         with:
           token: ${{ secrets.REPO_DISPATCH_TOKEN }} # 需要一个具有 repo 权限的 token
-          repository: tommyzhang100504/cherry-studio-docs # 触发自身仓库的 workflow
+          repository: CherryHQ/cherry-studio-docs # 触发自身仓库的 workflow
           event-type: trigger-translation # 触发 translate-docs.yml 的 trigger-translation 事件
           client-payload: '{"before_sha": "${{ steps.get_shas.outputs.before_sha }}", "after_sha": "${{ steps.get_shas.outputs.after_sha }}"}'
