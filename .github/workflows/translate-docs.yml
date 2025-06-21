@@ -9,7 +9,7 @@ on:
       - '.gitbook/**'
   workflow_dispatch: # 允许手动触发
   repository_dispatch: # 允许通过 repository_dispatch 触发
-    types: [trigger-translation] # 接收来自其他仓库的 trigger-translation 事件
+    types: [trigger-translation]
 
 jobs:
   translate:
