@@ -81,8 +81,8 @@ def get_changed_files():
         files_to_process.update(_get_all_relevant_files())
         logging.info(f"Found {len(files_to_process)} files for processing during workflow_dispatch.")
 
-    elif event_name == 'push':
-        logging.info("Workflow triggered by push event. Determining changed files using git diff.")
+    elif event_name == 'push' or event_name == 'repository_dispatch':
+        logging.info(f"Workflow triggered by {event_name} event. Determining changed files using git diff.")
         
         before_sha = os.environ.get('PUSH_BEFORE_SHA')
         current_sha = os.environ.get('PUSH_AFTER_SHA')

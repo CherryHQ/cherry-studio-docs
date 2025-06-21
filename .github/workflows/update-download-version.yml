@@ -13,6 +13,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # 获取完整的历史记录，以便进行文件差异比较
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -42,3 +44,31 @@ jobs:
             git push
           )
           echo "No changes to commit or changes committed."
+
+  dispatch-translation-workflow:
+    needs: update-version
+    if: success() # 确保 update-version job 成功
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # 获取完整的历史记录，以便进行文件差异比较
+      - name: Get current and previous commit SHAs
+        id: get_shas
+        run: |
+          AFTER_SHA=$(git rev-parse HEAD)
+          if git rev-parse --verify HEAD^ >/dev/null 2>&1; then
+            BEFORE_SHA=$(git rev-parse HEAD^)
+          else
+            BEFORE_SHA=$AFTER_SHA # 如果没有父提交，则 before_sha 等于 after_sha
+          fi
+          echo "before_sha=$BEFORE_SHA" >> $GITHUB_OUTPUT
+          echo "after_sha=$AFTER_SHA" >> $GITHUB_OUTPUT
+      - name: Dispatch translate-docs workflow
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          token: ${{ secrets.REPO_DISPATCH_TOKEN }} # 需要一个具有 repo 权限的 token
+          repository: CherryHQ/cherry-studio-docs # 触发自身仓库的 workflow
+          event-type: trigger-translation # 触发 translate-docs.yml 的 trigger-translation 事件
+          client-payload: '{"before_sha": "${{ steps.get_shas.outputs.before_sha }}", "after_sha": "${{ steps.get_shas.outputs.after_sha }}"}'

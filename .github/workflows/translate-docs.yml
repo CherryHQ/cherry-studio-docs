@@ -8,6 +8,8 @@ on:
       - '**/*.md'
       - '.gitbook/**'
   workflow_dispatch: # 允许手动触发
+  repository_dispatch: # 允许通过 repository_dispatch 触发
+    types: [trigger-translation] # 接收来自其他仓库的 trigger-translation 事件
 
 jobs:
   translate:
@@ -38,8 +40,8 @@ jobs:
         env:
           GEMINI_API_KEY: ${{ secrets.AIHUBMIX }} # 从GitHub Secrets获取API密钥
           DEEPSEEK_API_KEY: ${{ secrets.PPIO }} # 从GitHub Secrets获取DeepSeek API密钥
-          PUSH_BEFORE_SHA: ${{ github.event.before }} # 获取推送前的SHA
-          PUSH_AFTER_SHA: ${{ github.sha }} # 获取推送后的SHA
+          PUSH_BEFORE_SHA: ${{ github.event_name == 'push' && github.event.before || github.event.client_payload.before_sha }}
+          PUSH_AFTER_SHA: ${{ github.event_name == 'push' && github.sha || github.event.client_payload.after_sha }}
         id: run-translation # 添加 id 以便引用输出
         run: python .github/scripts/translate_docs.py ${{ matrix.lang_code }}
 
