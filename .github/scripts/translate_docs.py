@@ -372,7 +372,7 @@ def translate_text(text, target_lang_code):
             api_key=GEMINI_API_KEY,
             http_options={"base_url": "https://aihubmix.com/gemini"},
         )
-        model_name = "gemini-2.5-pro-preview-06-05"
+        model_name = "gemini-2.5-pro"
 
         contents = [
             types.Content(role="user", parts=[types.Part.from_text(text=f"请将以下中文内容翻译成English：\n\n{EXAMPLE_CHINESE_README}")]),
