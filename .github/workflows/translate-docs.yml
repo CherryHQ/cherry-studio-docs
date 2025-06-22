@@ -18,7 +18,7 @@ jobs:
       contents: write # 允许写入仓库内容
     strategy:
       matrix:
-        lang_code: ["en", "es", "fr", "zh-tw", "el", ""ru", "pt", "ja"]
+        lang_code: ["en", "es", "fr", "zh-tw", "el", "ru", "pt", "ja"]
 
     steps:
       - name: Checkout repository
