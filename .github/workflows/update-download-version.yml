@@ -3,6 +3,12 @@ name: Update Download Version
 on:
   repository_dispatch:
     types: [update-download-version]
+  workflow_dispatch:
+    inputs:
+      version:
+        description: '要更新的版本号'
+        required: true
+        type: string
 
 jobs:
   update-version:
@@ -31,7 +37,7 @@ jobs:
       - name: Run Update Download Version Script
         id: run_script
         env:
-          NEW_VERSION: ${{ github.event.client_payload.version }}
+          NEW_VERSION: ${{ github.event.client_payload.version || github.event.inputs.version }}
         run: python .github/scripts/update_download_version.py
 
       - name: Commit and push if changes
@@ -43,7 +49,7 @@ jobs:
             git config user.name "github-actions[bot]"
             git config user.email "github-actions[bot]@users.noreply.github.com"
             git add cherrystudio/download.md
-            git commit -m "Auto: Update download links to ${{ github.event.client_payload.version }}"
+            git commit -m "Auto: Update download links to ${{ github.event.client_payload.version || github.event.inputs.version }}"
             git push
           )
           echo "No changes to commit or changes committed."
