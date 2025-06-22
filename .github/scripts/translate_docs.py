@@ -301,6 +301,12 @@ LANG_CONFIG = {
         "name": "繁體中文",
         "model": "deepseek",
         "warning_text": "此文件由 AI 從中文翻譯而來，尚未經過審閱。"
+    },
+    "el": {
+        "dir": "greek",
+        "name": "Ελληνικά",
+        "model": "deepseek",
+        "warning_text": "Αυτό το έγγραφο μεταφράστηκε από τα Κινεζικά με AI και δεν έχει ακόμη ελεγχθεί."
     }
 }
 # 示例中文 README.md 内容，用于 Few-shot 翻译
