@@ -125,22 +125,25 @@ def get_changed_files():
         files_to_process.update(_get_all_relevant_files())
         logging.info(f"Found {len(files_to_process)} files for processing after unsupported event fallback.")
 
-    # 过滤掉i18n目录下的文件，因为它们是翻译目标，不是源文件
-    files_to_process = {f for f in files_to_process if not str(f).startswith('i18n/')}
-    files_to_delete = {f for f in files_to_delete if not str(f).startswith('i18n/')}
+    # 过滤掉i18n和.github目录下的文件，因为它们是翻译目标或配置文件，不是源文件
+    files_to_process = {f for f in files_to_process if not str(f).startswith('i18n/') and not str(f).startswith('.github/')}
+    files_to_delete = {f for f in files_to_delete if not str(f).startswith('i18n/') and not str(f).startswith('.github/')}
     
-    logging.info(f"Final list of {len(files_to_process)} files to process (after i18n filter): {files_to_process}")
-    logging.info(f"Final list of {len(files_to_delete)} files to delete (after i18n filter): {files_to_delete}")
+    logging.info(f"Final list of {len(files_to_process)} files to process (after i18n and .github filter): {files_to_process}")
+    logging.info(f"Final list of {len(files_to_delete)} files to delete (after i18n and .github filter): {files_to_delete}")
     
     return files_to_process, files_to_delete
 
 def _get_all_relevant_files():
     """
-    扫描整个仓库，获取所有相关的Markdown和GitBook文件。
+    扫描整个仓库，获取所有相关的Markdown和GitBook文件，并排除i18n和.github目录。
     """
     relevant_files = set()
     base_path = Path('.')
     for root, _, files in os.walk(base_path):
+        # 排除i18n和.github目录
+        if str(Path(root)).startswith('i18n/') or str(Path(root)).startswith('.github/'):
+            continue
         for file in files:
             file_path = Path(root) / file
             if file_path.suffix == '.md' or '.gitbook' in str(file_path):
@@ -188,7 +191,7 @@ LANG_CONFIG = {
     "en": {
         "dir": "english",
         "name": "English",
-        "model": "gemini",
+        "model": "deepseek",
         "warning_text": "This document was translated from Chinese by AI and has not yet been reviewed."
     },
     "es": {
@@ -298,6 +301,12 @@ LANG_CONFIG = {
         "name": "繁體中文",
         "model": "deepseek",
         "warning_text": "此文件由 AI 從中文翻譯而來，尚未經過審閱。"
+    },
+    "el": {
+        "dir": "greek",
+        "name": "Ελληνικά",
+        "model": "deepseek",
+        "warning_text": "Αυτό το έγγραφο μεταφράστηκε από τα Κινεζικά με AI και δεν έχει ακόμη ελεγχθεί."
     }
 }
 # 示例中文 README.md 内容，用于 Few-shot 翻译
@@ -512,66 +521,37 @@ def process_markdown_file(source_path, target_lang_code):
         logging.error(f"An unexpected error occurred while processing {source_path}: {e}")
         return False
 
-def sync_gitbook_assets(target_lang_code):
+def sync_gitbook_assets_full(target_lang_code):
     """
-    同步.gitbook/assets/目录下的图片和其他资产到i18n对应语言目录。
-    此函数会检查文件哈希值，只复制发生变化的文件，以优化性能和Git历史。
-    返回 True 表示成功，False 表示失败。
+    执行.gitbook/assets/目录的全量同步。
+    此函数会先删除目标语言中的旧.gitbook/assets目录，然后将整个源.gitbook/assets目录复制过去。
+    这种“先删后拷”的策略确保了最终状态的完全一致。
     """
-    logging.info(f"Starting asset synchronization for '.gitbook/assets/' to '{LANG_CONFIG[target_lang_code]['dir']}' directory.")
-    source_assets_dir = Path('.gitbook') / 'assets'
-    target_assets_dir = Path('i18n') / LANG_CONFIG[target_lang_code]["dir"] / '.gitbook' / 'assets'
+    lang_dir = LANG_CONFIG[target_lang_code]['dir']
+    logging.info(f"Starting full synchronization for '.gitbook/assets/' to '{lang_dir}' directory.")
     
-    sync_success = True # 新增：跟踪同步状态
+    source_assets_dir = Path('.gitbook') / 'assets'
+    target_assets_dir = Path('i18n') / lang_dir / '.gitbook' / 'assets'
+    
+    if not source_assets_dir.is_dir():
+        logging.warning(f"Source directory '{source_assets_dir}' not found. Skipping synchronization.")
+        return True # 源目录不存在，无需同步，视为成功
 
-    if not source_assets_dir.exists():
-        logging.warning(f"Source assets directory not found: '{source_assets_dir}'. Skipping asset synchronization.")
-        return sync_success # 此时仍为 True，因为没有需要同步的源
-
-    # 确保目标目录存在，如果不存在则创建
     try:
-        os.makedirs(target_assets_dir, exist_ok=True)
+        # 1. 如果目标目录存在，则先删除
+        if target_assets_dir.exists():
+            logging.info(f"Removing existing target directory: '{target_assets_dir}'")
+            shutil.rmtree(target_assets_dir)
+        
+        # 2. 完整地复制源目录到目标位置
+        logging.info(f"Copying '{source_assets_dir}' to '{target_assets_dir}'")
+        shutil.copytree(source_assets_dir, target_assets_dir)
+        
+        logging.info(f"Successfully synced '.gitbook/assets' directory for language '{lang_dir}'.")
+        return True
     except Exception as e:
-        logging.error(f"Error creating target assets directory '{target_assets_dir}': {e}")
-        return False # 创建目录失败
-
-    # 遍历源目录下的所有文件和子目录
-    for item in os.listdir(source_assets_dir):
-        s = source_assets_dir / item
-        d = target_assets_dir / item
-        try:
-            if s.is_file():
-                # 检查文件哈希值，如果不同则复制
-                current_hash = get_file_hash(d)
-                source_hash = get_file_hash(s)
-                if current_hash != source_hash:
-                    shutil.copy2(s, d)
-                    logging.info(f"Copied asset: '{s}' to '{d}'")
-                else:
-                    logging.debug(f"Asset unchanged: {s}")
-            elif s.is_dir():
-                # 递归复制目录，逐个文件同步，避免不必要的Git历史更改
-                logging.info(f"Recursively syncing directory: '{s}' to '{d}'.")
-                for root, _, files in os.walk(s):
-                    for file in files:
-                        source_file_path = Path(root) / file
-                        relative_file_path = source_file_path.relative_to(source_assets_dir)
-                        target_file_path = target_assets_dir / relative_file_path
-                        
-                        # 确保目标子目录存在
-                        os.makedirs(target_file_path.parent, exist_ok=True)
-                        
-                        current_hash = get_file_hash(target_file_path)
-                        source_hash = get_file_hash(source_file_path)
-                        if current_hash != source_hash:
-                            shutil.copy2(source_file_path, target_file_path)
-                            logging.info(f"Copied asset: '{source_file_path}' to '{target_file_path}'.")
-                        else:
-                            logging.debug(f"Asset unchanged: '{source_file_path}'.")
-        except Exception as e:
-            logging.error(f"Error syncing asset '{s}' to '{d}': {e}")
-            sync_success = False # 任何一个文件同步失败都算失败
-    return sync_success
+        logging.error(f"Error during full sync of '.gitbook/assets' for language '{lang_dir}': {e}")
+        return False
 
 def main():
     """
@@ -587,70 +567,63 @@ def main():
         logging.error(f"Unsupported language code provided: {target_lang_code}")
         exit(1)
 
-    overall_translation_status = True # 新增：跟踪当前语言的整体翻译状态
+    overall_translation_status = True
     
     files_to_process, files_to_delete = get_changed_files()
     logging.info(f"Files identified for processing: {files_to_process}")
     logging.info(f"Files identified for deletion: {files_to_delete}")
     
-    md_files_to_translate = {f for f in files_to_process if f.suffix == '.md'}
-    gitbook_assets_to_sync = {f for f in files_to_process if '.gitbook' in str(f) and f.suffix != '.md'}
-    logging.info(f"Markdown files to translate: {md_files_to_translate}")
-    logging.info(f"GitBook assets to sync: {gitbook_assets_to_sync}")
-    gitbook_dirs_to_delete = {f for f in files_to_delete if '.gitbook' in str(f) and f.is_dir()}
-    logging.info(f"GitBook directories to delete: {gitbook_dirs_to_delete}")
-    
-    # 只处理当前 matrix job 对应的语言
     lang_code = target_lang_code
     config = LANG_CONFIG[lang_code]
-
-    logging.info(f"--- Initiating translation and synchronization process for language: '{config['name']}' ({lang_code}) ---")
-    
     target_lang_dir = Path('i18n') / config["dir"]
 
-    # 处理需要删除的文件和目录
+    logging.info(f"--- Initiating translation and synchronization for language: '{config['name']}' ({lang_code}) ---")
+
+    # 1. 判断并执行 .gitbook/assets/ 目录的全量同步
+    gitbook_assets_changed = any('.gitbook/assets/' in str(p) for p in files_to_process.union(files_to_delete))
+    if gitbook_assets_changed:
+        logging.info("Changes detected in '.gitbook/assets/' directory. Triggering full synchronization.")
+        if not sync_gitbook_assets_full(lang_code):
+            overall_translation_status = False
+        
+        # 从待处理/待删除列表中移除已同步的.gitbook/assets文件
+        files_to_process = {f for f in files_to_process if not str(f).startswith('.gitbook/assets/')}
+        files_to_delete = {f for f in files_to_delete if not str(f).startswith('.gitbook/assets/')}
+        logging.info(f"After .gitbook/assets sync, remaining files to process: {files_to_process}")
+        logging.info(f"After .gitbook/assets sync, remaining files to delete: {files_to_delete}")
+    else:
+        logging.info("No changes detected in '.gitbook/assets/' directory. Skipping full synchronization.")
+
+    # 2. 处理剩余的需要删除的文件
     if files_to_delete:
-        logging.info(f"Processing {len(files_to_delete)} files/directories marked for deletion for language '{lang_code}'.")
-    for deleted_file_path in files_to_delete:
-        target_path = target_lang_dir / deleted_file_path
-        logging.info(f"Attempting to delete: '{target_path}'")
-        if target_path.exists():
+        logging.info(f"Processing {len(files_to_delete)} remaining files for deletion.")
+    for deleted_path in files_to_delete:
+        target_path = target_lang_dir / deleted_path
+        if target_path.exists() and target_path.is_file():
             try:
-                if target_path.is_file():
-                    os.remove(target_path)
-                    logging.info(f"Successfully deleted translated file: '{target_path}'.")
-                elif target_path.is_dir():
-                    shutil.rmtree(target_path)
-                    logging.info(f"Successfully deleted translated directory: '{target_path}'.")
+                os.remove(target_path)
+                logging.info(f"Successfully deleted file: '{target_path}'.")
             except Exception as e:
                 logging.error(f"Error deleting '{target_path}': {e}")
-                overall_translation_status = False # 删除失败也算失败
+                overall_translation_status = False
         else:
-            logging.info(f"Target file/directory not found, skipping deletion: '{target_path}'.")
+            logging.info(f"Target file not found or is a directory, skipping deletion: '{target_path}'.")
 
-    # 翻译Markdown文件
+    # 3. 翻译剩余的 Markdown 文件 (包括 .gitbook/includes/*.md)
+    md_files_to_translate = {f for f in files_to_process if f.suffix == '.md'}
     if md_files_to_translate:
-        logging.info(f"Translating {len(md_files_to_translate)} Markdown files for language '{lang_code}'.")
+        logging.info(f"Translating {len(md_files_to_translate)} Markdown files.")
         for md_file in md_files_to_translate:
-            success = process_markdown_file(md_file, lang_code)
-            if not success:
-                logging.warning(f"Translation failed for '{md_file}'. This file might need manual review or retry.")
-                overall_translation_status = False # 翻译失败
-        
-    # 同步GitBook资产
-    # 如果有GitBook资产需要同步，或者有GitBook目录被删除，则触发整个assets目录的同步
-    if gitbook_assets_to_sync or gitbook_dirs_to_delete:
-        logging.info(f"Triggering GitBook assets synchronization for language '{lang_code}'.")
-        sync_success = sync_gitbook_assets(lang_code) # 捕获同步结果
-        if not sync_success:
-            overall_translation_status = False # 同步失败
+            if not process_markdown_file(md_file, lang_code):
+                logging.warning(f"Translation failed for '{md_file}'.")
+                overall_translation_status = False
     else:
-        logging.info(f"No GitBook assets or directories detected for synchronization for language '{lang_code}'.")
-    
+        logging.info("No Markdown files to translate.")
+            
     final_status_message = "成功" if overall_translation_status else "失败"
     logging.info(f"--- Completed translation and synchronization for language: '{config['name']}' ({lang_code}). Status: {final_status_message} ---")
 
-    # 输出翻译状态和语言目录名，供 GitHub Actions 使用 (推荐方式)
+    # 输出翻译状态和语言目录名，供 GitHub Actions 使用
     with open(os.environ['GITHUB_OUTPUT'], 'a') as f:
         f.write(f"translation_status={'success' if overall_translation_status else 'failure'}\n")
         f.write(f"lang_dir={config['dir']}\n")
