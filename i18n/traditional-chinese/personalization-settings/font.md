@@ -1,0 +1,11 @@
+---
+icon: book-font
+---
+
+{% hint style="warning" %}
+此文件由 AI 從中文翻譯而來，尚未經過審閱。
+{% endhint %}
+
+# 字體推薦
+
+<table data-column-title-hidden data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-type="content-ref"></th><th data-hidden data-type="content-ref"></th><th data-hidden data-type="files"></th><th data-hidden data-card-target data-type="content-ref"></th><th data-hidden data-card-cover data-type="files"></th><th data-hidden data-type="files"></th><th data-hidden><select></select></th><th data-hidden data-type="rating" data-max="5"></th><th data-hidden data-type="files"></th><th data-hidden data-type="rating" data-max="5"></th><th data-hidden data-type="content-ref"></th><th data-hidden data-type="files"></th><th data-hidden data-type="users" data-multiple></th><th data-hidden><select></select></th><th data-hidden data-type="users" data-multiple></th><th data-hidden data-type="checkbox"></th></tr></thead><tbody><tr><td><p><mark style="color:blue;"><strong>Monaspace</strong></mark></p><p><code>英文字體</code> <code>可商用</code></p></td><td>GitHub 推出了名為 Monaspace 的開源字體家族，擁有五種風格可選：Neon（現代風格）、Argon（人文風格）、Xenon（襯線風格）、Radon（手寫風格）、Krypton（機械風格）。</td><td></td><td></td><td></td><td></td><td><a href="https://github.com/githubnext/monaspace">https://github.com/githubnext/monaspace</a></td><td><a href="../../.gitbook/assets/5ad38bb33425c9c4992e8a89bb9c45d.png">5ad38bb33425c9c4992e8a89bb9c45d.png</a></td><td></td><td></td><td>null</td><td></td><td>4</td><td></td><td></td><td></td><td></td><td></td><td>false</td></tr><tr><td><p><mark style="color:blue;"><strong>MiSans Global</strong></mark></p><p><code>多語言</code> <code>可商用</code></p></td><td><p>MiSans Global 是由小米主導，聯合蒙納字庫、漢儀字庫共同打造的全球語言字體定制項目。</p><p>這是一個龐大的字體家族，涵蓋 20 多種書寫系統，支持 600 多種語言。</p></td><td></td><td></td><td></td><td></td><td><a href="https://hyperos.mi.com/font/zh/">https://hyperos.mi.com/font/zh/</a></td><td><a href="../../.gitbook/assets/b42878132e2124d96ad6296af6d1d8e.png">b42878132e2124d96ad6296af6d1d8e.png</a></td><td></td><td></td><td>null</td><td></td><td>null</td><td></td><td></td><td></td><td></td><td></td><td>false</td></tr></tbody></table>

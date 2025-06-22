@@ -9,7 +9,7 @@ icon: download
 # 客戶端下載
 
 {% hint style="info" %}
-目前最新正式版：v1.4.5
+當前最新正式版：v1.4.5
 {% endhint %}
 
 ## 直鏈下載
@@ -32,7 +32,7 @@ icon: download
 
 備用線路：
 
-【[線路1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.5/Cherry-Studio-1.4.5-x64-setup.exe)】 【[線路2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.5/Cherry-Studio-1.4.5-x64-setup.exe)】 【[線路3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.5/Cherry-Studio-1.4.5-x64-setup.exe)】
+【[線路1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.5/Cherry-Studio-1.4.5-x64-setup.exe)】 【[線路2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.5/Cherry-Studio-1.4.5-x64-setup.exe)】 【[線路3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v极4.5/Cherry-Studio-1.4.5-x64-setup.exe)】
 
 </details>
 
@@ -62,7 +62,7 @@ icon: download
 
 備用線路：
 
-【[線路1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.5/Cherry-Studio-1.4.5-x64-portable.exe)】 【[線路2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.5/Cherry-Studio-1.4.5-x64-portable.exe)】 【[線路3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.5/Cherry-Studio-1.4.5-x64-portable.exe)】
+【[線路1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.5/Cherry-Studio-1.4.5-x64-portable.exe)】 【[線路2](极download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.5/Cherry-Studio-1.4.5-x64-portable.exe)】 【[線路3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.5/Cherry-Studio-1.4.5-x64-portable.exe)】
 
 </details>
 
