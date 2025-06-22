@@ -1,32 +1,27 @@
-
-{% hint style="warning" %}
-This document was translated from Chinese by AI and has not yet been reviewed.
-{% endhint %}
-
 # Table of contents
 
 ## Cherry Studio
 
 * [Project Introduction](README.md)
-* [Client Download](cherrystudio/download.md)
-* [Project Planning](cherrystudio/planning.md)
-* [Feature Introduction](cherrystudio/preview/README.md)
-  * [Chat Interface](cherrystudio/preview/chat.md)
-  * [Agents](cherrystudio/preview/agents.md)
-  * [Drawing](cherrystudio/preview/drawing.md)
-  * [Translation](cherrystudio/preview/translation.md)
-  * [App](cherrystudio/preview/app.md)
-  * [Knowledge Base](cherrystudio/preview/knowledge-base.md)
-  * [Files](cherrystudio/preview/files.md)
-  * [Quick Assistant](cherrystudio/preview/kuai-jie-zhu-shou.md)
-  * [Settings](cherrystudio/preview/settings/README.md)
-    * [Model Service Settings](cherrystudio/preview/settings/providers.md)
-    * [Default Model Settings](cherrystudio/preview/settings/default-models.md)
-    * [General Settings](cherrystudio/preview/settings/general.md)
-    * [Display Settings](cherrystudio/preview/settings/display.md)
-    * [Shortcut Key Settings](cherrystudio/preview/settings/key-shortcut.md)
-    * [Data Settings](cherrystudio/preview/settings/data.md)
-    * [Voice Function](cherrystudio/preview/settings/yu-yin-gong-neng.md)
+* [Client Download](cherry-studio/download.md)
+* [Project Planning](cherry-studio/planning.md)
+* [Feature Introduction](cherry-studio/preview/README.md)
+  * [Chat Interface](cherry-studio/preview/chat.md)
+  * [Agents](cherry-studio/preview/agents.md)
+  * [Drawing](cherry-studio/preview/drawing.md)
+  * [Translation](cherry-studio/preview/translation.md)
+  * [App](cherry-studio/preview/app.md)
+  * [Knowledge Base](cherry-studio/preview/knowledge-base.md)
+  * [Files](cherry-studio/preview/files.md)
+  * [Quick Assistant](cherry-studio/preview/kuai-jie-zhu-shou.md)
+  * [Settings](cherry-studio/preview/settings/README.md)
+    * [Model Service Settings](cherry-studio/preview/settings/providers.md)
+    * [Default Model Settings](cherry-studio/preview/settings/default-models.md)
+    * [General Settings](cherry-studio/preview/settings/general.md)
+    * [Display Settings](cherry-studio/preview/settings/display.md)
+    * [Shortcut Key Settings](cherry-studio/preview/settings/key-shortcut.md)
+    * [Data Settings](cherry-studio/preview/settings/data.md)
+    * [Voice Function](cherry-studio/preview/settings/yu-yin-gong-neng.md)
 
 ## Basic Tutorial <a href="#pre-basic" id="pre-basic"></a>
 
@@ -100,16 +95,16 @@ This document was translated from Chinese by AI and has not yet been reviewed.
 * [General Knowledge](question-contact/knowledge.md)
 * [Feedback & Suggestions](question-contact/suggestions.md)
 
-## Contact Us <a href="#contact-us" id="contact-us"></a>
+## Contact Us
 
-* [Business Cooperation](contact-us/questions.md)
+* [Business Cooperation](contact-us/questions/README.md)
   * [Cherry Studio Commercial License Agreement](contact-us/questions/cherrystudio-xu-ke-xie-yi.md)
 
-## About <a href="#about" id="about"></a>
+## About
 
 * [Privacy Policy](about/privacypolicy.md)
 
 ## Other Content <a href="#other" id="other"></a>
 
 * [Common Models Reference Information](other/models-info.md)
-* [Model Leaderboard](other/model_rank/lmarena.md)
+* [Model Leaderboard](other/lmarena.md)
