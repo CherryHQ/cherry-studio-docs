@@ -6,10 +6,10 @@ icon: download
 此文件由 AI 從中文翻譯而來，尚未經過審閱。
 {% endhint %}
 
-# 用戶端下載
+# 客戶端下載
 
 {% hint style="info" %}
-當前最新正式版：1.4.5
+目前最新正式版：v1.4.5
 {% endhint %}
 
 ## 直鏈下載
@@ -28,11 +28,11 @@ icon: download
 
 主線路：
 
-【[Cherry Studio 官網](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/1.4.5/Cherry-Studio-1.4.4-x64-setup.exe)】
+【[Cherry Studio 官網](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.5/Cherry-Studio-1.4.5-x64-setup.exe)】
 
 備用線路：
 
-【[線路1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/1.4.5/Cherry-Studio-1.4.4-x64-setup.exe)】 【[線路2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/1.4.5/Cherry-Studio-1.4.4-x64-setup.exe)】 【[線路3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/1.4.5/Cherry-Studio-1.4.4-x64-setup.exe)】
+【[線路1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.5/Cherry-Studio-1.4.5-x64-setup.exe)】 【[線路2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.5/Cherry-Studio-1.4.5-x64-setup.exe)】 【[線路3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.5/Cherry-Studio-1.4.5-x64-setup.exe)】
 
 </details>
 
@@ -42,11 +42,11 @@ icon: download
 
 主線路：
 
-【[Cherry Studio 官網](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/1.4.5/Cherry-Studio-1.4.4-arm64-setup.exe)】
+【[Cherry Studio 官網](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.5/Cherry-Studio-1.4.5-arm64-setup.exe)】
 
 備用線路：
 
-【[線路1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/1.4.5/Cherry-Studio-1.4.4-arm64-setup.exe)】 【[線路2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/1.4.5/Cherry-Studio-1.4.4-arm64-setup.exe)】 【[線路3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/1.4.5/Cherry-Studio-1.4.4-arm64-setup.exe)】
+【[線路1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.5/Cherry-Studio-1.4.5-arm64-setup.exe)】 【[線路2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.5/Cherry-Studio-1.4.5-arm64-setup.exe)】 【[線路3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.5/Cherry-Studio-1.4.5-arm64-setup.exe)】
 
 </details>
 
@@ -58,11 +58,11 @@ icon: download
 
 主線路：
 
-【[Cherry Studio 官網](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/1.4.5/Cherry-Studio-1.4.4-x64-portable.exe)】
+【[Cherry Studio 官網](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.5/Cherry-Studio-1.4.5-x64-portable.exe)】
 
 備用線路：
 
-【[線路1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/1.4.5/Cherry-Studio-1.4.4-x64-portable.exe)】 【[線路2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/1.4.5/Cherry-Studio-1.4.4-x64-portable.exe)】 【[線路3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/1.4.5/Cherry-Studio-1.4.4-x64-portable.exe)】
+【[線路1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.5/Cherry-Studio-1.4.5-x64-portable.exe)】 【[線路2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.5/Cherry-Studio-1.4.5-x64-portable.exe)】 【[線路3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.5/Cherry-Studio-1.4.5-x64-portable.exe)】
 
 </details>
 
@@ -72,11 +72,11 @@ icon: download
 
 主線路：
 
-【[Cherry Studio 官網](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/1.4.5/Cherry-Studio-1.4.4-arm64-portable.exe)】
+【[Cherry Studio 官網](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.5/Cherry-Studio-1.4.5-arm64-portable.exe)】
 
 備用線路：
 
-【[線路1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/1.4.5/Cherry-Studio-1.4.4-arm64-portable.exe)】 【[線路2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/1.4.5/Cherry-Studio-1.4.4-arm64-portable.exe)】 【[線路3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/1.4.5/Cherry-Studio-1.4.4-arm64-portable.exe)】
+【[線路1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.5/Cherry-Studio-1.4.5-arm64-portable.exe)】 【[線路2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.5/Cherry-Studio-1.4.5-arm64-portable.exe)】 【[線路3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.5/Cherry-Studio-1.4.5-arm64-portable.exe)】
 
 </details>
 
@@ -90,11 +90,11 @@ icon: download
 
 主線路：
 
-【[Cherry Studio 官網](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/1.4.5/Cherry-Studio-1.4.4-x64.dmg)】
+【[Cherry Studio 官網](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.5/Cherry-Studio-1.4.5-x64.dmg)】
 
 備用線路：
 
-【[線路1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/1.4.5/Cherry-Studio-1.4.4-x64.dmg)】 【[線路2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/1.4.5/Cherry-Studio-1.4.4-x64.dmg)】 【[線路3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/1.4.5/Cherry-Studio-1.4.4-x64.dmg)】
+【[線路1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.5/Cherry-Studio-1.4.5-x64.dmg)】 【[線路2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.5/Cherry-Studio-1.4.5-x64.dmg)】 【[線路3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.5/Cherry-Studio-1.4.5-x64.dmg)】
 
 </details>
 
@@ -104,11 +104,11 @@ icon: download
 
 主線路：
 
-【[Cherry Studio 官網](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/1.4.5/Cherry-Studio-1.4.4-arm64.dmg)】
+【[Cherry Studio 官網](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.5/Cherry-Studio-1.4.5-arm64.dmg)】
 
 備用線路：
 
-【[線路1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/1.4.5/Cherry-Studio-1.4.4-arm64.dmg)】 【[線路2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/1.4.5/Cherry-Studio-1.4.4-arm64.dmg)】 【[線路3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/1.4.5/Cherry-Studio-1.4.4-arm64.dmg)】
+【[線路1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.5/Cherry-Studio-1.4.5-arm64.dmg)】 【[線路2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.5/Cherry-Studio-1.4.5-arm64.dmg)】 【[線路3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.5/Cherry-Studio-1.4.5-arm64.dmg)】
 
 </details>
 
@@ -122,11 +122,11 @@ icon: download
 
 主線路：
 
-【[Cherry Studio 官網](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/1.4.5/Cherry-Studio-1.4.4-x86_64.AppImage)】
+【[Cherry Studio 官網](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.5/Cherry-Studio-1.4.5-x86_64.AppImage)】
 
 備用線路：
 
-【[線路1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/1.4.5/Cherry-Studio-1.4.4-x86_64.AppImage)】 【[線路2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/1.4.5/Cherry-Studio-1.4.4-x86_64.AppImage)】 【[線路3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/1.4.5/Cherry-Studio-1.4.4-x86_64.AppImage)】
+【[線路1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.5/Cherry-Studio-1.4.5-x86_64.AppImage)】 【[線路2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.5/Cherry-Studio-1.4.5-x86_64.AppImage)】 【[線路3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.5/Cherry-Studio-1.4.5-x86_64.AppImage)】
 
 </details>
 
@@ -136,11 +136,11 @@ icon: download
 
 主線路：
 
-【[Cherry Studio 官網](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/1.4.5/Cherry-Studio-1.4.4-arm64.AppImage)】
+【[Cherry Studio 官網](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.5/Cherry-Studio-1.4.5-arm64.AppImage)】
 
 備用線路：
 
-【[線路1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/1.4.5/Cherry-Studio-1.4.4-arm64.AppImage)】 【[線路2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/1.4.5/Cherry-Studio-1.4.4-arm64.AppImage)】 【[線路3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/1.4.5/Cherry-Studio-1.4.4-arm64-AppImage)】
+【[線路1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.5/Cherry-Studio-1.4.5-arm64.AppImage)】 【[線路2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.5/Cherry-Studio-1.4.5-arm64.AppImage)】 【[線路3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.5/Cherry-Studio-1.4.5-arm64-AppImage)】
 
 </details>
 
@@ -148,4 +148,4 @@ icon: download
 
 ## 網盤下載
 
-[誇克](https://pan.quark.cn/s/c8533a1ec63e#/list/share)
+[夸克](https://pan.quark.cn/s/c8533a1ec63e#/list/share)
