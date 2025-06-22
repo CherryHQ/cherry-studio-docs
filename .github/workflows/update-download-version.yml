@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
     inputs:
       version:
-        description: '要更新的版本号'
+        description: '要更新的版本号（需要包含前面的v）'
         required: true
         type: string
 
