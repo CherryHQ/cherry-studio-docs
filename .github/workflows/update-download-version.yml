@@ -32,7 +32,6 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install PyYAML # Assuming PyYAML might be needed for markdown parsing, or other libraries if the script becomes more complex
 
       - name: Run Update Download Version Script
         id: run_script
