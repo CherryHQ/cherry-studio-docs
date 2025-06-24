@@ -5,13 +5,13 @@ import shutil
 import subprocess
 import time
 from pathlib import Path
-import sys # 新增导入
-import json # 新增导入
+import sys
+import json
 from google import genai
 from google.genai import types
 import openai
 import frontmatter
-import re # 新增导入
+import re
 
 # 配置日志记录
 logging.basicConfig(
@@ -191,7 +191,7 @@ LANG_CONFIG = {
     "en": {
         "dir": "english",
         "name": "English",
-        "model": "deepseek",
+        "model": "gemini",
         "warning_text": "This document was translated from Chinese by AI and has not yet been reviewed."
     },
     "es": {
@@ -373,37 +373,36 @@ def translate_text(text, target_lang_code):
     target_language_name = lang_config["name"]
     model_type = lang_config["model"]
 
-    # 精简后的 README.md 中文原文（作为示例输入）
-    # 精简后的 README.md 英文翻译（作为示例输出）
+    translated_content_parts = []
+    translated_content = None
 
-    if model_type == "gemini":
-        client = genai.Client(
-            api_key=GEMINI_API_KEY,
-            http_options={"base_url": "https://aihubmix.com/gemini"},
-        )
-        model_name = "gemini-2.5-pro"
+    try:
+        if model_type == "gemini":
+            client = genai.Client(
+                api_key=GEMINI_API_KEY,
+                http_options={"base_url": "https://aihubmix.com/gemini"},
+            )
+            model_name = "gemini-2.5-flash"
 
-        contents = [
-            types.Content(role="user", parts=[types.Part.from_text(text=f"请将以下中文内容翻译成English：\n\n{EXAMPLE_CHINESE_README}")]),
-            types.Content(role="model", parts=[types.Part.from_text(text=EXAMPLE_ENGLISH_README)]),
-            types.Content(role="user", parts=[types.Part.from_text(text=f"请将以下中文内容翻译成{target_language_name}：\n\n{text}")]),
-        ]
-
-        generate_content_config = types.GenerateContentConfig(
-            temperature=1,
-            candidate_count=1,
-            response_mime_type="text/plain",
-            system_instruction=[types.Part.from_text(text=SYSTEM_INSTRUCTIONS)],
-            safety_settings=[
-                {"category": "HARM_CATEGORY_HARASSMENT", "threshold": "BLOCK_NONE"},
-                {"category": "HARM_CATEGORY_HATE_SPEECH", "threshold": "BLOCK_NONE"},
-                {"category": "HARM_CATEGORY_SEXUALLY_EXPLICIT", "threshold": "BLOCK_NONE"},
-                {"category": "HARM_CATEGORY_DANGEROUS_CONTENT", "threshold": "BLOCK_NONE"},
+            contents = [
+                types.Content(role="user", parts=[types.Part.from_text(text=f"请将以下中文内容翻译成English：\n\n{EXAMPLE_CHINESE_README}")]),
+                types.Content(role="model", parts=[types.Part.from_text(text=EXAMPLE_ENGLISH_README)]),
+                types.Content(role="user", parts=[types.Part.from_text(text=f"请将以下中文内容翻译成{target_language_name}：\n\n{text}")]),
             ]
-        )
 
-        translated_content_parts = []
-        try:
+            generate_content_config = types.GenerateContentConfig(
+                temperature=1,
+                candidate_count=1,
+                response_mime_type="text/plain",
+                system_instruction=[types.Part.from_text(text=SYSTEM_INSTRUCTIONS)],
+                safety_settings=[
+                    {"category": "HARM_CATEGORY_HARASSMENT", "threshold": "BLOCK_NONE"},
+                    {"category": "HARM_CATEGORY_HATE_SPEECH", "threshold": "BLOCK_NONE"},
+                    {"category": "HARM_CATEGORY_SEXUALLY_EXPLICIT", "threshold": "BLOCK_NONE"},
+                    {"category": "HARM_CATEGORY_DANGEROUS_CONTENT", "threshold": "BLOCK_NONE"},
+                ]
+            )
+
             for chunk in client.models.generate_content_stream(
                 model=model_name,
                 contents=contents,
@@ -411,50 +410,43 @@ def translate_text(text, target_lang_code):
             ):
                 translated_content_parts.append(chunk.text)
             translated_content = "".join(translated_content_parts)
-            return translated_content
-        except Exception as e:
-            logging.error(f"Error translating text with Gemini: {e}")
-            return None
 
-    elif model_type == "deepseek":
-        client = openai.OpenAI(
-            api_key=DEEPSEEK_API_KEY,
-            base_url="https://api.ppinfra.com/v3/openai",
-        )
-        model_name = "deepseek/deepseek-r1-0528"
+        elif model_type == "deepseek":
+            client = openai.OpenAI(
+                api_key=DEEPSEEK_API_KEY,
+                base_url="https://api.ppinfra.com/v3/openai",
+            )
+            model_name = "deepseek/deepseek-r1-0528"
 
-        messages = [
-            {"role": "system", "content": SYSTEM_INSTRUCTIONS},
-            {"role": "user", "content": f"请将以下中文内容翻译成English：\n\n{EXAMPLE_CHINESE_README}"},
-            {"role": "assistant", "content": EXAMPLE_ENGLISH_README},
-            {"role": "user", "content": f"请将以下中文内容翻译成{target_language_name}：\n\n{text}"}
-        ]
+            messages = [
+                {"role": "system", "content": SYSTEM_INSTRUCTIONS},
+                {"role": "user", "content": f"请将以下中文内容翻译成English：\n\n{EXAMPLE_CHINESE_README}"},
+                {"role": "assistant", "content": EXAMPLE_ENGLISH_README},
+                {"role": "user", "content": f"请将以下中文内容翻译成{target_language_name}：\n\n{text}"}
+            ]
 
-        try:
             response = client.chat.completions.create(
                 model=model_name,
                 messages=messages,
                 temperature=1,
                 stream=True,
             )
-            translated_content_parts = []
             for chunk in response:
                 if chunk.choices[0].delta.content is not None:
                     translated_content_parts.append(chunk.choices[0].delta.content)
             
             translated_content = "".join(translated_content_parts)
-            
-            # 使用正则表达式移除 <think>...</think> 标签及其内容
-            # re.DOTALL 允许 . 匹配换行符
             translated_content = re.sub(r'<think>.*?</think>', '', translated_content, flags=re.DOTALL)
-            
-            translated_content = translated_content.strip() # 移除首尾空白，包括可能的换行
-            return translated_content
-        except Exception as e:
-            logging.error(f"Error translating text with DeepSeek: {e}")
+            translated_content = translated_content.strip()
+
+        else:
+            logging.error(f"Unknown model type: {model_type} for language {target_lang_code}")
             return None
-    else:
-        logging.error(f"Unknown model type: {model_type} for language {target_lang_code}")
+        
+        return translated_content
+
+    except Exception as e:
+        logging.error(f"Error translating text with {model_type}: {e}")
         return None
 
 def process_markdown_file(source_path, target_lang_code):
@@ -501,7 +493,10 @@ def process_markdown_file(source_path, target_lang_code):
             final_content += "---\n"
         
         # 将警告语插入到frontmatter之后，翻译内容之前
-        final_content += warning_hint + "\n" + translated_markdown_content
+        # 检查文件路径是否在 .gitbook/includes/ 目录下，如果是则不添加警告语
+        if ".gitbook/includes/" not in str(source_path):
+            final_content += warning_hint + "\n"
+        final_content += translated_markdown_content
 
         # 检查文件是否实际有变化，避免不必要的Git提交
         current_hash = get_file_hash(target_path)

@@ -1,10 +1,17 @@
 import sys
 import json
 import os
+import logging
+
+# 配置日志记录
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s'
+)
 
 def main():
     if len(sys.argv) < 2:
-        print("Usage: python summarize_translation.py <path_to_status_files_directory>")
+        logging.error("Usage: python summarize_translation.py <path_to_status_files_directory>")
         sys.exit(1)
 
     status_files_dir = sys.argv[1]
@@ -26,15 +33,17 @@ def main():
                         if lang_code and status:
                             translation_results[lang_code] = status
                         else:
-                            print(f"Warning: Malformed status file {file_path}. Skipping.")
+                            logging.warning(f"Malformed status file {file_path}. Skipping.")
                 except json.JSONDecodeError:
-                    print(f"Error: Invalid JSON in file {file_path}. Skipping.")
+                    logging.error(f"Invalid JSON in file {file_path}. Skipping.")
                 except Exception as e:
-                    print(f"Error reading file {file_path}: {e}. Skipping.")
+                    logging.error(f"Error reading file {file_path}: {e}. Skipping.")
 
     if not translation_results:
-        print("Error: No translation status files found or parsed successfully.")
+        logging.error("No translation status files found or parsed successfully.")
         sys.exit(1)
+
+    logging.info("--- 翻译结果总结 ---")
 
     for lang_code, status in translation_results.items():
         if status == "success":
@@ -42,22 +51,16 @@ def main():
         else:
             failed_languages.append(lang_code)
 
-    print("********************************************************************")
-    print("******************** 翻译结果总结 **********************************")
-    print("********************************************************************")
-
     if not failed_languages:
-        print("所有语言的文档翻译和同步均已成功完成！")
-        print(f"成功翻译的语言: {', '.join(successful_languages)}")
+        logging.info("所有语言的文档翻译和同步均已成功完成！")
+        logging.info(f"成功翻译的语言: {', '.join(successful_languages)}")
     else:
-        print("部分语言的文档翻译或同步操作失败。")
-        print(f"成功翻译的语言: {', '.join(successful_languages) if successful_languages else '无'}")
-        print(f"失败的语言: {', '.join(failed_languages)}")
-        # 如果有失败的语言，设置一个非零退出码，以便 GitHub Actions 标记为失败
-        sys.exit(1) 
+        logging.warning("部分语言的文档翻译或同步操作失败。")
+        logging.info(f"成功翻译的语言: {', '.join(successful_languages) if successful_languages else '无'}")
+        logging.error(f"失败的语言: {', '.join(failed_languages)}")
+        sys.exit(1)
     
-    print("********************************************************************")
-    print("********************************************************************")
+    logging.info("--------------------")
 
 if __name__ == "__main__":
     main()
