@@ -28,6 +28,8 @@ Cherry Studio 数据存储遵循系统规范，数据会自动放在用户目录
 方法二：
 基于 Electron 应用特点、通过配置启动参数进行存储位置修改。
 
+> 版本 **v1.4.4** 后设置了默认的--user-data-dir启动参数
+
 > --user-data-dir
 > 如: Cherry-Studio-*-x64-portable.exe --user-data-dir="%user_data_dir%"
 
@@ -42,7 +44,7 @@ PS D:\CherryStudio> dir
 
 Mode                 LastWriteTime         Length Name
 ----                 -------------         ------ ----
-d-----         2025/4/18     14:05                user-data-dir
+d-----         2025/4/18     14:05                data
 -a----         2025/4/14     23:05       94987175 Cherry-Studio-1.2.4-x64-portable.exe
 -a----         2025/4/18     14:05            701 init_cherry_studio.bat
 ```
@@ -55,7 +57,7 @@ d-----         2025/4/18     14:05                user-data-dir
 
 set current_path_dir=%~dp0
 @echo 当前路径:%current_path_dir%
-set user_data_dir=%current_path_dir%user-data-dir
+set user_data_dir=%current_path_dir%data
 @echo CherryStudio 数据路径:%user_data_dir%
 
 @echo 查找当前路径下 Cherry-Studio-*-portable.exe
@@ -85,13 +87,13 @@ start %target_file% --user-data-dir="%user_data_dir%"
 exit
 ```
 
-> 目录 user-data-dir 初始化后结构：
+> 目录 data 初始化后结构：
 
 ```shell
-PS D:\CherryStudio> dir .\user-data-dir\
+PS D:\CherryStudio> dir .\data\
 
 
-    目录: D:\CherryStudio\user-data-dir
+    目录: D:\CherryStudio\data
 
 
 Mode                 LastWriteTime         Length Name
