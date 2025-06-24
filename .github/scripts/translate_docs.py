@@ -186,6 +186,9 @@ WARNING_HINT_TEMPLATE = """
 {% endhint %}
 """
 
+# 找到第一个标题的正则表达式
+first_heading_pattern = re.compile(r"^(#+ .*)$", re.MULTILINE)
+
 # 目标语言配置
 LANG_CONFIG = {
     "en": {
@@ -310,11 +313,7 @@ LANG_CONFIG = {
     }
 }
 # 示例中文 README.md 内容，用于 Few-shot 翻译
-EXAMPLE_CHINESE_README = """---
-icon: cherries
----
-
-# 项目简介
+EXAMPLE_CHINESE_README = """# 项目简介
 
 {% hint style="warning" %}
 此文档由中文AI翻译而来，目前暂未经过审核。
@@ -335,15 +334,11 @@ Cherry Studio 是一款集多模型对话、知识库管理、AI 绘画、翻译
 """
 
 # 示例英文 README.md 翻译，用于 Few-shot 翻译
-EXAMPLE_ENGLISH_README = """---
-icon: cherries
----
+EXAMPLE_ENGLISH_README = """# Project Introduction
 
 {% hint style="warning" %}
 This document is translated from Chinese by AI and has not yet been reviewed. I will try to check the document one by one to ensure the translation is reasonable.
 {% endhint %}
-
-# Project Introduction
 
 <figure><img src=".gitbook/assets/docs-readme-banner1.png" alt=""><figcaption></figcaption></figure>
 
@@ -492,11 +487,28 @@ def process_markdown_file(source_path, target_lang_code):
                 final_content += f"{key}: {value}\n"
             final_content += "---\n"
         
-        # 将警告语插入到frontmatter之后，翻译内容之前
+        # 将警告语插入到大标题与正文之间，而不是icon和大标题之间
         # 检查文件路径是否在 .gitbook/includes/ 目录下，如果是则不添加警告语
         if ".gitbook/includes/" not in str(source_path):
-            final_content += warning_hint + "\n"
-        final_content += translated_markdown_content
+            # 定义一个函数，用于在匹配到的标题后插入警告语
+            def insert_warning_after_heading(match):
+                return match.group(0) + "\n\n" + warning_hint + "\n\n"
+
+            # 尝试在第一个标题后插入警告语。re.sub 的 count=1 确保只处理第一个匹配项。
+            # 如果没有找到标题，translated_markdown_content 将保持不变。
+            processed_markdown_content = first_heading_pattern.sub(insert_warning_after_heading, translated_markdown_content, count=1)
+            
+            if processed_markdown_content == translated_markdown_content:
+                # 如果没有找到标题（即 processed_markdown_content 没有变化），
+                # 则在翻译内容的开头（Frontmatter之后）插入警告语。
+                final_content += warning_hint + "\n\n"
+                final_content += translated_markdown_content
+            else:
+                # 如果找到了标题并成功插入，则使用处理后的内容
+                final_content += processed_markdown_content
+        else:
+            # 如果是 .gitbook/includes/ 目录下的文件，不添加警告语
+            final_content += translated_markdown_content
 
         # 检查文件是否实际有变化，避免不必要的Git提交
         current_hash = get_file_hash(target_path)
