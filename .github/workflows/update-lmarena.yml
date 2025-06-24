@@ -29,7 +29,7 @@ jobs:
       - name: Install dependencies # 安装必要的 Python 库
         run: |
           python -m pip install --upgrade pip
-          pip install pandas requests
+          pip install pandas requests tabulate
 
       - name: Run Leaderboard Update Script # 运行 Python 脚本
         id: run_script # 给这个步骤一个ID，以便后续步骤引用它的输出
