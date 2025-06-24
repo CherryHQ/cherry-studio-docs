@@ -1,22 +1,24 @@
+# LLM Arena Κατάταξη (σε πραγματικό χρόνο)
+
 
 {% hint style="warning" %}
 Αυτό το έγγραφο μεταφράστηκε από τα Κινεζικά με AI και δεν έχει ακόμη ελεγχθεί.
 {% endhint %}
 
-```markdown
-# LLM Arena Κατάταξη (Ζωντανή Ενημέρωση)
 
-Αυτή είναι μια αυτοματοποιημένη ενημέρωση κατάταξης βασισμένη σε δεδομένα από το Chatbot Arena (lmarena.ai).
 
-> **Τελευταία ενημέρωση δεδομένων**: 2025-06-23 11:42:38 UTC / 2025-06-23 19:42:38 CST (Πεκίνο)
+
+Αυτή είναι μια κατάταξη που βασίζεται σε δεδομένα από το Chatbot Arena (lmarena.ai), που δημιουργήθηκε μέσω αυτοματοποιημένης διαδικασίας.
+
+> **Χρονική σφραγίδα ενημέρωσης δεδομένων**: 2025-06-24 14:44:08 UTC / 2025-06-24 22:44:08 CST (χώρου Πεκίνου)
 
 {% hint style="info" %}
-Κάντε κλικ στο **όνομα μοντέλου** στον πίνακα κατάταξης για να μεταβείτε στη σελίδα λεπτομερειών ή δοκιμαστικής χρήσης.
+Κάντε κλικ στο **όνομα μοντέλου** στην κατάταξη για να μεταβείτε στη σελίδα λεπτομερειών ή δοκιμαστικής χρήσης.
 {% endhint %}
 
-## Πίνακας Κατάταξης
+## Κατάταξη
 
-| Κατάταξη (UB) | Κατάταξη (StyleCtrl) | Όνομα Μοντέλου                                                                                                                                       | Βαθμολογία | Εύρος εμπιστοσύνης    | Ψήφοι      | Πάροχος Υπηρεσίας                    | Άδεια Χρήσης                    | Ημερομηνία Λήξης Γνώσης   |
+| Κατάταξη (UB) | Κατάταξη (StyleCtrl) | Όνομα Μοντέλου                                                                                                                                       |   Βαθμολογία | Διάστημα εμπιστοσύνης |   Ψήφοι | Πάροχος                    | Άδεια                    | Ημερομηνία λήξης γνώσης   |
 |:---|:---|:---|:---|:---|:---|:---|:---|:---|
 |        1 |               1 | [Gemini-2.5-Pro-Preview-06-05](http://aistudio.google.com/app/prompts/new_chat?model=gemini-2.5-pro-preview-06-05)                        | 1480 | +6/-6   | 8,825   | Google                 | Proprietary             | Δεν υπάρχουν δεδομένα     |
 |        2 |               2 | [Gemini-2.5-Pro-Preview-05-06](http://aistudio.google.com/app/prompts/new_chat?model=gemini-2.5-pro-preview-05-06)                        | 1446 | +5/-5   | 13,025  | Google                 | Proprietary             | Δεν υπάρχουν δεδομένα     |
@@ -35,7 +37,7 @@
 |       13 |               6 | [Claude Opus 4 (20250514)](https://www.anthropic.com/news/claude-4)                                                                       | 1373 | +4/-4   | 15,254  | Anthropic              | Proprietary             | Δεν υπάρχουν δεδομένα     |
 |       13 |              12 | [DeepSeek-R1](https://api-docs.deepseek.com/news/news250120)                                                                              | 1373 | +4/-5   | 19,430  | DeepSeek               | MIT                     | Δεν υπάρχουν δεδομένα     |
 |       14 |              18 | [Mistral Medium 3](https://mistral.ai/news/mistral-medium-3)                                                                              | 1365 | +4/-5   | 13,385  | Mistral                | Proprietary             | Δεν υπάρχουν δεδομένα     |
-|       16 |              12 | [o1-2024-12-17](https://openai.com/index/o1-and-new-tools-for-developers/)                                                                | 1365 | +3/-3   | 29,038  | OpenAI                 | Proprietary             | Δεν υπάρχουν δεδομένα     |
+|       16 |              12 | [o1-2024-12-17](https://openai.com/index/o1-and-new-tools-for-developers/)                                                                | 1365 | +3/-3   | 29,038  | OpenAI                 | Proprietary             | 2023/10  |
 |       16 |              22 | [Qwen3-235B-A22B](https://qwenlm.github.io/blog/qwen3/)                                                                                   | 1363 | +5/-6   | 11,429  | Alibaba                | Apache 2.0              | Δεν υπάρχουν δεδομένα     |
 |       16 |              26 | [Grok-3-Mini-beta](https://docs.x.ai/docs/models)                                                                                         | 1361 | +7/-6   | 6,984   | xAI                    | Proprietary             | Δεν υπάρχουν δεδομένα     |
 |       17 |              25 | [Gemini-2.0-Flash-001](https://aistudio.google.com/app/prompts/new_chat?instructions=lmsys-1121&model=gemini-2.0-flash-001)               | 1363 | +3/-3   | 34,803  | Google                 | Proprietary             | Δεν υπάρχουν δεδομένα     |
@@ -45,14 +47,14 @@
 |       25 |              18 | [o1-preview](https://platform.openai.com/docs/models/o1)                                                                                  | 1350 | +3/-4   | 33,177  | OpenAI                 | Proprietary             | 2023/10  |
 |       25 |              12 | [Claude Sonnet 4 (20250514)](https://www.anthropic.com/news/claude-4)                                                                     | 1346 | +5/-5   | 12,143  | Anthropic              | Proprietary             | Δεν υπάρχουν δεδομένα     |
 |       26 |              25 | [o3-mini-high](https://platform.openai.com/docs/guides/reasoning#reasoning-effort)                                                        | 1340 | +4/-3   | 19,404  | OpenAI                 | Proprietary             | Δεν υπάρχουν δεδομένα     |
-|       26 |              21 | [GPT-4.1-mini-2025-04-14](https://openai.com/index/gpt-极1/)                                                                              | 1338 | +4/-5   | 13,519  | OpenAI                 | Proprietary             | Δεν υπάρχουν δεδομένα     |
+|       26 |              21 | [GPT-4.1-mini-2025-04-14](https://openai.com/index/gpt-4-1/)                                                                              | 1338 | +4/-5   | 13,519  | OpenAI                 | Proprietary             | Δεν υπάρχουν δεδομένα     |
 |       26 |              33 | [Gemma-3-12B-it](http://aistudio.google.com/app/prompts/new_chat?model=gemma-3-12b-it)                                                    | 1336 | +8/-10  | 3,976   | Google                 | Gemma                   | Δεν υπάρχουν δεδομένα     |
-|       27 |              30 | [DeepSeek-V3](https://huggingface.co/deepseek-ai/DeepSeek-V3)                                                                             | 1334 | +4/-极   | 22,841  | DeepSeek               | DeepSeek                | Δεν υπάρχουν δεδομένα     |
+|       27 |              30 | [DeepSeek-V3](https://huggingface.co/deepseek-ai/DeepSeek-V3)                                                                             | 1334 | +4/-4   | 22,841  | DeepSeek               | DeepSeek                | Δεν υπάρχουν δεδομένα     |
 |       28 |              37 | [QwQ-32B](https://huggingface.co/Qwen/QwQ-32B)                                                                                            | 1332 | +4/-5   | 16,438  | Alibaba                | Apache 2.0              | Δεν υπάρχουν δεδομένα     |
 |       29 |              32 | [Gemini-2.0-Flash-Lite](https://aistudio.google.com/prompts/new_chat?model=gemini-2.0-flash-lite)                                         | 1328 | +3/-3   | 26,104  | Google                 | Proprietary             | Δεν υπάρχουν δεδομένα     |
 |       29 |              36 | [GLM-4-Plus-0111](https://bigmodel.cn/dev/howuse/glm-4)                                                                                   | 1326 | +6/-9   | 6,028   | Zhipu                  | Proprietary             | Δεν υπάρχουν δεδομένα     |
 |       29 |              33 | [Qwen-Plus-0125](https://www.alibabacloud.com/help/en/model-studio/developer-reference/what-is-qwen-llm)                                  | 1326 | +6/-7   | 6,055   | Alibaba                | Proprietary             | Δεν υπάρχουν δεδομένα     |
-|       29 |              33 | [Command A (03-2025)](极ttps://cohere.com/blog/command-a)                                                                                  | 1325 | +6/-3   | 21,092  | Cohere                 | CC-BY-NC-4.0            | Δεν υπάρχουν δεδομένα     |
+|       29 |              33 | [Command A (03-2025)](https://cohere.com/blog/command-a)                                                                                  | 1325 | +6/-3   | 21,092  | Cohere                 | CC-BY-NC-4.0            | Δεν υπάρχουν δεδομένα     |
 |       30 |              38 | [Step-2-16K-Exp](https://platform.stepfun.com/docs/llm/text)                                                                              | 1320 | +9/-7   | 5,126   | StepFun                | Proprietary             | Δεν υπάρχουν δεδομένα     |
 |       30 |              31 | [Hunyuan-TurboS-20250226](https://cloud.tencent.com/document/product/1729/104753)                                                         | 1318 | +11/-10 | 2,452   | Tencent                | Proprietary             | Δεν υπάρχουν δεδομένα     |
 |       31 |              38 | [Llama-3.3-Nemotron-Super-49B-v1](https://huggingface.co/nvidia/Llama-3_3-Nemotron-Super-49B-v1)                                          | 1312 | +15/-13 | 2,371   | Nvidia                 | Nvidia                  | Δεν υπάρχουν δεδομένα     |
@@ -60,12 +62,12 @@
 |       34 |              39 | [o1-mini](https://platform.openai.com/docs/models/o1)                                                                                     | 1319 | +3/-3   | 54,951  | OpenAI                 | Proprietary             | 2023/10  |
 |       34 |              33 | [Gemini-1.5-Pro-002](https://aistudio.google.com/app/prompts/new_chat?instructions=lmsys&model=gemini-1.5-pro-002)                        | 1317 | +2/-3   | 58,645  | Google                 | Proprietary             | Δεν υπάρχουν δεδομένα     |
 |       34 |              18 | [Claude 3.7 Sonnet (thinking-32k)](https://www.anthropic.com/news/claude-3-7-sonnet)                                                      | 1315 | +5/-3   | 22,385  | Anthropic              | Proprietary             | Δεν υπάρχουν δεδομένα     |
-|       34 |              33 | [Hunyuan-Turbo-0110](https://cloud.tencent.com/document/product/1729/104753)                                                              | 1311 | +11/-12 | 2,510   | Tencent                | Proprietary             | Δεν υπάρχουν δεδομένα     |
-|       40 |              56 | [Gemma-3n-e4b-it](http://aistudio.google.com/app/prompts/new_chat?model=gemma-3n-e4b-it)                                                  | 1303 | +9/-9   | 3,913   | Google                 | Gemma                   | Δεν υπάρχουν δεδομένα     |
+|       34 |              33 | [Hunyuan-Turbo-0110](https://cloud.tencent.com/document/product极 1729/104753)                                                              | 1311 | +11/-12 | 2,510   | Tencent                | Proprietary             | Δεν υπάρχουν δεδομένα     |
+|       40 |              56 | [Gemma-3n-e4b-it](http://aistudio.google.com/app/prompts/new_chat?model=gemma-3n-e极4b-it)                                                  | 1303 | +9/-9   | 3,913   | Google                 | Gemma                   | Δεν υπάρχουν δεδομένα     |
 |       41 |              21 | [Claude 3.7 Sonnet](https://www.anthropic.com/news/claude-3-7-sonnet)                                                                     | 1307 | +4/-3   | 26,866  | Anthropic              | Proprietary             | Δεν υπάρχουν δεδομένα     |
 |       42 |              45 | [Grok-2-08-13](https://x.ai/blog/grok-2)                                                                                                  | 1303 | +2/-3   | 67,084  | xAI                    | Proprietary             | 2024/3   |
 |       42 |              48 | [Yi-Lightning](https://platform.lingyiwanwu.com/docs#%E6%A8%A1%E5%9E%8B%E4%B8%8E%E8%AE%A1%E8%B4%B9)                                       | 1302 | +3/-3   | 28,968  | 01 AI                  | Proprietary             | Δεν υπάρχουν δεδομένα     |
 |       43 |              35 | [GPT-4o-2024-05-13](https://openai.com/index/hello-gpt-4o/)                                                                               | 1300 | +2/-2   | 117,747 | OpenAI                 | Proprietary             | 2023/10  |
-|       43 |              25 | [Claude 3.5 Sonnet (20241022)](https://www.anthropic.com/news/3-5-models-and-computer-use)                                                | 1299 | +2/-2   | 74,230  | Anthropic              | Proprietary             | 2024/4   |
+|       43 |              25极 | [Claude 3.5 Sonnet (20241022)](https://www.anthropic.com/news/3-5-models-and-computer-use)                                                | 1299 | +2/-2   | 74,230  | Anthropic              | Proprietary             | 2024/4   |
 |       43 |              57 | [Qwen2.5-plus-1127](https://help.aliyun.com/zh/model-studio/getting-started/models?spm=a2c4g.11186623.0.i7)                               | 1297 | +5/-7   | 10,715  | Alibaba                | Proprietary             | Δεν υπάρχουν δεδομένα     |
-|       43 |              51 | [Deep
+|       43 |              51 | [Deepseek-v2.5-1210](https

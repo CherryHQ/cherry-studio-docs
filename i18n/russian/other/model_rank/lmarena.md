@@ -1,21 +1,24 @@
+# Рейтинговая таблица LLM Arena (обновляется в реальном времени)
+
 
 {% hint style="warning" %}
 Этот документ переведен с китайского языка с помощью ИИ и еще не был проверен.
 {% endhint %}
 
-# LLM Arena Leaderboard (Updated in Real Time)
 
-This is a leaderboard based on data from Chatbot Arena (lmarena.ai), automatically generated through an automated process.
 
-> **Data Update Time**: 2025-06-23 11:42:38 UTC / 2025-06-23 19:42:38 CST (Beijing Time)
+
+Это рейтинговая таблица, автоматически генерируемая на основе данных Chatbot Arena (lmarena.ai).
+
+> **Время обновления данных**: 2025-06-24 14:44:08 UTC / 2025-06-24 22:44:08 CST (пекинское время)
 
 {% hint style="info" %}
-Click on **model name** in the leaderboard to jump to its details or trial page.
+Нажмите на **название модели** в таблице, чтобы перейти к её деталям или странице тестирования.
 {% endhint %}
 
-## Leaderboard
+## Рейтинговая таблица
 
-| Рейтинг (UB) | Рейтинг (StyleCtrl) | Модель                                                                                                                                       | Очки | Доверительный интервал | Голоса      | Провайдер               | Лицензия               | Обновление знаний   |
+| Рейтинг(UB) | Рейтинг(StyleCtrl) | Название модели                                                                                                                                       | Очки | Доверительный интервал | Количество голосов | Поставщик                    | Лицензия                    | Дата отсечки знаний   |
 |:---|:---|:---|:---|:---|:---|:---|:---|:---|
 |        1 |               1 | [Gemini-2.5-Pro-Preview-06-05](http://aistudio.google.com/app/prompts/new_chat?model=gemini-2.5-pro-preview-06-05)                        | 1480 | +6/-6   | 8,825   | Google                 | Proprietary             | Нет данных     |
 |        2 |               2 | [Gemini-2.5-Pro-Preview-05-06](http://aistudio.google.com/app/prompts/new_chat?model=gemini-2.5-pro-preview-05-06)                        | 1446 | +5/-5   | 13,025  | Google                 | Proprietary             | Нет данных     |
@@ -34,7 +37,7 @@ Click on **model name** in the leaderboard to jump to its details or trial page.
 |       13 |               6 | [Claude Opus 4 (20250514)](https://www.anthropic.com/news/claude-4)                                                                       | 1373 | +4/-4   | 15,254  | Anthropic              | Proprietary             | Нет данных     |
 |       13 |              12 | [DeepSeek-R1](https://api-docs.deepseek.com/news/news250120)                                                                              | 1373 | +4/-5   | 19,430  | DeepSeek               | MIT                     | Нет данных     |
 |       14 |              18 | [Mistral Medium 3](https://mistral.ai/news/mistral-medium-3)                                                                              | 1365 | +4/-5   | 13,385  | Mistral                | Proprietary             | Нет данных     |
-|       16 |              12 | [o1-2024-12-17](https://openai.com/index/o1-and-new-tools-for-developers/)                                                                | 1365 | +3/-3   | 29,038  | OpenAI                 | Proprietary             | 2023/10  |
+|       16 |              12 | [o1-2024-12-17](https://openai.com/index/o1-and-new-tools-for-developers/)                                                                | 1365 | +3/-3   | 29,038  | OpenAI                 | Proprietary             | Нет данных     |
 |       16 |              22 | [Qwen3-235B-A22B](https://qwenlm.github.io/blog/qwen3/)                                                                                   | 1363 | +5/-6   | 11,429  | Alibaba                | Apache 2.0              | Нет данных     |
 |       16 |              26 | [Grok-3-Mini-beta](https://docs.x.ai/docs/models)                                                                                         | 1361 | +7/-6   | 6,984   | xAI                    | Proprietary             | Нет данных     |
 |       17 |              25 | [Gemini-2.0-Flash-001](https://aistudio.google.com/app/prompts/new_chat?instructions=lmsys-1121&model=gemini-2.0-flash-001)               | 1363 | +3/-3   | 34,803  | Google                 | Proprietary             | Нет данных     |
@@ -50,13 +53,13 @@ Click on **model name** in the leaderboard to jump to its details or trial page.
 |       28 |              37 | [QwQ-32B](https://huggingface.co/Qwen/QwQ-32B)                                                                                            | 1332 | +4/-5   | 16,438  | Alibaba                | Apache 2.0              | Нет данных     |
 |       29 |              32 | [Gemini-2.0-Flash-Lite](https://aistudio.google.com/prompts/new_chat?model=gemini-2.0-flash-lite)                                         | 1328 | +3/-3   | 26,104  | Google                 | Proprietary             | Нет данных     |
 |       29 |              36 | [GLM-4-Plus-0111](https://bigmodel.cn/dev/howuse/glm-4)                                                                                   | 1326 | +6/-9   | 6,028   | Zhipu                  | Proprietary             | Нет данных     |
-|       29 |              33 | [Qwen-Plus-0125](https://www.alibabacloud.com/help/en/model-studio/developer-reference/what-is-qwen-llm)                                | 1326 | +6/-7   | 6,055   | Alibaba                | Proprietary             | Нет данных     |
+|       29 |              33 | [Qwen-Plus-0125](https://www.alibabacloud.com/help/en/model-studio/developer-reference/what-is-qwen-llm)                                  | 1326 | +6/-7   | 6,055   | Alibaba                | Proprietary             | Нет данных     |
 |       29 |              33 | [Command A (03-2025)](https://cohere.com/blog/command-a)                                                                                  | 1325 | +6/-3   | 21,092  | Cohere                 | CC-BY-NC-4.0            | Нет данных     |
 |       30 |              38 | [Step-2-16K-Exp](https://platform.stepfun.com/docs/llm/text)                                                                              | 1320 | +9/-7   | 5,126   | StepFun                | Proprietary             | Нет данных     |
-|       30 |              31 | [Hunyuan-TurboS-20250226](https://cloud.tencent.com/document/product极 1729/104753)                                                       | 1318 | +11/-10 | 2,452   | Tencent                | Proprietary             | Нет данных     |
-|       31 |              38 | [Llama-3.3-Nemotron-Super-49B-v1](https://huggingface.co/nvidia/Llama-3_3-Nemotron-Super-49B-v1)                                        | 1312 | +极15/-13 | 2,371   | Nvidia                 | Nvidia                  | Нет данных     |
+|       30 |              31 | [Hunyuan-TurboS-20250226](https://cloud.tencent.com/document/product/1729/104753)                                                         | 1318 | +11/-10 | 2,452   | Tencent                | Proprietary             | Нет данных     |
+|       31 |              38 | [Llama-3.3-Nemotron-Super-49B-v1](https://huggingface.co/nvidia/Llama-3_3-Nemotron-Super-49B-v1)                                          | 1312 | +15/-13 | 2,371   | Nvidia                 | Nvidia                  | Нет данных     |
 |       33 |              32 | [o3-mini](https://openai.com/index/openai-o3-mini/)                                                                                       | 1321 | +3/-2   | 33,256  | OpenAI                 | Proprietary             | Нет данных     |
-|       34 |              39 | [o1-mini](https://platform.openai.com/docs/models/o1)                                                                                     | 1319 | +3/-3   | 54,951 极 | OpenAI                 | Proprietary             | 2023/10  |
+|       34 |              39 | [o1-mini](https://platform.openai.com/docs/models/o1)                                                                                     | 1319 | +3/-3   | 54,951  | OpenAI                 | Proprietary             | 2023/10  |
 |       34 |              33 | [Gemini-1.5-Pro-002](https://aistudio.google.com/app/prompts/new_chat?instructions=lmsys&model=gemini-1.5-pro-002)                        | 1317 | +2/-3   | 58,645  | Google                 | Proprietary             | Нет данных     |
 |       34 |              18 | [Claude 3.7 Sonnet (thinking-32k)](https://www.anthropic.com/news/claude-3-7-sonnet)                                                      | 1315 | +5/-3   | 22,385  | Anthropic              | Proprietary             | Нет данных     |
 |       34 |              33 | [Hunyuan-Turbo-0110](https://cloud.tencent.com/document/product/1729/104753)                                                              | 1311 | +11/-12 | 2,510   | Tencent                | Proprietary             | Нет данных     |
@@ -69,8 +72,7 @@ Click on **model name** in the leaderboard to jump to its details or trial page.
 |       43 |              57 | [Qwen2.5-plus-1127](https://help.aliyun.com/zh/model-studio/getting-started/models?spm=a2c4g.11186623.0.i7)                               | 1297 | +5/-7   | 10,715  | Alibaba                | Proprietary             | Нет данных     |
 |       43 |              51 | [Deepseek-v2.5-1210](https://huggingface.co/deepseek-ai/DeepSeek-V2.5-1210)                                                               | 1294 | +6/-4   | 7,243   | DeepSeek               | DeepSeek                | Нет данных     |
 |       44 |              66 | [Gemma-3-4B-it](http://aistudio.google.com/app/prompts/new_chat?model=gemma-3-4b-it)                                                      | 1290 | +9/-7   | 4,321   | Google                 | Gemma                   | Нет данных     |
-|       48 |              45 | [Hunyuan-Large-2025-02-10](https://cloud.tencent.com/document/product/1729/104753)                                                        | 1287 | +11/-8  | 3,856   | Tencent                | Proprietary             | Нет данных     |
-|       50 |              58 | [Athene-v2-Chat-72B](https://huggingface.co/Nexusflow/Athene-V2-Chat)                                                                     | 1291 | +3/-4   | 26,074  | NexusFlow              | NexusFlow               | Нет данных     |
+|       48 |              45 | [Hunyuan-Large-2025-02-10](https://cloud.tencent.com/document/product极1729/104753)                                                        | 1287 | +11/-8  | 3,856   | Tencent                | Proprietary             | Нет данных     |
+|       50 |              58 | [Athene-v2-Chat-72B](https://huggingface.co/Nexusflow/Athene-V2-Chat)                                                                     | 1291 | +3/-极4   | 26,074  | NexusFlow              | NexusFlow               | Нет данных     |
 |       50 |              56 | [GLM-4-Plus](https://bigmodel.cn/dev/howuse/glm-4)                                                                                        | 1289 | +3/-3   | 27,788  | Zhipu AI               | Proprietary             | Нет данных     |
-|       50 |              43 | [Llama-4-Maverick-17B-128E-Instruct](https://huggingface.co/meta-llama/Llama-4-Maverick-17B-128E-Instruct)                                | 1288 | +5/-4   | 14,164  | Meta                   | Llama 4                 | Нет данных     |
-|
+|       50 |              43 | [Llama-4-Maverick-17B-128E-Instruct](https://huggingface.co/meta-llama/Llama-4-Maverick-17B-128E-Instruct)                                |
