@@ -2,11 +2,13 @@
 icon: floppy-disk
 ---
 
+# 保存先変更
+
 {% hint style="warning" %}
 このドキュメントはAIによって中国語から翻訳されており、まだレビューされていません。
 {% endhint %}
 
-# デフォルトの保存場所
+## デフォルトの保存場所
 
 Cherry Studio のデータ保存はシステム仕様に従い、データはユーザーディレクトリ下に自動的に保存されます。具体的なディレクトリの場所は以下の通りです：
 
@@ -17,11 +19,10 @@ Cherry Studio のデータ保存はシステム仕様に従い、データはユ
 > Linux: /home/username/.config/CherryStudio
 
 以下の場所でも確認できます：
-<figure><img src="../../.gitbook/assets/image (31).png" alt=""><figcaption></figcaption></figure>
 
+<figure><img src="../../.gitbook/assets/image%20(31).png" alt=""><figcaption></figcaption></figure>
 
-
-# 保存場所の変更（参考用）
+## 保存場所の変更（参考用）
 
 方法1：
 
@@ -29,11 +30,11 @@ Cherry Studio のデータ保存はシステム仕様に従い、データはユ
 
 具体的な操作手順はこちらを参照してください：[https://github.com/CherryHQ/cherry-studio/issues/621#issuecomment-2588652880](https://github.com/CherryHQ/cherry-studio/issues/621#issuecomment-2588652880)
 
-方法2：
+方法2：\
 Electron アプリの特性を利用し、起動パラメータの設定で保存場所を変更します。
 
-> --user-data-dir
-> 例: Cherry-Studio-*-x64-portable.exe --user-data-dir="%user_data_dir%"
+> \--user-data-dir\
+> 例: Cherry-Studio-\*-x64-portable.exe --user-data-dir="%user\_data\_dir%"
 
 > 実行例:
 
@@ -51,7 +52,7 @@ d-----         2025/4/18     14:05                user-data-dir
 -a----         2025/4/18     14:05            701 init_cherry_studio.bat
 ```
 
-> init_cherry_studio.bat (encoding: ANSI)
+> init\_cherry\_studio.bat (encoding: ANSI)
 
 ```bash
 @title CherryStudio 初期化

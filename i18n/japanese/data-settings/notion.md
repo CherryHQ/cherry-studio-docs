@@ -2,21 +2,23 @@
 icon: square-n
 ---
 
+# Notion 設定ガイド
+
 {% hint style="warning" %}
 このドキュメントはAIによって中国語から翻訳されており、まだレビューされていません。
 {% endhint %}
 
-# Notion 設定チュートリアル
+## Notion 設定チュートリアル
 
 Cherry Studio はトピックを Notion データベースにインポートすることをサポートしています。
 
-## ステップ1
+### ステップ1
 
 ウェブサイト [Notion Integrations](https://www.notion.so/profile/integrations) を開き、アプリケーションを作成します
 
 <figure><img src="../.gitbook/assets/notion/创建应用.png" alt=""><figcaption><p>プラス記号をクリックしてアプリケーションを作成</p></figcaption></figure>
 
-## ステップ2
+### ステップ2
 
 アプリケーションを作成します
 
@@ -30,7 +32,7 @@ Cherry Studio はトピックを Notion データベースにインポートす�
 
 <figure><img src="../.gitbook/assets/notion/Cherry-Studio-Logo.png" alt="" width="188"><figcaption></figcaption></figure>
 
-## ステップ3
+### ステップ3
 
 秘密鍵をコピーして Cherry Studio の設定に記入します
 
@@ -38,7 +40,7 @@ Cherry Studio はトピックを Notion データベースにインポートす�
 
 <figure><img src="../.gitbook/assets/notion/填写密钥.png" alt=""><figcaption><p>秘密鍵をデータ設定に記入</p></figcaption></figure>
 
-## ステップ4
+### ステップ4
 
 [Notion](https://www.notion.so/) ウェブサイトを開き、新しいページを作成し、下の方でデータベースタイプを選択します。名前には Cherry Studio と記入し、図のように操作して接続します
 
@@ -46,7 +48,7 @@ Cherry Studio はトピックを Notion データベースにインポートす�
 
 <figure><img src="../.gitbook/assets/notion/连接APP.png" alt=""><figcaption><p>ページ名を入力し、APPに接続を選択</p></figcaption></figure>
 
-## ステップ5
+### ステップ5
 
 <figure><img src="../.gitbook/assets/notion/复制数据库ID.png" alt=""><figcaption><p>データベース ID をコピー</p></figcaption></figure>
 
@@ -58,16 +60,16 @@ Notion データベース ID は `<long_hash_1>` の部分です
 
 <figure><img src="../.gitbook/assets/notion/填写数据库ID.png" alt=""><figcaption><p>データベース ID を記入し「チェック」をクリック</p></figcaption></figure>
 
-## ステップ6
+### ステップ6
 
 `ページタイトルフィールド名` を記入してください：
 
-ウェブページが英語の場合は `Name` と記入
+ウェブページが英語の場合は `Name` と記入\
 ウェブページが中国語の場合は `名称` と記入
 
 <figure><img src="../.gitbook/assets/notion/填写页面标题字段名.png" alt=""><figcaption><p>ページタイトルフィールド名を記入</p></figcaption></figure>
 
-## ステップ7
+### ステップ7
 
 おめでとうございます、Notion の設定が完了しました ✅ これで Cherry Studio のコンテンツをあなたの Notion データベースにエクスポートできるようになります
 
