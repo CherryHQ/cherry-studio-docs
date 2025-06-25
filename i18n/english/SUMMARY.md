@@ -1,9 +1,4 @@
-
-{% hint style="warning" %}
-This document was translated from Chinese by AI and has not yet been reviewed.
-{% endhint %}
-
-# Table of Contents
+# Table of contents
 
 ## Cherry Studio
 
@@ -100,12 +95,12 @@ This document was translated from Chinese by AI and has not yet been reviewed.
 * [Knowledge Base](question-contact/knowledge.md)
 * [Feedback & Suggestions](question-contact/suggestions.md)
 
-## Contact Us <a href="#contact-us" id="contact-us"></a>
+## Contact Us
 
 * [Business Cooperation](contact-us/questions.md)
   * [Cherry Studio Commercial License Agreement](contact-us/questions/cherrystudio-xu-ke-xie-yi.md)
 
-## About <a href="#about" id="about"></a>
+## About
 
 * [Privacy Policy](about/privacypolicy.md)
 
