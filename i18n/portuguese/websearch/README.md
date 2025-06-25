@@ -3,11 +3,13 @@ description: 如何在 Cherry Studio 使用联网模式
 icon: globe
 ---
 
+# Modo Online
+
 {% hint style="warning" %}
 Este documento foi traduzido do chinês por IA e ainda não foi revisado.
 {% endhint %}
 
-# Modo de Rede
+## Modo de Rede
 
 {% hint style="info" %}
 Exemplos de cenários que requerem conexão à internet:
@@ -17,7 +19,7 @@ Exemplos de cenários que requerem conexão à internet:
 * Conhecimentos emergentes: como novas coisas, novos conceitos, novas tecnologias etc.
 {% endhint %}
 
-### 1. Como ativar a conexão à internet
+#### 1. Como ativar a conexão à internet
 
 Na janela de perguntas do Cherry Studio, clique no ícone 【Globo Terrestre】 para ativar a conexão à internet.
 
@@ -25,9 +27,9 @@ Na janela de perguntas do Cherry Studio, clique no ícone 【Globo Terrestre】 
 
 <figure><img src="../.gitbook/assets/image (96).png" alt=""><figcaption><p>Indica - A função de conexão à internet foi ativada</p></figcaption></figure>
 
-### 2. Atenção especial: Dois modos de conexão à internet
+#### 2. Atenção especial: Dois modos de conexão à internet
 
-#### Modo 1: A capacidade de conexão nativa dos grandes modelos dos provedores
+**Modo 1: A capacidade de conexão nativa dos grandes modelos dos provedores**
 
 Nesse caso, após ativar a conexão, você pode usar diretamente o serviço online, o que é muito simples.
 
@@ -50,7 +52,7 @@ Na página de gerenciamento de modelos, este método também permite identificar
 > * <mark style="color:green;">Alibaba Cloud Bailian, etc.</mark>
 
 {% hint style="danger" %}
-Atenção especial:
+Atenção especial:\
 Existe uma situação excepcional em que o modelo pode realizar conexão mesmo sem o ícone do globo, como explicado no tutorial abaixo.
 {% endhint %}
 
@@ -60,7 +62,7 @@ Existe uma situação excepcional em que o modelo pode realizar conexão mesmo s
 
 ***
 
-#### Modo 2: Usar o serviço Tavily para habilitar conexão em modelos não nativos
+**Modo 2: Usar o serviço Tavily para habilitar conexão em modelos não nativos**
 
 Quando usamos grandes modelos sem capacidade de conexão nativa (sem ícone de globo) e precisamos acessar informações em tempo real, utilizamos o serviço de pesquisa na web do Tavily.
 
