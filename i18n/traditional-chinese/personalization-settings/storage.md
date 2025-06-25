@@ -2,11 +2,13 @@
 icon: floppy-disk
 ---
 
+# 修改儲存位置
+
 {% hint style="warning" %}
 此文件由 AI 從中文翻譯而來，尚未經過審閱。
 {% endhint %}
 
-# 預設儲存位置
+## 預設儲存位置
 
 Cherry Studio 資料儲存遵循系統規範，資料會自動放置在使用者目錄下，具體目錄位置如下：
 
@@ -17,11 +19,10 @@ Cherry Studio 資料儲存遵循系統規範，資料會自動放置在使用者
 > Linux: /home/username/.config/CherryStudio
 
 也可以在以下位置查看：
-<figure><img src="../../.gitbook/assets/image (31).png" alt=""><figcaption></figcaption></figure>
 
+<figure><img src="../../.gitbook/assets/image%20(31).png" alt=""><figcaption></figcaption></figure>
 
-
-# 修改儲存位置（參考用）
+## 修改儲存位置（參考用）
 
 方法一：
 
@@ -29,11 +30,11 @@ Cherry Studio 資料儲存遵循系統規範，資料會自動放置在使用者
 
 具體操作步驟請參考：[https://github.com/CherryHQ/cherry-studio/issues/621#issuecomment-2588652880](https://github.com/CherryHQ/cherry-studio/issues/621#issuecomment-2588652880)
 
-方法二：
+方法二：\
 基於 Electron 應用特性，透過設定啟動參數修改儲存位置。
 
-> --user-data-dir
-> 如: Cherry-Studio-*-x64-portable.exe --user-data-dir="%user_data_dir%"
+> \--user-data-dir\
+> 如: Cherry-Studio-\*-x64-portable.exe --user-data-dir="%user\_data\_dir%"
 
 > 範例:
 
@@ -51,7 +52,7 @@ d-----         2025/4/18     14:05                user-data-dir
 -a----         2025/4/18     14:05            701 init_cherry_studio.bat
 ```
 
-> init_cherry_studio.bat (編碼格式: ANSI)
+> init\_cherry\_studio.bat (編碼格式: ANSI)
 
 ```bash
 @title CherryStudio 初始化

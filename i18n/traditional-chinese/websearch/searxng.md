@@ -2,29 +2,31 @@
 icon: searchengin
 ---
 
+# SearXNG 本機部署與配置
+
 {% hint style="warning" %}
 此文件由 AI 從中文翻譯而來，尚未經過審閱。
 {% endhint %}
 
-# SearXNG 部署與配置
+## SearXNG 部署與配置
 
 CherryStudio 支援透過 SearXNG 進行網絡搜索，SearXNG 是一個可本地部署也可在伺服器上部署的開源項目，所以與其他需要 API 供應商的配置方式略有不同。
 
 **SearXNG 項目鏈接**：[SearXNG](https://github.com/searxng/searxng)
 
-## SearXNG 的優勢
+### SearXNG 的優勢
 
 * 開源免費，無需 API
 * 隱私性相對較高
 * 可高度定制化
 
-## 本地部署
+### 本地部署
 
-### 一、Docker 直接部署
+#### 一、Docker 直接部署
 
 由於 SearXNG 不需要複雜的環境配置，可以不用 docker compose，只需要簡單提供一個空閒端口即可部署，所以最快捷的方式可以使用 Docker 直接拉取鏡像進行部署。
 
-#### 1. 下載安裝並配置 [docker](https://www.docker.com/)
+**1. 下載安裝並配置** [**docker**](https://www.docker.com/)
 
 <figure><img src="../../.gitbook/assets/searxng_config_img_01.png" alt=""><figcaption></figcaption></figure>
 
@@ -32,7 +34,7 @@ CherryStudio 支援透過 SearXNG 進行網絡搜索，SearXNG 是一個可本�
 
 <figure><img src="../../.gitbook/assets/searxng_config_img_02.png" alt=""><figcaption></figcaption></figure>
 
-#### 2. 搜索並拉取 SearXNG 鏡像
+**2. 搜索並拉取 SearXNG 鏡像**
 
 搜索欄輸入 **searxng**：
 
@@ -44,7 +46,7 @@ CherryStudio 支援透過 SearXNG 進行網絡搜索，SearXNG 是一個可本�
 
 <figure><img src="../../.gitbook/assets/searxng_config_img_05.png" alt=""><figcaption></figcaption></figure>
 
-#### 3. 運行鏡像
+**3. 運行鏡像**
 
 拉取成功後來到 **images** 頁面：
 
@@ -70,13 +72,13 @@ CherryStudio 支援透過 SearXNG 進行網絡搜索，SearXNG 是一個可本�
 
 <figure><img src="../../.gitbook/assets/searxng_config_img_11.png" alt=""><figcaption></figcaption></figure>
 
-## 伺服器部署
+### 伺服器部署
 
 鑒於 Windows 下安裝 Docker 是一件較為麻煩的事情，使用者可以將 SearXNG 部署在伺服器上，也可藉此共享給其他人使用。但是很遺憾，SearXNG 自身暫不支援鑒權，導致他人可以透過技術手段掃描到並濫用你部署的實例。
 
 為此，Cherry Studio 目前已支援配置 [HTTP 基本認證（RFC7617）](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Guides/Authentication)，如果使用者欲將自己部署的 SearXNG 暴露在公網環境下，請**務必**透過 Nginx 等反向代理軟件配置 HTTP 基本認證。下面提供簡要教程，需要你有基本的 Linux 運維知識。
 
-### 部署 SearXNG
+#### 部署 SearXNG
 
 類似地，仍然使用 Docker 部署。假設你已按照[官方教程](https://docs.docker.com/engine/install)在伺服器上安裝好了最新版 Docker CE，以下提供一條龍命令，適用於 Debian 系統下全新安裝：
 
@@ -202,9 +204,9 @@ volumes:
 
 執行 `docker compose up -d` 啟動。執行 `docker compose logs -f searxng` 可以看到日誌。
 
-### 部署 Nginx 反向代理和 HTTP 基本認證
+#### 部署 Nginx 反向代理和 HTTP 基本認證
 
-如果你使用了一些伺服器面板程序，例如寶塔面板或 1Panel，請參閱其文檔添加網站並配置 nginx 反向代理，隨後找到修改 nginx 配置文件的地方，
+如果你使用了一些伺服器面板程序，例如寶塔面板或 1Panel，請參閱其文檔添加網站並配置 nginx 反向代理，隨後找到修改 nginx 配置文件的地方，\
 參考下面的範例進行修改：
 
 ```conf
@@ -261,7 +263,7 @@ echo "example_name:$(openssl passwd -5 'example_password')" > /etc/nginx/conf.d/
 
 <figure><img src="../../.gitbook/assets/searxng-basic-auth-example.png" alt=""><figcaption></figcaption></figure>
 
-## Cherry Studio 相關配置
+### Cherry Studio 相關配置
 
 SearXNG 本地或在伺服器部署成功後，接下來是 CherryStudio 的相關配置。
 
@@ -305,8 +307,8 @@ SearXNG 本地或在伺服器部署成功後，接下來是 CherryStudio 的相�
 
 <figure><img src="../../.gitbook/assets/searxng_config_img_21.png" alt=""><figcaption></figcaption></figure>
 
-地址既可以填寫本地：<http://localhost>:端口號\
-也可以填寫 docker 地址：<http://host.docker.internal>:端口號
+地址既可以填寫本地：[http://localhost](http://localhost):端口號\
+也可以填寫 docker 地址：[http://host.docker.internal](http://host.docker.internal):端口號
 
 如果使用者遵循前面的範例在伺服器上部署並正確配置了反向代理，已經開啟了 json 返回類型。輸入地址後進行驗證，由於已給反向代理配置了 HTTP 基本認證，此時驗證則應返回 401 錯誤碼：
 
@@ -318,7 +320,7 @@ SearXNG 本地或在伺服器部署成功後，接下來是 CherryStudio 的相�
 
 進行驗證，應當驗證成功。
 
-### 其他配置
+#### 其他配置
 
 此時 SearXNG 已具備默認聯網搜索能力，如需定制搜索引擎需要自行進行配置
 
@@ -338,15 +340,15 @@ SearXNG 本地或在伺服器部署成功後，接下來是 CherryStudio 的相�
 
 若內容太長直接修改不方便，可將其複製到本地 IDE 中，修改後粘貼到配置文件中即可。
 
-## 驗證失敗常見原因
+### 驗證失敗常見原因
 
-### 返回格式未添加 json 格式
+#### 返回格式未添加 json 格式
 
 在配置文件中將返回格式加上 json：
 
 <figure><img src="../../.gitbook/assets/searxng_json_format.png" alt=""><figcaption></figcaption></figure>
 
-### 未正確配置搜索引擎
+#### 未正確配置搜索引擎
 
 Cherry Studio 會默認選取 categories 同時包含 web general 的引擎進行搜索，默認情況下會選中 google 等引擎，由於大陸無法直接訪問 google 等網站導致失敗。增加以下配置使得 searxng 強制使用 baidu 引擎，即可解決問題：
 
@@ -364,7 +366,7 @@ engines:
     disabled: false
 ```
 
-### 訪問速率過快
+#### 訪問速率過快
 
 searxng 的 limiter 配置阻礙了 API 訪問，請嘗試將其在設置中設為 false：
 
