@@ -58,7 +58,7 @@ https://www.notion.so/\<long\_hash\_1>?v=\<long\_hash\_2>
 
 填写 `页面标题字段名`：
 
-若你的网页时英文的，则填写 `Name`
+若你的网页时英文的，则填写 `Name`\
 若你的网页端是中文的，则填写 `名称`
 
 <figure><img src="../.gitbook/assets/notion/填写页面标题字段名.png" alt=""><figcaption><p>填写页面标题字段名</p></figcaption></figure>
