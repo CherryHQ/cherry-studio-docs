@@ -2,11 +2,13 @@
 icon: floppy-disk
 ---
 
+# Αλλαγή θέσης αποθήκευσης
+
 {% hint style="warning" %}
 Αυτό το έγγραφο μεταφράστηκε από τα Κινεζικά με AI και δεν έχει ακόμη ελεγχθεί.
 {% endhint %}
 
-# Προεπιλεγμένη θέση αποθήκευσης
+## Προεπιλεγμένη θέση αποθήκευσης
 
 Το Cherry Studio ακολουθεί τα πρότυπα του συστήματος για την αποθήκευση δεδομένων. Τα δεδομένα αποθηκεύονται αυτόματα στον κατάλογο χρήστη. Οι συγκεκριμένες τοποθεσίες καταλόγων είναι:
 
@@ -17,11 +19,10 @@ icon: floppy-disk
 > Linux: /home/username/.config/CherryStudio
 
 Μπορείτε επίσης να δείτε την τοποθεσία εδώ:
-<figure><img src="../../.gitbook/assets/image (31).png" alt=""><figcaption></figcaption></figure>
 
+<figure><img src="../../.gitbook/assets/image%20(31).png" alt=""><figcaption></figcaption></figure>
 
-
-# Αλλαγή θέσης αποθήκευσης (για αναφορά)
+## Αλλαγή θέσης αποθήκευσης (για αναφορά)
 
 Μέθοδος 1:
 
@@ -29,11 +30,11 @@ icon: floppy-disk
 
 Για λεπτομερείς οδηγίες, ανατρέξτε: [https://github.com/CherryHQ/cherry-studio/issues/621#issuecomment-2588652880](https://github.com/CherryHQ/cherry-studio/issues/621#issuecomment-2588652880)
 
-Μέθοδος 2:
+Μέθοδος 2:\
 Χρησιμοποιώντας χαρακτηριστικά εφαρμογών Electron, τροποποιήστε τη θέση αποθήκευσης ρυθμίζοντας παραμέτρους εκκίνησης.
 
-> --user-data-dir
-> Πχ: Cherry-Studio-*-x64-portable.exe --user-data-dir="%user_data_dir%"
+> \--user-data-dir\
+> Πχ: Cherry-Studio-\*-x64-portable.exe --user-data-dir="%user\_data\_dir%"
 
 > Παράδειγμα:
 
@@ -51,7 +52,7 @@ d-----         2025/4/18     14:05                user-data-dir
 -a----         2025/4/18     14:05            701 init_cherry_studio.bat
 ```
 
-> init_cherry_studio.bat (κωδικοποίηση: ANSI)
+> init\_cherry\_studio.bat (κωδικοποίηση: ANSI)
 
 ```bash
 @title Αρχικοποίηση CherryStudio
