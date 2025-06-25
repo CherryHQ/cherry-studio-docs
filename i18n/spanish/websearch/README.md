@@ -3,15 +3,17 @@ description: 如何在 Cherry Studio 使用联网模式
 icon: globe
 ---
 
+# Modo online
+
 {% hint style="warning" %}
 Este documento ha sido traducido del chino por IA y aún no ha sido revisado.
 {% endhint %}
 
----
-icon: cherries
----
+***
 
-# Modo de Conexión a Internet
+### icon: cherries
+
+## Modo de Conexión a Internet
 
 {% hint style="info" %}
 Ejemplos de situaciones que requieren conexión a internet:
@@ -21,7 +23,7 @@ Ejemplos de situaciones que requieren conexión a internet:
 * Conocimiento emergente: como nuevas tendencias, conceptos, tecnologías, etc.
 {% endhint %}
 
-### 1. Cómo Activar la Conexión a Internet
+#### 1. Cómo Activar la Conexión a Internet
 
 En la ventana de preguntas de Cherry Studio, haz clic en el ícono 【Globo Terrestre】 para activar la conexión a internet.
 
@@ -29,9 +31,10 @@ En la ventana de preguntas de Cherry Studio, haz clic en el ícono 【Globo Terr
 
 <figure><img src="../.gitbook/assets/image (96).png" alt=""><figcaption><p>Indicador - Función de conexión activada</p></figcaption></figure>
 
-### 2. Atención Especial: Dos Modos de Conexión
+#### 2. Atención Especial: Dos Modos de Conexión
 
-#### Modo 1: Modelos con función integrada de conexión
+**Modo 1: Modelos con función integrada de conexión**
+
 Cuando el modelo del proveedor incluye conectividad nativa, solo debes activarla para usarla inmediatamente.
 
 {% hint style="warning" %}
@@ -53,7 +56,7 @@ Este método también funciona en la página de gestión de modelos para filtrar
 > * <mark style="color:green;">Alibaba Cloud Bailian, etc.</mark>
 
 {% hint style="danger" %}
-¡Atención!
+¡Atención!\
 Existe un caso especial donde el modelo muestra conectividad sin el ícono, como se explica en esta guía.
 {% endhint %}
 
@@ -63,7 +66,8 @@ Existe un caso especial donde el modelo muestra conectividad sin el ícono, como
 
 ***
 
-#### Modo 2: Conexión mediante Tavily
+**Modo 2: Conexión mediante Tavily**
+
 Cuando usas un modelo sin función nativa (sin ícono de globo) pero necesitas datos en tiempo real, utiliza el servicio de búsqueda Tavily.
 
 **Primer uso de Tavily**: Aparecerá un pop-up para configurar la API. ¡Sigue las instrucciones!
