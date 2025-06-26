@@ -1,15 +1,18 @@
 ---
 icon: download
 ---
+# Скачивание клиента
+
 
 {% hint style="warning" %}
 Этот документ переведен с китайского языка с помощью ИИ и еще не был проверен.
 {% endhint %}
 
-# Скачивание клиента
+
+
 
 {% hint style="info" %}
-Текущая последняя стабильная версия: v1.4.5
+Текущая последняя стабильная версия: v1.4.6
 {% endhint %}
 
 ## Прямые ссылки для скачивания
@@ -17,36 +20,32 @@ icon: download
 ### Версия для Windows
 
 {% hint style="warning" %}
-Примечание: Windows 7 не поддерживает установку Cherry Studio.
+Внимание: Cherry Studio не поддерживает установку на Windows 7.
 {% endhint %}
 
 #### Установочная версия (Setup)
 
 <details>
 
-<summary>Версия x64</summary>
+<summary>x64 версия</summary>
 
 Основные ссылки:
+【[Официальный сайт Cherry Studio](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.6/Cherry-Studio-1.4.6-x64-setup.exe)】
 
-【[Официальный сайт Cherry Studio](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.5/Cherry-Studio-1.4.5-x64-setup.exe)】
-
-Запасные ссылки:
-
-【[Ссылка 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.5/Cherry-Studio-1.4.5-x64-setup.exe)】 【[Ссылка 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.5/Cherry-Studio-1.4.5-x64-setup.exe)】 【[Ссылка 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.5/Cherry-Studio-1.4.5-x64-setup.exe)】
+Альтернативные ссылки:
+【[Линия 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.6/Cherry-Studio-1.4.6-x64-setup.exe)】 【[Линия 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.6/Cherry-Studio-1.4.6-x64-setup.exe)】 【[Линия 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.6/Cherry-Studio-1.4.6-x64-setup.exe)】
 
 </details>
 
 <details>
 
-<summary>Версия ARM64</summary>
+<summary>ARM64 версия</summary>
 
 Основные ссылки:
+【[Официальный сайт Cherry Studio](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.6/Cherry-Studio-1.4.6-arm64-setup.exe)】
 
-【[Официальный сайт Cherry Studio](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.5/Cherry-Studio-1.4.5-arm64-setup.exe)】
-
-Запасные ссылки:
-
-【[Ссылка 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.5/Cherry-Studio-1.4.5-arm64-setup.exe)】 【[Ссылка 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.5/Cherry-Studio-1.4.5-arm64-setup.exe)】 【[Ссылка 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.5/Cherry-Studio-1.4.5-arm64-setup.exe)】
+Альтернативные ссылки:
+【[Линия 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.6/Cherry-Studio-1.4.6-arm64-setup.exe)】 【[Линия 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.6/Cherry-Studio-1.4.6-arm64-setup.exe)】 【[Линия 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.6/Cherry-Studio-1.4.6-arm64-setup.exe)】
 
 </details>
 
@@ -54,29 +53,25 @@ icon: download
 
 <details>
 
-<summary>Версия x64</summary>
+<summary>x64 версия</summary>
 
 Основные ссылки:
+【[Официальный сайт Cherry Studio](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.6/Cherry-Studio-1.4.6-x64-portable.exe)】
 
-【[Официальный сайт Cherry Studio](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.5/Cherry-Studio-1.4.5-x64-portable.exe)】
-
-Запасные ссылки:
-
-【[Ссылка 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.5/Cherry-Studio-1.4.5-x64-portable.exe)】 【[Ссылка 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.5/Cherry-Studio-1.4.5-x64-portable.exe)】 【[Ссылка 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.5/Cherry-Studio-1.4.5-x64-portable.exe)】
+Альтернативные ссылки:
+【[Линия 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.6/Cherry-Studio-1.4.6-x64-portable.exe)】 【[Линия 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.6/Cherry-Studio-1.4.6-x64-portable.exe)】 【[Линия 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.6/Cherry-Studio-1.4.6-x64-portable.exe)】
 
 </details>
 
 <details>
 
-<summary>Версия ARM64</summary>
+<summary>ARM64 версия</summary>
 
 Основные ссылки:
+【[Официальный сайт Cherry Studio](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.6/Cherry-Studio-1.4.6-arm64-portable.exe)】
 
-【[Официальный сайт Cherry Studio](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.5/Cherry-Studio-1.4.5-arm64-portable.exe)】
-
-Запасные ссылки:
-
-【[Ссылка 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.5/Cherry-Studio-1.4.5-arm64-portable.exe)】 【[Ссылка 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.5/Cherry-Studio-1.4.5-arm64-portable.exe)】 【[Ссылка 3](https://download.ocoolai.online/https://github.com/CherryHQ/ccherry-studio/releases/download/v1.4.5/Cherry-Studio-1.4.5-arm64-portable.exe)】
+Альтернативные ссылки:
+【[Линия 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.6/Cherry-Studio-1.4.6-arm64-portable.exe)】 【[Линия 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.6/Cherry-Studio-1.4.6-arm64-portable.exe)】 【[Линия 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.6/Cherry-Studio-1.4.6-arm64-portable.exe)】
 
 </details>
 
@@ -86,15 +81,13 @@ icon: download
 
 <details>
 
-<summary>Версия для Intel (x64)</summary>
+<summary>Версия для процессоров Intel (x64)</summary>
 
 Основные ссылки:
+【[Официальный сайт Cherry Studio](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v极4.6/Cherry-Studio-1.4.6-x64.dmg)】
 
-【[Официальный сайт Cherry Studio](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.5/Cherry-Studio-1.4.5-x64.dmg)】
-
-Запасные ссылки:
-
-【[Ссылка 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.5/Cherry-Studio-1.4.5-x64.dmg)】 【[Ссылка 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.5/Cherry-Studio-1.4.5-x64.dmg)】 【[Ссылка 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.5/Cherry-Studio-1.4.5-x64.dmg)】
+Альтернативные ссылки:
+【[Линия 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.6/Cherry-Studio-1.4.6-x64.dmg)】 【[Линия 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.6/Cherry-Studio-1.4.6-x64.dmg)】 【[Линия 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.6/Cherry-Studio-1.4.6-x64.dmg)】
 
 </details>
 
@@ -103,12 +96,10 @@ icon: download
 <summary>Версия для Apple Silicon (ARM64, чипы серии M)</summary>
 
 Основные ссылки:
+【[Официальный сайт Cherry Studio](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.6/Cherry-Studio-1.4.6-arm64.dmg)】
 
-【[Официальный сайт Cherry Studio](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.5/Cherry-Studio-1.4.5-arm64.dmg)】
-
-Запасные ссылки:
-
-【[Ссылка 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.5/Cherry-Studio-1.4.5-arm64.dmg)】 【[Ссылка 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.5/Cherry-Studio-1.4.5-arm64.dmg)】 【[Ссылка 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.5/Cherry-Studio-1.4.5-arm64.dmg)】
+Альтернативные ссылки:
+【[Линия 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.6/Cherry-Studio-1.4.6-arm64.dmg)】 【[Линия 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.6/Cherry-Studio-1.4.6-arm64.dmg)】 【[Линия 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.6/Cherry-Studio-1.4.6-arm64.dmg)】
 
 </details>
 
@@ -118,34 +109,30 @@ icon: download
 
 <details>
 
-<summary>Версия x86_64</summary>
+<summary>x86_64 версия</summary>
 
 Основные ссылки:
+【[Официальный сайт Cherry Studio](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.6/Cherry-Studio-1.4.6-x86_64.AppImage)】
 
-【[Официальный сайт Cherry Studio](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.5/Cherry-Studio-1.4.5-x86_64.AppImage)】
-
-Запасные ссылки:
-
-【[Ссылка 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.5/Cherry-Studio-1.4.5-x86_64.AppImage)】 【[Ссылка 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.5/Cherry-Studio-1.4.5-x86_64.AppImage)】 【[Ссылка 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.5/Cherry-Studio-1.4.5-x86_64.AppImage)】
+Альтернативные ссылки:
+【[Линия 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.6/Cherry-Studio-1.4.6-x86_64.AppImage)】 【[Линия 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.6/Cherry-Studio-1.4.6-x86_64.AppImage)】 【[Линия 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.6/Cherry-Studio-1.4.6-x86_64.AppImage)】
 
 </details>
 
 <details>
 
-<summary>Версия ARM64</summary>
+<summary>ARM64 версия</summary>
 
 Основные ссылки:
+【[Официальный сайт Cherry Studio](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.6/Cherry-Studio-1.4.6-arm64.AppImage)】
 
-【[Официальный сайт Cherry Studio](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.5/Cherry-Studio-1.4.5-arm64.AppImage)】
-
-Запасные ссылки:
-
-【[Ссылка 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.5/Cherry-Studio-1.4.5-arm64.AppImage)】 【[Ссылка 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.5/Cherry-Studio-1.4.5-arm64.AppImage)】 【[Ссылка 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.5/Cherry-Studio-1.4.5-arm64-AppImage)】
+Альтернативные ссылки:
+【[Линия 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.6/Cherry-Studio-1.4.6-arm64.AppImage)】 【[Линия 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.6/Cherry-Studio-1.4.6-arm64.AppImage)】 【[Линия 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.6/Cherry-Studio-1.4.6-arm64-AppImage)】
 
 </details>
 
 ***
 
-## Скачивание через облачные сервисы
+## Скачивание из облачного хранилища
 
 [Quark](https://pan.quark.cn/s/c8533a1ec63e#/list/share)
