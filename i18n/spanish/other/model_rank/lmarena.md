@@ -1,4 +1,4 @@
-# Clasificación de la Arena LLM (Actualización en tiempo real)
+# Clasificación LLM Arena (actualización en tiempo real)
 
 
 {% hint style="warning" %}
@@ -8,9 +8,9 @@ Este documento ha sido traducido del chino por IA y aún no ha sido revisado.
 
 
 
-Esta es una clasificación basada en datos de Chatbot Arena (lmarena.ai), generada a través de un proceso automatizado.
+Esta es una clasificación basada en datos de Chatbot Arena (lmarena.ai), generada mediante un proceso automatizado.
 
-> **Última actualización de datos**: 2025-06-25 11:42:53 UTC / 2025-06-25 19:42:53 CST (Hora de Beijing)
+> **Fecha de actualización de datos**: 2025-06-26 11:42:56 UTC / 2025-06-26 19:42:56 CST (hora de Pekín)
 
 {% hint style="info" %}
 Haz clic en el **nombre del modelo** en la clasificación para acceder a su página de detalles o prueba.
@@ -18,7 +18,7 @@ Haz clic en el **nombre del modelo** en la clasificación para acceder a su pág
 
 ## Clasificación
 
-| Rango (UB) | Rango (StyleCtrl) | Modelo                                                                                                                         | Puntuación | Intervalo de Confianza | Votos      | Proveedor                    | Licencia                    | Fecha de Corte del Conocimiento   |
+| Rango (UB) | Rango (StyleCtrl) | Nombre del Modelo                                                                                                                         | Puntuación | Intervalo de Confianza | Votos      | Proveedor                    | Licencia                    | Fecha de Corte de Conocimiento |
 |:---|:---|:---|:---|:---|:---|:---|:---|:---|
 |        1 |               1 | [Gemini-2.5-Pro](http://aistudio.google.com/app/prompts/new_chat?model=gemini-2.5-pro)                                      | 1477 | +5/-5   | 12,327  | Google                 | Propietaria             | Sin datos     |
 |        2 |               2 | [Gemini-2.5-Pro-Preview-05-06](http://aistudio.google.com/app/prompts/new_chat?model=gemini-2.5-pro-preview-05-06)          | 1446 | +4/-6   | 14,040  | Google                 | Propietaria             | Sin datos     |
@@ -47,14 +47,14 @@ Haz clic en el **nombre del modelo** en la clasificación para acceder a su pág
 |       24 |              18 | [o1-preview](https://platform.openai.com/docs/models/o1)                                                                    | 1352 | +3/-3   | 33,177  | OpenAI                 | Propietaria             | 2023/10  |
 |       26 |              12 | [Claude Sonnet 4 (20250514)](https://www.anthropic.com/news/claude-4)                                                       | 1345 | +5/-4   | 14,984  | Anthropic              | Propietaria             | Sin datos     |
 |       26 |              25 | [o3-mini-high](https://platform.openai.com/docs/guides/reasoning#reasoning-effort)                                          | 1342 | +4/-4   | 19,404  | OpenAI                 | Propietaria             | Sin datos     |
-|       26 |              21 | [GPT-4.1-mini-2025-04-14](https://openai.com/index/gpt-极光4-1/)                                                                | 1339 | +5/-4   | 15,337  | OpenAI                 | Propietaria             | Sin datos     |
+|       26 |              21 | [GPT-4.1-mini-2025-04-14](https://openai.com/index/gpt-4-1/)                                                                | 1339 | +5/-4   | 15,337  | OpenAI                 | Propietaria             | Sin datos     |
 |       26 |              33 | [Gemma-3-12B-it](http://aistudio.google.com/app/prompts/new_chat?model=gemma-3-12b-it)                                      | 1338 | +10/-9  | 3,976   | Google                 | Gemma                   | Sin datos     |
-|       27 |              30 | [DeepSeek-V3](https://huggingface.co/deepseek-ai/DeepSeek-V3)                                                               | 1336 | +3/-4  极光 | 22,841  | DeepSeek               | DeepSeek                | Sin datos     |
+|       27 |              30 | [DeepSeek-V3](https://huggingface.co/deepseek-ai/DeepSeek-V3)                                                               | 1336 | +3/-4   | 22,841  | DeepSeek               | DeepSeek                | Sin datos     |
 |       27 |              37 | [QwQ-32B](https://huggingface.co/Qwen/QwQ-32B)                                                                              | 1334 | +5/-4   | 17,462  | Alibaba                | Apache 2.0              | Sin datos     |
 |       28 |              36 | [GLM-4-Plus-0111](https://bigmodel.cn/dev/howuse/glm-4)                                                                     | 1328 | +8/-8   | 6,028   | Zhipu                  | Propietaria             | Sin datos     |
 |       28 |              51 | [Amazon-Nova-Experimental-Chat-05-14](https://nova.amazon.com/faqs)                                                         | 1328 | +8/-9   | 5,213   | Amazon                 | Propietaria             | Sin datos     |
 |       28 |              32 | [Qwen-Plus-0125](https://www.alibabacloud.com/help/en/model-studio/developer-reference/what-is-qwen-llm)                    | 1328 | +7/-6   | 6,055   | Alibaba                | Propietaria             | Sin datos     |
-|       29 |              31 | [Gemini-2.0-Flash-Lite](https://a极光istudio.google.com/prompts/new_chat?model=gemini-2.0-flash-lite)                           | 1330 | +3/-3   | 26,104  | Google                 | Propietaria             | Sin datos     |
+|       29 |              31 | [Gemini-2.0-Flash-Lite](https://aistudio.google.com/prompts/new_chat?model=gemini-2.0-flash-lite)                           | 1330 | +3/-3   | 26,104  | Google                 | Propietaria             | Sin datos     |
 |       31 |              33 | [Command A (03-2025)](https://cohere.com/blog/command-a)                                                                    | 1327 | +3/-3   | 22,851  | Cohere                 | CC-BY-NC-4.0            | Sin datos     |
 |       31 |              39 | [Step-2-16K-Exp](https://platform.stepfun.com/docs/llm/text)                                                                | 1322 | +7/-7   | 5,126   | StepFun                | Propietaria             | Sin datos     |
 |       31 |              31 | [Hunyuan-TurboS-20250226](https://cloud.tencent.com/document/product/1729/104753)                                           | 1320 | +10/-9  | 2,452   | Tencent                | Propietaria             | Sin datos     |
@@ -76,4 +76,5 @@ Haz clic en el **nombre del modelo** en la clasificación para acceder a su pág
 |       50 |              61 | [Athene-v2-Chat-72B](https://huggingface.co/Nexusflow/Athene-V2-Chat)                                                       | 1293 | +3/-3   | 26,074  | NexusFlow              | NexusFlow               | Sin datos     |
 |       50 |              41 | [Llama-4-Maverick-17B-128E-Instruct](https://huggingface.co/meta-llama/Llama-4-Maverick-17B-128E-Instruct)                  | 1292 | +4/-4   | 15,906  | Meta                   | Llama 4                 | Sin datos     |
 |       50 |              56 | [GLM-4-Plus](https://bigmodel.cn/dev/howuse/glm-4)                                                                          | 1291 | +4/-2   | 27,788  | Zhipu AI               | Propietaria             | Sin datos     |
-|       50 |              47 | [Hunyuan-Large-2025-02-10](https://cloud.tencent.com/document/product/1729/104753)                                          | 1289 | +9/-10  | 3,856   | Tencent                | Propietaria
+|       50 |              47 | [Hunyuan-Large-2025-02-10](https://cloud.tencent.com/document/product/1729/104753)                                          | 1289 | +9/-10  | 3,856   | Tencent                | Propietaria             | Sin datos     |
+|
