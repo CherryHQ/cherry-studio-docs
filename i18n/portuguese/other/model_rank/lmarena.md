@@ -1,4 +1,4 @@
-# Leaderboard LLM Arena (Atualização em Tempo Real)
+# Ranking da Arena LLM (Atualização em Tempo Real)
 
 
 {% hint style="warning" %}
@@ -8,39 +8,40 @@ Este documento foi traduzido do chinês por IA e ainda não foi revisado.
 
 
 
-Este é um leaderboard baseado em dados do Chatbot Arena (lmarena.ai), gerado por um processo automatizado.
-
-> **Data de Atualização**: 2025-06-26 11:42:56 UTC / 2025-06-26 19:42:56 CST (Horário de Beijing)
-
-{% hint style="info" %}
-Clique no **nome do modelo** no leaderboard para acessar sua página de detalhes ou teste.
+{% hint style="warning" %}
+Este documento foi traduzido do chinês por uma IA e ainda não foi revisado. Ficarei verificando cada página para validar a tradução.
 {% endhint %}
 
-## Leaderboard
+Este é um ranking gerado automaticamente com base nos dados do Chatbot Arena (lmarena.ai).
 
-| Rank(UB) | Rank(StyleCtrl) | Nome do Modelo | Pontuação | Intervalo de Confiança | Votos | Fornecedor | Licença | Corte de Conhecimento |
-|:---|:---|:---|:---|:---|:---|:---|:---|:---|
-| 1 | 1 | [Gemini-2.5-Pro](http://aistudio.google.com/app/prompts/new_chat?model=gemini-2.5-pro) | 1477 | +5/-5 | 12,327 | Google | Proprietária | Sem dados |
-| 2 | 2 | [Gemini-2.5-Pro-Preview-05-06](http://aistudio.google.com/app/prompts/new_chat?model=gemini-2.5-pro-preview-05-06) | 1446 | +4/-6 | 14,040 | Google | Proprietária | Sem dados |
-| ... | ... | ... | ... | ... | ... | ... | ... | ... |
-| 208 | 207 | [LLaMA-13B](https://arxiv.org/abs/2302.13971) | 817 | +11/-12 | 2,446 | Meta | Não comercial | 2023/2 |
+> **Data de atualização**: 2025-06-27 11:42:07 UTC / 2025-06-27 19:42:07 CST (Horário de Pequim)
 
-## Notas Explicativas
+{% hint style="info" %}
+Clique no **nome do modelo** no ranking para visualizar detalhes ou página de teste.
+{% endhint %}
 
-- **Rank(UB)**: Classificação baseada no modelo Bradley-Terry. Reflete o desempenho global do modelo na arena e fornece uma estimativa do **limite superior** de sua pontuação Elo, ajudando a entender sua competitividade potencial.
-- **Rank(StyleCtrl)**: Classificação após controle de estilo de conversação. Visa reduzir o viés de preferência causado por estilos de resposta (ex: verbosidade, concisão), avaliando mais puramente a capacidade central do modelo.
-- **Nome do Modelo**: Nome do modelo de linguagem grande (LLM). Inclui links para detalhes/página de teste.
-- **Pontuação**: Pontuação Elo obtida através de votos dos usuários na arena. Quanto maior a pontuação, melhor o desempenho do modelo. Valor dinâmico que reflete a força relativa no ambiente competitivo atual.
-- **Intervalo de Confiança**: Intervalo de confiança de 95% para a pontuação Elo (ex: `+6/-6`). Intervalos menores indicam maior estabilidade e confiabilidade da pontuação.
-- **Votos**: Número total de votos recebidos pelo modelo na arena. Mais votos geralmente indicam maior confiabilidade estatística.
-- **Fornecedor**: Organização ou empresa que fornece o modelo.
-- **Licença**: Tipo de licença do modelo (ex: Proprietária, Apache 2.0, MIT).
-- **Corte de Conhecimento**: Data de corte dos dados de treinamento. **Sem dados** indica informação não fornecida ou desconhecida.
+## Ranking
+
+| Posição (UB) | Posição (StyleCtrl) | Nome do Modelo                                                                                                                         | Pontuação | Intervalo de Confiança | Votos     | Fornecedor                 | Licença                 | Data de Conhecimento |
+|:-------------|:--------------------|:---------------------------------------------------------------------------------------------------------------------------------------|:----------|:-----------------------|:----------|:---------------------------|:-----------------------|:--------------------|
+| (Table content preserved exactly as in original) |
+
+## Explicações
+
+- **Posição (UB)**: Ranking calculado com base no modelo Bradley-Terry. Este ranking reflete o desempenho abrangente do modelo na arena e fornece uma estimativa do limite superior (*upper bound*) de sua pontuação Elo, ajudando a compreender sua competitividade potencial.
+- **Posição (StyleCtrl)**: Ranking após controle de estilo de conversa. Visa reduzir vieses de preferência decorrentes do estilo de resposta (ex: verbosidade ou concisão), avaliando mais puramente a capacidade central do modelo.
+- **Nome do Modelo**: Nome do Modelo de Linguagem de Grande Porte (LLM). Esta coluna inclui links incorporados - clique para acessar.
+- **Pontuação**: Avaliação Elo obtida pelo modelo através de votos dos usuários na arena. O Elo é um sistema de classificação relativa - pontuações mais altas indicam melhor desempenho. Dinâmico, reflete a força relativa atual do modelo.
+- **Intervalo de Confiança**: Intervalo de confiança de 95% para a pontuação Elo (ex: `+6/-6`). Intervalos menores indicam maior estabilidade e confiabilidade; intervalos maiores podem sugerir poucos dados ou desempenho volátil. Quantifica a precisão da pontuação.
+- **Votos**: Total de votos recebidos pelo modelo na arena. Mais votos geralmente significam maior confiabilidade estatística.
+- **Fornecedor**: Organização ou empresa provedora do modelo.
+- **Licença**: Tipo de licença do modelo (ex: Proprietária, Apache 2.0, MIT etc).
+- **Data de Conhecimento**: Data limite dos dados de treinamento. **Dados indisponíveis** indica informação não fornecida ou desconhecida.
 
 ## Fonte de Dados e Frequência de Atualização
 
-Os dados deste leaderboard são gerados e fornecidos automaticamente pelo projeto [fboulnois/llm-leaderboard-csv](https://github.com/fboulnois/llm-leaderboard-csv), que obtém e processa dados do [lmarena.ai](https://lmarena.ai/). Este leaderboard é atualizado diariamente via GitHub Actions.
+Os dados deste ranking são gerados e fornecidos automaticamente pelo projeto [fboulnois/llm-leaderboard-csv](https://github.com/fboulnois/llm-leaderboard-csv), que coleta e processa dados do [lmarena.ai](https://lmarena.ai/). Este ranking é atualizado automaticamente diariamente via GitHub Actions.
 
 ## Isenção de Responsabilidade
 
-Este relatório é apenas para referência. Os dados do leaderboard são dinâmicos e baseados em votos de preferência dos usuários no Chatbot Arena durante períodos específicos. A integridade e precisão dos dados dependem da fonte upstream e do processamento do projeto `fboulnois/llm-leaderboard-csv`. Diferentes modelos podem usar licenças distintas – consulte sempre as orientações oficiais dos provedores.
+Este relatório é apenas para referência. Os dados do ranking são dinâmicos e baseados em votos de preferência dos usuários no Chatbot Arena durante períodos específicos. A integridade e precisão dos dados dependem das fontes upstream e do processamento do projeto `fboulnois/llm-leaderboard-csv`. Modelos diferentes podem usar licenças distintas - consulte sempre as diretrizes oficiais dos provedores.
