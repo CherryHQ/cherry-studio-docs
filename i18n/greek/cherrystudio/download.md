@@ -12,30 +12,30 @@ icon: download
 
 
 {% hint style="info" %}
-Τρέχουσα πιο πρόσφατη σταθερή έκδοση: v1.4.6
+Τρέχουσα σταθερή έκδοση: v1.4.7
 {% endhint %}
 
-## Απευθείας Σύνδεσμοι Λήψης
+## Άμεσες λήψεις
 
 ### Έκδοση για Windows
 
 {% hint style="warning" %}
-Σημείωση: Τα Windows 7 δεν υποστηρίζουν την εγκατάσταση του Cherry Studio.
+Σημείωση: Το λειτουργικό σύστημα Windows 7 δεν υποστηρίζει την εγκατάσταση του Cherry Studio.
 {% endhint %}
 
-#### Εκδοχή Εγκατάστασης (Setup)
+#### Εκδοχή εγκατάστασης (Setup)
 
 <details>
 
 <summary>Έκδοση x64</summary>
 
-Κύρια σύνδεση:
+Κύριες συνδέσεις:
 
-【[Επίσημος ιστότοπος Cherry Studio](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.6/Cherry-Studio-1.4.6-x64-setup.exe)】
+【[Επίσημος ιστότοπος Cherry Studio](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7/Cherry-Studio-1.4.7-x64-setup.exe)】
 
-Εναλλακτικές συνδέσεις:
+Αναπληρωματικές συνδέσεις:
 
-【[Σύνδεση 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.6/Cherry-Studio-1.4.6-x64-setup.exe)】 【[Σύνδεση 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.6/Cherry-Studio-1.4.6-x64-setup.exe)】 【[Σύνδεση 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.6/Cherry-Studio-1.4.6-x64-setup.exe)】
+【[Σύνδεση 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7/Cherry-Studio-1.4.7-x64-setup.exe)】 【[Σύνδεση 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7/Cherry-Studio-1.4.7-x64-setup.exe)】 【[Σύνδεση 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7/Cherry-Studio-1.4.7-x64-setup.exe)】
 
 </details>
 
@@ -43,29 +43,29 @@ icon: download
 
 <summary>Έκδοση ARM64</summary>
 
-Κύρια σύνδεση:
+Κύριες συνδέσεις:
 
-【[Επίσημος ιστότοπος Cherry Studio](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.6/Cherry-Studio-1.4.6-arm64-setup.exe)】
+【[Επίσημος ιστότοπος Cherry Studio](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7/Cherry-Studio-1.4.7-arm64-setup.exe)】
 
-Εναλλακτικές συνδέσεις:
+Αναπληρωματικές συνδέσεις:
 
-【[Σύνδεση 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.6/Cherry-Studio-1.4.6-arm64-setup.exe)】 【[Σύνδεση 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.6/Cherry-Studio-1.4.6-arm64-setup.exe)】 【[Σύνδεση 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.6/Cherry-Studio-1.4.6-arm64-setup.exe)】
+【[Σύνδεση 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7/Cherry-Studio-1.4.7-arm64-setup.exe)】 【[Σύνδεση 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7/Cherry-Studio-1.4.7-arm64-setup.exe)】 【[Σύνδεση 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7/Cherry-Studio-1.4.7-arm64-setup.exe)】
 
 </details>
 
-#### Φορητή Έκδοση (Portable)
+#### Φορητή έκδοση (Portable)
 
 <details>
 
 <summary>Έκδοση x64</summary>
 
-Κύρια σύνδεση:
+Κύριες συνδέσεις:
 
-【[Επίσημος ιστότοπος Cherry Studio](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.6/Cherry-Studio-1.4.6-x64-portable.exe)】
+【[Επίσημος ιστότοπος Cherry Studio](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7/Cherry-Studio-1.4.7-x64-portable.exe)】
 
-Εναλλακτικές συνδέσεις:
+Αναπληρωματικές συνδέσεις:
 
-【[Σύνδεση 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.6/Cherry-Studio-1.4.6-x64-portable.exe)】 【[Σύνδεση 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.6/Cherry-Studio-1.4.6-x64-portable.exe)】 【[Σύνδεση 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.6/Cherry-Studio-1.4.6-x64-portable.exe)】
+【[Σύνδεση 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7/Cherry-Studio-1.4.7-x64-portable.exe)】 【[Σύνδεση 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7/Cherry-Studio-1.4.7-x64-portable.exe)】 【[Σύνδεση 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7/Cherry-Studio-1.4.7-x64-portable.exe)】
 
 </details>
 
@@ -73,13 +73,13 @@ icon: download
 
 <summary>Έκδοση ARM64</summary>
 
-Κύρια σύνδεση:
+Κύριες συνδέσεις:
 
-【[Επίσημος ιστότοπος Cherry Studio](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.6/Cherry-Studio-1.4.6-arm64-portable.exe)】
+【[Επίσημος ιστότοπος Cherry Studio](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7/Cherry-Studio-1.4.7-arm64-portable.exe)】
 
-Εναλλακτικές συνδέσεις:
+Αναπληρωματικές συνδέσεις:
 
-【[Σύνδεση 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.6/Cherry-Studio-1.4.6-arm64-portable.exe)】 【[Σύνδεση 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.6/Cherry-Studio-1.4.6-arm64-portable.exe)】 【[Σύνδεση 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.6/Cherry-Studio-1.4.6-arm64-portable.exe)】
+【[Σύνδεση 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7/Cherry-Studio-1.4.7-arm64-portable.exe)】 【[Σύνδεση 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7/Cherry-Studio-1.4.7-arm64-portable.exe)】 【[Σύνδεση 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7/Cherry-Studio-1.4.7-arm64-portable.exe)】
 
 </details>
 
@@ -89,29 +89,29 @@ icon: download
 
 <details>
 
-<summary>Έκδοση για Intel chips (x64)</summary>
+<summary>Έκδοση για τσιπ Intel (x64)</summary>
 
-Κύρια σύνδεση:
+Κύριες συνδέσεις:
 
-【[Επίσημος ιστότοπος Cherry Studio](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.6/Cherry-Studio-1.4.6-x64.dmg)】
+【[Επίσημος ιστότοπος Cherry Studio](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7/Cherry-Studio-1.4.7-x64.dmg)】
 
-Εναλλακτικές συνδέσεις:
+Αναπληρωματικές συνδέσεις:
 
-【[Σύνδεση 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.6/Cherry-Studio-1.4.6-x64.dmg)】 【[Σύνδεση 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.6/Cherry-Studio-1.4.6-x64.dmg)】 【[Σύνδεση 3](https://download.ocoolai.online/https://github.com/C Cherr yHQ/cherry-studio/releases/download/v1.4.6/Cherry-Studio-1.4.6-x64.dmg)】
+【[Σύνδεση 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7/Cherry-Studio-1.4.7-x64.dmg)】 【[Σύνδεση 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7/Cherry-Studio-1.4.7-x64.dmg)】 【[Σύνδεση 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7/Cherry-Studio-1.4.7-x64.dmg)】
 
 </details>
 
 <details>
 
-<summary>Έκδοση για Apple Silicon (ARM64, σειρά M chips)</summary>
+<summary>Έκδοση Apple Silicon (ARM64, τσιπ σειράς M)</summary>
 
-Κύρια σύνδεση:
+Κύριες συνδέσεις:
 
-【[Επίσημος ιστότοπος Cherry Studio](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.6/Cherry-Studio-1.4.6-arm64.dmg)】
+【[Επίσημος ιστότοπος Cherry Studio](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7/Cherry-Studio-1.4.7-arm64.dmg)】
 
-Εναλλακτικές συνδέσεις:
+Αναπληρωματικές συνδέσεις:
 
-【[Σύνδεση 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.6/Cherry-Studio-1.4.6-arm64.dmg)】 【[Σύνδεση 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.6/Cherry-Studio-1.4.6-arm64.dmg)】 【[Σύνδεση 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.6/Cherry-Studio-1.4.6-arm64.dmg)】
+【[Σύνδεση 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7/Cherry-Studio-1.4.7-arm64.dmg)】 【[Σύνδεση 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7/Cherry-Studio-1.4.7-arm64.dmg)】 【[Σύνδεση 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7/Cherry-Studio-1.4.7-arm64.dmg)】
 
 </details>
 
@@ -123,13 +123,13 @@ icon: download
 
 <summary>Έκδοση x86_64</summary>
 
-Κύρια σύνδεση:
+Κύριες συνδέσεις:
 
-【[Επίσημος ιστότοπος Cherry Studio](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.6/Cherry-Studio-1.4.6-x86_64.AppImage)】
+【[Επίσημος ιστότοπος Cherry Studio](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7/Cherry-Studio-1.4.7-x86_64.AppImage)】
 
-Εναλλακτικές συνδέσεις:
+Αναπληρωματικές συνδέσεις:
 
-【[Σύνδεση 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.6/Cherry-Studio-1.4.6-x86_64.AppImage)】 【[Σύνδεση 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.6/Cherry-Studio-1.4.6-x86_64.AppImage)】 【[Σύνδεση 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.6/Cherry-Studio-1.4.6-x86_64.AppImage)】
+【[Σύνδεση 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7/Cherry-Studio-1.4.7-x86_64.AppImage)】 【[Σύνδεση 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7/Cherry-Studio-1.4.7-x86_64.AppImage)】 【[Σύνδεση 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7/Cherry-Studio-1.4.7-x86_64.AppImage)】
 
 </details>
 
@@ -137,18 +137,18 @@ icon: download
 
 <summary>Έκδοση ARM64</summary>
 
-Κύρια σύνδεση:
+Κύριες συνδέσεις:
 
-【[Επίσημος ιστότοπος Cherry Studio](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.6/Cherry-Studio-1.4.6-arm64.AppImage)】
+【[Επίσημος ιστότοπος Cherry Studio](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7/Cherry-Studio-1.4.7-arm64.AppImage)】
 
-Εναλλακτικές συνδέσεις:
+Αναπληρωματικές συνδέσεις:
 
-【[Σύνδεση 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.6/Cherry-Studio-1.4.6-arm64.AppImage)】 【[Σύνδεση 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.6/Cherry-Studio-1.4.6-arm64.AppImage)】 【[Σύνδεση 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.6/Cherry-Studio-1.4.6-arm64-AppImage)】
+【[Σύνδεση 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7/Cherry-Studio-1.4.7-arm64.AppImage)】 【[Σύνδεση 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7/Cherry-Studio-1.4.7-arm64.AppImage)】 【[Σύνδεση 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7/Cherry-Studio-1.4.7-arm64-AppImage)】
 
 </details>
 
 ***
 
-## Λήψη μέσω Νέφους
+## Λήψη από online storage
 
 [Quark](https://pan.quark.cn/s/c8533a1ec63e#/list/share)
