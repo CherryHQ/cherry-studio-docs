@@ -8,9 +8,9 @@
 
 
 
-這是一個基於 Chatbot Arena (lmarena.ai) 資料的排行榜，透過自動化流程產生。
+這是一個基於 Chatbot Arena (lmarena.ai) 資料的自動化生成排行榜。
 
-> **資料更新時間**: 2025-06-27 11:42:07 UTC / 2025-06-27 19:42:07 CST (北京時間)
+> **資料更新時間**: 2025-06-28 11:41:56 UTC / 2025-06-28 19:41:56 CST (北京時間)
 
 {% hint style="info" %}
 點選排行榜中的 **模型名稱** 可跳轉至其詳細資訊或試用頁面。
@@ -57,26 +57,4 @@
 |       29 |              31 | [Gemini-2.0-Flash-Lite](https://aistudio.google.com/prompts/new_chat?model=gemini-2.0-flash-lite)                           | 1330 | +3/-3   | 26,104  | Google                 | Proprietary             | 暫無資料     |
 |       31 |              33 | [Command A (03-2025)](https://cohere.com/blog/command-a)                                                                    | 1327 | +3/-3   | 22,851  | Cohere                 | CC-BY-NC-4.0            | 暫無資料     |
 |       31 |              39 | [Step-2-16K-Exp](https://platform.stepfun.com/docs/llm/text)                                                                | 1322 | +7/-7   | 5,126   | StepFun                | Proprietary             | 暫無資料     |
-|       31 |              31 | [Hunyuan-TurboS-20250226](https://cloud.tencent.com/document/product/1729/104753)                                           | 1320 | +10/-9  | 2,452   | Tencent                | Proprietary             | 暫無資料     |
-|       33 |              32 | [o3-mini](https://openai.com/index/openai-o3-mini/)                                                                         | 1323 | +3/-2   | 35,063  | OpenAI                 | Proprietary             | 暫無資料     |
-|       33 |              39 | [o1-mini](https://platform.openai.com/docs/models/o1)                                                                       | 1321 | +2/-3   | 54,951  | OpenAI                 | Proprietary             | 2023/10  |
-|       33 |              39 | [Llama-3.3-Nemotron-Super-49B-v1](https://huggingface.co/nvidia/Llama-3_3-Nemotron-Super-49B-v1)                            | 1314 | +10/-9  | 2,371   | Nvidia                 | Nvidia                  | 暫無資料     |
-|       33 |              33 | [Hunyuan-Turbo-0110](https://cloud.tencent.com/document/product/1729/104753)                                                | 1314 | +10/-8  | 2,510   | Tencent                | Proprietary             | 暫無資料     |
-|       34 |              32 | [Gemini-1.5-Pro-002](https://aistudio.google.com/app/prompts/new_chat?instructions=lmsys&model=gemini-1.5-pro-002)          | 1320 | +2/-2   | 58,645  | Google                 | Proprietary             | 暫無資料     |
-|       36 |              16 | [Claude 3.7 Sonnet (thinking-32k)](https://www.anthropic.com/news/claude-3-7-sonnet)                                        | 1317 | +3/-4   | 24,159  | Anthropic              | Proprietary             | 暫無資料     |
-|       41 |              21 | [Claude 3.7 Sonnet](https://www.anthropic.com/news/claude-3-7-sonnet)                                                       | 1309 | +3/-4   | 28,664  | Anthropic              | Proprietary             | 暫無資料     |
-|       43 |              44 | [Grok-2-08-13](https://x.ai/blog/grok-2)                                                                                    | 1305 | +2/-2   | 67,084  | xAI                    | Proprietary             | 2024/3   |
-|       43 |              47 | [Yi-Lightning](https://platform.lingyiwanwu.com/docs#%E6%A8%A1%E5%9E%8B%E4%B8%8E%E8%AE%A1%E8%B4%B9)                         | 1304 | +3/-4   | 28,968  | 01 AI                  | Proprietary             | 暫無資料     |
-|       43 |              55 | [Gemma-3n-e4b-it](http://aistudio.google.com/app/prompts/new_chat?model=gemma-3n-e4b-it)                                    | 1303 | +6/-8   | 5,282   | Google                 | Gemma                   | 暫無資料     |
-|       46 |              35 | [GPT-4o-2024-05-13](https://openai.com/index/hello-gpt-4o/)                                                                 | 1302 | +2/-2   | 117,747 | OpenAI                 | Proprietary             | 2023/10  |
-|       46 |              25 | [Claude 3.5 Sonnet (20241022)](https://www.anthropic.com/news/3-5-models-and-computer-use)                                  | 1301 | +2/-2   | 75,986  | Anthropic              | Proprietary             | 2024/4   |
-|       46 |              57 | [Qwen2.5-plus-1127](https://help.aliyun.com/zh/model-studio/getting-started/models?spm=a2c4g.11186623.0.i7)                 | 1300 | +4/-5   | 10,715  | Alibaba                | Proprietary             | 暫無資料     |
-|       47 |              51 | [Deepseek-v2.5-1210](https://huggingface.co/deepseek-ai/DeepSeek-V2.5-1210)                                                 | 1297 | +6/-6   | 7,243   | DeepSeek               | DeepSeek                | 暫無資料     |
-|       49 |              69 | [Gemma-3-4B-it](http://aistudio.google.com/app/prompts/new_chat?model=gemma-3-4b-it)                                        | 1292 | +8/-8   | 4,321   | Google                 | Gemma                   | 暫無資料     |
-|       50 |              61 | [Athene-v2-Chat-72B](https://huggingface.co/Nexusflow/Athene-V2-Chat)                                                       | 1293 | +3/-3   | 26,074  | NexusFlow              | NexusFlow               | 暫無資料     |
-|       50 |              41 | [Llama-4-Maverick-17B-128E-Instruct](https://huggingface.co/meta-llama/Llama-4-Maverick-17B-128E-Instruct)                  | 1292 | +4/-4   | 15,906  | Meta                   | Llama 4                 | 暫無資料     |
-|       50 |              56 | [GLM-4-Plus](https://bigmodel.cn/dev/howuse/glm-4)                                                                          | 1291 | +4/-2   | 27,788  | Zhipu AI               | Proprietary             | 暫無資料     |
-|       50 |              47 | [Hunyuan-Large-2025-02-10](https://cloud.tencent.com/document/product/1729/104753)                                          | 1289 | +9/-10  | 3,856   | Tencent                | Proprietary             | 暫無資料     |
-|       50 |              48 | [GPT-4.1-nano-2025-04-14](https://openai.com/index/gpt-4-1/)                                                                | 1288 | +8/-7   | 6,302   | OpenAI                 | Proprietary             | 暫無資料     |
-|       52 |              57 | [GPT-4o-mini-2024-07-18](https://openai.com/index/gpt-4o-mini-advancing-cost-efficient-intelligence/)                       | 1289 | +3/-2   | 72,536  | OpenAI                 | Proprietary             | 2023/10  |
-|       52 |
+|       31 |              31 | [Hunyuan-TurboS-20250226](https://cloud.tencent.com/document/product/1729/104753)                                           | 1320 | +10/-9  | 2,452   |
