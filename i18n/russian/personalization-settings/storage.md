@@ -2,11 +2,13 @@
 icon: floppy-disk
 ---
 
+# Изменение хранилища
+
 {% hint style="warning" %}
 Этот документ переведен с китайского языка с помощью ИИ и еще не был проверен.
 {% endhint %}
 
-# Стандартное расположение хранения данных
+## Стандартное расположение хранения данных
 
 Данные Cherry Studio сохраняются согласно системным стандартам и автоматически размещаются в пользовательском каталоге. Точные пути следующие:
 
@@ -17,20 +19,21 @@ icon: floppy-disk
 > Linux: /home/username/.config/CherryStudio
 
 Также можно посмотреть расположение здесь:
-<figure><img src="../../.gitbook/assets/image (31).png" alt=""><figcaption></figcaption></figure>
 
-# Изменение места хранения данных (справочно)
+<figure><img src="../../.gitbook/assets/image%20(31).png" alt=""><figcaption></figcaption></figure>
 
-**Способ 1:**
+## Изменение места хранения данных (справочно)
+
+**Способ 1:**\
 Создайте символическую ссылку. Завершите работу приложения, переместите данные в нужное расположение, затем создайте ссылку из оригинального пути к новому местоположению.
 
 Подробные инструкции смотрите здесь: [https://github.com/CherryHQ/cherry-studio/issues/621#issuecomment-2588652880](https://github.com/CherryHQ/cherry-studio/issues/621#issuecomment-2588652880)
 
-**Способ 2:**
+**Способ 2:**\
 Используйте особенности приложений Electron и измените путь через параметры запуска.
 
-> --user-data-dir
-> Пример: Cherry-Studio-*-x64-portable.exe --user-data-dir="%user_data_dir%"
+> \--user-data-dir\
+> Пример: Cherry-Studio-\*-x64-portable.exe --user-data-dir="%user\_data\_dir%"
 
 > Пример реализации:
 
@@ -48,7 +51,7 @@ d-----         2025/4/18     14:05                user-data-dir
 -a----         2025/4/18     14:05            701 init_cherry_studio.bat
 ```
 
-> init_cherry_studio.bat (кодировка: ANSI)
+> init\_cherry\_studio.bat (кодировка: ANSI)
 
 ```bash
 @title CherryStudio Initialization

@@ -2,29 +2,31 @@
 icon: searchengin
 ---
 
+# SearXNG セルフホスティング設定
+
 {% hint style="warning" %}
 このドキュメントはAIによって中国語から翻訳されており、まだレビューされていません。
 {% endhint %}
 
-# SearXNG のデプロイと設定
+## SearXNG のデプロイと設定
 
 CherryStudio は SearXNG を介したウェブ検索をサポートしています。SearXNG はローカル環境またはサーバーにデプロイ可能なオープンソースプロジェクトであるため、APIプロバイダーを必要とする他の設定方法とは異なります。
 
 **SearXNG プロジェクトリンク**: [SearXNG](https://github.com/searxng/searxng)
 
-## SearXNG の利点
+### SearXNG の利点
 
 * オープンソースで無料、API不要
 * 比較的高いプライバシー性
 * 高度なカスタマイズが可能
 
-## ローカルデプロイ
+### ローカルデプロイ
 
-### 一、Docker を使用した直接デプロイ
+#### 一、Docker を使用した直接デプロイ
 
 SearXNG は複雑な環境設定を必要としないため、docker compose を使用せずに空いているポートを提供するだけでデプロイできます。最も迅速な方法は Docker を使用して直接イメージをプルしデプロイすることです。
 
-#### 1. [docker](https://www.docker.com/) のダウンロードとインストール
+**1.** [**docker**](https://www.docker.com/) **のダウンロードとインストール**
 
 <figure><img src="../../.gitbook/assets/searxng_config_img_01.png" alt=""><figcaption></figcaption></figure>
 
@@ -32,7 +34,7 @@ SearXNG は複雑な環境設定を必要としないため、docker compose を
 
 <figure><img src="../../.gitbook/assets/searxng_config_img_02.png" alt=""><figcaption></figcaption></figure>
 
-#### 2. SearXNG イメージの検索とプル
+**2. SearXNG イメージの検索とプル**
 
 検索バーに **searxng** と入力:
 
@@ -44,7 +46,7 @@ SearXNG は複雑な環境設定を必要としないため、docker compose を
 
 <figure><img src="../../.gitbook/assets/searxng_config_img_05.png" alt=""><figcaption></figcaption></figure>
 
-#### 3. イメージの実行
+**3. イメージの実行**
 
 プル後、**images** ページに移動:
 
@@ -70,13 +72,13 @@ SearXNG は複雑な環境設定を必要としないため、docker compose を
 
 <figure><img src="../../.gitbook/assets/searxng_config_img_11.png" alt=""><figcaption></figcaption></figure>
 
-## サーバーデプロイ
+### サーバーデプロイ
 
 Windows に Docker をインストールするのは面倒なため、ユーザーは SearXNG をサーバーにデプロイし、他の人と共有することも可能です。ただし、残念ながら SearXNG 自体は現在認証をサポートしていないため、技術的手段であなたがデプロイしたインスタンスをスキャンして悪用される可能性があります。
 
 このため、Cherry Studio は現在 [HTTP基本認証（RFC7617）](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Guides/Authentication) の設定をサポートしています。デプロイした SearXNG を公網環境に公開する場合は、**必ず** Nginx などのリバースプロキシソフトウェアで HTTP基本認証を設定してください。基本的な Linux 運用知識が必要ですが、以下に簡単なチュートリアルを提供します。
 
-### SearXNG のデプロイ
+#### SearXNG のデプロイ
 
 同様に、Docker を使用してデプロイします。サーバーに最新の Docker CE を[公式チュートリアル](https://docs.docker.com/engine/install)に従ってインストール済みと仮定し、Debian システムでの新規インストール向けのワンステップコマンドを提供します:
 
@@ -202,9 +204,9 @@ volumes:
 
 `docker compose up -d` を実行して起動します。`docker compose logs -f searxng` でログを確認できます。
 
-### Nginx リバースプロキシと HTTP基本認証のデプロイ
+#### Nginx リバースプロキシと HTTP基本認証のデプロイ
 
-宝塔パネルや1Panelなどのサーバーパネルを使用している場合は、ドキュメントを参照してサイトを追加し、nginxリバースプロキシを設定した後、nginx設定ファイルを修正してください。
+宝塔パネルや1Panelなどのサーバーパネルを使用している場合は、ドキュメントを参照してサイトを追加し、nginxリバースプロキシを設定した後、nginx設定ファイルを修正してください。\
 以下の例を参考に修正します:
 
 ```conf
@@ -261,7 +263,7 @@ Nginxを再起動（設定のリロードでも可）。
 
 <figure><img src="../../.gitbook/assets/searxng-basic-auth-example.png" alt=""><figcaption></figcaption></figure>
 
-## Cherry Studio の関連設定
+### Cherry Studio の関連設定
 
 SearXNGをローカルまたはサーバーにデプロイしたら、CherryStudioの関連設定を行います。
 
@@ -305,8 +307,8 @@ Cherry Studioに戻って検証すると成功します:
 
 <figure><img src="../../.gitbook/assets/searxng_config_img_21.png" alt=""><figcaption></figcaption></figure>
 
-アドレスはローカル: <http://localhost>:ポート番号
-またはDockerアドレス: <http://host.docker.internal>:ポート番号 が使用可能です。
+アドレスはローカル: [http://localhost](http://localhost):ポート番号\
+またはDockerアドレス: [http://host.docker.internal](http://host.docker.internal):ポート番号 が使用可能です。
 
 前述の例に従ってサーバーにデプロイし、リバースプロキシを正しく設定し、json戻り型を有効にしている場合、アドレスを入力して検証すると、HTTP基本認証が設定されているため401エラーコードが返されます:
 
@@ -318,7 +320,7 @@ Cherry Studioに戻って検証すると成功します:
 
 検証を実行すると成功します。
 
-### その他の設定
+#### その他の設定
 
 これでSearXNGはデフォルトのネットワーク検索能力を備えています。検索エンジンのカスタマイズが必要な場合は各自設定してください。
 
@@ -338,15 +340,15 @@ Cherry Studioに戻って検証すると成功します:
 
 内容が長すぎて直接編集が不便な場合は、ローカルのIDEにコピーし、修正後に設定ファイルに貼り付けることができます。
 
-## 検証失敗の一般的な原因
+### 検証失敗の一般的な原因
 
-### json形式が追加されていない
+#### json形式が追加されていない
 
 設定ファイルで戻り形式にjsonを追加します:
 
 <figure><img src="../../.gitbook/assets/searxng_json_format.png" alt=""><figcaption></figcaption></figure>
 
-### 検索エンジンの設定が正しくない
+#### 検索エンジンの設定が正しくない
 
 Cherry Studio はデフォルトで categories に web general を含むエンジンを選択し、デフォルトでは google などのエンジンを選択します。大陸では google などのサイトに直接アクセスできないため失敗します。以下の設定を追加することで searxng が強制的に baidu エンジンを使用するようになり、問題が解決します:
 
@@ -364,7 +366,7 @@ engines:
     disabled: false
 ```
 
-### アクセス速度が速すぎる
+#### アクセス速度が速すぎる
 
 searxng の limiter 設定が API アクセスを妨げるため、設定で false に設定してください:
 

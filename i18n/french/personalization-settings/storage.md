@@ -2,11 +2,13 @@
 icon: floppy-disk
 ---
 
+# Changer l'emplacement de stockage
+
 {% hint style="warning" %}
 Ce document a été traducido del chino por IA y aún no ha sido revisado.
 {% endhint %}
 
-# Emplacement de stockage par défaut
+## Emplacement de stockage par défaut
 
 Le stockage des données de Cherry Studio suit les conventions système. Les données sont automatiquement placées dans le répertoire utilisateur, aux emplacements spécifiques suivants :
 
@@ -17,9 +19,10 @@ Le stockage des données de Cherry Studio suit les conventions système. Les don
 > Linux: /home/username/.config/CherryStudio
 
 Vous pouvez également visualiser cet emplacement ici :
-<figure><img src="../../.gitbook/assets/image (31).png" alt=""><figcaption></figcaption></figure>
 
-# Modifier l'emplacement de stockage (à titre informatif)
+<figure><img src="../../.gitbook/assets/image%20(31).png" alt=""><figcaption></figcaption></figure>
+
+## Modifier l'emplacement de stockage (à titre informatif)
 
 **Méthode 1 :**
 
@@ -27,11 +30,11 @@ Utilisez des liens symboliques. Quittez le logiciel, déplacez les données vers
 
 Consultez les étapes détaillées ici : [https://github.com/CherryHQ/cherry-studio/issues/621#issuecomment-2588652880](https://github.com/CherryHQ/cherry-studio/issues/621#issuecomment-2588652880)
 
-**Méthode 2 :**
+**Méthode 2 :**\
 Modifiez l'emplacement via les paramètres de lancement, en exploitant les caractéristiques des applications Electron.
 
-> --user-data-dir
-> Exemple : Cherry-Studio-*-x64-portable.exe --user-data-dir="%user_data_dir%"
+> \--user-data-dir\
+> Exemple : Cherry-Studio-\*-x64-portable.exe --user-data-dir="%user\_data\_dir%"
 
 > Exemple :
 
@@ -49,7 +52,7 @@ d-----         2025/4/18     14:05                user-data-dir
 -a----         2025/4/18     14:05            701 init_cherry_studio.bat
 ```
 
-> init_cherry_studio.bat (encodage : ANSI)
+> init\_cherry\_studio.bat (encodage : ANSI)
 
 ```bash
 @title Initialisation CherryStudio

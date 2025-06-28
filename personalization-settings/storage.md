@@ -2,7 +2,9 @@
 icon: floppy-disk
 ---
 
-# 默认存储位置
+# 修改存储位置
+
+## 默认存储位置
 
 Cherry Studio 数据存储遵循系统规范，数据会自动放在用户目录下，具体目录位置如下：
 
@@ -13,11 +15,10 @@ Cherry Studio 数据存储遵循系统规范，数据会自动放在用户目录
 > Linux: /home/username/.config/CherryStudio
 
 也可以在以下位置查看：
-<figure><img src="../../.gitbook/assets/image (31).png" alt=""><figcaption></figcaption></figure>
 
+<figure><img src="../.gitbook/assets/image (31).png" alt=""><figcaption></figcaption></figure>
 
-
-# 修改存储位置（供参考）
+## 修改存储位置（供参考）
 
 方法一：
 
@@ -25,7 +26,7 @@ Cherry Studio 数据存储遵循系统规范，数据会自动放在用户目录
 
 具体操作步骤可以参考：[https://github.com/CherryHQ/cherry-studio/issues/621#issuecomment-2588652880](https://github.com/CherryHQ/cherry-studio/issues/621#issuecomment-2588652880)
 
-方法二：
+方法二：\
 基于 Electron 应用特点、通过配置启动参数进行存储位置修改。
 
 > 版本 **v1.4.4** 后设置了默认的--user-data-dir启动参数
@@ -49,7 +50,7 @@ d-----         2025/4/18     14:05                data
 -a----         2025/4/18     14:05            701 init_cherry_studio.bat
 ```
 
-> init_cherry_studio.bat (encoding: ANSI)
+> init\_cherry\_studio.bat (encoding: ANSI)
 
 ```bash
 @title CherryStudio 初始化

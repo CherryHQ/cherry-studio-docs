@@ -1,9 +1,4 @@
-
-{% hint style="warning" %}
-Ce document a été traducido del chino por IA y aún no ha sido revisado.
-{% endhint %}
-
-# Table des matières
+# Table of contents
 
 ## Cherry Studio
 
@@ -87,7 +82,7 @@ Ce document a été traducido del chino por IA y aún no ha sido revisado.
   * [Ajout de ModelScope](advanced-basic/mcp/tian-jia-modelscope-mcp-fu-wu-qi.md)
   * [FAQ](advanced-basic/mcp/chang-jian-wen-ti.md)
 
-## Contribution <a href="#contribution" id="contribution"></a>
+## Contribution
 
 * [Contribuer au code](contribution/code.md)
 * [Structure du code](contribution/code-structure.md)

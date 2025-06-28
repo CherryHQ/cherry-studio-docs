@@ -1,9 +1,4 @@
-
-{% hint style="warning" %}
-Αυτό το έγγραφο μεταφράστηκε από τα Κινεζικά με AI και δεν έχει ακόμη ελεγχθεί.
-{% endhint %}
-
-# Πίνακας περιεχομένων
+# Table of contents
 
 ## Cherry Studio
 

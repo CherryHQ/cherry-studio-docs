@@ -1,9 +1,4 @@
-
-{% hint style="warning" %}
-Этот документ переведен с китайского языка с помощью ИИ и еще не был проверен.
-{% endhint %}
-
-# Оглавление
+# Table of contents
 
 ## Cherry Studio
 
