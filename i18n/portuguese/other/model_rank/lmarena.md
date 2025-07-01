@@ -1,4 +1,4 @@
-# LLM Arena Leaderboard (Atualizado em Tempo Real)
+# LLM Arena Leaderboard (Atualização em Tempo Real)
 
 
 {% hint style="warning" %}
@@ -8,41 +8,76 @@ Este documento foi traduzido do chinês por IA e ainda não foi revisado.
 
 
 
+Este é um ranking baseado em dados do Chatbot Arena (lmarena.ai), gerado por um processo automatizado.
+
+> **Data de atualização**: 2025-07-01 11:42:53 UTC / 2025-07-01 19:42:53 CST (Horário de Pequim)
+
 {% hint style="info" %}
-Clique no **nome do modelo** no leaderboard para acessar sua página de detalhes ou teste.
+Clique no **nome do modelo** no ranking para acessar sua página de detalhes ou teste.
 {% endhint %}
 
-Esta é uma classificação baseada em dados do Chatbot Arena (lmarena.ai), gerada por processo automatizado.
+## Ranking
 
-> **Horário de atualização dos dados**: 2025-06-30 11:44:35 UTC / 2025-06-30 19:44:35 CST (Horário de Pequim)
-
-## Leaderboard
-
-| Rank(UB) | Rank(StyleCtrl) | Nome do Modelo                                                                                                                         | Pontuação | Intervalo de Confiança | Votos      | Fornecedor               | Licença                  | Data de Conhecimento |
-|:---------|:----------------|:----------------------------------------------------------------------------------------------------------------------------------------|:----------|:-----------------------|:-----------|:-------------------------|:------------------------|:---------------------|
-| 1        | 1               | [Gemini-2.5-Pro](http://aistudio.google.com/app/prompts/new_chat?model=gemini-2.5-pro)                                                 | 1477      | +5/-5                  | 12,327     | Google                   | Proprietary             | Sem dados           |
-| 2        | 2               | [Gemini-2.5-Pro-Preview-05-06](http://aistudio.google.com/app/prompts/new_chat?model=gemini-2.5-pro-preview-05-06)                     | 1446      | +4/-6                  | 14,040     | Google                   | Proprietary             | Sem dados           |
-| 3        | 3               | [ChatGPT-4o-latest (2025-03-26)](https://x.com/OpenAI/status/1905331956856050135)                                                      | 1428      | +5/-3                  | 22,488     | OpenAI                   | Proprietary             | Sem dados           |
-| *Restante da tabela preservada exatamente como no original, substituindo apenas "暂无数据" por "Sem dados"* |
-| 207      | 205             | [Dolly-V2-12B](https://huggingface.co/databricks/dolly-v2-12b)                                                                         | 840       | +11/-12                | 3,480      | Databricks               | MIT                     | 2023/4              |
-| 208      | 207             | [LLaMA-13B](https://arxiv.org/abs/2302.13971)                                                                                          | 817       | +11/-12                | 2,446      | Meta                     | Non-commercial          | 2023/2              |
-
-## Explicações
-
-- **Rank(UB)**: Classificação baseada no modelo Bradley-Terry. Reflete o desempenho global na arena e fornece estimativa do **limite superior** da pontuação Elo, ajudando a entender a competitividade potencial.
-- **Rank(StyleCtrl)**: Classificação após controle de estilo de diálogo. Visa reduzir vieses de preferência por fatores como verbosidade/concisão, avaliando mais puramente as capacidades essenciais.
-- **Nome do Modelo**: Nome do Modelo de Linguagem Grande (LLM). Contém links para detalhes/página de teste.
-- **Pontuação**: Pontuação Elo obtida através de votos na arena. Sistema de classificação relativa onde valores maiores indicam melhor desempenho. Dinâmico e reflete força relativa atual.
-- **Intervalo de Confiança**: Intervalo de confiança de 95% da pontuação Elo. Intervalos pequenos indicam estabilidade/confiabilidade. Intervalos grandes sugerem dados insuficientes ou variação de desempenho. Avaliação quantitativa da precisão da pontuação.
-- **Votos**: Número total de votos recebidos na arena. Quantidades maiores geralmente indicam maior confiabilidade estatística.
-- **Fornecedor**: Organização/empresa provedora do modelo.
-- **Licença**: Tipo de licença do modelo (ex: Proprietary, Apache 2.0, MIT).
-- **Data de Conhecimento**: Data de corte do conhecimento nos dados de treinamento. **Sem dados** indica informação não fornecida ou desconhecida.
-
-## Fonte e Frequência de Atualização
-
-Os dados deste leaderboard são gerados automaticamente pelo projeto [fboulnois/llm-leaderboard-csv](https://github.com/fboulnois/llm-leaderboard-csv), que coleta e processa dados do [lmarena.ai](https://lmarena.ai/). Atualização diária automática via GitHub Actions.
-
-## Aviso Legal
-
-Este relatório é apenas para referência. Os dados são dinâmicos e baseados em preferências de usuários no Chatbot Arena durante períodos específicos. A integridade/acuracidade depende das fontes originais e do processamento do projeto `fboulnois/llm-leaderboard-csv`. Modelos podem ter licenças diferentes - consulte sempre as especificações oficiais dos provedores.
+| Rank (UB) | Rank (StyleCtrl) | Nome do Modelo | Pontuação | Intervalo de Confiança | Votos | Fornecedor | Licença | Data de Corte do Conhecimento |
+|:----------|:-----------------|:---------------|:----------|:------------------------|:------|:-----------|:--------|:-----------------------------|
+| 1 | 1 | [Gemini-2.5-Pro](http://aistudio.google.com/app/prompts/new_chat?model=gemini-2.5-pro) | 1473 | +5/-4 | 14,062 | Google | Proprietary | Dados indisponíveis |
+| 2 | 2 | [Gemini-2.5-Pro-Preview-05-06](http://aistudio.google.com/app/prompts/new_chat?model=gemini-2.5-pro-preview-05-06) | 1446 | +4/-5 | 14,432 | Google | Proprietary | Dados indisponíveis |
+| 3 | 2 | [ChatGPT-4o-latest (2025-03-26)](https://x.com/OpenAI/status/1905331956856050135) | 1428 | +4/-3 | 23,599 | OpenAI | Proprietary | Dados indisponíveis |
+| 3 | 2 | [o3-2025-04-16](https://openai.com/index/introducing-o3-and-o4-mini/) | 1426 | +5/-4 | 20,095 | OpenAI | Proprietary | Dados indisponíveis |
+| 3 | 6 | [DeepSeek-R1-0528](https://api-docs.deepseek.com/news/news250528) | 1424 | +5/-5 | 12,396 | DeepSeek | MIT | Dados indisponíveis |
+| 3 | 7 | [Grok-3-Preview-02-24](https://x.ai/blog/grok-3) | 1423 | +3/-4 | 25,067 | xAI | Proprietary | Dados indisponíveis |
+| 4 | 6 | [Gemini-2.5-Flash](http://aistudio.google.com/app/prompts/new_chat?model=gemini-2.5-flash) | 1418 | +4/-4 | 19,451 | Google | Proprietary | Dados indisponíveis |
+| 5 | 4 | [GPT-4.5-Preview](https://openai.com/index/introducing-gpt-4-5/) | 1415 | +6/-5 | 15,271 | OpenAI | Proprietary | Dados indisponíveis |
+| 9 | 7 | [Gemini-2.5-Flash-Preview-04-17](http://aistudio.google.com/app/prompts/new_chat?model=gemini-2.5-flash-preview-04-17) | 1398 | +5/-5 | 16,552 | Google | Proprietary | Dados indisponíveis |
+| 9 | 11 | [Qwen3-235B-A22B-no-thinking](https://qwenlm.github.io/blog/qwen3/) | 1389 | +5/-4 | 14,090 | Alibaba | Apache 2.0 | Dados indisponíveis |
+| 10 | 6 | [GPT-4.1-2025-04-14](https://openai.com/index/gpt-4-1/) | 1385 | +5/-4 | 17,456 | OpenAI | Proprietary | Dados indisponíveis |
+| 10 | 11 | [DeepSeek-V3-0324](https://api-docs.deepseek.com/news/news250325) | 1384 | +3/-4 | 20,171 | DeepSeek | MIT | Dados indisponíveis |
+| 10 | 18 | [Hunyuan-Turbos-20250416](https://cloud.tencent.com/document/product/1729/104753) | 1380 | +6/-6 | 8,244 | Tencent | Proprietary | Dados indisponíveis |
+| 11 | 12 | [Minimax-M1](https://www.minimax.io/news/minimaxm1) | 1374 | +8/-8 | 6,117 | MiniMax | Apache 2.0 | Dados indisponíveis |
+| 13 | 12 | [DeepSeek-R1](https://api-docs.deepseek.com/news/news250120) | 1375 | +4/-3 | 19,430 | DeepSeek | MIT | Dados indisponíveis |
+| 14 | 6 | [Claude Opus 4 (20250514)](https://www.anthropic.com/news/claude-4) | 1372 | +3/-3 | 19,708 | Anthropic | Proprietary | Dados indisponíveis |
+| 14 | 18 | [Mistral Medium 3](https://mistral.ai/news/mistral-medium-3) | 1369 | +5/-4 | 18,439 | Mistral | Proprietary | Dados indisponíveis |
+| 15 | 11 | [o1-2024-12-17](https://openai.com/index/o1-and-new-tools-for-developers/) | 1367 | +3/-3 | 29,038 | OpenAI | Proprietary | Dados indisponíveis |
+| 15 | 23 | [Qwen3-235B-A22B](https://qwenlm.github.io/blog/qwen3/) | 1367 | +4/-4 | 13,817 | Alibaba | Apache 2.0 | Dados indisponíveis |
+| 16 | 25 | [Gemini-2.0-Flash-001](https://aistudio.google.com/app/prompts/new_chat?instructions=lmsys-1121&model=gemini-2.0-flash-001) | 1364 | +3/-3 | 36,673 | Google | Proprietary | Dados indisponíveis |
+| 16 | 11 | [o4-mini-2025-04-16](https://openai.com/index/introducing-o3-and-o4-mini/) | 1364 | +5/-4 | 17,150 | OpenAI | Proprietary | Dados indisponíveis |
+| 16 | 23 | [Qwen2.5-Max](https://qwenlm.github.io/blog/qwen2.5-max/) | 1363 | +3/-4 | 31,778 | Alibaba | Proprietary | Dados indisponíveis |
+| 16 | 29 | [Grok-3-Mini-beta](https://docs.x.ai/docs/models) | 1361 | +5/-5 | 9,759 | xAI | Proprietary | Dados indisponíveis |
+| 19 | 25 | [Gemma-3-27B-it](http://aistudio.google.com/app/prompts/new_chat?model=gemma-3-27b-it) | 1361 | +3/-4 | 25,902 | Google | Gemma | Dados indisponíveis |
+| 25 | 18 | [o1-preview](https://platform.openai.com/docs/models/o1) | 1352 | +3/-3 | 33,177 | OpenAI | Proprietary | 2023/10 |
+| 25 | 12 | [Claude Sonnet 4 (20250514)](https://www.anthropic.com/news/claude-4) | 1345 | +5/-5 | 15,543 | Anthropic | Proprietary | Dados indisponíveis |
+| 26 | 24 | [o3-mini-high](https://platform.openai.com/docs/guides/reasoning#reasoning-effort) | 1342 | +5/-4 | 19,404 | OpenAI | Proprietary | Dados indisponíveis |
+| 26 | 32 | [Gemma-3-12B-it](http://aistudio.google.com/app/prompts/new_chat?model=gemma-3-12b-it) | 1338 | +10/-10 | 3,976 | Google | Gemma | Dados indisponíveis |
+| 26 | 21 | [GPT-4.1-mini-2025-04-14](https://openai.com/index/gpt-4-1/) | 1338 | +4/-4 | 16,454 | OpenAI | Proprietary | Dados indisponíveis |
+| 27 | 30 | [DeepSeek-V3](https://huggingface.co/deepseek-ai/DeepSeek-V3) | 1336 | +3/-4 | 22,841 | DeepSeek | DeepSeek | Dados indisponíveis |
+| 27 | 38 | [QwQ-32B](https://huggingface.co/Qwen/QwQ-32B) | 1334 | +4/-5 | 18,063 | Alibaba | Apache 2.0 | Dados indisponíveis |
+| 28 | 49 | [Amazon-Nova-Experimental-Chat-05-14](https://nova.amazon.com/faqs) | 1330 | +7/-7 | 6,343 | Amazon | Proprietary | Dados indisponíveis |
+| 28 | 36 | [GLM-4-Plus-0111](https://bigmodel.cn/dev/howuse/glm-4) | 1328 | +8/-6 | 6,028 | Zhipu | Proprietary | Dados indisponíveis |
+| 29 | 31 | [Gemini-2.0-Flash-Lite](https://aistudio.google.com/prompts/new_chat?model=gemini-2.0-flash-lite) | 1330 | +3/-4 | 26,104 | Google | Proprietary | Dados indisponíveis |
+| 29 | 33 | [Qwen-Plus-0125](https://www.alibabacloud.com/help/en/model-studio/developer-reference/what-is-qwen-llm) | 1328 | +6/-8 | 6,055 | Alibaba | Proprietary | Dados indisponíveis |
+| 30 | 33 | [Command A (03-2025)](https://cohere.com/blog/command-a) | 1327 | +3/-4 | 23,879 | Cohere | CC-BY-NC-4.0 | Dados indisponíveis |
+| 30 | 39 | [Step-2-16K-Exp](https://platform.stepfun.com/docs/llm/text) | 1322 | +8/-6 | 5,126 | StepFun | Proprietary | Dados indisponíveis |
+| 30 | 31 | [Hunyuan-TurboS-20250226](https://cloud.tencent.com/document/product/1729/104753) | 1320 | +11/-12 | 2,452 | Tencent | Proprietary | Dados indisponíveis |
+| 32 | 39 | [Llama-3.3-Nemotron-Super-49B-v1](https://huggingface.co/nvidia/Llama-3_3-Nemotron-Super-49B-v1) | 1314 | +14/-8 | 2,371 | Nvidia | Nvidia | Dados indisponíveis |
+| 33 | 32 | [o3-mini](https://openai.com/index/openai-o3-mini/) | 1322 | +3/-3 | 36,135 | OpenAI | Proprietary | Dados indisponíveis |
+| 33 | 39 | [o1-mini](https://platform.openai.com/docs/models/o1) | 1321 | +2/-3 | 54,951 | OpenAI | Proprietary | 2023/10 |
+| 33 | 33 | [Hunyuan-Turbo-0110](https://cloud.tencent.com/document/product/1729/104753) | 1314 | +11/-11 | 2,510 | Tencent | Proprietary | Dados indisponíveis |
+| 35 | 32 | [Gemini-1.5-Pro-002](https://aistudio.google.com/app/prompts/new_chat?instructions=lmsys&model=gemini-1.5-pro-002) | 1320 | +3/-2 | 58,645 | Google | Proprietary | Dados indisponíveis |
+| 37 | 17 | [Claude 3.7 Sonnet (thinking-32k)](https://www.anthropic.com/news/claude-3-7-sonnet) | 1315 | +4/-3 | 25,145 | Anthropic | Proprietary | Dados indisponíveis |
+| 40 | 53 | [Gemma-3n-e4b-it](http://aistudio.google.com/app/prompts/new_chat?model=gemma-3n-e4b-it) | 1309 | +7/-8 | 6,311 | Google | Gemma | Dados indisponíveis |
+| 42 | 21 | [Claude 3.7 Sonnet](https://www.anthropic.com/news/claude-3-7-sonnet) | 1308 | +3/-4 | 29,775 | Anthropic | Proprietary | Dados indisponíveis |
+| 43 | 44 | [Grok-2-08-13](https://x.ai/blog/grok-2) | 1305 | +2/-2 | 67,084 | xAI | Proprietary | 2024/3 |
+| 43 | 48 | [Yi-Lightning](https://platform.lingyiwanwu.com/docs#%E6%A8%A1%E5%9E%8B%E4%B8%8E%E8%AE%A1%E8%B4%B9) | 1305 | +2/-4 | 28,968 | 01 AI | Proprietary | Dados indisponíveis |
+| 45 | 35 | [GPT-4o-2024-05-13](https://openai.com/index/hello-gpt-4o/) | 1302 | +2/-1 | 117,747 | OpenAI | Proprietary | 2023/10 |
+| 45 | 58 | [Qwen2.5-plus-1127](https://help.aliyun.com/zh/model-studio/getting-started/models?spm=a2c4g.11186623.0.i7) | 1300 | +5/-6 | 10,715 | Alibaba | Proprietary | Dados indisponíveis |
+| 46 | 25 | [Claude 3.5 Sonnet (20241022)](https://www.anthropic.com/news/3-5-models-and-computer-use) | 1301 | +2/-3 | 77,078 | Anthropic | Proprietary | 2024/4 |
+| 48 | 51 | [Deepseek-v2.5-1210](https://huggingface.co/deepseek-ai/DeepSeek-V2.5-1210) | 1297 | +4/-7 | 7,243 | DeepSeek | DeepSeek | Dados indisponíveis |
+| 48 | 62 | [Gemma-3-4B-it](http://aistudio.google.com/app/prompts/new_chat?model=gemma-3-4b-it) | 1293 | +8/-8 | 4,321 | Google | Gemma | Dados indisponíveis |
+| 50 | 48 | [Hunyuan-Large-2025-02-10](https://cloud.tencent.com/document/product/1729/104753) | 1289 | +9/-10 | 3,856 | Tencent | Proprietary | Dados indisponíveis |
+| 51 | 59 | [Athene-v2-Chat-72B](https://huggingface.co/Nexusflow/Athene-V2-Chat) | 1293 | +3/-3 | 26,074 | NexusFlow | CC-BY-NC-4.0 | Dados indisponíveis |
+| 51 | 40 | [Llama-4-Maverick-17B-128E-Instruct](https://huggingface.co/meta-llama/Llama-4-Maverick-17B-128E-Instruct) | 1293 | +4/-5 | 17,075 | Meta | Llama 4 | Dados indisponíveis |
+| 51 | 56 | [GLM-4-Plus](https://bigmodel.cn/dev/howuse/glm-4) | 1291 | +3/-3 | 27,788 | Zhipu AI | Proprietary | Dados indisponíveis |
+| 51 | 49 | [GPT-4.1-nano-2025-04-14](https://openai.com/index/gpt-4-1/) | 1288 | +7/-7 | 6,302 | OpenAI | Proprietary | Dados indisponíveis |
+| 52 | 58 | [GPT-4o-mini-2024-07-18](https://openai.com/index/gpt-4o-mini-advancing-cost-efficient-intelligence/) | 1289 | +2/-2 | 72,531 | OpenAI | Proprietary | 2023/10 |
+| 52 | 66 | [Gemini-1.5-Flash-002](https://aistudio.google.com/app/prompts/new_chat?instructions=lmsys&model=gemini-1.5-flash-002) | 1289 | +3/-3 | 37,021 | Google | Proprietary | Dados indisponíveis |
+| 52 | 76 | [Llama-3.1-Nemotron-70B-Instruct](https://huggingface.co/nvidia/Llama-3.1-Nemotron-70B-Instruct) |

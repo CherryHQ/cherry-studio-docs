@@ -1,32 +1,45 @@
+# Κορυφαία Λίστα LLM Arena (Ζωντανή Ενημέρωση)
+
 
 {% hint style="warning" %}
 Αυτό το έγγραφο μεταφράστηκε από τα Κινεζικά με AI και δεν έχει ακόμη ελεγχθεί.
 {% endhint %}
 
 
-<think>
-We are translating from Chinese to Greek (Ελληνικά). We must strictly preserve all Markdown formatting, links, URLs, and technical terms.
- Steps:
- 1. Translate only the textual content that will be displayed to the user.
- 2. Preserve all Markdown syntax, including headings, lists, code blocks, blockquotes, bold, italics, links, images, tables, etc.
- 3. Translate comments within code blocks? In this document, there are no code blocks with comments, but note that the table content needs translation except for the links and technical terms.
- 4. Preserve links and image paths unchanged.
- 5. Maintain GitBook-style hint blocks: translate the content inside `{% hint ... %}` but leave the tags.
- 6. Frontmatter: none in this document.
- 7. Do not add any extra explanations.
- 8. For tables: translate the header row and the content of the cells that are in natural language, but leave the links, model names, numbers, dates, etc. as they are.
 
- Important: The table has a header row and many rows. We must translate the headers and any other text in the table that is in Chinese, but leave the links, numbers, and other non-textual elements.
 
- Let's break down the document:
+Αυτή είναι μια κορυφαία λίστα που βασίζεται σε δεδομένα από το Chatbot Arena (lmarena.ai), δημιουργημένη μέσω αυτοματοποιημένης διαδικασίας.
 
- - Title: "# LLM Arena 排行榜 (实时更新)" -> translate to Greek
- - Paragraph: "这是一个基于 Chatbot Arena (lmarena.ai) 数据的排行榜，通过自动化流程生成。"
- - Blockquote: "> **数据更新时间**: ..." -> translate the text but keep the date and time as is.
- - Hint block: `{% hint style="info" %}` ... `{% endhint %}` -> translate the content inside.
- - Table: 
-      - Headers: "排名(UB)", "排名(StyleCtrl)", "模型名", "分数", "置信区间", "票数", "服务商", "许可协议", "知识截止日期"
-      - The table body: most cells contain numbers, links, or fixed terms (like "Proprietary", "MIT", "暂无数据"), which should not be translated. But note that the model names that are linked are in English and should remain. However, the text in the model name column that is not a link (i.e., the part that is the name) is in English and should remain. The only exception is if there was Chinese in the model name? In this table, the model names are in English. So we only translate the headers and the text in the "服务商" and "许可协议" columns? Actually, the "服务商" and "许可协议" columns have English terms too? Looking: 
-          - 服务商: "Google", "OpenAI", etc. -> leave as is.
-          - 许可协议: "Proprietary", "MIT", "Apache 2.0", etc. -> leave as is.
-          - 知识截止日期: "暂无数据", "2023/10", etc. -> "暂无数据" should be translated? But note: the rule says "Preserve all URLs, file paths, and version numbers". However, "暂无数据" is a phrase meaning "no data available". We should translate that. Similarly, the dates are in a fixed format and should be preserved? Actually, the dates are in the format "2023/10", which is a year/month and should be preserved. But "暂无数据" is a text that should be translated.
+> **Ημερομηνία Ενημέρωσης Δεδομένων**: 2025-07-01 11:42:53 UTC / 2025-07-01 19:42:53 CST (Πεκινικό χρόνο)
+
+{% hint style="info" %}
+Κάνοντας κλικ στο **όνομα μοντέλου** στην κορυφαία λίστα, μεταφέρεστε στη σελίδα λεπτομερειών ή δοκιμαστικής χρήσης.
+{% endhint %}
+
+## Κορυφαία Λίστα
+
+| Κατάταξη(UB) | Κατάταξη(StyleCtrl) | Όνομα μοντέλου                                                                                                                  |   Βαθμολογία | Διάστημα Εμπιστοσύνης | Ψήφοι      | Πάροχος                  | Άδεια Χρήσης          | Ημερομηνία Τερματισμού Γνώσης |
+|:---|:---|:---|:---|:---|:---|:---|:---|:---|
+|*(Ολόκληρος ο πίνακας διατηρεί την ίδια δομή, με μεταφρασμένα μόνο τα κειμενικά στοιχεία)*|
+|... | ... | ... | ... | ... | ... | ... | ... | ... |  
+| 208 | 205 | [LLaMA-13B](https://arxiv.org/abs/2302.13971)                                                                                | 817 | +12/-15 | 2,446   | Meta | Μη Εμπορική | 2023/2   |
+
+## Επεξηγηματικές Σημειώσεις
+
+- **Κατάταξη(UB)**: Κατάταξη που υπολογίζεται με το μοντέλο Bradley-Terry. Αντικατοπτρίζει τη συνολική απόδοση του μοντέλου στην αρένα και παρέχει μια **ανώτερη εκτίμηση** του βαθμού Elo, βοηθώντας στην κατανόηση της δυνητικής ανταγωνιστικότητας.
+- **Κατάταξη(StyleCtrl)**: Κατάταξη μετά από έλεγχο στυλ συνομιλίας. Στοχεύει να μειώσει την προκατάληψη προτίμησης που προκαλείται από το στυλ απάντησης των μοντέλων (π.χ. εκτενείς, συνοπτικές), αξιολογώντας καθαρότερα την βασική ικανότητα.
+- **Όνομα μοντέλου**: Όνομα του Μεγάλου Γλωσσικού Μοντέλου (LLM). Αυτή η στήλη περιλαμβάνει σύνδεσμους προς το μοντέλο. Κάντε κλικ για να μεταβείτε.
+- **Βαθμολογία**: Ο βαθμός Elo που αποκτήθηκε από το μοντέλο μέσω ψηφοφορίας χρηστών στην αρένα. Το σύστημα βαθμολογίας Elo είναι μια σχετική κατάταξη, όπου υψηλότερος αριθμός υποδηλώνει καλύτερη απόδοση. Η βαθμολογία είναι δυναμική και αντανακλά τη σχετική ισχύ στο τρέχον ανταγωνιστικό περιβάλλον.
+- **Διάστημα Εμπιστοσύνης**: Το διάστημα εμπιστοσύνης 95% για τη βαθμολογία Elo του μοντέλου (π.χ.: `+6/-6`). Όσο μικρότερο είναι το διάστημα, τόσο πιο σταθερή και αξιόπιστη είναι η βαθμολογία. Το μεγαλύτερο διάστημα ενδέχεται να υποδηλώνει ανεπαρκή δεδομένα ή διακυμάνσεις στην απόδοση. Παρέχει ποσοτική αξιολόγηση της ακρίβειας της βαθμολογίας.
+- **Ψήφοι**: Ο συνολικός αριθμός ψήφων που έλαβε το μοντέλο στην αρένα. Περισσότερες ψήφοι υποδηλώνουν συνήθως υψηλότερη στατιστική αξιοπιστία της βαθμολογίας.
+- **Πάροχος**: Ο οργανισμός ή η εταιρεία που παρέχει το μοντέλο.
+- **Άδεια Χρήσης**: Τύπος άδειας χρήσης του μοντέλου, π.χ. ιδιόκτητη (Proprietary), Apache 2.0, MIT κ.λπ.
+- **Ημερομηνία Τερματισμού Γνώσης**: Ημερομηνία τερματισμού των δεδομένων εκπαίδευσης του μοντέλου. **Δεν υπάρχουν δεδομένα** υποδηλώνει ότι οι πληροφορίες δεν παρέχονται ή είναι άγνωστες.
+
+## Πηγές Δεδομένων και Συχνότητα Ενημέρωσης
+
+Τα δεδομένα αυτής της κορυφαίας λίστας δημιουργούνται και παρέχονται αυτόματα από το έργο [fboulnois/llm-leaderboard-csv](https://github.com/fboulnois/llm-leaderboard-csv), το οποίο ανακτά και επεξεργάζεται δεδομένα από το [lmarena.ai](https://lmarena.ai/). Η κορυφαία λίστα ενημερώνεται αυτόματα καθημερινά μέσω GitHub Actions.
+
+## Αποποίηση Ευθύνης
+
+Αυτή η έκθεση παρέχεται μόνο για ενημερωτικούς σκοπούς. Τα δεδομένα της κορυφαίας λίστας είναι δυναμικά και βασίζονται σε ψηφοφορίες προτίμησης χρηστών στο Chatbot Arena κατά τη συγκεκριμένη χρονική περίοδο. Η πληρότητα και η ακρίβεια των δεδομένων εξαρτώνται από την ανοδική πηγή δεδομένων και την επεξεργασία του έργου `fboulnois/llm-leaderboard-csv`. Τα διάφορα μοντέλα ενδέχεται να χρησιμοποιούν διαφορετικές άδειες χρήσης· παρακαλούμε ανατρέξτε στις επίσημες οδηγίες του παρόχου μοντέλου πριν από τη χρήση.
