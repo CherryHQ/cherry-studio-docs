@@ -1,57 +1,79 @@
+# LLM Arena リーダーボード (リアルタイム更新)
+
 
 {% hint style="warning" %}
 このドキュメントはAIによって中国語から翻訳されており、まだレビューされていません。
 {% endhint %}
 
 
-<think>
-我们正在将中文内容翻译成日语，同时严格遵守给定的翻译规则。
- 规则要求：
-  1. 只翻译将显示给用户的文本内容。
-  2. 严格保留所有Markdown格式和结构元素（如标题、列表、代码块、块引用、粗体、斜体、链接、图片、表格等）。Markdown语法本身不翻译。
-  3. 翻译代码块内的注释（但代码、命令、文件名、URL、版本号等不翻译）。
-  4. 链接和图片路径保持不变。
-  5. 保持GitBook风格的提示块结构（翻译内容，但标签不变）。
-  6. Frontmatter（YAML头）内容不变。
-  7. 不添加任何额外解释、前言、后记或总结。
-  8. 对于目录文件（如SUMMARY.md），只翻译标题名称，链接保持不变。
-  9. 保留所有GitHub特定术语（如pull request, fork, commit, repository）的原始形式。
-  10. 保留所有URL、文件路径和版本号。
-  11. 保持原始文档结构和段落分隔。
 
- 需要翻译的内容包括：
-  - 标题、段落文本
-  - 表格中的文本内容（但链接和模型名称中的技术术语不翻译）
-  - 提示块内的文本
-  - 说明部分的文本
 
- 注意：表格中的模型名称（如“[Gemini-2.5-Pro](http://aistudio.google.com/app/prompts/new_chat?model=gemini-2.5-pro)”）的显示文本（即方括号内的部分）需要翻译，但链接保持不变。
- 同样，表格中的其他列如“服务商”、“许可协议”等也需要翻译，但专有名词（如Google、MIT等）保持不变。
+これは Chatbot Arena (lmarena.ai) のデータに基づくリーダーボードで、自動化プロセスによって生成されています。
 
- 步骤：
-  1. 翻译标题和段落文本。
-  2. 翻译提示块内的文本。
-  3. 翻译表格的表头（如“排名(UB)”、“模型名”等）和表格内的文本内容（但注意模型名称的显示文本需要翻译，而链接和版本号等不翻译）。
-  4. 翻译说明部分的内容。
-  5. 确保所有Markdown标记、链接、图片路径、代码块等原样保留。
+> **データ更新日時**: 2025-07-03 11:43:06 UTC / 2025-07-03 19:43:06 CST (北京時間)
 
- 特别注意：表格中“模型名”一列，每个单元格都是Markdown链接格式，例如：
-      [Gemini-2.5-Pro](http://aistudio.google.com/app/prompts/new_chat?model=gemini-2.5-pro)
-  我们需要翻译链接的显示文本（即“Gemini-2.5-Pro”），但保留链接URL不变。但是，请注意，模型名称本身是专有名词，通常不翻译，但这里显示文本是模型的名字，我们按照规则应该保留模型名（因为它是技术术语）？然而，规则9要求保留GitHub特定术语的原始形式，但模型名是否属于需要保留的术语？规则3指出代码块内的技术语法不翻译，但表格中的模型名不是代码块。
+{% hint style="info" %}
+リーダーボード内の**モデル名**をクリックすると、詳細情報や試用ページにジャンプします。
+{% endhint %}
 
- 但是，观察原文，模型名实际上是一个链接文本，而链接文本通常是模型的名字（如“Gemini-2.5-Pro”），这些名字通常不翻译，因为它们是一个标识符。然而，规则1要求翻译“将显示给用户的文本内容”。这里有一个矛盾：模型名是显示给用户的，但它是专有名词。
+## リーダーボード
 
- 回顾规则9：保留所有GitHub特定术语（如pull request, fork, commit, repository）的原始形式。模型名不属于GitHub特定术语，但它们是模型产品的名称，通常不翻译。而且，在原文中，模型名是英文的（如“Gemini-2.5-Pro”），所以实际上不需要翻译。但是，有些模型名可能是中文的？在这个文档中，模型名都是英文的，所以直接保留。
-
- 再看表格中其他列：分数、置信区间、票数、服务商、许可协议、知识截止日期。其中服务商一列有中文（如“Google”是英文，但“阿里巴巴”是中文），需要翻译成日语。同样，许可协议中的“专有”需要翻译。
-
- 因此，对于表格：
-    - “模型名”列：链接的显示文本（即方括号内的部分）如果是中文则翻译，但这里都是英文或数字，所以保持不变（因为原文就是英文）。
-    - 其他列：文本内容翻译（如“暂无数据”翻译成日语，服务商中的中文名称翻译等）。
-
- 但是，在表格中，我们看到“服务商”列有“Google”、“OpenAI”等英文，也有“阿里巴巴”（中文）、“腾讯”（中文）等，这些中文需要翻译成日语。同样，“许可协议”列有“Proprietary”（英文）和“专有”（中文），这里“专有”需要翻译。
-
- 另外，注意“知识截止日期”列中，有“暂无数据”和日期格式（如“2023/10”），日期保持不变，“暂无数据”翻译。
-
- 所以，我们翻译表格时：
-    - 表头：翻译（如
+|   ランキング(UB) |   ランキング(StyleCtrl) | モデル名                                                                                                                         |   スコア | 信頼区間    | 投票数      | プロバイダー                    | ライセンス                    | ナレッジカットオフ日   |
+|:---|:---|:---|:---|:---|:---|:---|:---|:---|
+|        1 |               1 | [Gemini-2.5-Pro](http://aistudio.google.com/app/prompts/new_chat?model=gemini-2.5-pro)                                      | 1473 | +5/-4   | 14,062  | Google                 | Proprietary             | データなし     |
+|        2 |               2 | [Gemini-2.5-Pro-Preview-05-06](http://aistudio.google.com/app/prompts/new_chat?model=gemini-2.5-pro-preview-05-06)          | 1446 | +4/-5   | 14,432  | Google                 | Proprietary             | データなし     |
+|        3 |               2 | [ChatGPT-4o-latest (2025-03-26)](https://x.com/OpenAI/status/1905331956856050135)                                           | 1428 | +4/-3   | 23,599  | OpenAI                 | Proprietary             | データなし     |
+|        3 |               2 | [o3-2025-04-16](https://openai.com/index/introducing-o3-and-o4-mini/)                                                       | 1426 | +5/-4   | 20,095  | OpenAI                 | Proprietary             | データなし     |
+|        3 |               6 | [DeepSeek-R1-0528](https://api-docs.deepseek.com/news/news250528)                                                           | 1424 | +5/-5   | 12,396  | DeepSeek               | MIT                     | データなし     |
+|        3 |               7 | [Grok-3-Preview-02-24](https://x.ai/blog/grok-3)                                                                            | 1423 | +3/-4   | 25,067  | xAI                    | Proprietary             | データなし     |
+|        4 |               6 | [Gemini-2.5-Flash](http://aistudio.google.com/app/prompts/new_chat?model=gemini-2.5-flash)                                  | 1418 | +4/-4   | 19,451  | Google                 | Proprietary             | データなし     |
+|        5 |               4 | [GPT-4.5-Preview](https://openai.com/index/introducing-gpt-4-5/)                                                            | 1415 | +6/-5   | 15,271  | OpenAI                 | Proprietary             | データなし     |
+|        9 |               7 | [Gemini-2.5-Flash-Preview-04-17](http://aistudio.google.com/app/prompts/new_chat?model=gemini-2.5-flash-preview-04-17)      | 1398 | +5/-5   | 16,552  | Google                 | Proprietary             | データなし     |
+|        9 |              11 | [Qwen3-235B-A22B-no-thinking](https://qwenlm.github.io/blog/qwen3/)                                                         | 1389 | +5/-4   | 14,090  | Alibaba                | Apache 2.0              | データなし     |
+|       10 |               6 | [GPT-4.1-2025-04-14](https://openai.com/index/gpt-4-1/)                                                                     | 1385 | +5/-4   | 17,456  | OpenAI                 | Proprietary             | データなし     |
+|       10 |              11 | [DeepSeek-V3-0324](https://api-docs.deepseek.com/news/news250325)                                                           | 1384 | +3/-4   | 20,171  | DeepSeek               | MIT                     | データなし     |
+|       10 |              18 | [Hunyuan-Turbos-20250416](https://cloud.tencent.com/document/product/1729/104753)                                           | 1380 | +6/-6   | 8,244   | Tencent                | Proprietary             | データなし     |
+|       11 |              12 | [Minimax-M1](https://www.minimax.io/news/minimaxm1)                                                                         | 1374 | +8/-8   | 6,117   | MiniMax                | Apache 2.0              | データなし     |
+|       13 |              12 | [DeepSeek-R1](https://api-docs.deepseek.com/news/news250120)                                                                | 1375 | +4/-3   | 19,430  | DeepSeek               | MIT                     | データなし     |
+|       14 |               6 | [Claude Opus 4 (20250514)](https://www.anthropic.com/news/claude-4)                                                         | 1372 | +3/-3   | 19,708  | Anthropic              | Proprietary             | データなし     |
+|       14 |              18 | [Mistral Medium 3](https://mistral.ai/news/mistral-medium-3)                                                                | 1369 | +5/-4   | 18,439  | Mistral                | Proprietary             | データなし     |
+|       15 |              11 | [o1-2024-12-17](https://openai.com/index/o1-and-new-tools-for-developers/)                                                  | 1367 | +3/-3   | 29,038  | OpenAI                 | Proprietary             | データなし     |
+|       15 |              23 | [Qwen3-235B-A22B](https://qwenlm.github.io/blog/qwen3/)                                                                     | 1367 | +4/-4   | 13,817  | Alibaba                | Apache 2.0              | データなし     |
+|       16 |              25 | [Gemini-2.0-Flash-001](https://aistudio.google.com/app/prompts/new_chat?instructions=lmsys-1121&model=gemini-2.0-flash-001) | 1364 | +3/-3   | 36,673  | Google                 | Proprietary             | データなし     |
+|       16 |              11 | [o4-mini-2025-04-16](https://openai.com/index/introducing-o3-and-o4-mini/)                                                  | 1364 | +5/-4   | 17,150  | OpenAI                 | Proprietary             | データなし     |
+|       16 |              23 | [Qwen2.5-Max](https://qwenlm.github.io/blog/qwen2.5-max/)                                                                   | 1363 | +3/-4   | 31,778  | Alibaba                | Proprietary             | データなし     |
+|       16 |              29 | [Grok-3-Mini-beta](https://docs.x.ai/docs/models)                                                                           | 1361 | +5/-5   | 9,759   | xAI                    | Proprietary             | データなし     |
+|       19 |              25 | [Gemma-3-27B-it](http://aistudio.google.com/app/prompts/new_chat?model=gemma-3-27b-it)                                      | 1361 | +3/-4   | 25,902  | Google                 | Gemma                   | データなし     |
+|       25 |              18 | [o1-preview](https://platform.openai.com/docs/models/o1)                                                                    | 1352 | +3/-3   | 33,177  | OpenAI                 | Proprietary             | 2023/10  |
+|       25 |              12 | [Claude Sonnet 4 (20250514)](https://www.anthropic.com/news/claude-4)                                                       | 1345 | +5/-5   | 15,543  | Anthropic              | Proprietary             | データなし     |
+|       26 |              24 | [o3-mini-high](https://platform.openai.com/docs/guides/reasoning#reasoning-effort)                                          | 1342 | +5/-4   | 19,404  | OpenAI                 | Proprietary             | データなし     |
+|       26 |              32 | [Gemma-3-12B-it](http://aistudio.google.com/app/prompts/new_chat?model=gemma-3-12b-it)                                      | 1338 | +10/-10 | 3,976   | Google                 | Gemma                   | データなし     |
+|       26 |              21 | [GPT-4.1-mini-2025-04-14](https://open极.com/index/gpt-4-1/)                                                                | 1338 | +4/-4   | 16,454  | OpenAI                 | Proprietary             | データなし     |
+|       27 |              30 | [DeepSeek-V3](https://huggingface.co/deepseek-ai/DeepSeek-V3)                                                               | 1336 | +3/-4   | 22,841  | DeepSeek               | DeepSeek                | データなし     |
+|       27 |              38 | [QwQ-32B](极ttps://huggingface.co/Qwen/QwQ-32B)                                                                              | 1334 | +4/-5   | 18,063  | Alibaba                | Apache 2.0              | データなし     |
+|       28 |              49 | [Amazon-Nova-Experimental-Chat-05-14](https://nova.amazon.com/faqs)                                                         | 1330 | +7/-7   | 6,343   | Amazon                 | Proprietary             | データなし     |
+|       28 |              36 | [GLM-4-Plus-0111](https://bigmodel.cn/dev/howuse/glm-4)                                                                     | 1328 | +8/-6   | 6,028   | Zhipu                  | Proprietary             | データなし     |
+|       29 |              31 | [Gemini-2.0-Flash-Lite](https://aistudio.google.com/prompts/new_chat?model=gemini-2.0-flash-lite)                           | 1330 | +3/-4   | 26,104  | Google                 | Proprietary             | データなし     |
+|       29 |              33 | [Qwen-Plus-0125](https://www.alibabacloud.com/help/en/model-studio/developer-reference/what-is-qwen-llm)                    | 1328 | +6/-8   | 6,055   | Alibaba                | Proprietary             | データなし     |
+|       30 |              33 | [Command A (03-2025)](https://cohere.com/blog/command-a)                                                                    | 1327 | +3/-4   | 23,879  | Cohere                 | CC-BY-NC-4.0            | データなし     |
+|       30 |              39 | [Step-2-16K-Exp](https://platform.stepfun.com/docs/llm/text)                                                                | 1322 | +8/-6   | 5,126   | StepFun                | Proprietary             | データなし     |
+|       30 |              31 | [Hunyuan-TurboS-20250226](https://cloud.tencent.com/document/product/1729/104753)                                           | 1320 | +11/-12 | 2,452   | Tencent                | Proprietary             | データなし     |
+|       32 |              39 | [Llama-3.3-Nemotron-Super-49B-v1](https://huggingface.co/nvidia/Llama-3_3-Nemotron-Super-49B-v1)                            | 1314 | +14/-8  | 2,371   | Nvidia                 | Nvidia                  | データなし     |
+|       33 |              32 | [o3-mini](https://openai.com/index/openai-o3-mini/)                                                                         | 1322 | +3/-3   | 36,135  | OpenAI                 | Proprietary             | データなし     |
+|       33 |              39 | [o1-mini](https://platform.openai.com/docs/models/o1)                                                                       | 1321 | +2/-3   | 54,951  | OpenAI                 | Proprietary             | 2023/10  |
+|       33 |              33 | [Hunyuan-Turbo-0110](https://cloud.tencent.com/document/product/1729/104753)                                                | 1314 | +11/-11 | 2,510   | Tencent                | Proprietary             | データなし     |
+|       35 |              32 | [Gemini-1.5-Pro-002](https://aistudio.google.com/app/prompts/new_chat?instructions=lmsys&model=gemini-1.5-pro-002)          | 1320 | +3/-2   | 58,645  | Google                 | Proprietary             | データなし     |
+|       37 |              17 | [Claude 3.7 Sonnet (thinking-32k)](https://www.anthropic.com/news/claude-3-7-sonnet)                                        | 1315 | +4/-3   | 25,145  | Anthropic              | Proprietary             | データなし     |
+|       40 |              53 | [Gemma-3n-e4b-it](http://aistudio.google.com/app/prompts/new_chat?model=gemma-3n-e4b-it)                                    | 1309 | +7/-8   | 极6,311   | Google                 | Gemma                   | データなし     |
+|       42 |              21 | [Claude 3.7 Sonnet](https://www.anthropic.com/news/claude-3-7-sonnet)                                                       | 1308 | +3/-4   | 29,775  | Anthropic              | Proprietary             | データなし     |
+|       43 |              44 | [Grok-2-08-13](https://x.ai/blog/grok-2)                                                                                    | 1305 | +2/-2   | 67,084  | xAI                    | Proprietary             | 2024/3   |
+|       43 |              48 | [Yi-Lightning](https://platform.lingyiwanwu.com/docs#%E6%A8%A1%E5%9E%8B%E4%B8%8E%E8%AE%A1%E8%B4%B9)                         | 1305 | +2/-4   | 28,968  | 01 AI                  | Proprietary             | データなし     |
+|       45 |              35 | [GPT-4o-2024-05-13](https://openai.com/index/hello-gpt-4o/)                                                                 | 1302 | +2/-1   | 117,747 | OpenAI                 | Proprietary             | 2023/10  |
+|       45 |              58 | [Qwen2.5-plus-1127](https://help.aliyun.com/zh/model-studio/getting-started/models?spm=a2c4g.11186623.0.i7)                 | 1300 | +5/-6   | 10,715  | Alibaba                | Proprietary             | データなし     |
+|       46 |              25 | [Claude 3.5 Sonnet (20241022)](https://www.anthropic.com/news/3-5-models-and-computer-use)                                  | 1301 | +2/-3   | 77,078  | Anthropic              | Proprietary             | 2024/4   |
+|       48 |              51 | [Deepseek-v2.5-1210](https://huggingface.co/deepseek-ai/DeepSeek-V2.5-1210)                                                 | 1297 | +4/-7   | 7,243   | DeepSeek               | DeepSeek                | データなし     |
+|       48 |              62 | [Gemma-3-4B-it](http://aistudio.google.com/app/prompts/new_chat?model=gemma-3-4b-it)                                        | 1293 | +8/-8   | 4,321   | Google                 | Gemma                   | データなし     |
+|       50 |              48 | [Hunyuan-Large-2025-02-10](https://cloud.tencent.com/document/product/1729/104753)                                          | 1289 | +9/-10  | 3,856   | Tencent                | Proprietary             | データなし     |
+|       51 |              59 | [Athene-v2-Chat-72B](https://huggingface.co/Nexusflow/Athene-V2-Chat)                                                       | 1293 | +3/-3   | 26,074  | NexusFlow              | NexusFlow               | データなし     |
+|       51 |              40 | [Llama-4-Maverick-17B-128E-Instruct](https://huggingface.co/meta-llama/Llama-4-Maverick-17B-128E-Instruct)                  | 1293 | +4/-5   | 17,075  | Meta                   | Llama 4                 | データなし     |
+|       51 |              56 | [GLM-4-Plus](https://bigmodel.cn/dev/howuse/glm-4)
