@@ -12,18 +12,18 @@ Este documento foi traduzido do chinês por IA e ainda não foi revisado.
 
 
 {% hint style="info" %}
-Versão estável mais recente atual: v1.4.7-vertex-claude
+Versão estável mais recente: v1.4.8-vertex-claude
 {% endhint %}
 
 ## Download Direto
 
-### Versão para Windows
+### Versão Windows
 
 {% hint style="warning" %}
 Atenção: O sistema Windows 7 não suporta a instalação do Cherry Studio.
 {% endhint %}
 
-#### Versão de instalação (Setup)
+#### Versão de Instalação (Setup)
 
 <details>
 
@@ -31,11 +31,11 @@ Atenção: O sistema Windows 7 não suporta a instalação do Cherry Studio.
 
 Linha principal:
 
-【[Site oficial do Cherry Studio](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7-vertex-claude/Cherry-Studio-1.4.7-vertex-claude-x64-setup.exe)】
+【[Site oficial do Cherry Studio](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7-vertex-claude/Cherry-Studio-1.4.8-vertex-claude-x64-setup.exe)】
 
 Linhas alternativas:
 
-【[Linha 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7-vertex-claude/Cherry-Studio-1.4.7-vertex-claude-x64-setup.exe)】 【[Linha 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7-vertex-claude/Cherry-Studio-1.4.7-vertex-claude-x64-setup.exe)】 【[Linha 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7-vertex-claude/Cherry-Studio-1.4.7-vertex-claude-x64-setup.exe)】
+【[Linha 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7-vertex-claude/Cherry-Studio-1.4.8-vertex-claude-x64-setup.exe)】 【[Linha 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7-vertex-claude/Cherry-Studio-1.4.8-vertex-claude-x64-setup.exe)】 【[Linha 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7-vertex-claude/Cherry-Studio-1.4.8-vertex-claude-x64-setup.exe)】
 
 </details>
 
@@ -45,15 +45,15 @@ Linhas alternativas:
 
 Linha principal:
 
-【[Site oficial do Cherry Studio](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7-vertex-claude/Cherry-Studio-1.4.7-vertex-claude-arm64-setup.exe)】
+【[Site oficial do Cherry Studio](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7-vertex-claude/Cherry-Studio-1.4.8-vertex-claude-arm64-setup.exe)】
 
 Linhas alternativas:
 
-【[Linha 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7-vertex-claude/Cherry-Studio-1.4.7-vertex-claude-arm64-setup.exe)】 【[Linha 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7-vertex-claude/Cherry-Studio-1.4.7-vertex-claude-arm64-setup.exe)】 【[Linha 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7-vertex-claude/Cherry-Studio-1.4.7-vertex-claude-arm64-setup.exe)】
+【[Linha 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7-vertex-claude/Cherry-Studio-1.4.8-vertex-claude-arm64-setup.exe)】 【[Linha 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7-vertex-claude/Cherry-Studio-1.4.8-vertex-claude-arm64-setup.exe)】 【[Linha 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7-vertex-claude/Cherry-Studio-1.4.8-vertex-claude-arm64-setup.exe)】
 
 </details>
 
-#### Versão portátil (Portable)
+#### Versão Portátil (Portable)
 
 <details>
 
@@ -61,11 +61,11 @@ Linhas alternativas:
 
 Linha principal:
 
-【[Site oficial do Cherry Studio](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7-vertex-claude/Cherry-Studio-1.4.7-vertex-claude-x64-portable.exe)】
+【[Site oficial do Cherry Studio](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7-vertex-claude/Cherry-Studio-1.4.8-vertex-claude-x64-portable.exe)】
 
 Linhas alternativas:
 
-【[Linha 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7-vertex-claude/Cherry-Studio-1.4.7-vertex-claude-x64-portable.exe)】 【[Linha 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7-vertex-claude/Cherry-Studio-1.4.7-vertex-claude-x64-portable.exe)】 【[Linha 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7-vertex-claude/Cherry-Studio-1.4.7-vertex-claude-x64-portable.exe)】
+【[Linha 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7-vertex-claude/Cherry-Studio-1.4.8-vertex-claude-x64-portable.exe)】 【[Linha 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7-vertex-claude/Cherry-Studio-1.4.8-vertex-claude-x64-portable.exe)】 【[Linha 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v极4.7-vertex-claude/Cherry-Studio-1.4.8-vertex-claude-x64-portable.exe)】
 
 </details>
 
@@ -75,17 +75,17 @@ Linhas alternativas:
 
 Linha principal:
 
-【[Site oficial do Cherry Studio](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7-vertex-claude/Cherry-Studio-1.4.7-vertex-claude-arm64-portable.exe)】
+【[Site oficial do Cherry Studio](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7-vertex-claude/Cherry-Studio-1.4.8-vertex-claude-arm64-portable.exe)】
 
 Linhas alternativas:
 
-【[Linha 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7-vertex-claude/Cherry-Studio-1.4.7-vertex-claude-arm64-portable.exe)】 【[Linha 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7-vertex-claude/Cherry-Studio-1.4.7-vertex-claude-arm64-portable.exe)】 【[Linha 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7-vertex-claude/Cherry-Studio-1.4.7-vertex-claude-arm64-portable.exe)】
+【[Linha 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7-vertex-claude/Cherry-Studio-1.4.8-vertex-claude-arm64-portable.exe)】 【[Linha 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7-vertex-claude/Cherry-Studio-1.4.8-vertex-claude-arm64-portable.exe)】 【[Linha 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7-vertex-claude/Cherry-Studio-1.4.8-vertex-claude-arm64-portable.exe)】
 
 </details>
 
 ***
 
-### Versão para macOS
+### Versão macOS
 
 <details>
 
@@ -93,31 +93,31 @@ Linhas alternativas:
 
 Linha principal:
 
-【[Site oficial do Cherry Studio](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7-vertex-claude/Cherry-Studio-1.4.7-vertex-claude-x64.dmg)】
+【[Site oficial do Cherry Studio](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7-vertex-claude/Cherry-Studio-1.4.8-vertex-claude-x64.dmg)】
 
 Linhas alternativas:
 
-【[Linha 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7-vertex-claude/Cherry-Studio-1.4.7-vertex-claude-x64.dmg)】 【[Linha 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7-vertex-claude/Cherry-Studio-1.4.7-vertex-claude-x64.dmg)】 【[Linha 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7-vertex-claude/Cherry-Studio-1.4.7-vertex-claude-x64.dmg)】
+【[Linha 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7-vertex-claude/Cherry-Studio-1.极.8-vertex-claude-x64.dmg)】 【[Linha 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7-vertex-claude/Cherry-Studio-1.4.8-vertex-claude-x64.dmg)】 【[Linha 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7-vertex-claude/Cherry-Studio-1.4.8-vertex-claude-x64.dmg)】
 
 </details>
 
 <details>
 
-<summary>Versão para Apple Silicon (ARM64, chips da série M)</summary>
+<summary>Versão Apple Silicon (ARM64, chips da série M)</summary>
 
 Linha principal:
 
-【[Site oficial do Cherry Studio](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7-vertex-claude/Cherry-Studio-1.4.7-vertex-claude-arm64.dmg)】
+【[Site oficial do Cherry Studio](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7-vertex-claude/Cherry-Studio-1.4.8-vertex-claude-arm64.dmg)】
 
 Linhas alternativas:
 
-【[Linha 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7-vertex-claude/Cherry-Studio-1.4.7-vertex-claude-arm64.dmg)】 【[Linha 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7-vertex-claude/Cherry-Studio-1.4.7-vertex-claude-arm64.dmg)】 【[Linha 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7-vertex-claude/Cherry-Studio-1.4.7-vertex-claude-arm64.dmg)】
+【[Linha 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7-vertex-claude/Cherry-Studio-1.4.8-vertex-claude-arm64.dmg)】 【[Linha 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7-vertex-claude/Cherry-Studio-1.4.8-vertex-claude-arm64.dmg)】 【[Linha 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7-vertex-claude/Cherry-Studio-1.4.8-vertex-claude-arm64.dmg)】
 
 </details>
 
 ***
 
-### Versão para Linux
+### Versão Linux
 
 <details>
 
@@ -125,11 +125,11 @@ Linhas alternativas:
 
 Linha principal:
 
-【[Site oficial do Cherry Studio](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7-vertex-claude/Cherry-Studio-1.4.7-vertex-claude-x86_64.AppImage)】
+【[Site oficial do Cherry Studio](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7-vertex-claude/Cherry-Studio-1.4.8-vertex-claude-x86_64.AppImage)】
 
 Linhas alternativas:
 
-【[Linha 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7-vertex-claude/Cherry-Studio-1.4.7-vertex-claude-x86_64.AppImage)】 【[Linha 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7-vertex-claude/Cherry-Studio-1.4.7-vertex-claude-x86_64.AppImage)】 【[Linha 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7-vertex-claude/Cherry-Studio-1.4.7-vertex-claude-x86_64.AppImage)】
+【[Linha 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7-vertex-claude/Cherry-Studio-1.4.8-vertex-claude-x86_64.AppImage)】 【[Linha 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7-vertex-claude/Cherry-Studio-1.4.8-vertex-claude-x86_64.AppImage)】 【[Linha 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7-vertex-claude/Cherry-Studio-1.4.8-vertex-claude-x86_64.AppImage)】
 
 </details>
 
@@ -139,11 +139,11 @@ Linhas alternativas:
 
 Linha principal:
 
-【[Site oficial do Cherry Studio](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7-vertex-claude/Cherry-Studio-1.4.7-vertex-claude-arm64.AppImage)】
+【[Site oficial do Cherry Studio](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7-vertex-claude/Cherry-Studio-1.4.8-vertex-claude-arm64.AppImage)】
 
 Linhas alternativas:
 
-【[Linha 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7-vertex-claude/Cherry-Studio-1.4.7-vertex-claude-arm64.AppImage)】 【[Linha 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7-vertex-claude/Cherry-Studio-1.4.7-vertex-claude-arm64.AppImage)】 【[Linha 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7-vertex-claude/Cherry-Studio-1.4.7-vertex-claude-arm64-AppImage)】
+【[Linha 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7-vertex-claude/Cherry-Studio-1.4.8-vertex-claude-arm64.AppImage)】 【[Linha 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7-vertex-claude/Cherry-Studio-1.4.8-vertex-claude-arm64.AppImage)】 【[Linha 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7-vertex-claude/Cherry-Studio-1.4.8-vertex-claude-arm64-AppImage)】
 
 </details>
 

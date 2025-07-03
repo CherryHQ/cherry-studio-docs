@@ -12,30 +12,30 @@ icon: download
 
 
 {% hint style="info" %}
-Τρέχουσα τελευταία σταθερή έκδοση: v1.4.7-vertex-claude
+Τρέχουσα σταθερή έκδοση: v1.4.8-vertex-claude
 {% endhint %}
 
-## Άμεσες Λήψεις
+## Άμεσες λήψεις
 
 ### Έκδοση για Windows
 
 {% hint style="warning" %}
-Σημείωση: Το σύστημα Windows 7 δεν υποστηρίζει την εγκατάσταση του Cherry Studio.
+Σημείωση: Το λειτουργικό σύστημα Windows 7 δεν υποστηρίζει την εγκατάσταση του Cherry Studio.
 {% endhint %}
 
-#### Έκδοση Εγκατάστασης (Setup)
+#### Εκδοχή εγκατάστασης (Setup)
 
 <details>
 
 <summary>Έκδοση x64</summary>
 
-Κύρια σύνδεση:
+Κύρια γραμμή:
 
-【[Επίσημος ιστότοπος Cherry Studio](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7-vertex-claude/Cherry-Studio-1.4.7-vertex-claude-x64-setup.exe)】
+【[Επίσημος ιστότοπος Cherry Studio](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7-vertex-claude/Cherry-Studio-1.4.8-vertex-claude-x64-setup.exe)】
 
-Εφεδρικές συνδέσεις:
+Εναλλακτικές γραμμές:
 
-【[Σύνδεση 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7-vertex-claude/Cherry-Studio-1.4.7-vertex-claude-x64-setup.exe)】 【[Σύνδεση 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7-vertex-claude/Cherry-Studio-1.4.7-vertex-claude-x64-setup.exe)】 【[Σύνδεση 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7-vertex-claude/Cherry-Studio-1.4.7-vertex-claude-x64-setup.exe)】
+【[Γραμμή 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7-vertex-claude/Cherry-Studio-1.4.8-vertex-claude-x64-setup.exe)】 【[Γραμμή 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7-vertex-claude/Cherry-Studio-1.4.8-vertex-claude-x64-setup.exe)】 【[Γραμμή 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7-vertex-claude/Cherry-Studio-1.4.8-vertex-claude-x64-setup.exe)】
 
 </details>
 
@@ -43,29 +43,29 @@ icon: download
 
 <summary>Έκδοση ARM64</summary>
 
-Κύρια σύνδεση:
+Κύρια γραμμή:
 
-【[Επίσημος ιστότοπος Cherry Studio](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7-vertex-claude/Cherry-Studio-1.4.7-vertex-claude-arm64-setup.exe)】
+【[Επίσημος ιστότοπος Cherry Studio](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7-vertex-claude/Cherry-Studio-1.4.8-vertex-claude-arm64-setup.exe)】
 
-Εφεδρικές συνδέσεις:
+Εναλλακτικές γραμμές:
 
-【[Σύνδεση 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7-vertex-claude/Cherry-Studio-1.4.7-vertex-claude-arm64-setup.exe)】 【[Σύνδεση 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7-vertex-claude/Cherry-Studio-1.4.7-vertex-claude-arm64-setup.exe)】 【[Σύνδεση 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7-vertex-claude/Cherry-Studio-1.4.7-vertex-claude-arm64-setup.exe)】
+【[Γραμμή 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7-vertex-claude/Cherry-Studio-1.4.8-vertex-claude-arm64-setup.exe)】 【[Γραμμή 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7-vertex-claude/Cherry-Studio-1.4.8-vertex-claude-arm64-setup.exe)】 【[Γραμμή 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7-vertex-claude/Cherry-Studio-1.4.8-vertex-claude-arm64-setup.exe)】
 
 </details>
 
-#### Φορητή Έκδοση (Portable)
+#### Φορητή έκδοση (Portable)
 
 <details>
 
 <summary>Έκδοση x64</summary>
 
-Κύρια σύνδεση:
+Κύρια γραμμή:
 
-【[Επίσημος ιστότοπος Cherry Studio](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7-vertex-claude/Cherry-Studio-1.4.7-vertex-claude-x64-portable.exe)】
+【[Επίσημος ιστότοπος Cherry Studio](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7-vertex-claude/Cherry-Studio-1.4.8-vertex-claude-x64-portable.exe)】
 
-Εφεδρικές συνδέσεις:
+Εναλλακτικές γραμμές:
 
-【[Σύνδεση 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7-vertex-claude/Cherry-Studio-1.4.7-vertex-claude-x64-portable.exe)】 【[Σύνδεση 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7-vertex-claude/Cherry-Studio-1.4.7-vertex-claude-x64-portable.exe)】 【[Σύνδεση 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7-vertex-claude/Cherry-Studio-1.4.7-vertex-claude-x64-portable.exe)】
+【[Γραμμή 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7-vertex-claude/Cherry-Studio-1.4.8-vertex-claude-x64-portable.exe)】 【[Γραμμή 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7-vertex-claude/Cherry-Studio-1.4.8-vertex-claude-x64-portable.exe)】 【[Γραμμή 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7-vertex-claude/Cherry-Studio-1.4.8-vertex-claude-x64-portable.exe)】
 
 </details>
 
@@ -73,13 +73,13 @@ icon: download
 
 <summary>Έκδοση ARM64</summary>
 
-Κύρια σύνδεση:
+Κύρια γραμμή:
 
-【[Επίσημος ιστότοπος Cherry Studio](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7-vertex-claude/Cherry-Studio-1.4.7-vertex-claude-arm64-portable.exe)】
+【[Επίσημος ιστότοπος Cherry Studio](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7-vertex-claude/Cherry-Studio-1.4.8-vertex-claude-arm64-portable.exe)】
 
-Εφεδρικές συνδέσεις:
+Εναλλακτικές γραμμές:
 
-【[Σύνδεση 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7-vertex-claude/Cherry-Studio-1.4.7-vertex-claude-arm64-portable.exe)】 【[Σύνδεση 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7-vertex-claude/Cherry-Studio-1.4.7-vertex-claude-arm64-portable.exe)】 【[Σύνδεση 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7-vertex-claude/Cherry-Studio-1.4.7-vertex-claude-arm64-portable.exe)】
+【[Γραμμή 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7-vertex-claude/Cherry-Studio-1.4.8-vertex-claude-arm64-portable.exe)】 【[Γραμμή 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7-vertex-claude/Cherry-Studio-1.4.8-vertex-claude-arm64-portable.exe)】 【[Γραμμή 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7-vertex-claude/Cherry-Studio-1.4.8-vertex-claude-arm64-portable.exe)】
 
 </details>
 
@@ -91,13 +91,13 @@ icon: download
 
 <summary>Έκδοση για Intel (x64)</summary>
 
-Κύρια σύνδεση:
+Κύρια γραμμή:
 
-【[Επίσημος ιστότοπος Cherry Studio](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7-vertex-claude/Cherry-Studio-1.4.7-vertex-claude-x64.dmg)】
+【[Επίσημος ιστότοπος Cherry Studio](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7-vertex-claude/Cherry-Studio-1.4.8-vertex-claude-x64.dmg)】
 
-Εφεδρικές συνδέσεις:
+Εναλλακτικές γραμμές:
 
-【[Σύνδεση 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7-vertex-claude/Cherry-Studio-1.4.7-vertex-claude-x64.dmg)】 【[Σύνδεση 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7-vertex-claude/Cherry-Studio-1.4.7-vertex-claude-x64.dmg)】 【[Σύνδεση 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7-vertex-claude/Cherry-Studio-1.4.7-vertex-claude-x64.dmg)】
+【[Γραμμή 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7-vertex-claude/Cherry-Studio-1.4.8-vertex-claude-x64.dmg)】 【[Γραμμή 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7-vertex-claude/Cherry-Studio-1.4.8-vertex-claude-x64.dmg)】 【[Γραμμή 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7-vertex-claude/Cherry-Studio-1.4.8-vertex-claude-x64.dmg)】
 
 </details>
 
@@ -105,13 +105,13 @@ icon: download
 
 <summary>Έκδοση για Apple Silicon (ARM64, τσιπ σειράς M)</summary>
 
-Κύρια σύνδεση:
+Κύρια γραμμή:
 
-【[Επίσημος ιστότοπος Cherry Studio](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7-vertex-claude/Cherry-Studio-1.4.7-vertex-claude-arm64.dmg)】
+【[Επίσημος ιστότοπος Cherry Studio](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7-vertex-claude/Cherry-Studio-1.4.8-vertex-claude-arm64.dmg)】
 
-Εφεδρικές συνδέσεις:
+Εναλλακτικές γραμμές:
 
-【[Σύνδεση 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7-vertex-claude/Cherry-Studio-1.4.7-vertex-claude-arm64.dmg)】 【[Σύνδεση 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7-vertex-claude/Cherry-Studio-1.4.7-vertex-claude-arm64.dmg)】 【[Σύνδεση 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7-vertex-claude/Cherry-Studio-1.4.7-vertex-claude-arm64.dmg)】
+【[Γραμμή 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7-vertex-claude/Cherry-Studio-1.4.8-vertex-claude-arm64.dmg)】 【[Γραμμή 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7-vertex-claude/Cherry-Studio-1.4.8-vertex-claude-arm64.dmg)】 【[Γραμμή 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7-vertex-claude/Cherry-Studio-1.4.8-vertex-claude-arm64.dmg)】
 
 </details>
 
@@ -123,13 +123,13 @@ icon: download
 
 <summary>Έκδοση x86_64</summary>
 
-Κύρια σύνδεση:
+Κύρια γραμμή:
 
-【[Επίσημος ιστότοπος Cherry Studio](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7-vertex-claude/Cherry-Studio-1.4.7-vertex-claude-x86_64.AppImage)】
+【[Επίσημος ιστότοπος Cherry Studio](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CcherryHQ/cherry-studio/releases/download/v1.4.7-vertex-claude/Cherry-Studio-1.4.8-vertex-claude-x86_64.AppImage)】
 
-Εφεδρικές συνδέσεις:
+Εναλλακτικές γραμμές:
 
-【[Σύνδεση 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7-vertex-claude/Cherry-Studio-1.4.7-vertex-claude-x86_64.AppImage)】 【[Σύνδεση 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7-vertex-claude/Cherry-Studio-1.4.7-vertex-claude-x86_64.AppImage)】 【[Σύνδεση 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7-vertex-claude/Cherry-Studio-1.4.7-vertex-claude-x86_64.AppImage)】
+【[Γραμμή 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7-vertex-claude/Cherry-Studio-1.4.8-vertex-claude-x86_64.AppImage)】 【[Γραμμή 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7-vertex-claude/Cherry-Studio-1.4.8-vertex-claude-x86_64.AppImage)】 【[Γραμμή 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7-vertex-claude/Cherry-Studio-1.4.8-vertex-claude-x86_64.AppImage)】
 
 </details>
 
@@ -137,18 +137,18 @@ icon: download
 
 <summary>Έκδοση ARM64</summary>
 
-Κύρια σύνδεση:
+Κύρια γραμμή:
 
-【[Επίσημος ιστότοπος Cherry Studio](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7-vertex-claude/Cherry-Studio-1.4.7-vertex-claude-arm64.AppImage)】
+【[Επίσημος ιστότοπος Cherry Studio](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7-vertex-claude/Cherry-Studio-1.4.8-vertex-claude-arm64.AppImage)】
 
-Εφεδρικές συνδέσεις:
+Εναλλακτικές γραμμές:
 
-【[Σύνδεση 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7-vertex-claude/Cherry-Studio-1.4.7-vertex-claude-arm64.AppImage)】 【[Σύνδεση 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7-vertex-claude/Cherry-Studio-1.4.7-vertex-claude-arm64.AppImage)】 【[Σύνδεση 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7-vertex-claude/Cherry-Studio-1.4.7-vertex-claude-arm64-AppImage)】
+【[Γραμμή 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7-vertex-claude/Cherry-Studio-1.4.8-vertex-claude-arm64.AppImage)】 【[Γραμμή 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7-vertex-claude/Cherry-Studio-1.4.8-vertex-claude-arm64.AppImage)】 【[Γραμμή 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.7-vertex-claude/Cherry-Studio-1.4.8-vertex-claude-arm64-AppImage)】
 
 </details>
 
 ***
 
-## Λήψη από Cloud Storage
+## Λήψη μέσω χώρου αποθήκευσης νέφους
 
 [Quark](https://pan.quark.cn/s/c8533a1ec63e#/list/share)
