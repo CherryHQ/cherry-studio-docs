@@ -4,7 +4,7 @@ icon: face-viewfinder
 
 # 知识库文档预处理
 
-知识库文档预处理 需要将 Cherry Studio 升级至 v1.5.0 或更高版本。
+知识库文档预处理 需要将 Cherry Studio 升级至 v1.4.8 或更高版本。
 
 ### 配置OCR服务商
 
