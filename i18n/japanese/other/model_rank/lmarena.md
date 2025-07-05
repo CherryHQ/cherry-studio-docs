@@ -10,15 +10,15 @@
 
 これは Chatbot Arena (lmarena.ai) のデータに基づくランキングで、自動化プロセスによって生成されています。
 
-> **データ更新時間**: 2025-07-04 11:42:19 UTC / 2025-07-04 19:42:19 CST (北京時間)
+> **データ更新時間**: 2025-07-05 11:40:47 UTC / 2025-07-05 19:40:47 CST (北京時間)
 
 {% hint style="info" %}
-ランキング内の **モデル名** をクリックすると、詳細情報または試用ページに移動します。
+ランキングの **モデル名** をクリックすると、その詳細や試用ページに移動できます。
 {% endhint %}
 
 ## ランキング
 
-| 順位(UB) | 順位(StyleCtrl) | モデル名                                                                                                                         | スコア | 信頼区間    | 投票数      | サービスプロバイダ                    | ライセンス                    | ナレッジカットオフ日   |
+|   ランキング(UB) |   ランキング(StyleCtrl) | モデル名                                                                                                                         |   スコア | 信頼区間    | 投票数      | プロバイダー                    | ライセンス                    | 知識カットオフ日   |
 |:---|:---|:---|:---|:---|:---|:---|:---|:---|
 |        1 |               1 | [Gemini-2.5-Pro](http://aistudio.google.com/app/prompts/new_chat?model=gemini-2.5-pro)                                      | 1473 | +5/-4   | 14,062  | Google                 | Proprietary             | データなし     |
 |        2 |               2 | [Gemini-2.5-Pro-Preview-05-06](http://aistudio.google.com/app/prompts/new_chat?model=gemini-2.5-pro-preview-05-06)          | 1446 | +4/-5   | 14,432  | Google                 | Proprietary             | データなし     |
@@ -52,7 +52,7 @@
 |       27 |              30 | [DeepSeek-V3](https://huggingface.co/deepseek-ai/DeepSeek-V3)                                                               | 1336 | +3/-4   | 22,841  | DeepSeek               | DeepSeek                | データなし     |
 |       27 |              38 | [QwQ-32B](https://huggingface.co/Qwen/QwQ-32B)                                                                              | 1334 | +4/-5   | 18,063  | Alibaba                | Apache 2.0              | データなし     |
 |       28 |              49 | [Amazon-Nova-Experimental-Chat-05-14](https://nova.amazon.com/faqs)                                                         | 1330 | +7/-7   | 6,343   | Amazon                 | Proprietary             | データなし     |
-|       28 |              36 | [GLM-4-Plus-0111](https://bigmodel.cn/dev/howuse/glm-4)                                                                     | 1328 | +8/-6   | 6,028   | Zhipu                  | Proprietary             | データなし     |
+|       28 |              36 | [GLM-4-Plus-0111](https://open.bigmodel.cn/dev/api#language)                                                                | 1328 | +8/-6   | 6,028   | Zhipu                  | Proprietary             | データなし     |
 |       29 |              31 | [Gemini-2.0-Flash-Lite](https://aistudio.google.com/prompts/new_chat?model=gemini-2.0-flash-lite)                           | 1330 | +3/-4   | 26,104  | Google                 | Proprietary             | データなし     |
 |       29 |              33 | [Qwen-Plus-0125](https://www.alibabacloud.com/help/en/model-studio/developer-reference/what-is-qwen-llm)                    | 1328 | +6/-8   | 6,055   | Alibaba                | Proprietary             | データなし     |
 |       30 |              33 | [Command A (03-2025)](https://cohere.com/blog/command-a)                                                                    | 1327 | +3/-4   | 23,879  | Cohere                 | CC-BY-NC-4.0            | データなし     |
@@ -84,7 +84,7 @@
 |       54 |              39 | [Meta-Llama-3.1-405B-Instruct-bf16](https://ai.meta.com/blog/meta-llama-3-1/)                                               | 1286 | +3/-3   | 43,788  | Meta                   | Llama 3.1 Community     | 2023/12  |
 |       55 |              36 | [Claude 3.5 Sonnet (20240620)](https://www.anthropic.com/news/claude-3-5-sonnet)                                            | 1286 | +2/-2   | 86,159  | Anthropic              | Proprietary             | 2024/4   |
 |       57 |              40 | [Meta-Llama-3.1-405B-Instruct-fp8](https://ai.meta.com/blog/meta-llama-3-1/)                                                | 1285 | +2/-2   | 63,038  | Meta                   | Llama 3.1 Community     | 2023/12  |
-|       57 |              39 | [Gemini Advanced App (2024-05-14)](https://gemini.google.com/advanced)                                                      | 1284 | +2/-3   | 52,144  | Google                 | Proprietary             | Online   |
+|       57 |              39 | [Gemini Advanced App (2024-05-14)](https://gemini.google.com/advanced)                                                     | 1284 | +2/-3   | 52,144  | Google                 | Proprietary             | Online   |
 |       57 |              72 | [Grok-2-Mini-08-13](https://x.ai/blog/grok-2)                                                                               | 1284 | +2/-2   | 55,442  | xAI                    | Proprietary             | 2024/3   |
 |       58 |              44 | [GPT-4o-2024-08-06](https://platform.openai.com/docs/models/gpt-4o)                                                         | 1283 | +3/-3   | 47,973  | OpenAI                 | Proprietary             | 2023/10  |
 |       58 |              58 | [Qwen-Max-0919](https://help.aliyun.com/zh/dashscope/developer-reference/model-introduction)                                | 1281 | +4/-4   | 17,432  | Alibaba                | Qwen                    | データなし     |
@@ -231,20 +231,20 @@
 
 ## 説明
 
-- **順位(UB)**: Bradley-Terry モデルに基づいて計算された順位。この順位はアリーナにおけるモデルの総合的なパフォーマンスを反映し、Eloスコアの**上限**推定値を提供し、モデルの潜在的な競争力を理解するのに役立ちます。
-- **順位(StyleCtrl)**: 対話スタイル制御後の順位。この順位はモデルの応答スタイル（例: 冗長性、簡潔さ）による選好バイアスを減らし、モデルのコア能力をより純粋に評価することを目的としています。
-- **モデル名**: 大規模言語モデル (LLM) の名称。この列にはモデル関連リンクが埋め込まれており、クリックするとジャンプします。
-- **スコア**: アリーナでユーザー投票を通じて獲得したElo評価。Elo評価は相対的なランキングシステムで、スコアが高いほどモデルのパフォーマンスが優れていることを示します。このスコアは動的に変化し、現在の競争環境におけるモデルの相対的な実力を反映します。
-- **信頼区間**: モデルのElo評価の95%信頼区間（例: `+6/-6`）。この区間が小さいほど、モデルの評価が安定して信頼性が高いことを示します。逆に区間が大きい場合はデータ不足やモデルのパフォーマンス変動が大きい可能性があります。評価の正確性を定量化して評価します。
-- **投票数**: アリーナでそのモデルが受け取った総投票数。投票数が多いほど、通常は評価の統計的信頼性が高くなります。
-- **サービスプロバイダ**: モデルを提供する組織または企業。
-- **ライセンス**: モデルのライセンスタイプ（例: プロプライエタリ (Proprietary)、Apache 2.0、MIT など）。
-- **ナレッジカットオフ日**: モデルトレーニングデータのナレッジカットオフ日。**データなし**は関連情報が提供されていないか不明であることを示します。
+- **ランキング(UB)**: Bradley-Terry モデルに基づくランキング。モデルのアリーナにおける総合的なパフォーマンスを反映し、Elo スコアの **上界** 推定値を提供し、モデルの潜在的な競争力の理解を助けます。
+- **ランキング(StyleCtrl)**: 対話スタイル制御後のランキング。回答スタイル（例: 冗長、簡潔）によるバイアスを軽減し、モデルのコア能力をより純粋に評価します。
+- **モデル名**: 大規模言語モデル (LLM) の名称。関連リンクが埋め込まれており、クリックすると遷移します。
+- **スコア**: ユーザー投票を通じてアリーナで獲得した Elo レーティング。高いスコアは優れたパフォーマンスを示し、競争環境における相対的な実力を動的に反映します。
+- **信頼区間**: Elo レーティングの95%信頼区間 (例: `+6/-6`)。区間が小さいほどスコアの安定性と信頼性が高く、大きい場合はデータ不足やパフォーマンス変動を示します。
+- **投票数**: アリーナで受けた総投票数。投票数が多いほど統計的な信頼性が高まります。
+- **プロバイダー**: モデルを提供する組織または企業。
+- **ライセンス**: モデルのライセンスタイプ（例: プロプライエタリ、Apache 2.0、MIT）。
+- **知識カットオフ日**: モデルトレーニングデータの知識カットオフ日。**データなし** は情報提供なしまたは不明を示します。
 
 ## データソースと更新頻度
 
-このランキングデータは [fboulnois/llm-leaderboard-csv](https://github.com/fboulnois/llm-leaderboard-csv) プロジェクトによって自動生成・提供され、[lmarena.ai](https://lmarena.ai/) からデータを取得・処理しています。このランキングは GitHub Actions によって毎日自動更新されます。
+本ランキングは [fboulnois/llm-leaderboard-csv](https://github.com/fboulnois/llm-leaderboard-csv) プロジェクトから自動生成され、[lmarena.ai](https://lmarena.ai/) のデータを利用します。GitHub Actions により毎日自動更新されます。
 
 ## 免責事項
 
-本レポートは参考情報です。ランキングデータは動的に変化し、特定の期間における Chatbot Arena 上のユーザー選好投票に基づいています。データの完全性と正確性は上流データソースおよび `fboulnois/llm-leaderboard-csv` プロジェクトの更新と処理に依存します。異なるモデルは異なるライセンスを採用している可能性があるため、使用時には必ずモデル提供者の公式説明を参照してください。
+本レポートは参考目的です。ランキングデータは動的に変化し、特定の期間における Chatbot Arena ユーザーの選好投票に基づいています。データの完全性と正確性は、上流データソース及び `fboulnois/llm-leaderboard-csv` プロジェクトの更新・処理に依存します。異なるモデルは異なるライセンスを採用している可能性があるため、使用時には必ずモデルプロバイダーの公式説明を参照してください。
