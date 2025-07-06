@@ -4,60 +4,23 @@ icon: database
 
 # 数据设置
 
-该界面可以进行客户端数据的云端和本地备份、本地数据目录查询和清除缓存等操作。
-
-
+该界面可以进行数据本地和云端备份与恢复、本地数据目录查询和清除缓存、导出设置以及第三方连接等操作。
 
 ### 数据备份
 
-目前数据备份只支持 WebDAV 的方式进行备份。你可以选择支持 WebDAV 的服务来进行云端备份。
+数据备份目前支持本地备份、WebDAV 备份与 S3 兼容存储(对象存储)备份三种方式。具体介绍与教程请参考以下文档：
 
-你也可以通过 `A电脑` $$\xrightarrow{\text{备份}}$$ `WebDAV` $$\xrightarrow{\text{恢复}}$$ `B电脑` 的方式来实现多端数据同步。
+- [WebDAV 备份教程](../../../data-settings/WebDAV.md)
+- [S3 兼容存储备份](../../../data-settings/s3-compatible.md)
 
-#### 以坚果云为例
+### 导出设置
 
-1. 登录坚果云，点击右上角用户名，选择“账户信息”：
+导出设置可以配置导出菜单显示的导出选项，此外还可以设置 Markdown 导出的默认路径、显示样式等。
 
-<figure><img src="../../../.gitbook/assets/image (39).png" alt=""><figcaption></figcaption></figure>
+### 第三方连接
 
-2. 选择“安全选项”，点击“添加应用”
+第三方连接可以配置 Cherry Studio 与第三方应用的连接，用于快速导出对话内容到你熟悉的知识管理应用。目前支持的应用有：Notion、Obsidian、思源笔记、语雀、Joplin，具体配置教程请参考以下文档：
 
-<figure><img src="../../../.gitbook/assets/image (40).png" alt=""><figcaption></figcaption></figure>
-
-3. 输入应用名称，生成随机密码；
-
-<figure><img src="../../../.gitbook/assets/image (41).png" alt=""><figcaption></figcaption></figure>
-
-4. 复制记录密码；
-
-<figure><img src="../../../.gitbook/assets/image (42).png" alt=""><figcaption></figcaption></figure>
-
-5. 获取服务器地址，账户和密码；
-
-<figure><img src="../../../.gitbook/assets/image (43).png" alt=""><figcaption></figcaption></figure>
-
-6. 在 Cherry Studio 设置——数据设置中，填写 WebDAV 信息；
-
-<figure><img src="../../../.gitbook/assets/image (48).png" alt=""><figcaption></figcaption></figure>
-
-7. 选择备份或者恢复数据，并可以设置自动备份的时间周期。
-
-<figure><img src="../../../.gitbook/assets/image (47).png" alt=""><figcaption></figcaption></figure>
-
-{% hint style="success" %}
-WebDAV 服务门槛比较低的一般就是网盘：
-
-* [坚果云](https://www.jianguoyun.com/)
-* [123盘](https://www.123pan.com/)（需要会员）
-* [阿里云盘](https://www.alipan.com/)（需要购买）
-* [Box](https://www.box.com/) (免费空间容量为10GB，单个文件大小限制为250MB。)
-* [Dropbox](https://www.dropbox.com/) （Dropbox免费2GB，可以邀请好友扩容16GB 。）
-* [TeraCloud](https://teracloud.jp/en/) （免费空间为10GB，另外一个通过邀请可以获得5GB额外空间。）
-* [Yandex Disk](https://disk.yandex.com/) (免费用户提供10GB容量。)
-
-其次是一些需要自己部署服务：
-
-* [Alist](https://alist.nn.ci/zh/)
-* [Cloudreve](https://cloudreve.org/)
-* [sharelist](https://github.com/reruin/sharelist)
-{% endhint %}
+- [Notion 配置教程](../../../data-settings/notion.md)
+- [Obsidian 配置教程](../../../data-settings/obsidian.md)
+- [思源笔记配置教程](../../../data-settings/siyuan.md)

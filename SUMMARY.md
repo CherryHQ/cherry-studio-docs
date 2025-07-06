@@ -55,9 +55,12 @@
   * [Tavily 联网登录注册教程](websearch/tavily.md)
   * [SearXNG 本地部署与配置](websearch/searxng.md)
 * [数据设置](data-settings/README.md)
+  * [WebDAV 备份](data-settings/WebDAV.md)
+  * [S3 兼容存储备份](data-settings/s3-compatible.md)
   * [Notion 配置教程](data-settings/notion.md)
   * [Obsidian 配置教程](data-settings/obsidian.md)
   * [思源笔记配置教程](data-settings/siyuan.md)
+  
 * [个性化设置](personalization-settings/README.md)
   * [自定义 CSS](personalization-settings/css.md)
   * [字体推荐](personalization-settings/font.md)
