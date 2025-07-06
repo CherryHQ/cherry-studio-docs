@@ -1,67 +1,33 @@
 ---
 icon: database
 ---
+# データ設定
+
 
 {% hint style="warning" %}
 このドキュメントはAIによって中国語から翻訳されており、まだレビューされていません。
 {% endhint %}
 
-# データ設定
-
-このインターフェースでは、クライアントデータのクラウドおよびローカルバックアップ、ローカルデータディレクトリのクエリ、キャッシュクリアなどの操作が可能です。
 
 
+
+このインターフェースでは、データのローカルおよびクラウドバックアップ・復元、ローカルデータディレクトリの確認・キャッシュクリア、エクスポート設定、サードパーティ接続などの操作が可能です。
 
 ### データバックアップ
 
-現在、データバックアップはWebDAV方式のみをサポートしています。WebDAVに対応したサービスを選択してクラウドバックアップを行えます。
+データバックアップには現在、ローカルバックアップ、WebDAVバックアップ、S3互換ストレージ（オブジェクトストレージ）バックアップの3つの方法をサポートしています。詳細な説明とチュートリアルは以下のドキュメントをご参照ください：
 
-また、`A PC` $$\xrightarrow{\text{バックアップ}}$$ `WebDAV` $$\xrightarrow{\text{復元}}$$ `B PC` の方式でマルチデバイスデータ同期を実現可能です。
+- [WebDAV バックアップチュートリアル](../../../data-settings/WebDAV.md)
+- [S3互換ストレージバックアップ](../../../data-settings/s3-compatible.md)
 
-#### 坚果云の例
+### エクスポート設定
 
-1. 坚果云にログインし、右上のユーザー名をクリックして「アカウント情報」を選択：
+エクスポート設定では、エクスポートメニューに表示されるエクスポートオプションの設定や、Markdownエクスポートのデフォルトパス、表示スタイルなどを設定できます。
 
-<figure><img src="../../../.gitbook/assets/image (39).png" alt=""><figcaption></figcaption></figure>
+### サードパーティ接続
 
-2. 「セキュリティオプション」を選択し、「アプリの追加」をクリック：
+サードパーティ接続では、Cherry Studioとサードパーティアプリケーションを接続し、チャット内容を素早く使い慣れたナレッジ管理アプリにエクスポートすることができます。現在サポートされているアプリケーションは：Notion、Obsidian、思源笔记、语雀、Joplinです。具体的な設定方法は以下のドキュメントをご参照ください：
 
-<figure><img src="../../../.gitbook/assets/image (40).png" alt=""><figcaption></figcaption></figure>
-
-3. アプリ名を入力し、ランダムパスワードを生成：
-
-<figure><img src="../../../.gitbook/assets/image (41).png" alt=""><figcaption></figcaption></figure>
-
-4. パスワードをコピーして保存：
-
-<figure><img src="../../../.gitbook/assets/image (42).png" alt=""><figcaption></figcaption></figure>
-
-5. サーバーアドレス、アカウント、パスワードを取得：
-
-<figure><img src="../../../.gitbook/assets/image (43).png" alt=""><figcaption></figcaption></figure>
-
-6. Cherry Studioの設定→データ設定でWebDAV情報を入力：
-
-<figure><img src="../../../.gitbook/assets/image (48).png" alt=""><figcaption></figcaption></figure>
-
-7. データのバックアップまたは復元を選択し、自動バックアップの周期を設定可能：
-
-<figure><img src="../../../.gitbook/assets/image (47).png" alt=""><figcaption></figcaption></figure>
-
-{% hint style="success" %}
-WebDAVサービスのハードルが比較的低いオンラインストレージサービス：
-
-* [坚果云](https://www.jianguoyun.com/)
-* [123盘](https://www.123pan.com/)（会員制）
-* [阿里云盘](https://www.alipan.com/)（購入必要）
-* [Box](https://www.box.com/) (無料容量10GB，単一ファイル制限250MB)
-* [Dropbox](https://www.dropbox.com/) （無料2GB，招待で最大16GBまで拡張可能）
-* [TeraCloud](https://teracloud.jp/en/) （無料10GB，招待で+5GB拡張可能）
-* [Yandex Disk](https://disk.yandex.com/) (無料ユーザー向け10GB容量)
-
-自己デプロイが必要なサービス：
-
-* [Alist](https://alist.nn.ci/zh/)
-* [Cloudreve](https://cloudreve.org/)
-* [sharelist](https://github.com/reruin/sharelist)
-{% endhint %}
+- [Notion 設定チュートリアル](../../../data-settings/notion.md)
+- [Obsidian 設定チュートリアル](../../../data-settings/obsidian.md)
+- [思源笔记設定チュートリアル](../../../data-settings/siyuan.md)

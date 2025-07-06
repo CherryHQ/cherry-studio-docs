@@ -1,56 +1,33 @@
 ---
 icon: database
 ---
+# Configuración de Datos
+
 
 {% hint style="warning" %}
 Este documento ha sido traducido del chino por IA y aún no ha sido revisado.
 {% endhint %}
 
-# Configuración de Datos
 
-Esta interfaz permite realizar operaciones como copias de seguridad en la nube y locales de datos del cliente, consulta de directorios de datos locales y limpieza de caché.
+
+
+Esta interfaz permite realizar operaciones como copia de seguridad local y en la nube, consulta de directorios de datos locales, limpieza de caché, configuración de exportación y conexión con terceros.
 
 ### Copia de Seguridad de Datos
 
-Actualmente, la copia de seguridad de datos solo admite el método WebDAV. Puedes elegir servicios compatibles con WebDAV para realizar copias de seguridad en la nube.
+Actualmente se admiten tres métodos de copia de seguridad: local, mediante WebDAV y almacenamiento compatible con S3 (almacenamiento de objetos). Consulte los siguientes documentos para obtener información detallada y tutoriales:
 
-También puedes sincronizar datos entre múltiples dispositivos mediante este flujo: `Computadora A` $$\xrightarrow{\text{backup}}$$ `WebDAV` $$\xrightarrow{\text{restaurar}}$$ `Computadora B`.
+- [Tutorial de copia de seguridad con WebDAV](../../../data-settings/WebDAV.md)
+- [Copia de seguridad en almacenamiento compatible con S3](../../../data-settings/s3-compatible.md)
 
-#### Ejemplo con Jianguoyun
+### Configuración de Exportación
 
-1. Inicia sesión en Jianguoyun, haz clic en el nombre de usuario en la esquina superior derecha y selecciona "Información de cuenta":
-<figure><img src="../../../.gitbook/assets/image (39).png" alt=""><figcaption></figcaption></figure>
+La configuración de exportación permite definir las opciones de exportación mostradas en el menú, además de establecer la ruta predeterminada para exportar Markdown, el estilo visual, etc.
 
-2. Selecciona "Opciones de seguridad" y haz clic en "Añadir aplicación":
-<figure><img src="../../../.gitbook/assets/image (40).png" alt=""><figcaption></figcaption></figure>
+### Conexión con Terceros
 
-3. Ingresa el nombre de la aplicación y genera una contraseña aleatoria:
-<figure><img src="../../../.gitbook/assets/image (41).png" alt=""><figcaption></figcaption></figure>
+Esta función configura la conexión entre Cherry Studio y aplicaciones de terceros, permitiendo exportar rápidamente contenidos de conversación a herramientas de gestión de conocimiento. Actualmente se admiten: Notion, Obsidian, SiYuan Notes, Yuque y Joplin. Consulte los tutoriales de configuración en estos documentos:
 
-4. Copia y guarda la contraseña:
-<figure><img src="../../../.gitbook/assets/image (42).png" alt=""><figcaption></figcaption></figure>
-
-5. Obtén la dirección del servidor, cuenta y contraseña:
-<figure><img src="../../../.gitbook/assets/image (43).png" alt=""><figcaption></figcaption></figure>
-
-6. En Cherry Studio Configuración → Configuración de datos, completa la información de WebDAV:
-<figure><img src="../../../.gitbook/assets/image (48).png" alt=""><figcaption></figcaption></figure>
-
-7. Selecciona copia de seguridad o restauración de datos, y configura la periodicidad de copias automáticas:
-<figure><img src="../../../.gitbook/assets/image (47).png" alt=""><figcaption></figcaption></figure>
-
-{% hint style="success" %}
-Servicios WebDAV con bajo umbral de acceso (principalmente almacenamientos en nube):
-* [Jianguoyun](https://www.jianguoyun.com/)
-* [123 Pan](https://www.123pan.com/) (requiere membresía)
-* [Alibaba Cloud Drive](https://www.alipan.com/) (de pago)
-* [Box](https://www.box.com/) (10GB gratis, límite 250MB por archivo)
-* [Dropbox](https://www.dropbox.com/) (2GB gratis, ampliable a 16GB)
-* [TeraCloud](https://teracloud.jp/en/) (10GB gratis + 5GB por invitación)
-* [Yandex Disk](https://disk.yandex.com/) (10GB gratis)
-
-Otras opciones que requieren despliegue propio:
-* [Alist](https://alist.nn.ci/zh/)
-* [Cloudreve](https://cloudreve.org/)
-* [sharelist](https://github.com/reruin/sharelist)
-{% endhint %}
+- [Tutorial de configuración de Notion](../../../data-settings/notion.md)
+- [Tutorial de configuración de Obsidian](../../../data-settings/obsidian.md)
+- [Tutorial de configuración de SiYuan Notes](../../../data-settings/siyuan.md)

@@ -1,57 +1,33 @@
 ---
 icon: database
 ---
+# Configurações de Dados
+
 
 {% hint style="warning" %}
 Este documento foi traduzido do chinês por IA e ainda não foi revisado.
 {% endhint %}
 
-# Configurações de Dados
 
-Esta interface permite operações como backup de dados do cliente em nuvem e local, consulta do diretório de dados local e limpeza de cache.
+
+
+Esta interface permite operações como backup e restauração local/nuvem de dados, consulta de diretórios locais, limpeza de cache, configurações de exportação e conexões de terceiros.
 
 ### Backup de Dados
 
-Atualmente, o backup de dados é suportado apenas através do método WebDAV. Você pode escolher serviços compatíveis com WebDAV para fazer backup na nuvem.
+Atualmente, o backup de dados suporta três métodos: backup local, backup via WebDAV e backup em armazenamento compatível com S3 (armazenamento de objetos). Consulte os documentos abaixo para detalhes e tutoriais:
 
-Também é possível sincronizar dados em múltiplos dispositivos usando o método:  
-`Computador A` $$\xrightarrow{\text{backup}}$$ `WebDAV` $$\xrightarrow{\text{restauração}}$$ `Computador B`.
+- [Tutorial de Backup WebDAV](../../../data-settings/WebDAV.md)
+- [Backup em Armazenamento Compatível com S3](../../../data-settings/s3-compatible.md)
 
-#### Exemplo usando Nutstore
+### Configurações de Exportação
 
-1. Faça login no Nutstore, clique no nome de usuário no canto superior direito e selecione "Informações da conta":
-<figure><img src="../../../.gitbook/assets/image (39).png" alt=""><figcaption></figcaption></figure>
+As configurações de exportação permitem personalizar as opções de exportação exibidas no menu, além de definir o caminho padrão para exportação Markdown, estilos de exibição, etc.
 
-2. Selecione "Opções de segurança" e clique em "Adicionar aplicativo":
-<figure><img src="../../../.gitbook/assets/image (40).png" alt=""><figcaption></figcaption></figure>
+### Conexões de Terceiros
 
-3. Insira o nome do aplicativo e gere uma senha aleatória:
-<figure><img src="../../../.gitbook/assets/image (41).png" alt=""><figcaption></figcaption></figure>
+As conexões de terceiros permitem configurar a integração do Cherry Studio com aplicativos externos para exportação rápida de conversas para suas ferramentas de gestão de conhecimento. Os aplicativos atualmente suportados são: Notion, Obsidian, SiYuan Notes, YuQue e Joplin. Consulte os tutoriais de configuração abaixo:
 
-4. Copie e registre a senha:
-<figure><img src="../../../.gitbook/assets/image (42).png" alt=""><figcaption></figcaption></figure>
-
-5. Obtenha o endereço do servidor, nome de usuário e senha:
-<figure><img src="../../../.gitbook/assets/image (43).png" alt=""><figcaption></figcaption></figure>
-
-6. No Cherry Studio Configurações > Configurações de Dados, preencha as informações WebDAV:
-<figure><img src="../../../.gitbook/assets/image (48).png" alt=""><figcaption></figcaption></figure>
-
-7. Selecione fazer backup ou restaurar dados e configure o intervalo de backup automático:
-<figure><img src="../../../.gitbook/assets/image (47).png" alt=""><figcaption></figcaption></figure>
-
-{% hint style="success" %}
-Serviços WebDAV com baixo limite de acesso geralmente são serviços de armazenamento em nuvem:
-* [Nutstore](https://www.jianguoyun.com/)
-* [123Pan](https://www.123pan.com/) (requer assinatura)
-* [AliPan](https://www.alipan.com/) (requer compra)
-* [Box](https://www.box.com/) (espaço gratuito de 10GB, limite de 250MB por arquivo)
-* [Dropbox](https://www.dropbox.com/) (2GB gratuito, ampliável para 16GB com convites)
-* [TeraCloud](https://teracloud.jp/en/) (10GB gratuito, +5GB com convites)
-* [Yandex Disk](https://disk.yandex.com/) (10GB gratuito)
-
-Serviços que exigem autoimplatação:
-* [Alist](https://alist.nn.ci/zh/)
-* [Cloudreve](https://cloudreve.org/)
-* [Sharelist](https://github.com/reruin/sharelist)
-{% endhint %}
+- [Tutorial de Configuração do Notion](../../../data-settings/notion.md)
+- [Tutorial de Configuração do Obsidian](../../../data-settings/obsidian.md)
+- [Tutorial de Configuração do SiYuan Notes](../../../data-settings/siyuan.md)
