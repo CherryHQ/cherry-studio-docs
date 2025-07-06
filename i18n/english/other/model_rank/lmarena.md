@@ -1,4 +1,4 @@
-# LLM Arena Leaderboard (Real-time Update)
+# LLM Arena Leaderboard (Live Update)
 
 
 {% hint style="warning" %}
@@ -10,10 +10,10 @@ This document was translated from Chinese by AI and has not yet been reviewed.
 
 This is a leaderboard based on Chatbot Arena (lmarena.ai) data, generated through an automated process.
 
-> **Data Update Time**: 2025-07-05 11:40:47 UTC / 2025-07-05 19:40:47 CST (Beijing Time)
+> **Data Update Time**: 2025-07-06 11:41:11 UTC / 2025-07-06 19:41:11 CST (Beijing Time)
 
 {% hint style="info" %}
-Click the **model name** in the leaderboard to jump to its detailed information or trial page.
+Click the **Model Name** in the leaderboard to jump to its detailed information or trial page.
 {% endhint %}
 
 ## Leaderboard
@@ -105,7 +105,7 @@ Click the **model name** in the leaderboard to jump to its detailed information 
 | 76        | 55               | [Claude 3 Opus](https://www.anthropic.com/news/claude-3-family)                                                             | 1265  | +2/-1               | 202,641 | Anthropic              | Proprietary             | 2023/8                |
 | 76        | 84               | [Amazon Nova Pro 1.0](https://docs.aws.amazon.com/nova/latest/userguide/what-is-nova.html)                                  | 1262  | +4/-3               | 26,371  | Amazon                 | Proprietary             | No data available     |
 | 78        | 61               | [GPT-4-0125-preview](https://openai.com/blog/new-models-and-developer-products-announced-at-devday)                         | 1262  | +2/-2               | 97,079  | OpenAI                 | Proprietary             | 2023/12               |
-| 83        | 56               | [Claude 3.5 Haiku (20241022)](https://www.anthropic.com/news/3-5-models-and-computer-use)                                   | 1257  | +3/-2               | 48,556  | Anthropic              | Propretary              | No data available     |
+| 83        | 56               | [Claude 3.5 Haiku (20241022)](https://www.anthropic.com/news/3-5-models-and-computer-use)                                   | 1257  | +3/-2               | 48,556  | Anthropic              | Proprietary             | No data available     |
 | 83        | 82               | [Reka-Core-20240904](https://docs.reka.ai/available-models)                                                                 | 1253  | +7/-4               | 7,948   | Reka AI                | Proprietary             | No data available     |
 | 88        | 85               | [Gemini-1.5-Flash-001](https://aistudio.google.com/app/prompts/new_chat?model=gemini-1.5-flash)                             | 1244  | +2/-2               | 65,661  | Google                 | Proprietary             | 2023/11               |
 | 88        | 84               | [Jamba-1.5-Large](https://www.ai21.com/jamba)                                                                               | 1239  | +6/-4               | 9,125   | AI21 Labs              | Jamba Open              | 2024/3                |
@@ -231,15 +231,15 @@ Click the **model name** in the leaderboard to jump to its detailed information 
 
 ## Explanation
 
--   **Rank (UB)**: Ranking based on the Bradley-Terry model. This rank reflects the overall performance of the model in the arena and provides an **upper bound** estimate of its Elo score, helping to understand the model's potential competitiveness.
--   **Rank (StyleCtrl)**: Ranking after controlling for dialogue style. This rank aims to reduce preference bias caused by model response styles (e.g., verbose, concise), more purely evaluating the model's core capabilities.
--   **Model Name**: The name of the Large Language Model (LLM). This column embeds relevant links to the models; click to navigate.
--   **Score**: The Elo rating obtained by the model through user votes in the arena. The Elo rating is a relative ranking system, where a higher score indicates better model performance. This score is dynamic, reflecting the model's relative strength in the current competitive environment.
--   **Confidence Interval**: The 95% confidence interval of the model's Elo score (e.g., `+6/-6`). A smaller interval indicates more stable and reliable model scores; conversely, a larger interval might indicate insufficient data or significant fluctuations in model performance. It provides a quantitative assessment of score accuracy.
+-   **Rank (UB)**: Rank calculated based on the Bradley-Terry model. This rank reflects the overall performance of the model in the arena and provides an **upper bound** estimate of its Elo score, helping to understand the model's potential competitiveness.
+-   **Rank (StyleCtrl)**: Rank after controlling for conversation style. This rank aims to reduce preference bias caused by the model's response style (e.g., verbose, concise), more purely evaluating the model's core capabilities.
+-   **Model Name**: The name of the Large Language Model (LLM). This column has embedded links related to the models, which can be clicked to jump.
+-   **Score**: The Elo rating obtained by the model in the arena through user votes. The Elo rating is a relative ranking system, where a higher score indicates better model performance. This score is dynamic, reflecting the model's relative strength in the current competitive environment.
+-   **Confidence Interval**: The 95% confidence interval of the model's Elo rating (e.g., `+6/-6`). A smaller interval indicates a more stable and reliable score for the model; conversely, a larger interval may mean insufficient data or greater fluctuation in model performance. It provides a quantitative evaluation of score accuracy.
 -   **Votes**: The total number of votes received by the model in the arena. More votes generally mean higher statistical reliability of its score.
 -   **Provider**: The organization or company providing the model.
--   **License**: The type of license agreement for the model, such as Proprietary, Apache 2.0, MIT, etc.
--   **Knowledge Cutoff Date**: The knowledge cutoff date of the model's training data. **No data available** means the relevant information is not provided or unknown.
+-   **License**: The license type of the model, such as Proprietary, Apache 2.0, MIT, etc.
+-   **Knowledge Cutoff Date**: The knowledge cutoff date of the model's training data. **No data available** indicates that the relevant information is not provided or is unknown.
 
 ## Data Source and Update Frequency
 
@@ -247,4 +247,4 @@ This leaderboard data is automatically generated and provided by the [fboulnois/
 
 ## Disclaimer
 
-This report is for reference only. Leaderboard data is dynamic and based on user preference votes on Chatbot Arena within a specific period. The completeness and accuracy of the data depend on the updates and processing of the upstream data source and the `fboulnois/llm-leaderboard-csv` project. Different models may use different license agreements; please refer to the official documentation of the model provider for usage.
+This report is for reference only. Leaderboard data is dynamic and based on user preference votes on Chatbot Arena during a specific period. The completeness and accuracy of the data depend on the updates and processing of the upstream data sources and the `fboulnois/llm-leaderboard-csv` project. Different models may use different license agreements; please refer to the official documentation of the model provider when using them.

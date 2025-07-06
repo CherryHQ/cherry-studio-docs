@@ -8,9 +8,9 @@
 
 
 
-這是一個基於 Chatbot Arena (lmarena.ai) 資料的排行榜，透過自動化流程產生。
+這是一個基於 Chatbot Arena (lmarena.ai) 資料的排行榜，透過自動化流程生成。
 
-> **資料更新時間**: 2025-07-05 11:40:47 UTC / 2025-07-05 19:40:47 CST (北京時間)
+> **資料更新時間**: 2025-07-06 11:41:11 UTC / 2025-07-06 19:41:11 CST (北京時間)
 
 {% hint style="info" %}
 點擊排行榜中的 **模型名稱** 可跳轉至其詳細資訊或試用頁面。
@@ -243,7 +243,7 @@
 
 ## 資料來源與更新頻率
 
-本排行榜資料由 [fboulnois/llm-leaderboard-csv](https://github.com/fboulnois/llm-leaderboard-csv) 專案自動產生並提供，該專案從 [lmarena.ai](https://lmarena.ai/) 獲取並處理資料。此排行榜由 GitHub Actions 每天自動更新。
+本排行榜資料由 [fboulnois/llm-leaderboard-csv](https://github.com/fboulnois/llm-leaderboard-csv) 專案自動生成並提供，該專案從 [lmarena.ai](https://lmarena.ai/) 獲取並處理資料。此排行榜由 GitHub Actions 每天自動更新。
 
 ## 免責聲明
 
