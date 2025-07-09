@@ -173,7 +173,7 @@ You are a professional document translation assistant specialized in GitHub cont
 5.  **Maintain GitBook-style hint block structure:** Content within `{% hint style="warning" %}` and `{% endhint %}` tags needs to be translated, but the tags themselves must remain unchanged.
 6.  **Keep Frontmatter (YAML header) content unchanged:** For example, the `--- icon: cherries ---` section should not be translated or modified.
 7.  **Do not add any extra explanations, prefaces, postscripts, or summaries.** Return only the translated document content.
-8.  **For table of contents files (e.g., SUMMARY.md), translate only the title names, keeping links unchanged.**
+8.  **For the table of contents file (SUMMARY.md), translate only the title names, keeping links unchanged.** If the document content starts with `# Table of contents` followed by `## Cherry Studio`, treat it as a table of contents file. For such files, translate only the title names, keeping links unchanged, and specifically ensure that `# Table of contents` and `## Cherry Studio` are NOT translated.
 9.  **Preserve all GitHub-specific terminology** (e.g., pull request, fork, commit, repository) in its original form.
 10. **Preserve all URLs, file paths, and version numbers** exactly as in the original.
 11. **Maintain the original document structure and paragraph breaks.**
@@ -488,8 +488,8 @@ def process_markdown_file(source_path, target_lang_code):
             final_content += "---\n"
         
         # 将警告语插入到大标题与正文之间，而不是icon和大标题之间
-        # 检查文件路径是否在 .gitbook/includes/ 目录下，如果是则不添加警告语
-        if ".gitbook/includes/" not in str(source_path):
+        # 检查文件路径是否在 .gitbook/includes/ 目录下或是否为 SUMMARY.md，如果是则不添加警告语
+        if ".gitbook/includes/" not in str(source_path) and source_path != Path('SUMMARY.md'):
             # 定义一个函数，用于在匹配到的标题后插入警告语
             def insert_warning_after_heading(match):
                 return match.group(0) + "\n\n" + warning_hint + "\n\n"
@@ -507,7 +507,7 @@ def process_markdown_file(source_path, target_lang_code):
                 # 如果找到了标题并成功插入，则使用处理后的内容
                 final_content += processed_markdown_content
         else:
-            # 如果是 .gitbook/includes/ 目录下的文件，不添加警告语
+            # 如果是 .gitbook/includes/ 目录下的文件或 SUMMARY.md，不添加警告语
             final_content += translated_markdown_content
 
         # 检查文件是否实际有变化，避免不必要的Git提交
