@@ -1,4 +1,4 @@
-# LLM Arena リーダーボード (リアルタイム更新)
+# LLM Arena ランキング (リアルタイム更新)
 
 
 {% hint style="warning" %}
@@ -8,17 +8,18 @@
 
 
 
-これは Chatbot Arena (lmarena.ai) のデータに基づくリーダーボードで、自動化プロセスによって生成されています。
+{% hint style="info" %}
+これはChatbot Arena (lmarena.ai) のデータに基づく自動生成ランキングです。
 
-> **データ更新日時**: 2025-07-09 11:44:37 UTC / 2025-07-09 19:44:37 CST (北京時間)
+> **データ最終更新日時**: 2025-07-10 11:43:19 UTC / 2025-07-10 19:43:19 CST (北京時間)
 
 {% hint style="info" %}
-リーダーボードの **モデル名** をクリックすると、詳細情報または試用ページに遷移します。
+ランキング内の**モデル名**をクリックすると詳細情報やデモページに移動します。
 {% endhint %}
 
-## リーダーボード
+## ランキング
 
-| 順位(UB) | 順位(StyleCtrl) | モデル名                                                                                                                         | スコア | 信頼区間    | 投票数      | プロバイダー                    | ライセンス                    | ナレッジカットオフ   |
+|   順位(UB) |   順位(StyleCtrl) | モデル名                                                                                                                         |   スコア | 信頼区間    | 投票数      | プロバイダー                    | ライセンス                    | ナレッジカットオフ   |
 |:---|:---|:---|:---|:---|:---|:---|:---|:---|
 |        1 |               1 | [Gemini-2.5-Pro](http://aistudio.google.com/app/prompts/new_chat?model=gemini-2.5-pro)                                      | 1477 | +5/-5   | 15,769  | Google                 | Proprietary             | データなし     |
 |        2 |               2 | [Gemini-2.5-Pro-Preview-05-06](http://aistudio.google.com/app/prompts/new_chat?model=gemini-2.5-pro-preview-05-06)          | 1446 | +4/-5   | 13,997  | Google                 | Proprietary             | データなし     |
@@ -38,7 +39,7 @@
 |       14 |              19 | [Mistral Medium 3](https://mistral.ai/news/mistral-medium-3)                                                                | 1370 | +4/-4   | 19,980  | Mistral                | Proprietary             | データなし     |
 |       14 |               6 | [Claude Opus 4 (20250514)](https://www.anthropic.com/news/claude-4)                                                         | 1370 | +4/-4   | 20,056  | Anthropic              | Proprietary             | データなし     |
 |       15 |              23 | [Qwen3-235B-A22B](https://qwenlm.github.io/blog/qwen3/)                                                                     | 1367 | +4/-4   | 14,597  | Alibaba                | Apache 2.0              | データなし     |
-|       16 |              11 | [o1-2024-12-17](https://openai.com/index/o1-and-new-tools-for-developers/)                                                  | 1366 | +2/-3   | 29,038  | OpenAI                 | Proprietary             | データなし     |
+|       16 |              11 | [o1-2024-12-17](https://openai.com/index/o1-and-new-tools-for-developers/)                                                  | 1366 | +2/-3   | 29,038  | OpenAI                 | Proprietary             | 2023/10  |
 |       16 |              11 | [o4-mini-2025-04-16](https://openai.com/index/introducing-o3-and-o4-mini/)                                                  | 1363 | +4/-4   | 17,974  | OpenAI                 | Proprietary             | データなし     |
 |       17 |              23 | [Qwen2.5-Max](https://qwenlm.github.io/blog/qwen2.5-max/)                                                                   | 1363 | +3/-3   | 32,074  | Alibaba                | Proprietary             | データなし     |
 |       18 |              25 | [Gemini-2.0-Flash-001](https://aistudio.google.com/app/prompts/new_chat?instructions=lmsys-1121&model=gemini-2.0-flash-001) | 1363 | +3/-3   | 36,915  | Google                 | Proprietary             | データなし     |
@@ -67,14 +68,14 @@
 |       35 |              32 | [o3-mini](https://openai.com/index/openai-o3-mini/)                                                                         | 1319 | +3/-3   | 36,971  | OpenAI                 | Proprietary             | データなし     |
 |       38 |              32 | [Gemini-1.5-Pro-002](https://aistudio.google.com/app/prompts/new_chat?instructions=lmsys&model=gemini-1.5-pro-002)          | 1318 | +2/-2   | 58,645  | Google                 | Proprietary             | データなし     |
 |       38 |              33 | [Hunyuan-Turbo-0110](https://cloud.tencent.com/document/product/1729/104753)                                                | 1312 | +8/-10  | 2,510   | Tencent                | Proprietary             | データなし     |
-|       41 |              18 | [Claude 3.7 Sonnet (thinking-32k)](https://www.anthropic.com/news/claude-3-7-sonnet)                                        | 1313 | +4/-4   | 25,955  | Anthropic              | Proprietary             | データなし     |
+|       41 |              18 | [Claude Opus 3.7 (thinking-32k)](https://www.anthropic.com/news/claude-3-7-sonnet)                                        | 1313 | +4/-4   | 25,955  | Anthropic              | Proprietary             | データなし     |
 |       43 |              58 | [Gemma-3n-e4b-it](http://aistudio.google.com/app/prompts/new_chat?model=gemma-3n-e4b-it)                                    | 1307 | +7/-8   | 7,379   | Google                 | Gemma                   | データなし     |
-|       44 |              21 | [Claude 3.7 Sonnet](https://www.anthropic.com/news/claude-3-7-sonnet)                                                       | 1306 | +4/-3   | 30,677  | Anthropic              | Proprietary             | データなし     |
+|       44 |              21 | [Claude Sonnet 3.7](https://www.anthropic.com/news/claude-3-7-sonnet)                                                       | 1306 | +4/-3   | 30,677  | Anthropic              | Proprietary             | データなし     |
 |       47 |              48 | [Grok-2-08-13](https://x.ai/blog/grok-2)                                                                                    | 1304 | +2/-2   | 67,084  | xAI                    | Proprietary             | 2024/3   |
 |       47 |              50 | [Yi-Lightning](https://platform.lingyiwanwu.com/docs#%E6%A8%A1%E5%9E%8B%E4%B8%8E%E8%AE%A1%E8%B4%B9)                         | 1303 | +4/-3   | 28,968  | 01 AI                  | Proprietary             | データなし     |
 |       48 |              35 | [GPT-4o-2024-05-13](https://openai.com/index/hello-gpt-4o/)                                                                 | 1301 | +2/-2   | 117,747 | OpenAI                 | Proprietary             | 2023/10  |
 |       48 |              63 | [Qwen2.5-plus-1127](https://help.aliyun.com/zh/model-studio/getting-started/models?spm=a2c4g.11186623.0.i7)                 | 1298 | +4/-6   | 10,715  | Alibaba                | Proprietary             | データなし     |
-|       50 |              25 | [Claude 3.5 Sonnet (20241022)](https://www.anthropic.com/news/3-5-models-and-computer-use)                                  | 1299 | +2/-2   | 77,905  | Anthropic              | Proprietary             | 2024/4   |
+|       50 |              25 | [Claude Sonnet 3.5 (20241022)](https://www.anthropic.com/news/3-5-models-and-computer-use)                                  | 1299 | +2/-2   | 77,905  | Anthropic              | Proprietary             | 2024/4   |
 |       50 |              55 | [Deepseek-v2.5-1210](https://huggingface.co/deepseek-ai/DeepSeek-V2.5-1210)                                                 | 1295 | +6/-6   | 7,243   | DeepSeek               | DeepSeek                | データなし     |
 |       52 |              74 | [Gemma-3-4B-it](http://aistudio.google.com/app/prompts/new_chat?model=gemma-3-4b-it)                                        | 1292 | +8/-9   | 4,321   | Google                 | Gemma                   | データなし     |
 |       55 |              43 | [Llama-4-Maverick-17B-128E-Instruct](https://huggingface.co/meta-llama/Llama-4-Maverick-17B-128E-Instruct)                  | 1292 | +4/-4   | 18,010  | Meta                   | Llama 4                 | データなし     |
@@ -86,7 +87,7 @@
 |       56 |              79 | [Llama-3.1-Nemotron-70B-Instruct](https://huggingface.co/nvidia/Llama-3.1-Nemotron-70B-Instruct)                            | 1284 | +5/-7   | 7,577   | Nvidia                 | Llama 3.1               | 2023/12  |
 |       57 |              61 | [GPT-4o-mini-2024-07-18](https://openai.com/index/gpt-4o-mini-advancing-cost-efficient-intelligence/)                       | 1288 | +2/-2   | 72,473  | OpenAI                 | Proprietary             | 2023/10  |
 |       59 |              41 | [Meta-Llama-3.1-405B-Instruct-bf16](https://ai.meta.com/blog/meta-llama-3-1/)                                               | 1285 | +2/-3   | 43,788  | Meta                   | Llama 3.1 Community     | 2023/12  |
-|       60 |              36 | [Claude 3.5 Sonnet (20240620)](https://www.anthropic.com/news/claude-3-5-sonnet)                                            | 1284 | +2/-2   | 86,159  | Anthropic              | Proprietary             | 2024/4   |
+|       60 |              36 | [Claude Sonnet 3.5 (20240620)](https://www.anthropic.com/news/claude-3-5-sonnet)                                            | 1284 | +2/-2   | 86,159  | Anthropic              | Proprietary             | 2024/4   |
 |       60 |              42 | [Meta-Llama-3.1-405B-Instruct-fp8](https://ai.meta.com/blog/meta-llama-3-1/)                                                | 1283 | +2/-2   | 63,038  | Meta                   | Llama 3.1 Community     | 2023/12  |
 |       61 |              41 | [Gemini Advanced App (2024-05-14)](https://gemini.google.com/advanced)                                                      | 1282 | +3/-2   | 52,144  | Google                 | Proprietary             | Online   |
 |       61 |              60 | [Hunyuan-Standard-2025-02-10](https://cloud.tencent.com/document/product/1729/104753)                                       | 1277 | +8/-10  | 4,014   | Tencent                | Proprietary             | データなし     |
@@ -107,10 +108,10 @@
 |       79 |              79 | [Mistral-Large-2411](https://huggingface.co/mistralai/Mistral-Large-Instruct-2411)                                          | 1265 | +3/-3   | 29,633  | Mistral                | MRL                     | データなし     |
 |       79 |              62 | [magistral-medium-2506](https://mistral.ai/news/magistral)                                                                  | 1258 | +9/-8   | 4,287   | Mistral                | Proprietary             | データなし     |
 |       80 |              86 | [Meta-Llama-3.1-70B-Instruct](https://ai.meta.com/blog/meta-llama-3-1/)                                                     | 1264 | +2/-2   | 58,637  | Meta                   | Llama 3.1 Community     | 2023/12  |
-|       81 |              58 | [Claude 3 Opus](https://www.anthropic.com/news/claude-3-family)                                                             | 1263 | +2/-1   | 202,641 | Anthropic              | Proprietary             | 2023/8   |
+|       81 |              58 | [Claude Opus 3](https://www.anthropic.com/news/claude-3-family)                                                             | 1263 | +2/-1   | 202,641 | Anthropic              | Proprietary             | 2023/8   |
 |       83 |              87 | [Amazon Nova Pro 1.0](https://docs.aws.amazon.com/nova/latest/userguide/what-is-nova.html)                                  | 1261 | +3/-3   | 26,371  | Amazon                 | Proprietary             | データなし     |
 |       83 |              65 | [GPT-4-0125-preview](https://openai.com/blog/new-models-and-developer-products-announced-at-devday)                         | 1261 | +2/-2   | 97,079  | OpenAI                 | Proprietary             | 2023/12  |
-|       89 |              60 | [Claude 3.5 Haiku (20241022)](https://www.anthropic.com/news/3-5-models-and-computer-use)                                   | 1254 | +2/-2   | 49,399  | Anthropic              | Propretary              | データなし     |
+|       89 |              60 | [Claude Haiku 3.5 (20241022)](https://www.anthropic.com/news/3-5-models-and-computer-use)                                   | 1254 | +2/-2   | 49,399  | Anthropic              | Propretary              | データなし     |
 |       89 |              86 | [Reka-Core-20240904](https://docs.reka.ai/available-models)                                                                 | 1251 | +6/-7   | 7,948   | Reka AI                | Proprietary             | データなし     |
 |       89 |              88 | [Hunyuan-Large-Vision](https://cloud.tencent.com/document/product/1729/104753#d6cb04da-053d-4bed-b187-191514feb972)         | 1246 | +7/-10  | 4,210   | Tencent                | Proprietary             | データなし     |
 |       92 |              90 | [Gemini-1.5-Flash-001](https://aistudio.google.com/app/prompts/new_chat?model=gemini-1.5-flash)                             | 1243 | +2/-2   | 65,661  | Google                 | Proprietary             | 2023/11  |
@@ -127,21 +128,21 @@
 |       99 |             105 | [Aya-Expanse-32B](https://huggingface.co/CohereForAI/aya-expanse-32b)                                                       | 1225 | +3/-3   | 28,768  | Cohere                 | CC-BY-NC-4.0            | データなし     |
 |       99 |              96 | [Nemotron-4-340B-Instruct](https://huggingface.co/nvidia/Nemotron-4-340B-Instruct)                                          | 1225 | +3/-4   | 20,608  | Nvidia                 | NVIDIA Open Model       | 2023/6   |
 |       99 |              99 | [GLM-4-0520](https://open.bigmodel.cn/dev/api#language)                                                                     | 1222 | +5/-5   | 10,221  | Zhipu AI               | Proprietary             | データなし     |
-|      101 |              96 | [Reka-Flash-20240904](https://docs.reka.ai/available-models)                                                                | 1221 | +5/-5   | 8,132   | Reka AI                | Proprietary             | データなし     |
+|      101 |              96 | [Reka-Flash-21B](https://docs.reka.ai/available-models)                                                                | 1221 | +5/-5   | 8,132   | Reka AI                | Proprietary             | 2023/11  |
 |      102 |             110 | [Phi-4](https://huggingface.co/microsoft/phi-4)                                                                             | 1221 | +4/-4   | 25,213  | Microsoft              | MIT                     | データなし     |
 |      103 |              97 | [Llama-3-70B-Instruct](https://llama.meta.com/llama3/)                                                                      | 1222 | +2/-1   | 163,629 | Meta                   | Llama 3 Community       | 2023/12  |
-|      106 |              96 | [Claude 3 Sonnet](https://www.anthropic.com/news/claude-3-family)                                                           | 1217 | +2/-2   | 113,067 | Anthropic              | Proprietary             | 2023/8   |
+|      106 |              96 | [Claude Sonnet 3](https://www.anthropic.com/news/claude-3-family)                                                           | 1217 | +2/-2   | 113,067 | Anthropic              | Proprietary             | 2023/8   |
 |      109 |             119 | [Amazon Nova Micro 1.0](https://docs.aws.amazon.com/nova/latest/userguide/what-is-nova.html)                                | 1214 | +3/-3   | 20,654  | Amazon                 | Proprietary             | データなし     |
 |      111 |             120 | [Hunyuan-Standard-256K](https://cloud.tencent.com/document/product/1729/104753)                                             | 1205 | +10/-10 | 2,901   | Tencent                | Proprietary             | データなし     |
 |      112 |             121 | [Llama-3.1-Tulu-3-8B](https://huggingface.co/allenai/Llama-3.1-Tulu-3-8B)                                                   | 1201 | +10/-9  | 3,074   | Ai2                    | Llama 3.1               | データなし     |
-|      113 |             109 | [Gemma-2-9B-it](https://aistudio.google.com/app/prompts/new_chat?model=gemma-2-9b-it)                                       | 1208 | +2/-2   | 57,197  | Google                 | Gemma license           | 2024/6   |
+|      113 |             109 | [Gemma-1.1-7B-it](https://huggingface.co/google/gemma-1.1-7b-it)                                                            | 1208 | +2/-2   | 57,197  | Google                 | Gemma license           | 2024/2   |
 |      113 |             106 | [Command R+ (04-2024)](https://txt.cohere.com/command-r-plus-microsoft-azure/)                                              | 1206 | +2/-2   | 80,846  | Cohere                 | CC-BY-NC-4.0            | 2024/3   |
 |      114 |             109 | [Qwen2-72B-Instruct](https://qwenlm.github.io/blog/qwen2/)                                                                  | 1203 | +3/-2   | 38,872  | Alibaba                | Qianwen LICENSE         | 2024/6   |
 |      114 |              92 | [GPT-4-0314](https://openai.com/research/gpt-4)                                                                             | 1202 | +2/-3   | 55,962  | OpenAI                 | Proprietary             | 2021/9   |
 |      114 |             119 | [Ministral-8B-2410](https://huggingface.co/mistralai/Ministral-8B-Instruct-2410)                                            | 1198 | +7/-6   | 5,111   | Mistral                | MRL                     | データなし     |
 |      115 |             121 | [Aya-Expanse-8B](https://huggingface.co/CohereForAI/aya-expanse-8b)                                                         | 1196 | +7/-4   | 10,391  | Cohere                 | CC-BY-NC-4.0            | データなし     |
 |      116 |             110 | [Command R (08-2024)](https://docs.cohere.com/docs/command-r-plus#model-details)                                            | 1196 | +4/-5   | 10,851  | Cohere                 | CC-BY-NC-4.0            | 2024/8   |
-|      117 |             111 | [Claude 3 Haiku](https://www.anthropic.com/news/claude-3-family)                                                            | 1195 | +2/-2   | 122,309 | Anthropic              | Proprietary             | 2023/8   |
+|      117 |             111 | [Claude Haiku 3](https://www.anthropic.com/news/claude-3-family)                                                            | 1195 | +2/-2   | 122,309 | Anthropic              | Proprietary             | 2023/8   |
 |      117 |             105 | [DeepSeek-Coder-V2-Instruct](https://huggingface.co/deepseek-ai/DeepSeek-Coder-V2-Instruct)                                 | 1194 | +4/-4   | 15,753  | DeepSeek AI            | DeepSeek License        | 2024/6   |
 |      117 |             120 | [Jamba-1.5-Mini](https://www.ai21.com/jamba)                                                                                | 1192 | +5/-5   | 9,274   | AI21 Labs              | Jamba Open              | 2024/3   |
 |      118 |             136 | [Meta-Llama-3.1-8B-Instruct](https://ai.meta.com/blog/meta-llama-3-1/)                                                      | 1192 | +2/-2   | 52,578  | Meta                   | Llama 3.1 Community     | 2023/12  |
@@ -164,7 +165,7 @@
 |      140 |             134 | [Zephyr-ORPO-141b-A35b-v0.1](https://huggingface.co/HuggingFaceH4/zephyr-orpo-141b-A35b-v0.1)                               | 1143 | +8/-7   | 4,854   | HuggingFace            | Apache 2.0              | 2024/4   |
 |      141 |             137 | [Qwen1.5-32B-Chat](https://qwenlm.github.io/blog/qwen1.5-32b/)                                                              | 1141 | +3/-4   | 22,765  | Alibaba                | Qianwen LICENSE         | 2024/2   |
 |      141 |             145 | [Granite-3.1-2B-Instruct](https://huggingface.co/ibm-granite/granite-3.1-2b-instruct)                                       | 1135 | +8/-10  | 3,380   | IBM                    | Apache 2.0              | データなし     |
-|      142 |             143 | [Phi-3-Medium-4k-Instruct](https://huggingface.co/microsoft/Phi-3-medium-4k-instruct)                                       | 1139 | +4/-3   | 26,105  | Microsoft              | MIT                     | 2023/10  |
+|      142 |             143 | [Phi-3-Medium-4k-Instruct-June-24](https://huggingface.co/microsoft/Phi-3-mini-4k-instruct)                                   | 1139 | +4/-3   | 26,105  | Microsoft              | MIT                     | 2023/10  |
 |      142 |             154 | [Starling-LM-7B-beta](https://huggingface.co/Nexusflow/Starling-LM-7B-beta)                                                 | 1135 | +3/-5   | 16,676  | Nexusflow              | Apache-2.0              | 2024/3   |
 |      145 |             143 | [Mixtral-8x7B-Instruct-v0.1](https://mistral.ai/news/mixtral-of-experts/)                                                   | 1130 | +2/-2   | 76,126  | Mistral                | Apache 2.0              | 2023/12  |
 |      145 |             149 | [Yi-34B-Chat](https://huggingface.co/01-ai/Yi-34B-Chat)                                                                     | 1127 | +4/-6   | 15,917  | 01 AI                  | Yi License              | 2023/6   |
@@ -196,9 +197,9 @@
 |      165 |             145 | [GPT-3.5-Turbo-1106](https://platform.openai.com/docs/models/gpt-3-5)                                                       | 1083 | +4/-4   | 17,036  | OpenAI                 | Proprietary             | 2021/9   |
 |      166 |             168 | [SOLAR-10.7B-Instruct-v1.0](https://huggingface.co/upstage/SOLAR-10.7B-Instruct-v1.0)                                       | 1078 | +9/-9   | 4,286   | Upstage AI             | CC-BY-NC-4.0            | 2023/11  |
 |      167 |             173 | [Phi-3-Mini-4k-Instruct](https://huggingface.co/microsoft/Phi-3-mini-4k-instruct)                                           | 1082 | +3/-4   | 21,097  | Microsoft              | MIT                     | 2023/10  |
-|      169 |             174 | [Llama-2-13b-chat](https://huggingface.co/meta-llama/Llama-2-13b-chat-hf)                                                   | 1079 | +4/-4   | 19,722  | Meta                   | Llama 2 Community       | 2023/7   |
+|      169 |             174 | [Llama-2-13b-chat](https://huggingface.co/meta-llama/Llama-2-13b-chat-hf)                                                    | 1079 | +4/-4   | 19,722  | Meta                   | Llama 2 Community       | 2023/7   |
 |      172 |             169 | [WizardLM-13b-v1.2](https://huggingface.co/WizardLM/WizardLM-13B-V1.2)                                                      | 1075 | +7/-7   | 7,176   | Microsoft              | Llama 2 Community       | 2023/7   |
-|      175 |             179 | [Meta-Llama-3.2-1B-Instruct](https://ai.meta.com/blog/llama-3-2-connect-2024-vision-edge-mobile-devices/)                   | 1070 | +7/-6   | 8,523   | Meta                   | Llama 3.2               | 2023/12  |
+|      175 |             179 | [Meta-Llama-3.2-1B-Instruct](https://ai.meta.com/blog/llama-3-2-connect-2024-vision-edge-mobile-devices/)                    | 1070 | +7/-6   | 8,523   | Meta                   | Llama 3.2               | 2023/12  |
 |      176 |             178 | [Zephyr-7B-beta](https://huggingface.co/HuggingFaceH4/zephyr-7b-beta)                                                       | 1069 | +6/-4   | 11,321  | HuggingFace            | MIT                     | 2023/10  |
 |      176 |             172 | [SmolLM2-1.7B-Instruct](https://huggingface.co/HuggingFaceTB/SmolLM2-1.7B-Instruct)                                         | 1062 | +11/-11 | 2,375   | HuggingFace            | Apache 2.0              | データなし     |
 |      176 |             169 | [MPT-30B-chat](https://huggingface.co/mosaicml/mpt-30b-chat)                                                                | 1061 | +11/-12 | 2,644   | MosaicML               | CC-BY-NC-SA-4.0         | 2023/6   |
@@ -231,25 +232,4 @@
 |      208 |             209 | [ChatGLM-6B](https://huggingface.co/THUDM/chatglm-6b)                                                                       |  895 | +8/-10  | 4,983   | Tsinghua               | Non-commercial          | 2023/3   |
 |      209 |             209 | [FastChat-T5-3B](https://huggingface.co/lmsys/fastchat-t5-3b-v1.0)                                                          |  884 | +9/-9   | 4,288   | LMSYS                  | Apache 2.0              | 2023/4   |
 |      211 |             212 | [StableLM-Tuned-Alpha-7B](https://huggingface.co/stabilityai/stablelm-tuned-alpha-7b)                                       |  856 | +11/-11 | 3,336   | Stability AI           | CC-BY-NC-SA-4.0         | 2023/4   |
-|      211 |             209 | [Dolly-V2-12B](https://huggingface.co/databricks/dolly-v2-12b)                                                              |  838 | +10/-10 | 3,480   | Databricks             | MIT                     | 2023/4   |
-|      212 |             210 | [LLaMA-13B](https://arxiv.org/abs/2302.13971)                                                                               |  815 | +14/-9  | 2,446   | Meta                   | Non-commercial          | 2023/2   |
-
-## 説明
-
-- **順位(UB)**：Bradley-Terry モデルに基づく順位付け。この順位はアリーナにおけるモデルの総合的なパフォーマンスを反映し、Eloスコアの**上限**推定値を提供し、モデルの潜在的な競争力を理解するのに役立ちます。
-- **順位(StyleCtrl)**：対話スタイル制御後の順位。この順位は、モデルの応答スタイル（例：冗長、簡潔）による選好バイアスを減らし、モデルのコア能力をより純粋に評価することを目的としています。
-- **モデル名**：大規模言語モデル (LLM) の名称。この列にはモデル関連リンクが埋め込まれており、クリックすると遷移します。
-- **スコア**：アリーナでユーザー投票により獲得したElo評価スコア。Elo評価は相対的な順位付けシステムで、スコアが高いほどモデルのパフォーマンスが優れていることを示します。このスコアは動的に変化し、現在の競争環境におけるモデルの相対的な実力を反映します。
-- **信頼区間**：Elo評価スコアの95%信頼区間（例：`+6/-6`）。この区間が小さいほどスコアの安定性と信頼性が高く、逆に区間が大きい場合はデータ不足やパフォーマンス変動が大きい可能性があります。スコア精度の定量的評価を提供します。
-- **投票数**：アリーナでそのモデルが受け取った総投票数。投票数が多いほど、通常スコアの統計的信頼性が高くなります。
-- **プロバイダー**：モデルを提供する組織または企業。
-- **ライセンス**：モデルのライセンスタイプ（例：プロプライエタリ、Apache 2.0、MITなど）。
-- **ナレッジカットオフ**：モデルトレーニングデータのナレッジカットオフ日。**データなし**は情報が提供されていないか不明であることを示します。
-
-## データソースと更新頻度
-
-本リーダーボードのデータは [fboulnois/llm-leaderboard-csv](https://github.com/fboulnois/llm-leaderboard-csv) プロジェクトにより自動生成・提供され、[lmarena.ai](https://lmarena.ai/) からデータを取得・処理しています。このリーダーボードはGitHub Actionsにより毎日自動更新されます。
-
-## 免責事項
-
-本レポートは参考情報です。リーダーボードデータは動的に変化し、特定の期間におけるChatbot Arena上のユーザー選好投票に基づいています。データの完全性と正確性は、上流データソースおよび `fboulnois/llm-leaderboard-csv` プロジェクトの更新・処理に依存します。異なるモデルは異なるライセンスを採用している可能性があるため、使用時には必ずモデル提供者の公式説明を参照してください。
+|      211 |             209 | [Dolly-V2-12B](https://huggingface.co/databricks/dolly-v2-12b)                                                              |  838 | +10/-10 | 3,480   | Databricks             | MIT                     | 2023/4
