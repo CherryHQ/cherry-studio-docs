@@ -1,7 +1,7 @@
 ---
 icon: cherries
 ---
-# Introdução ao Projeto
+# Introdução do Projeto
 
 
 {% hint style="warning" %}
@@ -13,119 +13,119 @@ Este documento foi traduzido do chinês por IA e ainda não foi revisado.
 
 <figure><img src=".gitbook/assets/docs-readme-banner1.png" alt=""><figcaption></figcaption></figure>
 
-Siga nossas contas de mídia social: [Twitter (X)](https://x.com/CherryStudioAPP), [Xiaohongshu](https://www.xiaohongshu.com/user/profile/662b6853000000000b031d9a), [Weibo](https://weibo.com/u/7975656228), [Bilibili](https://space.bilibili.com/3546657515898892), [Douyin](https://www.douyin.com/user/MS4wLjABAAAAmw9A54m5J0hHVMQY5eGrVJ-EHDoOS0hgJ6M1F9MN2Tn2V163A0xrC4_KVzfmQSxC)
+Siga nossas redes sociais: [Twitter (X)](https://x.com/CherryStudioHQ), [Xiaohongshu](https://www.xiaohongshu.com/user/profile/662b6853000000000b031d9a), [Weibo](https://weibo.com/u/7975656228), [Bilibili](https://space.bilibili.com/3546657515898892), [Douyin](https://www.douyin.com/user/MS4wLjABAAAAmw9A54m5J0hHVMQY5eGrVJ-EHDoOS0hgJ6M1F9MN2Tn2V163A0xrC4_KVzfmQSxC)
 
-Junte-se às nossas comunidades: [Grupo QQ (575014769)](https://qm.qq.com/q/lo0D4qVZKi), [Telegram](https://t.me/CherryStudioAI), [Discord](https://discord.gg/wez8HtpxqQ), [Grupo WeChat (clique para ver)](https://www.cherry-ai.com/#Community)
-
-***
-
-O Cherry Studio é uma plataforma completa de assistente AI que integra funcionalidades como diálogo com múltiplos modelos, gestão de base de conhecimento, pintura AI, tradução e mais.\
-Com design altamente personalizável, capacidades de expansão poderosas e experiência de usuário amigável, o Cherry Studio é a escolha ideal para usuários profissionais e entusiastas de IA. Tanto usuários iniciantes quanto desenvolvedores podem encontrar funcionalidades AI adequadas para melhorar eficiência e criatividade.
+Junte-se à nossa comunidade: [Grupo QQ(575014769)](https://qm.qq.com/q/lo0D4qVZKi), [Telegram](https://t.me/CherryStudioAI), [Discord](https://discord.gg/wez8HtpxqQ), [Grupo WeChat (clique para ver)](https://www.cherry-ai.com/#Community)
 
 ***
 
-### **Funcionalidades e Características Principais**
+Cherry Studio é uma plataforma de assistente de IA completa que integra conversas com múltiplos modelos, gerenciamento de base de conhecimento, pintura com IA, tradução e outras funcionalidades.\
+Com design altamente personalizável, potentes capacidades de extensão e experiência amigável ao usuário, o Cherry Studio é a escolha ideal para usuários profissionais e entusiastas de IA. Tanto iniciantes quanto desenvolvedores podem encontrar recursos de IA adequados que melhoram eficiência e criatividade.
 
-#### **1. Funcionalidades Básicas de Diálogo**
+***
 
-* **Respostas Múltiplas**: Permite gerar respostas simultâneas de múltiplos modelos para a mesma pergunta, facilitando comparações (detalhes na [Interface de Conversação](cherrystudio/preview/chat.md)).
+### **Funcionalidades e características principais**
+
+#### **1. Funções de conversa básica**
+
+* **Várias respostas para uma pergunta**: Permite gerar respostas simultâneas através de vários modelos para comparar performances. Detalhes na [Interface de conversa](cherrystudio/preview/chat.md).
 
 <figure><img src=".gitbook/assets/docs-readme-1 (1).png" alt=""><figcaption></figcaption></figure>
 
-* **Agrupamento Automático**: Histórico de conversas organizado automaticamente para acesso rápido.
-* **Exportação de Conversas**: Suporte para exportação em múltiplos formatos (Markdown, Word, etc.).
-* **Parâmetros Personalizáveis**: Ajustes avançados e parâmetros personalizados para necessidades específicas.
+* **Agrupamento automático**: Históricos de conversa são organizados por assistente para fácil recuperação.
+* **Exportação de conversas**: Exporte diálogos completos ou parcialmente em formatos como Markdown ou Word.
+* **Alto grau de parametrização**: Ajuste parâmetros básicos e personalize conforme necessidades específicas.
 
 <figure><img src=".gitbook/assets/docs-readme-2 (2).png" alt=""><figcaption></figcaption></figure>
 
-* **Mercado de Assistentes**: Mais de mil assistentes especializados em tradução, programação, redação e suporte para criação personalizada.
+* **Mercado de assistentes**: Mais de mil assistentes setoriais para tradução, programação, redação e suporte para personalização.
 
 <figure><img src=".gitbook/assets/docs-readme-4.png" alt=""><figcaption></figcaption></figure>
 
-* **Renderização Multi-formato**: Suporte para Markdown, fórmulas matemáticas e visualização HTML em tempo real.
+* **Renderização multiformato**: Visualização em tempo real de Markdown, fórmulas matemáticas e HTML.
 
 <figure><img src=".gitbook/assets/docs-readme-3 (1).png" alt=""><figcaption></figcaption></figure>
 
-#### **2. Funcionalidades Especiais Integradas**
+#### **2. Integração de múltiplas funcionalidades**
 
-* **Pintura AI**: Painel dedicado para geração de imagens por descrição textual.
+* **Pintura com IA**: Painel dedicado para gerar imagens de alta qualidade através de linguagem natural.
 
 <figure><img src=".gitbook/assets/docs-readme-5.png" alt=""><figcaption></figcaption></figure>
 
-* **Mini Programas AI**: Diversas ferramentas AI gratuitas integradas sem necessidade de alternar navegadores.
-* **Tradução**: Suporte para painel de tradução, tradução em conversas e tradução de prompts.
-* **Gestão de Arquivos**: Arquivos organizados por categorias em conversas, arte e base de conhecimento.
+* **Mini-aplicativos de IA**: Ferramentas web gratuitas integradas sem necessidade de navegador externo.
+* **Recursos de tradução**: Tradução contextual, de comandos e em painel dedicado.
+* **Gestão de arquivos**: Organização unificada de arquivos em conversas, pinturas e base de conhecimento.
 
 <figure><img src=".gitbook/assets/docs-readme-6.png" alt=""><figcaption></figcaption></figure>
 
-* **Busca Global**: Localização rápida em histórico e base de conhecimento.
+* **Busca global**: Localização rápida em histórico e base de conhecimento.
 
 <figure><img src=".gitbook/assets/docs-readme-7.png" alt=""><figcaption></figcaption></figure>
 
-#### **3. Sistema Unificado de Gestão de Provedores**
+#### **3. Sistema unificado de múltiplos provedores**
 
-* **Agregação de Modelos**: Integra modelos de OpenAI, Gemini, Anthropic, Azure em interface única.
-* **Listagem Automática**: Obtenção automática da lista completa de modelos sem configuração manual.
-* **Rotação de Chaves API**: Gerencia múltiplas chaves para evitar limites de taxa.
-* **Avatares Personalizados**: Avatar dedicado para cada modelo reconhecível.
-* **Provedores Customizáveis**: Suporte para provedores compatíveis com OpenAI/Gemini/Anthropic.
+* **Agregação de modelos**: Suporte a OpenAI, Gemini, Anthropic, Azure e outros provedores.
+* **Obtenção automática de modelos**: Lista completa de modelos com um clique.
+* **Rotação de múltiplas chaves**: Evita limitações de taxa usando várias chaves API.
+* **Identidade visual precisa**: Ícones exclusivos automáticos para cada modelo.
+* **Personalização de provedores**: Compatível com serviços terceiros seguindo padrões OpenAI/Gemini/Anthropic.
 
 <figure><img src=".gitbook/assets/docs-readme-8.png" alt=""><figcaption></figcaption></figure>
 
-#### **4. Interface e Layout Altamente Personalizáveis**
+#### **4. Interface e layout altamente personalizáveis**
 
-* **CSS Personalizado**: Personalização global de estilos visuais.
-* **Layouts de Conversa**: Opções de lista ou formato de bolhas com estilização customizada.
-* **Avatares Personalizados**: Personalização de avatar para software e assistentes.
-* **Menu Lateral Configurável**: Ocultar/reordenar funcionalidades do menu lateral.
+* **CSS personalizado**: Personalize estilos globais para sua interface.
+* **Layout de diálogo adaptável**: Estilo em lista ou bolhas com ajuste visual de mensagens.
+* **Ícones personalizados**: Defina avatares únicos para assistentes e software.
+* **Menu lateral personalizável**: Oculte ou reorganize funcionalidades conforme necessidade.
 
 <figure><img src=".gitbook/assets/docs-readme-9.png" alt=""><figcaption></figcaption></figure>
 
-#### **5. Sistema de Base de Conhecimento Local**
+#### **5. Sistema local de base de conhecimento**
 
-* **Suporte Multi-formato**: Importação de PDF, DOCX, PPTX, XLSX, TXT, MD.
-* **Múltiplas Fontes**: Ficheiros locais, URLs, mapas de site ou conteúdo manual.
-* **Exportação de Base de Conhecimento**: Compartilhamento de bases processadas.
-* **Teste de Busca Integrado**: Verificação imediata de segmentação após importação.
+* **Suporte a múltiplos formatos**: Importe PDF, DOCX, PPTX, XLSX, TXT, MD e outros.
+* **Várias fontes de dados**: Arquivos locais, URLs, sitemaps ou entrada manual.
+* **Exportação de base de conhecimento**: Compartilhe bases processadas com outros usuários.
+* **Verificação por pesquisa**: Teste em tempo real divisões de conteúdo após importação.
 
 <figure><img src=".gitbook/assets/docs-readme-10.png" alt=""><figcaption></figcaption></figure>
 
-#### **6. Funcionalidades Rápidas**
+#### **6. Funcionalidades de foco especial**
 
-* **Perguntas Rápidas**: Assistente instantâneo em qualquer contexto (WeChat, navegador).
-* **Tradução Instantânea**: Tradução rápida de palavras/textos em qualquer aplicativo.
-* **Resumo de Conteúdo**: Sumarização de textos longos para extração eficiente.
-* **Explicação Simples**: Compreensão de conceitos sem prompts complexos.
+* **Respostas rápidas**: Acione assistente instantâneo em qualquer contexto para respostas imediatas.
+* **Tradução rápida**: Traduza termos ou textos em aplicativos externos.
+* **Resumo de conteúdo**: Sintetize rapidamente textos extensos.
+* **Explicações simplificadas**: Compreenda conceitos complexos com um clique.
 
 <figure><img src=".gitbook/assets/docs-readme-11.png" alt=""><figcaption></figcaption></figure>
 
-#### **7. Segurança de Dados**
+#### **7. Garantia de dados**
 
-* **Múltiplos Backups**: Backup local, WebDAV e agendado.
-* **Uso Totalmente Local**: Integração com modelos locais para evitar vazamentos.
-
-***
-
-### **Vantagens do Projeto**
-
-1. **Simplicidade**: Cherry Studio simplifica o uso de AI para iniciantes.
-2. **Documentação Completa**: Manuais detalhados de uso e solução de problemas.
-3. **Atualizações Contínuas**: Melhorias frequentes baseadas em feedback.
-4. **Código Aberto**: Personalização e expansão via código fonte.
+* **Múltiplos backups**: Locais, via WebDAV e agendados para segurança.
+* **Segurança de dados**: Uso totalmente local combinável com modelos locais para evitar vazamentos.
 
 ***
 
-### **Casos de Uso**
+### **Vantagens do projeto**
 
-* **Gestão de Conhecimento**: Construção e consulta de bases especializadas para pesquisa/educação.
-* **Criação com Múltiplos Modelos**: Geração de conteúdo e informação simultânea.
-* **Tradução e Automação**: Processamento de documentos e comunicação multilíngue.
-* **Arte e Design AI**: Geração de imagens criativas por descrição textual.
+1. **Acessibilidade**: Projeto intuitivo para iniciantes, focando trabalho, aprendizado ou criação.
+2. **Documentação completa**: Manuais detalhados e guias de solução de problemas.
+3. **Atualização contínua**: Equipe receptiva ao feedback para otimizações constantes.
+4. **Open-source e extensibilidade**: Personalização através de código aberto.
 
-### Histórico de Estrelas
+***
 
-![Histórico de Estrelas](https://urlscan.io/liveshot/?width=1300\&height=620\&url=https://cherrystarhistory.ocool.online/)
+### **Cenários de aplicação**
 
-## Siga Nossas Contas de Mídia Social
+* **Gestão de conhecimento**: Construa e consulte bases especializadas para pesquisa/educação.
+* **Diálogos multicomparativos**: Compare modelos simultaneamente para geração eficiente de conteúdo.
+* **Tradução e automação**: Assistente linguístico integrado e processamento de documentos.
+* **Design com IA**: Geração de imagens criativas através de descrições naturais.
 
-<table data-view="cards"><thead><tr><th></th><th data-hidden data-card-cover data-type="files"></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><a href="https://www.xiaohongshu.com/user/profile/662b6853000000000b031d9a?xsec_token=YB_1nKvlH4r5hPYVVbbsNHF8Y6n6AKlm5-DaggPCtd2DQ%3D&#x26;xsec_source=app_share&#x26;xhsshare=CopyLink&#x26;appuid=662b6853000000000b031d9a&#x26;apptime=1738627324&#x26;share_id=ace5db41b5954fab8d98a2a7865a62bc&#x26;share_channel=copy_link">Xiaohongshu</a></td><td><a href=".gitbook/assets/1.png">1.png</a></td><td><a href="https://www.xiaohongshu.com/user/profile/662b6853000000000b031d9a?xsec_token=YB_1nKvlH4r5hPYVVbbsNHF8Y6n6AKlm5-DaggPCtd2DQ%3D&#x26;xsec_source=app_share&#x26;xhsshare=CopyLink&#x26;appuid=662b6853000000000b031d9a&#x26;apptime=1738627324&#x26;share_id=ace5db41b5954fab8d98a2a7865a62bc&#x26;share_channel=copy_link">https://www.xiaohongshu.com/user/profile/662b6853000000000b031d9a?xsec_token=YB_1nKvlH4r5hPYVVbbsNHF8Y6n6AKlm5-DaggPCtd2DQ%3D&#x26;xsec_source=app_share&#x26;xhsshare=CopyLink&#x26;appuid=662b6853000000000b031d9a&#x26;apptime=1738627324&#x26;share_id=ace5db41b5954fab8d98a2a7865a62bc&#x26;share_channel=copy_link</a></td></tr><tr><td><a href="https://b23.tv/hIfGgDW">Bilibili</a></td><td><a href=".gitbook/assets/3.png">3.png</a></td><td><a href="https://b23.tv/hIfGgDW">https://b23.tv/hIfGgDW</a></td></tr><tr><td><a href="https://weibo.com/u/7975656228">Weibo</a></td><td><a href=".gitbook/assets/2.png">2.png</a></td><td><a href="https://weibo.com/u/7975656228">https://weibo.com/u/7975656228</a></td></tr><tr><td><a href="https://v.douyin.com/ifTpX4X7">Douyin</a></td><td><a href=".gitbook/assets/4.png">4.png</a></td><td><a href="https://v.douyin.com/ifTpX4X7">https://v.douyin.com/ifTpX4X7</a></td></tr><tr><td><a href="https://x.com/CherryStudioAPP?t=DYR0ulaLur-bO4Us3bG79A&#x26;s=05">Twitter (X)</a></td><td><a href=".gitbook/assets/5.png">5.png</a></td><td><a href="https://x.com/CherryStudioAPP?t=DYR0ulaLur-bO4Us3bG79A&#x26;s=05">https://x.com/CherryStudioAPP?t=DYR0ulaLur-bO4Us3bG79A&#x26;s=05</a></td></tr></tbody></table>
+### Star History
+
+![Star History](https://urlscan.io/liveshot/?width=1300\&height=620\&url=https://cherrystarhistory.ocool.online/)
+
+## Siga nossas redes sociais
+
+<table data-view="cards"><thead><tr><th></th><th data-hidden data-card-cover data-type="files"></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><a href="https://www.xiaohongshu.com/user/profile/662b6853000000000b031d9a?xsec_token=YB_1nKvlH4r5hPYVVbbsNHF8Y6n6AKlm5-DaggPCtd2DQ%3D&#x26;xsec_source=app_share&#x26;xhsshare=CopyLink&#x26;appuid=662b6853000000000b031d9a&#x26;apptime=1738627324&#x26;share_id=ace5db41b5954fab8d98a2a7865a62bc&#x26;share_channel=copy_link">Xiaohongshu</a></td><td><a href=".gitbook/assets/1.png">1.png</a></td><td><a href="https://www.xiaohongshu.com/user/profile/662b6853000000000b031d9a?xsec_token=YB_1nKvlH4r5hPYVVbbsNHF8Y6n6AKlm5-DaggPCtd2DQ%3D&#x26;xsec_source=app_share&#x26;xhsshare=CopyLink&#x26;appuid=662b6853000000000b031d9a&#x26;apptime=1738627324&#x26;share_id=ace5db41b5954fab8d98a2a7865a62bc&#x26;share_channel=copy_link">https://www.xiaohongshu.com/user/profile/662b6853000000000b031d9a?xsec_token=YB_1nKvlH4r5hPYVVbbsNHF8Y6n6AKlm5-DaggPCtd2DQ%3D&#x26;xsec_source=app_share&#x26;xhsshare=CopyLink&#x26;appuid=662b6853000000000b031d9a&#x26;apptime=1738627324&#x26;share_id=ace5db41b5954fab8d98a2a7865a62bc&#x26;share_channel=copy_link</a></td></tr><tr><td><a href="https://b23.tv/hIfGgDW">Bilibili</a></td><td><a href=".gitbook/assets/3.png">3.png</a></td><td><a href="https://b23.tv/hIfGgDW">https://b23.tv/hIfGgDW</a></td></tr><tr><td><a href="https://weibo.com/u/7975656228">Weibo</a></td><td><a href=".gitbook/assets/2.png">2.png</a></td><td><a href="https://weibo.com/u/7975656228">https://weibo.com/u/7975656228</a></td></tr><tr><td><a href="https://v.douyin.com/ifTpX4X7">Douyin</a></td><td><a href=".gitbook/assets/4.png">4.png</a></td><td><a href="https://v.douyin.com/ifTpX4X7">https://v.douyin.com/ifTpX4X7</a></td></tr><tr><td><a href="https://x.com/CherryStudioAPP?t=DYR0ulaLur-bO4Us3bG79A&#x26;s=05">Twitter (X)</a></td><td><a href=".gitbook/assets/5.png">5.png</a></td><td><a href="https://x.com/CherryStudioAPP?t=DYR0ulaLur-bO4Us3bG79A&#x26;s=05">https://x.com/CherryStudioHQ?t=DYR0ulaLur-bO4Us3bG79A&#x26;s=05</a></td></tr></tbody></table>
