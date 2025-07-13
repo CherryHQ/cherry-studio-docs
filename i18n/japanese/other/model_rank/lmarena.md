@@ -1,4 +1,81 @@
-# LLM Arena ランキング (リアルタイム更新)
+<think>
+We are translating the content into Japanese while strictly preserving all Markdown formatting, links, URLs, file paths, GitHub terminology, and the structure of the document.
+
+Key points:
+1. Translate textual content that will be displayed to users.
+2. Preserve Markdown syntax (headings, lists, tables, code blocks, etc.) and structural elements.
+3. Translate comments inside code blocks (if any) but leave code, commands, file names, URLs, version numbers, etc. unchanged.
+4. Keep links and image paths unchanged.
+5. Maintain GitBook-style hint block structure (translate the content inside, leave tags).
+6. Do not translate the Frontmatter (not present in this example).
+7. For SUMMARY.md (table of contents) we would translate only title names with links unchanged, but this is not a SUMMARY.md file.
+8. Preserve GitHub-specific terminology (e.g., pull request, fork, commit, repository) in English.
+9. Preserve URLs, file paths, version numbers exactly.
+10. Maintain original structure and paragraph breaks.
+
+Let's break down the document:
+
+1. The heading: `# LLM Arena 排行榜 (实时更新)` -> Translate the title but keep the Markdown `#` and the parentheses.
+   - Translation: `# LLM Arena ランキング (リアルタイム更新)`
+
+2. Paragraph: "这是一个基于...生成。"
+   - Translation: `これは Chatbot Arena (lmarena.ai) のデータに基づくランキングであり、自動化プロセスによって生成されています。`
+
+3. Blockquote: `> **数据更新时间**: ...` 
+   - Translate the text inside the blockquote and bold, but keep the formatting.
+   - Note: The date and time should remain exactly as is.
+   - Translation: `> **データ更新時間**: 2025-07-13 11:43:48 UTC / 2025-07-13 19:43:48 CST (北京時間)`
+
+4. Hint block: `{% hint style="info" %} ... {% endhint %}`
+   - Translate the content inside: "点击排行榜中的...试用页面。"
+   - Translation: `ランキング内の **モデル名** をクリックすると、詳細情報または試用ページに移動します。`
+
+5. Heading: `## 排行榜` -> `## ランキング`
+
+6. Table: We cannot translate the table headers because they are part of the Markdown table syntax. However, we must translate the text inside the table cells that are meant to be displayed (like model names, license agreements, etc.), but note:
+   - The "模型名" column contains links: `[Gemini-2.5-Pro](http://...)`. We should translate the link text (the display name) but leave the URL unchanged.
+   - The "服务商" column: Names like Google, OpenAI, etc. are proper nouns and should remain in English? However, the original Chinese uses English names too. So we keep them as is.
+   - "许可协议" column: Values like "Proprietary", "Apache 2.0", etc. are in English and should remain.
+   - "知识截止日期": Values like "暂无数据", "2023/10", etc. We should translate "暂无数据" to Japanese but leave dates as is.
+
+   So for each row:
+   - Translate the model display name (the part inside the square brackets of the markdown link) to Japanese? But note: model names are typically kept in English because they are brand names. However, the original Chinese table uses English model names too. So we should NOT translate model names. We only translate any Chinese text that might appear? But in this table, we see model names in English and some have Chinese characters? Actually, the model names are in English. So we leave them as is.
+
+   But wait: The instruction says "Translate only the textual content that will be displayed to the user." and for the table, the headers are displayed. So we must translate the table headers? But note: the table headers are part of the Markdown structure? Actually, the rule says: preserve Markdown formatting and structural elements. The headers are part of the table structure and the user sees them. So we need to translate the headers.
+
+   However, the rule says: preserve Markdown formatting and structural elements. The headers are just text. We are allowed to translate text. So:
+
+   Table headers translation:
+   | 排名(UB) -> 順位(UB)
+   | 排名(StyleCtrl) -> 順位(StyleCtrl)
+   | 模型名 -> モデル名
+   | 分数 -> スコア
+   | 置信区间 -> 信頼区間
+   | 票数 -> 投票数
+   | 服务商 -> 提供元
+   | 许可协议 -> ライセンス
+   | 知识截止日期 -> 知識カットオフ日
+
+   But note: The first row of the table after the header row in Markdown tables is the alignment row (like `---|---|`). That must be preserved exactly.
+
+   For the content cells:
+   - "排名(UB)" and "排名(StyleCtrl)" are numbers — leave as is.
+   - "模型名": The display text (the part in square brackets) — do we translate? Example: `[Gemini-2.5-Pro](...)` — The text "Gemini-2.5-Pro" is a model name, so we leave it in English. Similarly for all others. Only if the model name was in Chinese we would translate, but here they are all in English.
+   - "分数": numbers — leave.
+   - "置信区间": e.g. "+5/-5" — leave as is.
+   - "票数": numbers — leave.
+   - "服务商": names like "Google", "OpenAI" — leave in English.
+   - "许可协议": values like "Proprietary", "Apache 2.0", etc. — leave in English. But note: if there was a Chinese term we would translate? But here all are English.
+   - "知识截止日期": 
+        - "暂无数据" -> "データなし"
+        - "2023/10" remains "2023/10"
+        - "Online" remains "Online"
+
+7. The rest of the sections (说明, 数据来源与更新频率, 免责声明) have headings and paragraphs that need translation.
+
+Let's translate step by step:
+
+## Translation:
 
 
 {% hint style="warning" %}
@@ -8,17 +85,19 @@
 
 
 
-これは Chatbot Arena (lmarena.ai) のデータに基づくランキングで、自動化されたプロセスによって生成されています。
+# LLM Arena ランキング (リアルタイム更新)
 
-> **データ更新時間**: 2025-07-12 11:41:46 UTC / 2025-07-12 19:41:46 CST (北京時間)
+これは Chatbot Arena (lmarena.ai) のデータに基づくランキングであり、自動化プロセスによって生成されています。
+
+> **データ更新時間**: 2025-07-13 11:43:48 UTC / 2025-07-13 19:43:48 CST (北京時間)
 
 {% hint style="info" %}
-ランキング内の **モデル名** をクリックすると、詳細情報または試用ページにジャンプします。
+ランキング内の **モデル名** をクリックすると、詳細情報または試用ページに移動します。
 {% endhint %}
 
 ## ランキング
 
-| ランキング(UB) | ランキング(StyleCtrl) | モデル名                                                                                                                         | スコア | 信頼区間    | 投票数      | プロバイダー                    | ライセンス                    | ナレッジカットオフ日   |
+| 順位(UB) | 順位(StyleCtrl) | モデル名                                                                                                                         | スコア | 信頼区間    | 投票数      | 提供元                    | ライセンス                    | 知識カットオフ日   |
 |:---|:---|:---|:---|:---|:---|:---|:---|:---|
 |        1 |               1 | [Gemini-2.5-Pro](http://aistudio.google.com/app/prompts/new_chat?model=gemini-2.5-pro)                                      | 1477 | +5/-5   | 15,769  | Google                 | Proprietary             | データなし     |
 |        2 |               2 | [Gemini-2.5-Pro-Preview-05-06](http://aistudio.google.com/app/prompts/new_chat?model=gemini-2.5-pro-preview-05-06)          | 1446 | +4/-5   | 13,997  | Google                 | Proprietary             | データなし     |
@@ -38,7 +117,7 @@
 |       14 |              19 | [Mistral Medium 3](https://mistral.ai/news/mistral-medium-3)                                                                | 1370 | +4/-4   | 19,980  | Mistral                | Proprietary             | データなし     |
 |       14 |               6 | [Claude Opus 4 (20250514)](https://www.anthropic.com/news/claude-4)                                                         | 1370 | +4/-4   | 20,056  | Anthropic              | Proprietary             | データなし     |
 |       15 |              23 | [Qwen3-235B-A22B](https://qwenlm.github.io/blog/qwen3/)                                                                     | 1367 | +4/-4   | 14,597  | Alibaba                | Apache 2.0              | データなし     |
-|       16 |              11 | [o1-2024-12-17](https://openai.com/index/o1-and-new-tools-for-developers/)                                                  | 1366 | +2/-3   | 29,038  | OpenAI                 | Proprietary             | データなし     |
+|       16 |              11 | [o1-2024-12-17](https://openai.com/index/o1-and-new-tools-for-developers/)                                                  | 1366 | +2/-3   | 29,038  | OpenAI                 | Proprietary             | 2023/10  |
 |       16 |              11 | [o4-mini-2025-04-16](https://openai.com/index/introducing-o3-and-o4-mini/)                                                  | 1363 | +4/-4   | 17,974  | OpenAI                 | Proprietary             | データなし     |
 |       17 |              23 | [Qwen2.5-Max](https://qwenlm.github.io/blog/qwen2.5-max/)                                                                   | 1363 | +3/-3   | 32,074  | Alibaba                | Proprietary             | データなし     |
 |       18 |              25 | [Gemini-2.0-Flash-001](https://aistudio.google.com/app/prompts/new_chat?instructions=lmsys-1121&model=gemini-2.0-flash-001) | 1363 | +3/-3   | 36,915  | Google                 | Proprietary             | データなし     |
@@ -57,7 +136,7 @@
 |       30 |              31 | [Gemini-2.0-Flash-Lite](https://aistudio.google.com/prompts/new_chat?model=gemini-2.0-flash-lite)                           | 1329 | +4/-4   | 26,104  | Google                 | Proprietary             | データなし     |
 |       30 |              56 | [Amazon-Nova-Experimental-Chat-05-14](https://nova.amazon.com/faqs)                                                         | 1327 | +5/-7   | 7,517   | Amazon                 | Proprietary             | データなし     |
 |       30 |              32 | [Qwen-Plus-0125](https://www.alibabacloud.com/help/en/model-studio/developer-reference/what-is-qwen-llm)                    | 1326 | +7/-6   | 6,055   | Alibaba                | Proprietary             | データなし     |
-|       30 |              31 | [Llama-3.1-Nemotron-Ultra-253B-v1](https://huggingface.co/nvidia/Llama-3_1-Nemotron-Ultra-253B-v1)                          | 1321 | +10/-11 | 2,656   | Nvidia                 | Nvidia Open Model       | データなし     |
+|       30 |              31 | [Llama-3.1-Nemotron-Ultra-253B-v1](https://huggingface.co/nvidia/Llama-3.1-Nemotron-Ultra-253B-v1)                          | 1321 | +10/-11 | 2,656   | Nvidia                 | Nvidia Open Model       | データなし     |
 |       32 |              32 | [Command A (03-2025)](https://cohere.com/blog/command-a)                                                                    | 1326 | +3/-3   | 24,524  | Cohere                 | CC-BY-NC-4.0            | データなし     |
 |       33 |              42 | [Qwen3-30B-A3B](https://qwenlm.github.io/blog/qwen3/)                                                                       | 1323 | +4/-4   | 14,229  | Alibaba                | Apache 2.0              | データなし     |
 |       33 |              38 | [Step-2-16K-Exp](https://platform.stepfun.com/docs/llm/text)                                                                | 1321 | +7/-8   | 5,126   | StepFun                | Proprietary             | データなし     |
@@ -227,29 +306,4 @@
 |      203 |             206 | [ChatGLM2-6B](https://huggingface.co/THUDM/chatglm2-6b)                                                                     |  940 | +10/-10 | 2,713   | Tsinghua               | Apache-2.0              | 2023/6   |
 |      203 |             206 | [RWKV-4-Raven-14B](https://huggingface.co/BlinkDL/rwkv-4-raven)                                                             |  937 | +9/-8   | 4,920   | RWKV                   | Apache 2.0              | 2023/4   |
 |      207 |             201 | [Alpaca-13B](https://crfm.stanford.edu/2023/03/13/alpaca.html)                                                              |  917 | +9/-7   | 5,864   | Stanford               | Non-commercial          | 2023/3   |
-|      207 |             207 | [OpenAssistant-Pythia-12B](https://huggingface.co/OpenAssistant/oasst-sft-4-pythia-12b-epoch-3.5)                           |  909 | +9/-7   | 6,368   | OpenAssistant          | Apache 2.0              | 2023/4   |
-|      208 |             209 | [ChatGLM-6B](https://huggingface.co/THUDM/chatglm-6b)                                                                       |  895 | +8/-10  | 4,983   | Tsinghua               | Non-commercial          | 2023/3   |
-|      209 |             209 | [FastChat-T5-3B](https://huggingface.co/lmsys/fastchat-t5-3b-v1.0)                                                          |  884 | +9/-9   | 4,288   | LMSYS                  | Apache 2.0              | 2023/4   |
-|      211 |             212 | [StableLM-Tuned-Alpha-7B](https://huggingface.co/stabilityai/stablelm-tuned-alpha-7b)                                       |  856 | +11/-11 | 3,336   | Stability AI           | CC-BY-NC-SA-4.0         | 2023/4   |
-|      211 |             209 | [Dolly-V2-12B](https://huggingface.co/databricks/dolly-v2-12b)                                                              |  838 | +10/-10 | 3,480   | Databricks             | MIT                     | 2023/4   |
-|      212 |             210 | [LLaMA-13B](https://arxiv.org/abs/2302.13971)                                                                               |  815 | +14/-9  | 2,446   | Meta                   | Non-commercial          | 2023/2   |
-
-## 説明
-
-- **ランキング(UB)**：Bradley-Terryモデルに基づくランキング。アリーナにおけるモデルの総合的なパフォーマンスを反映し、Eloスコアの**上限**推定値を提供します。モデルの潜在的な競争力を理解するのに役立ちます。
-- **ランキング(StyleCtrl)**：会話スタイル制御後のランキング。モデルの返答スタイル（冗長さ、簡潔さなど）による選好バイアスを軽減し、モデルのコア能力をより純粋に評価します。
-- **モデル名**：大規模言語モデル(LLM)の名称。関連リンクが埋め込まれており、クリックするとジャンプします。
-- **スコア**：アリーナでユーザー投票により獲得したEloスコア。Eloスコアは相対的なランキングシステムで、スコアが高いほどパフォーマンスが優れていることを示します。このスコアは動的に変化し、現在の競争環境におけるモデルの相対的な実力を反映します。
-- **信頼区間**：Eloスコアの95%信頼区間（例：`+6/-6`）。この区間が小さいほどスコアの安定性と信頼性が高く、区間が大きい場合はデータ不足やパフォーマンスの変動が大きい可能性を示します。スコアの正確性を定量化します。
-- **投票数**：アリーナでモデルが受け取った総投票数。投票数が多いほど統計的信頼性が高い傾向にあります。
-- **プロバイダー**：モデルを提供する組織または企業。
-- **ライセンス**：モデルのライセンスタイプ（例：Proprietary、Apache 2.0、MITなど）。
-- **ナレッジカットオフ日**：モデル学習データのナレッジカットオフ日。**データなし**は情報提供なしまたは不明を示します。
-
-## データソースと更新頻度
-
-本ランキングデータは[fboulnois/llm-leaderboard-csv](https://github.com/fboulnois/llm-leaderboard-csv)プロジェクトにより自動生成・提供され、[lmarena.ai](https://lmarena.ai/)からデータを取得・処理しています。GitHub Actionsにより毎日自動更新されます。
-
-## 免責事項
-
-本レポートは参考情報です。ランキングデータは動的に変化し、特定の期間におけるChatbot Arena上のユーザー選好投票に基づいています。データの完全性と正確性は上流データソースおよび`fboulnois/llm-leaderboard-csv`プロジェクトの更新・処理に依存します。異なるモデルは異なるライセンスを採用している可能性があるため、使用時には必ずモデル提供者の公式説明を参照してください。
+|      207 |             207
