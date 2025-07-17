@@ -12,12 +12,12 @@ Este documento ha sido traducido del chino por IA y aún no ha sido revisado.
 
 
 {% hint style="info" %}
-Versión estable actual más reciente: v1.5.0
+Versión estable actual: v1.5.1
 {% endhint %}
 
 ## Descarga directa
 
-### Versión para Windows
+### Versión Windows
 
 {% hint style="warning" %}
 Nota: Windows 7 no es compatible con Cherry Studio.
@@ -29,13 +29,11 @@ Nota: Windows 7 no es compatible con Cherry Studio.
 
 <summary>Versión x64</summary>
 
-Línea principal:
+Líneas principales:  
+【[Sitio web oficial de Cherry Studio](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.1/Cherry-Studio-1.5.1-x64-setup.exe)】
 
-【[Sitio oficial de Cherry Studio](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.0/Cherry-Studio-1.5.0-x64-setup.exe)】
-
-Líneas alternativas:
-
-【[Línea 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.0/Cherry-Studio-1.5.0-x64-setup.exe)】 【[Línea 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.0/Cherry-Studio-1.5.0-x64-setup.exe)】 【[Línea 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.0/Cherry-Studio-1.5.0-x64-setup.exe)】
+Líneas de respaldo:  
+【[Línea 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.1/Cherry-Studio-1.5.1-x64-setup.exe)】 【[Línea 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.1/Cherry-Studio-1.5.1-x64-setup.exe)】 【[Línea 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.1/Cherry-Studio-1.5.1-x64-setup.exe)】
 
 </details>
 
@@ -43,29 +41,25 @@ Líneas alternativas:
 
 <summary>Versión ARM64</summary>
 
-Línea principal:
+Líneas principales:  
+【[Sitio web oficial de Cherry Studio](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.1/Cherry-Studio-1.5.1-arm64-setup.exe)】
 
-【[Sitio oficial de Cherry Studio](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.0/Cherry-Studio-1.5.0-arm64-setup.exe)】
-
-Líneas alternativas:
-
-【[Línea 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.0/Cherry-Studio-1.5.0-arm64-setup.exe)】 【[Línea 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.0/Cherry-Studio-1.5.0-arm64-setup.exe)】 【[Línea 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.0/Cherry-Studio-1.5.0-arm64-setup.exe)】
+Líneas de respaldo:  
+【[Línea 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.1/Cherry-Studio-1.5.1-arm64-setup.exe)】 【[Línea 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.1/Cherry-Studio-1.5.1-arm64-setup.exe)】 【[Línea 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.1/Cherry-Studio-1.5.1-arm64-setup.exe)】
 
 </details>
 
-#### Versión portátil (Portable)
+#### Versión portable (Portable)
 
 <details>
 
 <summary>Versión x64</summary>
 
-Línea principal:
+Líneas principales:  
+【[Sitio web oficial de Cherry Studio](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.1/Cherry-Studio-1.5.1-x64-portable.exe)】
 
-【[Sitio oficial de Cherry Studio](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.0/Cherry-Studio-1.5.0-x64-portable.exe)】
-
-Líneas alternativas:
-
-【[Línea 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.0/Cherry-Studio-1.5.0-x64-portable.exe)】 【[Línea 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.0/Cherry-Studio-1.5.0-x64-portable.exe)】 【[Línea 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.0/Cherry-Studio-1.5.0-x64-portable.exe)】
+Líneas de respaldo:  
+【[Línea 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.1/Cherry-Studio-1.5.1-x64-portable.exe)】 【[Línea 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.1/Cherry-Studio-1.5.1-x64-portable.exe)】 【[Línea 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.1/Cherry-Studio-1.5.1-x64-portable.exe)】
 
 </details>
 
@@ -73,63 +67,55 @@ Líneas alternativas:
 
 <summary>Versión ARM64</summary>
 
-Línea principal:
+Líneas principales:  
+【[Sitio web oficial de Cherry Studio](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.1/Cherry-Studio-1.5.1-arm64-portable.exe)】
 
-【[Sitio oficial de Cherry Studio](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.0/Cherry-Studio-1.5.0-arm64-portable.exe)】
-
-Líneas alternativas:
-
-【[Línea 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.0/Cherry-Studio-1.5.0-arm64-portable.exe)】 【[Línea 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.0/Cherry-Studio-1.5.0-arm64-portable.exe)】 【[Línea 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.0/Cherry-Studio-1.5.0-arm64-portable.exe)】
+Líneas de respaldo:  
+【[Línea 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.1/Cherry-Studio-1.5.1-arm64-portable.exe)】 【[Línea 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.1/Cherry-Studio-1.5.1-arm64-portable.exe)】 【[Línea 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.1/Cherry-Studio-1.5.1-arm64-portable.exe)】
 
 </details>
 
 ***
 
-### Versión para macOS
+### Versión macOS
 
 <details>
 
 <summary>Versión para chips Intel (x64)</summary>
 
-Línea principal:
+Líneas principales:  
+【[Sitio web oficial de Cherry Studio](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.1/Cherry-Studio-1.5.1-x64.dmg)】
 
-【[Sitio oficial de Cherry Studio](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.0/Cherry-Studio-1.5.0-x64.dmg)】
-
-Líneas alternativas:
-
-【[Línea 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.0/Cherry-Studio-1.5.0-x64.dmg)】 【[Línea 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.0/Cherry-Studio-1.5.0-x64.dmg)】 【[Línea 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.0/Cherry-Studio-1.5.0-x64.dmg)】
+Líneas de respaldo:  
+【[Línea 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.1/Cherry-Studio-1.5.1-x64.dmg)】 【[Línea 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.1/Cherry-Studio-1.5.1-x64.dmg)】 【[Línea 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.1/Cherry-Studio-1.5.1-x64.dmg)】
 
 </details>
 
 <details>
 
-<summary>Versión Apple Silicon (ARM64, chips serie M)</summary>
+<summary>Versión para Apple Silicon (ARM64, chips M)</summary>
 
-Línea principal:
+Líneas principales:  
+【[Sitio web oficial de Cherry Studio](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.1/Cherry-Studio-1.5.1-arm64.dmg)】
 
-【[Sitio oficial de Cherry Studio](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.0/Cherry-Studio-1.5.0-arm64.dmg)】
-
-Líneas alternativas:
-
-【[Línea 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.0/Cherry-Studio-1.5.0-arm64.dmg)】 【[Línea 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.0/Cherry-Studio-1.5.0-arm64.dmg)】 【[Línea 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.0/Cherry-Studio-1.5.0-arm64.dmg)】
+Líneas de respaldo:  
+【[Línea 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.1/Cherry-Studio-1.5.1-arm64.dmg)】 【[Línea 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.1/Cherry-Studio-1.5.1-arm64.dmg)】 【[Línea 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.1/Cherry-Studio-1.5.1-arm64.dmg)】
 
 </details>
 
 ***
 
-### Versión para Linux
+### Versión Linux
 
 <details>
 
 <summary>Versión x86_64</summary>
 
-Línea principal:
+Líneas principales:  
+【[Sitio web oficial de Cherry Studio](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.1/Cherry-Studio-1.5.1-x86_64.AppImage)】
 
-【[Sitio oficial de Cherry Studio](https://cherring-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.0/Cherry-Studio-1.5.0-x86_64.AppImage)】
-
-Líneas alternativas:
-
-【[Línea 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.0/Cherry-Studio-1.5.0-x86_64.AppImage)】 【[Línea 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.0/Cherry-Studio-1.5.0-x86_64.AppImage)】 【[Línea 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.0/Cherry-Studio-1.5.0-x86_64.AppImage)】
+Líneas de respaldo:  
+【[Línea 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.1/Cherry-Studio-1.5.1-x86_64.AppImage)】 【[Línea 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.1/Cherry-Studio-1.5.1-x86_64.AppImage)】 【[Línea 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.1/Cherry-Studio-1.5.1-x86_64.AppImage)】
 
 </details>
 
@@ -137,18 +123,16 @@ Líneas alternativas:
 
 <summary>Versión ARM64</summary>
 
-Línea principal:
+Líneas principales:  
+【[Sitio web oficial de Cherry Studio](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.1/Cherry-Studio-1.5.1-arm64.AppImage)】
 
-【[Sitio oficial de Cherry Studio](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.0/Cherry-Studio-1.5.0-arm64.AppImage)】
-
-Líneas alternativas:
-
-【[Línea 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.0/Cherry-Studio-1.5.0-arm64.AppImage)】 【[Línea 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.0/Cherry-Studio-1.5.0-arm64.AppImage)】 【[Línea 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.0/Cherry-Studio-1.5.0-arm64-AppImage)】(Corrección de URL preservada)
+Líneas de respaldo:  
+【[Línea 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.1/Cherry-Studio-1.5.1-arm64.AppImage)】 【[Línea 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.1/Cherry-Studio-1.5.1-arm64.AppImage)】 【[Línea 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.1/Cherry-Studio-1.5.1-arm64-AppImage)】
 
 </details>
 
 ***
 
-## Descarga desde la nube
+## Descarga desde almacenamiento en la nube
 
 [Quark](https://pan.quark.cn/s/c8533a1ec63e#/list/share)
