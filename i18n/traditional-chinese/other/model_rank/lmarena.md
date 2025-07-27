@@ -8,17 +8,17 @@
 
 
 
-這是一個基於 Chatbot Arena (lmarena.ai) 資料的自動生成排行榜。
+這是一個基於 Chatbot Arena (lmarena.ai) 資料的排行榜，透過自動化流程產生。
 
-> **資料更新時間**: 2025-07-26 11:42:38 UTC / 2025-07-26 19:42:38 CST (北京時間)
+> **資料更新時間**: 2025-07-27 11:42:21 UTC / 2025-07-27 19:42:21 CST (北京時間)
 
 {% hint style="info" %}
-點擊排行榜中的 **模型名稱** 可跳轉至其詳細資訊或試用頁面。
+點選排行榜中的 **模型名稱** 可跳轉至其詳細資訊或試用頁面。
 {% endhint %}
 
 ## 排行榜
 
-|   排名(UB) |   排名(StyleCtrl) | 模型名                                                                                                                         |   分數 | 置信區間    | 票數      | 服務商                    | 許可協議                    | 知識截止日期   |
+|   排名(UB) |   排名(StyleCtrl) | 模型名                                                                                                                         |   分數 | 信賴區間    | 票數      | 服務商                    | 授權協議                    | 知識截止日期   |
 |:---|:---|:---|:---|:---|:---|:---|:---|:---|
 |        1 |               1 | [Gemini-2.5-Pro](http://aistudio.google.com/app/prompts/new_chat?model=gemini-2.5-pro)                                      | 1474 | +5/-4   | 19,209  | Google                 | Proprietary             | 暫無資料     |
 |        2 |               2 | [Gemini-2.5-Pro-Preview-05-06](http://aistudio.google.com/app/prompts/new_chat?model=gemini-2.5-pro-preview-05-06)          | 1446 | +4/-5   | 13,692  | Google                 | Proprietary             | 暫無資料     |
@@ -48,8 +48,8 @@
 |       18 |              31 | [Gemini-2.0-Flash-001](https://aistudio.google.com/app/prompts/new_chat?instructions=lmsys-1121&model=gemini-2.0-flash-001) | 1361 | +3/-2   | 37,796  | Google                 | Proprietary             | 暫無資料     |
 |       20 |              35 | [Grok-3-Mini-beta](https://docs.x.ai/docs/models)                                                                           | 1357 | +6/-5   | 12,522  | xAI                    | Proprietary             | 暫無資料     |
 |       21 |              29 | [Gemma-3-27B-it](http://aistudio.google.com/app/prompts/new_chat?model=gemma-3-27b-it)                                      | 1359 | +3/-3   | 28,099  | Google                 | Gemma                   | 暫無資料     |
-|       26 |              12 | [Claude Sonnet 4 (thinking-32k)](https极m.anthropic.com/news/claude-4)                                                   | 1351 | +7/-5   | 12,534  | Anthropic              | Proprietary             | 暫無資料     |
-|       28 |              22 | [o1-preview](https://platform.openai.com/docs/models/o1)                                                                    | 1350 |极4/-3   | 33,177  | OpenAI                 | Proprietary             | 2023/10  |
+|       26 |              12 | [Claude Sonnet 4 (thinking-32k)](https://www.anthropic.com/news/claude-4)                                                   | 1351 | +7/-5   | 12,534  | Anthropic              | Proprietary             | 暫無資料     |
+|       28 |              22 | [o1-preview](https://platform.openai.com/docs/models/o1)                                                                    | 1350 | +4/-3   | 33,177  | OpenAI                 | Proprietary             | 2023/10  |
 |       29 |              35 | [Qwen3-32B](https://qwenlm.github.io/blog/qwen3/)                                                                           | 1344 | +8/-8   | 4,074   | Alibaba                | Apache 2.0              | 暫無資料     |
 |       31 |              15 | [Claude Sonnet 4 (20250514)](https://www.anthropic.com/news/claude-4)                                                       | 1341 | +5/-4   | 17,996  | Anthropic              | Proprietary             | 暫無資料     |
 |       31 |              28 | [o3-mini-high](https://platform.openai.com/docs/guides/reasoning#reasoning-effort)                                          | 1340 | +5/-3   | 19,404  | OpenAI                 | Proprietary             | 暫無資料     |
@@ -57,7 +57,7 @@
 |       31 |              36 | [Gemma-3-12B-it](http://aistudio.google.com/app/prompts/new_chat?model=gemma-3-12b-it)                                      | 1337 | +8/-8   | 3,976   | Google                 | Gemma                   | 暫無資料     |
 |       31 |              35 | [Mistral-Small-2506](https://huggingface.co/mistralai/Mistral-Small-3.2-24B-Instruct-2506)                                  | 1335 | +9/-7   | 4,940   | Mistral                | Apache 2.0              | 暫無資料     |
 |       31 |              34 | [DeepSeek-V3](https://huggingface.co/deepseek-ai/DeepSeek-V3)                                                               | 1334 | +3/-4   | 22,841  | DeepSeek               | DeepSeek                | 暫無資料     |
-|       31 |              44 | [QwQ-32极](https://huggingface.co/Qwen/QwQ-32B)                                                                              | 1332 | +5/-3   | 19,232  | Alibaba                | Apache 2.0              | 暫無資料     |
+|       31 |              44 | [QwQ-32B](https://huggingface.co/Qwen/QwQ-32B)                                                                              | 1332 | +5/-3   | 19,232  | Alibaba                | Apache 2.0              | 暫無資料     |
 |       34 |              37 | [Qwen-Plus-0125](https://www.alibabacloud.com/help/en/model-studio/developer-reference/what-is-qwen-llm)                    | 1325 | +8/-7   | 6,055   | Alibaba                | Proprietary             | 暫無資料     |
 |       35 |              35 | [Gemini-2.0-Flash-Lite](https://aistudio.google.com/prompts/new_chat?model=gemini-2.0-flash-lite)                           | 1328 | +3/-3   | 26,104  | Google                 | Proprietary             | 暫無資料     |
 |       35 |              36 | [Command A (03-2025)](https://cohere.com/blog/command-a)                                                                    | 1327 | +4/-4   | 26,540  | Cohere                 | CC-BY-NC-4.0            | 暫無資料     |
@@ -65,7 +65,7 @@
 |       35 |              62 | [Amazon-Nova-Experimental-Chat-05-14](https://nova.amazon.com/faqs)                                                         | 1325 | +6/-5   | 9,753   | Amazon                 | Proprietary             | 暫無資料     |
 |       35 |              35 | [Llama-3.1-Nemotron-Ultra-253B-v1](https://huggingface.co/nvidia/Llama-3_1-Nemotron-Ultra-253B-v1)                          | 1321 | +11/-10 | 2,656   | Nvidia                 | Nvidia Open Model       | 暫無資料     |
 |       39 |              51 | [Qwen3-30B-A3B](https://qwenlm.github.io/blog/qwen3/)                                                                       | 1321 | +6/-5   | 16,285  | Alibaba                | Apache 2.0              | 暫無資料     |
-|       39 |              44 | [Step-2-16K-Exp](https://platform.stepfun.com/docs/llm/text)                                                                | 1320 | +8/-极 | 5,126   | StepFun                | Proprietary             | 暫無資料     |
+|       39 |              44 | [Step-2-16K-Exp](https://platform.stepfun.com/docs/llm/text)                                                                | 1320 | +8/-7   | 5,126   | StepFun                | Proprietary             | 暫無資料     |
 |       39 |              35 | [Hunyuan-TurboS-20250226](https://cloud.tencent.com/document/product/1729/104753)                                           | 1318 | +8/-10  | 2,452   | Tencent                | Proprietary             | 暫無資料     |
 |       40 |              46 | [Llama-3.3-Nemotron-Super-49B-v1](https://huggingface.co/nvidia/Llama-3_3-Nemotron-Super-49B-v1)                            | 1312 | +13/-9  | 2,371   | Nvidia                 | Nvidia                  | 暫無資料     |
 |       41 |              46 | [o1-mini](https://platform.openai.com/docs/models/o1)                                                                       | 1319 | +3/-3   | 54,951  | OpenAI                 | Proprietary             | 2023/10  |
@@ -77,4 +77,4 @@
 |       50 |              25 | [Claude 3.7 Sonnet](https://www.anthropic.com/news/claude-3-7-sonnet)                                                       | 1305 | +5/-4   | 32,904  | Anthropic              | Proprietary             | 暫無資料     |
 |       52 |              52 | [Grok-2-08-13](https://x.ai/blog/grok-2)                                                                                    | 1303 | +2/-2   | 67,084  | xAI                    | Proprietary             | 2024/3   |
 |       52 |              56 | [Yi-Lightning](https://platform.lingyiwanwu.com/docs#%E6%A8%A1%E5%9E%8B%E4%B8%8E%E8%AE%A1%E8%B4%B9)                         | 1302 | +3/-3   | 28,968  | 01 AI                  | Proprietary             | 暫無資料     |
-|       53 |              40 | [GPT-4o-2024
+|       53 |              40 | [

@@ -1,4 +1,4 @@
-# LLM Arena Leaderboard (Actualizado en tiempo real)
+# Leaderboard de Arena LLM (Actualizado en Tiempo Real)
 
 
 {% hint style="warning" %}
@@ -8,19 +8,17 @@ Este documento ha sido traducido del chino por IA y aún no ha sido revisado.
 
 
 
-{% hint style="warning" %}
-Este ranking se genera automáticamente a partir de los datos de Chatbot Arena (lmarena.ai) mediante un proceso automatizado.
-{% endhint %}
+Este es un leaderboard basado en datos de Chatbot Arena (lmarena.ai), generado mediante un proceso automatizado.
 
-> **Última actualización**: 2025-07-26 11:42:38 UTC / 2025-07-26 19:42:38 CST (Hora de Pekín)
+> **Fecha de actualización de datos**: 2025-07-27 11:42:21 UTC / 2025-07-27 19:42:21 CST (Hora de Beijing)
 
 {% hint style="info" %}
-Haz clic en el **nombre del modelo** en el ranking para acceder a su página de detalles o prueba.
+Haz clic en el **nombre del modelo** en el leaderboard para ir a su página de detalles o prueba.
 {% endhint %}
 
 ## Leaderboard
 
-| Clasificación (UB) | Clasificación (StyleCtrl) | Nombre del modelo                                                                                                                         | Puntuación | Intervalo de confianza | Votos      | Proveedor                    | Licencia                    | Fecha límite de conocimiento   |
+| Rango (UB) | Rango (StyleCtrl) | Nombre del modelo                                                                                                                         | Puntuación | Intervalo de confianza | Votos       | Proveedor                    | Licencia                    | Fecha de corte de conocimiento |
 |:---|:---|:---|:---|:---|:---|:---|:---|:---|
 |        1 |               1 | [Gemini-2.5-Pro](http://aistudio.google.com/app/prompts/new_chat?model=gemini-2.5-pro)                                      | 1474 | +5/-4   | 19,209  | Google                 | Propietario             | Datos no disponibles     |
 |        2 |               2 | [Gemini-2.5-Pro-Preview-05-06](http://aistudio.google.com/app/prompts/new_chat?model=gemini-2.5-pro-preview-05-06)          | 1446 | +4/-5   | 13,692  | Google                 | Propietario             | Datos no disponibles     |
@@ -36,7 +34,7 @@ Haz clic en el **nombre del modelo** en el ranking para acceder a su página de 
 |       11 |               7 | [GPT-4.1-2025-04-14](https://openai.com/index/gpt-4-1/)                                                                     | 1384 | +5/-4   | 20,325  | OpenAI                 | Propietario             | Datos no disponibles     |
 |       12 |              14 | [DeepSeek-V3-0324](https://api-docs.deepseek.com/news/news250325)                                                           | 1382 | +5/-4   | 23,031  | DeepSeek               | MIT                     | Datos no disponibles     |
 |       12 |              22 | [Hunyuan-Turbos-20250416](https://cloud.tencent.com/document/product/1729/104753)                                           | 1378 | +5/-5   | 8,950   | Tencent                | Propietario             | Datos no disponibles     |
-|       12 |               6 | [kimi-k2-0711-preview](https://moonshotai.github.io/Kimi-K2/)                                                               | 1374 | +12/-11 | 3,166   | Moonshot               | MIT modificado            | Datos no disponibles     |
+|       12 |               6 | [kimi-k2-0711-preview](https://moonshotai.github.io/Kimi-K2/)                                                               | 1374 | +12/-11 | 3,166   | Moonshot               | MIT Modificado          | Datos no disponibles     |
 |       14 |              15 | [DeepSeek-R1](https://api-docs.deepseek.com/news/news250120)                                                                | 1373 | +3/-5   | 19,430  | DeepSeek               | MIT                     | Datos no disponibles     |
 |       14 |              21 | [Mistral Medium 3](https://mistral.ai/news/mistral-medium-3)                                                                | 1372 | +4/-3   | 23,574  | Mistral                | Propietario             | Datos no disponibles     |
 |       14 |               7 | [Claude Opus 4 (thinking-16k)](https://www.anthropic.com/news/claude-4)                                                     | 1371 | +6/-5   | 13,582  | Anthropic              | Propietario             | Datos no disponibles     |
@@ -76,6 +74,6 @@ Haz clic en el **nombre del modelo** en el ranking para acceder a su página de 
 |       42 |              37 | [Hunyuan-Turbo-0110](https://cloud.tencent.com/document/product/1729/104753)                                                | 1311 | +8/-11  | 2,510   | Tencent                | Propietario             | Datos no disponibles     |
 |       46 |              21 | [Claude 3.7 Sonnet (thinking-32k)](https://www.anthropic.com/news/claude-3-7-sonnet)                                        | 1312 | +4/-3   | 28,145  | Anthropic              | Propietario             | Datos no disponibles     |
 |       49 |              64 | [Gemma-3n-e4b-it](http://aistudio.google.com/app/prompts/new_chat?model=gemma-3n-e4b-it)                                    | 1305 | +6/-6   | 9,350   | Google                 | Gemma                   | Datos no disponibles     |
-|       50 |              25 | [Claude 3.7 Sonnet](https://www.anthropic.com/news/claude-3-7-sonnet)                                                       | 1305 | +5/-4   | 32,904  | Anthropic              | Propietario             | Datos no disponibles     |
+|       50 |              25 | [Claude 3.5 Sonnet](https://www.anthropic.com/news/claude-3-5-sonnet)                                                       | 1305 | +5/-4   | 32,904  | Anthropic              | Propietario             | Datos no disponibles     |
 |       52 |              52 | [Grok-2-08-13](https://x.ai/blog/grok-2)                                                                                    | 1303 | +2/-2   | 67,084  | xAI                    | Propietario             | 2024/3   |
-|       52 |              56 | [Yi-Lightning](https://platform.lingyiwanwu.com/docs#%E6%A8%A1%E5%
+|       52 |              56 | [Yi-Lightning](https://platform.lingyiwanwu.com/docs#%E6%A8%A1%E5%9E%8B%E4%B8%8E%E8
