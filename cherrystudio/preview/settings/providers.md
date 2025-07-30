@@ -2,7 +2,7 @@
 icon: cloud-check
 ---
 
-# 服务商设置
+# 模型服务设置
 
 当前页面仅做界面功能的介绍，配置教程可以参考基础教程中的 [服务商配置](../../../pre-basic/providers/) 教程。
 
@@ -10,8 +10,6 @@ icon: cloud-check
 * 在使用内置服务商时只需要填写对应的秘钥即可。
 * 不同服务商对秘钥的叫法可能有所不同，秘钥、Key、API Key、令牌等都指的是同一个东西。
 {% endhint %}
-
-
 
 ### API 秘钥
 
@@ -42,10 +40,8 @@ icon: cloud-check
 * API地址使用 `/` 结尾时只拼接"<mark style="background-color:green;">chat/completions</mark>"
 * API地址使用 `#` 结尾时不执行拼接操作，只使用填入的地址。
 
-![](<../../../.gitbook/assets/image (1) (1) (1) (1) (1) (1).png>)![](<../../../.gitbook/assets/image (15).png>)
+<img src="../../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1).png" alt="" data-size="original"><img src="../../../.gitbook/assets/image (15).png" alt="" data-size="original">
 {% endhint %}
-
-
 
 ### 添加模型
 
@@ -54,7 +50,6 @@ icon: cloud-check
 {% hint style="info" %}
 点击管理按钮时弹窗列表里的模型不会全部添加，需要点击模型右侧的 `+` ，添加到服务商配置页面的模型列表才可以在模型选择列表当中出现。
 {% endhint %}
-
 
 ### 连通性检查
 

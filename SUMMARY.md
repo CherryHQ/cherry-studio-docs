@@ -60,7 +60,6 @@
   * [Notion 配置教程](data-settings/notion.md)
   * [Obsidian 配置教程](data-settings/obsidian.md)
   * [思源笔记配置教程](data-settings/siyuan.md)
-  
 * [个性化设置](personalization-settings/README.md)
   * [自定义 CSS](personalization-settings/css.md)
   * [字体推荐](personalization-settings/font.md)
@@ -84,6 +83,7 @@
   * [配置 Dify 知识库](advanced-basic/mcp/dify.md)
   * [添加 ModelScope MCP 服务器](advanced-basic/mcp/tian-jia-modelscope-mcp-fu-wu-qi.md)
   * [常见问题](advanced-basic/mcp/chang-jian-wen-ti.md)
+* [调用链使用说明](advanced-basic/diao-yong-lian-shi-yong-shuo-ming.md)
 
 ## 项目贡献 <a href="#contribution" id="contribution"></a>
 
