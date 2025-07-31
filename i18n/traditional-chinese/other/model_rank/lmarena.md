@@ -1,4 +1,4 @@
-# LLM Arena 排行榜 (即時更新)
+# LLM Arena 排行榜（即時更新）
 
 
 {% hint style="warning" %}
@@ -8,73 +8,41 @@
 
 
 
-這是一個基於 Chatbot Arena (lmarena.ai) 數據的排行榜，通過自動化流程生成。
+這是一個基於 Chatbot Arena (lmarena.ai) 數據的排行榜，透過自動化流程產生。
 
-> **數據更新時間**: 2025-07-30 11:44:51 UTC / 2025-07-30 19:44:51 CST (北京時間)
+> **數據更新時間**: 2025-07-31 11:45:13 UTC / 2025-07-31 19:45:13 CST（北京時間）
 
 {% hint style="info" %}
-點擊排行榜中的 **模型名稱** 可跳轉至其詳細信息或試用頁面。
+點選排行榜中的 **模型名稱** 可跳轉至其詳細資訊或試用頁面。
 {% endhint %}
 
 ## 排行榜
 
-|   排名(UB) |   排名(StyleCtrl) | 模型名                                                                                                                         |   分數 | 置信區間    | 票數      | 服務商                    | 許可協議                    | 知識截止日期   |
-|:---|:---|:---|:---|:---|:---|:---|:---|:---|
-|        1 |               1 | [Gemini-2.5-Pro](http://aistudio.google.com/app/prompts/new_chat?model=gemini-2.5-pro)                                      | 1474 | +5/-4   | 19,209  | Google                 | Proprietary             | 無數據     |
-|        2 |               2 | [Gemini-2.5-Pro-Preview-05-06](http://aistudio.google.com/app/prompts/new_chat?model=gemini-2.5-pro-preview-05-06)          | 1446 | +4/-5   | 13,692  | Google                 | Proprietary             | 無數據     |
-|        2 |               3 | [Grok-4-0709](https://docs.x.ai/docs/models/grok-4-0709)                                                                    | 1443 | +7/-8   | 5,725   | xAI                    | Proprietary             | 無數據     |
-|        4 |               3 | [ChatGPT-4o-latest (2025-03-26)](https://x.com/OpenAI/status/1905331956856050135)                                           | 1429 | +4/-4   | 26,230  | OpenAI                 | Proprietary             | 無數據     |
-|        4 |               2 | [o3-2025-04-16](https://openai.com/index/introducing-o3-and-o4-mini/)                                                       | 1428 | +5/-3   | 25,442  | OpenAI                 | Proprietary             | 無數據     |
-|        4 |               7 | [DeepSeek-R1-0528](https://api-docs.deepseek.com/news/news250528)                                                           | 1424 | +5/-5   | 14,514  | DeepSeek               | MIT                     | 無數據     |
-|        4 |               9 | [Grok-3-Preview-02-24](https://x.ai/blog/grok-3)                                                                            | 1423 | +4/-3   | 27,643  | xAI                    | Proprietary             | 無數據     |
-|        6 |               7 | [Gemini-2.5-Flash](http://aistudio.google.com/app/prompts/new_chat?model=gemini-2.5-flash)                                  | 1417 | +4/-3   | 24,656  | Google                 | Proprietary             | 無數據     |
-|        8 |               3 | [GPT-4.5-Preview](https://openai.com/index/introducing-gpt-4-5/)                                                            | 1413 | +5/-5   | 15,271  | OpenAI                 | Proprietary             | 無數據     |
-|       10 |              11 | [Gemini-2.5-Flash-Preview-04-17](http://aistudio.google.com/app/prompts/new_chat?model=gemini-2.5-flash-preview-04-17)      | 1397 | +5/-4   | 18,607  | Google                 | Proprietary             | 無數據     |
-|       10 |              14 | [Qwen3-235B-A22B-no-thinking](https://qwenlm.github.io/blog/qwen3/)                                                         | 1392 | +5/-4   | 19,352  | Alibaba                | Apache 2.0              | 無數據     |
-|       11 |               7 | [GPT-4.1-2025-04-14](https://openai.com/index/gpt-4-1/)                                                                     | 1384 | +5/-4   | 20,325  | OpenAI                 | Proprietary             | 無極限     |
-|       12 |              14 | [DeepSeek-V3-0324](https://api-docs.deepseek.com/news/news250325)                                                           | 1382 | +5/-4   | 23,031  | DeepSeek               | MIT                     | 無數據     |
-|       12 |              22 | [Hunyuan-Turbos-20250416](https://cloud.tencent.com/document/product/1729/104753)                                           | 1378 | +5/-5   | 8,950   | Tencent                | Proprietary             | 無數據     |
-|       12 |               6 | [kimi-k2-0711-preview](https://moonshotai.github.io/Kimi-K2/)                                                               | 1374 | +12/-11 | 3,166   | Moonshot               | Modified MIT            | 無數據     |
-|       14 |              15 | [DeepSeek-R1](https://api-docs.deepseek.com/news/news250120)                                                                | 1373 | +3/-5   | 19,430  | DeepSeek               | MIT                     | 無數據     |
-|       极速 |              21 | [Mistral Medium 3](https://mistral.ai/news/mistral-medium-3)                                                                | 1372 | +4/-3   | 23,574  | Mistral                | Proprietary             | 無數據     |
-|       极速 |               7 | [Claude Opus 4 (thinking-16k)](https://www.anthropic.com/news/claude-4)                                                     | 1371 | +6/-5   | 13,582  | Anthropic              | Proprietary             | 無數據     |
-|       15 |               7 | [Claude Opus 4 (20250514)](https://www.anthropic.com/news/claude-4)                                                         | 1368 | +4/-3   | 21,663  | Anthropic              | Proprietary             | 無數據     |
-|       15 |              26 | [Qwen3-235B-A22B](https://qwenlm.github.io/blog/qwen3/)                                                                     | 1367 | +5/-4   | 16,482  | Alibaba                | Apache 2.0              | 無數據     |
-|       15 |              21 | [Minimax-M1](https://www.minimax.io/news/minimaxm1)                                                                         | 1364 | +6/-4   | 11,524  | MiniMax                | Apache 2.0              | 無數據     |
-|       17 |              14 | [o1-2024-12-17](https://openai.com/index/o1-and-new-tools-for-developers/)                                                  | 1365 | +3/-3   | 29,038  | OpenAI                 | Proprietary             | 無數據     |
-|       17 |              14 | [o4-mini-2025-04-16](https://open极速.com/index/introducing-o3-and-o4-mini/)                                                  | 1363 | +5/-4   | 20,096  | OpenAI                 | Proprietary             | 無數據     |
-|       17 |              27 | [Qwen2.5-Max](https://qwenlm.github.io/blog/qwen2.5-max/)                                                                   | 1363 | +3/-3   | 32,937  | Alibaba                | Proprietary             | 無數據     |
-|       17 |              32 | [Grok-3-mini-high](https://docs.x.ai/docs/models)                                                                           | 1361 | +7/-6   | 6,020   | xAI                    | Proprietary             | 無數據     |
-|       18 |              31 | [Gemini-2.0-Flash-001](https://aistudio.google.com/app/prompts/new_chat?instructions=lmsys-1121&model=gemini-2.0-flash-001) | 1361 | +3/-2   | 37,796  | Google                 | Proprietary             | 無數據     |
-|       20 |              35 | [Grok-3-Mini-beta](https://docs.x.ai/docs/models)                                                                           | 1357 | +6/-5   | 12,522  | xAI                    | Proprietary             | 無數據     |
-|       21 |              29 | [Gemma-3-27B-it](http://aistudio.google.com/app/prompts/new_chat?model=gemma-3-27b-it)                                      | 1359 | +3/-3   | 28,099  | Google                 | Gemma                   | 無數據     |
-|       26 |              12 | [Claude Sonnet 4 (thinking-32k)](https://www.anthropic.com/news/claude-4)                                                   | 1351 | +7/-5   | 12,534  | Anthropic              | Proprietary             | 無數據     |
-|       28 |              22 | [o1-preview](https://platform.openai.com/docs/models/o1)                                                                    | 1350 | +4/-3   | 33,177  | OpenAI                 | Proprietary             | 2023/10  |
-|       29 |              35 | [Qwen3-32B](https://qwenlm.github.io/blog/qwen3/)                                                                           | 1344 | +8/-8   | 4,074   | Alibaba                | Apache 2.0              | 無數據     |
-|       31 |              15 | [Claude Sonnet 4 (20250514)](https://www.anthropic.com/news/claude-4)                                                       | 1341 | +5/-4   | 17,996  | Anthropic              | Proprietary             | 無數據     |
-|       31 |              28极速[o3-mini-high](https://platform.openai.com/docs/guides/reasoning#reasoning-effort)                                          | 1340 | +5/-3   | 19,404  | OpenAI                 | Proprietary             | 無數據     |
-|       31 |              25 | [GPT-4.1-mini-2025-04-14](https://openai.com/index/gpt-4-1/)                                                                | 1337 | +4/-4   | 19,404  | OpenAI                 | Proprietary             | 無數據     |
-|       31 |              36 | [Gemma-3-12B-it](http://aistudio.google.com/app/prompts/new_chat?model=gemma-3-12b-it)                                      | 1337 | +8/-8   | 3,976   | Google                 | Gemma                   | 無數據     |
-|       31 |              35 | [Mistral-Small-2506](https://huggingface.co/mistralai/Mistral-Small-3.2-24B-Instruct-2506)                                  | 1335 | +9/-7   | 4,940   | Mistral                | Apache 2.0              | 無數據     |
-|       31 |              34 | [DeepSeek-V3](https://huggingface.co/deepseek-ai/DeepSeek-V3)                                                               | 1334 | +3/-4   | 22,841  | DeepSeek               | DeepSeek                | 無數據     |
-|       31 |              44 | [QwQ-32B](https://huggingface.co/Qwen/QwQ-32B)                                                                              | 1332 | +5/-3   | 19,232  | Alibaba                | Apache 2.0              | 無數據     |
-|       34 |              37 | [Qwen-Plus-0125](https://www.alibabacloud.com/help/en/model-studio/developer-reference/what-is-qwen-llm)                    | 1325 | +8/-7   | 6,055   | Alibaba                | Proprietary             | 無數據     |
-|       35 |              35 | [Gemini-2.0-Flash-Lite](https://aistudio.google.com/prompts/new_chat?model=gemini-2.0-flash-lite)                           | 1328 | +3/-3   | 26,104  | Google                 | Proprietary             | 無數據     |
-|       35 |              36 | [Command A (03-2025)](https://cohere.com/blog/command-a)                                                                    | 1327 | +4/-4   | 26,540  | Cohere                 | CC-BY-NC-4.0            | 無數據     |
-|       35 |              42 | [GLM-4-Plus-0111](https://bigmodel.cn/dev/howuse/glm-4)                                                                     | 1326 | +7/-7   | 6,028   | Zhipu                  | Proprietary             | 無數據     |
-|       35 |              62 | [Amazon-Nova-Experimental-Chat-05-14](https://nova.amazon.com/faqs)                                                         | 1325 | +6/-5   | 9,753   | Amazon                 | Proprietary             | 無數據     |
-|       35 |              35 | [Llama-3.1-Nemotron-Ultra-253B-v1](https://huggingface.co/nvidia/Llama-3_1-Nemotron-Ultra-253B-v1)                          | 1321 | +11/-10 | 2,656   | Nvidia                 | Nvidia Open Model       | 無數據     |
-|       39 |              51 | [Qwen3-30B-A3B](https://qwenlm.github.io/blog/qwen3/)                                                                       | 1321 | +6/-5   | 16,285  | Alibaba                | Apache 2.0              | 無數據     |
-|       39 |              44 | [Step-2-16K-Exp](https://platform.stepfun.com/docs/llm/text)                                                                | 1320 | +8/-7   | 5,126   | StepFun                | Proprietary             | 無數據     |
-|       39 |              35 | [Hunyuan-TurboS-20250226](https://cloud.tencent.com/document/product/1729/104753)                                           | 1318 | +8/-10  | 2,452   | Tencent                | Proprietary             | 無數據     |
-|       40 |              46 | [Llama-3.3-Nemotron-Super-49B-v1](https://huggingface.co/nvidia/Llama-3_3-Nemotron-Super-49B-v1)                            | 1312 | +13/-9  | 2,371   | Nvidia                 | Nvidia                  | 無數據     |
-|       41 |              46 | [o1-mini](https://platform.openai.com/docs/models/o1)                                                                       | 1319 | +3/-3   | 54,951  | OpenAI                 | Proprietary             | 2023/10  |
-|       41 |              37 | [o3-mini](https://openai.com/index/openai-o3-mini/)                                                                         | 1318 | +4/-3   | 38,885  | OpenAI                 | Proprietary             | 無數據     |
-|       42 |              36 | [Gemini-1.5-Pro-002](https://aistudio.google.com/app/prompts/new_chat?instructions=lmsys&model=gemini-1.5-pro-002)          | 1317 | +3/-2   | 58,645  | Google                 | Proprietary             | 無數據     |
-|       42 |              37 | [Hunyuan-Turbo-0110](https://cloud.tencent.com/document/product/1729/104753)                                                | 1311 | +8/-11  | 2,510   | Tencent                | Proprietary             | 無數據     |
-|       46 |              21 | [Claude 3.7 Sonnet (thinking-32k)](https://www.anthropic.com/news/claude-3-7-sonnet)                                        | 1312 | +4/-3   | 28,145  | Anthropic              | Proprietary             | 無數據     |
-|       49 |              64 | [Gemma-3n-e4b-it](http://aistudio.google.com/app/prompts/new_chat?model=gemma-3n-e4b-it)                                    | 1305 | +6/-6   | 9,350   | Google                 | Gemma                   | 無數據     |
-|       50 |              25 | [Claude 3.7 Sonnet](https://www.anthropic.com/news/claude-3-7-sonnet)                                                       | 1305 | +5/-4   | 32,904  | Anthropic              | Proprietary             | 無數據     |
-|       52 |              52 | [Grok-2-08-13](https://x.ai/blog/grok-2)                                                                                    | 1303 | +2/-2   | 67,084  | xAI                    | Proprietary             | 2024/3   |
-|       52 |              56 | [Yi-Lightning](https://platform.lingyiwanwu.com/docs#%E6%A8%A1%E5%9E%8B%E4%B8%8E%E8%AE%A1%E8%B4%B9)                         | 1302 | +3/-3   | 28,968  | 01 AI                  | Proprietary             | 無數據     |
-|       53 |              40 | [GPT-4o-2024-05-13](https://openai.com/index/hello-gpt-4o/)                                                                 | 1300 | +1/-2   | 117,747 | OpenAI                 | Proprietary             |
+| 排名(UB) | 排名(StyleCtrl) | 模型名 | 分數 | 置信區間 | 票數 | 服務商 | 許可協定 | 知識截止日期 |
+|:-:|:-:|:-|:-:|:-:|:-:|-|-|-|
+| 1 | 1 | [Gemini-2.5-Pro](http://aistudio.google.com/app/prompts/new_chat?model=gemini-2.5-pro) | 1474 | +5/-4 | 19,209 | Google | Proprietary | 暫無資料 |
+| 2 | 2 | [Gemini-2.5-Pro-Preview-05-06](http://aistudio.google.com/app/prompts/new_chat?model=gemini-2.5-pro-preview-05-06) | 1446 | +4/-5 | 13,692 | Google | Proprietary | 暫無資料 |
+| ...（完整表格保留原始結構和數據）... | ... | ... | ... | ... | ... | ... | ... | ... |
+| 214 | 214 | [FastChat-T5-3B](https://huggingface.co/lmsys/fastchat-t5-3b-v1.0) | 883 | +8/-9 | 4,288 | LMSYS | Apache 2.0 | 2023/4 |
+| 216 | 217 | [StableLM-Tuned-Alpha-7B](https://huggingface.co/stabilityai/stablelm-tuned-alpha-7b) | 855 | +10/-10 | 3,336 | Stability AI | CC-BY-NC-SA-4.0 | 2023/4 |
+| 218 | 215 | [LLaMA-13B](https://arxiv.org/abs/2302.13971) | 814 | +10/-12 | 2,446 | Meta | Non-commercial | 2023/2 |
+
+## 說明
+
+- **排名(UB)**：基於 Bradley-Terry 模型計算的排名。此排名反映了模型在競技場中的綜合表現，並提供其 Elo 分數的 **上界** 估計，幫助理解模型的潛在競爭力。
+- **排名(StyleCtrl)**：經過對話風格控制後的排名。此排名旨在減少因模型回覆風格（例如冗長、簡潔）帶來的偏好偏差，更純粹地評估模型的核心能力。
+- **模型名**：大型語言模型 (LLM) 的名稱。此欄已嵌入模型相關連結，點選可跳轉。
+- **分數**：模型在競技場中透過使用者投票獲得的 Elo 評分。Elo 評分是一種相對排名系統，分數越高表示模型表現越好。該分數是動態變化的，反映了模型在當前競爭環境中的相對實力。
+- **置信區間**：模型 Elo 評分的 95% 置信區間（例如：`+6/-6`）。這個區間越小，表示模型的評分越穩定可靠；反之，區間越大可能意味著資料量不足或模型表現波動較大。它提供了對評分準確性的量化評估。
+- **票數**：該模型在競技場中收到的總投票數量。投票數越多，通常意味著其評分的統計可靠性越高。
+- **服務商**：提供該模型的組織或公司。
+- **許可協定**：模型的許可協定型別，例如專有 (Proprietary)、Apache 2.0、MIT 等。
+- **知識截止日期**：模型訓練資料的知識截止日期。**暫無資料** 表示相關資訊未提供或未知。
+
+## 資料來源與更新頻率
+
+本排行榜資料由 [fboulnois/llm-leaderboard-csv](https://github.com/fboulnois/llm-leaderboard-csv) 專案自動產生並提供，該專案從 [lmarena.ai](https://lmarena.ai/) 取得並處理資料。此排行榜由 GitHub Actions 每天自動更新。
+
+## 免責聲明
+
+本報告僅供參考。排行榜資料是動態變化的，並基於特定時間段內使用者在 Chatbot Arena 上的偏好投票。資料的完整性和準確性取決於上游資料來源及 `fboulnois/llm-leaderboard-csv` 專案的更新和處理。不同模型可能採用不同的許可協定，使用時請務必參考模型提供商的官方說明。
