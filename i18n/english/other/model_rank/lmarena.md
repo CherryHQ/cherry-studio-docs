@@ -1,4 +1,4 @@
-# LLM Arena Leaderboard (Real-time Update)
+# LLM Arena Leaderboard (Real-time Updates)
 
 
 {% hint style="warning" %}
@@ -8,12 +8,12 @@ This document was translated from Chinese by AI and has not yet been reviewed.
 
 
 
-This is a leaderboard generated through an automated process, based on Chatbot Arena (lmarena.ai) data.
+This is a leaderboard based on Chatbot Arena (lmarena.ai) data, generated through an automated process.
 
-> **Data Update Time**: 2025-08-02 11:42:41 UTC / 2025-08-02 19:42:41 CST (Beijing Time)
+> **Data last updated**: 2025-08-03 11:44:30 UTC / 2025-08-03 19:44:30 CST (Beijing Time)
 
 {% hint style="info" %}
-Click on the **model name** in the leaderboard to jump to its detailed information or trial page.
+Clicking the **Model Name** in the leaderboard will redirect you to its detailed information or trial page.
 {% endhint %}
 
 ## Leaderboard
@@ -241,20 +241,20 @@ Click on the **model name** in the leaderboard to jump to its detailed informati
 
 ## Explanation
 
--   **Rank (UB)**: Ranking calculated based on the Bradley-Terry model. This ranking reflects the overall performance of the model in the arena and provides an **upper bound** estimate of its Elo score, helping to understand the model's potential competitiveness.
--   **Rank (StyleCtrl)**: Ranking after conversational style control. This ranking aims to reduce preference bias caused by model response styles (e.g., verbose, concise), to more purely evaluate the model's core capabilities.
--   **Model Name**: The name of the Large Language Model (LLM). This column includes links to model-related pages, which can be clicked to navigate.
--   **Score**: The Elo rating obtained by the model through user votes in the arena. The Elo rating is a relative ranking system, where a higher score indicates better model performance. This score is dynamic and reflects the model's relative strength in the current competitive environment.
--   **Confidence Interval**: The 95% confidence interval of the model's Elo rating (e.g., `+6/-6`). A smaller interval indicates a more stable and reliable model rating; conversely, a larger interval may suggest insufficient data or greater fluctuation in model performance. It provides a quantitative assessment of rating accuracy.
--   **Votes**: The total number of votes received by the model in the arena. More votes generally mean higher statistical reliability of its rating.
--   **Provider**: The organization or company that provides the model.
--   **License**: The type of license for the model, such as Proprietary, Apache 2.0, MIT, etc.
--   **Knowledge Cutoff Date**: The knowledge cutoff date for the model's training data. **N/A** indicates that the relevant information is not provided or is unknown.
+*   **Rank (UB)**: Rank calculated based on the Bradley-Terry model. This rank reflects the overall performance of models in the arena and provides an **upper bound** estimate of their Elo scores, helping to understand the potential competitiveness of the models.
+*   **Rank (StyleCtrl)**: Rank after controlling for conversation style. This rank aims to reduce preference bias caused by model response styles (e.g., verbose, concise), providing a purer assessment of the model's core capabilities.
+*   **Model Name**: The name of the Large Language Model (LLM). This column includes relevant model links, which you can click to navigate.
+*   **Score**: The Elo rating obtained by the model in the arena through user votes. Elo rating is a relative ranking system, where a higher score indicates better model performance. This score is dynamic and reflects the model's relative strength in the current competitive environment.
+*   **Confidence Interval**: The 95% confidence interval for the model's Elo score (e.g., `+6/-6`). A smaller interval indicates that the model's score is more stable and reliable; conversely, a larger interval may suggest insufficient data or greater variability in model performance. It provides a quantitative assessment of the score's accuracy.
+*   **Votes**: The total number of votes received by the model in the arena. More votes generally mean higher statistical reliability of its score.
+*   **Provider**: The organization or company that provides the model.
+*   **License**: The type of license for the model, such as Proprietary, Apache 2.0, MIT, etc.
+*   **Knowledge Cutoff Date**: The knowledge cutoff date for the model's training data. **N/A** indicates that the relevant information is not provided or unknown.
 
 ## Data Source and Update Frequency
 
-This leaderboard data is automatically generated and provided by the [fboulnois/llm-leaderboard-csv](https://github.com/fboulnois/llm-leaderboard-csv) project, which obtains and processes data from [lmarena.ai](https://lmarena.ai/). This leaderboard is automatically updated daily by GitHub Actions.
+This leaderboard data is automatically generated and provided by the [fboulnois/llm-leaderboard-csv](https://github.com/fboulnois/llm-leaderboard-csv) project, which obtains and processes data from [lmarena.ai](https://lmarena.ai/). This leaderboard is updated automatically daily by GitHub Actions.
 
 ## Disclaimer
 
-This report is for reference only. Leaderboard data is dynamic and based on user preference votes on Chatbot Arena within a specific period. The completeness and accuracy of the data depend on the updates and processing of the upstream data source and the `fboulnois/llm-leaderboard-csv` project. Different models may use different license agreements; please refer to the official documentation of the model provider for usage.
+This report is for reference only. The leaderboard data is dynamic and based on user preference votes on Chatbot Arena during a specific period. The completeness and accuracy of the data depend on the upstream data source and the updates and processing of the `fboulnois/llm-leaderboard-csv` project. Different models may adopt different license agreements; please refer to the official documentation of the model provider when using them.
