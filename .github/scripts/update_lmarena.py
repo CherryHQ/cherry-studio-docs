@@ -31,7 +31,7 @@ def update_leaderboard_data():
     从 fboulnois/llm-leaderboard-csv 项目下载排行榜数据，
     处理后生成 Markdown 文件。
     """
-    csv_url = 'https://github.com/fboulnois/llm-leaderboard-csv/releases/latest/download/lmsys.csv'
+    csv_url = 'https://github.com/fboulnois/llm-leaderboard-csv/releases/latest/download/lmarena_text.csv'
     output_file_path = 'other/model_rank/lmarena.md'
 
     logging.info(f'Attempting to download CSV from: {csv_url}')
