@@ -10,7 +10,7 @@ This document was translated from Chinese by AI and has not yet been reviewed.
 
 This is a leaderboard based on Chatbot Arena (lmarena.ai) data, generated through an automated process.
 
-> **Data Update Time**: 2025-08-08 11:44:43 UTC / 2025-08-08 19:44:43 CST (Beijing Time)
+> **Data last updated**: 2025-08-09 11:41:56 UTC / 2025-08-09 19:41:56 CST (Beijing Time)
 
 {% hint style="info" %}
 Click on the **Model Name** in the leaderboard to jump to its detailed information or trial page.
@@ -18,7 +18,7 @@ Click on the **Model Name** in the leaderboard to jump to its detailed informati
 
 ## Leaderboard
 
-| Rank (UB) | Rank (StyleCtrl) | Model Name | Score | Confidence Interval | Votes | Provider | License | Knowledge Cutoff Date |
+| Rank (UB) | Rank (StyleCtrl) | Model Name | Score | Confidence Interval | Votes | Provider | License Agreement | Knowledge Cutoff Date |
 |:---|:---|:---|:---|:---|:---|:---|:---|:---|
 | 1 | 1 | [Gemini-2.5-Pro](http://aistudio.google.com/app/prompts/new_chat?model=gemini-2.5-pro) | 1470 | +5/-5 | 26,019 | Google | Proprietary | nan |
 | 2 | 2 | [Gemini-2.5-Pro-Preview-05-06](http://aistudio.google.com/app/prompts/new_chat?model=gemini-2.5-pro-preview-05-06) | 1446 | +6/-6 | 13,715 | Google | Proprietary | nan |
@@ -140,7 +140,7 @@ Click on the **Model Name** in the leaderboard to jump to its detailed informati
 | 118 | 109 | [Meta-Llama-3.1-70B-Instruct](https://ai.meta.com/blog/meta-llama-3-1/) | 1264 | +3/-3 | 58,637 | Meta | Llama 3.1 Community | 2023/12 |
 | 119 | 111 | [Amazon Nova Pro 1.0](https://docs.aws.amazon.com/nova/latest/userguide/what-is-nova.html) | 1261 | +4/-4 | 26,371 | Amazon | Proprietary | nan |
 | 120 | 107 | [Llama-3.1-Tulu-3-70B](https://huggingface.co/allenai/Llama-3.1-Tulu-3-70B) | 1259 | +10/-10 | 3,010 | Ai2 | Llama 3.1 | nan |
-| 121 | 114 | [Yi-Large-preview](https://platform.lingyiwanwu.com/docs#%E6%A8%A1%E5%9E%8B) | 1258 | +4/-4 | 51,628 | 01 AI | Proprietary | No data available |
+| 121 | 114 | [Yi-Large-preview](https://platform.lingyiwanwu.com/docs#%E6%A8%A1%E5%9E%8B) | 1258 | +4/-4 | 51,628 | 01 AI | Proprietary | No Data Available |
 | 122 | 119 | [Claude 3.5 Haiku (20241022)](https://www.anthropic.com/news/3-5-models-and-computer-use) | 1255 | +3/-3 | 55,928 | Anthropic | Propretary | nan |
 | 123 | 119 | [magistral-medium-2506](https://mistral.ai/news/magistral) | 1252 | +7/-7 | 8,534 | Mistral | Proprietary | nan |
 | 124 | 119 | [Reka-Core-20240904](https://docs.reka.ai/available-models) | 1251 | +6/-6 | 7,948 | Reka AI | Proprietary | nan |
@@ -151,7 +151,7 @@ Click on the **Model Name** in the leaderboard to jump to its detailed informati
 | 129 | 125 | [Deepseek-v2-API-0628](https://platform.deepseek.com/api-docs/updates#deepseek-chat) | 1239 | +5/-5 | 19,508 | DeepSeek AI | DeepSeek | nan |
 | 130 | 125 | [Mistral-Small-24B-Instruct-2501](https://huggingface.co/mistralai/Mistral-Small-24B-Instruct-2501) | 1238 | +5/-5 | 15,321 | Mistral | Apache 2.0 | nan |
 | 131 | 125 | [Deepseek-Coder-v2-0724](https://platform.deepseek.com/api-docs/updates/#version-2024-07-24) | 1236 | +6/-6 | 11,725 | DeepSeek | Proprietary | nan |
-| 132 | 126 | [Yi-Large](https://platform.01.ai/docs#models-and-pricing) | 1235 | +6/-6 | 16,624 | 01 AI | Proprietary | No data available |
+| 132 | 126 | [Yi-Large](https://platform.01.ai/docs#models-and-pricing) | 1235 | +6/-6 | 16,624 | 01 AI | Proprietary | No Data Available |
 | 133 | 127 | [Gemma-2-27B-it](https://aistudio.google.com/app/prompts/new_chat?model=gemma-2-27b-it) | 1235 | +2/-2 | 79,538 | Google | Gemma license | 2024/6 |
 | 134 | 126 | [Qwen2.5-Coder-32B-Instruct](https://huggingface.co/Qwen/Qwen2.5-Coder-32B-Instruct) | 1234 | +7/-7 | 5,730 | Alibaba | Apache 2.0 | nan |
 | 135 | 126 | [Command R+ (08-2024)](https://docs.cohere.com/docs/command-r-plus#model-details) | 1233 | +6/-6 | 10,535 | Cohere | CC-BY-NC-4.0 | 2024/8 |
@@ -159,7 +159,7 @@ Click on the **Model Name** in the leaderboard to jump to its detailed informati
 | 137 | 126 | [Gemma-2-9B-it-SimPO](https://huggingface.co/princeton-nlp/gemma-2-9b-it-SimPO) | 1232 | +6/-6 | 10,548 | Princeton | MIT | 2024/7 |
 | 138 | 126 | [Llama-3.1-Nemotron-51B-Instruct](https://huggingface.co/nvidia/Llama-3_1-Nemotron-51B-Instruct) | 1231 | +9/-9 | 3,889 | Nvidia | Llama 3.1 | 2023/12 |
 | 139 | 128 | [Gemini-1.5-Flash-8B-001](https://aistudio.google.com/app/prompts/new_chat?instructions=lmsys&model=gemini-1.5-flash-8b) | 1230 | +3/-3 | 37,697 | Google | Proprietary | nan |
-| 140 | 127 | [GLM-4-0520](https://open.bigmodel.cn/dev/api#language) | 1230 | +6/-6 | 10,221 | Zhipu AI | Proprietary | No data available |
+| 140 | 127 | [GLM-4-0520](https://open.bigmodel.cn/dev/api#language) | 1230 | +6/-6 | 10,221 | Zhipu AI | Proprietary | No Data Available |
 | 141 | 130 | [Nemotron-4-340B-Instruct](https://huggingface.co/nvidia/Nemotron-4-340B-Instruct) | 1229 | +4/-4 | 20,608 | Nvidia | NVIDIA Open Model | 2023/6 |
 | 142 | 130 | [Aya-Expanse-32B](https://huggingface.co/CohereForAI/aya-expanse-32b) | 1228 | +4/-4 | 28,768 | Cohere | CC-BY-NC-4.0 | nan |
 | 143 | 128 | [Gemini App (2024-01-24)](https://gemini.google.com/app) | 1227 | +8/-8 | 11,833 | Google | Proprietary | Online |
@@ -180,7 +180,7 @@ Click on the **Model Name** in the leaderboard to jump to its detailed informati
 | 158 | 156 | [Claude 3 Haiku](https://www.anthropic.com/news/claude-3-family) | 1200 | +3/-3 | 122,309 | Anthropic | Proprietary | 2023/8 |
 | 159 | 153 | [Llama-3.1-Tulu-3-8B](https://huggingface.co/allenai/Llama-3.1-Tulu-3-8B) | 1199 | +10/-10 | 3,074 | Ai2 | Llama 3.1 | nan |
 | 160 | 156 | [Qwen-Max-0428](https://help.aliyun.com/zh/dashscope/developer-reference/api-details) | 1199 | +5/-5 | 25,696 | Alibaba | Proprietary | nan |
-| 161 | 154 | [GLM-4-0116](https://open.bigmodel.cn/) | 1198 | +9/-9 | 7,579 | Zhipu AI | Proprietary | No data available |
+| 161 | 154 | [GLM-4-0116](https://open.bigmodel.cn/) | 1198 | +9/-9 | 7,579 | Zhipu AI | Proprietary | No Data Available |
 | 162 | 154 | [Ministral-8B-2410](https://huggingface.co/mistralai/Ministral-8B-Instruct-2410) | 1198 | +8/-8 | 5,111 | Mistral | MRL | nan |
 | 163 | 157 | [DeepSeek-Coder-V2-Instruct](https://huggingface.co/deepseek-ai/DeepSeek-Coder-V2-Instruct) | 1196 | +6/-6 | 15,753 | DeepSeek AI | DeepSeek License | 2024/6 |
 | 164 | 157 | [Command R (08-2024)](https://docs.cohere.com/docs/command-r-plus#model-details) | 1195 | +6/-6 | 10,851 | Cohere | CC-BY-NC-4.0 | 2024/8 |
@@ -232,7 +232,7 @@ Click on the **Model Name** in the leaderboard to jump to its detailed informati
 | 210 | 202 | [Starling-LM-7B-alpha](https://huggingface.co/berkeley-nest/Starling-LM-7B-alpha) | 1114 | +7/-7 | 10,415 | UC Berkeley | CC-BY-NC-4.0 | 2023/11 |
 | 211 | 202 | [OpenChat-3.5-0106](https://huggingface.co/openchat/openchat-3.5-0106) | 1113 | +7/-7 | 12,990 | OpenChat | Apache-2.0 | 2024/1 |
 | 212 | 203 | [Vicuna-33B](https://huggingface.co/lmsys/vicuna-33b-v1.3) | 1112 | +5/-5 | 22,936 | LMSYS | Non-commercial | 2023/8 |
-| 213 | 202 | [DeepSeek-LLM-67B-Chat](https://huggingface.co/deepseek-ai/DeepSeek-LLM-67b-chat) | 1110 | +11/-11 | 4,988 | DeepSeek AI | DeepSeek License | 2023/11 |
+| 213 | 202 | [DeepSeek-LLM-67B-Chat](https://huggingface.co/deepseek-ai/deepseek-llm-67b-chat) | 1110 | +11/-11 | 4,988 | DeepSeek AI | DeepSeek License | 2023/11 |
 | 214 | 206 | [Snowflake Arctic Instruct](https://www.snowflake.com/blog/arctic-open-efficient-foundation-language-models-snowflake/) | 1108 | +5/-5 | 34,173 | Snowflake | Apache 2.0 | 2024/4 |
 | 215 | 206 | [Granite-3.0-8B-Instruct](https://huggingface.co/ibm-granite/granite-3.0-8b-instruct) | 1107 | +8/-8 | 7,002 | IBM | Apache 2.0 | nan |
 | 216 | 203 | [NV-Llama2-70B-SteerLM-Chat](https://huggingface.co/nvidia/Llama2-70B-SteerLM-Chat) | 1105 | +12/-12 | 3,636 | Nvidia | Llama 2 Community | 2023/11 |
@@ -264,7 +264,7 @@ Click on the **Model Name** in the leaderboard to jump to its detailed informati
 | 242 | 230 | [Phi-3-Mini-128k-Instruct](https://azure.microsoft.com/en-us/blog/introducing-phi-3-redefining-whats-possible-with-slms/) | 1061 | +6/-6 | 21,622 | Microsoft | MIT | 2023/10 |
 | 243 | 230 | [Llama-2-7B-chat](https://huggingface.co/meta-llama/Llama-2-7b-chat-hf) | 1060 | +6/-6 | 14,532 | Meta | Llama 2 Community | 2023/7 |
 | 244 | 230 | [Guanaco-33B](https://huggingface.co/timdettmers/guanaco-33b-merged) | 1060 | +12/-12 | 2,996 | UW | Non-commercial | 2023/5 |
-| 245 | 230 | [Qwen-14B-Chat](https://huggingface.co/Qwen/Qwen-14B-Chat) | 1058 | +10/-10 | 5,065 | Alibaba | Qianwen LICENSE | 2023/8 |
+| 245 | 235 | [Qwen-14B-Chat](https://huggingface.co/Qwen/Qwen-14B-Chat) | 1058 | +10/-10 | 5,065 | Alibaba | Qianwen LICENSE | 2023/8 |
 | 246 | 235 | [StripedHyena-Nous-7B](https://huggingface.co/togethercomputer/StripedHyena-Nous-7B) | 1044 | +10/-10 | 5,276 | Together AI | Apache 2.0 | 2023/12 |
 | 247 | 243 | [Vicuna-7B](https://huggingface.co/lmsys/vicuna-7b-v1.5) | 1038 | +9/-9 | 7,017 | LMSYS | Llama 2 Community | 2023/7 |
 | 248 | 240 | [OLMo-7B-instruct](https://huggingface.co/allenai/OLMo-7B-Instruct) | 1037 | +10/-10 | 6,503 | Allen AI | Apache-2.0 | 2024/2 |
@@ -289,15 +289,15 @@ Click on the **Model Name** in the leaderboard to jump to its detailed informati
 
 ## Explanation
 
--   **Rank (UB)**: Ranking calculated based on the Bradley-Terry model. This ranking reflects the overall performance of models in the arena and provides an **upper bound** estimate of their Elo scores, helping to understand their potential competitiveness.
--   **Rank (StyleCtrl)**: Ranking after controlling for conversational style. This ranking aims to reduce preference bias caused by model response styles (e.g., verbose, concise), thereby more purely evaluating the model's core capabilities.
--   **Model Name**: The name of the Large Language Model (LLM). This column has embedded links to the models, which can be clicked to jump.
--   **Score**: The Elo rating obtained by the model through user votes in the arena. Elo rating is a relative ranking system, where a higher score indicates better model performance. This score is dynamic, reflecting the model's relative strength in the current competitive environment.
--   **Confidence Interval**: The 95% confidence interval of the model's Elo rating (e.g., `+6/-6`). A smaller interval indicates more stable and reliable ratings for the model; conversely, a larger interval may suggest insufficient data or significant fluctuations in model performance. It provides a quantitative assessment of the rating accuracy.
--   **Votes**: The total number of votes received by the model in the arena. More votes usually mean higher statistical reliability of its rating.
--   **Provider**: The organization or company providing the model.
--   **License**: The type of license agreement for the model, such as Proprietary, Apache 2.0, MIT, etc.
--   **Knowledge Cutoff Date**: The knowledge cutoff date of the model's training data. **No data available** indicates that the relevant information is not provided or unknown.
+*   **Rank (UB)**: Rank calculated based on the Bradley-Terry model. This rank reflects the overall performance of the model in the arena and provides an **upper bound** estimate of its Elo score, helping to understand the model's potential competitiveness.
+*   **Rank (StyleCtrl)**: Rank after controlling for conversation style. This rank aims to reduce preference bias caused by model response styles (e.g., verbose, concise), providing a purer assessment of the model's core capabilities.
+*   **Model Name**: The name of the Large Language Model (LLM). This column includes embedded links to the models; click to navigate.
+*   **Score**: The Elo rating obtained by the model through user votes in the arena. The Elo rating is a relative ranking system, where a higher score indicates better model performance. This score is dynamic, reflecting the model's relative strength in the current competitive environment.
+*   **Confidence Interval**: The 95% confidence interval for the model's Elo rating (e.g., `+6/-6`). A smaller interval indicates a more stable and reliable rating for the model; conversely, a larger interval might suggest insufficient data or greater fluctuations in model performance. It provides a quantitative assessment of the rating's accuracy.
+*   **Votes**: The total number of votes received by the model in the arena. More votes generally mean higher statistical reliability of its rating.
+*   **Provider**: The organization or company that provides the model.
+*   **License Agreement**: The type of license agreement for the model, such as Proprietary, Apache 2.0, MIT, etc.
+*   **Knowledge Cutoff Date**: The knowledge cutoff date for the model's training data. **No Data Available** indicates that the relevant information is not provided or unknown.
 
 ## Data Source and Update Frequency
 
@@ -305,4 +305,4 @@ This leaderboard data is automatically generated and provided by the [fboulnois/
 
 ## Disclaimer
 
-This report is for reference only. The leaderboard data is dynamic and based on user preference votes on Chatbot Arena during specific periods. The completeness and accuracy of the data depend on the upstream data sources and the updates and processing of the `fboulnois/llm-leaderboard-csv` project. Different models may use different license agreements; please refer to the official documentation of the model providers when using them.
+This report is for reference only. The leaderboard data is dynamic and based on user preference votes on Chatbot Arena within a specific period. The completeness and accuracy of the data depend on the upstream data source and the updates and processing of the `fboulnois/llm-leaderboard-csv` project. Different models may use different license agreements; please refer to the official documentation from the model provider when using them.
