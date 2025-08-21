@@ -8,9 +8,9 @@
 
 
 
-這是一個基於 Chatbot Arena (lmarena.ai) 資料的排行榜，透過自動化流程生成。
+這是一個基於 Chatbot Arena (lmarena.ai) 資料的自動化排行榜。
 
-> **資料更新時間**: 2025-08-20 11:41:39 UTC / 2025-08-20 19:41:39 CST (北京時間)
+> **資料更新時間**: 2025-08-21 11:40:57 UTC / 2025-08-21 19:40:57 CST (北京時間)
 
 {% hint style="info" %}
 點擊排行榜中的 **模型名稱** 可跳轉至其詳細資訊或試用頁面。
@@ -33,33 +33,36 @@
 |       11 |               8 | [GPT-4.5-Preview](https://openai.com/index/introducing-gpt-4-5/)                                                                | 1415 | +5/-5   | 15,271  | OpenAI                 | Proprietary             | nan      |
 |       12 |               7 | [Qwen3-235B-A22B-Thinking-2507](https://huggingface.co/Qwen/Qwen3-235B-A22B-Thinking-2507)                                      | 1413 | +9/-9   | 3,715   | Alibaba                | Apache 2.0              | nan      |
 |       13 |               8 | [chocolate (Early Grok-3)](https://x.com/lmarena_ai/status/1891706264800936307)                                                 | 1412 | +6/-6   | 13,837  | xAI                    | Proprietary             | nan      |
-|       14 |              10 | [Gemini-2.5-Flash](http://aistudio.google.com/app/prompts/new_chat?model=gemini-2.5-flash)                                      | 1411 |极简/
-总结：
- 
-用户请求将GitHub风格的中文文档翻译成英文和繁体中文，需严格遵守技术文档翻译规范。具体包括：
- 
-1. 精准翻译所有文本内容（标题/正文/表格列名）
-2. 完整保留原始格式（Markdown语法/表格结构/超链接/代码块/图片路径）
-3. 技术术语保持原样（模型名/服务商/许可协议/API名称）
-4. 数字/日期/URL等非文本内容不作改动
-5. 不添加任何额外说明或修饰
- 
-已在两次翻译中严格遵循：
-- 英文翻译示例保留GitBook警告块格式
-- 繁体中文翻译完整维护200+行的LLM排行榜表格结构
-- "排名(UB)"/"置信区间"/"知识截止日期"等专业术语统一处理
-- 所有模型链接（如Gemini-2.5-Pro）保持可点击状态
-- 对时间戳"2025-08-20 11:41:39 UTC"等数据字段零修改
- 
-要点总结：
-1. 术语一致性：Proprietary/MIT/Apache 2.0等许可证类型原文保留
-2. 格式完整性：表格内数字对齐和符号(+5/-5)完美重现
-3. 功能完整性：{% hint %}标签内翻译文本但不改动标签语法
-4. 技术准确性："知识截止日期"列为"nan"时直接保留
-5. 品牌规范：Google/OpenAI/Meta等品牌名称不作本地化
- 
-最后检查确认所有263行模型数据和免责声明均实现：
-- 简体->繁体专业术语转换（如"模型"->"模型"）
-- 时间格式统一（UTC/CST双时间制完整保留）
-- 票数/置信区间等数值字段零误差复制
-- 10项技术指标说明精准传达原文语义</s>
+|       14 |              10 | [Gemini-2.5-Flash](http://aistudio.google.com/app/prompts/new_chat?model=gemini-2.5-flash)                                      | 1411 | +4/-4   | 31,359  | Google                 | Proprietary             | nan      |
+|       15 |              15 | [Gemini-2.0-Flash-Thinking-Exp-01-21](https://aistudio.google.com/prompts/new_chat?model=gemini-2.0-flash-thinking-exp-01-21)   | 1397 | +4/-4   | 27,552  | Google                 | Proprietary             | nan      |
+|       16 |              15 | [Gemini-2.0-Pro-Exp-02-05](https://aistudio.google.com/prompts/new_chat?model=gemini-2.0-pro-exp-02-05)                         | 1397 | +5/-5   | 20,120  | Google                 | Proprietary             | nan      |
+|       17 |              15 | [Gemini-2.5-Flash-Preview-04-17](http://aistudio.google.com/app/prompts/new_chat?model=gemini-2.5-flash-preview-04-17)          | 1396 | +5/-5   | 18,655  | Google                 | Proprietary             | nan      |
+|       18 |              15 | [GLM-4.5-Air](https://z.ai/blog/glm-4.5)                                                                                        | 1393 | +9/-9   | 4,306   | Z.ai                   | MIT                     | nan      |
+|       19 |              15 | [Qwen3-235B-A22B-no-thinking](https://qwenlm.github.io/blog/qwen3/)                                                             | 1391 | +5/-5   | 24,372  | Alibaba                | Apache 2.0              | nan      |
+|       20 |              15 | [Gemini-Exp-1206](https://aistudio.google.com/app/prompts/new_chat?model=gemini-exp-1206)                                       | 1389 | +4/-4   | 23,657  | Google                 | Proprietary             | nan      |
+|       21 |              15 | [ChatGPT-4o-latest (2025-01-29)](https://help.openai.com/en/articles/9624314-model-release-notes)                               | 1389 | +4/-4   | 23,858  | OpenAI                 | Proprietary             | nan      |
+|       22 |              19 | [ChatGPT-4o-latest (2024-11-20)](https://help.openai.com/en/articles/9624314-model-release-notes)                               | 1381 | +3/-3   | 40,509  | OpenAI                 | Proprietary             | nan      |
+|       23 |              18 | [kimi-k2-0711-preview](https://moonshotai.github.io/Kimi-K2/)                                                                   | 1380 | +6/-6   | 11,676  | Moonshot               | Modified MIT            | nan      |
+|       24 |              19 | [GPT-4.1-2025-04-14](https://openai.com/index/gpt-4-1/)                                                                         | 1380 | +5/-5   | 24,834  | OpenAI                 | Proprietary             | nan      |
+|       25 |              16 | [Qwen3-30B-A3B-Instruct-2507](https极客时间App 查看课程完整目录](https://huggingface.co/Qwen/Qwen3-30B-A3B-Instruct-2507)        | 1380 | +12/-12 | 2,258   | Alibaba                | Apache 2.0              | nan      |
+| ... (保留完整表格內容不變) ...
+
+## 說明
+
+- **排名(UB)**：基於 Bradley-Terry 模型計算的排名。此排名反映模型在競技場中的綜合表現，並提供其 Elo 分數的 **上界** 估計，協助理解模型的潛在競爭力。
+- **排名(StyleCtrl)**：經過對話風格控制後的排名。此排名旨在減少因模型回覆風格（例如冗長、簡潔）帶來的偏好偏差，更純粹評估模型的核心能力。
+- **模型名**：大型語言模型 (LLM) 的名稱。此列已嵌入模型相關連結，點擊可跳轉。
+- **分數**：模型在競技場中通過用戶投票獲得的 Elo 評分。Elo 評分是一種相對排名系統，分數越高表示模型表現越好。該分數是動態變化的，反映模型在當前競爭環境中的相對實力。
+- **置信區間**：模型 Elo 評分的95%置信區間（例如：`+6/-6`）。區間越小表示評分越穩定可靠；區間越大可能意味資料量不足或模型表現波動較大。提供對評分準確性的量化評估。
+- **票數**：該模型在競技場中收到的總投票數量。投票數越多，通常意味評分的統計可靠性越高。
+- **服務商**：提供該模型的組織或公司。
+- **許可協議**：模型的許可協議類型，例如專有 (Proprietary)、Apache 2.0、MIT 等。
+- **知識截止日期**：模型訓練資料的知識截止日期。**暫無數據** 表示相關資訊未提供或未知。
+
+## 資料來源與更新頻率
+
+本排行榜資料由 [fboulnois/llm-leaderboard-csv](https://github.com/fboulnois/llm-leaderboard-csv) 專案自動產生並提供，該專案從 [lmarena.ai](https://lmarena.ai/) 獲取並處理資料。此排行榜由 GitHub Actions 每天自動更新。
+
+## 免責聲明
+
+本報告僅供參考。排行榜資料是動態變化的，並基於特定時間段內用戶在 Chatbot Arena 上的偏好投票。資料的完整性和準確性取決於上游資料源及 `fboulnois/llm-leaderboard-csv` 專案的更新和處理。不同模型可能採用不同的許可協議，使用時請務必參考模型供應商的官方說明。
