@@ -12,22 +12,22 @@ icon: download
 
 
 {% hint style="info" %}
-Текущая стабильная версия: v1.5.7
+Текущая последняя стабильная версия: v1.5.7
 {% endhint %}
 
-## Прямая загрузка
+## Прямые ссылки для скачивания
 
 ### Версия для Windows
 
 {% hint style="warning" %}
-Примечание: Система Windows 7 не поддерживает установку Cherry Studio.
+Внимание: Cherry Studio не поддерживает Windows 7.
 {% endhint %}
 
 #### Установочная версия (Setup)
 
 <details>
 
-<summary>x64 версия</summary>
+<summary>версия x64</summary>
 
 Основные источники:
 
@@ -41,7 +41,7 @@ icon: download
 
 <details>
 
-<summary>ARM64 версия</summary>
+<summary>версия ARM64</summary>
 
 Основные источники:
 
@@ -57,7 +57,7 @@ icon: download
 
 <details>
 
-<summary>x64 версия</summary>
+<summary>версия x64</summary>
 
 Основные источники:
 
@@ -65,17 +65,17 @@ icon: download
 
 Альтернативные источники:
 
-【[Источник 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.7/Cherry-Studio-1.5.7-x64-portable.exe)】 【[Источник 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.7/Cherry-Studio-1.5.7-x64-portable.exe)】 【[Источник 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.7/Cherry-Studio-1.5.7-x64-portable.exe)】
+【[Источник 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.7/Cherry-Studio-1.5.7-x64-portable.exe)】 【[Источник 2](https://download.ocoolai.com/https://github.com/C CheryHQ/cherry-studio/releases/download/v1.5.7/Cherry-Studio-1.5.7-x64-portable.exe)】 【[Источник 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.7/Cherry-Studio-1.5.7-x64-portable.exe)】
 
 </details>
 
 <details>
 
-<summary>ARM64 версия</summary>
+<summary>версия ARM64</summary>
 
 Основные источники:
 
-【[Официальный сайт Cherry Studio](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v极.5.7/Cherry-Studio-1.5.7-arm64-portable.exe)】
+【[Официальный сайт Cherry Studio](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.7/Cherry-Studio-1.5.7-arm64-portable.exe)】
 
 Альтернативные источники:
 
@@ -89,7 +89,7 @@ icon: download
 
 <details>
 
-<summary>Версия для процессоров Intel (x64)</summary>
+<summary>версия для процессоров Intel (x64)</summary>
 
 Основные источники:
 
@@ -103,7 +103,7 @@ icon: download
 
 <details>
 
-<summary>Версия для Apple Silicon (ARM64, чипы серии M)</summary>
+<summary>версия для Apple Silicon (ARM64, чипы серии M)</summary>
 
 Основные источники:
 
@@ -121,7 +121,7 @@ icon: download
 
 <details>
 
-<summary>x86_64 версия</summary>
+<summary>версия x86_64</summary>
 
 Основные источники:
 
@@ -135,7 +135,7 @@ icon: download
 
 <details>
 
-<summary>ARM64 версия</summary>
+<summary>версия ARM64</summary>
 
 Основные источники:
 
@@ -149,6 +149,6 @@ icon: download
 
 ***
 
-## Загрузка через облачные хранилища
+## Скачивание через облачные сервисы
 
-[Quark](https://pan.quark.cn/s/c8533a1ec63e#/list/share)
+[Quark](https://pan.quark.cn/s/4044324d0ecd#/list/share)
