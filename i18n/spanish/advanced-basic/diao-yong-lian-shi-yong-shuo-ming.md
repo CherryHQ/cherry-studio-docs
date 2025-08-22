@@ -11,41 +11,37 @@ Este documento ha sido traducido del chino por IA y aún no ha sido revisado.
 
 
 
-## Funciones
+## Funcionalidad
 
-La cadena de llamadas (también conocida como "trace") proporciona a los usuarios capacidades de observación en las conversaciones, ayudándoles a detectar el rendimiento específico de modelos, bases de conocimiento, MCP, búsqueda web y otros componentes durante el proceso de diálogo. Es una herramienta de observabilidad basada en [OpenTelemetry](https://opentelemetry.io/docs/languages/js/) que recopila, almacena y procesa datos del lado del cliente para lograr visualización, proporcionando una base cuantitativa para identificar problemas y optimizar resultados.
+La cadena de llamadas (también conocido como "trace") proporciona capacidades de análisis de conversaciones, ayudando a los usuarios a observar el rendimiento específico del modelo, base de conocimiento, MCP, búsqueda web y otros componentes durante el diálogo. Es una herramienta de observabilidad implementada sobre [OpenTelemetry](https://opentelemetry.io/docs/languages/js/) que visualiza datos mediante recopilación, almacenamiento y procesamiento en el extremo, ofreciendo bases cuantitativas para identificar problemas y optimizar resultados.
 
-Cada conversación corresponde a un registro de trace, donde un trace consta de múltiples spans. Cada span corresponde a una lógica de procesamiento en Cherry Studio, como invocar sesiones de modelos, llamadas a MCP, consultas a bases de conocimiento, búsquedas web, etc. El trace se muestra como una estructura de árbol con spans como nodos, incluyendo datos principales como tiempo de ejecución y uso de tokens. En los detalles del span también se pueden ver sus entradas y salidas específicas.
+Cada conversación corresponde a un registro trace, compuesto por múltiples spans. Cada span corresponde a una lógica de procesamiento de Cherry Studio, como llamadas a sesiones de modelos, MCP, base de conocimiento o búsqueda web. El trace se muestra en estructura de árbol con spans como nodos, incluyendo datos principales como tiempo de ejecución y uso de tokens. En los detalles del span también pueden verse sus entradas y salidas específicas.
 
 <figure><img src="../.gitbook/assets/trace2.gif" alt=""><figcaption></figcaption></figure>
 
 ## Habilitar Trace
 
-Por defecto, después de instalar Cherry Studio, la función Trace está oculta. Para activarla, debe habilitar el "Modo de desarrollador" en "Configuración" → "Configuración general", como se muestra a continuación:
+Por defecto, tras instalar Cherry Studio, Trace permanece oculto. Debe activarse en "Configuración" > "Configuración general" > "Modo desarrollador", como se muestra:
 
 <figure><img src="../.gitbook/assets/image (84).png" alt=""><figcaption></figcaption></figure>
 
-Los diálogos anteriores no generarán registros de Trace. Solo las nuevas preguntas y respuestas producirán registros de Trace. Estos registros se almacenan localmente. Para eliminar completamente los traces, puede:
-1. Ir a "Configuración" → "Configuración de datos" → "Directorio de datos" → "Limpiar caché"
-2. Eliminar manualmente los archivos en ~/.cherrystudio/trace
-
-Como se muestra a continuación:
+Los diálogos anteriores no generarán registros Trace. Solo se crearán registros tras nuevas interacciones de preguntas y respuestas. Los registros se almacenan localmente. Para eliminar completamente los Traces, use: "Configuración" > "Configuración de datos" > "Directorio de datos" > "Limpiar caché". Alternativamente, elimine manualmente los archivos en `~/.cherrystudio/trace`:
 
 <figure><img src="../.gitbook/assets/image (85).png" alt=""><figcaption></figcaption></figure>
 
 ## Escenarios de uso
 
-### Visualización de cadena completa
+### Visualización de toda la cadena
 
-Haga clic en "Cadena de llamadas" dentro del cuadro de diálogo de Cherry Studio para ver todos los datos de la cadena. Ya sea que se hayan invocado modelos, búsquedas web, bases de conocimiento o MCP durante la conversación, todos se mostrarán en la ventana de la cadena de llamadas.
+Haga clic en el icono de cadena de llamadas durante un diálogo para ver datos completos de la cadena. Ya sea que involucre modelos, búsqueda web, base de conocimiento o MCP, todos los componentes aparecerán en la ventana de trazabilidad.
 
-<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../.gitbook/assets/image (86).png" alt=""><figcaption></figcaption></figure>
 
-### Ver detalles de modelos en la cadena
+### Inspeccionar modelos en la cadena
 
-Para ver detalles específicos de un modelo en la cadena de llamadas, haga clic en el nodo de invocación del modelo para examinar sus entradas y salidas.
+Para ver detalles de un modelo en la cadena, haga clic en su nodo para examinar entradas y salidas específicas.
 
 <figure><img src="../.gitbook/assets/image (87).png" alt=""><figcaption></figcaption></figure>
 
@@ -53,25 +49,25 @@ Para ver detalles específicos de un modelo en la cadena de llamadas, haga clic 
 
 <figure><img src="../.gitbook/assets/image (89).png" alt=""><figcaption></figcaption></figure>
 
-### Ver detalles de búsqueda web
+### Inspeccionar búsqueda web en la cadena
 
-Para inspeccionar resultados de búsquedas web en la cadena, haga clic en el nodo de búsqueda web. En los detalles podrá ver la consulta realizada y los resultados devueltos.
+Al hacer clic en el nodo de búsqueda web, se muestran las consultas realizadas y los resultados obtenidos.
 
-<figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../.gitbook/assets/image (150).png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../.gitbook/assets/image (151).png" alt=""><figcaption></figcaption></figure>
 
-### Ver detalles de bases de conocimiento
+### Inspeccionar base de conocimiento en la cadena
 
-Para examinar interacciones con bases de conocimiento, haga clic en el nodo correspondiente. En los detalles aparecerá la pregunta consultada y la respuesta generada.
+El nodo de base de conocimiento revela las preguntas consultadas y las respuestas generadas.
 
 <figure><img src="../.gitbook/assets/image (152).png" alt=""><figcaption></figcaption></figure>
 
-### Ver detalles de MCP
+### Ver llamadas MCP en la cadena
 
-Para revisar invocaciones a MCP en la cadena, haga clic en el nodo de MCP. Los detalles mostrarán los parámetros de entrada pasados a la herramienta del servidor MCP y la respuesta devuelta.
+Haga clic en el nodo MCP para examinar parámetros de entrada y respuestas del servidor tool.
 
 <figure><img src="../.gitbook/assets/image (153).png" alt=""><figcaption></figcaption></figure>
 
@@ -79,4 +75,4 @@ Para revisar invocaciones a MCP en la cadena, haga clic en el nodo de MCP. Los d
 
 ## Problemas y sugerencias
 
-Esta funcionalidad es proporcionada por el equipo de [EDAS](https://www.aliyun.com/product/edas) de Alibaba Cloud. Para reportar problemas o sugerencias, únase al grupo de DingTalk (ID de grupo: 21958624) para comunicarse directamente con los desarrolladores.
+Esta funcionalidad es proporcionada por el equipo de Alibaba Cloud [EDAS](https://www.aliyun.com/product/edas). Para problemas o sugerencias, únase al grupo DingTalk (ID: 21958624) para comunicarse directamente con los desarrolladores.

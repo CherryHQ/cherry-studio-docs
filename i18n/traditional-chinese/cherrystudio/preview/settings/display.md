@@ -1,28 +1,31 @@
 ---
 icon: table-columns
 ---
+# 顯示設定
+
 
 {% hint style="warning" %}
 此文件由 AI 從中文翻譯而來，尚未經過審閱。
 {% endhint %}
 
-# 顯示設定
+
+
 
 在此頁面你可以設定軟體的顏色主題、頁面佈局或者 [自訂 CSS](../../../personalization-settings/css.md) 來進行一些個人化的設定。
 
 ### 主題選擇
 
-你可以在這裡設定預設的介面顏色模式（淺色模式、深色模式或跟隨系統）
+你可以在此處設定預設的介面色彩模式（淺色模式、深色模式或跟隨系統）
 
 ### 話題設定
 
-此設定是針對對話介面佈局的設定。
+此設定是針對對話介面的佈局進行調整。
 
 #### 話題位置
 
 {% tabs %}
 {% tab title="左側（預設）" %}
-<figure><img src="../../../.gitbook/assets/image (10).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (10) (1).png" alt=""><figcaption></figcaption></figure>
 {% endtab %}
 
 {% tab title="右側" %}
@@ -32,7 +35,7 @@ icon: table-columns
 
 #### 自動切換到話題
 
-當開啟此設定時，點擊助手名稱頁面會自動切換到對應話題頁面。
+當開啟該設定時，點擊助手名稱頁面會自動切換到對應話題頁面。
 
 {% tabs %}
 {% tab title="關閉時（預設）" %}
@@ -60,4 +63,4 @@ icon: table-columns
 
 ### 自訂 CSS
 
-透過此設定可靈活地對介面進行個人化變更和設定。具體方法參考進階教學中的 [自訂 CSS](../../../personalization-settings/css.md)。
+透過此設定可彈性地對介面進行個性化更改和設定。具體方法參考進階教學中的 [自訂 CSS](../../../personalization-settings/css.md)。

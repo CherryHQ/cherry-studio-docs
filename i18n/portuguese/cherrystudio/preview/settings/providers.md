@@ -1,64 +1,72 @@
 ---
 icon: cloud-check
 ---
+# Configuração do Serviço de Modelos
+
 
 {% hint style="warning" %}
 Este documento foi traduzido do chinês por IA e ainda não foi revisado.
 {% endhint %}
 
-# Configurações do Provedor
 
-Esta página apenas apresenta as funcionalidades da interface. Para tutoriais de configuração, consulte o tutorial de [Configuração do Provedor](../../../pre-basic/providers/) no guia básico.
+
+
+Esta página apenas apresenta as funcionalidades da interface. Para tutoriais de configuração, consulte [Configuração do Provedor](../../../pre-basic/providers/) nos tutoriais básicos.
 
 {% hint style="info" %}
-* Ao usar provedores internos, basta preencher a chave correspondente.
-* Diferentes provedores podem usar termos distintos para chave (chave, Key, API Key, token) que se referem ao mesmo conceito.
+* Ao usar provedores integrados, basta preencher a chave correspondente.
+* Diferentes provedores podem usar termos variados para chaves: segredo, Key, API Key, token, etc., todos referindo-se ao mesmo conceito.
 {% endhint %}
 
 ### Chave da API
 
-No Cherry Studio, um único provedor suporta múltiplas chaves em rodízio sequencial.
+No Cherry Studio, um único provedor suporta múltiplas chaves em rotação, seguindo ordem sequencial da lista.
 
-* Adicione múltiplas chaves separadas por vírgulas inglesas:
+* Adicione várias chaves separadas por vírgulas em inglês. Exemplo:
+
 <pre><code><strong>sk-xxxx1,sk-xxxx2,sk-xxxx3,sk-xxxx4
 </strong></code></pre>
 
 {% hint style="warning" %}
-Sempre use vírgulas **em inglês**.
+É obrigatório usar vírgulas **em inglês**.
 {% endhint %}
 
 ### Endereço da API
 
-Geralmente não é necessário preencher ao usar provedores internos. Se precisar modificar, siga estritamente o endereço da documentação oficial.
+Ao usar provedores integrados, geralmente não é necessário preencher o endereço da API. Se precisar modificá-lo, insira exatamente como consta na documentação oficial.
 
 > Se o provedor fornecer um endereço como <mark style="background-color:red;">https://xxx.xxx.com</mark><mark style="background-color:green;">/v1/chat/completions</mark>, insira apenas a parte base (<mark style="background-color:red;">https://xxx.xxx.com</mark>).
-> 
-> O Cherry Studio completará automaticamente o caminho (<mark style="background-color:green;">/v1/chat/completions</mark>). Formato incorreto pode causar falhas.
+>
+> O Cherry Studio completará automaticamente o caminho restante (<mark style="background-color:green;">/v1/chat/completions</mark>). Endereços incorretos podem causar falhas de funcionamento.
 
 {% hint style="info" %}
-Observação: A maioria dos provedores usa rotas padronizadas. Caso o caminho seja atípico (ex: v2, v3):  
-- Termine com `/` para concatenar apenas "`chat/completions`"  
-- Termine com `#` para usar o endereço completo sem concatenação.  
+Nota: A maioria dos provedores usa rotas padronizadas para LLMs. Ações adicionais só são necessárias se:
+- O caminho da API for `/v2`, `/v3/chat/completions` ou outra versão: termine o endereço com `/`
+- A rota não for <mark style="background-color:green;">/v1/chat/completions</mark>: use o endereço completo fornecido pelo provedor terminado com `#`
 
-![](<../../../.gitbook/assets/image (1) (1) (1) (1) (1) (1).png>)![](<../../../.gitbook/assets/image (15).png>)
+Resumindo:
+* Endereços terminados em `/`: concatenam "<mark style="background-color:green;">chat/completions</mark>"
+* Endereços terminados em `#`: usam apenas o valor inserido.
+
+<img src="../../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1).png" alt="" data-size="original"><img src="../../../.gitbook/assets/image (15).png" alt="" data-size="original">
 {% endhint %}
 
-### Adicionar Modelos
+### Adicionar modelos
 
-Clique em `Gerenciar` (canto inferior esquerdo) para ver os modelos suportados. Clique no `+` ao lado de cada modelo para adicioná-lo à lista.
+Clique no botão `Gerenciar` no canto inferior esquerdo para obter automaticamente todos os modelos suportados pelo provedor. Adicione-os à lista clicando no `+`.
 
 {% hint style="info" %}
-Modelos na janela pop-up não são adicionados automaticamente. É necessário clicar em `+` para que apareçam na lista de seleção.
+Modelos na janela pop-up não são adicionados automaticamente. Clique no `+` ao lado de cada modelo para incluí-los na lista de seleção.
 {% endhint %}
 
-### Verificação de Conectividade
+### Verificação de conectividade
 
-Clique no botão de verificação ao lado do campo da chave para testar a configuração.
+Clique no botão `Verificar` ao lado do campo de chave da API para testar a configuração.
 
 {% hint style="info" %}
-Por padrão, usa o último modelo de diálogo da lista. Falhas podem indicar modelos incorretos ou não suportados.
+O teste usa por padrão o último modelo de conversa adicionado à lista. Falhas indicam modelos incorretos ou não suportados.
 {% endhint %}
 
 {% hint style="danger" %}
-Ative o interruptor no canto superior direito após configurar, caso contrário o provedor permanecerá inativo.
+Após configuração bem-sucedida, **ative o interruptor no canto superior direito**. Caso contrário, o provedor permanecerá desativado e seus modelos não aparecerão.
 {% endhint %}

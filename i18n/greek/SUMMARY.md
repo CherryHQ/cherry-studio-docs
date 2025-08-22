@@ -1,121 +1,114 @@
-# Πίνακας περιεχομένων
-
-
-{% hint style="warning" %}
-Αυτό το έγγραφο μεταφράστηκε από τα Κινεζικά με AI και δεν έχει ακόμη ελεγχθεί.
-{% endhint %}
-
-
-
+# Table of contents
 
 ## Cherry Studio
 
-* [Εισαγωγή έργου](README.md)
-* [Λήψη πελάτη](cherrystudio/download.md)
-* [Σχεδιασμός έργου](cherrystudio/planning.md)
-* [Επισκόπηση λειτουργιών](cherrystudio/preview/README.md)
-  * [Διασύνδεση συνομιλιών](cherrystudio/preview/chat.md)
-  * [Έξυπνοι πράκτορες](cherrystudio/preview/agents.md)
-  * [Σχεδίαση](cherrystudio/preview/drawing.md)
-  * [Μετάφραση](cherrystudio/preview/translation.md)
-  * [Μικροεφαρμογές](cherrystudio/preview/app.md)
-  * [Βάση γνώσεων](cherrystudio/preview/knowledge-base.md)
-  * [Αρχεία](cherrystudio/preview/files.md)
-  * [Γρήγορος βοηθός](cherrystudio/preview/kuai-jie-zhu-shou.md)
-  * [Ρυθμίσεις](cherrystudio/preview/settings/README.md)
-    * [Ρυθμίσεις παροχής μοντέλων](cherrystudio/preview/settings/providers.md)
-    * [Ρυθμίσεις προεπιλεγμένων μοντέλων](cherrystudio/preview/settings/default-models.md)
-    * [Γενικές ρυθμίσεις](cherrystudio/preview/settings/general.md)
-    * [Ρυθμίσεις εμφάνισης](cherrystudio/preview/settings/display.md)
-    * [Ρυθμίσεις συντομεύσεων](cherrystudio/preview/settings/key-shortcut.md)
-    * [Ρυθμίσεις δεδομένων](cherrystudio/preview/settings/data.md)
-    * [Λειτουργίες φωνής](cherrystudio/preview/settings/yu-yin-gong-neng.md)
+* [Project Overview](README.md)
+* [Client Download](cherrystudio/download.md)
+* [Project Planning](cherrystudio/planning.md)
+* [Feature Guide](cherrystudio/preview/README.md)
+  * [Chat Interface](cherrystudio/preview/chat.md)
+  * [Agents](cherrystudio/preview/agents.md)
+  * [Drawing](cherrystudio/preview/drawing.md)
+  * [Translation](cherrystudio/preview/translation.md)
+  * [Mini Programs](cherrystudio/preview/app.md)
+  * [Knowledge Base](cherrystudio/preview/knowledge-base.md)
+  * [Files](cherrystudio/preview/files.md)
+  * [Quick Assistant](cherrystudio/preview/kuai-jie-zhu-shou.md)
+  * [Settings](cherrystudio/preview/settings/README.md)
+    * [Model Service Settings](cherrystudio/preview/settings/providers.md)
+    * [Default Model Settings](cherrystudio/preview/settings/default-models.md)
+    * [General Settings](cherrystudio/preview/settings/general.md)
+    * [Display Settings](cherrystudio/preview/settings/display.md)
+    * [Keyboard Shortcuts](cherrystudio/preview/settings/key-shortcut.md)
+    * [Data Settings](cherrystudio/preview/settings/data.md)
+    * [Voice Features](cherrystudio/preview/settings/yu-yin-gong-neng.md)
 
-## Βασικά μαθήματα <a href="#pre-basic" id="pre-basic"></a>
+## Basic Tutorials <a href="#pre-basic" id="pre-basic"></a>
 
-* [Οδηγός εγκατάστασης](pre-basic/installation/README.md)
+* [Installation Guide](pre-basic/installation/README.md)
   * [Windows](pre-basic/installation/windows.md)
   * [macOS](pre-basic/installation/macos.md)
-* [Ρύθμιση παροχής μοντέλων](pre-basic/providers/README.md)
-  * [Alibaba Bailian](pre-basic/providers/a-li-yun-bai-lian.md)
-  * [SiliconCloud](pre-basic/providers/siliconcloud.md)
+* [Model Service Configuration](pre-basic/providers/README.md)
+  * [Alibaba Cloud Bailian](pre-basic/providers/a-li-yun-bai-lian.md)
+  * [Silicon Cloud](pre-basic/providers/siliconcloud.md)
   * [OpenAI](pre-basic/providers/openai.md)
   * [QwenLM](pre-basic/providers/qwenlm.md)
   * [ByteDance (Doubao)](pre-basic/providers/doubao.md)
-  * [OneAPI και τα σχετικά έργα](pre-basic/providers/oneapi/README.md)
+  * [OneAPI & Forked Projects](pre-basic/providers/oneapi/README.md)
     * [OneAPI](pre-basic/providers/oneapi/oneapi.md)
     * [NewAPI](pre-basic/providers/oneapi/newapi.md)
   * [Huawei Cloud](pre-basic/providers/huawei.md)
   * [Google Gemini](pre-basic/providers/google-gemini.md)
-  * [Wuwen Xinqiong](pre-basic/providers/wu-wen-xin-qiong.md)
-  * [Προσαρμοσμένοι πάροχοι](pre-basic/providers/zi-ding-yi-fu-wu-shang.md)
+  * [Wu Wen Xin Qiong](pre-basic/providers/wu-wen-xin-qiong.md)
+  * [Custom Providers](pre-basic/providers/zi-ding-yi-fu-wu-shang.md)
   * [Ollama](pre-basic/providers/ollama.md)
   * [GitHub Copilot](pre-basic/providers/github-copilot.md)
-  * [PPIO](pre-basic/providers/ppio.md)
+  * [PPIO Cloud](pre-basic/providers/ppio.md)
   * [Vertex AI](pre-basic/providers/vertex-ai.md)
 
 ***
 
-* [Διαδικτυακή λειτουργία](websearch/README.md)
-  * [Δωρεάν διαδικτυακή λειτουργία](websearch/mian-fei-lian-wang-mo-shi.md)
-  * [Ρύθμιση μαύρης λίστας αναζήτησης](websearch/blacklist.md)
-  * [Επαφή Volcengine για διαδικτυακή πρόσβαση](websearch/volcengine.md)
-  * [Οδηγός εγγραφής/σύνδεσης Tavily](websearch/tavily.md)
-  * [Τοπική ανάπτυξη και ρύθμιση SearXNG](websearch/searxng.md)
-* [Ρυθμίσεις δεδομένων](data-settings/README.md)
-  * [Αντίγραφο ασφαλείας WebDAV](data-settings/WebDAV.md)
-  * [Αντίγραφο ασφαλείας σε συμβατή αποθήκευση S3](data-settings/s3-compatible.md)
-  * [Οδηγός ρύθμισης Notion](data-settings/notion.md)
-  * [Οδηγός ρύθμισης Obsidian](data-settings/obsidian.md)
-  * [Οδηγός ρύθμισης SiYuan](data-settings/siyuan.md)
-  
-* [Εξατομικευμένες ρυθμίσεις](personalization-settings/README.md)
-  * [Προσαρμοσμένο CSS](personalization-settings/css.md)
-  * [Σύσταση γραμματοσειράς](personalization-settings/font.md)
-  * [Αλλαγή θέσης αποθήκευσης](personalization-settings/storage.md)
-  * [Εκκαθάριση ρυθμίσεων CSS](personalization-settings/clear-css.md)
+* [Online Mode](websearch/README.md)
+  * [Free Online Mode](websearch/mian-fei-lian-wang-mo-shi.md)
+  * [Web Search Blacklist Setup](websearch/blacklist.md)
+  * [Volcengine Integration](websearch/volcengine.md)
+  * [Tavily Signup Guide](websearch/tavily.md)
+  * [SearXNG Local Deployment](websearch/searxng.md)
+* [Data Settings](data-settings/README.md)
+  * [WebDAV Backup](data-settings/WebDAV.md)
+  * [S3-Compatible Storage](data-settings/s3-compatible.md)
+  * [Notion Setup Guide](data-settings/notion.md)
+  * [Obsidian Setup Guide](data-settings/obsidian.md)
+  * [Siyuan Notes Setup](data-settings/siyuan.md)
+* [Personalization](personalization-settings/README.md)
+  * [Custom CSS](personalization-settings/css.md)
+  * [Font Recommendations](personalization-settings/font.md)
+  * [Storage Location Setup](personalization-settings/storage.md)
+  * [Clear CSS Settings](personalization-settings/clear-css.md)
 
-## Οδηγός βάσης γνώσεων <a href="#knowledge-base" id="knowledge-base"></a>
+## Knowledge Base Guide <a href="#knowledge-base" id="knowledge-base"></a>
 
-* [Οδηγός βάσης γνώσεων](knowledge-base/knowledge-base.md)
-* [Δεδομένα βάσης γνώσεων](knowledge-base/data.md)
-* [Πληροφορίες αναφοράς ενσωματωμένων μοντέλων](knowledge-base/emb-models-info.md)
-* [Προεπεξεργασία εγγράφων βάσης γνώσεων](knowledge-base/zhi-shi-ku-wen-dang-yu-chu-li.md)
+* [Knowledge Base Guide](knowledge-base/knowledge-base.md)
+* [Knowledge Base Data](knowledge-base/data.md)
+* [Embedding Model Reference](knowledge-base/emb-models-info.md)
+* [Document Preprocessing](knowledge-base/zhi-shi-ku-wen-dang-yu-chu-li.md)
 
-## Προηγμένα μαθήματα <a href="#advanced-basic" id="advanced-basic"></a>
+## Advanced Tutorials <a href="#advanced-basic" id="advanced-basic"></a>
 
-* [Οδηγός χρήσης MCP](advanced-basic/mcp/README.md)
-  * [Εγκατάσταση περιβάλλοντος MCP](advanced-basic/mcp/install.md)
-  * [Ρύθμιση και χρήση MCP](advanced-basic/mcp/config.md)
-  * [Αυτόματη εγκατάσταση MCP](advanced-basic/mcp/auto-install.md)
-  * [Ενσωματωμένη ρύθμιση MCP](advanced-basic/mcp/in-memory.md)
-  * [Ρύθμιση βάσης γνώσεων Dify](advanced-basic/mcp/dify.md)
-  * [Προσθήκη διακομιστή MCP ModelScope](advanced-basic/mcp/tian-jia-modelscope-mcp-fu-wu-qi.md)
-  * [Συχνές ερωτήσεις](advanced-basic/mcp/chang-jian-wen-ti.md)
+* [MCP Usage Guide](advanced-basic/mcp/README.md)
+  * [MCP Environment Installation](advanced-basic/mcp/install.md)
+  * [MCP Configuration](advanced-basic/mcp/config.md)
+  * [Auto-Install MCP](advanced-basic/mcp/auto-install.md)
+  * [Built-in MCP Config](advanced-basic/mcp/in-memory.md)
+  * [Dify Knowledge Base Setup](advanced-basic/mcp/dify.md)
+  * [Add ModelScope Server](advanced-basic/mcp/tian-jia-modelscope-mcp-fu-wu-qi.md)
+  * [FAQs](advanced-basic/mcp/chang-jian-wen-ti.md)
+* [Call Chain Usage](advanced-basic/diao-yong-lian-shi-yong-shuo-ming.md)
+* [Code Tools Guide](advanced-basic/code-tools-shi-yong-jiao-cheng.md)
 
-## Συνεισφορά στο έργο <a href="#contribution" id="contribution"></a>
+## Contributions <a href="#contribution" id="contribution"></a>
 
-* [Συνεισφορά κώδικα](contribution/code.md)
-* [Δομή κώδικα](contribution/code-structure.md)
-* [Συνεισφορά τεκμηρίων](contribution/docs.md)
+* [Code Contribution](contribution/code.md)
+* [Code Structure](contribution/code-structure.md)
+* [Documentation Contribution](contribution/docs.md)
 
-## Ερωτήσεις & σχόλια <a href="#question-contact" id="question-contact"></a>
+## Q&A <a href="#question-contact" id="question-contact"></a>
 
-* [Συχνές ερωτήσεις](question-contact/questions.md)
-* [Πώς να κάνετε αποτελεσματικές ερωτήσεις](question-contact/ask.md)
-* [Εκπαίδευση γνώσεων](question-contact/knowledge.md)
-* [Σχόλια & προτάσεις](question-contact/suggestions.md)
+* [FAQs](question-contact/questions.md)
+* [Effective Questioning](question-contact/ask.md)
+* [Knowledge Base](question-contact/knowledge.md)
+* [Feedback & Suggestions](question-contact/suggestions.md)
 
-## Επικοινωνήστε μαζί μας <a href="#contact-us" id="contact-us"></a>
+## Contact Us <a href="#contact-us" id="contact-us"></a>
 
-* [Επιχειρηματική συνεργασία](contact-us/questions.md)
-  * [Συμφωνία εμπορικής άδειας χρήσης Cherry Studio](contact-us/questions/cherrystudio-xu-ke-xie-yi.md)
+* [Business Cooperation](contact-us/questions.md)
+  * [Cherry Studio License](contact-us/questions/cherrystudio-xu-ke-xie-yi.md)
 
-## Σχετικά <a href="#about" id="about"></a>
+## About <a href="#about" id="about"></a>
 
-* [Πολιτική απορρήτου](about/privacypolicy.md)
+* [Privacy Policy](about/privacypolicy.md)
 
-## Άλλο περιεχόμενο <a href="#other" id="other"></a>
+## Additional Content <a href="#other" id="other"></a>
 
-* [Πληροφορίες αναφοράς κοινών μοντέλων](other/models-info.md)
-* [Κατάταξη μοντέλων](other/model_rank/lmarena.md)
+* [Model Reference](other/models-info.md)
+* [Model Leaderboard](other/model_rank/lmarena.md)

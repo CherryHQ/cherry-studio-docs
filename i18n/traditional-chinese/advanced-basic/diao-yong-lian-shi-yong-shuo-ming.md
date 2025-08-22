@@ -1,7 +1,7 @@
 ---
 icon: route
 ---
-# 調用鏈使用說明
+# 追蹤功能使用說明
 
 
 {% hint style="warning" %}
@@ -13,35 +13,35 @@ icon: route
 
 ## 功能介紹
 
-調用鏈（又稱「trace」）為用戶提供對話的洞察能力，幫助用戶覺察模型、知識庫、MCP、網路搜索等在對話過程中的具體表現。它是一個基於 [OpenTelemetry](https://opentelemetry.io/docs/languages/js/) 實現的可觀測工具，通過端側採集、儲存、處理數據實現可視化，為定位問題、優化效果提供量化評估依據。
+追蹤功能（又稱「trace」）為使用者提供對話的洞察能力，協助使用者覺察模型、知識庫、MCP、網路搜尋等在對話過程中的具體表現。這是一個基於 [OpenTelemetry](https://opentelemetry.io/docs/languages/js/) 實現的可觀測工具，透過終端採集、儲存、處理資料實現視覺化，為定位問題、優化效果提供量化評估依據。
 
-每次對話對應一條 trace 數據，一條 trace 由多個 span 組成，每個 span 對應 Cherry Studio 的一個程序處理邏輯，如調用模型會話、調用 MCP、調用知識庫、調用網路搜索等。trace 以樹結構展示，span 為樹節點，主要數據包括耗時、token 使用量，當然在 span 詳情還可以查看其具體的輸入輸出。
+每次對話對應一條 trace 資料，一條 trace 由多個 span 組成，每個 span 對應 Cherry Studio 的一個程式處理邏輯，如呼叫模型會話、呼叫 MCP、呼叫知識庫、呼叫網路搜尋等。trace 以樹狀結構展示，span 為樹節點，主要資料包括耗時、token 使用量，在 span 詳情中還可查看具體的輸入輸出。
 
 <figure><img src="../.gitbook/assets/trace2.gif" alt=""><figcaption></figcaption></figure>
 
 ## 開啟 Trace
 
-預設情況下，Cherry Studio 安裝之後，Trace 是隱藏的狀態。需要在「設定」-「常規設定」 - 「開發者模式」中開啟，如下圖：
+預設情況下，Cherry Studio 安裝後 Trace 處於隱藏狀態。需在「設定」→「常規設定」→「開發者模式」中開啟，如下圖：
 
 <figure><img src="../.gitbook/assets/image (84).png" alt=""><figcaption></figcaption></figure>
 
-且對於之前的會話不會產生 Trace 記錄，只會在新的問答產生之後才會產生 Trace 記錄。所產生的記錄儲存在本地，如需要徹底清除 Trace ，可以通過「設定」 - 「數據設定」 - 「數據目錄」 - 「清除快取」進行清除，也可通過手動刪除 ~/.cherrystudio/trace 下的檔案進行清除，如下圖：
+注意：此功能僅對新對話生效。開啟後產生的記錄儲存在本機，如需徹底清除 Trace，可透過「設定」→「資料設定」→「資料目錄」→「清除快取」操作，或手動刪除 `~/.cherrystudio/trace` 目錄下的檔案，如下圖：
 
 <figure><img src="../.gitbook/assets/image (85).png" alt=""><figcaption></figcaption></figure>
 
-## 場景介紹
+## 應用場景
 
 ### 全鏈路查看
 
-在 Cherry Studio 對話框中點擊調用鏈查看調用鏈的全鏈路數據。無論在對話過程中調用了模型，還是網路搜索、知識庫、MCP，都可以在調用鏈視窗中查看到全鏈路調用數據。
+在 Cherry Studio 對話框中點擊追蹤圖示，即可查看完整呼叫鏈資料。無論對話過程中呼叫了模型、網路搜尋、知識庫或 MCP，都能在追蹤視窗檢視全鏈路資料。
 
-<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../.gitbook/assets/image (86).png" alt=""><figcaption></figcaption></figure>
 
-### 查看鏈路中模型
+### 查看模型呼叫詳情
 
-若想要查看調用鏈中模型的詳情，可以點擊模型調用節點，查看其輸入、輸出詳情。
+點擊模型呼叫節點，可檢視其輸入輸出詳情與效能數據。
 
 <figure><img src="../.gitbook/assets/image (87).png" alt=""><figcaption></figcaption></figure>
 
@@ -49,32 +49,32 @@ icon: route
 
 <figure><img src="../.gitbook/assets/image (89).png" alt=""><figcaption></figcaption></figure>
 
-### 查看鏈路中網路搜索
+### 查看網路搜尋詳情
 
-若想要查看調用鏈中網路搜索的詳情，可以點擊網路搜索調用節點，查看其輸入、輸出詳情。在詳情中，可以查看到調用網路搜索查詢的問題和其返回的結果。
+點擊網路搜尋呼叫節點，可檢視查詢問題與返回結果的完整對應關係。
 
-<figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../.gitbook/assets/image (150).png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../.gitbook/assets/image (151).png" alt=""><figcaption></figcaption></figure>
 
-### 查看鏈路中知識庫
+### 查看知識庫呼叫詳情
 
-若想要查看調用鏈中知識庫的詳情，可以點擊知識庫調用節點，查看其輸入、輸出詳情。在詳情中，可以查看到調用知識庫查詢的問題和其返回的答案。
+點擊知識庫呼叫節點，可檢索問題與知識庫返回答案的匹配詳情。
 
 <figure><img src="../.gitbook/assets/image (152).png" alt=""><figcaption></figcaption></figure>
 
-### 查看鏈路中 MCP 調用情況
+### 查看 MCP 呼叫詳情
 
-若想要查看調用鏈中 MCP 的詳情，可以點擊 MCP 調用節點，查看其輸入、輸出詳情。在詳情中，可以查看到調用此 MCP Server tool 的入參和 tool 的返回。
+點擊 MCP 呼叫節點，可檢視伺服器工具的輸入參數與執行返回結果。
 
 <figure><img src="../.gitbook/assets/image (153).png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../.gitbook/assets/image (154).png" alt=""><figcaption></figcaption></figure>
 
-## 問題和建議
+## 問題與建議
 
-目前功能由阿里雲 [EDAS](https://www.aliyun.com/product/edas) 團隊提供，如有問題或建議，請進入釘釘群 （ 群號： 21958624 ） 與開發者進行深度溝通。
+本功能由阿里雲 [EDAS](https://www.aliyun.com/product/edas) 團隊提供技術支援，如有問題或建議，請加入釘釘群（群號：21958624）與開發團隊深度交流。
 
 \

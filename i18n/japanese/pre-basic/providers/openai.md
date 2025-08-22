@@ -1,9 +1,12 @@
+# OpenAI
+
 
 {% hint style="warning" %}
 このドキュメントはAIによって中国語から翻訳されており、まだレビューされていません。
 {% endhint %}
 
-# OpenAI
+
+
 
 ## APIキーの取得
 
@@ -12,13 +15,13 @@
 <img src="../../.gitbook/assets/file.excalidraw (1).svg" alt="" class="gitbook-drawing">
 
 *   生成されたキーをコピーし、CherryStudioの[サービスプロバイダー設定](broken-reference)を開く
-*   OpenAIサービスプロバイダーを選択し、取得したキーを入力
+*   サービスプロバイダー「OpenAI」を選択し、取得したキーを入力
 
-<figure><img src="../../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (9) (2).png" alt=""><figcaption></figcaption></figure>
 
-*   下部の「管理」または「追加」をクリックし、対応モデルを追加後、右上のサービスプロバイダートグルを有効化して利用開始
+*   下部の「管理」または「追加」をクリックし、サポートモデルを追加後、右上のサービスプロバイダースイッチを有効化すると利用可能
 
 {% hint style="info" %}
-- 中国本土（台湾を除く）ではOpenAIサービスを直接利用できません。プロキシ設定のご自身での解決が必要です
-- アカウント残高が必須となります
+- 中国（台湾を除く）ではOpenAIサービスが直接利用できません。プロキシ設定をご自身で行ってください
+- アカウント残高が必要です
 {% endhint %}

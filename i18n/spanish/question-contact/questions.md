@@ -1,101 +1,102 @@
 ---
 icon: seal-question
 ---
-
 # Preguntas frecuentes
+
 
 {% hint style="warning" %}
 Este documento ha sido traducido del chino por IA y aún no ha sido revisado.
 {% endhint %}
 
-## Preguntas frecuentes
 
-### Códigos de error comunes
 
-* **4xx (códigos de estado de error del cliente)**: Generalmente son solicitudes imposibles de completar debido a errores de sintaxis, fallos de autenticación o autorización.
-* **5xx (códigos de estado de error del servidor)**: Generalmente son errores del servidor, como caídas del sistema o tiempos de espera excedidos.
 
-| Código de error | Posibles escenarios                                                  | Solución                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| --------------- | -------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **400**         | Cuerpo de solicitud con formato incorrecto                           | <p>Consulte el contenido del error devuelto por el diálogo o revise la información en la <a href="questions.md#kong-zhi-tai-bao-cuo-cha-kan-fang-fa">consola</a>, y actúe según las indicaciones.</p><p><mark style="color:purple;">【Escenario común 1】</mark>: Para modelos Gemini, puede ser necesario vincular una tarjeta de crédito;<br><mark style="color:purple;">【Escenario común 2】</mark>: Volumen de datos excedido, común en modelos de visión cuando las imágenes superan el límite de tráfico por solicitud;<br><mark style="color:purple;">【Escenario común 3】</mark>: Parámetros no compatibles o mal configurados. Intente crear un nuevo asistente limpio para verificar;<br><mark style="color:purple;">【Escenario común 4】</mark>: Contexto excede el límite, borre el contexto, inicie un nuevo diálogo o reduzca el número de mensajes contextuales.</p> |
-| **401**         | Error de autenticación: modelo no compatible o cuenta suspendida     | Contacte al proveedor de servicios o verifique el estado de la cuenta                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| **403**         | Sin permisos para realizar la operación                              | Siga las indicaciones del mensaje de error o consulte errores en la [consola](questions.md#kong-zhi-tai-bao-cuo-cha-kan-fang-fa)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| **404**         | Recurso solicitado no encontrado                                     | Verifique la ruta de solicitud                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| **422**         | Formato correcto pero error semántico                                | Errores comunes en valores JSON (ej: valor nulo; se esperaba texto pero se ingresó número/booleano)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| **429**         | Límite de solicitudes alcanzado                                      | Tasa de solicitudes (TPM/RPM) excedida, espere antes de reintentar                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| **500**         | Error interno del servidor                                           | Contacte al proveedor si persiste                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| **501**         | Función no implementada por el servidor                              |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| **502**         | Respuesta inválida desde servidor remoto al actuar como proxy        |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| **503**         | Servicio no disponible temporalmente por sobrecarga o mantenimiento  | El tiempo de espera puede especificarse en la cabecera Retry-After                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| **504**         | Tiempo de espera excedido al obtener respuesta desde servidor remoto |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+## Códigos de error comunes
 
-***
+* **4xx (Códigos de estado de error del cliente)**: Generalmente son errores como sintaxis de solicitud incorrecta, falla de autenticación o falla de autorización que impiden completar la solicitud.
+* **5xx (Códigos de estado de error del servidor)**: Generalmente son errores del lado del servidor, como caídas del servidor, tiempo de espera agotado para procesar solicitudes, etc.
 
-### Método para ver errores en consola
-
-* Presione <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>I</kbd> (Mac: <kbd>Command</kbd> + <kbd>Option</kbd> + <kbd>I</kbd>) con Cherry Studio activo
-
-{% hint style="info" %}
-- La ventana activa debe ser el cliente de Cherry Studio para abrir la consola;
-- Debe abrirse la consola antes de iniciar pruebas/diálogos para capturar la información.
-{% endhint %}
-
-* En la consola: Click en <mark style="color:blue;">`Network`</mark> → Seleccione el último <mark style="color:red;">`completions`</mark> (errores en diálogos/traducciones) o <mark style="color:red;">`generations`</mark> (errores en imágenes) marcado con × rojo → Ver contenido completo en <mark style="color:blue;">`Response`</mark>.
-
-> Si no puede determinar la causa, capture esta pantalla y envíela al [grupo oficial](https://t.me/CherryStudioAI).
-
-<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1).png" alt="" width="563"><figcaption></figcaption></figure>
-
-Este método funciona también en pruebas de modelos, creación de bases de conocimiento, generación de imágenes, etc. Siempre debe abrirse la consola primero.
-
-{% hint style="info" %}
-Nombres comunes en diferentes escenarios:
-
-Diálogos/Traducciones/Pruebas: <mark style="color:red;">`completions`</mark>\
-Generación de imágenes: <mark style="color:red;">`generations`</mark>\
-Creación de bases de conocimiento: <mark style="color:red;">`embeddings`</mark>
-{% endhint %}
+| Código de error | Posibles causas                                                                                                                                                            | Solución                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **400**         | Formato del cuerpo de la solicitud incorrecto, etc.                                                                                                                        | <p>Revise el contenido del error devuelto por el diálogo o la <a href="questions.md#kong-zhi-tai-bao-cuo-cha-kan-fang-fa">consola</a> para ver el mensaje de error y actúe según las indicaciones.</p><p><a href="questions.md#kong-zhi-tai-bao-cuo-cha-kan-fang-fa"><mark style="color:purple;">【Situación común 1】</mark>: Si es un modelo Gemini, puede que sea necesario vincular una tarjeta;<br><mark style="color:purple;">【Situación común 2】</mark>: Volumen de datos excede el límite (común en modelos visuales);<br><mark style="color:purple;">【Situación común 3】</mark>: Parámetros no admitidos o incorrectos. Pruebe con un asistente nuevo;<br><mark style="color:purple;">【Situación común 4】</mark>: Contexto excede el límite. Borre el contexto o reduzca elementos.</a></p> |
+| **401**         | Autenticación fallida: modelo no compatible o cuenta del servidor suspendida                                                                                               | Verifique el estado de la cuenta con el proveedor correspondiente                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| **403**         | Sin permisos para realizar la operación solicitada                                                                                                                         | Actúe según la información del error en el diálogo o la [consola](questions.md#kong-zhi-tai-bao-cuo-cha-kan-fang-fa)                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| **404**         | Recurso solicitado no encontrado                                                                                                                                           | Verifique la ruta de solicitud, etc.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| **422**         | Formato de solicitud correcto pero error semántico                                                                                                                         | El servidor puede analizar pero no procesar. Común con errores semánticos JSON (ej: valor nulo; se esperaba texto pero se proporcionó número/booleano).                                                                                                                                                                                                                                                                                                                                                                                 |
+| **429**         | Límite de tasa de solicitudes alcanzado                                                                                                                                        | Espere un momento antes de volver a intentar                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| **500**         | Error interno del servidor, no se puede completar la solicitud                                                                                                             | Contacte al proveedor si persiste                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| **501**         | Función solicitada no implementada en el servidor                                                                                                                          |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| **502**         | El servidor (como puerta de enlace o proxy) recibió una respuesta inválida del servidor remoto                                                                                |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| **503**         | Servidor temporalmente indisponible por sobrecarga o mantenimiento. El retraso puede especificarse en el encabezado Retry-After                                             |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| **504**         | Tiempo de espera agotado cuando un servidor (como puerta de enlace o proxy) intentó acceder a un servidor remoto                                                            |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 
 ***
 
-### Fórmulas no renderizadas/errores en fórmulas
+## Método para ver errores en la consola
 
-* Si se muestra código sin renderizar, verifique los delimitadores:
+* Haga clic en la ventana del cliente Cherry Studio y presione <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>I</kbd> (Mac: <kbd>Command</kbd> + <kbd>Option</kbd> + <kbd>I</kbd>)
 
-> **Uso de delimitadores**\
-> &#xNAN;_&#x46;órmulas en línea_
+{% hint style="info" %}
+- La ventana activa debe ser el cliente Cherry Studio para abrir la consola;
+- Abra la consola primero, luego inicie pruebas/diálogos para capturar información.
+{% endhint %}
+
+* En la consola: haga clic en <mark style="color:blue;">`Network`</mark> → Busque el último <mark style="color:red;">`completions`</mark> _con × rojo (errores en diálogo/traducción)_ o <mark style="color:red;">`generations`</mark> _errores en dibujo)_ → Haga clic en <mark style="color:blue;">`Response`</mark> para ver la respuesta completa.
+
+> Si no identifica el error, envíe captura al [grupo oficial](https://t.me/CherryStudioAI).
+
+<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1).png" alt="" width="563"><figcaption></figcaption></figure>
+
+Este método funciona en diálogos, pruebas de modelo, añadir bases de conocimiento, dibujo, etc. Siempre abra la consola antes de realizar solicitudes.
+
+{% hint style="info" %}
+Nombres en la columna Name (② arriba) varían:
+
+Diálogo/traducción/pruebas: <mark style="color:red;">`completions`</mark>
+
+Dibujo: <mark style="color:red;">`generations`</mark>
+
+Crear base de conocimiento: <mark style="color:red;">`embeddings`</mark>
+{% endhint %}
+
+***
+
+## Fórmulas no renderizadas/error de renderizado
+
+* Si muestra código de fórmula: verifique delimitadores
+
+> **Uso de delimitadores**
 >
-> * Un signo de dólar: `$formula$`
-> * O `\(formula\)`
+> _Fórmula en línea_
 >
-> _Bloques de fórmulas_
+> * Un dólar: `$formula$`
+> * o `\(` y `\)`: `\(formula\)`
 >
-> * Doble signo de dólar: `$$formula$$`
-> * O `\[formula\]`
+> _Bloque de fórmula_
+>
+> * Dos dólares: `$$formula$$`
+> * o `\[formula\]`
 > * Ejemplo: `$$\sum_{i=1}^n x_i$$`\
 >   $$\sum_{i=1}^n x_i$$
 
-* Errores/desorden al contener chino: Cambie el motor de renderizado a KaTeX.
+* Error/renderizado incorrecto: común con texto chino. Cambie a motor KaTeX.
 
 ***
 
-### No se puede crear base de conocimiento/error dimensiones embedding
+## No se puede crear base de conocimiento/error al obtener dimensiones de incrustación
 
-1. Modelo no disponible
+1. Estado del modelo no disponible
 
-> Verifique compatibilidad y estado con el proveedor.
+> Verifique compatibilidad con el proveedor o estado del servicio.
 
-2. Uso de modelo no embedding
+2. Se usó modelo no-incrustable
 
 ***
 
-### Modelo no reconoce imágenes/no permite subir imágenes
+## Modelo no reconoce imágenes/no puede subir/seleccionar imágenes
 
-Primero verifique si el modelo admite reconocimiento visual: Los modelos compatibles tienen ícono de ojo 🔍 junto al nombre.
+Primero verifique compatibilidad del modelo. Cherry Studio marca modelos de visión con icono 👁️.
 
-Si la función no está habilitada:
+Modelos de visión permiten subir imágenes. Si no coincide: en lista de modelos del proveedor, haga clic en ⚙️ y active opción de imagen.
 
-* En la lista de modelos del proveedor, haga clic en ⚙️ junto al modelo
-* Marque la opción "Imagen"
-
-Los modelos sin capacidad visual no procesarán imágenes aunque esté marcada la opción. Consulte información técnica específica del modelo con su proveedor.
+Para información detallada: consulte proveedor. Modelos no-visuales no procesan imágenes aunque se active.

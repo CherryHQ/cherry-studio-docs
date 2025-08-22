@@ -1,28 +1,31 @@
 ---
 icon: table-columns
 ---
+# Paramètres d'affichage
+
 
 {% hint style="warning" %}
 Ce document a été traducido del chino por IA y aún no ha sido revisado.
 {% endhint %}
 
-# Paramètres d'affichage
 
-Sur cette page, vous pouvez configurer le thème de couleur du logiciel, la mise en page ou utiliser [un CSS personnalisé](../../../personalization-settings/css.md) pour effectuer des réglages personnalisés.
+
+
+Sur cette page, vous pouvez configurer le thème de couleur du logiciel, la mise en page ou [personnaliser le CSS](../../../personalization-settings/css.md) pour effectuer des réglages personnalisés.
 
 ### Sélection du thème
 
-Vous pouvez définir ici le mode de couleur par défaut de l'interface (mode clair, mode sombre ou suivre le système).
+Vous pouvez définir ici le mode de couleur par défaut de l'interface (mode clair, mode sombre ou suivi du système)
 
-### Paramètres de conversation
+### Paramètres des conversations
 
-Ces paramètres concernent la disposition de l'interface de conversation.
+Ces paramètres concernent la mise en page de l'interface de discussion.
 
 #### Position des conversations
 
 {% tabs %}
 {% tab title="Gauche (par défaut)" %}
-<figure><img src="../../../.gitbook/assets/image (10).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (10) (1).png" alt=""><figcaption></figcaption></figure>
 {% endtab %}
 
 {% tab title="Droite" %}
@@ -30,9 +33,9 @@ Ces paramètres concernent la disposition de l'interface de conversation.
 {% endtab %}
 {% endtabs %}
 
-#### Basculement automatique vers la conversation
+#### Basculer automatiquement vers la conversation
 
-Lorsque ce paramètre est activé, cliquer sur le nom d'un assistant bascule automatiquement vers sa page de conversation.
+Lorsque ce paramètre est activé, cliquer sur le nom de l'assistant basculera automatiquement vers la page de conversation correspondante.
 
 {% tabs %}
 {% tab title="Désactivé (par défaut)" %}
@@ -44,9 +47,9 @@ Lorsque ce paramètre est activé, cliquer sur le nom d'un assistant bascule aut
 {% endtab %}
 {% endtabs %}
 
-#### Afficher l'heure de création
+#### Afficher l'heure de la conversation
 
-Affiche la date et l'heure de **création** sous chaque conversation lorsque activé.
+Lorsqu'activé, affiche l'heure de **création** sous chaque conversation.
 
 {% tabs %}
 {% tab title="Désactivé" %}
@@ -58,6 +61,6 @@ Affiche la date et l'heure de **création** sous chaque conversation lorsque act
 {% endtab %}
 {% endtabs %}
 
-### CSS personnalisé
+### Personnalisation CSS
 
-Permet d'apporter des modifications d'interface personnalisées. Pour plus de détails, consultez le tutoriel avancé sur le [CSS personnalisé](../../../personalization-settings/css.md).
+Ce paramètre permet d'apporter des modifications personnalisées flexibles à l'interface. Voir les méthodes spécifiques dans le tutoriel avancé : [Personnalisation CSS](../../../personalization-settings/css.md).

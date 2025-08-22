@@ -1,28 +1,31 @@
 ---
 icon: table-columns
 ---
+# Display Settings
+
 
 {% hint style="warning" %}
 This document was translated from Chinese by AI and has not yet been reviewed.
 {% endhint %}
 
-# Display Settings
 
-On this page, you can set the software's color theme, page layout, or use [Custom CSS](../../../personalization-settings/css.md) for personalized configurations.
+
+
+On this page, you can set the software's color theme, page layout, or [customize CSS](../../../personalization-settings/css.md) for personalized settings.
 
 ### Theme Selection
 
-Here you can set the default interface color mode (Light mode, Dark mode, or Follow System).
+Here you can set the default interface color mode (light mode, dark mode, or follow system).
 
-### Conversation Settings
+### Topic Settings
 
-These settings apply to the layout of the conversation interface.
+These settings are for the layout of the chat interface.
 
-#### Conversation Panel Position
+#### Topic Position
 
 {% tabs %}
 {% tab title="Left (Default)" %}
-<figure><img src="../../../.gitbook/assets/image (10).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (10) (1).png" alt=""><figcaption></figcaption></figure>
 {% endtab %}
 
 {% tab title="Right" %}
@@ -30,34 +33,34 @@ These settings apply to the layout of the conversation interface.
 {% endtab %}
 {% endtabs %}
 
-#### Auto-Switch to Conversation
+#### Automatically Switch to Topic
 
-When enabled, clicking an assistant name will automatically switch to the corresponding conversation.
+When this setting is enabled, clicking on the assistant's name will automatically switch to the corresponding topic page.
 
 {% tabs %}
-{% tab title="Disabled (Default)" %}
+{% tab title="When off (Default)" %}
 <figure><img src="../../../.gitbook/assets/Honeycam 2025-01-04 17-35-43.gif" alt=""><figcaption></figcaption></figure>
 {% endtab %}
 
-{% tab title="Enabled" %}
+{% tab title="When on" %}
 <figure><img src="../../../.gitbook/assets/Honeycam 2025-01-04 17-38-18.gif" alt=""><figcaption></figcaption></figure>
 {% endtab %}
 {% endtabs %}
 
-#### Show Conversation Time
+#### Display Topic Time
 
-When enabled, displays the conversation **creation** time below the conversation.
+When enabled, the **creation** time of the topic will be displayed below it.
 
 {% tabs %}
-{% tab title="Disabled" %}
+{% tab title="When off" %}
 <figure><img src="../../../.gitbook/assets/image (14).png" alt=""><figcaption></figcaption></figure>
 {% endtab %}
 
-{% tab title="Enabled" %}
+{% tab title="When on" %}
 <figure><img src="../../../.gitbook/assets/image (12).png" alt=""><figcaption></figcaption></figure>
 {% endtab %}
 {% endtabs %}
 
 ### Custom CSS
 
-This setting allows flexible customization of the interface. Refer to the advanced tutorial on [Custom CSS](../../../personalization-settings/css.md) for specific methods.
+This setting allows flexible customization of the interface. For specific methods, please refer to [Custom CSS](../../../personalization-settings/css.md) in the advanced tutorial.

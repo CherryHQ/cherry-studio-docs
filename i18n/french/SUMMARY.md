@@ -1,29 +1,21 @@
-# Table des matières
-
-
-{% hint style="warning" %}
-Ce document a été traducido del chino por IA y aún no ha sido revisado.
-{% endhint %}
-
-
-
+# Table of contents
 
 ## Cherry Studio
 
-* [Présentation du projet](README.md)
+* [Introduction du projet](README.md)
 * [Téléchargement du client](cherrystudio/download.md)
 * [Planification du projet](cherrystudio/planning.md)
 * [Présentation des fonctionnalités](cherrystudio/preview/README.md)
   * [Interface de conversation](cherrystudio/preview/chat.md)
-  * [Agents](cherrystudio/preview/agents.md)
-  * [Génération d'images](cherrystudio/preview/drawing.md)
+  * [Agents intelligents](cherrystudio/preview/agents.md)
+  * [Dessin](cherrystudio/preview/drawing.md)
   * [Traduction](cherrystudio/preview/translation.md)
   * [Mini-programmes](cherrystudio/preview/app.md)
   * [Base de connaissances](cherrystudio/preview/knowledge-base.md)
   * [Fichiers](cherrystudio/preview/files.md)
   * [Assistant rapide](cherrystudio/preview/kuai-jie-zhu-shou.md)
   * [Paramètres](cherrystudio/preview/settings/README.md)
-    * [Configuration des fournisseurs de modèles](cherrystudio/preview/settings/providers.md)
+    * [Configuration des services de modèles](cherrystudio/preview/settings/providers.md)
     * [Configuration des modèles par défaut](cherrystudio/preview/settings/default-models.md)
     * [Paramètres généraux](cherrystudio/preview/settings/general.md)
     * [Paramètres d'affichage](cherrystudio/preview/settings/display.md)
@@ -37,61 +29,62 @@ Ce document a été traducido del chino por IA y aún no ha sido revisado.
   * [Windows](pre-basic/installation/windows.md)
   * [macOS](pre-basic/installation/macos.md)
 * [Configuration des services de modèles](pre-basic/providers/README.md)
-  * [Alibaba Bailian](pre-basic/providers/a-li-yun-bai-lian.md)
+  * [Aliyun Bailian](pre-basic/providers/a-li-yun-bai-lian.md)
   * [SiliconCloud](pre-basic/providers/siliconcloud.md)
   * [OpenAI](pre-basic/providers/openai.md)
   * [QwenLM](pre-basic/providers/qwenlm.md)
   * [ByteDance (Doubao)](pre-basic/providers/doubao.md)
-  * [OneAPI et projets connexes](pre-basic/providers/oneapi/README.md)
+  * [OneAPI et ses projets dérivés](pre-basic/providers/oneapi/README.md)
     * [OneAPI](pre-basic/providers/oneapi/oneapi.md)
     * [NewAPI](pre-basic/providers/oneapi/newapi.md)
   * [Huawei Cloud](pre-basic/providers/huawei.md)
   * [Google Gemini](pre-basic/providers/google-gemini.md)
-  * [WuWenXinQiong](pre-basic/providers/wu-wen-xin-qiong.md)
+  * [Infinigence-AI](pre-basic/providers/wu-wen-xin-qiong.md)
   * [Fournisseur personnalisé](pre-basic/providers/zi-ding-yi-fu-wu-shang.md)
   * [Ollama](pre-basic/providers/ollama.md)
   * [GitHub Copilot](pre-basic/providers/github-copilot.md)
-  * [PPIO](pre-basic/providers/ppio.md)
+  * [PPIO Cloud](pre-basic/providers/ppio.md)
   * [Vertex AI](pre-basic/providers/vertex-ai.md)
 
 ***
 
-* [Mode connecté](websearch/README.md)
-  * [Mode connecté gratuit](websearch/mian-fei-lian-wang-mo-shi.md)
-  * [Configuration de la liste noire de recherche](websearch/blacklist.md)
-  * [Connexion via Volcano Engine](websearch/volcengine.md)
-  * [Tutoriel d'enregistrement et de connexion Tavily](websearch/tavily.md)
+* [Mode en ligne](websearch/README.md)
+  * [Mode en ligne gratuit](websearch/mian-fei-lian-wang-mo-shi.md)
+  * [Configuration de la liste noire de recherche Web](websearch/blacklist.md)
+  * [Connexion en ligne Volcengine](websearch/volcengine.md)
+  * [Tutoriel d'inscription Tavily](websearch/tavily.md)
   * [Déploiement et configuration locale de SearXNG](websearch/searxng.md)
 * [Paramètres des données](data-settings/README.md)
   * [Sauvegarde WebDAV](data-settings/WebDAV.md)
-  * [Sauvegarde sur stockage S3 compatible](data-settings/s3-compatible.md)
-  * [Guide de configuration Notion](data-settings/notion.md)
-  * [Guide de configuration Obsidian](data-settings/obsidian.md)
-  * [Guide de configuration SiYuan Notes](data-settings/siyuan.md)
-  
+  * [Sauvegarde S3 compatible](data-settings/s3-compatible.md)
+  * [Configuration de Notion](data-settings/notion.md)
+  * [Configuration d'Obsidian](data-settings/obsidian.md)
+  * [Configuration de SiYuan Notes](data-settings/siyuan.md)
 * [Personnalisation](personalization-settings/README.md)
   * [CSS personnalisé](personalization-settings/css.md)
-  * [Recommandations de polices](personalization-settings/font.md)
+  * [Polices recommandées](personalization-settings/font.md)
   * [Modification de l'emplacement de stockage](personalization-settings/storage.md)
-  * [Effacement des paramètres CSS](personalization-settings/clear-css.md)
+  * [Effacer les paramètres CSS](personalization-settings/clear-css.md)
 
-## Tutoriels des bases de connaissances <a href="#knowledge-base" id="knowledge-base"></a>
+## Tutoriels de base de connaissances <a href="#knowledge-base" id="knowledge-base"></a>
 
-* [Guide de la base de connaissances](knowledge-base/knowledge-base.md)
-* [Données de la base de connaissances](knowledge-base/data.md)
+* [Tutoriel de base de connaissances](knowledge-base/knowledge-base.md)
+* [Données de base de connaissances](knowledge-base/data.md)
 * [Informations de référence des modèles d'embedding](knowledge-base/emb-models-info.md)
-* [Prétraitement des documents pour la base de connaissances](knowledge-base/zhi-shi-ku-wen-dang-yu-chu-li.md)
+* [Prétraitement des documents de base de connaissances](knowledge-base/zhi-shi-ku-wen-dang-yu-chu-li.md)
 
 ## Tutoriels avancés <a href="#advanced-basic" id="advanced-basic"></a>
 
 * [Guide d'utilisation MCP](advanced-basic/mcp/README.md)
   * [Installation de l'environnement MCP](advanced-basic/mcp/install.md)
-  * [Configuration et utilisation de MCP](advanced-basic/mcp/config.md)
-  * [Installation automatique de MCP](advanced-basic/mcp/auto-install.md)
-  * [Configuration interne MCP](advanced-basic/mcp/in-memory.md)
+  * [Configuration et utilisation du MCP](advanced-basic/mcp/config.md)
+  * [Installation automatique du MCP](advanced-basic/mcp/auto-install.md)
+  * [Configuration MCP en mémoire](advanced-basic/mcp/in-memory.md)
   * [Configuration de la base de connaissances Dify](advanced-basic/mcp/dify.md)
-  * [Ajouter un serveur MCP ModelScope](advanced-basic/mcp/tian-jia-modelscope-mcp-fu-wu-qi.md)
-  * [FAQ](advanced-basic/mcp/chang-jian-wen-ti.md)
+  * [Ajout d'un serveur MCP ModelScope](advanced-basic/mcp/tian-jia-modelscope-mcp-fu-wu-qi.md)
+  * [Questions fréquentes](advanced-basic/mcp/chang-jian-wen-ti.md)
+* [Instructions d'utilisation de la chaîne d'appel](advanced-basic/diao-yong-lian-shi-yong-shuo-ming.md)
+* [Tutoriel d'utilisation des outils de code](advanced-basic/code-tools-shi-yong-jiao-cheng.md)
 
 ## Contribution au projet <a href="#contribution" id="contribution"></a>
 
@@ -99,17 +92,17 @@ Ce document a été traducido del chino por IA y aún no ha sido revisado.
 * [Structure du code](contribution/code-structure.md)
 * [Contribuer à la documentation](contribution/docs.md)
 
-## Questions et retours <a href="#question-contact" id="question-contact"></a>
+## Problèmes & retours <a href="#question-contact" id="question-contact"></a>
 
 * [Questions fréquentes](question-contact/questions.md)
 * [Comment poser des questions efficacement](question-contact/ask.md)
-* [Vulgarisation des connaissances](question-contact/knowledge.md)
-* [Retours et suggestions](question-contact/suggestions.md)
+* [Connaissances scientifiques](question-contact/knowledge.md)
+* [Retours & suggestions](question-contact/suggestions.md)
 
-## Contact <a href="#contact-us" id="contact-us"></a>
+## Nous contacter <a href="#contact-us" id="contact-us"></a>
 
-* [Partenariats commerciaux](contact-us/questions.md)
-  * [Contrat de licence commerciale Cherry Studio](contact-us/questions/cherrystudio-xu-ke-xie-yi.md)
+* [Coopération commerciale](contact-us/questions.md)
+  * [Accord de licence commerciale Cherry Studio](contact-us/questions/cherrystudio-xu-ke-xie-yi.md)
 
 ## À propos <a href="#about" id="about"></a>
 

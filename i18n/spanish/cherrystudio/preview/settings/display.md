@@ -1,29 +1,31 @@
 ---
 icon: table-columns
 ---
+# Configuración de visualización
+
 
 {% hint style="warning" %}
 Este documento ha sido traducido del chino por IA y aún no ha sido revisado.
 {% endhint %}
 
-```markdown
-# Configuración de visualización
 
-En esta página puedes configurar el tema de color del software, el diseño de página o usar [CSS personalizado](../../../personalization-settings/css.md) para realizar configuraciones personalizadas.
+
+
+En esta página puedes configurar el tema de color del software, el diseño de la página o [CSS personalizado](../../../personalization-settings/css.md) para realizar configuraciones personalizadas.
 
 ### Selección de tema
 
-Aquí puedes configurar el modo de color predeterminado de la interfaz (modo claro, modo oscuro o seguir sistema).
+Puedes establecer aquí el modo de color de la interfaz por defecto (modo claro, modo oscuro o seguir el sistema)
 
-### Configuración de hilos
+### Configuración de temas
 
-Esta configuración define el diseño de la interfaz de conversación.
+Esta configuración se refiere al diseño de la interfaz de conversación.
 
-#### Posición del hilo
+#### Posición del tema
 
 {% tabs %}
-{% tab title="Izquierda (predeterminada)" %}
-<figure><img src="../../../.gitbook/assets/image (10).png" alt=""><figcaption></figcaption></figure>
+{% tab title="Izquierda (predeterminado)" %}
+<figure><img src="../../../.gitbook/assets/image (10) (1).png" alt=""><figcaption></figcaption></figure>
 {% endtab %}
 
 {% tab title="Derecha" %}
@@ -31,9 +33,9 @@ Esta configuración define el diseño de la interfaz de conversación.
 {% endtab %}
 {% endtabs %}
 
-#### Cambio automático al hilo
+#### Cambiar automáticamente al tema
 
-Cuando esta opción está activada, al hacer clic en el nombre del asistente se cambiará automáticamente a la página del hilo correspondiente.
+Cuando esta opción está activada, al hacer clic en el nombre del asistente, la página cambiará automáticamente a la página del tema correspondiente.
 
 {% tabs %}
 {% tab title="Desactivado (predeterminado)" %}
@@ -45,9 +47,9 @@ Cuando esta opción está activada, al hacer clic en el nombre del asistente se 
 {% endtab %}
 {% endtabs %}
 
-#### Mostrar tiempo del hilo
+#### Mostrar tiempo del tema
 
-Cuando está activado, muestra la hora de **creación** debajo del hilo.
+Cuando está activado, muestra la hora de **creación** del tema debajo del tema.
 
 {% tabs %}
 {% tab title="Desactivado" %}
@@ -61,5 +63,4 @@ Cuando está activado, muestra la hora de **creación** debajo del hilo.
 
 ### CSS personalizado
 
-Esta opción permite realizar modificaciones y configuraciones personalizadas flexibles en la interfaz. Para métodos específicos, consulta el tutorial avanzado sobre [CSS personalizado](../../../personalization-settings/css.md).
-```
+Esta configuración permite realizar cambios y ajustes personalizados de manera flexible en la interfaz. Para métodos específicos, consulta [CSS personalizado](../../../personalization-settings/css.md) en el tutorial avanzado.

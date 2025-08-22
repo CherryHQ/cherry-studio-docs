@@ -1,28 +1,31 @@
 ---
 icon: table-columns
 ---
+# Configurações de Exibição
+
 
 {% hint style="warning" %}
 Este documento foi traduzido do chinês por IA e ainda não foi revisado.
 {% endhint %}
 
-# Configurações de Exibição
 
-Nesta página você pode configurar o tema de cores do software, o layout da página ou [CSS personalizado](../../../personalization-settings/css.md) para fazer algumas personalizações.
+
+
+Nesta página, você pode configurar o tema de cores, layout da página ou [CSS personalizado](../../../personalization-settings/css.md) para personalizações.
 
 ### Seleção de Tema
 
-Aqui você pode configurar o modo de cor padrão da interface (modo claro, modo escuro ou seguir o sistema)
+Aqui você define o modo de cor padrão da interface (claro, escuro ou seguir o sistema).
 
 ### Configurações de Tópicos
 
-Esta configuração é para o layout da interface de conversa.
+Essas configurações controlam o layout da interface de conversa.
 
-#### Posição do Tópico
+#### Posição dos Tópicos
 
 {% tabs %}
-{% tab title="Esquerda (padrão)" %}
-<figure><img src="../../../.gitbook/assets/image (10).png" alt=""><figcaption></figcaption></figure>
+{% tab title="Esquerda (Padrão)" %}
+<figure><img src="../../../.gitbook/assets/image (10) (1).png" alt=""><figcaption></figcaption></figure>
 {% endtab %}
 
 {% tab title="Direita" %}
@@ -30,12 +33,12 @@ Esta configuração é para o layout da interface de conversa.
 {% endtab %}
 {% endtabs %}
 
-#### Alternar automaticamente para tópico
+#### Alternar Automaticamente para Tópico
 
-Quando ativado, clicar no nome do assistente mudará automaticamente para a página do tópico correspondente.
+Quando ativado, clicar no nome de um assistente alterna automaticamente para seu tópico.
 
 {% tabs %}
-{% tab title="Desativado (padrão)" %}
+{% tab title="Desativado (Padrão)" %}
 <figure><img src="../../../.gitbook/assets/Honeycam 2025-01-04 17-35-43.gif" alt=""><figcaption></figcaption></figure>
 {% endtab %}
 
@@ -44,9 +47,9 @@ Quando ativado, clicar no nome do assistente mudará automaticamente para a pág
 {% endtab %}
 {% endtabs %}
 
-#### Mostrar hora do tópico
+#### Exibir Horário do Tópico
 
-Quando ativado, mostra a hora de **criação** do tópico abaixo do tópico.
+Mostra o horário de **criação** abaixo de cada tópico quando ativado.
 
 {% tabs %}
 {% tab title="Desativado" %}
@@ -58,6 +61,6 @@ Quando ativado, mostra a hora de **criação** do tópico abaixo do tópico.
 {% endtab %}
 {% endtabs %}
 
-### CSS personalizado
+### CSS Personalizado
 
-Esta configuração permite fazer alterações e ajustes personalizados na interface de forma flexível. Para métodos específicos, consulte [CSS personalizado](../../../personalization-settings/css.md) no tutorial avançado.
+Permite modificações avançadas na interface. Consulte o guia [CSS Personalizado](../../../personalization-settings/css.md) para detalhes.
