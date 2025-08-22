@@ -9,7 +9,7 @@
 * 将生成的key复制，并打开CherryStudio的[服务商设置](broken-reference)
 * 找到服务商OpenAI，填入刚刚获取到的key
 
-<figure><img src="../../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (9) (2).png" alt=""><figcaption></figcaption></figure>
 
 * 点击最下方管理或者添加，加入支持的模型并打开右上角服务商开关就可以使用了。
 

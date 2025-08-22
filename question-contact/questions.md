@@ -38,7 +38,7 @@ icon: seal-question
 
 > 如果你无法判断该错误的原因,请将该界面截图发送到 [官方交流群](https://t.me/CherryStudioAI) 中寻求帮助。
 
-<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1).png" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1).png" alt="" width="563"><figcaption></figcaption></figure>
 
 该检查方法不仅在对话时可以获取错误信息，在模型测试时、添加知识库时、绘画时等都可以使用。无论哪种情况下都需要先打开调试窗口，再进行请求操作来获取请求信息。·
 

@@ -18,7 +18,7 @@ icon: table-columns
 
 {% tabs %}
 {% tab title="左侧（默认）" %}
-<figure><img src="../../../.gitbook/assets/image (10).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (10) (1).png" alt=""><figcaption></figcaption></figure>
 {% endtab %}
 
 {% tab title="右侧" %}

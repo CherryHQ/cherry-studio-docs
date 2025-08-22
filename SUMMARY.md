@@ -84,6 +84,7 @@
   * [添加 ModelScope MCP 服务器](advanced-basic/mcp/tian-jia-modelscope-mcp-fu-wu-qi.md)
   * [常见问题](advanced-basic/mcp/chang-jian-wen-ti.md)
 * [调用链使用说明](advanced-basic/diao-yong-lian-shi-yong-shuo-ming.md)
+* [Code Tools 使用教程](advanced-basic/code-tools-shi-yong-jiao-cheng.md)
 
 ## 项目贡献 <a href="#contribution" id="contribution"></a>
 
