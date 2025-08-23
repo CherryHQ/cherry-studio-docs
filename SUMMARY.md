@@ -31,6 +31,7 @@
 * [模型服务配置](pre-basic/providers/README.md)
   * [阿里云百炼](pre-basic/providers/a-li-yun-bai-lian.md)
   * [硅基流动](pre-basic/providers/siliconcloud.md)
+  * [ModelScope（魔搭）](pre-basic/providers/modelscope.md)
   * [OpenAI](pre-basic/providers/openai.md)
   * [QwenLM](pre-basic/providers/qwenlm.md)
   * [字节跳动(豆包)](pre-basic/providers/doubao.md)
