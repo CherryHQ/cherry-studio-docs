@@ -2,113 +2,114 @@
 
 ## Cherry Studio
 
-* [Введение в проект](README.md)
-* [Загрузка клиента](cherrystudio/download.md)
-* [План проекта](cherrystudio/planning.md)
-* [Функциональность](cherrystudio/preview/README.md)
-  * [Интерфейс чата](cherrystudio/preview/chat.md)
-  * [Агенты ИИ](cherrystudio/preview/agents.md)
-  * [Рисование](cherrystudio/preview/drawing.md)
-  * [Перевод](cherrystudio/preview/translation.md)
-  * [Мини-приложения](cherrystudio/preview/app.md)
-  * [База знаний](cherrystudio/preview/knowledge-base.md)
-  * [Файлы](cherrystudio/preview/files.md)
-  * [Быстрые помощники](cherrystudio/preview/kuai-jie-zhu-shou.md)
-  * [Настройки](cherrystudio/preview/settings/README.md)
-    * [Настройки модели](cherrystudio/preview/settings/providers.md)
-    * [Настройки модели по умолчанию](cherrystudio/preview/settings/default-models.md)
-    * [Основные настройки](cherrystudio/preview/settings/general.md)
-    * [Настройки отображения](cherrystudio/preview/settings/display.md)
-    * [Настройки горячих клавиш](cherrystudio/preview/settings/key-shortcut.md)
-    * [Настройки данных](cherrystudio/preview/settings/data.md)
-    * [Голосовые функции](cherrystudio/preview/settings/yu-yin-gong-neng.md)
+* [Project Introduction](README.md)
+* [Client Download](cherrystudio/download.md)
+* [Project Planning](cherrystudio/planning.md)
+* [Feature Overview](cherrystudio/preview/README.md)
+  * [Chat Interface](cherrystudio/preview/chat.md)
+  * [Agents](cherrystudio/preview/agents.md)
+  * [Drawing](cherrystudio/preview/drawing.md)
+  * [Translation](cherrystudio/preview/translation.md)
+  * [Mini Programs](cherrystudio/preview/app.md)
+  * [Knowledge Base](cherrystudio/preview/knowledge-base.md)
+  * [Files](cherrystudio/preview/files.md)
+  * [Quick Assistant](cherrystudio/preview/kuai-jie-zhu-shou.md)
+  * [Settings](cherrystudio/preview/settings/README.md)
+    * [Model Service Settings](cherrystudio/preview/settings/providers.md)
+    * [Default Model Settings](cherrystudio/preview/settings/default-models.md)
+    * [General Settings](cherrystudio/preview/settings/general.md)
+    * [Display Settings](cherrystudio/preview/settings/display.md)
+    * [Key Shortcuts](cherrystudio/preview/settings/key-shortcut.md)
+    * [Data Settings](cherrystudio/preview/settings/data.md)
+    * [Voice Features](cherrystudio/preview/settings/yu-yin-gong-neng.md)
 
-## Базовое руководство <a href="#pre-basic" id="pre-basic"></a>
+## Basic Tutorials <a href="#pre-basic" id="pre-basic"></a>
 
-* [Руководство по установке](pre-basic/installation/README.md)
+* [Installation Guide](pre-basic/installation/README.md)
   * [Windows](pre-basic/installation/windows.md)
   * [macOS](pre-basic/installation/macos.md)
-* [Настройка моделей](pre-basic/providers/README.md)
-  * [Aliyun Bailian](pre-basic/providers/a-li-yun-bai-lian.md)
-  * [SiliconFlow](pre-basic/providers/siliconcloud.md)
+* [Model Service Configuration](pre-basic/providers/README.md)
+  * [Alibaba Bailian](pre-basic/providers/a-li-yun-bai-lian.md)
+  * [SiliconCloud](pre-basic/providers/siliconcloud.md)
+  * [ModelScope](pre-basic/providers/modelscope.md)
   * [OpenAI](pre-basic/providers/openai.md)
   * [QwenLM](pre-basic/providers/qwenlm.md)
   * [ByteDance (Doubao)](pre-basic/providers/doubao.md)
-  * [OneAPI и форки](pre-basic/providers/oneapi/README.md)
+  * [OneAPI & Related Projects](pre-basic/providers/oneapi/README.md)
     * [OneAPI](pre-basic/providers/oneapi/oneapi.md)
     * [NewAPI](pre-basic/providers/oneapi/newapi.md)
   * [Huawei Cloud](pre-basic/providers/huawei.md)
   * [Google Gemini](pre-basic/providers/google-gemini.md)
-  * [Mobot](pre-basic/providers/wu-wen-xin-qiong.md)
-  * [Пользовательские провайдеры](pre-basic/providers/zi-ding-yi-fu-wu-shang.md)
+  * [InfinityAI](pre-basic/providers/wu-wen-xin-qiong.md)
+  * [Custom Providers](pre-basic/providers/zi-ding-yi-fu-wu-shang.md)
   * [Ollama](pre-basic/providers/ollama.md)
   * [GitHub Copilot](pre-basic/providers/github-copilot.md)
-  * [PPIO](pre-basic/providers/ppio.md)
+  * [PPIO Cloud](pre-basic/providers/ppio.md)
   * [Vertex AI](pre-basic/providers/vertex-ai.md)
 
 ***
 
-* [Интернет-режим](websearch/README.md)
-  * [Бесплатный интернет-режим](websearch/mian-fei-lian-wang-mo-shi.md)
-  * [Черный список поиска](websearch/blacklist.md)
-  * [Подключение VolcEngine](websearch/volcengine.md)
-  * [Регистрация Tavily](websearch/tavily.md)
-  * [Локальная установка SearXNG](websearch/searxng.md)
-* [Настройки данных](data-settings/README.md)
-  * [Резервное копирование WebDAV](data-settings/WebDAV.md)
-  * [Резервное копирование S3](data-settings/s3-compatible.md)
-  * [Интеграция Notion](data-settings/notion.md)
-  * [Интеграция Obsidian](data-settings/obsidian.md)
-  * [Интеграция SiYuan](data-settings/siyuan.md)
-* [Персонализация](personalization-settings/README.md)
-  * [Пользовательский CSS](personalization-settings/css.md)
-  * [Рекомендации шрифтов](personalization-settings/font.md)
-  * [Смена пути хранения](personalization-settings/storage.md)
-  * [Сброс CSS](personalization-settings/clear-css.md)
+* [Internet Mode](websearch/README.md)
+  * [Free Internet Mode](websearch/mian-fei-lian-wang-mo-shi.md)
+  * [Web Search Blacklist](websearch/blacklist.md)
+  * [Volcengine Integration](websearch/volcengine.md)
+  * [Tavily Setup Guide](websearch/tavily.md)
+  * [SearXNG Local Deployment](websearch/searxng.md)
+* [Data Settings](data-settings/README.md)
+  * [WebDAV Backup](data-settings/WebDAV.md)
+  * [S3-Compatible Backup](data-settings/s3-compatible.md)
+  * [Notion Setup](data-settings/notion.md)
+  * [Obsidian Setup](data-settings/obsidian.md)
+  * [Siyuan Notes Setup](data-settings/siyuan.md)
+* [Personalization Settings](personalization-settings/README.md)
+  * [Custom CSS](personalization-settings/css.md)
+  * [Font Recommendations](personalization-settings/font.md)
+  * [Change Storage Location](personalization-settings/storage.md)
+  * [Clear CSS Settings](personalization-settings/clear-css.md)
 
-## Руководство по работе с базой знаний <a href="#knowledge-base" id="knowledge-base"></a>
+## Knowledge Base Tutorials <a href="#knowledge-base" id="knowledge-base"></a>
 
-* [Руководство по базе знаний](knowledge-base/knowledge-base.md)
-* [Данные базы знаний](knowledge-base/data.md)
-* [Справочник по моделям эмбеддингов](knowledge-base/emb-models-info.md)
-* [Предобработка документов](knowledge-base/zhi-shi-ku-wen-dang-yu-chu-li.md)
+* [Knowledge Base Guide](knowledge-base/knowledge-base.md)
+* [Knowledge Base Data](knowledge-base/data.md)
+* [Embedding Models Reference](knowledge-base/emb-models-info.md)
+* [Document Preprocessing](knowledge-base/zhi-shi-ku-wen-dang-yu-chu-li.md)
 
-## Продвинутые руководства <a href="#advanced-basic" id="advanced-basic"></a>
+## Advanced Tutorials <a href="#advanced-basic" id="advanced-basic"></a>
 
-* [Использование MCP](advanced-basic/mcp/README.md)
-  * [Установка MCP](advanced-basic/mcp/install.md)
-  * [Конфигурирование MCP](advanced-basic/mcp/config.md)
-  * [Автоматическая установка MCP](advanced-basic/mcp/auto-install.md)
-  * [Встроенный MCP](advanced-basic/mcp/in-memory.md)
-  * [Интеграция Dify](advanced-basic/mcp/dify.md)
-  * [Добавление сервера ModelScope](advanced-basic/mcp/tian-jia-modelscope-mcp-fu-wu-qi.md)
-  * [Частые вопросы](advanced-basic/mcp/chang-jian-wen-ti.md)
-* [Использование последовательных вызовов](advanced-basic/diao-yong-lian-shi-yong-shuo-ming.md)
-* [Инструменты разработчика](advanced-basic/code-tools-shi-yong-jiao-cheng.md)
+* [MCP Usage Guide](advanced-basic/mcp/README.md)
+  * [MCP Installation](advanced-basic/mcp/install.md)
+  * [Configure MCP](advanced-basic/mcp/config.md)
+  * [Auto-Install MCP](advanced-basic/mcp/auto-install.md)
+  * [Built-in MCP Config](advanced-basic/mcp/in-memory.md)
+  * [Dify Knowledge Base Setup](advanced-basic/mcp/dify.md)
+  * [Add ModelScope MCP](advanced-basic/mcp/tian-jia-modelscope-mcp-fu-wu-qi.md)
+  * [FAQ](advanced-basic/mcp/chang-jian-wen-ti.md)
+* [Call Chain Usage](advanced-basic/diao-yong-lian-shi-yong-shuo-ming.md)
+* [Code Tools Tutorial](advanced-basic/code-tools-shi-yong-jiao-cheng.md)
 
-## Участие в проекте <a href="#contribution" id="contribution"></a>
+## Contributions <a href="#contribution" id="contribution"></a>
 
-* [Вклад в код](contribution/code.md)
-* [Структура кода](contribution/code-structure.md)
-* [Работа с документацией](contribution/docs.md)
+* [Code Contributions](contribution/code.md)
+* [Code Structure](contribution/code-structure.md)
+* [Document Contributions](contribution/docs.md)
 
-## Вопросы и обратная связь <a href="#question-contact" id="question-contact"></a>
+## Issues & Feedback <a href="#question-contact" id="question-contact"></a>
 
-* [Частые вопросы](question-contact/questions.md)
-* [Как задавать вопросы](question-contact/ask.md)
-  * [Информационные материалы](question-contact/knowledge.md)
-* [Обратная связь](question-contact/suggestions.md)
+* [FAQ](question-contact/questions.md)
+* [How to Ask Effective Questions](question-contact/ask.md)
+* [Knowledge Base](question-contact/knowledge.md)
+* [Feedback & Suggestions](question-contact/suggestions.md)
 
-## Контакты <a href="#contact-us" id="contact-us"></a>
+## Contact Us <a href="#contact-us" id="contact-us"></a>
 
-* [Деловое партнерство](contact-us/questions.md)
-  * [Лицензионное соглашение](contact-us/questions/cherrystudio-xu-ke-xie-yi.md)
+* [Business Cooperation](contact-us/questions.md)
+  * [Cherry Studio Commercial License](contact-us/questions/cherrystudio-xu-ke-xie-yi.md)
 
-## Информация <a href="#about" id="about"></a>
+## About <a href="#about" id="about"></a>
 
-* [Политика конфиденциальности](about/privacypolicy.md)
+* [Privacy Policy](about/privacypolicy.md)
 
-## Прочее <a href="#other" id="other"></a>
+## Other Content <a href="#other" id="other"></a>
 
-* [Справочник по моделям](other/models-info.md)
-* [Рейтинги моделей](other/model_rank/lmarena.md)
+* [Common Model Reference](other/models-info.md)
+* [Model Rankings](other/model_rank/lmarena.md)

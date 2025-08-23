@@ -5,12 +5,12 @@
 * [Project Introduction](README.md)
 * [Client Download](cherrystudio/download.md)
 * [Project Planning](cherrystudio/planning.md)
-* [Features Overview](cherrystudio/preview/README.md)
+* [Features Introduction](cherrystudio/preview/README.md)
   * [Chat Interface](cherrystudio/preview/chat.md)
   * [Agents](cherrystudio/preview/agents.md)
   * [Drawing](cherrystudio/preview/drawing.md)
   * [Translation](cherrystudio/preview/translation.md)
-  * [Mini-apps](cherrystudio/preview/app.md)
+  * [Mini-Programs](cherrystudio/preview/app.md)
   * [Knowledge Base](cherrystudio/preview/knowledge-base.md)
   * [Files](cherrystudio/preview/files.md)
   * [Quick Assistant](cherrystudio/preview/kuai-jie-zhu-shou.md)
@@ -19,7 +19,7 @@
     * [Default Model Settings](cherrystudio/preview/settings/default-models.md)
     * [General Settings](cherrystudio/preview/settings/general.md)
     * [Display Settings](cherrystudio/preview/settings/display.md)
-    * [Shortcut Key Settings](cherrystudio/preview/settings/key-shortcut.md)
+    * [Hotkey Settings](cherrystudio/preview/settings/key-shortcut.md)
     * [Data Settings](cherrystudio/preview/settings/data.md)
     * [Voice Features](cherrystudio/preview/settings/yu-yin-gong-neng.md)
 
@@ -31,38 +31,39 @@
 * [Model Service Configuration](pre-basic/providers/README.md)
   * [Alibaba Cloud Bailian](pre-basic/providers/a-li-yun-bai-lian.md)
   * [Silicon Cloud](pre-basic/providers/siliconcloud.md)
+  * [ModelScope (Moda)](pre-basic/providers/modelscope.md)
   * [OpenAI](pre-basic/providers/openai.md)
   * [QwenLM](pre-basic/providers/qwenlm.md)
   * [ByteDance (Doubao)](pre-basic/providers/doubao.md)
-  * [OneAPI and its branch projects](pre-basic/providers/oneapi/README.md)
+  * [OneAPI and its Branches](pre-basic/providers/oneapi/README.md)
     * [OneAPI](pre-basic/providers/oneapi/oneapi.md)
     * [NewAPI](pre-basic/providers/oneapi/newapi.md)
   * [Huawei Cloud](pre-basic/providers/huawei.md)
   * [Google Gemini](pre-basic/providers/google-gemini.md)
-  * [Wuwexinqiong](pre-basic/providers/wu-wen-xin-qiong.md)
+  * [Wuwenshinqiong](pre-basic/providers/wu-wen-xin-qiong.md)
   * [Custom Provider](pre-basic/providers/zi-ding-yi-fu-wu-shang.md)
   * [Ollama](pre-basic/providers/ollama.md)
   * [GitHub Copilot](pre-basic/providers/github-copilot.md)
-  * [PPIO](pre-basic/providers/ppio.md)
+  * [PPIO Paiou Cloud](pre-basic/providers/ppio.md)
   * [Vertex AI](pre-basic/providers/vertex-ai.md)
 
 ***
 
-* [Web Search Mode](websearch/README.md)
-  * [Free Web Search Mode](websearch/mian-fei-lian-wang-mo-shi.md)
+* [Internet Connection Mode](websearch/README.md)
+  * [Free Internet Connection Mode](websearch/mian-fei-lian-wang-mo-shi.md)
   * [Web Search Blacklist Configuration](websearch/blacklist.md)
-  * [Volcengine Web Search Integration](websearch/volcengine.md)
-  * [Tavily Web Search Login and Registration Tutorial](websearch/tavily.md)
+  * [Volcano Engine Internet Access](websearch/volcengine.md)
+  * [Tavily Internet Login and Registration Tutorial](websearch/tavily.md)
   * [SearXNG Local Deployment and Configuration](websearch/searxng.md)
 * [Data Settings](data-settings/README.md)
   * [WebDAV Backup](data-settings/WebDAV.md)
   * [S3 Compatible Storage Backup](data-settings/s3-compatible.md)
   * [Notion Configuration Tutorial](data-settings/notion.md)
   * [Obsidian Configuration Tutorial](data-settings/obsidian.md)
-  * [SiYuan Notes Configuration Tutorial](data-settings/siyuan.md)
+  * [Siyuan Notes Configuration Tutorial](data-settings/siyuan.md)
 * [Personalization Settings](personalization-settings/README.md)
   * [Custom CSS](personalization-settings/css.md)
-  * [Font Recommendations](personalization-settings/font.md)
+  * [Recommended Fonts](personalization-settings/font.md)
   * [Change Storage Location](personalization-settings/storage.md)
   * [Clear CSS Settings](personalization-settings/clear-css.md)
 
@@ -101,7 +102,7 @@
 
 ## Contact Us <a href="#contact-us" id="contact-us"></a>
 
-* [Business Cooperation](contact-us/questions.md)
+* [Business Collaboration](contact-us/questions.md)
   * [Cherry Studio Commercial License Agreement](contact-us/questions/cherrystudio-xu-ke-xie-yi.md)
 
 ## About <a href="#about" id="about"></a>
@@ -111,4 +112,4 @@
 ## Other Content <a href="#other" id="other"></a>
 
 * [Common Model Reference Information](other/models-info.md)
-* [Model Leaderboard](other/model_rank/lmarena.md)
+* [Model Rankings](other/model_rank/lmarena.md)
