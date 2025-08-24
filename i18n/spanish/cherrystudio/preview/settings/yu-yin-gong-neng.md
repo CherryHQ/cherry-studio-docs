@@ -1,197 +1,191 @@
 ---
-hidden: true
+hidden: True
 icon: phone-arrow-up-right
 ---
+# Funcionalidad de Voz
 
-# Funciones de voz
 
 {% hint style="warning" %}
 Este documento ha sido traducido del chino por IA y aún no ha sido revisado.
 {% endhint %}
 
-```markdown
-# Funciones de voz
 
-```
 
-Cherry Studio Guía de uso de funciones de voz
 
-I. Descripción general de funciones de voz
+{% hint style="warning" %}
+Esta función está en pausa porque el desarrollador relevante no continuó manteniendo el PR.
+{% endhint %}
 
-Cherry Studio proporciona tres módulos principales de funciones de voz: TTS (texto a voz), ASR (reconocimiento de voz) y llamadas de voz. Estas funcionalidades permiten interactuar de forma natural con la IA mediante voz, mejorando la experiencia de usuario.
+Guía de uso de la funcionalidad de voz de Cherry Studio
 
-* TTS (texto a voz): Convierte las respuestas de texto de la IA en salida de voz
-* ASR (reconocimiento de voz): Transcribe tu voz en texto de entrada
-* Llamadas de voz: Combina TTS y ASR para ofrecer una experiencia de diálogo vocal similar a ChatGPT
+## 1. Resumen de la funcionalidad de voz
 
-II. Función TTS (texto a voz)
+Cherry Studio ofrece tres módulos principales de funcionalidad de voz: TTS (Texto a Voz), ASR (Reconocimiento de Voz) y Llamadas de Voz. Estas características le permiten interactuar de forma natural con la IA mediante voz, mejorando su experiencia de usuario.
 
-1. Tipos de servicios admitidos
+- **TTS (Texto a Voz)**: Convierte las respuestas de la IA en salida de voz
+- **ASR (Reconocimiento de Voz)**: Convierte su voz en texto
+- **Llamadas de Voz**: Combina TTS y ASR para una experiencia conversacional similar a ChatGPT
 
-Cherry Studio admite cuatro tipos de servicios TTS:
+## 2. Función TTS (Texto a Voz)
 
-* OpenAI: Utiliza la API TTS de OpenAI, requiere clave API
-* TTS de navegador: Usa la síntesis de voz incorporada del navegador, gratuita sin configuración
-* Siliconflow: Utiliza el servicio TTS de Siliconflow, requiere clave API
-* TTS online gratuito: Usa servicios TTS gratuitos en línea, sin clave API
+### 2.1 Servicios compatibles
 
-2. Métodos de configuración
-3. Ingrese a la página de ajustes, seleccione la pestaña "Funciones de voz"
-4. En la subpestaña "TTS":
-   * Active la función TTS (habilitar interruptor)
-   * Seleccione el tipo de servicio TTS
-   * Configure parámetros según el servicio elegido:
-     * OpenAI: Ingrese clave API, dirección API, seleccione voz y modelo
-     * TTS de navegador: Seleccione voz
-     * Siliconflow: Ingrese clave API, dirección API, seleccione voz, modelo, formato de respuesta y velocidad
-     * TTS online gratuito: Seleccione voz y formato de salida
-5. Configure filtros TTS (opcional):
-   * Filtrar procesos de pensamiento
-   * Filtrar etiquetas Markdown
-   * Filtrar bloques de código
-6. Establezca si mostrar barra de progreso de TTS
-7. Haga clic en "Probar TTS" para verificar la configuración
-8. Métodos de uso
+Cherry Studio soporta cuatro tipos de servicios TTS:
 
-* Con TTS activado, las respuestas de la IA se convertirán automáticamente en voz
-* En la interfaz de chat, cada respuesta de IA mostrará un botón de reproducción TTS
-* Haga clic en el botón para reproducir/pausar el audio
-* Si está habilitada, se mostrará una barra de progreso bajo el texto
-* Textos largos se sintetizan y reproducen en segmentos continuos
+- **OpenAI**: Utiliza la API TTS de OpenAI, requiere clave API
+- **Navegador TTS**: Usa la síntesis de voz integrada del navegador, gratuito sin configuración
+- **Siliconflow**: Utiliza el servicio TTS de Siliconflow, requiere clave API
+- **TTS Online Gratuito**: Servicio TTS online gratuito, sin clave API
 
-III. Función ASR (reconocimiento de voz)
+### 2.2 Método de configuración
 
-1. Tipos de servicios admitidos
+1) Ingrese a Configuración > Pestaña "Funcionalidad de voz"
+2) En la subpestaña "TTS":
+   - Active TTS (alternar ON)
+   - Seleccione tipo de servicio TTS
+   - Configure parámetros según el servicio:
+     - **OpenAI**: Clave API, dirección API, voz, modelo
+     - **Navegador TTS**: Seleccione voz
+     - **Siliconflow**: Clave API, dirección API, voz, modelo, formato de respuesta, velocidad
+     - **TTS Online Gratuito**: Voz y formato de salida
+3) Opciones de filtro TTS (opcional):
+   - Filtrar procesos de pensamiento
+   - Filtrar marcas Markdown
+   - Filtrar bloques de código
+4) Configure si mostrar barra de progreso TTS
+5) Haga clic en "Probar TTS" para verificar la configuración
 
-Cherry Studio admite tres tipos de servicios ASR:
+### 2.3 Modo de uso
 
-* OpenAI: Utiliza el modelo Whisper de OpenAI, requiere clave API
-* Navegador: Usa el reconocimiento de voz integrado del navegador, gratuito sin configuración
-* Servidor local: Se conecta a un servidor WebSocket local para reconocimiento de voz
+- Las respuestas de IA se convierten automáticamente en voz
+- Botones de reproducción aparecen bajo cada respuesta
+- Haga clic para reproducir/pausar
+- La barra de progreso muestra avance (si está activa)
+- Textos largos se sintetizan y reproducen en segmentos
 
-2. Métodos de configuración
-3. Ingrese a la página de ajustes, seleccione la pestaña "Funciones de voz"
-4. En la subpestaña "ASR":
-   * Active la función ASR (habilitar interruptor)
-   * Seleccione el tipo de servicio ASR
-   * Configure parámetros según el servicio elegido:
-     * OpenAI: Ingrese clave API, dirección API, seleccione modelo
-     * Navegador: Sin configuración adicional
-     * Servidor local: Puede configurar inicio automático del servidor ASR al iniciar la app
-   * Seleccione idioma de reconocimiento (predeterminado: chino)
-5. Haga clic en "Probar ASR" para verificar la configuración
-6. Métodos de uso
+## 3. Función ASR (Reconocimiento de Voz)
 
-* Con ASR activado, aparecerá un botón de micrófono junto al campo de entrada
-* Haga clic en el botón para iniciar grabación
-* Al hablar, su voz se transcribirá en texto automáticamente
-* Haga clic nuevamente para detener la grabación
-* Soporta reconocimiento continuo en modo acumulativo
+### 3.1 Servicios compatibles
 
-IV. Función de llamadas de voz
+- **OpenAI**: Usa modelo Whisper de OpenAI, requiere clave API
+- **Navegador**: Función integrada del navegador, gratuito sin configuración
+- **Servidor Local**: Conexión a servidor WebSocket local
 
-1. Características principales
+### 3.2 Método de configuración
 
-* Combina TTS y ASR para diálogos tipo ChatGPT
-* Interfaz en ventana flotante arrastrable
-* Soporta modo "mantener pulsado para hablar"
-* Atajos personalizables
-* Ventana plegable
-* Selección de modelos especializados para voz
-* Indicadores personalizados
+1) Configuración > Pestaña "Funcionalidad de voz"
+2) Subpestaña "ASR":
+   - Active ASR (alternar ON)
+   - Seleccione tipo de servicio ASR
+   - Configure parámetros según servicio:
+     - **OpenAI**: Clave API, dirección API, modelo
+     - **Navegador**: Sin configuración adicional
+     - **Servidor Local**: Opción para iniciar automáticamente al abrir aplicación
+   - Seleccione idioma de reconocimiento (predeterminado: chino)
+3) Haga clic en "Probar ASR" para verificar
 
-2. Métodos de configuración
-3. Ingrese a la página de ajustes, seleccione la pestaña "Funciones de voz"
-4. En la subpestaña "Funciones de llamada":
-   * Active la función de llamadas (habilitar interruptor)
-   * Haga clic en "Seleccionar modelo" para elegir modelo de IA para llamadas
-   * Personalice indicadores en el campo de texto (opcional)
-   * Haga clic en "Guardar" para guardar cambios o "Restablecer" para valores predeterminados
-5. Métodos de uso
-6. En la interfaz de chat, haga clic en el ícono de teléfono junto al campo de entrada
-7. Se abrirá una ventana de llamada reproduciendo un saludo
-8. Mantenga pulsado "Mantener para hablar" para grabar (o use atajos)
-9. Suelte para enviar el audio a la IA
-10. La IA generará una respuesta y la leerá mediante TTS
-11. Controles en la ventana:
-    * Mute/Unmute: Controla salida de TTS
-    * Pausar/Reanudar: Controla el flujo de conversación
-    * Configuración: Personaliza atajos
-    * Plegar: Minimiza la ventana
-12. Haga clic en Cerrar para finalizar la llamada
-13. Configuración de atajos
-14. En la ventana de llamada, haga clic en Configuración
-15. En el panel, haga clic en Atajos
-16. Pulse la tecla deseada (Ej: Espacio, Shift)
-17. Haga clic en "Guardar"
-18. Al usar: mantenga presionada la tecla para grabar, suelte para enviar
+### 3.3 Modo de uso
 
-V. Problemas comunes y soluciones
+- Botón de micrófono aparece junto al campo de entrada
+- Haga clic para iniciar grabación
+- Al hablar, el texto aparece en campo de entrada
+- Vuelva a hacer clic para detener grabación
+- Soporta reconocimiento continuo con modo acumulativo
 
-1. Problemas con TTS
+## 4. Función de Llamadas de Voz
 
-* Problema: Sin sonido en TTS\
-  Solución: Verifique activación TTS, configuración de servicio y parámetros obligatorios
-* Problema: Calidad de audio deficiente\
-  Solución: Pruebe diferentes servicios o voces
-* Problema: Mensajes de error durante reproducción\
-  Solución: Verifique clave API y conexión a internet
+### 4.1 Características clave
 
-2. Problemas con ASR
+- Experiencia conversacional tipo ChatGPT con TTS + ASR
+- Ventana flotante arrastrable
+- Modo "Mantener pulsado para hablar"
+- Personalización de atajos de teclado
+- Ventana colapsable
+- Modelos especializados para llamadas
+- Indicaciones personalizadas
 
-* Problema: ASR no detecta voz\
-  Solución: Verifique activación ASR y parámetros de servicio
-* Problema: Baja precisión en reconocimiento\
-  Solución: Pruebe servicios alternativos o ajuste micrófono
-* Problema: Conexión fallida con servidor\
-  Solución: Verifique estado del servidor local o reinicie la app
+### 4.2 Configuración
 
-3. Problemas con llamadas de voz
+1) Configuración > Pestaña "Funcionalidad de voz"
+2) Subpestaña "Llamadas":
+   - Active llamadas de voz (alternar ON)
+   - Haga clic en "Seleccionar modelo" para elegir IA conversacional
+   - Personalice indicaciones en el cuadro de texto (opcional)
+   - Guarde o restaure indicaciones predeterminadas
 
-* Problema: Ventana no se abre\
-  Solución: Verifique funciones TTS/ASR activas y configuradas
-* Problema: Sin respuesta al mantener pulsado\
-  Solución: Verifique permisos de micrófono o reinicie llamada
-* Problema: Sin salida de voz en respuestas\
-  Solución: Verifique TTS activado y no silenciado
+### 4.3 Modo de uso
 
-VI. Configuraciones avanzadas
+1) Haga clic en el ícono de teléfono en el chat
+2) Se abre ventana de llamada con saludo de voz
+3) Mantenga pulsado "Mantener para hablar" (o use atajo)
+4) Suelte para enviar grabación a la IA
+5) La IA responde mediante TTS
+6) Controles de ventana:
+   - Silenciar/Activar sonido
+   - Pausar/Reanudar conversación
+   - Configurar atajos
+   - Colapsar ventana
+7) Cierre para finalizar llamada
 
-1. TTS avanzado
+### 4.4 Configuración de atajos
 
-* Filtros: Excluye procesos de pensamiento, Markdown o bloques de código
-* Barra de progreso: Activa/desactiva visualización
-* Voces y modelos personalizados
+1) En ventana de llamada > ícono de ajustes
+2) Panel de configuraciones > botón "Atajos"
+3) Presione tecla deseada (ej: Espacio, Shift)
+4) Guarde configuración
+5) Use: Mantenga tecla para grabar, suelte para enviar
 
-2. ASR avanzado
+## 5. Problemas comunes y soluciones
 
-* Inicio automático de servidor: Activa al iniciar app
-* Selección de idioma: Admite múltiples idiomas
+### 5.1 Problemas TTS
+- **Sin sonido**: Verifique activación TTS y parámetros
+- **Calidad deficiente**: Cambie servicio o voz
+- **Errores**: Revise clave API y conexión de red
 
-3. Llamadas avanzadas
+### 5.2 Problemas ASR
+- **Sin reconocimiento**: Active ASR y revise parámetros
+- **Baja precisión**: Cambie servicio o ajuste micrófono
+- **Error de conexión**: Verifique servidor local o reinicie app
 
-* Indicadores personalizados: Guían respuestas de IA en modo voz
-* Modelo dedicado: Selección independiente del modelo de chat
-* Atajos personalizados: Configuración personalizada de teclas
+### 5.3 Problemas de llamadas
+- **Ventana no abre**: Active función y revise TTS/ASR
+- **Sin respuesta al grabar**: Verifique permisos de micrófono
+- **Sin voz en respuestas**: Active TTS y verifique silencio
 
-VII. Recomendaciones
+## 6. Configuración avanzada
 
-1. Para TTS:
-   * Calidad premium: OpenAI o Siliconflow
-   * Sin configuración: TTS de navegador o servicios gratuitos
-2. Para ASR:
-   * Máxima precisión: OpenAI
-   * Sin configuración: Reconocimiento del navegador
-3. Optimización de llamadas:
-   * Use auriculares para evitar eco
-   * Ambientes silenciosos mejoran precisión
-   * Indicadores personalizados mejoran respuestas orales
-4. Ajuste según necesidades:
-   * Solo salida de voz: Active solo TTS
-   * Solo entrada de voz: Active solo ASR
-   * Diálogo completo: Active funciones de llamada
+### 6.1 TTS avanzado
+- Filtrado: Procesos de pensamiento, Markdown, código
+- Barra de progreso personalizable
+- Voces y modelos personalizados
 
-¡Este manual le ayudará a aprovechar las funciones de voz de Cherry Studio para una experiencia de IA más natural y fluida!
+### 6.2 ASR avanzado
+- Inicio automático de servidor
+- Selección de idioma
 
-```
-```
+### 6.3 Llamadas avanzadas
+- Indicaciones personalizadas
+- Modelos dedicados
+- Personalización de atajos
+
+## 7. Recomendaciones de uso
+
+### 7.1 Selección de TTS
+- **Alta calidad**: OpenAI o Siliconflow
+- **Sin configuración**: TTS de Navegador o Online Gratuito
+
+### 7.2 Selección de ASR
+- **Alta precisión**: OpenAI
+- **Sin configuración**: Navegador
+
+### 7.3 Optimización de llamadas
+- Use auriculares para evitar eco
+- Ambientes silenciosos mejoran reconocimiento
+- Indicaciones personalizadas optimizan respuestas
+
+### 7.4 Ajustes según necesidades
+- **Principalmente texto**: Active solo TTS
+- **Principalmente voz**: Active solo ASR
+- **Conversación completa**: Active llamadas de voz
+
+¡Esperamos que esta guía le ayude a aprovechar al máximo las funcionalidades de voz de Cherry Studio para una experiencia de IA más natural e intuitiva!
