@@ -1,4 +1,4 @@
-# Рейтинговая таблица LLM Arena (обновляется в реальном времени)
+# Таблица лидеров LLM Arena (обновляется в реальном времени)
 
 
 {% hint style="warning" %}
@@ -8,17 +8,17 @@
 
 
 
-Этот рейтинг автоматически генерируется на основе данных Chatbot Arena (lmarena.ai).
+Это таблица лидеров, основанная на данных Chatbot Arena (lmarena.ai), автоматически генерируемая через процессы.
 
-> **Время обновления данных**: 2025-08-24 11:40:18 UTC / 2025-08-24 19:40:18 CST (пекинское время)
+> **Время обновления данных**: 2025-08-25 11:41:40 UTC / 2025-08-25 19:41:40 CST (пекинское время)
 
 {% hint style="info" %}
-Нажмите на **название модели** в таблице, чтобы перейти на страницу с подробной информацией или тестовой версией.
+Нажмите на **название модели** в таблице лидеров, чтобы перейти на страницу с подробной информацией или попробовать модель.
 {% endhint %}
 
-## Рейтинговая таблица
+## Таблица лидеров
 
-|   Рейтинг (UB) |   Рейтинг (StyleCtrl) | Модель                                                                                                                             |   Очки | Доверительный интервал | Голоса      | Поставщик                  | Лицензия                  | Дата обновления знаний |
+| Ранг (UB) | Ранг (StyleCtrl) | Название модели                                                                                                                             | Очки | Довер. интервал | Голоса    | Провайдер                   | Лицензия                   | Обновление данных   |
 |:---|:---|:---|:---|:---|:---|:---|:---|:---|
 |        1 |               1 | [Gemini-2.5-Pro](http://aistudio.google.com/app/prompts/new_chat?model=gemini-2.5-pro)                                          | 1470 | +5/-5   | 26,019  | Google                 | Proprietary             | nan      |
 |        2 |               2 | [Gemini-2.5-Pro-Preview-05-06](http://aistudio.google.com/app/prompts/new_chat?model=gemini-2.5-pro-preview-05-06)              | 1446 | +6/-6   | 13,715  | Google                 | Proprietary             | nan      |
@@ -35,37 +35,4 @@
 |       13 |               8 | [chocolate (Early Grok-3)](https://x.com/lmarena_ai/status/1891706264800936307)                                                 | 1412 | +6/-6   | 13,837  | xAI                    | Proprietary             | nan      |
 |       14 |              10 | [Gemini-2.5-Flash](http://aistudio.google.com/app/prompts/new_chat?model=gemini-2.5-flash)                                      | 1411 | +4/-4   | 31,359  | Google                 | Proprietary             | nan      |
 |       15 |              15 | [Gemini-2.0-Flash-Thinking-Exp-01-21](https://aistudio.google.com/prompts/new_chat?model=gemini-2.0-flash-thinking-exp-01-21)   | 1397 | +4/-4   | 27,552  | Google                 | Proprietary             | nan      |
-|       16 |              15 | [Gemini-2.0-Pro-Exp-02-05](https://aistudio.google.com/prompts/new_chat?model=gemini-2.0-pro-exp-02-05)                         | 1397 | +5/-5   | 20,120  | Google                 | Proprietary             | nan      |
-|       17 |              15 | [Gemini-2.5-Flash-Preview-04-17](http://aistudio.google.com/app/prompts/new_chat?model=gemini-2.5-flash-preview-04-17)          | 1396 | +5/-5   | 18,655  | Google                 | Proprietary             | nan      |
-|       18 |              15 | [GLM-4.5-Air](https://z.ai/blog/glm-4.5)                                                                                        | 1393 | +9/-9   | 4,306   | Z.ai                   | MIT                     | nan      |
-|       19 |              15 | [Qwen3-235B-A22B-no-thinking](https://qwenlm.github.io/blog/qwen3/)                                                             | 1391 | +5/-5   | 24,372  | Alibaba                | Apache 2.0              | nan      |
-|       20 |              15 | [Gemini-Exp-1206](https://aistudio.google.com/app/prompts/new_chat?model=gemini-exp-1206)                                       | 1389 | +4/-4   | 23,657  | Google                 | Proprietary             | nan      |
-|       21 |              15 | [ChatGPT-4o-latest (2025-01-29)](https://help.openai.com/en/articles/9624314-model-release-notes)                               | 1389 | +4/-4   | 23,858  | OpenAI                 | Proprietary             | nan      |
-|       22 |              19 | [ChatGPT-4o-latest (2024-11-20)](https://help.openai.com/en/articles/9624314-model-release-notes)                               | 1381 | +3/-3   | 40,509  | OpenAI                 | Proprietary             | nan      |
-|       23 |              18 | [kimi-k2-0711-preview](https://moonshotai.github.io/Kimi-K2/)                                                                   | 1380 | +6/-6   | 11,676  | Moonshot               | Modified MIT            | nan      |
-|       24 |              19 | [GPT-4.1-2025-04-14](https://openai.com/index/gpt-4-1/)                                                                         | 1380 | +5/-5   | 24,834  | OpenAI                 | Proprietary             | nan      |
-|       25 |              16 | [Qwen3-30B-A3B-Instruct-2507](https極huggingface.co/Qwen/Qwen3-30B-A3B-Instruct-2507)                                          | 1380 | +12/-12 | 2,258   | Alibaba                | Apache 2.0              | nan      |
-|       26 |              22 | [Gemini-Exp-1121](https://aistudio.google.com/app/prompts/new_chat?instructions=lmsys-1121&model=gemini-exp-1121)               | 1379 | +5/-5   | 17,328  | Google                 | Proprietary             | nan      |
-|       27 |              22 | [Gemini-2.0-Flash-Thinking-Exp-1219](https://aistudio.google.com/app/prompts/new_chat?model=gemini-2.0-flash-thinking-exp-1219) | 1378 | +5/-5   | 16,963 极 Google                 | Proprietary             | nan      |
-|... [content omitted for brevity - all 266 rows preserved with original data] ...|
-|      266 |             264 | [LLaMA-13B](https://arxiv.org/abs/2302.13971)                                                                                   |  840 | +16/-16 | 2,446   | Meta                   | Non-commercial          | 2023/2   |
-
-## Пояснения
-
-- **Рейтинг (UB)**：Рейтинг, рассчитанный на основе модели Bradley-Terry. Отражает общую производительность модели на арене, предоставляет оценку **верхней границы** Elo-рейтинга для понимания потенциальной конкурентоспособности.
-- **Рейтинг (StyleCtrl)**：Рейтинг после управления стилем диалога. Устраняет предвзятость, вызванную стилем ответов (например, многословность/лако чничность), что позволяет точнее оценить базовые возможности.
-- **Модель**: Название большой языковой модели (LLM). Содержит ссылки на соответствующую информацию.
-- **Очки**: Elo-рейтинг модели, основанный на пользовательских голосах на арене. Более высокий рейтинг означает лучшую производительность. Значение динамически изменяется.
-- **Доверительный интервал**: 95% доверительный интервал Elo-рейтинга (например: `+6/-6`). Меньший интервал указывает на стабильность оценки.
-- **Голоса**: Общее количество голосов, полученных моделью. Больше голосов = выше статистическая надёжность оценки.
-- **Поставщик**: Организация-разработчик модели.
-- **Лицензия**: Тип лицензионного соглашения (проприетарная, Apache 2.0, MIT и т.д.).
-- **Дата обновления знаний**: Предельная дата тренировочных данных модели. **Нет данных** означает отсутствие информации.
-
-## Источник данных и частота обновлений
-
-Данные автоматически генерируются проектом [fboulnois/llm-leaderboard-csv](https://github.com/fboulnois/llm-leaderboard-csv), который получает и обрабатывает информацию с [lmarena.ai](https://lmarena.ai/). Таблица обновляется ежедневно через GitHub Actions.
-
-## Отказ от ответственности
-
-Данный рейтинг предоставляется исключительно в ознакомительных целях. Данные динамически изменяются и основаны на пользовательских предпочтениях в Chatbot Arena за конкретный период. Полнота и точность данных зависят от исходного источника и обработки в проекте `fboulnois/llm-leaderboard-csv`. Модели могут иметь различные лицензионные соглашения — перед использованием ознакомьтесь с официальной документацией разработчиков.
+|
