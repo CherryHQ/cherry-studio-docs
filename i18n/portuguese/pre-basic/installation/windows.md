@@ -18,26 +18,26 @@ Este documento foi traduzido do chinês por IA e ainda não foi revisado.
 Nota: O sistema Windows 7 não suporta a instalação do Cherry Studio.
 {% endhint %}
 
-Clique em "Download" e selecione a versão adequada
+Clique em download para escolher a versão adequada
 
 {% embed url="https://cherry-ai.com/download" %}
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Abrir o site oficial</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Abrir o site oficial</p></figcaption></figure>
 
-## Aguarde o download concluir
+## Aguardar o download ser concluído
 
-<figure><img src="../../.gitbook/assets/download.webp" alt="" width="563"><figcaption><p>Navegador Edge realizando download</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/download.webp" alt="" width="563"><figcaption><p>Navegador Edge está a fazer download</p></figcaption></figure>
 
-> Se o navegador alertar que o arquivo não é confiável, selecione "Manter"
+> Se o navegador avisar que o arquivo não é de confiança, basta escolher "Manter"
 >
-> `Manter` → `Confiar no Cherry-Studio`
+> `Escolher Manter` → `Confiar em Cherry-Studio`
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-## Abrir o arquivo
+## Abrir o ficheiro
 
 <figure><img src="../../.gitbook/assets/download (1).webp" alt="" width="563"><figcaption><p>Lista de downloads do Edge</p></figcaption></figure>
 
-## Instalar
+## Instalação
 
-<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1).png" alt=""><figcaption><p>Interface de instalação do software</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Interface de instalação do software</p></figcaption></figure>

@@ -8,33 +8,33 @@ Este documento foi traduzido do chinês por IA e ainda não foi revisado.
 
 
 
-**MCP (Model Context Protocol)** é um protocolo de código aberto projetado para fornecer informações de contexto a modelos de linguagem grande (LLM) de maneira padronizada. Para mais detalhes sobre o MCP, consulte [#shen-me-shi-mcpmodel-context-protocol](../../question-contact/knowledge.md#shen-me-shi-mcpmodel-context-protocol "mention").
+**MCP (Model Context Protocol)** é um protocolo open-source projetado para fornecer informações contextuais a modelos de linguagem de grande porte (LLMs) de forma padronizada. Para mais detalhes sobre o MCP, consulte [#shen-me-shi-mcpmodel-context-protocol](../../question-contact/knowledge.md#shen-me-shi-mcpmodel-context-protocol "mention")
 
 ## Usando o MCP no Cherry Studio
 
-A seguir, usando a funcionalidade `fetch` como exemplo, demonstraremos como usar o MCP no Cherry Studio. Detalhes podem ser encontrados na [documentação](https://github.com/modelcontextprotocol/servers/tree/main/src/fetch).
+O exemplo abaixo demonstra o uso da funcionalidade `fetch` no Cherry Studio. Detalhes completos podem ser encontrados na [documentação](https://github.com/modelcontextprotocol/servers/tree/main/src/fetch).
 
-### **Preparação: Instalação do uv e bun**
+### **Preparação: Instalar uv e bun**
 
 {% hint style="warning" %}
-Atualmente, o Cherry Studio usa apenas o [uv](https://github.com/astral-sh/uv) e [bun](https://github.com/oven-sh/bun) integrados, e **não reutilizará** as versões já instaladas no sistema.
+O Cherry Studio utiliza exclusivamente as instalações internas de [uv](https://github.com/astral-sh/uv) e [bun](https://github.com/oven-sh/bun), **não reaproveitando** versões instaladas no sistema.
 {% endhint %}
 
-Em `Configurações → Servidor MCP`, clique no botão `Instalar` para realizar o download e instalação automáticos. Como o download é feito diretamente do GitHub, pode ser lento e há maior chance de falhas. O sucesso da instalação é verificado pela presença de arquivos nas pastas mencionadas abaixo.
+Em `Configurações > Servidor MCP`, clique no botão `Instalar` para realizar o download automático. Como o download é feito diretamente do GitHub, a velocidade pode ser baixa e há maior possibilidade de falha. A instalação é considerada bem-sucedida se os arquivos estiverem presentes nas pastas mencionadas abaixo.
 
-<figure><img src="../../.gitbook/assets/image (2) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-**Diretório de instalação dos executáveis:**
+**Diretórios de instalação dos executáveis:**
 
-Windows: `C:\Users\NomeDoUsuário\.cherrystudio\bin`
+Windows: `C:\Users\NomeDeUsuário\.cherrystudio\bin`
 
-macOS/Linux: `~/.cherrystudio/bin`
+macOS e Linux: `~/.cherrystudio/bin`
 
 <figure><img src="../../.gitbook/assets/MCP-cherrystudio_bin_文件夹.png" alt=""><figcaption><p>Diretório bin</p></figcaption></figure>
 
 **Caso a instalação automática falhe:**
 
-Você pode vincular os comandos correspondentes do sistema a este diretório usando links simbólicos. Se o diretório não existir, crie-o manualmente. Alternativamente, baixe manualmente os executáveis e coloque-os neste diretório:
+É possível criar links simbólicos a partir dos comandos do sistema neste diretório. Se o diretório não existir, crie-o manualmente. Alternativamente, baixe os executáveis manualmente:
 
-Bun: [https://github.com/oven-sh/bun/releases](https://github.com/oven-sh/bun/releases)  
+Bun: [https://github.com/oven-sh/bun/releases](https://github.com/oven-sh/bun/releases)\
 UV: [https://github.com/astral-sh/uv/releases](https://github.com/astral-sh/uv/releases)

@@ -12,32 +12,32 @@ This document was translated from Chinese by AI and has not yet been reviewed.
 
 
 
-## Open the official website
+## Open the Official Website
 
 {% hint style="warning" %}
-Note: Windows 7 does not support installing Cherry Studio.
+Note: Windows 7 system does not support Cherry Studio installation.
 {% endhint %}
 
-Click to download the appropriate version
+Click download to select the appropriate version
 
 {% embed url="https://cherry-ai.com/download" %}
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Open the official website</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Open the official website</p></figcaption></figure>
 
-## Wait for download to complete
+## Wait for Download to Complete
 
 <figure><img src="../../.gitbook/assets/download.webp" alt="" width="563"><figcaption><p>Edge browser is downloading</p></figcaption></figure>
 
-> If the browser prompts that the file is not trusted, you can choose to keep it.
+> If the browser prompts that the file is not trusted, simply choose to keep it.
 >
-> `Keep` → `Trust Cherry-Studio`
+> `Choose to Keep` → `Trust Cherry-Studio`
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-## Open the file
+## Open the File
 
-<figure><img src="../../.gitbook/assets/download (1).webp" alt="" width="563"><figcaption><p>Edge Download List</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/download (1).webp" alt="" width="563"><figcaption><p>Edge download list</p></figcaption></figure>
 
 ## Installation
 
-<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1).png" alt=""><figcaption><p>Software installation interface</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Software installation interface</p></figcaption></figure>

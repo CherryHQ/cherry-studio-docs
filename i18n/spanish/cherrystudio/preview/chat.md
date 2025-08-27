@@ -11,99 +11,99 @@ Este documento ha sido traducido del chino por IA y aún no ha sido revisado.
 
 
 
-## Asistentes y Temas
+## Asistentes y Temas de Conversación
 
-### Asistentes
+### Asistente
 
-Un `asistente` es una configuración personalizada del modelo seleccionado, como presets de prompt y parámetros. Estos ajustes ayudan a que el modelo funcione según tus expectativas de trabajo.
+Un `asistente` es una configuración personalizada del modelo seleccionado, que incluye ajustes como preajustes de indicaciones (prompts) y parámetros. Estas configuraciones permiten adaptar el modelo para que funcione según tus expectativas.
 
-El `asistente predeterminado del sistema` tiene parámetros genéricos (sin prompt). Puedes usarlo directamente o buscar presets en la [página de agentes](agents.md).
+El `asistente predeterminado del sistema` tiene parámetros genéricos (sin prompt) que puedes usar directamente, o puedes buscar configuraciones predefinidas en la página de [agentes](agents.md).
 
-### Temas
+### Tema
 
-El `asistente` es el contenedor padre de los `temas`. Un mismo asistente puede crear múltiples temas (conversaciones), compartiendo configuraciones como parámetros y prompts.
+El `asistente` es el conjunto principal que contiene múltiples `temas` (conversaciones). Todos los `temas` comparten la misma configuración del modelo y prompt del asistente principal.
 
 <figure><img src="../../.gitbook/assets/image (4) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../../.gitbook/assets/image (5) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-## Botones del Panel de Diálogo
+## Botones en el cuadro de diálogo
 
 <figure><img src="../../.gitbook/assets/对话界面/对话框.png" alt=""><figcaption></figcaption></figure>
 
-![](../../.gitbook/assets/对话界面/新话题.png) `Nuevo tema`: Crea una nueva conversación dentro del asistente actual.
+![](../../.gitbook/assets/对话界面/新话题.png) `Nuevo tema` Crea un nuevo tema de conversación dentro del asistente actual.
 
-![](../../.gitbook/assets/对话界面/上传图片或文档.png) `Subir imagen/documento`: Las imágenes requieren soporte del modelo. Los documentos se analizan como texto contextual.
+![](../../.gitbook/assets/对话界面/上传图片或文档.png) `Subir imagen/documento` Sube imágenes (requiere soporte del modelo) o documentos que se analizarán automáticamente como contexto.
 
-![](../../.gitbook/assets/对话界面/网络搜索.png) `Búsqueda web`: Requiere configuración previa. Los resultados se usan como contexto (ver [Modo online](../../websearch/)).
+![](../../.gitbook/assets/对话界面/网络搜索.png) `Buscar en la web` Configura las búsquedas web en ajustes. Los resultados se usan como contexto. Ver más en [modo online](../../websearch/).
 
-![](../../.gitbook/assets/对话界面/知识库.png) `Base de conocimiento`: Activa la integración con KB (ver [Guía KB](../../knowledge-base/knowledge-base.md)).
+![](../../.gitbook/assets/对话界面/知识库.png) `Base de Conocimiento` Activa la base de conocimiento. Tutorial en [base de conocimiento](../../knowledge-base/knowledge-base.md).
 
-![](<../../.gitbook/assets/对话界面/MCP 服务器.png>) `Servidor MCP`: Activa funciones de servidor MCP (ver [Guía MCP](../../advanced-basic/mcp/)).
+![](<../../.gitbook/assets/对话界面/MCP 服务器.png>) `Servidor MCP` Activa la función MCP. Tutorial en [Uso de MCP](../../advanced-basic/mcp/).
 
-![](../../.gitbook/assets/对话界面/生成图片.png) `Generar imagen`: Oculto por defecto. Requiere activación manual para modelos compatibles (ej: Gemini).
-
-{% hint style="info" %}
-Actualmente se requiere activación manual. Este botón se eliminará en futuras optimizaciones.
-{% endhint %}
-
-![](../../.gitbook/assets/对话界面/选择模型.png) `Seleccionar modelo`: Cambia el modelo para conversaciones futuras manteniendo contexto.
-
-![](../../.gitbook/assets/对话界面/快捷短语.png) `Frases rápidas`: Usa frases preconfiguradas con soporte para variables.
-
-![](../../.gitbook/assets/对话界面/清空消息.png) `Limpiar mensajes`: Elimina todo el contenido del tema actual.
-
-![](../../.gitbook/assets/对话界面/展开.png) `Expandir`: Amplía el área de entrada para textos largos.
-
-![](../../.gitbook/assets/对话界面/清除上下文.png) `Limpiar contexto`: Trunca el contexto visible al modelo sin borrar contenido.
-
-![](<../../.gitbook/assets/对话界面/预估 Token 数.png>) `Estimación de Tokens`: Muestra: `Contexto actual` / `Máximo contexto` (∞ = ilimitado) / `Caracteres de entrada` / `Tokens estimados`.
+![](../../.gitbook/assets/对话界面/生成图片.png) `Generar imagen` Oculto por defecto. Para modelos compatibles como Gemini, es necesario activar esta función manualmente.
 
 {% hint style="info" %}
-Estimación referencial. El conteo real varía por modelo. Consulta a tu proveedor.
+Debido a limitaciones técnicas, debes activar manualmente este botón para generar imágenes. Se eliminará tras futuras mejoras.
 {% endhint %}
 
-![](../../.gitbook/assets/对话界面/翻译.png) `Traducir`: Traduce el contenido del cuadro de entrada a inglés.
+![](../../.gitbook/assets/对话界面/选择模型.png) `Seleccionar modelo` Cambia el modelo manteniendo el contexto.
 
-## Configuración de Conversación
+![](../../.gitbook/assets/对话界面/快捷短语.png) `Frases rápidas` Usa frases predefinidas en ajustes, admite variables.
+
+![](../../.gitbook/assets/对话界面/清空消息.png) `Borrar mensajes` Elimina todo el contenido del tema actual.
+
+![](../../.gitbook/assets/对话界面/展开.png) `Expandir` Amplía el cuadro de diálogo para textos largos.
+
+![](../../.gitbook/assets/对话界面/清除上下文.png) `Limpiar contexto` Trunca el contexto visible para el modelo (el modelo "olvida" mensajes anteriores).
+
+![](<../../.gitbook/assets/对话界面/预估 Token 数.png>) `Tokens estimados` Muestra: `contexto actual` / `máximo contexto` (∞ = ilimitado), `palabras actuales`, `tokens estimados`.
+
+{% hint style="info" %}
+Solo es una estimación. Los tokens reales varían según el modelo. Consulta los datos del proveedor.
+{% endhint %}
+
+![](../../.gitbook/assets/对话界面/翻译.png) `Traducir` Traduce al inglés el contenido del cuadro de entrada.
+
+## Configuración de conversación
 
 <figure><img src="../../.gitbook/assets/image (7) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-### Configuración de Modelos
+### Configuración del modelo
 
-Sincronizado con `Configuración de modelos` del asistente (ver [Editar asistente](chat.md#bian-ji-zhu-shou)).
+Sincronizado con la configuración del asistente. Ver [Editar asistente](chat.md#editar-asistente).
 
 {% hint style="info" %}
-Solo esta configuración aplica al asistente actual. Otras son globales (ej: estilo de burbujas aplica a todos los asistentes).
+Solo los ajustes de modelo afectan al asistente actual. Otras configuraciones son globales.
 {% endhint %}
 
-### Configuración de Mensajes
+### Configuración de mensajes
 
 #### <mark style="color:blue;">**`Línea divisoria de mensajes`**</mark>:
 
-Separa contenido de mensajes y barra de acciones.
+Separa el contenido de los mensajes de la barra de acciones.
 
 {% tabs %}
 {% tab title="Activado" %}
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 {% endtab %}
 
 {% tab title="Desactivado" %}
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 {% endtab %}
 {% endtabs %}
 
-#### <mark style="color:blue;">**`Usar fuente serif`**</mark>:
+#### <mark style="color:blue;">**`Usar fuente serif`**</mark>：
 
-Cambia estilo tipográfico. Personalizable vía [CSS personalizado](../../personalization-settings/).
+Cambia el estilo de fuente. También puedes cambiarla mediante [CSS personalizado](../../personalization-settings/).
 
-#### <mark style="color:blue;">**`Mostrar números de línea en código`**</mark>:
+#### <mark style="color:blue;">**`Mostrar números de línea en código`**</mark>：
 
-Muestra números de línea en bloques de código.
+Muestra números de línea en bloques de código generados por el modelo.
 
 {% tabs %}
 {% tab title="Desactivado" %}
-<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 {% endtab %}
 
 {% tab title="Activado" %}
@@ -111,48 +111,48 @@ Muestra números de línea en bloques de código.
 {% endtab %}
 {% endtabs %}
 
-#### <mark style="color:blue;">**`Bloques de código plegables`**</mark>:
+#### <mark style="color:blue;">**`Bloques de código plegables`**</mark>：
 
-Plegado automático para bloques de código largos.
+Plegar automáticamente bloques de código largos.
 
-#### <mark style="color:blue;">**`Ajuste de línea en código`**</mark>:
+#### <mark style="color:blue;">**`Ajuste de línea en bloques de código`**</mark>：
 
-Ajuste automático de líneas largas que excedan el ancho.
+Ajusta líneas largas que excedan el ancho de la ventana.
 
-#### <mark style="color:blue;">**`Plegar automáticamente procesos de pensamiento`**</mark>:
+#### <mark style="color:blue;">**`Plegar automáticamente contenido reflexivo`**</mark>：
 
-Plegado automático tras completar procesos de razonamiento.
+Plegar automáticamente el proceso de razonamiento de los modelos que lo soportan.
 
-#### <mark style="color:blue;">**`Estilo de mensajes`**</mark>:
+#### <mark style="color:blue;">**`Estilo de mensajes`**</mark>：
 
-Alterna entre estilo burbuja o lista.
+Cambia entre estilo burbuja o lista.
 
-#### <mark style="color:blue;">**`Estilo de código`**</mark>:
+#### <mark style="color:blue;">**`Estilo de código`**</mark>：
 
-Personaliza visualización de fragmentos de código.
+Cambia la apariencia de los fragmentos de código.
 
-#### <mark style="color:blue;">**`Motor de fórmulas matemáticas`**</mark>:
+#### <mark style="color:blue;">**`Motor de fórmulas matemáticas`**</mark>：
 
-* **KaTeX**: Renderizado más rápido (optimizado para rendimiento).
-* **MathJax**: Más completo (soporte avanzado), pero más lento.
+* KaTeX: Renderiza más rápido (optimizado).
+* MathJax: Más compatible pero lento.
 
-#### <mark style="color:blue;">**`Tamaño de fuente de mensajes`**</mark>:
+#### <mark style="color:blue;">**`Tamaño de fuente en mensajes`**</mark>：
 
-Ajusta tamaño de texto en interfaz de conversación.
+Ajusta el tamaño de fuente en la interfaz.
 
-### Configuración de Entrada
+### Configuración de entrada
 
-#### <mark style="color:blue;">**`Mostrar tokens estimados`**</mark>:
+#### <mark style="color:blue;">**`Mostrar tokens estimados`**</mark>：
 
-Muestra estimación de tokens para texto de entrada (referencial).
+Muestra tokens estimados para el texto de entrada (referencia únicamente).
 
-#### <mark style="color:blue;">**`Pegar texto largo como archivo`**</mark>:
+#### <mark style="color:blue;">**`Pegar textos largos como archivos`**</mark>：
 
-Convierte textos largos pegados en "archivos" para reducir interferencia visual.
+Convierte textos largos pegados en formato de archivo para reducir interferencias.
 
-#### <mark style="color:blue;">**`Renderizar Markdown en mensajes enviados`**</mark>:
+#### <mark style="color:blue;">**`Renderizar Markdown en mensajes de entrada`**</mark>：
 
-Controla renderizado Markdown en mensajes de usuario.
+Solo renderiza Markdown en respuestas del modelo si está desactivado.
 
 {% tabs %}
 {% tab title="Desactivado" %}
@@ -164,130 +164,105 @@ Controla renderizado Markdown en mensajes de usuario.
 {% endtab %}
 {% endtabs %}
 
-#### <mark style="color:blue;">**`Traducir con triple espacio`**</mark>:
+#### <mark style="color:blue;">**`Traducir con triple espacio rápido`**</mark>：
 
-Traduce contenido al pulsar espacio tres veces consecutivas.
+Presionar espacio tres veces traduce el mensaje a inglés.
 
 {% hint style="warning" %}
-¡Atención! Sobrescribe el texto original.
+Sobrescribe el texto original.
 {% endhint %}
 
-#### <mark style="color:blue;">**`Idioma objetivo`**</mark>:
+#### <mark style="color:blue;">**`Idioma de destino`**</mark>：
 
-Define idioma para traducción por botón/triple espacio.
+Configura el idioma de traducción para el botón y la tecla triple espacio.
 
-## Configuración de Asistentes
+## Configuración del asistente
 
-Selecciona nombre del asistente → Menú contextual → Configuración
+Selecciona el <mark style="background-color:yellow;">nombre del asistente</mark> → <mark style="background-color:yellow;">menú contextual</mark> → ajustes correspondientes.
 
-### Editar Asistente
+### Editar asistente
 
 {% hint style="info" %}
-Los cambios aplican a todos los temas bajo este asistente.
+Afecta a todos temas bajo este asistente.
 {% endhint %}
 
 <figure><img src="../../.gitbook/assets/image (6) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-#### Configuración de Prompt
+#### Configuración de prompt
 
-#### <mark style="color:blue;">**`Nombre`**</mark>:
+#### <mark style="color:blue;">**`Nombre`**</mark>：
 
-Nombre personalizable para identificación.
+Nombre personalizable para identificar el asistente.
 
-#### <mark style="color:blue;">**`Prompt`**</mark>:
+#### <mark style="color:blue;">**`Prompt`**</mark>：
 
-Personalización avanzada. Consulta ejemplos en página de agentes.
+Ver ejemplos en la página de agentes.
 
-#### Configuración de Modelos
+#### Configuración del modelo
 
-#### <mark style="color:blue;">**`Modelo predeterminado`**</mark>:
+#### <mark style="color:blue;">**`Modelo predeterminado`**</mark>：
 
-Modelo inicial para nuevos temas. Si está vacío, usa el [modelo global predeterminado](settings/default-models.md#mo-ren-zhu-shou-mo-xing).
+Define un modelo fijo para este asistente. Si no se establece, se usará el modelo predeterminado global.
 
 {% hint style="info" %}
-Prioridad: **Modelo del asistente** > **Modelo global predeterminado**.
+Prioridad: modelo del asistente > modelo predeterminado global.
 {% endhint %}
 
-#### <mark style="color:blue;">**`Reinicio automático de modelo`**</mark>:
+#### <mark style="color:blue;">**`Restablecer modelo automáticamente`**</mark>：
 
-Si está activado: Al crear nuevo tema tras cambiar de modelo, se usa el modelo predeterminado del asistente.  
-Si está desactivado: Los nuevos temas heredan el último modelo usado.
+Si está activado: al crear un nuevo tema, se usará el modelo predeterminado del asistente, ignorando el último modelo usado.
 
-> **Ejemplo**: Asistente predeterminado: `gpt-3.5-turbo`.  
-> - En Tema 1 cambias a `gpt-4o`.  
-> - **Con reinicio automático**: Tema 2 usa `gpt-3.5-turbo`.  
-> - **Sin reinicio automático**: Tema 2 usa `gpt-4o`.
+> Ejemplo: modelo predeterminado = gpt-3.5-turbo. Si cambiamos a gpt-4o en tema1:  
+> Con restablecimiento activado: nuevo tema = gpt-3.5-turbo  
+> Desactivado: nuevo tema = gpt-4o  
 
-#### <mark style="color:blue;">**`Temperatura (Temperature)`**</mark>:
+#### <mark style="color:blue;">**`Temperatura`**</mark> ：
 
-Controla aleatoriedad en respuestas (valor predeterminado: 0.7):
+Controla la creatividad de las respuestas (valor predeterminado: 0.7):
+* Baja (0-0.3): respuestas precisas y coherentes
+* Media (0.4-0.7): equilibrio creatividad-coherencia (ideal para chatbots)
+* Alta (0.8-1.0): máxima creatividad pero menos coherencia
 
-* **Baja (0-0.3)**:  
-  - Salidas predecibles y precisas  
-  - Ideal para código o datos  
-* **Media (0.4-0.7)**:  
-  - Equilibrio creatividad/coherencia  
-  - Recomendado para chats (≈0.5)  
-* **Alta (0.8-1.0)**:  
-  - Máxima creatividad  
-  - Para ideas/redacción creativa  
+#### <mark style="color:blue;">**`Top P (núcleo de muestreo)`**</mark>：
 
-#### <mark style="color:blue;">**`Top P (Muestreo nuclear)`**</mark>:
+Valor predeterminado: 1. Valores bajos = respuestas más conservadoras, altos = más diversidad.
 
-Predeterminado: 1. Valores bajos → vocabulario limitado/coherente. Valores altos → diversidad léxica.
+#### <mark style="color:blue;">**`Ventana de contexto`**</mark>
 
-* **Bajo (0.1-0.3)**:  
-  - Selecciona palabras de alta probabilidad  
-  - Para documentación técnica  
-* **Medio (0.4-0.6)**:  
-  - Balance general  
-* **Alto (0.7-1.0)**:  
-  - Diversidad expresiva  
+Número de mensajes retenidos en el contexto:
+* 5-10: conversaciones simples
+* >10: tareas complejas (aumenta consumo de tokens)
 
-#### <mark style="color:blue;">**`Ventana de Contexto`**</mark>
+#### <mark style="color:blue;">**`Activar límite de longitud (MaxToken)`**</mark>
 
-Cantidad de mensajes retenidos:
+Límite de tokens por respuesta. La mayoría de modelos soportan hasta 32k tokens.
 
-* **5-10**: Conversaciones estándar  
-* **>10**: Tareas complejas con memoria extendida  
-* ¡Atención! Más mensajes = más tokens  
-
-#### <mark style="color:blue;">**`Limitar longitud de mensaje (MaxToken)`**</mark>
-
-Límite de tokens por respuesta. Varía por modelo (consultar documentación).
-
-> **Uso típico**: Pruebas de conexión (`MaxToken=1`).
-
-**Recomendaciones**:
 {% hint style="success" %}
-* Chat: 500-800  
-* Texto corto: 800-2000  
-* Generación de código: 2000-3600  
-* Texto largo: 4000+ (requiere soporte del modelo)  
+Recomendaciones:
+* Chat: 500-800
+* Texto corto: 800-2000
+* Código: 2000-3600
+* Texto largo: 4000+ (requiere soporte del modelo)
 {% endhint %}
 
 {% hint style="warning" %}
-Respuestas pueden truncarse si exceden MaxToken. Ajustar según necesidades.
+Respuestas pueden truncarse si exceden MaxToken. Ajusta según necesidades.
 {% endhint %}
 
 #### <mark style="color:blue;">**`Salida en flujo (Stream)`**</mark>
 
-Transmite respuestas progresivamente ("efecto máquina de escribir").  
-- **Activado**: Entrega incremental por tokens.  
-- **Desactivado**: Entrega completa al finalizar.  
+Si está activado: muestra la respuesta progresivamente como un flujo de texto en tiempo real.  
+Desactivado: envía la respuesta completa de una vez.
 
 {% hint style="info" %}
-Desactivar para modelos incompatibles (ej: o1-mini inicial).
+Desactiva para modelos no compatibles como o1-mini.
 {% endhint %}
 
 #### <mark style="color:blue;">**`Parámetros personalizados`**</mark>
 
-Añade parámetros avanzados al cuerpo de la solicitud (ej: `presence_penalty`).  
-Formato: `nombre - tipo - valor` (ver [documentación](https://openai.apifox.cn/doc-3222739)).
+Agrega parámetros adicionales (presence_penalty, etc.) al cuerpo de la solicitud. Documentación: [link de referencia](https://openai.apifox.cn/doc-3222739)
 
 {% hint style="info" %}
-1. Parámetros personalizados anulan parámetros nativos si coinciden.  
-> Ejemplo: Definir `model:gpt-4o` fuerza este modelo siempre.  
-
-2. Usar `<kbd>nombre:undefined</kbd>` elimina parámetros.  
+Prioridad: parámetros personalizados > parámetros integrados.
+Usa `<nombre_parametro>:undefined` para excluir parámetros.
 {% endhint %}

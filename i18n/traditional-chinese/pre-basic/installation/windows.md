@@ -22,7 +22,7 @@ icon: windows
 
 {% embed url="https://cherry-ai.com/download" %}
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1).png" alt=""><figcaption><p>打開官方網站</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>打開官方網站</p></figcaption></figure>
 
 ## 等待下載完成
 
@@ -32,7 +32,7 @@ icon: windows
 >
 > `選擇保留` → `信任 Cherry-Studio`
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## 開啟檔案
 
@@ -40,4 +40,4 @@ icon: windows
 
 ## 安裝
 
-<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1).png" alt=""><figcaption><p>軟體安裝介面</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>軟體安裝介面</p></figcaption></figure>
