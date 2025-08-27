@@ -28,7 +28,7 @@ icon: route
 
 在 Cherry Studio 对话框中点击调用链查看调用链的全链路数据。无论在对话过程中调用了模型，还是网络搜索、知识库、MCP，都可以在调用链窗口中查看到全链路调用数据。
 
-<figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../.gitbook/assets/image (86).png" alt=""><figcaption></figcaption></figure>
 
@@ -46,7 +46,7 @@ icon: route
 
 若想要查看调用链中网络搜索的详情，可以点击网络搜索调用节点，查看其输入、输出详情。在详情中，可以查看到调用网络搜索查询的问题和其返回的结果。
 
-<figure><img src="../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../.gitbook/assets/image (150).png" alt=""><figcaption></figcaption></figure>
 

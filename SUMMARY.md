@@ -46,6 +46,9 @@
   * [GitHub Copilot](pre-basic/providers/github-copilot.md)
   * [PPIO 派欧云](pre-basic/providers/ppio.md)
   * [Vertex AI](pre-basic/providers/vertex-ai.md)
+  * [CherryIN](pre-basic/providers/cherryin/README.md)
+    * [免费体验 | 智谱 GLM-4.5-Air ，轻量高效新选择！](pre-basic/providers/cherryin/mian-fei-ti-yan-zhi-pu-glm4.5air-qing-liang-gao-xiao-xin-xuan-ze.md)
+    * [免费体验 | Qwen3-8B ，由硅基流动提供！](pre-basic/providers/cherryin/mian-fei-ti-yan-qwen38b-you-gui-ji-liu-dong-ti-gong.md)
 
 ***
 
