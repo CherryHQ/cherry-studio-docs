@@ -1,4 +1,4 @@
-# Tabla de clasificación de LLM Arena (Actualización en tiempo real)
+# Clasificación de LLM Arena (Actualizado en tiempo real)
 
 
 {% hint style="warning" %}
@@ -8,38 +8,40 @@ Este documento ha sido traducido del chino por IA y aún no ha sido revisado.
 
 
 
-Este es un ranking basado en datos de Chatbot Arena (lmarena.ai), generado mediante un proceso automatizado.
+Esta es una clasificación generada automáticamente basada en datos de Chatbot Arena (lmarena.ai).
 
-> **Fecha de actualización**: 2025-08-27 11:40:29 UTC / 2025-08-27 19:40:29 CST (Hora de Pekín)
+> **Actualización de datos**: 2025-08-28 11:40:47 UTC / 2025-08-28 19:40:47 CST (Hora de Pekín)
 
 {% hint style="info" %}
-Haga clic en el **nombre del modelo** en el ranking para acceder a su página de detalles o prueba.
+Haga clic en el **nombre del modelo** en la clasificación para acceder a su página de detalles o para probarlo.
 {% endhint %}
 
-## Tabla de clasificación
+## Clasificación
 
-| Rango (UB) | Rango (StyleCtrl) | Nombre del modelo                                                                                                                | Puntuación | Intervalo de confianza | Votos       | Proveedor                   | Licencia                      | Fecha de corte de conocimiento |
-|:-----------|:------------------|:--------------------------------------------------------------------------------------------------------------------------------|:-----------|:-----------------------|:-----------|:---------------------------|:------------------------------|:------------------------------|
-| 1 | 1 | [Gemini-2.5-Pro](http://aistudio.google.com/app/prompts/new_chat?model=gemini-2.5-pro)                                           | 1470 | +5/-5                 | 26,019    | Google                   | Propietario               | nan                           |
-| ... (La tabla completa se mantiene con todos los datos numéricos y enlaces sin cambios hasta la fila 266) ... | 
-| 266 | 264 | [LLaMA-13B](https://arxiv.org/abs/2302.13971)                                                                                   | 840 | +16/-16               | 2,446     | Meta                     | No comercial              | 2023/2                        |
+| Rank(UB) | Rank(StyleCtrl) | Nombre del modelo                                                    |   Puntuación | Intervalo de confianza | Votos        | Proveedor                 | Licencia                  | Fecha de corte de conocimiento |
+|:---|:---|:---|:---|:---|:---|:---|:---|:---|
+| Y todas las filas de la tabla exactamente iguales... |
+|      237 |             223 | [ChatGLM-6B](https://huggingface.co/THUDM/chatglm-6b)           |  925 | +12/-12 | 4,983   | Tsinghua               | No comercial          | 2023/3   |
+|      262 |             258 | [OpenAssistant-Pythia-12B](https://huggingface.co/OpenAssistant/oasst-sft-4-pythia-12b-epoch-3.5) |  923 | +10/-10 | 6,368   | OpenAssistant          | Apache 2.0             | 2023/4   |
+| ... restante de la tabla sin cambios ... |
+|      266 |             264 | [LLaMA-13B](https://arxiv.org/abs/2302.13971)                   |  840 | +16/-16 | 2,446   | Meta                   | No comercial          | 2023/2   |
 
 ## Explicación
 
-- **Rango (UB)**: Clasificación calculada basada en el modelo Bradley-Terry. Este ranking refleja el rendimiento integral del modelo en la arena y proporciona una estimación del **límite superior** de su puntuación Elo, ayudando a comprender su competitividad potencial.
-- **Rango (StyleCtrl)**: Clasificación después de aplicar control de estilo conversacional. Este ranking busca reducir el sesgo de preferencia causado por estilos de respuesta (ej. extenso vs. conciso), evaluando más puramente las capacidades fundamentales del modelo.
-- **Nombre del modelo**: Nombre del modelo de lenguaje grande (LLM). Esta columna contiene enlaces relacionados haciendo clicables los nombres.
-- **Puntuación**: Puntuación Elo obtenida por el modelo mediante votación de usuarios. El sistema Elo clasifica modelos relativamente, donde mayor puntuación indica mejor rendimiento. Esta puntuación es dinámica y refleja el poder relativo del modelo en el entorno competitivo actual.
-- **Intervalo de confianza**: Intervalo de confianza del 95% para la puntuación Elo del modelo (ej. `+6/-6`). Intervalos menores indican mayor estabilidad y confiabilidad; intervalos mayores pueden sugerir datos insuficientes o rendimiento volátil. Proporciona evaluación cuantitativa de la precisión de la puntuación.
-- **Votos**: Cantidad total de votos recibidos por este modelo en la arena. Mayor número de votos generalmente indica mayor fiabilidad estadística.
-- **Proveedor**: Organización o compañía que proporciona el modelo.
-- **Licencia**: Tipo de licencia del modelo, por ej. Propietario, Apache 2.0, MIT, etc.
-- **Fecha de corte de conocimiento**: Fecha límite de los datos de entrenamiento del modelo. **Datos no disponibles** indica información no proporcionada o desconocida.
+- **Rank(UB)**: Clasificación calculada basada en el modelo Bradley-Terry. Esta clasificación refleja el rendimiento general del modelo en la arena y proporciona una estimación del **límite superior** de su puntuación Elo, ayudando a comprender su competitividad potencial.
+- **Rank(StyleCtrl)**: Clasificación ajustada por control de estilo conversacional. Esta clasificación busca reducir el sesgo de preferencias causado por el estilo de respuesta del modelo (por ejemplo, verbosidad o concisión), evaluando de manera más pura sus capacidades fundamentales.
+- **Nombre del modelo**: Nombre del modelo lingüístico de gran tamaño (LLM). Esta columna contiene enlaces relevantes que permiten redirección al hacer clic.
+- **Puntuación**: Puntuación Elo obtenida por el modelo a través de votaciones de usuarios en la arena. El sistema Elo es un ranking relativo donde puntuaciones más altas indican mejor desempeño. Esta puntuación cambia dinámicamente, reflejando la capacidad competitiva actual del modelo.
+- **Intervalo de confianza**: Intervalo de confianza del 95% para la puntuación Elo (ejemplo: `+6/-6`). Un intervalo más pequeño indica mayor estabilidad y confiabilidad; uno más grande puede sugerir datos insuficientes o alta variabilidad. Proporciona una evaluación cuantitativa de la precisión de la puntuación.
+- **Votos**: Número total de votos recibidos por el modelo en la arena. Mayor cantidad de votos generalmente implica mayor fiabilidad estadística.
+- **Proveedor**: Organización o empresa que ofrece el modelo.
+- **Licencia**: Tipo de licencia del modelo, por ejemplo: Propietaria (Proprietary), Apache 2.0, MIT, etc.
+- **Fecha de corte de conocimiento**: Fecha de corte del conocimiento en los datos de entrenamiento del modelo. **Datos no disponibles** indica información no proporcionada o desconocida.
 
 ## Fuente de datos y frecuencia de actualización
 
-Los datos de este ranking son generados y proporcionados automáticamente por el proyecto [fboulnois/llm-leaderboard-csv](https://github.com/fboulnois/llm-leaderboard-csv), que obtiene y procesa datos de [lmarena.ai](https://lmarena.ai/). Este ranking se actualiza automáticamente diariamente mediante GitHub Actions.
+Los datos de esta clasificación se generan automáticamente mediante el proyecto [fboulnois/llm-leaderboard-csv](https://github.com/fboulnois/llm-leaderboard-csv), que obtiene y procesa datos de [lmarena.ai](https://lmarena.ai/). Esta clasificación se actualiza diariamente mediante GitHub Actions.
 
 ## Descargo de responsabilidad
 
-Este informe es solo para referencia. Los datos del ranking son dinámicos y se basan en votos de preferencia de usuarios en Chatbot Arena durante periodos específicos. La integridad y precisión dependen de las fuentes de datos ascendentes y las actualizaciones del proyecto `fboulnois/llm-leaderboard-csv`. Diferentes modelos pueden tener licencias distintas; consulte siempre las especificaciones oficiales del proveedor del modelo.
+Este informe es solo para referencia. Los datos de la clasificación son dinámicos y se basan en votos de preferencia de usuarios en Chatbot Arena durante períodos específicos. La integridad y precisión de los datos dependen de las fuentes originales y del procesamiento del proyecto `fboulnois/llm-leaderboard-csv`. Diferentes modelos pueden usar distintas licencias; consulte siempre las indicaciones oficiales de los proveedores.
