@@ -5,7 +5,7 @@ icon: download
 # 客户端下载
 
 {% hint style="info" %}
-当前最新正式版：v1.5.8
+当前最新正式版：v1.5.9
 {% endhint %}
 
 ## 直链下载
@@ -24,11 +24,11 @@ icon: download
 
 主线路：
 
-【[Cherry Studio 官网](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.8/Cherry-Studio-1.5.8-x64-setup.exe)】
+【[Cherry Studio 官网](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.9/Cherry-Studio-1.5.9-x64-setup.exe)】
 
 备用线路：
 
-【[线路1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.8/Cherry-Studio-1.5.8-x64-setup.exe)】 【[线路2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.8/Cherry-Studio-1.5.8-x64-setup.exe)】 【[线路3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.8/Cherry-Studio-1.5.8-x64-setup.exe)】
+【[线路1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.9/Cherry-Studio-1.5.9-x64-setup.exe)】 【[线路2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.9/Cherry-Studio-1.5.9-x64-setup.exe)】 【[线路3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.9/Cherry-Studio-1.5.9-x64-setup.exe)】
 
 </details>
 
@@ -38,11 +38,11 @@ icon: download
 
 主线路：
 
-【[Cherry Studio 官网](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.8/Cherry-Studio-1.5.8-arm64-setup.exe)】
+【[Cherry Studio 官网](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.9/Cherry-Studio-1.5.9-arm64-setup.exe)】
 
 备用线路：
 
-【[线路1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.8/Cherry-Studio-1.5.8-arm64-setup.exe)】 【[线路2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.8/Cherry-Studio-1.5.8-arm64-setup.exe)】 【[线路3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.8/Cherry-Studio-1.5.8-arm64-setup.exe)】
+【[线路1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.9/Cherry-Studio-1.5.9-arm64-setup.exe)】 【[线路2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.9/Cherry-Studio-1.5.9-arm64-setup.exe)】 【[线路3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.9/Cherry-Studio-1.5.9-arm64-setup.exe)】
 
 </details>
 
@@ -54,11 +54,11 @@ icon: download
 
 主线路：
 
-【[Cherry Studio 官网](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.8/Cherry-Studio-1.5.8-x64-portable.exe)】
+【[Cherry Studio 官网](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.9/Cherry-Studio-1.5.9-x64-portable.exe)】
 
 备用线路：
 
-【[线路1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.8/Cherry-Studio-1.5.8-x64-portable.exe)】 【[线路2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.8/Cherry-Studio-1.5.8-x64-portable.exe)】 【[线路3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.8/Cherry-Studio-1.5.8-x64-portable.exe)】
+【[线路1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.9/Cherry-Studio-1.5.9-x64-portable.exe)】 【[线路2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.9/Cherry-Studio-1.5.9-x64-portable.exe)】 【[线路3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.9/Cherry-Studio-1.5.9-x64-portable.exe)】
 
 </details>
 
@@ -68,11 +68,11 @@ icon: download
 
 主线路：
 
-【[Cherry Studio 官网](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.8/Cherry-Studio-1.5.8-arm64-portable.exe)】
+【[Cherry Studio 官网](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.9/Cherry-Studio-1.5.9-arm64-portable.exe)】
 
 备用线路：
 
-【[线路1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.8/Cherry-Studio-1.5.8-arm64-portable.exe)】 【[线路2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.8/Cherry-Studio-1.5.8-arm64-portable.exe)】 【[线路3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.8/Cherry-Studio-1.5.8-arm64-portable.exe)】
+【[线路1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.9/Cherry-Studio-1.5.9-arm64-portable.exe)】 【[线路2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.9/Cherry-Studio-1.5.9-arm64-portable.exe)】 【[线路3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.9/Cherry-Studio-1.5.9-arm64-portable.exe)】
 
 </details>
 
@@ -86,11 +86,11 @@ icon: download
 
 主线路：
 
-【[Cherry Studio 官网](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.8/Cherry-Studio-1.5.8-x64.dmg)】
+【[Cherry Studio 官网](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.9/Cherry-Studio-1.5.9-x64.dmg)】
 
 备用线路：
 
-【[线路1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.8/Cherry-Studio-1.5.8.dmg)】 【[线路2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.8/Cherry-Studio-1.5.8-x64.dmg)】 【[线路3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.8/Cherry-Studio-1.5.8-x64.dmg)】
+【[线路1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.9/Cherry-Studio-1.5.9.dmg)】 【[线路2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.9/Cherry-Studio-1.5.9-x64.dmg)】 【[线路3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.9/Cherry-Studio-1.5.9-x64.dmg)】
 
 </details>
 
@@ -100,11 +100,11 @@ icon: download
 
 主线路：
 
-【[Cherry Studio 官网](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.8/Cherry-Studio-1.5.8-arm64.dmg)】
+【[Cherry Studio 官网](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.9/Cherry-Studio-1.5.9-arm64.dmg)】
 
 备用线路：
 
-【[线路1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.8/Cherry-Studio-1.5.8-arm64.dmg)】 【[线路2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.8/Cherry-Studio-1.5.8-arm64.dmg)】 【[线路3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.8/Cherry-Studio-1.5.8-arm64.dmg)】
+【[线路1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.9/Cherry-Studio-1.5.9-arm64.dmg)】 【[线路2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.9/Cherry-Studio-1.5.9-arm64.dmg)】 【[线路3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.9/Cherry-Studio-1.5.9-arm64.dmg)】
 
 </details>
 
@@ -118,11 +118,11 @@ icon: download
 
 主线路：
 
-【[Cherry Studio 官网](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.8/Cherry-Studio-1.5.8-x86_64.AppImage)】
+【[Cherry Studio 官网](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.9/Cherry-Studio-1.5.9-x86_64.AppImage)】
 
 备用线路：
 
-【[线路1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.8/Cherry-Studio-1.5.8-x86_64.AppImage)】 【[线路2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.8/Cherry-Studio-1.5.8-x86_64.AppImage)】 【[线路3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.8/Cherry-Studio-1.5.8-x86_64.AppImage)】
+【[线路1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.9/Cherry-Studio-1.5.9-x86_64.AppImage)】 【[线路2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.9/Cherry-Studio-1.5.9-x86_64.AppImage)】 【[线路3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.9/Cherry-Studio-1.5.9-x86_64.AppImage)】
 
 </details>
 
@@ -132,11 +132,11 @@ icon: download
 
 主线路：
 
-【[Cherry Studio 官网](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.8/Cherry-Studio-1.5.8-arm64.AppImage)】
+【[Cherry Studio 官网](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.9/Cherry-Studio-1.5.9-arm64.AppImage)】
 
 备用线路：
 
-【[线路1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.8/Cherry-Studio-1.5.8-arm64.AppImage)】 【[线路2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.8/Cherry-Studio-1.5.8-arm64.AppImage)】 【[线路3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.8/Cherry-Studio-1.5.8-arm64-AppImage)】
+【[线路1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.9/Cherry-Studio-1.5.9-arm64.AppImage)】 【[线路2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.9/Cherry-Studio-1.5.9-arm64.AppImage)】 【[线路3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.9/Cherry-Studio-1.5.9-arm64-AppImage)】
 
 </details>
 
