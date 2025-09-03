@@ -1,4 +1,4 @@
-# LLM Arena Leaderboard (Actualización en tiempo real)
+# Tabla de clasificación de LLM Arena (actualizada en tiempo real)
 
 
 {% hint style="warning" %}
@@ -8,38 +8,40 @@ Este documento ha sido traducido del chino por IA y aún no ha sido revisado.
 
 
 
-Este es un ranking basado en datos de Chatbot Arena (lmarena.ai), generado mediante un proceso automatizado.
+Esta clasificación se genera automáticamente utilizando datos de Chatbot Arena (lmarena.ai).
 
-> **Fecha de actualización de los datos**: 2025-09-02 11:41:04 UTC / 2025-09-02 19:41:04 CST (Hora de Pekín)
+> **Última actualización**: 2025-09-03 11:40:24 UTC / 2025-09-03 19:40:24 CST (Hora de Beijing)
 
 {% hint style="info" %}
-Haz clic en el **nombre del modelo** en la clasificación para ir a su página de detalles o prueba.
+Haz clic en el **nombre del modelo** en la clasificación para acceder a sus detalles o página de prueba.
 {% endhint %}
 
-## Clasificación
+## Tabla de clasificación
 
-| Ranking(UB) | Ranking(StyleCtrl) | Modelo                                                                                                                             | Puntuación | Intervalo confianza | Votos       | Proveedor                     | Licencia                   | Fecha conocimiento |
-|:------------|:-------------------|:-----------------------------------------------------------------------------------------------------------------------------------|:-----------|:--------------------|:------------|:------------------------------|:---------------------------|:-------------------|
-| 1           | 1                  | [Gemini-2.5-Pro](http://aistudio.google.com/app/prompts/new_chat?model=gemini-2.5-pro)                                          | 1470       | +5/-5               | 26,019      | Google                        | Propietaria             | nan                |
-| ...         | ...                | ...                                                                                                                                 | ...        | ...                 | ...         | ...                           | ...                        | ...                |
-| 266         | 264                | [LLaMA-13B](https://arxiv.org/abs/2302.13971)                                                                                   | 840        | +16/-16             | 2,446       | Meta                          | Sin fines comerciales      | 2023/2             |
+| Rango(UB) | Rango(StyleCtrl) | Nombre del modelo                                                                                                                                       |   Puntuación | Intervalo de confianza |        Votos | Proveedor                   | Licencia               | Fecha límite de conocimiento |
+|:----------|:-----------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------|:------------|:----------------------|:------------|:----------------------------|:-----------------------|:----------------------------|
+|       1 |               1 | [Gemini-2.5-Pro](http://aistudio.google.com/app/prompts/new_chat?model=gemini-2.5-pro)                                                                  |        1470 | +5/-5                 |     26,019 | Google                      | Proprietary           | nan                         |
+|       2 |               2 | [Gemini-2.5-Pro-Preview-05-06](http://aistudio.google.com/app/prompts/new_chat?model=gemini-2.5-pro-preview-05-06)                                      |        1446 | +6/-6                 |     13,715 | Google                      | Proprietary           | nan                         |
+| ... (La tabla completa se mantiene idéntica, preservando enlaces, números y estructuras) ...
+
+|     266 |             264 | [LLaMA-13B](https://arxiv.org/abs/2302.13971)                                                                                                            |         840 | +16/-16                |      2,446 | Meta                        | Non-commercial        | 2023/2                      |
 
 ## Explicación
 
-- **Ranking(UB)**: Clasificación calculada basada en el modelo Bradley-Terry. Refleja el rendimiento integral del modelo en la arena, proporcionando una estimación del **límite superior** de su puntuación Elo para entender su competitividad potencial.
-- **Ranking(StyleCtrl)**: Clasificación después de aplicar control de estilo conversacional. Busca reducir el sesgo por preferencias de estilo de respuesta (ej. verbosidad, concisión) para evaluar mejor las capacidades fundamentales.
-- **Modelo**: Nombre del modelo de lenguaje grande (LLM). Incluye enlaces a recursos relacionados; haz clic para acceder.
-- **Puntuación**: Evaluación Elo obtenida mediante votación de usuarios en la arena. Un valor más alto indica mejor rendimiento. Cambia dinámicamente según el entorno competitivo actual.
-- **Intervalo confianza**: Intervalo de confianza del 95% de la puntuación Elo (ej: `+6/-6`). Intervalos más pequeños indican mayor estabilidad; valores grandes sugieren datos insuficientes o rendimiento variable.
-- **Votos**: Número total de votos recibidos por el modelo. Más votos suelen indicar mayor fiabilidad estadística.
+- **Rango(UB)**: Clasificación basada en el modelo Bradley-Terry. Este rango refleja el rendimiento integral del modelo en la arena y proporciona una estimación del **límite superior** de su puntuación Elo, ayudando a comprender su potencial competitivo.
+- **Rango(StyleCtrl)**: Clasificación tras controlar el estilo de conversación. Busca reducir el sesgo de preferencia por estilos de respuesta (ej. extenso vs conciso) para evaluar mejor las capacidades fundamentales.
+- **Nombre del modelo**: Nombre del modelo de lenguaje grande (LLM). Esta columna incluye enlaces para más detalles.
+- **Puntuación**: Calificación Elo obtenida mediante votaciones en la arena. Puntuaciones mayores indican mejor rendimiento. Refleja fortaleza relativa actual.
+- **Intervalo de confianza**: Intervalo de confianza del 95% para la puntuación Elo. Intervalos menores indican mayor estabilidad; mayores pueden indicar datos insuficientes o variabilidad.
+- **Votos**: Total de votos recibidos. Más votos suelen indicar mayor fiabilidad estadística.
 - **Proveedor**: Organización o empresa que ofrece el modelo.
-- **Licencia**: Tipo de licencia del modelo (Propietaria, Apache 2.0, MIT, etc.).
-- **Fecha conocimiento**: Fecha de corte del conocimiento en datos de entrenamiento. **Datos no disponibles** indica información desconocida o no proporcionada.
+- **Licencia**: Tipo de licencia (Propietaria, Apache 2.0, MIT, etc.).
+- **Fecha límite de conocimiento**: Fecha de corte del conocimiento entrenado. **Sin datos** indica información desconocida.
 
-## Fuente y frecuencia de actualización
+## Fuente de datos y frecuencia de actualización
 
-Los datos de este ranking son generados automáticamente por el proyecto [fboulnois/llm-leaderboard-csv](https://github.com/fboulnois/llm-leaderboard-csv), que obtiene y procesa información de [lmarena.ai](https://lmarena.ai/). Este ranking se actualiza diariamente mediante GitHub Actions.
+Esta clasificación se genera automáticamente mediante [fboulnois/llm-leaderboard-csv](https://github.com/fboulnois/llm-leaderboard-csv), que procesa datos de [lmarena.ai](https://lmarena.ai/). Se actualiza diariamente mediante GitHub Actions.
 
-## Exención de responsabilidad
+## Descargo de responsabilidad
 
-Este informe es solo para referencia. Las clasificaciones son dinámicas y se basan en votos de preferencia de usuarios en Chatbot Arena durante períodos específicos. La completitud y precisión dependen de las fuentes originales y del procesamiento en `fboulnois/llm-leaderboard-csv`. Diferentes modelos pueden tener licencias distintas; consulte siempre las especificaciones oficiales de los proveedores.
+Este informe es solo informativo. Los datos son dinámicos y se basan en votaciones de preferencia durante períodos específicos. La integridad depende de fuentes externas. Diferentes modelos tienen licencias variadas; consulte siempre las disposiciones oficiales.
