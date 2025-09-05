@@ -1,4 +1,4 @@
-# LLM Arena Leaderboard (обновляется в реальном времени)
+# LLM Arena Leaderboard (Live Updates)
 
 
 {% hint style="warning" %}
@@ -8,17 +8,15 @@
 
 
 
-Этот рейтинг основан на данных Chatbot Arena (lmarena.ai) и генерируется автоматически.
-
-> **Время обновления данных**: 2025-09-04 11:40:21 UTC / 2025-09-04 19:40:21 CST (Пекинское время)
-
 {% hint style="info" %}
-Нажмите на **название модели** в рейтинге, чтобы перейти к подробной информации или странице тестирования.
+Это рейтинговая таблица, автоматически генерируемая на основе данных Chatbot Arena (lmarena.ai).
+
+> **Дата обновления данных**: 2025-09-05 11:40:23 UTC / 2025-09-05 19:40:23 CST (Пекинское время)
 {% endhint %}
 
-## Рейтинг
+## Leaderboard
 
-| Ранг (UB) | Ранг (StyleCtrl) | Название модели                                                                                                                             | Очки | Доверительный интервал | Голоса      | Провайдер                    | Лицензия                    | Дата обновления знаний |
+| Рейтинг (UB) | Рейтинг (StyleCtrl) | Название модели                                                                                                                             | Очки | Доверительный интервал | Голоса      | Провайдер                    | Лицензия                    | Дата обновления знаний |
 |:---|:---|:---|:---|:---|:---|:---|:---|:---|
 |        1 |               1 | [Gemini-2.5-Pro](http://aistudio.google.com/app/prompts/new_chat?model=gemini-2.5-pro)                                          | 1470 | +5/-5   | 26,019  | Google                 | Proprietary             | nan      |
 |        2 |               2 | [Gemini-2.5-Pro-Preview-05-06](http://aistudio.google.com/app/prompts/new_chat?model=gemini-2.5-pro-preview-05-06)              | 1446 | +6/-6   | 13,715  | Google                 | Proprietary             | nan      |
@@ -99,7 +97,7 @@
 |       77 |              71 | [Gemma-3n-e4b-it](http://aistudio.google.com/app/prompts/new_chat?model=gemma-3n-e4b-it)                                        | 1305 | +6/-6   | 13,182  | Google                 | Gemma                   | nan      |
 |       78 |              74 | [Yi-Lightning](https://platform.lingyiwanwu.com/docs#%E6%A8%A1%E5%9E%8B%E4%B8%8E%E8%AE%A1%E8%B4%B9)                             | 1303 | +4/-4   | 28,968  | 01 AI                  | Proprietary             | nan      |
 |       79 |              74 | [GPT-4o-2024-05-13](https://openai.com/index/hello-gpt-4o/)                                                                     | 1302 | +3/-3   | 117,747 | OpenAI                 | Proprietary             | 2023/10  |
-|       80 |              74 | [Claude 3.5 Sonnet](https://www.anthropic.com/news/claude-3-5-sonnet)                                                           | 1301 | +4/-4   | 37,645  | Anthropic              | Proprietary             | nan      |
+|       80 |              74 | [Claude 3.7 Sonnet](https://www.anthropic.com/news/claude-3-7-sonnet)                                                           | 1301 | +4/-4   | 37,645  | Anthropic              | Proprietary             | nan      |
 |       81 |              74 | [Qwen2.5-plus-1127](https://help.aliyun.com/zh/model-studio/getting-started/models?spm=a2c4g.11186623.0.i7)                     | 1300 | +6/-6   | 10,715  | Alibaba                | Proprietary             | nan      |
 |       82 |              76 | [Claude 3.5 Sonnet (20241022)](https://www.anthropic.com/news/3-5-models-and-computer-use)                                      | 1299 | +2/-2   | 84,537  | Anthropic              | Proprietary             | 2024/4   |
 |       83 |              74 | [Deepseek-v2.5-1210](https://huggingface.co/deepseek-ai/DeepSeek-V2.5-1210)                                                     | 1295 | +7/-7   | 7,243   | DeepSeek               | DeepSeek                | nan      |
@@ -140,7 +138,7 @@
 |      118 |             109 | [Meta-Llama-3.1-70B-Instruct](https://ai.meta.com/blog/meta-llama-3-1/)                                                         | 1264 | +3/-3   | 58,637  | Meta                   | Llama 3.1 Community     | 2023/12  |
 |      119 |             111 | [Amazon Nova Pro 1.0](https://docs.aws.amazon.com/nova/latest/userguide/what-is-nova.html)                                      | 1261 | +4/-4   | 26,371  | Amazon                 | Proprietary             | nan      |
 |      120 |             107 | [Llama-3.1-Tulu-3-70B](https://huggingface.co/allenai/Llama-3.1-Tulu-3-70B)                                                     | 1259 | +10/-10 | 3,010   | Ai2                    | Llama 3.1               | nan      |
-|      121 |             114 | [Yi-Large-preview](https://platform.lingyiwanwu.com/docs#%E6%A8%A1%E5%9E%8B)                                                    | 1258 | +4/-4   | 51,628  | 01 AI                  | Proprietary             | Нет данных     |
+|      121 |             114 | [Yi-Large-preview](https://platform.lingyiwanwu.com/docs#%E6%A8%A1%E5%9E%8B)                                                    | 1258 | +4/-4   | 51,628  | 01 AI                  | Proprietary             | 暂无数据     |
 |      122 |             119 | [Claude 3.5 Haiku (20241022)](https://www.anthropic.com/news/3-5-models-and-computer-use)                                       | 1255 | +3/-3   | 55,928  | Anthropic              | Propretary              | nan      |
 |      123 |             119 | [magistral-medium-2506](https://mistral.ai/news/magistral)                                                                      | 1252 | +7/-7   | 8,534   | Mistral                | Proprietary             | nan      |
 |      124 |             119 | [Reka-Core-20240904](https://docs.reka.ai/available-models)                                                                     | 1251 | +6/-6   | 7,948   | Reka AI                | Proprietary             | nan      |
@@ -151,7 +149,7 @@
 |      129 |             125 | [Deepseek-v2-API-0628](https://platform.deepseek.com/api-docs/updates#deepseek-chat)                                            | 1239 | +5/-5   | 19,508  | DeepSeek AI            | DeepSeek                | nan      |
 |      130 |             125 | [Mistral-Small-24B-Instruct-2501](https://huggingface.co/mistralai/Mistral-Small-24B-Instruct-2501)                             | 1238 | +5/-5   | 15,321  | Mistral                | Apache 2.0              | nan      |
 |      131 |             125 | [Deepseek-Coder-v2-0724](https://platform.deepseek.com/api-docs/updates/#version-2024-07-24)                                    | 1236 | +6/-6   | 11,725  | DeepSeek               | Proprietary             | nan      |
-|      132 |             126 | [Yi-Large](https://platform.01.ai/docs#models-and-pricing)                                                                      | 1235 | +6/-6   | 16,624  | 01 AI                  | Proprietary             | Нет данных     |
+|      132 |             126 | [Yi-Large](https://platform.01.ai/docs#models-and-pricing)                                                                      | 1235 | +6/-6   | 16,624  | 01 AI                  | Proprietary             | 暂无数据     |
 |      133 |             127 | [Gemma-2-27B-it](https://aistudio.google.com/app/prompts/new_chat?model=gemma-2-27b-it)                                         | 1235 | +2/-2   | 79,538  | Google                 | Gemma license           | 2024/6   |
 |      134 |             126 | [Qwen2.5-Coder-32B-Instruct](https://huggingface.co/Qwen/Qwen2.5-Coder-32B-Instruct)                                            | 1234 | +7/-7   | 5,730   | Alibaba                | Apache 2.0              | nan      |
 |      135 |             126 | [Command R+ (08-2024)](https://docs.cohere.com/docs/command-r-plus#model-details)                                               | 1233 | +6/-6   | 10,535  | Cohere                 | CC-BY-NC-4.0            | 2024/8   |
@@ -159,7 +157,7 @@
 |      137 |             126 | [Gemma-2-9B-it-SimPO](https://huggingface.co/princeton-nlp/gemma-2-9b-it-SimPO)                                                 | 1232 | +6/-6   | 10,548  | Princeton              | MIT                     | 2024/7   |
 |      138 |             126 | [Llama-3.1-Nemotron-51B-Instruct](https://huggingface.co/nvidia/Llama-3_1-Nemotron-51B-Instruct)                                | 1231 | +9/-9   | 3,889   | Nvidia                 | Llama 3.1               | 2023/12  |
 |      139 |             128 | [Gemini-1.5-Flash-8B-001](https://aistudio.google.com/app/prompts/new_chat?instructions=lmsys&model=gemini-1.5-flash-8b)        | 1230 | +3/-3   | 37,697  | Google                 | Proprietary             | nan      |
-|      140 |             127 | [GLM-4-0520](https://open.bigmodel.cn/dev/api#language)                                                                         | 1230 | +6/-6   | 10,221  | Zhipu AI               | Proprietary             | Нет данных     |
+|      140 |             127 | [GLM-4-0520](https://open.bigmodel.cn/dev/api#language)                                                                         | 1230 | +6/-6   | 10,221  | Zhipu AI               | Proprietary             | 暂无数据     |
 |      141 |             130 | [Nemotron-4-340B-Instruct](https://huggingface.co/nvidia/Nemotron-4-340B-Instruct)                                              | 1229 | +4/-4   | 20,608  | Nvidia                 | NVIDIA Open Model       | 2023/6   |
 |      142 |             130 | [Aya-Expanse-32B](https://huggingface.co/CohereForAI/aya-expanse-32b)                                                           | 1228 | +4/-4   | 28,768  | Cohere                 | CC-BY-NC-4.0            | nan      |
 |      143 |             128 | [Gemini App (2024-01-24)](https://gemini.google.com/app)                                                                        | 1227 | +8/-8   | 11,833  | Google                 | Proprietary             | Online   |
@@ -180,14 +178,14 @@
 |      158 |             156 | [Claude 3 Haiku](https://www.anthropic.com/news/claude-3-family)                                                                | 1200 | +3/-3   | 122,309 | Anthropic              | Proprietary             | 2023/8   |
 |      159 |             153 | [Llama-3.1-Tulu-3-8B](https://huggingface.co/allenai/Llama-3.1-Tulu-3-8B)                                                       | 1199 | +10/-10 | 3,074   | Ai2                    | Llama 3.1               | nan      |
 |      160 |             156 | [Qwen-Max-0428](https://help.aliyun.com/zh/dashscope/developer-reference/api-details)                                           | 1199 | +5/-5   | 25,696  | Alibaba                | Proprietary             | nan      |
-|      161 |             154 | [GLM-4-0116](https://open.bigmodel.cn/)                                                                                         | 1198 | +9/-9   | 7,579   | Zhipu AI               | Proprietary             | Нет данных     |
+|      161 |             154 | [GLM-4-0116](https://open.bigmodel.cn/)                                                                                         | 1198 | +9/-9   | 7,579   | Zhipu AI               | Proprietary             | 暂无数据     |
 |      162 |             154 | [Ministral-8B-2410](https://huggingface.co/mistralai/Ministral-8B-Instruct-2410)                                                | 1198 | +8/-8   | 5,111   | Mistral                | MRL                     | nan      |
 |      163 |             157 | [DeepSeek-Coder-V2-Instruct](https://huggingface.co/deepseek-ai/DeepSeek-Coder-V2-Instruct)                                     | 1196 | +6/-6   | 15,753  | DeepSeek AI            | DeepSeek License        | 2024/6   |
 |      164 |             157 | [Command R (08-2024)](https://docs.cohere.com/docs/command-r-plus#model-details)                                                | 1195 | +6/-6   | 10,851  | Cohere                 | CC-BY-NC-4.0            | 2024/8   |
 |      165 |             157 | [Aya-Expanse-8B](https://huggingface.co/CohereForAI/aya-expanse-8b)                                                             | 1193 | +6/-6   | 10,391  | Cohere                 | CC-BY-NC-4.0            | nan      |
 |      166 |             157 | [Jamba-1.5-Mini](https://www.ai21.com/jamba)                                                                                    | 1193 | +6/-6   | 9,274   | AI21 Labs              | Jamba Open              | 2024/3   |
 |      167 |             159 | [Meta-Llama-3.1-8B-Instruct](https://ai.meta.com/blog/meta-llama-3-1/)                                                          | 1193 | +3/-3   | 52,578  | Meta                   | Llama 3.1 Community     | 2023/12  |
-|      168 |             159 | [GPT-4-0613](https://platform.openai.com/docs/models/gpt-4-and-gpt-4-turbo)                                                     | 1191 | +3/-3   | 91,614  | OpenAI                 | Proprietary             | 2021/9   |
+|      168 |             159 | [GPT-3.5-Turbo-0613](https://platform.openai.com/docs/models/gpt-3-5)                                                           | 1191 | +3/-3   | 91,614  | OpenAI                 | Proprietary             | 2021/9   |
 |      169 |             159 | [Reka-Flash-Preview-20240611](https://docs.reka.ai/http-api.html#generation)                                                    | 1188 | +5/-5   | 20,427  | Reka AI                | Proprietary             | nan      |
 |      170 |             169 | [Mistral-Large-2402](https://mistral.ai/news/mistral-large/)                                                                    | 1181 | +4/-4   | 64,926  | Mistral                | Proprietary             | nan      |
 |      171 |             169 | [Qwen1.5-110B-Chat](https://qwenlm.github.io/blog/qwen1.5-110b/)                                                                | 1180 | +5/-5   | 27,430  | Alibaba                | Qianwen LICENSE         | 2024/4   |
@@ -289,20 +287,20 @@
 
 ## Пояснения
 
-- **Ранг (UB)**: Рейтинг, рассчитанный на основе модели Брэдли-Терри. Этот рейтинг отражает общую производительность модели на арене и предоставляет оценку **верхней границы** её рейтинга Эло, помогая понять потенциальную конкурентоспособность модели.
-- **Ранг (StyleCtrl)**: Рейтинг после контроля стиля диалога. Этот рейтинг направлен на уменьшение предвзятости, вызванной стилем ответов модели (например, многословность, краткость), для более чистой оценки основных способностей модели.
-- **Название модели**: Название большой языковой модели (LLM). Этот столбец содержит ссылки на соответствующие модели; кликните для перехода.
-- **Очки**: Рейтинг Эло, полученный моделью на арене через пользовательские голоса. Рейтинг Эло — это относительная система ранжирования, где более высокий балл указывает на лучшую производительность модели. Этот балл динамичен и отражает относительную силу модели в текущей конкурентной среде.
-- **Доверительный интервал**: 95% доверительный интервал рейтинга Эло модели (например: `+6/-6`). Чем меньше интервал, тем стабильнее и надежнее рейтинг; больший интервал может указывать на недостаточность данных или волатильность производительности модели. Он предоставляет количественную оценку точности рейтинга.
-- **Голоса**: Общее количество голосов, полученных моделью на арене. Чем больше голосов, тем выше статистическая надежность её рейтинга.
+- **Рейтинг (UB)**: Рейтинг, рассчитанный на основе модели Брэдли-Терри. Отражает общую производительность модели на арене и предоставляет оценку **верхней границы** её Elo-рейтинга, помогая понять потенциальную конкурентоспособность модели.
+- **Рейтинг (StyleCtrl)**: Рейтинг после контроля стиля диалога. Нацелен на уменьшение предвзятости, вызванной стилем ответов модели (например, многословность, краткость), для более чистого оценивания базовых возможностей модели.
+- **Название модели**: Название крупной языковой модели (LLM). Содержит ссылки на соответствующие ресурсы — кликните для перехода.
+- **Очки**: Elo-рейтинг модели, полученный через пользовательские голоса на арене. Elo — относительная система ранжирования, где более высокий рейтинг означает лучшую производительность. Динамически изменяется, отражая текущую относительную силу модели в конкурентной среде.
+- **Доверительный интервал**: 95% доверительный интервал Elo-рейтинга модели (например: `+6/-6`). Меньший интервал указывает на более стабильный и надёжный рейтинг; больший интервал может означать недостаток данных или высокую волатильность производительности. Предоставляет количественную оценку точности рейтинга.
+- **Голоса**: Общее количество голосов, полученных моделью на арене. Чем больше голосов, тем выше статистическая надёжность рейтинга.
 - **Провайдер**: Организация или компания, предоставляющая модель.
-- **Лицензия**: Тип лицензии модели, например, проприетарная (Proprietary), Apache 2.0, MIT и т.д.
-- **Дата обновления знаний**: Дата окончания обучающих данных модели. **Нет данных** означает, что информация не предоставлена или неизвестна.
+- **Лицензия**: Тип лицензии модели, например проприетарная (Proprietary), Apache 2.0, MIT и т.д.
+- **Дата обновления знаний**: Дата актуальности обучающих данных модели. **Нет данных** означает отсутствие предоставленной информации или неизвестность.
 
-## Источник данных и частота обновлений
+## Источник данных и частота обновления
 
-Данные для этого рейтинга автоматически генерируются и предоставляются проектом [fboulnois/llm-leaderboard-csv](https://github.com/fboulnois/llm-leaderboard-csv), который получает и обрабатывает данные с [lmarena.ai](https://lmarena.ai/). Этот рейтинг автоматически обновляется ежедневно с помощью GitHub Actions.
+Данные для этого рейтинга автоматически генерируются и предоставляются проектом [fboulnois/llm-leaderboard-csv](https://github.com/fboulnois/llm-leaderboard-csv), который получает и обрабатывает данные с [lmarena.ai](https://lmarena.ai/). Этот рейтинг автоматически обновляется ежедневно через GitHub Actions.
 
 ## Отказ от ответственности
 
-Этот отчет предоставляется только для ознакомления. Данные рейтинга динамически изменяются и основаны на голосовании пользователей Chatbot Arena за определенный период. Полнота и точность данных зависят от исходных источников данных и обновлений и обработки проекта `fboulnois/llm-leaderboard-csv`. Различные модели могут использовать разные лицензии; при использовании обязательно обращайтесь к официальным инструкциям поставщика модели.
+Этот отчёт предназначен только для ознакомления. Данные рейтинга динамичны и основаны на предпочтениях пользователей Chatbot Arena за определённый период. Полнота и точность данных зависят от исходных источников и обработки проекта `fboulnois/llm-leaderboard-csv`. Разные модели могут использовать различные лицензии — обязательно сверяйтесь с официальной документацией провайдеров моделей.
