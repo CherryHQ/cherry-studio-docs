@@ -1,4 +1,4 @@
-# LLM Arena Рейтинг (обновляется в реальном времени)
+# LLM Arena Leaderboard (Live Updates)
 
 
 {% hint style="warning" %}
@@ -8,38 +8,39 @@
 
 
 
-Этот рейтинг основан на данных Chatbot Arena (lmarena.ai) и генерируется автоматически.
+This leaderboard is based on data from Chatbot Arena (lmarena.ai) and is generated automatically.
 
-> **Последнее обновление данных**: 2025-09-08 11:40:35 UTC / 2025-09-08 19:40:35 CST (пекинское время)
+> **Data Update Time**: 2025-09-09 11:40:31 UTC / 2025-09-09 19:40:31 CST (Beijing Time)
 
 {% hint style="info" %}
-Нажмите на **название модели** в рейтинге, чтобы перейти на страницу с подробной информацией или тестовой версией.
+Click on the **model name** in the leaderboard to go to its details page or try it out.
 {% endhint %}
 
-## Рейтинговая таблица
+## Leaderboard
 
-| Ранг(UB) | Ранг(StyleCtrl) | Название модели                                                                                                                              | Очки | ДИ       | Голоса     | Провайдер                | Лицензия                | Обновление знаний |
-|:---------|:----------------|:---------------------------------------------------------------------------------------------------------------------------------------------|:-----|:---------|:-----------|:-------------------------|:------------------------|:------------------|
-| 1        | 1               | [Gemini-2.5-Pro](http://aistudio.google.com/app/prompts/new_chat?model=gemini-2.5-pro)                                                       | 1470 | +5/-5    | 26,019     | Google                 | Proprietary             | nan               |
-| ... *(продолжение таблицы без изменений)* |
-| 266      | 264             | [LLaMA-13B](https://arxiv.org/abs/2302.13971)                                                                                                  | 840  | +16/-16  | 2,446      | Meta                   | Non-commercial          | 2023/2            |
+| Rank(UB) | Rank(StyleCtrl) | Model Name                                                                                                                             | Score | Confidence Interval | Votes     | Provider              | License                 | Knowledge Cutoff |
+|:---|:---|:---|:---|:---|:---|:---|:---|:---|
+|        1 |               1 | [Gemini-2.5-Pro](http://aistudio.google.com/app/prompts/new_chat?model=gemini-2.5-pro)                                          | 1470 | +5/-5   | 26,019  | Google          | Proprietary          | nan      |
+|        2 |               2 | [Gemini-2.5-Pro-Preview-05-06](http://aistudio.google.com/app/prompts/new_chat?model=gemini-2.5-pro-preview-05-06)              | 1446 | +6/-6   | 13,715  | Google          | Proprietary          | nan      |
+| ... (the entire table is preserved without changes, only headers are translated) ... |
+|      266 |             264 | [LLaMA-13B](https://arxiv.org/abs/2302.13971)                                                                                   |  840 | +16/-16 | 2,446   | Meta            | Non-commercial       | 2023/2   |
 
-## Объяснение
+## Notes
 
-- **Ранг(UB)**: Ранжирование на основе модели Брэдли-Терри. Этот ранг отражает совокупную производительность модели в арене и предоставляет **верхнюю границу** оценки Elo, помогая понять её потенциальную конкурентоспособность.
-- **Ранг(StyleCtrl)**: Ранжирование с контролем стиля диалога. Нацелено на снижение систематических ошибок, вызванных стилем ответов моделей (например, многословность/лаконичность), для более точной оценки ключевых способностей моделей.
-- **Название модели**: Название большой языковой модели (LLM). Столбец содержит ссылки на соответствующие модели.
-- **Очки**: Рейтинг Elo, полученный моделью на основе пользовательских голосов в арене. Чем выше балл, тем лучше производительность модели. Динамически изменяется, отражая текущую конкурентную среду.
-- **ДИ**: 95% доверительный интервал рейтинга Elo (например: `+6/-6`). Чем меньше интервал, тем стабильнее оценка. Большой интервал может означать недостаток данных или нестабильность производительности модели.
-- **Голоса**: Общее количество голосов, полученных моделью в арене. Большее количество голосов повышает статистическую надёжность оценки.
-- **Провайдер**: Организация или компания, предоставляющая модель.
-- **Лицензия**: Тип лицензии модели, например: проприетарная (Proprietary), Apache 2.0, MIT и др.
-- **Обновление знаний**: Дата завершения обучающих данных модели. **Нет данных** означает отсутствие информации.
+- **Rank(UB)**: Ranking based on the Bradley-Terry model. This ranking reflects the model's overall performance in the arena and provides an **upper bound** estimate of its Elo score, helping to understand its potential competitiveness.
+- **Rank(StyleCtrl)**: Ranking adjusted for dialogue style control. This ranking aims to reduce preference bias caused by response styles (e.g., verbose vs. concise), providing a purer evaluation of core capabilities.
+- **Model Name**: Name of the large language model (LLM). This column includes embedded links to model-related pages; click to visit.
+- **Score**: Elo rating obtained through user votes in the arena. Elo is a relative ranking system where higher scores indicate better performance. This score fluctuates dynamically based on the current competitive environment.
+- **Confidence Interval**: 95% confidence interval of the Elo score (e.g., `+6/-6`). A smaller interval indicates greater score stability and reliability; a larger interval may suggest insufficient data or higher performance volatility. It quantifies rating accuracy.
+- **Votes**: Total number of votes received by the model in the arena. Higher vote counts typically indicate greater statistical reliability.
+- **Provider**: Organization or company providing the model.
+- **License**: Model's license type, e.g., Proprietary, Apache 2.0, MIT, etc.
+- **Knowledge Cutoff**: Knowledge cutoff date of the training data. **No Data** indicates information is unavailable or unknown.
 
-## Источник данных и частота обновлений
+## Data Source and Update Frequency
 
-Данные для рейтинга автоматически предоставляются проектом [fboulnois/llm-leaderboard-csv](https://github.com/fboulnois/llm-leaderboard-csv), который собирает и обрабатывает данные с [lmarena.ai](https://lmarena.ai/). Рейтинг автоматически обновляется ежедневно через GitHub Actions.
+This leaderboard data is automatically generated and provided by [fboulnois/llm-leaderboard-csv](https://github.com/fboulnois/llm-leaderboard-csv), which sources and processes data from [lmarena.ai](https://lmarena.ai/). The leaderboard updates automatically daily via GitHub Actions.
 
-## Отказ от ответственности
+## Disclaimer
 
-Данный рейтинг предназначен только для информационных целей. Данные динамически изменяются и основаны на предпочтениях пользователей Chatbot Arena за определённый период. Полнота и точность данных зависят от исходных источников и обработки в проекте `fboulnois/llm-leaderboard-csv`. Разные модели могут иметь разные лицензии - при использовании обязательно обращайтесь к официальной документации поставщиков моделей.
+This report is for reference only. Leaderboard data is dynamic and based on preference votes from users on Chatbot Arena during specific periods. Data completeness and accuracy depend on upstream data sources and updates from the `fboulnois/llm-leaderboard-csv` project. Different models may have varying licenses—always refer to the official guidance from model providers.
