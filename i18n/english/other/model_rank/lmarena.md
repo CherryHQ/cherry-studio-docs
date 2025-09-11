@@ -1,4 +1,4 @@
-# LLM Arena Leaderboard (Real-time Updates)
+# LLM Arena Leaderboard (Live Update)
 
 
 {% hint style="warning" %}
@@ -10,7 +10,7 @@ This document was translated from Chinese by AI and has not yet been reviewed.
 
 This is a leaderboard based on Chatbot Arena (lmarena.ai) data, generated through an automated process.
 
-> **Data update time**: 2025-09-10 11:40:58 UTC / 2025-09-10 19:40:58 CST (Beijing Time)
+> **Data Update Time**: 2025-09-11 11:40:35 UTC / 2025-09-11 19:40:35 CST (Beijing Time)
 
 {% hint style="info" %}
 Click the **model name** in the leaderboard to jump to its detailed information or trial page.
@@ -18,7 +18,7 @@ Click the **model name** in the leaderboard to jump to its detailed information 
 
 ## Leaderboard
 
-| Rank (UB) | Rank (StyleCtrl) | Model Name | Score | Confidence Interval | Votes | Provider | License | Knowledge Cutoff Date |
+| Rank (UB) | Rank (StyleCtrl) | Model Name | Score | Confidence Interval | Votes | Provider | License | Knowledge Cutoff |
 |:---|:---|:---|:---|:---|:---|:---|:---|:---|
 | 1 | 1 | [Gemini-2.5-Pro](http://aistudio.google.com/app/prompts/new_chat?model=gemini-2.5-pro) | 1470 | +5/-5 | 26,019 | Google | Proprietary | nan |
 | 2 | 2 | [Gemini-2.5-Pro-Preview-05-06](http://aistudio.google.com/app/prompts/new_chat?model=gemini-2.5-pro-preview-05-06) | 1446 | +6/-6 | 13,715 | Google | Proprietary | nan |
@@ -289,20 +289,20 @@ Click the **model name** in the leaderboard to jump to its detailed information 
 
 ## Explanation
 
-*   **Rank (UB)**: Ranking calculated based on the Bradley-Terry model. This ranking reflects the overall performance of the model in the arena and provides an **upper bound** estimate of its Elo score, helping to understand the model's potential competitiveness.
-*   **Rank (StyleCtrl)**: Ranking after controlling for conversation style. This ranking aims to reduce bias from model response style (e.g., verbosity, conciseness) to more purely evaluate the model's core capabilities.
-*   **Model Name**: The name of the Large Language Model (LLM). This column includes links to model-related pages, which can be clicked to navigate.
+*   **Rank (UB)**: Rank calculated based on the Bradley-Terry model. This rank reflects the model's overall performance in the arena and provides an **upper bound** estimate of its Elo score, helping to understand the model's potential competitiveness.
+*   **Rank (StyleCtrl)**: Rank after controlling for conversational style. This rank aims to reduce preference bias caused by model response style (e.g., verbose, concise) to more purely assess the model's core capabilities.
+*   **Model Name**: The name of the Large Language Model (LLM). This column includes relevant model links; click to jump.
 *   **Score**: The Elo rating obtained by the model through user votes in the arena. The Elo rating is a relative ranking system, where a higher score indicates better model performance. This score is dynamic and reflects the model's relative strength in the current competitive environment.
-*   **Confidence Interval**: The 95% confidence interval of the model's Elo rating (e.g., `+6/-6`). A smaller interval indicates greater stability and reliability of the model's rating; conversely, a larger interval may suggest insufficient data or high variability in model performance. It provides a quantitative assessment of the rating's accuracy.
-*   **Votes**: The total number of votes received by the model in the arena. More votes generally mean higher statistical reliability for its rating.
-*   **Provider**: The organization or company that provides the model.
-*   **License**: The type of license agreement for the model, such as Proprietary, Apache 2.0, MIT, etc.
-*   **Knowledge Cutoff Date**: The knowledge cutoff date for the model's training data. **No data available** indicates that relevant information is not provided or is unknown.
+*   **Confidence Interval**: The 95% confidence interval for the model's Elo rating (e.g., `+6/-6`). A smaller interval indicates a more stable and reliable model rating; conversely, a larger interval may suggest insufficient data or greater volatility in model performance. It provides a quantitative assessment of the rating's accuracy.
+*   **Votes**: The total number of votes received by this model in the arena. More votes generally mean higher statistical reliability of its rating.
+*   **Provider**: The organization or company providing the model.
+*   **License**: The type of license for the model, such as Proprietary, Apache 2.0, MIT, etc.
+*   **Knowledge Cutoff**: The knowledge cutoff date for the model's training data. **No data available** indicates that the relevant information is not provided or unknown.
 
 ## Data Source and Update Frequency
 
-This leaderboard data is automatically generated and provided by the [fboulnois/llm-leaderboard-csv](https://github.com/fboulnois/llm-leaderboard-csv) project, which obtains and processes data from [lmarena.ai](https://lmarena.ai/). This leaderboard is automatically updated daily by GitHub Actions.
+This leaderboard data is automatically generated and provided by the [fboulnois/llm-leaderboard-csv](https://github.com/fboulnois/llm-leaderboard-csv) project, which retrieves and processes data from [lmarena.ai](https://lmarena.ai/). This leaderboard is automatically updated daily by GitHub Actions.
 
 ## Disclaimer
 
-This report is for reference only. Leaderboard data is dynamic and based on user preference votes on Chatbot Arena within a specific period. The completeness and accuracy of the data depend on the updates and processing of the upstream data sources and the `fboulnois/llm-leaderboard-csv` project. Different models may use different license agreements; please refer to the official documentation from the model providers when using them.
+This report is for reference only. Leaderboard data is dynamic and based on user preference votes on Chatbot Arena within a specific period. The completeness and accuracy of the data depend on the upstream data source and the updates and processing of the `fboulnois/llm-leaderboard-csv` project. Different models may use different license agreements; please refer to the official documentation of the model provider when using them.
