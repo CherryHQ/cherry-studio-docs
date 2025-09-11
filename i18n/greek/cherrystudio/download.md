@@ -1,7 +1,7 @@
 ---
 icon: download
 ---
-# Λήψη Εφαρμογής Πελάτη
+# Λήψη Πελάτη
 
 
 {% hint style="warning" %}
@@ -12,18 +12,18 @@ icon: download
 
 
 {% hint style="info" %}
-Τρέχουσα πιο πρόσφατη σταθερή έκδοση: v1.5.9
+Τρέχουσα πιο πρόσφατη σταθερή έκδοση: v1.5.10
 {% endhint %}
 
-## Άμεσος σύνδεσμος λήψης
+## Άμεσες Λήψεις
 
 ### Έκδοση για Windows
 
 {% hint style="warning" %}
-Σημείωση: Το λειτουργικό σύστημα Windows 7 δεν υποστηρίζει την εγκατάσταση του Cherry Studio.
+Σημείωση: Το Windows 7 δεν υποστηρίζει την εγκατάσταση του Cherry Studio.
 {% endhint %}
 
-#### Εκδοχή εγκατάστασης (Setup)
+#### Έκδοση Εγκατάστασης (Setup)
 
 <details>
 
@@ -31,4 +31,124 @@ icon: download
 
 Κύρια σύνδεση:
 
-【[Επίσημος ιστότοπος
+【[Επίσημος Ιστότοπος Cherry Studio](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.10/Cherry-Studio-1.5.10-x64-setup.exe)】
+
+Εφεδρικές συνδέσεις:
+
+【[Σύνδεση 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.10/Cherry-Studio-1.5.10-x64-setup.exe)】 【[Σύνδεση 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.10/Cherry-Studio-1.5.10-x64-setup.exe)】 【[Σύνδεση 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.10/Cherry-Studio-1.5.10-x64-setup.exe)】
+
+</details>
+
+<details>
+
+<summary>Έκδοση ARM64</summary>
+
+Κύρια σύνδεση:
+
+【[Επίσημος Ιστότοπος Cherry Studio](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.10/Cherry-Studio-1.5.10-arm64-setup.exe)】
+
+Εφεδρικές συνδέσεις:
+
+【[Σύνδεση 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.10/Cherry-Studio-1.5.10-arm64-setup.exe)】 【[Σύνδεση 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.10/Cherry-Studio-1.5.10-arm64-setup.exe)】 【[Σύνδεση 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.10/Cherry-Studio-1.5.10-arm64-setup.exe)】
+
+</details>
+
+#### Φορητή Έκδοση (Portable)
+
+<details>
+
+<summary>Έκδοση x64</summary>
+
+Κύρια σύνδεση:
+
+【[Επίσημος Ιστότοπος Cherry Studio](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.10/Cherry-Studio-1.5.10-x64-portable.exe)】
+
+Εφεδρικές συνδέσεις:
+
+【[Σύνδεση 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.10/Cherry-Studio-1.5.10-x64-portable.exe)】 【[Σύνδεση 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.10/Cherry-Studio-1.5.10-x64-portable.exe)】 【[Σύνδεση 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.10/Cherry-Studio-1.5.10-x64-portable.exe)】
+
+</details>
+
+<details>
+
+<summary>Έκδοση ARM64</summary>
+
+Κύρια σύνδεση:
+
+【[Επίσημος Ιστότοπος Cherry Studio](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.10/Cherry-Studio-1.5.10-arm64-portable.exe)】
+
+Εφεδρικές συνδέσεις:
+
+【[Σύνδεση 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.10/Cherry-Studio-1.5.10-arm64-portable.exe)】 【[Σύνδεση 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.10/Cherry-Studio-1.5.10-arm64-portable.exe)】 【[Σύνδεση 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.10/Cherry-Studio-1.5.10-arm64-portable.exe)】
+
+</details>
+
+***
+
+### Έκδοση για macOS
+
+<details>
+
+<summary>Έκδοση για Intel (x64)</summary>
+
+Κύρια σύνδεση:
+
+【[Επίσημος Ιστότοπος Cherry Studio](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.10/Cherry-Studio-1.5.10-x64.dmg)】
+
+Εφεδρικές συνδέσεις:
+
+【[Σύνδεση 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.10/Cherry-Studio-1.5.10.dmg)】 【[Σύνδεση 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.10/Cherry-Studio-1.5.10-x64.dmg)】 【[Σύνδεση 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.10/Cherry-Studio-1.5.10-x64.dmg)】
+
+</details>
+
+<details>
+
+<summary>Έκδοση για Apple Silicon (ARM64, τσιπ σειράς M)</summary>
+
+Κύρια σύνδεση:
+
+【[Επίσημος Ιστότοπος Cherry Studio](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.10/Cherry-Studio-1.5.10-arm64.dmg)】
+
+Εφεδρικές συνδέσεις:
+
+【[Σύνδεση 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.10/Cherry-Studio-1.5.10-arm64.dmg)】 【[Σύνδεση 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.10/Cherry-Studio-1.5.10-arm64.dmg)】 【[Σύνδεση 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.10/Cherry-Studio-1.5.10-arm64.dmg)】
+
+</details>
+
+***
+
+### Έκδοση για Linux
+
+<details>
+
+<summary>Έκδοση x86_64</summary>
+
+Κύρια σύνδεση:
+
+【[Επίσημος Ιστότοπος Cherry Studio](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.10/Cherry-Studio-1.5.10-x86_64.AppImage)】
+
+Εφεδρικές συνδέσεις:
+
+【[Σύνδεση 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.10/Cherry-Studio-1.5.10-x86_64.AppImage)】 【[Σύνδεση 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.10/Cherry-Studio-1.5.10-x86_64.AppImage)】 【[Σύνδεση 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.10/Cherry-Studio-1.5.10-x86_64.AppImage)】
+
+</details>
+
+<details>
+
+<summary>Έκδοση ARM64</summary>
+
+Κύρια σύνδεση:
+
+【[Επίσημος Ιστότοπος Cherry Studio](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.10/Cherry-Studio-1.5.10-arm64.AppImage)】
+
+Εφεδρικές συνδέσεις:
+
+【[Σύνδεση 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.10/Cherry-Studio-1.5.10-arm64.AppImage)】 【[Σύνδεση 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.10/Cherry-Studio-1.5.10-arm64.AppImage)】 【[Σύνδεση 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.5.10/Cherry-Studio-1.5.10-arm64-AppImage)】
+
+</details>
+
+***
+
+## Λήψη από Cloud Storage
+
+[Quark](https://pan.quark.cn/s/4044324d0ecd#/list/share)
