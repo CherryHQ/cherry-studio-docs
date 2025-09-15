@@ -10,7 +10,7 @@
   * [Agents](cherrystudio/preview/agents.md)
   * [Drawing](cherrystudio/preview/drawing.md)
   * [Translation](cherrystudio/preview/translation.md)
-  * [Mini-Programs](cherrystudio/preview/app.md)
+  * [Mini-Apps](cherrystudio/preview/app.md)
   * [Knowledge Base](cherrystudio/preview/knowledge-base.md)
   * [Files](cherrystudio/preview/files.md)
   * [Quick Assistant](cherrystudio/preview/kuai-jie-zhu-shou.md)
@@ -25,7 +25,7 @@
 
 ## Basic Tutorials <a href="#pre-basic" id="pre-basic"></a>
 
-* [Installation Tutorial](pre-basic/installation/README.md)
+* [Installation Guide](pre-basic/installation/README.md)
   * [Windows](pre-basic/installation/windows.md)
   * [macOS](pre-basic/installation/macos.md)
 * [Model Service Configuration](pre-basic/providers/README.md)
@@ -35,28 +35,28 @@
   * [OpenAI](pre-basic/providers/openai.md)
   * [QwenLM](pre-basic/providers/qwenlm.md)
   * [ByteDance (Doubao)](pre-basic/providers/doubao.md)
-  * [OneAPI and its Branch Projects](pre-basic/providers/oneapi/README.md)
+  * [OneAPI and its Branches](pre-basic/providers/oneapi/README.md)
     * [OneAPI](pre-basic/providers/oneapi/oneapi.md)
     * [NewAPI](pre-basic/providers/oneapi/newapi.md)
   * [Huawei Cloud](pre-basic/providers/huawei.md)
   * [Google Gemini](pre-basic/providers/google-gemini.md)
-  * [Wuwu Xinqiong](pre-basic/providers/wu-wen-xin-qiong.md)
+  * [Wuwenn Qiongxin](pre-basic/providers/wu-wen-xin-qiong.md)
   * [Custom Provider](pre-basic/providers/zi-ding-yi-fu-wu-shang.md)
   * [Ollama](pre-basic/providers/ollama.md)
   * [GitHub Copilot](pre-basic/providers/github-copilot.md)
   * [PPIO Paiou Cloud](pre-basic/providers/ppio.md)
   * [Vertex AI](pre-basic/providers/vertex-ai.md)
-  * [CherryIN](pre-basic/providers/cherryin/README.md)
-    * [Free Trial | Zhipu GLM-4.5-Air, a lightweight and efficient new choice!](pre-basic/providers/cherryin/mian-fei-ti-yan-zhi-pu-glm4.5air-qing-liang-gao-xiao-xin-xuan-ze.md)
-    * [Free Trial | Qwen3-8B, provided by Silicon Cloud!](pre-basic/providers/cherryin/mian-fei-ti-yan-qwen38b-you-gui-ji-liu-dong-ti-gong.md)
+  * [Free Trial Models](pre-basic/providers/cherryin/README.md)
+    * [Free Trial | Zhipu GLM-4.5-Air, A Lightweight and Efficient New Choice!](pre-basic/providers/cherryin/mian-fei-ti-yan-zhi-pu-glm4.5air-qing-liang-gao-xiao-xin-xuan-ze.md)
+    * [Free Trial | Qwen3-8B, Provided by Silicon Cloud!](pre-basic/providers/cherryin/mian-fei-ti-yan-qwen38b-you-gui-ji-liu-dong-ti-gong.md)
 
 ***
 
-* [Network Mode](websearch/README.md)
-  * [Free Network Mode](websearch/mian-fei-lian-wang-mo-shi.md)
+* [Internet Mode](websearch/README.md)
+  * [Free Internet Mode](websearch/mian-fei-lian-wang-mo-shi.md)
   * [Web Search Blacklist Configuration](websearch/blacklist.md)
-  * [Volcano Engine Network Access](websearch/volcengine.md)
-  * [Tavily Network Login & Registration Tutorial](websearch/tavily.md)
+  * [Volcengine Internet Access](websearch/volcengine.md)
+  * [Tavily Internet Login and Registration Tutorial](websearch/tavily.md)
   * [SearXNG Local Deployment and Configuration](websearch/searxng.md)
 * [Data Settings](data-settings/README.md)
   * [WebDAV Backup](data-settings/WebDAV.md)
@@ -87,7 +87,7 @@
   * [Configure Dify Knowledge Base](advanced-basic/mcp/dify.md)
   * [Add ModelScope MCP Server](advanced-basic/mcp/tian-jia-modelscope-mcp-fu-wu-qi.md)
   * [FAQ](advanced-basic/mcp/chang-jian-wen-ti.md)
-* [Call Chain Usage Instructions](advanced-basic/diao-yong-lian-shi-yong-shuo-ming.md)
+* [Chain of Thought Usage Instructions](advanced-basic/diao-yong-lian-shi-yong-shuo-ming.md)
 * [Code Tools Usage Tutorial](advanced-basic/code-tools-shi-yong-jiao-cheng.md)
 
 ## Project Contribution <a href="#contribution" id="contribution"></a>
@@ -96,16 +96,16 @@
 * [Code Structure](contribution/code-structure.md)
 * [Contribute Documentation](contribution/docs.md)
 
-## Questions & Feedback <a href="#question-contact" id="question-contact"></a>
+## Issues & Feedback <a href="#question-contact" id="question-contact"></a>
 
-* [FAQ](question-contact/questions.md)
+* [Common Questions](question-contact/questions.md)
 * [How to Ask Questions Efficiently](question-contact/ask.md)
 * [Knowledge Popularization](question-contact/knowledge.md)
 * [Feedback & Suggestions](question-contact/suggestions.md)
 
 ## Contact Us <a href="#contact-us" id="contact-us"></a>
 
-* [Business Collaboration](contact-us/questions.md)
+* [Business Cooperation](contact-us/questions.md)
   * [Cherry Studio Commercial License Agreement](contact-us/questions/cherrystudio-xu-ke-xie-yi.md)
 
 ## About <a href="#about" id="about"></a>
@@ -115,4 +115,4 @@
 ## Other Content <a href="#other" id="other"></a>
 
 * [Common Model Reference Information](other/models-info.md)
-* [Model Rankings](other/model_rank/lmarena.md)
+* [Model Leaderboard](other/model_rank/lmarena.md)
