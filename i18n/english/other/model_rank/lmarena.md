@@ -1,4 +1,4 @@
-# LLM Arena Leaderboard (Real-time Update)
+# LLM Arena Leaderboard (Live Update)
 
 
 {% hint style="warning" %}
@@ -10,15 +10,15 @@ This document was translated from Chinese by AI and has not yet been reviewed.
 
 This is a leaderboard based on Chatbot Arena (lmarena.ai) data, generated through an automated process.
 
-> **Data Update Time**: 2025-09-15 11:40:32 UTC / 2025-09-15 19:40:32 CST (Beijing Time)
+> **Data Update Time**: 2025-09-16 11:40:26 UTC / 2025-09-16 19:40:26 CST (Beijing Time)
 
 {% hint style="info" %}
-Click on the **Model Name** in the leaderboard to jump to its detailed information or trial page.
+Click on the **model name** in the leaderboard to jump to its detailed information or trial page.
 {% endhint %}
 
 ## Leaderboard
 
-| Rank (UB) | Rank (StyleCtrl) | Model Name                                                                                                                             | Score | Confidence Interval | Votes | Provider | License | Knowledge Cutoff Date |
+| Ranking (UB) | Ranking (StyleCtrl) | Model Name | Score | Confidence Interval | Votes | Provider | License Agreement | Knowledge Cutoff Date |
 |:---|:---|:---|:---|:---|:---|:---|:---|:---|
 | 1 | 1 | [Gemini-2.5-Pro](http://aistudio.google.com/app/prompts/new_chat?model=gemini-2.5-pro) | 1470 | +5/-5 | 26,019 | Google | Proprietary | nan |
 | 2 | 2 | [Gemini-2.5-Pro-Preview-05-06](http://aistudio.google.com/app/prompts/new_chat?model=gemini-2.5-pro-preview-05-06) | 1446 | +6/-6 | 13,715 | Google | Proprietary | nan |
@@ -54,7 +54,7 @@ Click on the **Model Name** in the leaderboard to jump to its detailed informati
 | 32 | 24 | [Gemini-2.0-Flash-Exp](https://aistudio.google.com/app/prompts/new_chat?model=gemini-2.0-flash-exp) | 1370 | +4/-4 | 22,500 | Google | Proprietary | nan |
 | 33 | 24 | [Mistral Medium 3](https://mistral.ai/news/mistral-medium-3) | 1370 | +5/-5 | 28,010 | Mistral | Proprietary | nan |
 | 34 | 24 | [Gemini-Exp-1114](https://aistudio.google.com/app/prompts/new_chat?instructions=lmsys-1114&model=gemini-exp-1114) | 1368 | +5/-5 | 17,088 | Google | Proprietary | nan |
-| 35 | 28 | [Qwen2.5-Max](https://qwenlm.github.io/blog/qwen2.5/) | 1366 | +3/-3 | 35,457 | Alibaba | Proprietary | nan |
+| 35 | 28 | [Qwen2.5-Max](https://qwenlm.github.io/blog/qwen2.5-max/) | 1366 | +3/-3 | 35,457 | Alibaba | Proprietary | nan |
 | 36 | 27 | [Claude Opus 4 (20250514)](https://www.anthropic.com/news/claude-4) | 1366 | +5/-5 | 26,141 | Anthropic | Proprietary | nan |
 | 37 | 28 | [Qwen3-235B-A22B](https://qwenlm.github.io/blog/qwen3/) | 1365 | +5/-5 | 20,489 | Alibaba | Apache 2.0 | nan |
 | 38 | 29 | [o1-2024-12-17](https://openai.com/index/o1-and-new-tools-for-developers/) | 1365 | +4/-4 | 29,038 | OpenAI | Proprietary | nan |
@@ -289,15 +289,15 @@ Click on the **Model Name** in the leaderboard to jump to its detailed informati
 
 ## Explanation
 
-- **Rank (UB)**: Ranking calculated based on the Bradley-Terry model. This ranking reflects the model's overall performance in the arena and provides an **upper bound** estimate of its Elo score, helping to understand the model's potential competitiveness.
-- **Rank (StyleCtrl)**: Ranking after controlling for conversation style. This ranking aims to reduce preference bias caused by model response styles (e.g., verbosity, conciseness), evaluating the model's core capabilities more purely.
-- **Model Name**: The name of the Large Language Model (LLM). This column has embedded links to model-related information; click to navigate.
-- **Score**: The Elo rating obtained by the model in the arena through user votes. Elo rating is a relative ranking system, where a higher score indicates better model performance. This score is dynamic, reflecting the model's relative strength in the current competitive environment.
-- **Confidence Interval**: The 95% confidence interval of the model's Elo score (e.g., `+6/-6`). A smaller interval indicates a more stable and reliable model score; conversely, a larger interval may suggest insufficient data or greater fluctuations in model performance. It provides a quantitative assessment of score accuracy.
-- **Votes**: The total number of votes received by the model in the arena. A higher vote count generally indicates higher statistical reliability of its score.
-- **Provider**: The organization or company providing the model.
-- **License**: The type of license for the model, such as Proprietary, Apache 2.0, MIT, etc.
-- **Knowledge Cutoff Date**: The knowledge cutoff date for the model's training data. **No data available** indicates that relevant information is not provided or unknown.
+- **Ranking (UB)**: Ranking based on the Bradley-Terry model. This ranking reflects the overall performance of models in the arena and provides an **upper bound** estimate of their Elo scores, helping to understand the models' potential competitiveness.
+- **Ranking (StyleCtrl)**: Ranking after controlling for conversational style. This ranking aims to reduce preference bias caused by model response styles (e.g., verbose, concise), providing a purer evaluation of the model's core capabilities.
+- **Model Name**: The name of the Large Language Model (LLM). This column includes embedded links to relevant model information, which can be clicked to navigate.
+- **Score**: The Elo rating obtained by the model through user votes in the arena. The Elo rating is a relative ranking system, where a higher score indicates better model performance. This score is dynamic, reflecting the model's relative strength in the current competitive environment.
+- **Confidence Interval**: The 95% confidence interval for the model's Elo score (e.g., `+6/-6`). A smaller interval indicates that the model's score is more stable and reliable; conversely, a larger interval may suggest insufficient data or greater fluctuations in model performance. It provides a quantitative assessment of the score's accuracy.
+- **Votes**: The total number of votes received by the model in the arena. More votes generally mean higher statistical reliability of its score.
+- **Provider**: The organization or company that provides the model.
+- **License Agreement**: The type of license agreement for the model, such as Proprietary, Apache 2.0, MIT, etc.
+- **Knowledge Cutoff Date**: The knowledge cutoff date for the model's training data. **No data available** indicates that relevant information is not provided or is unknown.
 
 ## Data Source and Update Frequency
 
@@ -305,4 +305,4 @@ This leaderboard data is automatically generated and provided by the [fboulnois/
 
 ## Disclaimer
 
-This report is for reference only. The leaderboard data is dynamic and based on user preference votes on Chatbot Arena during a specific period. The completeness and accuracy of the data depend on the upstream data source and the updates and processing of the `fboulnois/llm-leaderboard-csv` project. Different models may adopt different license agreements; please refer to the official documentation of the model provider when using them.
+This report is for reference only. The leaderboard data is dynamic and based on user preference votes on Chatbot Arena within a specific time period. The completeness and accuracy of the data depend on the upstream data source and the updates and processing of the `fboulnois/llm-leaderboard-csv` project. Different models may adopt different license agreements; please refer to the official instructions of the model provider for usage.
