@@ -5,7 +5,7 @@
 * [Project Introduction](README.md)
 * [Client Download](cherrystudio/download.md)
 * [Project Planning](cherrystudio/planning.md)
-* [Feature Overview](cherrystudio/preview/README.md)
+* [Features](cherrystudio/preview/README.md)
   * [Chat Interface](cherrystudio/preview/chat.md)
   * [Agents](cherrystudio/preview/agents.md)
   * [Drawing](cherrystudio/preview/drawing.md)
@@ -21,7 +21,7 @@
     * [Display Settings](cherrystudio/preview/settings/display.md)
     * [Hotkey Settings](cherrystudio/preview/settings/key-shortcut.md)
     * [Data Settings](cherrystudio/preview/settings/data.md)
-    * [Voice Function](cherrystudio/preview/settings/yu-yin-gong-neng.md)
+    * [Voice Features](cherrystudio/preview/settings/yu-yin-gong-neng.md)
 
 ## Basic Tutorials <a href="#pre-basic" id="pre-basic"></a>
 
@@ -29,34 +29,32 @@
   * [Windows](pre-basic/installation/windows.md)
   * [macOS](pre-basic/installation/macos.md)
 * [Model Service Configuration](pre-basic/providers/README.md)
-  * [Alibaba Cloud Bailian](pre-basic/providers/a-li-yun-bai-lian.md)
-  * [Silicon Cloud](pre-basic/providers/siliconcloud.md)
-  * [ModelScope](pre-basic/providers/modelscope.md)
-  * [OpenAI](pre-basic/providers/openai.md)
-  * [QwenLM](pre-basic/providers/qwenlm.md)
-  * [ByteDance (Doubao)](pre-basic/providers/doubao.md)
-  * [OneAPI and its Branches](pre-basic/providers/oneapi/README.md)
-    * [OneAPI](pre-basic/providers/oneapi/oneapi.md)
-    * [NewAPI](pre-basic/providers/oneapi/newapi.md)
-  * [Huawei Cloud](pre-basic/providers/huawei.md)
+  * [Free Models](pre-basic/providers/cherryin/README.md)
+    * [Zhipu GLM-4.5-Air](pre-basic/providers/cherryin/mian-fei-ti-yan-zhi-pu-glm4.5air-qing-liang-gao-xiao-xin-xuan-ze.md)
+    * [Qwen3-8B](pre-basic/providers/cherryin/mian-fei-ti-yan-qwen38b-you-gui-ji-liu-dong-ti-gong.md)
   * [Google Gemini](pre-basic/providers/google-gemini.md)
-  * [Wuwenshan Qiong](pre-basic/providers/wu-wen-xin-qiong.md)
-  * [Custom Provider](pre-basic/providers/zi-ding-yi-fu-wu-shang.md)
+  * [Vertex AI](pre-basic/providers/vertex-ai.md)
+  * [OpenAI](pre-basic/providers/openai.md)
+  * [OneAPI](pre-basic/providers/oneapi.md)
+  * [NewAPI](pre-basic/providers/newapi.md)
+  * [ModelScope（魔搭）](pre-basic/providers/modelscope.md)
   * [Ollama](pre-basic/providers/ollama.md)
   * [GitHub Copilot](pre-basic/providers/github-copilot.md)
-  * [PPIO Paiou Cloud](pre-basic/providers/ppio.md)
-  * [Vertex AI](pre-basic/providers/vertex-ai.md)
-  * [Free Trial Models](pre-basic/providers/cherryin/README.md)
-    * [Free Trial | Zhipu GLM-4.5-Air, a lightweight and efficient new choice!](pre-basic/providers/cherryin/mian-fei-ti-yan-zhi-pu-glm4.5air-qing-liang-gao-xiao-xin-xuan-ze.md)
-    * [Free Trial | Qwen3-8B, provided by Silicon Cloud!](pre-basic/providers/cherryin/mian-fei-ti-yan-qwen38b-you-gui-ji-liu-dong-ti-gong.md)
+  * [PPIO 派欧云](pre-basic/providers/ppio.md)
+  * [Alibaba Cloud Bailian](pre-basic/providers/a-li-yun-bai-lian.md)
+  * [Silicon Cloud](pre-basic/providers/siliconcloud.md)
+  * [Volcano Engine](pre-basic/providers/doubao.md)
+  * [Huawei Cloud](pre-basic/providers/huawei.md)
+  * [Wuwengxinquan](pre-basic/providers/wu-wen-xin-qiong.md)
+  * [Custom Provider](pre-basic/providers/zi-ding-yi-fu-wu-shang.md)
 
 ***
 
-* [Network Mode](websearch/README.md)
-  * [Free Network Mode](websearch/mian-fei-lian-wang-mo-shi.md)
+* [Web Search Mode](websearch/README.md)
+  * [Free Web Search Mode](websearch/mian-fei-lian-wang-mo-shi.md)
   * [Web Search Blacklist Configuration](websearch/blacklist.md)
-  * [Volcengine Network Access](websearch/volcengine.md)
-  * [Tavily Network Login & Registration Tutorial](websearch/tavily.md)
+  * [Volcano Engine Web Access](websearch/volcengine.md)
+  * [Tavily Web Login and Registration Tutorial](websearch/tavily.md)
   * [SearXNG Local Deployment and Configuration](websearch/searxng.md)
 * [Data Settings](data-settings/README.md)
   * [WebDAV Backup](data-settings/WebDAV.md)
@@ -72,7 +70,7 @@
 
 ## Knowledge Base Tutorials <a href="#knowledge-base" id="knowledge-base"></a>
 
-* [Knowledge Base Tutorial](knowledge-base/knowledge-base.md)
+* [Knowledge Base Tutorials](knowledge-base/knowledge-base.md)
 * [Knowledge Base Data](knowledge-base/data.md)
 * [Embedding Model Reference Information](knowledge-base/emb-models-info.md)
 * [Knowledge Base Document Preprocessing](knowledge-base/zhi-shi-ku-wen-dang-yu-chu-li.md)
@@ -98,13 +96,13 @@
 ## Questions & Feedback <a href="#question-contact" id="question-contact"></a>
 
 * [FAQ](question-contact/questions.md)
-* [How to Ask Efficiently](question-contact/ask.md)
+* [How to Ask Questions Efficiently](question-contact/ask.md)
 * [Knowledge Popularization](question-contact/knowledge.md)
 * [Feedback & Suggestions](question-contact/suggestions.md)
 
 ## Contact Us <a href="#contact-us" id="contact-us"></a>
 
-* [Business Cooperation](contact-us/questions.md)
+* [Business Collaboration](contact-us/questions.md)
   * [Cherry Studio Commercial License Agreement](contact-us/questions/cherrystudio-xu-ke-xie-yi.md)
 
 ## About <a href="#about" id="about"></a>
@@ -113,5 +111,5 @@
 
 ## Other Content <a href="#other" id="other"></a>
 
-* [Common Model Reference Information](other/models-info.md)
-* [Model Rankings](other/model_rank/lmarena.md)
+* [Model Data](other/models-info.md)
+* [Model Leaderboard](other/model_rank/lmarena.md)
