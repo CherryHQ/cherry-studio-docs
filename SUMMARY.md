@@ -93,7 +93,6 @@
 ## 项目贡献 <a href="#contribution" id="contribution"></a>
 
 * [贡献代码](contribution/code.md)
-* [代码结构](contribution/code-structure.md)
 * [贡献文档](contribution/docs.md)
 
 ## 问题&反馈 <a href="#question-contact" id="question-contact"></a>
