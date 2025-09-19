@@ -12,7 +12,7 @@ This document was translated from Chinese by AI and has not yet been reviewed.
 
 
 {% hint style="info" %}
-Current latest official version: v1.6.0-rc.2
+Current latest official version: v1.5.11
 {% endhint %}
 
 ## Direct Download
@@ -20,7 +20,7 @@ Current latest official version: v1.6.0-rc.2
 ### Windows Version
 
 {% hint style="warning" %}
-Note: Windows 7 systems do not support installing Cherry Studio.
+Note: Windows 7 system does not support installing Cherry Studio.
 {% endhint %}
 
 #### Installer (Setup)
@@ -53,7 +53,7 @@ Alternative Lines:
 
 </details>
 
-#### Portable Version (Portable)
+#### Portable Version
 
 <details>
 
@@ -103,7 +103,7 @@ Alternative Lines:
 
 <details>
 
-<summary>Apple Silicon Version (ARM64, M-series chips)</summary>
+<summary>Apple Silicon Version (ARM64, M-series chip)</summary>
 
 Main Line:
 
