@@ -8,28 +8,14 @@ icon: windows
 ## 打开官方网站
 
 {% hint style="warning" %}
-注意：Windows 7系统不支持安装 Cherry Studio。
+注意：Windows 7 系统不支持安装 Cherry Studio。
 {% endhint %}
 
-点击下载选择合适的版本
+## 下载
 
 {% embed url="https://cherry-ai.com/download" %}
 
 <figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>打开官方网站</p></figcaption></figure>
-
-## 等待下载完成
-
-<figure><img src="../../.gitbook/assets/download.webp" alt="" width="563"><figcaption><p>Edge 浏览器正在下载</p></figcaption></figure>
-
-> 如果出现浏览器提示文件不被信任等情况选择保留即可
->
-> `选择保留` → `信任 Cherry-Studio`
-
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
-
-## 打开文件
-
-<figure><img src="../../.gitbook/assets/download (1).webp" alt="" width="563"><figcaption><p>Edge 下载列表</p></figcaption></figure>
 
 ## 安装
 
@@ -41,4 +27,5 @@ icon: windows
 
 或者手动下载安装：[https://aka.ms/vs/17/release/vc\_redist.x64.exe](https://aka.ms/vs/17/release/vc_redist.x64.exe)
 
-<figure><img src="../../.gitbook/assets/image (155).png" alt=""><figcaption></figcaption></figure>
+<div data-full-width="true"><figure><img src="../../.gitbook/assets/image (155).png" alt=""><figcaption></figcaption></figure></div>
+
