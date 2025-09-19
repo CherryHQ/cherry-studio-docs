@@ -12,6 +12,9 @@ on:
 
 jobs:
   update-version:
+    # 添加条件判断：如果是 repository_dispatch 触发（自动触发）
+    # 且版本号包含 "rc" 或 "beta"，则跳过此 job
+    if: ${{ github.event_name != 'repository_dispatch' || (github.event_name == 'repository_dispatch' && (!contains(github.event.client_payload.version, 'rc') && !contains(github.event.client_payload.version, 'beta'))) }}
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -59,7 +62,8 @@ jobs:
 
   dispatch-translation-workflow:
     needs: update-version
-    if: success() # 确保 update-version job 成功
+    # 只有当 update-version 成功且确实运行了（没有被跳过），才执行此 job
+    if: always() && needs.update-version.result == 'success'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
