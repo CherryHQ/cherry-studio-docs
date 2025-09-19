@@ -15,7 +15,7 @@ Cherry Studio v1.5.7 版本引入了操作简单，强大的 Code Agent 功能�
 
 首先，请确保您的 Cherry Studio 已升级到 **v1.5.7** 或更高版本。您可以前往 [GitHub Releases](https://github.com/CherryHQ/cherry-studio/releases) 或官方网站下载最新版本。
 
-<figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 #### 2. 调整导航栏位置
 
@@ -24,13 +24,13 @@ Cherry Studio v1.5.7 版本引入了操作简单，强大的 Code Agent 功能�
 * 操作路径：`设置` -> `显示设置` -> `导航栏设置`
 * 将“导航栏位置”选项设置为 **`顶部`**。
 
-<figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 #### 3. 新建标签页
 
 点击界面顶部的“+”号图标，新建一个空白标签页。
 
-<figure><img src="../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 #### 4. 打开 Code Agent 功能
 

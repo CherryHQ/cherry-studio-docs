@@ -1,4 +1,4 @@
-# 免费体验 | Qwen3-8B ，由硅基流动提供！
+# Qwen3-8B
 
 **知名 MaaS 服务平台 “硅基流动”为大家免费提供 Qwen3-8B 模型的调用服务**。作为通义千问 Qwen3 系列中的高性价比成员，Qwen3-8B 以小巧体积实现强大能力，是智能应用与高效开发的理想选择。
 
@@ -15,7 +15,7 @@ Qwen3-8B 是阿里巴巴于 2025 年 4 月发布的通义千问第三代大模�
 
 尽管体积小巧，Qwen3-8B 在推理、代码、数学和 Agent 能力方面表现稳定，性能媲美前代更大的模型，在实际应用中展现出极高的实用性。
 
-<figure><img src="../../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
 
 ***
 
@@ -33,7 +33,7 @@ Qwen3-8B 基于 **约 36 万亿 token 的高质量多语言数据**完成预训�
 得益于训练体系的全面升级，**Qwen3-8B 的实际表现接近甚至超越 Qwen2.5-14B**，实现显著的参数效率跃迁。\
 
 
-<figure><img src="../../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ***
 

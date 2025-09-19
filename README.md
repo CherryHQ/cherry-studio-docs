@@ -15,6 +15,10 @@ icon: cherries
 Cherry Studio 是一款集多模型对话、知识库管理、AI 绘画、翻译等功能于一体的全能 AI 助手平台。\
 Cherry Studio 高度自定义的设计、强大的扩展能力和友好的用户体验，使其成为专业用户和 AI 爱好者的理想选择。无论是零基础用户还是开发者，都能在 Cherry Studio 中找到适合自己的 AI 功能，提升工作效率和创造力。
 
+<figure><img src=".gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src=".gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+
 ***
 
 ### **核心功能与特色**
@@ -22,38 +26,19 @@ Cherry Studio 高度自定义的设计、强大的扩展能力和友好的用户
 #### **1. 基础对话功能**
 
 * **一问多答**：支持同一问题通过多个模型同时生成回复，方便用户对比不同模型的表现，详见 [对话界面](cherrystudio/preview/chat.md)。
-
-<figure><img src=".gitbook/assets/docs-readme-1 (1).png" alt=""><figcaption></figcaption></figure>
-
 * **自动分组**：每个助手的对话记录会自动分组管理，便于用户快速查找历史对话。
 * **对话导出**：支持将完整对话或部分对话导出为多种格式（如 Markdown、Word 等），方便储存与分享。
 * **高度自定义参数**：除了基础参数调整外，还支持用户填写自定义参数，满足个性化需求。
-
-<figure><img src=".gitbook/assets/docs-readme-2 (2).png" alt=""><figcaption></figcaption></figure>
-
 * **助手市场**：内置千余个行业专用助手，涵盖翻译、编程、写作等领域，同时支持用户自定义助手。
-
-<figure><img src=".gitbook/assets/docs-readme-4.png" alt=""><figcaption></figcaption></figure>
-
 * **多种格式渲染**：支持 Markdown 渲染、公式渲染、HTML 实时预览等功能，提升内容展示效果。
-
-<figure><img src=".gitbook/assets/docs-readme-3 (1).png" alt=""><figcaption></figcaption></figure>
 
 #### **2. 多种特色功能集成**
 
 * **AI 绘画**：提供专用绘画面板，用户可通过自然语言描述生成高质量图像。
-
-<figure><img src=".gitbook/assets/docs-readme-5.png" alt=""><figcaption></figcaption></figure>
-
 * **AI 小程序**：集成多种免费 Web 端 AI 工具，无需切换浏览器即可直接使用。
 * **翻译功能**：支持专用翻译面板、对话翻译、提示词翻译等多种翻译场景。
 * **文件管理**：对话、绘画和知识库中的文件统一分类管理，避免繁琐查找。
-
-<figure><img src=".gitbook/assets/docs-readme-6.png" alt=""><figcaption></figcaption></figure>
-
 * **全局搜索**：支持快速定位历史记录和知识库内容，提升工作效率。
-
-<figure><img src=".gitbook/assets/docs-readme-7.png" alt=""><figcaption></figcaption></figure>
 
 #### **3. 多服务商统一管理机制**
 
@@ -63,16 +48,12 @@ Cherry Studio 高度自定义的设计、强大的扩展能力和友好的用户
 * **精准头像匹配**：为每个模型自动匹配专属头像，提升辨识度。
 * **自定义服务商**：支持符合 OpenAI、Gemini 、Anthropic 等规范的三方服务商接入，兼容性强。
 
-<figure><img src=".gitbook/assets/docs-readme-8.png" alt=""><figcaption></figcaption></figure>
-
 #### **4. 高度自定义界面和布局**
 
 * **自定义 CSS**：支持全局样式自定义，打造专属界面风格。
 * **自定义对话布局**：支持列表或气泡样式布局，并可自定义消息样式（如代码片段样式）。
 * **自定义头像**：支持为软件和助手设置个性化头像。
 * **自定义侧边栏菜单**：用户可根据需求隐藏或排序侧边栏功能，优化使用体验。
-
-<figure><img src=".gitbook/assets/docs-readme-9.png" alt=""><figcaption></figcaption></figure>
 
 #### **5. 本地知识库系统**
 
@@ -81,16 +62,12 @@ Cherry Studio 高度自定义的设计、强大的扩展能力和友好的用户
 * **知识库导出**：支持将处理好的知识库导出并分享给他人使用。
 * **支持搜索检查**：知识库导入后，用户可实时检索测试，查看处理结果和分段效果。
 
-<figure><img src=".gitbook/assets/docs-readme-10.png" alt=""><figcaption></figcaption></figure>
-
 #### **6. 特色聚焦功能**
 
 * **快捷问答**：在任何场景（如微信、浏览器）中呼出快捷助手，快速获取答案。
 * **快捷翻译**：支持快速翻译其他场景中的词汇或文本。
 * **内容总结**：对长文本内容进行快速总结，提升信息提取效率。
 * **解释说明**：无需复杂提示词，一键解释说明不懂的问题。
-
-<figure><img src=".gitbook/assets/docs-readme-11.png" alt=""><figcaption></figcaption></figure>
 
 #### **7. 数据保障**
 
