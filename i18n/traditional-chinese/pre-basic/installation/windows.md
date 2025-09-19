@@ -12,17 +12,17 @@ icon: windows
 
 
 
-## 打開官方網站
+## 開啟官方網站
 
 {% hint style="warning" %}
-注意：Windows 7系統不支援安裝 Cherry Studio。
+注意：Windows 7 系統不支援安裝 Cherry Studio。
 {% endhint %}
 
 點擊下載選擇合適的版本
 
 {% embed url="https://cherry-ai.com/download" %}
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>打開官方網站</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>開啟官方網站</p></figcaption></figure>
 
 ## 等待下載完成
 
@@ -36,8 +36,16 @@ icon: windows
 
 ## 開啟檔案
 
-<figure><img src="../../.gitbook/assets/download (1).webp" alt="" width="563"><figcaption><p>Edge 下載列表</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/download (1).webp" alt="" width="563"><figcaption><p>Edge 下載清單</p></figcaption></figure>
 
 ## 安裝
 
 <figure><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>軟體安裝介面</p></figcaption></figure>
+
+### 軟體依賴庫
+
+本軟體依賴 Visual C++ Redistributable 執行庫，如果遇到安裝提示請點擊「是」來安裝軟體依賴
+
+或者手動下載安裝：[https://aka.ms/vs/17/release/vc\_redist.x64.exe](https://aka.ms/vs/17/release/vc_redist.x64.exe)
+
+<figure><img src="../../.gitbook/assets/image (155).png" alt=""><figcaption></figcaption></figure>

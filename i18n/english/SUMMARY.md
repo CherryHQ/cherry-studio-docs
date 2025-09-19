@@ -5,7 +5,7 @@
 * [Project Introduction](README.md)
 * [Client Download](cherrystudio/download.md)
 * [Project Planning](cherrystudio/planning.md)
-* [Feature Introduction](cherrystudio/preview/README.md)
+* [Feature Overview](cherrystudio/preview/README.md)
   * [Chat Interface](cherrystudio/preview/chat.md)
   * [Agents](cherrystudio/preview/agents.md)
   * [Drawing](cherrystudio/preview/drawing.md)
@@ -21,11 +21,11 @@
     * [Display Settings](cherrystudio/preview/settings/display.md)
     * [Hotkey Settings](cherrystudio/preview/settings/key-shortcut.md)
     * [Data Settings](cherrystudio/preview/settings/data.md)
-    * [Voice Features](cherrystudio/preview/settings/yu-yin-gong-neng.md)
+    * [Voice Function](cherrystudio/preview/settings/yu-yin-gong-neng.md)
 
 ## Basic Tutorials <a href="#pre-basic" id="pre-basic"></a>
 
-* [Installation Guide](pre-basic/installation/README.md)
+* [Installation Tutorial](pre-basic/installation/README.md)
   * [Windows](pre-basic/installation/windows.md)
   * [macOS](pre-basic/installation/macos.md)
 * [Model Service Configuration](pre-basic/providers/README.md)
@@ -40,23 +40,23 @@
     * [NewAPI](pre-basic/providers/oneapi/newapi.md)
   * [Huawei Cloud](pre-basic/providers/huawei.md)
   * [Google Gemini](pre-basic/providers/google-gemini.md)
-  * [Wuwenn Qiongxin](pre-basic/providers/wu-wen-xin-qiong.md)
+  * [Wuwenshan Qiong](pre-basic/providers/wu-wen-xin-qiong.md)
   * [Custom Provider](pre-basic/providers/zi-ding-yi-fu-wu-shang.md)
   * [Ollama](pre-basic/providers/ollama.md)
   * [GitHub Copilot](pre-basic/providers/github-copilot.md)
   * [PPIO Paiou Cloud](pre-basic/providers/ppio.md)
   * [Vertex AI](pre-basic/providers/vertex-ai.md)
   * [Free Trial Models](pre-basic/providers/cherryin/README.md)
-    * [Free Trial | Zhipu GLM-4.5-Air, A Lightweight and Efficient New Choice!](pre-basic/providers/cherryin/mian-fei-ti-yan-zhi-pu-glm4.5air-qing-liang-gao-xiao-xin-xuan-ze.md)
-    * [Free Trial | Qwen3-8B, Provided by Silicon Cloud!](pre-basic/providers/cherryin/mian-fei-ti-yan-qwen38b-you-gui-ji-liu-dong-ti-gong.md)
+    * [Free Trial | Zhipu GLM-4.5-Air, a lightweight and efficient new choice!](pre-basic/providers/cherryin/mian-fei-ti-yan-zhi-pu-glm4.5air-qing-liang-gao-xiao-xin-xuan-ze.md)
+    * [Free Trial | Qwen3-8B, provided by Silicon Cloud!](pre-basic/providers/cherryin/mian-fei-ti-yan-qwen38b-you-gui-ji-liu-dong-ti-gong.md)
 
 ***
 
-* [Internet Mode](websearch/README.md)
-  * [Free Internet Mode](websearch/mian-fei-lian-wang-mo-shi.md)
+* [Network Mode](websearch/README.md)
+  * [Free Network Mode](websearch/mian-fei-lian-wang-mo-shi.md)
   * [Web Search Blacklist Configuration](websearch/blacklist.md)
-  * [Volcengine Internet Access](websearch/volcengine.md)
-  * [Tavily Internet Login and Registration Tutorial](websearch/tavily.md)
+  * [Volcengine Network Access](websearch/volcengine.md)
+  * [Tavily Network Login & Registration Tutorial](websearch/tavily.md)
   * [SearXNG Local Deployment and Configuration](websearch/searxng.md)
 * [Data Settings](data-settings/README.md)
   * [WebDAV Backup](data-settings/WebDAV.md)
@@ -87,19 +87,18 @@
   * [Configure Dify Knowledge Base](advanced-basic/mcp/dify.md)
   * [Add ModelScope MCP Server](advanced-basic/mcp/tian-jia-modelscope-mcp-fu-wu-qi.md)
   * [FAQ](advanced-basic/mcp/chang-jian-wen-ti.md)
-* [Chain of Thought Usage Instructions](advanced-basic/diao-yong-lian-shi-yong-shuo-ming.md)
+* [Call Chain Usage Instructions](advanced-basic/diao-yong-lian-shi-yong-shuo-ming.md)
 * [Code Tools Usage Tutorial](advanced-basic/code-tools-shi-yong-jiao-cheng.md)
 
 ## Project Contribution <a href="#contribution" id="contribution"></a>
 
 * [Contribute Code](contribution/code.md)
-* [Code Structure](contribution/code-structure.md)
 * [Contribute Documentation](contribution/docs.md)
 
-## Issues & Feedback <a href="#question-contact" id="question-contact"></a>
+## Questions & Feedback <a href="#question-contact" id="question-contact"></a>
 
-* [Common Questions](question-contact/questions.md)
-* [How to Ask Questions Efficiently](question-contact/ask.md)
+* [FAQ](question-contact/questions.md)
+* [How to Ask Efficiently](question-contact/ask.md)
 * [Knowledge Popularization](question-contact/knowledge.md)
 * [Feedback & Suggestions](question-contact/suggestions.md)
 
@@ -115,4 +114,4 @@
 ## Other Content <a href="#other" id="other"></a>
 
 * [Common Model Reference Information](other/models-info.md)
-* [Model Leaderboard](other/model_rank/lmarena.md)
+* [Model Rankings](other/model_rank/lmarena.md)
