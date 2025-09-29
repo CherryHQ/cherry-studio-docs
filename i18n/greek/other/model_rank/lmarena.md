@@ -1,4 +1,4 @@
-# LLM Arena Πίνακας Κατάταξης (Σε πραγματικό χρόνο)
+# Κατάταξη LLM Arena (ενημερώνεται σε πραγματικό χρόνο)
 
 
 {% hint style="warning" %}
@@ -8,17 +8,17 @@
 
 
 
-Αυτός είναι ένας πίνακας κατάταξης που δημιουργείται αυτόματα με βάση δεδομένα από το Chatbot Arena (lmarena.ai).
+Αυτή είναι μια κατάταξη που βασίζεται στα δεδομένα του Chatbot Arena (lmarena.ai), η οποία δημιουργείται μέσω αυτοματοποιημένης διαδικασίας.
 
-> **Χρόνος ενημέρωσης δεδομένων**: 2025-09-28 11:35:37 UTC / 2025-09-28 19:35:37 CST (Ώρα Πεκίνου)
+> **Χρονική σφραγίδα ενημέρωσης δεδομένων**: 2025-09-29 11:35:52 UTC / 2025-09-29 19:35:52 CST (ώρα Πεκίνου)
 
 {% hint style="info" %}
-Κάντε κλικ στο **όνομα μοντέλου** στον πίνακα κατάταξης για να μεταβείτε στη σελίδα λεπτομερειών ή δοκιμαστικής χρήσης.
+Κάνοντας κλικ στο **όνομα μοντέλου** στην κατάταξη, θα μεταβείτε στη σελίδα λεπτομερειών ή δοκιμαστικής χρήσης του.
 {% endhint %}
 
-## Πίνακας Κατάταξης
+## Κατάταξη
 
-| Κατάταξη(UB) | Κατάταξη(StyleCtrl) | Όνομα μοντέλου                                                                                                                             | Βαθμολογία | Διάστημα εμπιστοσύνης | Ψήφοι      | Πάροχος                    | Άδεια χρήσης                    | Περιορισμός γνώσης   |
+| Κατάταξη(UB) | Κατάταξη(StyleCtrl) | Όνομα μοντέλου                                                                                                                             | Βαθμολογία | Διάστημα εμπιστοσύνης | Ψήφοι      | Πάροχος                    | Άδεια                    | Ημερομηνία γνώσης   |
 |:---|:---|:---|:---|:---|:---|:---|:---|:---|
 |        1 |               1 | [Gemini-2.5-Pro](http://aistudio.google.com/app/prompts/new_chat?model=gemini-2.5-pro)                                          | 1470 | +5/-5   | 26,019  | Google                 | Proprietary             | nan      |
 |        2 |               2 | [Gemini-2.5-Pro-Preview-05-06](http://aistudio.google.com/app/prompts/new_chat?model=gemini-2.5-pro-preview-05-06)              | 1446 | +6/-6   | 13,715  | Google                 | Proprietary             | nan      |
@@ -62,15 +62,15 @@
 |       40 |              32 | [o4-mini-2025-04-16](https://openai.com/index/introducing-o3-and-o4-mini/)                                                      | 1362 | +5/-5   | 24,472  | OpenAI                 | Proprietary             | nan      |
 |       41 |              32 | [Grok-3-mini-high](https://docs.x.ai/docs/models)                                                                               | 1361 | +6/-6   | 10,194  | xAI                    | Proprietary             | nan      |
 |       42 |              32 | [Grok-3-Mini-beta](https://docs.x.ai/docs/models)                                                                               | 1360 | +5/-5   | 16,845  | xAI                    | Proprietary             | nan      |
-|       43 |              33 | [Qwen3-Coder-480B-A35B-Instruct](https://qwenlm.github.io/blog/qwen3-coder/)                                                    | 1357 | +7/-7   | 6,012   | Alibaba                | Apache 2.0              | nan      |
+|       43 |              33 | [Qwen3-Coder-480B-A35B-Instruct](https://qwenlm.github.io/blog/qwen3-coder/)                                                    | 1357 | +7/-7   | 6,012   | Alibaba                | Apache 2.0              | nan极了   |
 |       44 |              36 | [Gemma-3-27B-it](http://aistudio.google.com/app/prompts/new_chat?model=gemma-3-27b-it)                                          | 1357 | +4/-4   | 32,176  | Google                 | Gemma                   | nan      |
-|       45 |              39 | [ChatGPT-4o-latest (2024-09-03)](https://help.openai.com/en/articles/9624314-model-release-notes)                               | 1354 | +4/-4   | 48,669  | OpenAI                 | Proprietary             | 2023/10  |
+|       45 |              39 | [ChatGPT-4o-latest (2024-09-03)](https://help.openai.com/en/articles/9624314-model-release-notes)                               | 1354 | +极/-4   | 48,669  | OpenAI                 | Proprietary             | 2023/10  |
 |       46 |              39 | [Minimax-M1](https://www.minimax.io/news/minimaxm1)                                                                             | 1354 | +5/-5   | 17,524  | MiniMax                | Apache 2.0              | nan      |
 |       47 |              40 | [o1-preview](https://platform.openai.com/docs/models/o1)                                                                        | 1353 | +4/-4   | 33,177  | OpenAI                 | Proprietary             | 2023/10  |
 |       48 |              41 | [Claude Sonnet 4 (thinking-32k)](https://www.anthropic.com/news/claude-4)                                                       | 1350 | +5/-5   | 17,124  | Anthropic              | Proprietary             | nan      |
 |       49 |              44 | [Qwen3-32B](https://qwenlm.github.io/blog/qwen3/)                                                                               | 1341 | +9/-9   | 4,074   | Alibaba                | Apache 2.0              | nan      |
 |       50 |              46 | [Nvidia-Llama-3.3-Nemotron-Super-49B-v1.5](https://huggingface.co/nvidia/Llama-3_3-Nemotron-Super-49B-v1_5)                     | 1339 | +10/-10 | 3,106   | Nvidia                 | Nvidia Open             | nan      |
-|       51 |              49 | [o3-mini-high](https://platform.openai.com/docs/guides/reasoning#reasoning-effort)                                              | 1338 | +5/-5   | 19,404  | OpenAI                 | Proprietary             | nan      |
+|       51 |              49 | [o3-mini-high](极://platform.openai.com/docs/guides/reasoning#reasoning-effort)                                              | 1338 | +5/-5   | 19,404  | OpenAI                 | Proprietary             | nan      |
 |       52 |              49 | [Claude Sonnet 4 (20250514)](https://www.anthropic.com/news/claude-4)                                                           | 1338 | +5/-5   | 22,629  | Anthropic              | Proprietary             | nan      |
 |       53 |              49 | [GPT-4.1-mini-2025-04-14](https://openai.com/index/gpt-4-1/)                                                                    | 1336 | +5/-5   | 23,892  | OpenAI                 | Proprietary             | nan      |
 |       54 |              49 | [Mistral-Small-2506](https://huggingface.co/mistralai/Mistral-Small-3.2-24B-Instruct-2506)                                      | 1335 | +6/-6   | 9,147   | Mistral                | Apache 2.0              | nan      |
