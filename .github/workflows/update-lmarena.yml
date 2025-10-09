@@ -8,9 +8,13 @@ on:
 jobs:
   update-leaderboard:
     runs-on: ubuntu-latest
+    outputs:
+      latest_sha: ${{ steps.get_latest_sha.outputs.sha }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # 确保获取完整历史，以便后续比较
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -28,17 +32,53 @@ jobs:
         run: python .github/scripts/fetch_leaderboard.py
 
       - name: Commit and push if there are changes
+        id: commit_push
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
           git add other/model_rank/lmarena.md
-          git commit -m "Update LLM leaderboard" || echo "No changes to commit"
-          git push
-          
+          # 检查是否有实际更改
+          if [ -n "$(git status --porcelain)" ]; then
+            git commit -m "Update LLM leaderboard"
+            git push
+            echo "changes=true" >> $GITHUB_OUTPUT
+          else
+            echo "No changes to commit"
+            echo "changes=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Get latest SHA after push
+        id: get_latest_sha
+        if: steps.commit_push.outputs.changes == 'true'
+        run: echo "sha=$(git rev-parse HEAD)" >> $GITHUB_OUTPUT
+
+  dispatch-translation-workflow:
+    needs: update-leaderboard
+    if: success() && needs.update-leaderboard.outputs.latest_sha  # 仅当有更新时触发
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ needs.update-leaderboard.outputs.latest_sha }}  # 检出最新提交
+          fetch-depth: 0  # 获取完整历史
+
+      - name: Get current and previous commit SHAs
+        id: get_shas
+        run: |
+          AFTER_SHA=$(git rev-parse HEAD)
+          if git rev-parse --verify HEAD^ >/dev/null 2>&1; then
+            BEFORE_SHA=$(git rev-parse HEAD^)
+          else
+            BEFORE_SHA=$AFTER_SHA  # 处理首次提交情况
+          fi
+          echo "before_sha=$BEFORE_SHA" >> $GITHUB_OUTPUT
+          echo "after_sha=$AFTER_SHA" >> $GITHUB_OUTPUT
+
       - name: Dispatch translate-docs workflow
         uses: peter-evans/repository-dispatch@v3
         with:
-          token: ${{ secrets.REPO_DISPATCH_TOKEN }} # 需要一个具有 repo 权限的 token
-          repository: CherryHQ/cherry-studio-docs # 触发自身仓库的 workflow
-          event-type: trigger-translation # 触发 translate-docs.yml 的 trigger-translation 事件
+          token: ${{ secrets.REPO_DISPATCH_TOKEN }}  # 需要具有 repo 权限的 token
+          repository: ${{ github.repository }}  # 正确触发当前仓库的工作流
+          event-type: trigger-translation  # 触发 translate-docs.yml 的事件
           client-payload: '{"before_sha": "${{ steps.get_shas.outputs.before_sha }}", "after_sha": "${{ steps.get_shas.outputs.after_sha }}"}'
