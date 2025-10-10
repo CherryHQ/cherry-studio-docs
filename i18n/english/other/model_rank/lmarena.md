@@ -1,4 +1,4 @@
-# LLM Arena Leaderboard (Real-time Updates)
+# LLM Arena Leaderboard (Live Update)
 
 
 {% hint style="warning" %}
@@ -8,13 +8,17 @@ This document was translated from Chinese by AI and has not yet been reviewed.
 
 
 
+{% hint style="warning" %}
+This document is translated from Chinese by AI and has not yet been reviewed. I will try to check the document one by one to ensure the translation is reasonable.
+{% endhint %}
+
 This is a leaderboard based on Chatbot Arena (lmarena.ai) data, generated through an automated process.
 
-> **Data Update Time**: 2025-10-10 13:50:30 UTC / 2025-10-10 21:50:30 CST (Beijing Time)
+> **Data Update Time**: 2025-10-10 14:55:17 UTC / 2025-10-10 22:55:17 CST (Beijing Time)
 
 ## Leaderboard
 
-| Rank (UB) | Model                                                                                                                                                                                        | Score           | 95% Confidence Interval (±) | Votes   | Organization/Company   | License                 |
+| Rank (UB) | Model                                                                                                                                                                                        | Score             | 95% Confidence Interval (±) | Votes     | Organization/Company   | License                 |
 |----------:|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:----------------|:---------------|:--------|:-----------------------|:------------------------|
 |         1 | gemini-2.5-pro [<sup>1</sup>](https://aistudio.google.com/app/prompts/new_chat?model=gemini-2.5-pro)                                                                                      | 1452            | ±4             | 52,621  | Google                 | Proprietary             |
 |         1 | claude-sonnet-4-5-20250929-thinking-32k [<sup>1</sup>](https://www.anthropic.com/news/claude-sonnet-4-5)                                                                                  | 1448            | ±9             | 4,415   | Anthropic              | Proprietary             |
@@ -274,18 +278,18 @@ This is a leaderboard based on Chatbot Arena (lmarena.ai) data, generated throug
 
 ## Explanation
 
-*   **Rank (UB)**: Ranking calculated based on the Bradley-Terry model. This ranking reflects the overall performance of models in the arena and provides an **upper bound** estimate of their Elo score, helping to understand the potential competitiveness of the models.
-*   **Model**: The name of the Large Language Model (LLM). Some model names may have embedded links.
-*   **Score**: The Elo rating obtained by the model in the arena through user votes. Elo rating is a relative ranking system, where a higher score indicates better model performance.
-*   **95% Confidence Interval (±)**: The 95% confidence interval for the model's Elo rating (e.g., `±6`). A smaller interval indicates a more stable and reliable model rating.
-*   **Votes**: The total number of votes received by the model in the arena. A higher number of votes generally implies greater statistical reliability of its rating.
-*   **Organization/Company**: The organization or company providing the model.
-*   **License**: The type of license agreement for the model, such as Proprietary, Apache 2.0, MIT, etc.
+- **Rank (UB)**: Rank calculated based on the Bradley-Terry model. This rank reflects the overall performance of the model in the arena and provides an **upper bound** estimate of its Elo score, helping to understand the model's potential competitiveness.
+- **Model**: The name of the Large Language Model (LLM). Some model names may have embedded links.
+- **Score**: The Elo rating obtained by the model in the arena through user votes. Elo rating is a relative ranking system, where a higher score indicates better model performance.
+- **95% Confidence Interval (±)**: The 95% confidence interval for the model's Elo rating (e.g., `±6`). A smaller interval indicates a more stable and reliable rating for the model.
+- **Votes**: The total number of votes received by the model in the arena. More votes generally mean higher statistical reliability of its rating.
+- **Organization/Company**: The organization or company that provides the model.
+- **License**: The type of license agreement for the model, such as Proprietary, Apache 2.0, MIT, etc.
 
 ## Data Source and Update Frequency
 
-This leaderboard data is obtained directly from the official <sup>1</sup> [<sup>2</sup>](https://lmarena.ai/) website by an automated script. This leaderboard is automatically updated daily by GitHub Actions.
+The data for this leaderboard is retrieved directly from the official <sup>1</sup> [<sup>2</sup>](https://lmarena.ai/) website by an automated script. This leaderboard is automatically updated daily by GitHub Actions.
 
 ## Disclaimer
 
-This report is for reference only. Leaderboard data is dynamic and based on user preference votes on the Chatbot Arena during specific periods. The completeness and accuracy of the data depend on the upstream data source. Different models may use different license agreements; please refer to the official documentation of the model provider when using them.
+This report is for reference only. Leaderboard data is dynamic and based on user preference votes on Chatbot Arena within a specific time period. The completeness and accuracy of the data depend on the upstream data source. Different models may adopt different license agreements; please refer to the official instructions of the model provider when using them.

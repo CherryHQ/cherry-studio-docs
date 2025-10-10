@@ -1,163 +1,4 @@
-<think>
-Okay, let's tackle this translation request. The user wants me to translate a Chinese document about an LLM Arena leaderboard into Russian. First, I need to recall the translation rules provided.
-
-Rule 1 says to translate only textual content for users. Rule 2 emphasizes preserving all Markdown formatting. So, headings, tables, links, etc., should stay as is. Rule 3 mentions translating comments in code blocks, but here there are no code blocks with comments. Rule 4: preserve links and image paths. Rule 5: handle GitBook hint blocks, but this document has a table and some notes, not sure if there's a hint block. Wait, looking at the content, there's a section with "说明" which is like "Notes" and "数据来源与更新频率" which is "Data Sources and Update Frequency". There's also a disclaimer.
-
-Wait, in the Chinese text, there's a part that says "## 说明" which translates to "Notes" in English. The user wants this translated to Russian. So, I need to make sure all the headings and table content are translated except for links and technical terms.
-
-First, check the structure. The main title is "# LLM Arena 排行榜 (实时更新)" which should become "# Таблица лидеров LLM Arena (обновляется в реальном времени)".
-
-Next, there's a blockquote: "> **数据更新时间**: 2025-10-10 13:50:30 UTC / 2025-10-10 21:50:30 CST (北京时间)". The date and time should stay the same, but "数据更新时间" translates to "Время обновления данных".
-
-Then the "## 排行榜" becomes "## Таблица лидеров".
-
-The table has headers: 排名 (UB), 模型, 分数, 95% 置信区间 (±), 票数, 组织/公司, 许可证. These need translation. For example, 排名 (UB) -> Рейтинг (UB), 模型 -> Модель, etc.
-
-Wait, the user specified translating into Russian. Let's confirm the terms:
-
-- 排名 (UB): Рейтинг (ВВ) or maybe Рейтинг (UB) since UB might be an acronym. But the note later explains it's Bradley-Terry model upper bound, so maybe keep UB as is but translate the column name. So "Рейтинг (UB)".
-
-- 模型: Модель
-
-- 分数: Оценка
-
-- 95% 置信区间 (±): 95% доверительный интервал (±)
-
-- 票数: Количество голосов
-
-- 组织/公司: Организация/Компания
-
-- 许可证: Лицензия
-
-Next, the "## 说明" section: Notes. The bullet points need translation. For example, "基于 Bradley-Terry 模型计算的排名。此排名反映了模型在竞技场中的综合表现，并提供了其 Elo 分数的 **上界** 估计，帮助理解模型的潜在竞争力。" translates to something like "Рейтинг рассчитан на основе модели Брэдли-Терри. Этот рейтинг отражает общую производительность модели на арене и предоставляет **верхнюю границу** оценки её рейтинга Эло, что помогает понять потенциальную конкурентоспособность модели."
-
-Need to check technical terms like Elo score: рейтинг Эло.
-
-Then "## 数据来源与更新频率" becomes "## Источники данных и частота обновления"
-
-The disclaimer: "## Предупреждение" or "## Отказ от ответственности"
-
-Wait, the original says "## 免责声明" which is "Disclaimer".
-
-Now, check for any GitHub-specific terms. Rule 9 says to preserve terms like pull request, etc., but here it's about models and rankings, so probably not applicable.
-
-Rule 10: preserve URLs, file paths, version numbers. In the table, all the model names with links should keep the links intact. For example, "gemini-2.5-pro [<sup>1</sup>](https://aistudio.google.com/app/prompts/new_chat?model=gemini-2.5-pro)" becomes "gemini-2.5-pro [<sup>1</sup>](https://aistudio.google.com/app/prompts/new_chat?model=gemini-2.5-pro)" but the model name might stay in English as it's a proper noun. Wait, the instruction says in Rule 3: code, commands, file names, URLs, version numbers should remain untranslated. So model names like "gemini-2.5-pro" are technical terms and should stay as is. Only the Chinese parts are translated.
-
-Wait, looking at the Chinese text, the model names are already in English (like gemini-2.5-pro), so they don't need translation. The only Chinese parts are the headers and explanatory text.
-
-So, for example, in the table, the "组织/公司" column has entries like "Google", "Anthropic", etc., which are proper nouns and stay the same. The "许可证" column has "Proprietary", "MIT", etc., which are standard license names and should remain in English as per common practice, but the instruction says to translate textual content. Wait, the licenses are terms like "Proprietary" which in Russian would be "Проприетарная" or "Проприетарная лицензия". But the user's rules say to preserve URLs, file paths, version numbers. However, license names might be translated. Wait, Rule 3 says code, commands, file names, URLs, version numbers remain untranslated. License names are part of the content, so maybe they should be translated. For example, "Proprietary" becomes "Проприетарная", "MIT" stays as "MIT" since it's an acronym.
-
-Wait, but in the example translation provided in the previous task (English), they kept "Proprietary" as is. But for Russian, it's common to translate "Proprietary" to "Проприетарная". Let me check.
-
-Looking at the previous example where the user translated to English, the license column had entries like "Proprietary", "MIT", which were kept in English. But since this is a translation to Russian, the license types should be translated where applicable. For example, "Proprietary" becomes "Проприетарная", "MIT" remains "MIT" as it's a proper noun.
-
-However, the user's rules state: "Preserve all GitHub-specific terminology (e.g., pull request, fork, commit, repository) in its original form." But licenses aren't GitHub-specific. So maybe translate license names. However, in practice, license names like MIT, Apache 2.0 are usually kept in English even in Russian texts. Let me verify.
-
-In Russian documentation, it's common to leave license names like MIT, Apache 2.0 untranslated. So "Proprietary" might be translated to "Проприетарная", but "MIT" stays as "MIT".
-
-Wait, looking at the previous translation example provided by the user (the first task where they translated to English), they kept "Proprietary" as is. So perhaps in this case, for Russian, "Proprietary" should be translated, but acronyms like MIT, Apache remain.
-
-But the user's instruction says: "Translate comments within code blocks: ... the code, commands, file names, URLs, version numbers, and other technical syntax within code blocks or other parts of the document should remain untranslated."
-
-License names might be considered technical terms. However, "Proprietary" is a descriptive term. So perhaps in Russian it's better to translate it.
-
-Wait, let's check standard practice. In Russian tech contexts, "Proprietary license" is often translated as "Проприетарная лицензия" or "Закрытая лицензия". So "Proprietary" would become "Проприетарная".
-
-Similarly, "Apache 2.0" remains as "Apache 2.0", "MIT" as "MIT".
-
-So in the translation, the "许可证" column entries should be translated where applicable.
-
-For example:
-
-- Proprietary -> Проприетарная
-
-- MIT -> MIT
-
-- Apache 2.0 -> Apache 2.0
-
-- Gemma -> Gemma (since it's a model name/license name)
-
-Wait, in the data, there's "Gemma" license, which is a specific license by Google, so it should remain as "Gemma".
-
-Similarly, "DeepSeek" licenses would stay as "DeepSeek License".
-
-So in the translation, only "Proprietary" gets translated to Russian, others like MIT, Apache remain.
-
-Now, checking the note section:
-
-- **排名 (UB)**：基于 Bradley-Terry 模型计算的排名。此排名反映了模型在竞技场中的综合表现，并提供了其 Elo 分数的 **上界** 估计，帮助理解模型的潜在竞争力。
-
-Translates to:
-
-**Рейтинг (ВВ)**: Рейтинг, рассчитанный на основе модели Брэдли-Терри. Этот рейтинг отражает общую производительность модели на арене и предоставляет оценку **верхней границы** её рейтинга Эло, что помогает понять потенциальную конкурентоспособность модели.
-
-Note: UB here stands for upper bound, so in Russian it's "ВВ" (верхняя граница). But the original uses (UB), so maybe keep (UB) but explain in translation. Wait, the note says "上界" which is upper bound, so in the translation, perhaps keep (UB) but translate the explanation.
-
-Wait, the original Chinese says "排名 (UB)" where UB is likely Upper Bound. So in Russian, it would be "Рейтинг (ВВ)", with ВВ as the abbreviation for Верхняя Граница.
-
-But the instruction says to translate the text, so if UB is an acronym defined in the notes, we should translate the note explaining it.
-
-Similarly, "Elo 分数" becomes "рейтинг Эло".
-
-Continuing, the "数据来源与更新频率" section: "本排行榜数据由自动化脚本直接从 <sup>1</sup> [<sup>2</sup>](https://lmarena.ai/) 官方网站获取。此排行榜由 GitHub Actions 每天自动更新。"
-
-Translates to: "Данные этой таблицы лидеров автоматически извлекаются непосредственно с официального сайта <sup>1</sup> [<sup>2</sup>](https://lmarena.ai/) с помощью сценария. Эта таблица лидеров обновляется ежедневно с помощью GitHub Actions."
-
-Wait, the original has <sup>1</sup> as a footnote, but in the Chinese text, it's part of the model links. Wait, looking back, in the table, each model has [<sup>1</sup>](link), which are footnotes. But in the "数据来源" section, it says "从 <sup>1</sup> [<sup>2</sup>](https://lmarena.ai/)", which might be a typo. Wait, no, in the Chinese text under "数据来源与更新频率", it says:
-
-"本排行榜数据由自动化脚本直接从 <sup>1</sup> [<sup>2</sup>](https://lmarena.ai/) 官方网站获取。"
-
-This seems like a mistake. Probably, it should be referencing the source as https://lmarena.ai/, so the <sup>1</sup> and [<sup>2</sup>] might be errors. But as per translation rules, we must preserve links and not modify them. So the translation should keep the same structure: "непосредственно с <sup>1</sup> [<sup>2</sup>](https://lmarena.ai/) официального сайта".
-
-But maybe in the original, it's a footnote reference. However, since the user's instruction says to preserve links and structure, we'll keep the <sup> tags as is.
-
-The disclaimer: "本报告仅供参考。排行榜数据是动态变化的，并基于特定时间段内用户在 Chatbot Arena 上的偏好投票。数据的完整性和准确性取决于上游数据源。不同模型可能采用不同的许可协议，使用时请务必参考模型提供商的官方说明。"
-
-Translates to: "Этот отчет предоставляется только для справки. Данные таблицы лидеров динамически изменяются и основаны на предпочтениях пользователей в Chatbot Arena за определенный период времени. Полнота и точность данных зависят от источника данных. Разные модели могут использовать разные лицензионные соглашения; при использовании обязательно ознакомьтесь с официальной информацией от поставщика модели."
-
-Now, checking for any table formatting. The table in Markdown must remain intact. All the alignment and pipes should stay the same. The content within the table cells needs translation where applicable.
-
-For example, the first row after headers:
-
-|         1 | gemini-2.5-pro [<sup>1</sup>](https://aistudio.google.com/app/prompts/new_chat?model=gemini-2.5-pro) | 1452 | ±4 | 52,621 | Google | Proprietary |
-
-In Russian, the "Proprietary" under license becomes "Проприетарная".
-
-Wait, but in the previous English translation example, they kept "Proprietary" as is. However, since this is Russian, it should be translated. Let's confirm.
-
-In Russian tech documents, it's common to translate "Proprietary" to "Проприетарная" or "Закрытая". So I'll go with "Проприетарная".
-
-Similarly, "MIT" remains "MIT", "Apache 2.0" remains "Apache 2.0".
-
-Another example: "Alibaba" stays as "Alibaba", since it's a company name.
-
-Now, check if any model names have Chinese characters. Looking at the data, all model names are in English (like qwen3-max-preview, claude-sonnet-4-5-20250929, etc.), so no translation needed there.
-
-The "95% 置信区间 (±)" becomes "95% доверительный интервал (±)".
-
-"票数" becomes "Количество голосов".
-
-"组织/公司" becomes "Организация/Компания".
-
-In the notes section, bullet points:
-
-- **排名 (UB)**：... -> **Рейтинг (ВВ)**: ...
-
-- **模型**：... -> **Модель**: ...
-
-Etc.
-
-Now, the date format in the blockquote: "2025-10-10 13:50:30 UTC / 2025-10-10 21:50:30 CST (北京时间)" should remain as is, but "北京时间" translates to "пекинское время".
-
-So "> **Время обновления данных**: 2025-10-10 13:50:30 UTC / 2025-10-10 21:50:30 CST (пекинское время)"
-
-Wait, CST is China Standard Time, which is UTC+8, so in Russian it's "CST (пекинское время)".
-
-Now, checking if there are any other elements. The "Star History" image is already in English, so no translation needed there.
-
-Wait, in the user's input, after the table, there's a section:
-
-## 说明
+# Таблица лидеров LLM Arena (обновляется в реальном времени)
 
 
 {% hint style="warning" %}
@@ -167,77 +8,13 @@ Wait, in the user's input, after the table, there's a section:
 
 
 
-- **排名 (UB)**：...
+Это таблица лидеров, основанная на данных Chatbot Arena (lmarena.ai), генерируемая автоматизированным процессом.
 
-Which we've covered.
-
-Also, need to check if numbers like "52,621" should use a comma as thousand separator. In Russian, it's common to use a space or no separator, but since the original uses commas, we should keep them as is per Rule 10: preserve version numbers, etc. So "52,621" remains "52 621" or "52,621"? In Russian, sometimes a thin space is used, but in technical contexts, commas might be kept. However, the instruction says preserve numbers, so probably keep the comma as in the original.
-
-Wait, Rule 10: "Preserve all URLs, file paths, and version numbers exactly as in the original." Numbers in the table like "52,621" are part of the data, so they should remain with the comma.
-
-In Russian, it's acceptable to use commas as thousand separators in some contexts, though typically spaces are used. But since the original uses commas, we'll keep them.
-
-Now, putting it all together.
-
-Wait, let's verify a few entries.
-
-Original Chinese for the first table row:
-
-|         1 | gemini-2.5-pro [<sup>1</sup>](https://aistudio.google.com/app/prompts/new_chat?model=gemini-2.5-pro) | 1452 | ±4 | 52,621 | Google | Proprietary |
-
-Translated to Russian:
-
-|         1 | gemini-2.5-pro [<sup>1</sup>](https://aistudio.google.com/app/prompts/new_chat?model=gemini-2.5-pro) | 1452 | ±4 | 52,621 | Google | Проприетарная |
-
-Yes.
-
-Another example: "qwen3-max-preview" remains as is.
-
-In the notes:
-
-"**95% 置信区间 (±)**：模型 Elo 评分的95%置信区间（例如：`±6`）。这个区间越小，表示模型的评分越稳定和可靠。"
-
-Translates to:
-
-"**95% доверительный интервал (±)**: 95% доверительный интервал рейтинга Эло модели (например: `±6`). Чем меньше этот интервал, тем более стабильной и надежной является оценка модели."
-
-Yes.
-
-Now, the "数据来源与更新频率" section:
-
-"本排行榜数据由自动化脚本直接从 <sup>1</sup> [<sup>2</sup>](https://lmarena.ai/) 官方网站获取。此排行榜由 GitHub Actions 每天自动更新。"
-
-Translates to:
-
-"Данные этой таблицы лидеров автоматически извлекаются непосредственно с официального сайта <sup>1</sup> [<sup>2</sup>](https://lmarena.ai/) с помощью сценария. Эта таблица лидеров обновляется ежедневно с помощью GitHub Actions."
-
-Wait, the original Chinese says "由自动化脚本直接从", which is "by automated script directly from". So in Russian: "автоматически извлекаются непосредственно... с помощью сценария".
-
-Yes.
-
-Finally, the disclaimer:
-
-"本报告仅供参考。排行榜数据是动态变化的，并基于特定时间段内用户在 Chatbot Arena 上的偏好投票。数据的完整性和准确性取决于上游数据源。不同模型可能采用不同的许可协议，使用时请务必参考模型提供商的官方说明。"
-
-Translates to:
-
-"Этот отчет предоставляется только для справки. Данные таблицы лидеров динамически изменяются и основаны на предпочтениях пользователей в Chatbot Arena за определенный период времени. Полнота и точность данных зависят от источника данных. Разные модели могут использовать разные лицензионные соглашения; при использовании обязательно ознакомьтесь с официальной информацией от поставщика модели."
-
-Everything seems in order. Now, check if all Markdown is preserved. The table structure with pipes, alignment colons, etc., must remain exactly the same. The translation should only affect the textual content within the cells, not the structure.
-
-Also, ensure that any HTML entities like &amp; are preserved. In the provided Chinese text, there are URLs with &amp; which should remain as is.
-
-For example, in the Xiaohongshu link in the first example, but in this current task, the URLs seem clean.
-
-Finally, verify that no extra content is added, and all parts are translated as per instructions.</think># Таблица лидеров LLM Arena (обновляется в реальном времени)
-
-Это таблица лидеров, основанная на данных Chatbot Arena (lmarena.ai), автоматически генерируемая с помощью скриптов.
-
-> **Время обновления данных**: 2025-10-10 13:50:30 UTC / 2025-10-10 21:50:30 CST (пекинское время)
+> **Время обновления данных**: 2025-10-10 14:55:17 UTC / 2025-10-10 22:55:17 CST (по пекинскому времени)
 
 ## Таблица лидеров
 
-|   Рейтинг (UB) | Модель                                                                                                                                                                                        | Оценка          | 95% доверительный интервал (±)   | Количество голосов      | Организация/Компания                  | Лицензия                     |
+|   Рейтинг (UB) | Модель                                                                                                                                                                                        | Оценка              | 95% доверительный интервал (±)   | Голоса      | Организация/Компания                  | Лицензия                     |
 |----------:|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:----------------|:---------------|:--------|:-----------------------|:------------------------|
 |         1 | gemini-2.5-pro [<sup>1</sup>](https://aistudio.google.com/app/prompts/new_chat?model=gemini-2.5-pro)                                                                                      | 1452            | ±4             | 52,621  | Google                 | Проприетарная             |
 |         1 | claude-sonnet-4-5-20250929-thinking-32k [<sup>1</sup>](https://www.anthropic.com/news/claude-sonnet-4-5)                                                                                  | 1448            | ±9             | 4,415   | Anthropic              | Проприетарная             |
@@ -305,7 +82,7 @@ Finally, verify that no extra content is added, and all parts are translated as 
 |        59 | gemma-3-27b-it [<sup>1</sup>](https://aistudio.google.com/app/prompts/new_chat?model=gemma-3-27b-it)                                                                                      | 1362            | ±4             | 43,379  | Google                 | Gemma                   |
 |        62 | grok-3-mini-beta [<sup>1</sup>](https://docs.x.ai/docs/models)                                                                                                                            | 1356            | ±5             | 23,124  | xAI                    | Проприетарная             |
 |        62 | deepseek-v3 [<sup>1</sup>](https://huggingface.co/deepseek-ai/DeepSeek-V3)                                                                                                                | 1356            | ±5             | 21,994  | DeepSeek               | DeepSeek                |
-|        62 | ling-flash-2.0 [<sup>1</sup>](https://huggingface.co/inclusionAI/Ling-flash-2.0)                                                                                                          | 1349Предварительная | ±10            | 3,513   | Ant Group              | MIT                     |
+|        62 | ling-flash-2.0 [<sup>1</sup>](https://huggingface.co/inclusionAI/Ling-flash-2.0)                                                                                                          | 1349 Предварительная | ±10            | 3,513   | Ant Group              | MIT                     |
 |        62 | glm-4.5v [<sup>1</sup>](https://huggingface.co/zai-org/GLM-4.5V)                                                                                                                          | 1348            | ±9             | 4,043   | Z.ai                   | MIT                     |
 |        64 | mistral-small-2506 [<sup>1</sup>](https://huggingface.co/mistralai/Mistral-Small-3.2-24B-Instruct-2506)                                                                                   | 1351            | ±5             | 17,636  | Mistral                | Apache 2.0              |
 |        65 | gemini-2.0-flash-lite-preview-02-05 [<sup>1</sup>](https://aistudio.google.com/prompts/new_chat?model=gemini-2.0-flash-lite)                                                              | 1351            | ±4             | 25,215  | Google                 | Проприетарная             |
@@ -342,10 +119,10 @@ Finally, verify that no extra content is added, and all parts are translated as 
 |        93 | gpt-4-turbo-2024-04-09 [<sup>1</sup>](https://platform.openai.com/docs/models/gpt-4-turbo-and-gpt-4)                                                                                      | 1322            | ±4             | 98,965  | OpenAI                 | Проприетарная             |
 |        93 | gpt-4.1-nano-2025-04-14 [<sup>1</sup>](https://openai.com/index/gpt-4-1/)                                                                                                                 | 1319            | ±8             | 6,143   | OpenAI                 | Проприетарная             |
 |        93 | step-1o-turbo-202506 [<sup>1</sup>](https://platform.stepfun.com/docs/llm/vision)                                                                                                         | 1319            | ±7             | 9,748   | StepFun                | Проприетарная             |
-|        93 | ring-flash-2.0 [<sup>1</sup>](https://huggingface.co/inclusionAI/Ring-flash-2.0)                                                                                                          | 1315Предварительная | ±10            | 3,560   | Ant Group              | MIT                     |
+|        93 | ring-flash-2.0 [<sup>1</sup>](https://huggingface.co/inclusionAI/Ring-flash-2.0)                                                                                                          | 1315 Предварительная | ±10            | 3,560   | Ant Group              | MIT                     |
 |        94 | claude-3-opus-20240229 [<sup>1</sup>](https://www.anthropic.com/news/claude-3-family)                                                                                                     | 1321            | ±3             | 196,368 | Anthropic              | Проприетарная             |
 |        94 | llama-4-scout-17b-16e-instruct [<sup>1</sup>](https://huggingface.co/meta-llama/Llama-4-Scout-17B-16E-Instruct)                                                                           | 1320            | ±5             | 30,613  | Meta                   | Llama                   |
-|        94 | claude-3-5-haiku-20241022 [<sup>1</sup>](https://www.anthropic.com/news/3-5-models-and-computer-use)                                                                                      | 1320            | ±3             | 70,679  | Anthropic              | Propretary              |
+|        94 | claude-3-5-haiku-20241022 [<sup>1</sup>](https://www.anthropic.com/news/3-5-models-and-computer-use)                                                                                      | 1320            | ±3             | 70,679  | Anthropic              | Проприетарная             |
 |        94 | gemini-1.5-pro-001 [<sup>1</sup>](https://aistudio.google.com/app/prompts/new_chat?model=gemini-1.5-pro)                                                                                  | 1320            | ±4             | 79,769  | Google                 | Проприетарная             |
 |        94 | gpt-oss-20b [<sup>1</sup>](https://openai.com/index/introducing-gpt-oss/)                                                                                                                 | 1318            | ±7             | 10,067  | OpenAI                 | Apache 2.0              |
 |        94 | gemma-3n-e4b-it [<sup>1</sup>](https://aistudio.google.com/app/prompts/new_chat?model=gemma-3n-e4b-it)                                                                                    | 1318            | ±5             | 23,755  | Google                 | Gemma                   |
@@ -497,18 +274,18 @@ Finally, verify that no extra content is added, and all parts are translated as 
 
 ## Примечания
 
-- **Рейтинг (ВВ)**: Рейтинг, рассчитанный на основе модели Брэдли-Терри. Этот рейтинг отражает общую производительность модели на арене и предоставляет оценку **верхней границы** её рейтинга Эло, что помогает понять потенциальную конкурентоспособность модели.
-- **Модель**: Название крупной языковой модели (LLM). Некоторые названия моделей могут содержать ссылки.
-- **Оценка**: Рейтинг Эло модели, полученный на основе пользовательских голосов на арене. Рейтинг Эло — это относительная система ранжирования, где более высокая оценка означает лучшую производительность модели.
-- **95% доверительный интервал (±)**: 95% доверительный интервал рейтинга Эло модели (например: `±6`). Чем меньше этот интервал, тем более стабильной и надежной является оценка модели.
-- **Количество голосов**: Общее количество голосов, полученных моделью на арене. Чем больше голосов, тем выше статистическая надежность её оценки.
+- **Рейтинг (UB)**: Рейтинг, рассчитанный на основе модели Брэдли-Терри. Этот рейтинг отражает комплексные результаты модели на арене и предоставляет **верхнюю границу** оценки её очков Эло, что помогает понять потенциальную конкурентоспособность модели.
+- **Модель**: Название модели крупного языкового процессора (LLM). Некоторые названия моделей могут содержать соответствующие ссылки.
+- **Оценка**: Рейтинг Эло модели, полученный на основе пользовательских голосов на арене. Рейтинг Эло — это относительная система ранжирования, где более высокий балл означает лучшую производительность модели.
+- **95% доверительный интервал (±)**: 95% доверительный интервал рейтинга Эло модели (например: `±6`). Чем меньше этот интервал, тем стабильнее и надежнее рейтинг модели.
+- **Голоса**: Общее количество голосов, полученных моделью на арене. Чем больше голосов, тем выше обычно статистическая надежность её рейтинга.
 - **Организация/Компания**: Организация или компания, предоставляющая модель.
-- **Лицензия**: Тип лицензионного соглашения модели, например Проприетарная, Apache 2.0, MIT и т.д.
+- **Лицензия**: Тип лицензионного соглашения модели, например, проприетарная (Proprietary), Apache 2.0, MIT и другие.
 
-## Источники данных и частота обновления
+## Источник данных и частота обновления
 
-Данные этой таблицы лидеров автоматически извлекаются непосредственно с официального сайта <sup>1</sup> [<sup>2</sup>](https://lmarena.ai/) с помощью сценария. Эта таблица лидеров обновляется ежедневно с помощью GitHub Actions.
+Данные этой таблицы лидеров автоматически извлекаются с официального сайта <sup>1</sup> [<sup>2</sup>](https://lmarena.ai/) с помощью скрипта. Эта таблица лидеров автоматически обновляется ежедневно через GitHub Actions.
 
 ## Отказ от ответственности
 
-Этот отчет предоставляется только для справки. Данные таблицы лидеров динамически изменяются и основаны на предпочтениях пользователей в Chatbot Arena за определенный период времени. Полнота и точность данных зависят от источника данных. Разные модели могут использовать разные лицензионные соглашения; при использовании обязательно ознакомьтесь с официальной информацией от поставщика модели.
+Этот отчет предоставляется только в информационных целях. Данные таблицы лидеров динамически изменяются и основаны на предпочтениях пользователей на Chatbot Arena за определенный период времени. Полная достоверность и точность данных зависят от первоисточника. Различные модели могут использовать разные лицензионные соглашения, поэтому при использовании обязательно ознакомьтесь с официальной информацией от поставщика модели.
