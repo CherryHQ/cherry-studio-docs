@@ -39,7 +39,7 @@ jobs:
       - name: Run Translation Script
         env:
           GEMINI_API_KEY: ${{ secrets.AIHUBMIX }} # 从GitHub Secrets获取API密钥
-          DEEPSEEK_API_KEY: ${{ secrets.PPIO }} # 从GitHub Secrets获取DeepSeek API密钥
+          PPIO_API_KEY: ${{ secrets.PPIO }} # 从GitHub Secrets获取 PPIO OpenAI 兼容 API 密钥
           PUSH_BEFORE_SHA: ${{ github.event_name == 'push' && github.event.before || github.event.client_payload.before_sha }}
           PUSH_AFTER_SHA: ${{ github.event_name == 'push' && github.sha || github.event.client_payload.after_sha }}
         id: run-translation # 添加 id 以便引用输出

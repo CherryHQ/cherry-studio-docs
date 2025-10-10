@@ -88,17 +88,14 @@ def get_changed_files():
         current_sha = os.environ.get('PUSH_AFTER_SHA')
 
         if not before_sha or not current_sha:
-            logging.error("GITHUB_EVENT_BEFORE or GITHUB_SHA environment variables not found for push event. This might indicate a shallow clone or an unusual push event.")
-            logging.warning("Falling back to full repository scan for relevant files. This may increase processing time.")
-            files_to_process.update(_get_all_relevant_files())
-            return files_to_process, files_to_delete
+            logging.error("Missing PUSH_BEFORE_SHA or PUSH_AFTER_SHA for event 'push'/'repository_dispatch'. Full translation is not allowed here. Use workflow_dispatch for full translation.")
+            raise RuntimeError("missing_sha_for_changed_files")
 
         logging.info(f"Push event details: before_sha={before_sha}, current_sha={current_sha}")
 
         if before_sha == "0000000000000000000000000000000000000000":
-            logging.info("This is the first push to the branch. Listing all relevant files in HEAD.")
-            raw_output = run_git_command("git ls-tree --name-only -r HEAD")
-            logging.info(f"Git ls-tree command returned {len(raw_output)} lines.")
+            logging.error("Detected first push (zero before SHA). Full translation on push is disallowed. Trigger workflow_dispatch for full translation.")
+            raise RuntimeError("first_push_full_translation_not_allowed")
         else:
             logging.info(f"Comparing changes between {before_sha} and {current_sha} using git diff --name-status.")
             raw_output = run_git_command(f"git diff --name-status {before_sha} {current_sha}")
@@ -121,9 +118,8 @@ def get_changed_files():
                     files_to_process.add(file_path)
                     logging.info(f"Identified for processing (added/modified): {file_path}")
     else:
-        logging.warning(f"Unsupported event type: '{event_name}'. Falling back to full repository scan.")
-        files_to_process.update(_get_all_relevant_files())
-        logging.info(f"Found {len(files_to_process)} files for processing after unsupported event fallback.")
+        logging.error(f"Unsupported event type: '{event_name}'. Full translation is only allowed via workflow_dispatch.")
+        raise RuntimeError("unsupported_event_full_translation_disallowed")
 
     # 过滤掉i18n和.github目录下的文件，因为它们是翻译目标或配置文件，不是源文件
     files_to_process = {f for f in files_to_process if not str(f).startswith('i18n/') and not str(f).startswith('.github/')}
@@ -152,13 +148,13 @@ def _get_all_relevant_files():
 
 # 配置API密钥
 GEMINI_API_KEY = os.environ.get('GEMINI_API_KEY')
-DEEPSEEK_API_KEY = os.environ.get('DEEPSEEK_API_KEY')
+PPIO_API_KEY = os.environ.get('PPIO_API_KEY')
 
 if not GEMINI_API_KEY:
     logging.error("GEMINI_API_KEY environment variable not found. Please set it.")
     exit(1)
-if not DEEPSEEK_API_KEY:
-    logging.error("DEEPSEEK_API_KEY environment variable not found. Please set it.")
+if not PPIO_API_KEY:
+    logging.error("PPIO_API_KEY environment variable not found. Please set it.")
     exit(1)
 
 # 系统提示词
@@ -177,6 +173,8 @@ You are a professional document translation assistant specialized in GitHub cont
 9.  **Preserve all GitHub-specific terminology** (e.g., pull request, fork, commit, repository) in its original form.
 10. **Preserve all URLs, file paths, and version numbers** exactly as in the original.
 11. **Maintain the original document structure and paragraph breaks.**
+12. **Translate the entire document completely, regardless of length.** Do not omit, summarize, or skip any content. Do not output phrases indicating omission or brevity (e.g., "omitted due to length", "summarized", "...") or any equivalent in the target language. Always return the full translation.
+13. **Do not collapse or remove repetitive sections.** If the source contains repeated or lengthy sections, translate them fully while preserving structure.
 """
 
 # 警告语模板
@@ -200,115 +198,115 @@ LANG_CONFIG = {
     "es": {
         "dir": "spanish",
         "name": "Spanish",
-        "model": "deepseek",
+        "model": "qwen",
         "warning_text": "Este documento ha sido traducido del chino por IA y aún no ha sido revisado."
     },
     "fr": {
         "dir": "french",
         "name": "French",
-        "model": "deepseek",
+        "model": "qwen",
         "warning_text": "Ce document a été traducido del chino por IA y aún no ha sido revisado."
     },
     "de": {
         "dir": "german",
         "name": "German",
-        "model": "deepseek",
+        "model": "qwen",
         "warning_text": "Dieses Dokument wurde von einer KI aus dem Chinesischen übersetzt und ist noch nicht überprüft worden."
     },
     "ja": {
         "dir": "japanese",
         "name": "Japanese",
-        "model": "deepseek",
+        "model": "qwen",
         "warning_text": "このドキュメントはAIによって中国語から翻訳されており、まだレビューされていません。"
     },
     "ko": {
         "dir": "korean",
         "name": "Korean",
-        "model": "deepseek",
+        "model": "qwen",
         "warning_text": "이 문서는 AI에 의해 중국어에서 번역되었으며 아직 검토되지 않았습니다。"
     },
     "ru": {
         "dir": "russian",
         "name": "Russian",
-        "model": "deepseek",
+        "model": "qwen",
         "warning_text": "Этот документ переведен с китайского языка с помощью ИИ и еще не был проверен."
     },
     "pt": {
         "dir": "portuguese",
         "name": "Portuguese",
-        "model": "deepseek",
+        "model": "qwen",
         "warning_text": "Este documento foi traduzido do chinês por IA e ainda não foi revisado."
     },
     "it": {
         "dir": "italian",
         "name": "Italian",
-        "model": "deepseek",
+        "model": "qwen",
         "warning_text": "Questo documento è stato tradotto dal cinese tramite IA e non è ancora stato revisionato."
     },
     "ar": {
         "dir": "arabic",
         "name": "Arabic",
-        "model": "deepseek",
+        "model": "qwen",
         "warning_text": "تمت ترجمة هذا المستند من الصينية بواسطة الذكاء الاصطناعي ولم تتم مراجعته بعد."
     },
     "hi": {
         "dir": "hindi",
         "name": "Hindi",
-        "model": "deepseek",
+        "model": "qwen",
         "warning_text": "यह दस्तावेज़ AI द्वारा चीनी से अनुवादित किया गया है और अभी तक इसकी समीक्षा नहीं की गई है।"
     },
     "bn": {
         "dir": "bengali",
         "name": "Bengali",
-        "model": "deepseek",
+        "model": "qwen",
         "warning_text": "এই নথিটি এআই দ্বারা চীনা থেকে অনুবাদ করা হয়েছে এবং এখনও পর্যালোচনা করা হয়নি।"
     },
     "id": {
         "dir": "indonesian",
         "name": "Indonesian",
-        "model": "deepseek",
+        "model": "qwen",
         "warning_text": "Dokumen ini diterjemahkan dari bahasa Mandarin oleh AI dan belum ditinjau."
     },
     "th": {
         "dir": "thai",
         "name": "Thai",
-        "model": "deepseek",
+        "model": "qwen",
         "warning_text": "เอกสารนี้ได้รับการแปลจากภาษาจีนโดย AI และยังไม่ได้รับการตรวจสอบ"
     },
     "vi": {
         "dir": "vietnamese",
         "name": "Vietnamese",
-        "model": "deepseek",
+        "model": "qwen",
         "warning_text": "Tài liệu này được dịch từ tiếng Trung bằng AI và chưa được xem xét."
     },
     "tr": {
         "dir": "turkish",
         "name": "Turkish",
-        "model": "deepseek",
+        "model": "qwen",
         "warning_text": "Bu belge Çince'den yapay zeka tarafından çevrilmiştir ve henüz incelenmemiştir."
     },
     "pl": {
         "dir": "polish",
         "name": "Polish",
-        "model": "deepseek",
+        "model": "qwen",
         "warning_text": "Ten dokument został przetłumaczony z chińskiego przez AI i nie został jeszcze zweryfikowany."
     },
     "nl": {
         "dir": "dutch",
         "name": "Dutch",
-        "model": "deepseek",
+        "model": "qwen",
         "warning_text": "Dit document is door AI vertaald vanuit het Chinees en is nog niet beoordeeld."
     },
     "zh-tw": {
         "dir": "traditional-chinese",
         "name": "繁體中文",
-        "model": "deepseek",
+        "model": "qwen",
         "warning_text": "此文件由 AI 從中文翻譯而來，尚未經過審閱。"
     },
     "el": {
         "dir": "greek",
         "name": "Ελληνικά",
-        "model": "deepseek",
+        "model": "qwen",
         "warning_text": "Αυτό το έγγραφο μεταφράστηκε από τα Κινεζικά με AI και δεν έχει ακόμη ελεγχθεί."
     }
 }
@@ -406,12 +404,12 @@ def translate_text(text, target_lang_code):
                 translated_content_parts.append(chunk.text)
             translated_content = "".join(translated_content_parts)
 
-        elif model_type == "deepseek":
+        elif model_type == "qwen":
             client = openai.OpenAI(
-                api_key=DEEPSEEK_API_KEY,
+                api_key=PPIO_API_KEY,
                 base_url="https://api.ppinfra.com/v3/openai",
             )
-            model_name = "deepseek/deepseek-r1-0528"
+            model_name = "qwen/qwen3-235b-a22b-thinking-2507"
 
             messages = [
                 {"role": "system", "content": SYSTEM_INSTRUCTIONS},
@@ -420,19 +418,102 @@ def translate_text(text, target_lang_code):
                 {"role": "user", "content": f"请将以下中文内容翻译成{target_language_name}：\n\n{text}"}
             ]
 
-            response = client.chat.completions.create(
-                model=model_name,
-                messages=messages,
-                temperature=1,
-                stream=True,
+            translated_content_parts = []
+            try:
+                response = client.chat.completions.create(
+                    model=model_name,
+                    messages=messages,
+                    temperature=1,
+                    stream=True,
+                )
+                for chunk in response:
+                    try:
+                        choices = getattr(chunk, "choices", None)
+                        if not choices or len(choices) == 0:
+                            continue
+                        delta = getattr(choices[0], "delta", None)
+                        if not delta:
+                            continue
+                        if getattr(delta, "content", None):
+                            translated_content_parts.append(delta.content)
+                        elif getattr(delta, "reasoning_content", None):
+                            translated_content_parts.append(delta.reasoning_content)
+                    except Exception:
+                        continue
+                translated_content = "".join(translated_content_parts)
+                if not translated_content.strip():
+                    raise ValueError("empty stream content")
+            except Exception:
+                resp = client.chat.completions.create(
+                    model=model_name,
+                    messages=messages,
+                    temperature=1,
+                    stream=False,
+                )
+                try:
+                    choice0 = resp.choices[0] if getattr(resp, "choices", None) else None
+                    message = getattr(choice0, "message", None) if choice0 else None
+                    text = (getattr(message, "content", None) or "")
+                except Exception:
+                    text = ""
+                translated_content = re.sub(r'<think>.*?</think>', '', text, flags=re.DOTALL).strip()
+
+        elif model_type == "deepseek":
+            client = openai.OpenAI(
+                api_key=PPIO_API_KEY,
+                base_url="https://api.ppinfra.com/v3/openai",
             )
-            for chunk in response:
-                if chunk.choices[0].delta.content is not None:
-                    translated_content_parts.append(chunk.choices[0].delta.content)
-            
-            translated_content = "".join(translated_content_parts)
-            translated_content = re.sub(r'<think>.*?</think>', '', translated_content, flags=re.DOTALL)
-            translated_content = translated_content.strip()
+            model_name = "deepseek/deepseek-v3.2-exp"
+
+            messages = [
+                {"role": "system", "content": SYSTEM_INSTRUCTIONS},
+                {"role": "user", "content": f"请将以下中文内容翻译成English：\n\n{EXAMPLE_CHINESE_README}"},
+                {"role": "assistant", "content": EXAMPLE_ENGLISH_README},
+                {"role": "user", "content": f"请将以下中文内容翻译成{target_language_name}：\n\n{text}"}
+            ]
+
+            # Robust streaming with guards and reasoning_content support; fallback to non-stream if needed
+            translated_content_parts = []
+            try:
+                response = client.chat.completions.create(
+                    model=model_name,
+                    messages=messages,
+                    temperature=1,
+                    stream=True,
+                )
+                for chunk in response:
+                    try:
+                        choices = getattr(chunk, "choices", None)
+                        if not choices or len(choices) == 0:
+                            continue
+                        delta = getattr(choices[0], "delta", None)
+                        if not delta:
+                            continue
+                        if getattr(delta, "content", None):
+                            translated_content_parts.append(delta.content)
+                        elif getattr(delta, "reasoning_content", None):
+                            translated_content_parts.append(delta.reasoning_content)
+                    except Exception:
+                        # Skip malformed chunks safely
+                        continue
+                translated_content = "".join(translated_content_parts)
+                if not translated_content.strip():
+                    raise ValueError("empty stream content")
+            except Exception:
+                # Non-streaming fallback in case streaming fails or yields no content
+                resp = client.chat.completions.create(
+                    model=model_name,
+                    messages=messages,
+                    temperature=1,
+                    stream=False,
+                )
+                try:
+                    choice0 = resp.choices[0] if getattr(resp, "choices", None) else None
+                    message = getattr(choice0, "message", None) if choice0 else None
+                    text = (getattr(message, "content", None) or "")
+                except Exception:
+                    text = ""
+                translated_content = re.sub(r'<think>.*?</think>', '', text, flags=re.DOTALL).strip()
 
         else:
             logging.error(f"Unknown model type: {model_type} for language {target_lang_code}")
@@ -576,7 +657,11 @@ def main():
 
     overall_translation_status = True
     
-    files_to_process, files_to_delete = get_changed_files()
+    try:
+        files_to_process, files_to_delete = get_changed_files()
+    except Exception as e:
+        logging.error(f"Failed to determine changed files: {e}")
+        exit(1)
     logging.info(f"Files identified for processing: {files_to_process}")
     logging.info(f"Files identified for deletion: {files_to_delete}")
     
