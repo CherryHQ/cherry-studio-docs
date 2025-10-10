@@ -15,29 +15,23 @@ icon: windows
 ## Открыть официальный сайт
 
 {% hint style="warning" %}
-**Примечание:** Установка Cherry Studio не поддерживается в Windows 7.
+Внимание: Windows 7 не поддерживает установку Cherry Studio.
 {% endhint %}
 
-Нажмите "Скачать" и выберите подходящую версию
+## Скачать
 
 {% embed url="https://cherry-ai.com/download" %}
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Открыть официальный сайт</p></figcaption></figure>
-
-## Дождитесь завершения загрузки
-
-<figure><img src="../../.gitbook/assets/download.webp" alt="" width="563"><figcaption><p>Загрузка в браузере Edge</p></figcaption></figure>
-
-> Если браузер сообщает, что файл не является доверенным, просто выберите "Сохранить файл"
->
-> `Сохранить файл` → `Доверять Cherry-Studio`
-
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
-
-## Открыть файл
-
-<figure><img src="../../.gitbook/assets/download (1).webp" alt="" width="563"><figcaption><p>Список загрузок Edge</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Открыть официальный сайт</p></figcaption></figure>
 
 ## Установка
 
-<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Интерфейс установки ПО</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Интерфейс установки ПО</p></figcaption></figure>
+
+### Зависимости ПО
+
+Программе требуется библиотека Visual C++ Redistributable. При появлении запроса на установку нажмите "Да"
+
+Или установите вручную: [https://aka.ms/vs/17/release/vc\_redist.x64.exe](https://aka.ms/vs/17/release/vc_redist.x64.exe)
+
+<div data-full-width="true"><figure><img src="../../.gitbook/assets/image (155).png" alt=""><figcaption></figcaption></figure></div>

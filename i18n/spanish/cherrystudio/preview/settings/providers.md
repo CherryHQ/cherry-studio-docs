@@ -1,7 +1,7 @@
 ---
 icon: cloud-check
 ---
-# Configuración de Servicio de Modelo
+# Configuración del servicio de modelos
 
 
 {% hint style="warning" %}
@@ -11,58 +11,60 @@ Este documento ha sido traducido del chino por IA y aún no ha sido revisado.
 
 
 
-Esta página solo presenta las funciones de la interfaz. Para guías de configuración completa, consulta el tutorial de [Configuración de Proveedores](../../../pre-basic/providers/) en los Fundamentos Básicos.
+Esta página solo describe las funciones de la interfaz. Para ver los tutoriales de configuración, puede consultar la guía [Configuración de proveedores](../../../pre-basic/providers/) en los tutoriales básicos.
 
 {% hint style="info" %}
-* Usando proveedores nativos: solo requiere completar las claves correspondientes.
-* Puede haber variaciones en el nombre de la clave entre proveedores: clave, key, API key o token, todas se refieren al mismo concepto.
+* Al usar proveedores integrados, solo necesita completar la clave correspondiente.
+* Diferentes proveedores pueden usar términos distintos para la clave: clave secreta, Key, API Key, token, etc., todos se refieren al mismo concepto.
 {% endhint %}
 
 ### Clave API
 
-En Cherry Studio, un proveedor individual soporta rotación de múltiples claves, siguiendo un ciclo secuencial de la lista.
+En Cherry Studio, un mismo proveedor admite múltiples claves para uso rotativo. La rotación sigue un ciclo secuencial de lista (de adelante hacia atrás).
 
-* Se agregan múltiples claves separadas por comas en inglés. Ejemplo:
+* Agregue múltiples claves separadas por comas en inglés. Ejemplo:
 
 <pre><code><strong>sk-xxxx1,sk-xxxx2,sk-xxxx3,sk-xxxx4
 </strong></code></pre>
 
 {% hint style="warning" %}
-Debes utilizar **comas en inglés** exclusivamente.
+Debe usar comas en **inglés**.
 {% endhint %}
 
 ### Dirección API
 
-Normalmente no es necesario completar la dirección API con proveedores nativos. Si requieres modificarla, ingresa el valor exacto según la documentación oficial.
+Generalmente no es necesario completar la dirección API cuando se usan proveedores integrados. Si necesita modificarla, ingrese la dirección exacta proporcionada en la documentación oficial correspondiente.
 
-> Si el proveedor indica una dirección como <mark style="background-color:red;">https://xxx.xxx.com</mark><mark style="background-color:green;">/v1/chat/completions</mark>, solo debes ingresar la raíz (<mark style="background-color:red;">https://xxx.xxx.com</mark>).  
-> Cherry Studio concatenará automáticamente la ruta restante (<mark style="background-color:green;">/v1/chat/completions</mark>). Un formato incorrecto podría generar fallos.
+> Si el proveedor da una dirección como <mark style="background-color:red;">https://xxx.xxx.com</mark><mark style="background-color:green;">/v1/chat/completions</mark>, solo debe ingresar la dirección base (<mark style="background-color:red;">https://xxx.xxx.com</mark>).
+>
+> Cherry Studio completará automáticamente la ruta restante (<mark style="background-color:green;">/v1/chat/completions</mark>). Si no se sigue este formato, podría causar errores.
 
 {% hint style="info" %}
-Nota: Los modelos de lenguaje principales usan rutas estandarizadas. Solo si el proveedor usa versiones no estándar (ej: v2, v3/chat/completions) debes:
-* Ingresar `/` al final de la versión para que el sistema concatene "chat/completions"
-* Usar `#` al final al ingresar rutas completas no convencionales para desactivar concatenación.
+Nota: La mayoría de los proveedores usan rutas unificadas para modelos grandes de lenguaje, por lo que generalmente no se requiere configuración adicional. Si el proveedor usa rutas API como v2, v3/chat/completions u otras versiones, ingrese manualmente la versión correspondiente terminando con "`/`". Cuando la ruta del proveedor no sea la convencional <mark style="background-color:green;">/v1/chat/completions</mark>, use la dirección completa proporcionada por el proveedor y termine con `#`.
 
-Ejemplos:  
-<img src="../../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt="" data-size="original"><img src="../../../.gitbook/assets/image (15).png" alt="" data-size="original">
+Es decir:
+* Las direcciones API terminadas en `/` solo agregarán "<mark style="background-color:green;">chat/completions</mark>"
+* Las direcciones API terminadas en `#` no agregarán rutas, usando solo la dirección ingresada.
+
+<img src="../../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt="" data-size="original"><img src="../../../.gitbook/assets/image (15).png" alt="" data-size="original">
 {% endhint %}
 
-### Añadir modelos
+### Agregar modelos
 
-Haz clic en `Gestionar` (esquina inferior izquierda) para obtener automáticamente todos los modelos soportados. Agrega los seleccionados con el botón `+`.
+Normalmente, al hacer clic en el botón `Administrar` en la esquina inferior izquierda de la página de configuración del proveedor, se obtendrán automáticamente todos los modelos compatibles. Desde la lista obtenida, haga clic en `+` para agregarlos a la lista de modelos.
 
 {% hint style="info" %}
-Al hacer clic en Gestionar, los modelos no se añaden automáticamente. Debes seleccionar individualmente usando `+` para que aparezcan en la lista configurada.
+Al hacer clic en el botón Administrar, no se agregarán todos los modelos de la ventana emergente. Debe hacer clic en `+` junto al modelo para agregarlo a la lista de modelos en la página de configuración del proveedor, y así aparecerá en la lista de selección de modelos.
 {% endhint %}
 
-### Verificación de conectividad
+### Verificación de conexión
 
-Haz clic en el botón de verificación junto a la clave API para probar la configuración.
+Haga clic en el botón de verificación junto al campo de entrada de la Clave API para probar si la configuración es exitosa.
 
 {% hint style="info" %}
-La prueba usa el último modelo conversacional añadido en la lista. Si falla, verifica posibles modelos erróneos o no soportados.
+La verificación del modelo usa por defecto el último modelo de conversación agregado a la lista. Si hay errores durante la verificación, compruebe si hay modelos incorrectos o no compatibles en la lista.
 {% endhint %}
 
 {% hint style="danger" %}
-💡 ¡Activa el interruptor superior derecho después de configurar! De lo contrario, el proveedor permanecerá deshabilitado y sus modelos serán invisibles.
+Después de configurar correctamente, asegúrese de activar el interruptor en la esquina superior derecha. De lo contrario, el proveedor permanecerá deshabilitado y sus modelos no aparecerán en la lista de selección.
 {% endhint %}

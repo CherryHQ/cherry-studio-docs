@@ -1,98 +1,101 @@
 ---
 icon: searchengin
 ---
+# Despliegue y configuración local de SearXNG
+
 
 {% hint style="warning" %}
 Este documento ha sido traducido del chino por IA y aún no ha sido revisado.
 {% endhint %}
 
-# Despliegue y Configuración de SearXNG
 
-CherryStudio admite búsquedas en la web a través de SearXNG, un proyecto de código abierto que se puede implementar localmente o en un servidor, por lo que su configuración difiere ligeramente de otros métodos que requieren proveedores de API.
 
-**Enlace al proyecto SearXNG:** [SearXNG](https://github.com/searxng/searxng)
+
+CherryStudio admite búsquedas web a través de SearXNG, un proyecto de código abierto que se puede implementar localmente o en servidores, lo que difiere ligeramente de otras configuraciones que requieren proveedores de API.
+
+**Enlace al proyecto SearXNG**: [SearXNG](https://github.com/searxng/searxng)
 
 ## Ventajas de SearXNG
 
-*   Código abierto y gratuito, sin necesidad de API
-*   Relativamente alto nivel de privacidad
-*   Altamente personalizable
+* Código abierto y gratuito, sin necesidad de API
+* Alta privacidad relativa
+* Altamente personalizable
 
-## Despliegue Local
+## Despliegue local
 
-### 1. Despliegue Directo con Docker
+### 1. Despliegue directo con Docker
 
-Como SearXNG no requiere configuración de entorno compleja y puede implementarse simplemente proporcionando un puerto libre sin necesidad de docker compose, la forma más rápida es usar Docker para obtener la imagen directamente.
+Dado que SearXNG no requiere configuraciones ambientales complejas y puede implementarse sin docker compose simplemente asignando un puerto libre, la forma más rápida es utilizar Docker para descargar e implementar directamente la imagen.
 
-#### 1. Descargar e instalar [docker](https://www.docker.com/)
+#### 1. Descarga, instalación y configuración de [docker](https://www.docker.com/)
 
-<figure><img src="../../.gitbook/assets/searxng_config_img_01.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/searxng_config_img_01.png" alt=""><figcaption></figcaption></figure>
 
-Después de instalar, seleccione una ruta de almacenamiento para la imagen:
+Después de la instalación, seleccione una ruta de almacenamiento para las imágenes:
 
-<figure><img src="../../.gitbook/assets/searxng_config_img_02.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/searxng_config_img_02.png" alt=""><figcaption></figcaption></figure>
 
-#### 2. Buscar y obtener la imagen de SearXNG
+#### 2. Buscar y descargar la imagen de SearXNG
 
-Escriba **searxng** en la barra de búsqueda:
+Ingrese **searxng** en la barra de búsqueda:
 
-<figure><img src="../../.gitbook/assets/searxng_config_img_03.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/searxng_config_img_03.png" alt=""><figcaption></figcaption></figure>
 
-Obtener la imagen:
+Descargar la imagen:
 
-<figure><img src="../../.gitbook/assets/searxng_config_img_04.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/searxng_config_img_04.png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/searxng_config_img_05.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/searxng_config_img_05.png" alt=""><figcaption></figcaption></figure>
 
 #### 3. Ejecutar la imagen
 
-Después de obtener la imagen, vaya a la página **images**:
+Después de descargar con éxito, vaya a la página **images**:
 
-<figure><img src="../../.gitbook/assets/searxng_config_img_06.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/searxng_config_img_06.png" alt=""><figcaption></figcaption></figure>
 
-Seleccione la imagen obtenida y haga clic en ejecutar:
+Seleccione la imagen descargada y haga clic en ejecutar:
 
-<figure><img src="../../.gitbook/assets/searxng_config_img_07.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/searxng_config_img_07.png" alt=""><figcaption></figcaption></figure>
 
-Abra las opciones de configuración:
+Abra la configuración para realizar ajustes:
 
-<figure><img src="../../.gitbook/assets/searxng_config_img_08.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/searxng_config_img_08.png" alt=""><figcaption></figcaption></figure>
 
-Ejemplo con el puerto `8085`:
+Tomando el puerto `8085` como ejemplo:
 
-<figure><img src="../../.gitbook/assets/searxng_config_img_09.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/searxng_config_img_09.png" alt=""><figcaption></figcaption></figure>
 
-Después de ejecutarse con éxito, haga clic en el enlace para abrir la interfaz frontend de SearXNG:
+Después de ejecutar con éxito, haga clic en el enlace para abrir la interfaz frontal de SearXNG:
 
-<figure><img src="../../.gitbook/assets/searxng_config_img_10.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/searxng_config_img_10.png" alt=""><figcaption></figcaption></figure>
 
-Si aparece esta página, significa que el despliegue fue exitoso:
+La aparición de esta página indica que el despliegue fue exitoso:
 
-<figure><img src="../../.gitbook/assets/searxng_config_img_11.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/searxng_config_img_11.png" alt=""><figcaption></figcaption></figure>
 
-## Despliegue en Servidor
+## Despliegue en servidor
 
-Dado que instalar Docker en Windows puede ser complicado, los usuarios pueden implementar SearXNG en un servidor y compartirlo con otros. Sin embargo, actualmente SearXNG no admite autenticación, lo que permite que otros escaneen y abusen de su instancia implementada.
+Dado que instalar Docker en Windows puede ser complicado, los usuarios pueden implementar SearXNG en un servidor y compartirlo con otros. Sin embargo, SearXNG actualmente no admite autenticación, lo que permite que otros escaneen y abusen de su instancia implementada.
 
-Por ello, Cherry Studio ahora admite la configuración de [Autenticación HTTP Básica (RFC7617)](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Guides/Authentication). Si implementa SearXNG en un entorno público, **debe** configurar la autenticación HTTP básica usando software de proxy inverso como Nginx. A continuación se muestra un breve tutorial que requiere conocimientos básicos de administración de Linux.
+Por ello, Cherry Studio admite actualmente la configuración de [Autenticación básica HTTP (RFC7617)](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Guides/Authentication). Si expone su instancia de SearXNG en Internet, **debe** configurar la autenticación básica HTTP mediante software proxy inverso como Nginx. A continuación se proporciona un breve tutorial que requiere conocimientos básicos de administración de Linux.
 
 ### Implementar SearXNG
 
-De manera similar, use Docker para implementar. Suponiendo que ya ha instalado Docker CE siguiendo la [guía oficial](https://docs.docker.com/engine/install), aquí hay comandos para una instalación nueva en sistemas Debian:
+Similarmente, se utiliza Docker para el despliegue. Suponiendo que ya ha instalado la última versión de Docker CE en el servidor siguiendo el [tutorial oficial](https://docs.docker.com/engine/install), aquí tiene comandos completos para una instalación nueva en sistemas Debian:
 
 ```bash
 sudo apt update
 sudo apt install git -y
 
-# Obtener el repositorio oficial
+# Descargar repositorio oficial
 cd /opt
 git clone https://github.com/searxng/searxng-docker.git
 cd /opt/searxng-docker
 
-# Si su servidor tiene poco ancho de banda, establezca esto en false
+# Si su servidor tiene ancho de banda limitado, puede establecerlo en false
 export IMAGE_PROXY=true
 
-# Modificar el archivo de configuración
+# Modificar archivo de configuración
 cat <<EOF > /opt/searxng-docker/searxng/settings.yml
 # see https://docs.searxng.org/admin/settings/settings.html#settings-use-default-settings
 use_default_settings: true
@@ -112,13 +115,13 @@ search:
 EOF
 ```
 
-Para cambiar el puerto de escucha local o reutilizar Nginx existente, edite `docker-compose.yaml`:
+Si necesita modificar el puerto de escucha local o reutilizar un nginx existente, edite el archivo `docker-compose.yaml` como referencia:
 
 ```yaml
 version: "3.7"
 
 services:
-# Si no necesita Caddy y reutiliza Nginx local, elimine esto. No necesitamos Caddy por defecto.
+# Si no necesita Caddy y reutiliza un Nginx local existente, elimine esto. Por defecto no necesitamos Caddy.
   caddy:
     container_name: caddy
     image: docker.io/library/caddy:2-alpine
@@ -140,7 +143,7 @@ services:
       options:
         max-size: "1m"
         max-file: "1"
-# Si no necesita Caddy y reutiliza Nginx local, elimine lo anterior. No necesitamos Caddy por defecto.
+# Si no necesita Caddy y reutiliza un Nginx local existente, elimine esto. Por defecto no necesitamos Caddy.
   redis:
     container_name: redis
     image: docker.io/valkey/valkey:8-alpine
@@ -168,7 +171,7 @@ services:
     restart: unless-stopped
     networks:
       - searxng
-    # Por defecto se asigna al puerto 8080 del host. Si quiere escuchar en el puerto 8000, cambie a "127.0.0.1:8000:8080"
+    # Asigna por defecto al puerto 8080 del host. Si desea escuchar en 8000, cambie a "127.0.0.1:8000:8080"
     ports:
       - "127.0.0.1:8080:8080"
     volumes:
@@ -193,18 +196,18 @@ networks:
   searxng:
 
 volumes:
-# Si no necesita Caddy y reutiliza Nginx local, elimine lo siguiente
+# Si no necesita Caddy y reutiliza un Nginx local existente, elimine esto
   caddy-data:
   caddy-config:
-# Si no necesita Caddy y reutiliza Nginx local, elimine lo anterior
+# Si no necesita Caddy y reutiliza un Nginx local existente, elimine esto
   valkey-data2:
 ```
 
-Ejecute `docker compose up -d` para iniciar. Verifique los registros con `docker compose logs -f searxng`.
+Ejecute `docker compose up -d` para iniciar. Ejecute `docker compose logs -f searxng` para ver registros.
 
-### Configurar Proxy Inverso Nginx y Autenticación HTTP Básica
+### Implementar proxy inverso Nginx y autenticación básica HTTP
 
-Si usa paneles de servidor como BaoTa o 1Panel, consulte su documentación para configurar Nginx. Modifique el archivo de configuración como se muestra:
+Si utiliza paneles de servidor como BT-Panel o 1Panel, consulte su documentación para agregar sitios web y configurar proxy inverso Nginx. Luego modifique el archivo de configuración de Nginx según este ejemplo:
 
 ```conf
 server
@@ -217,16 +220,19 @@ server
     # index index.html;
     # root /data/www/default;
 
-    # Si está configurado SSL:
-    ssl_certificate    /path/to/your/cert/fullchain.pem;
-    ssl_certificate_key    /path/to/your/cert/privkey.pem;
+    # Si configura SSL, debe tener estas dos líneas
+    ssl_certificate    /ruta/de/su/cert/fullchain.pem;
+    ssl_certificate_key    /ruta/de/su/cert/privkey.pem;
 
     # HSTS
     # add_header Strict-Transport-Security "max-age=31536000; includeSubDomains; preload";
 
+    # Configuración predeterminada de proxy inverso
     location / {
-        # Agregar estas dos líneas (ajuste la ruta según su sistema)
-        auth_basic "Introduzca su nombre de usuario y contraseña";
+        # Agregue estas dos líneas en el bloque location
+        # Este ejemplo asume que los archivos de configuración se guardan en /etc/nginx/conf.d/
+        # Para BT-Panel, puede estar en /www, preste atención
+        auth_basic "Por favor ingrese su nombre de usuario y contraseña";
         auth_basic_user_file /etc/nginx/conf.d/search.htpasswd;
 
         proxy_http_version 1.1;
@@ -243,103 +249,108 @@ server
 }
 ```
 
-Si guarda la configuración en `/etc/nginx/conf.d`, genere el archivo de contraseñas (reemplace `example_name` y `example_password`):
+Suponiendo que el archivo de configuración de Nginx se guarda en `/etc/nginx/conf.d`, guardaremos el archivo de contraseñas en el mismo directorio.
+
+Ejecute este comando (reemplace `nombre_ejemplo` y `contraseña_ejemplo` con su nombre de usuario y contraseña):
 
 ```bash
-echo "example_name:$(openssl passwd -5 'example_password')" > /etc/nginx/conf.d/search.htpasswd
+echo "nombre_ejemplo:$(openssl passwd -5 'contraseña_ejemplo')" > /etc/nginx/conf.d/search.htpasswd
 ```
 
-Reinicie o recargue Nginx. Verifique que se solicite autenticación:
+Reinicie Nginx (o recargue la configuración).
 
-<figure><img src="../../.gitbook/assets/searxng-basic-auth-example.png" alt=""><figcaption></figcaption></figure>
+Ahora, al abrir la página web, se le pedirá nombre de usuario y contraseña. Ingrese los datos establecidos anteriormente para verificar si accede correctamente a la página de búsqueda de SearXNG.
 
-## Configuración en Cherry Studio
+<figure><img src="../.gitbook/assets/searxng-basic-auth-example.png" alt=""><figcaption></figcaption></figure>
 
-Una vez implementado SearXNG localmente o en servidor, configure CherryStudio.
+## Configuración relacionada con Cherry Studio
 
-Acceda a los ajustes de búsqueda web y seleccione Searxng:
+Una vez implementado SearXNG localmente o en el servidor, proceda con la configuración en CherryStudio.
 
-<figure><img src="../../.gitbook/assets/searxng_config_img_12.png" alt=""><figcaption></figcaption></figure>
+Vaya a la página de configuración de búsqueda web y seleccione Searxng:
 
-Si la verificación falla al ingresar la URL local:
+<figure><img src="../.gitbook/assets/searxng_config_img_12.png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/searxng_config_img_13.png" alt=""><figcaption></figcaption></figure>
+Al ingresar el enlace de implementación local, la verificación fallará inicialmente (esto es normal):
 
-Esto ocurre porque no se ha configurado el tipo de retorno JSON. Modifique el archivo de configuración.
+<figure><img src="../.gitbook/assets/searxng_config_img_13.png" alt=""><figcaption></figcaption></figure>
 
-En Docker, vaya a la pestaña Files, busque la carpeta con etiqueta:
+La implementación predeterminada no configura el tipo de retorno JSON, por lo que es necesario modificar el archivo de configuración.
 
-<figure><img src="../../.gitbook/assets/searxng_config_img_14.png" alt=""><figcaption></figcaption></figure>
+Regrese a Docker, vaya a la pestaña Files y encuentre la carpeta etiquetada:
 
-Expanda y encuentre otra carpeta etiquetada:
+<figure><img src="../.gitbook/assets/searxng_config_img_14.png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/searxng_config_img_15.png" alt=""><figcaption></figcaption></figure>
+Expanda y continúe desplazándose para encontrar otra carpeta etiquetada:
 
-Busque el archivo de configuración **settings.yml**:
+<figure><img src="../.gitbook/assets/searxng_config_img_15.png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/searxng_config_img_16.png" alt=""><figcaption></figcaption></figure>
+Expanda y busque el archivo de configuración **settings.yml**:
 
-Ábralo en el editor:
+<figure><img src="../.gitbook/assets/searxng_config_img_16.png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/searxng_config_img_17.png" alt=""><figcaption></figcaption></figure>
+Haga clic para abrir el editor de archivos:
 
-En la línea 78, modifique para incluir JSON:
+<figure><img src="../.gitbook/assets/searxng_config_img_17.png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/searxng_config_img_18.png" alt=""><figcaption></figcaption></figure>
+En la línea 78, verá que solo hay un tipo html:
 
-Guarde y reinicie la imagen después de agregar el tipo JSON:
+<figure><img src="../.gitbook/assets/searxng_config_img_18.png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/searxng_config_img_19.png" alt=""><figcaption></figcaption></figure>
+Agregue el tipo json, guarde y reinicie la imagen:
 
-<figure><img src="../../.gitbook/assets/searxng_config_img_20.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/searxng_config_img_19.png" alt=""><figcaption></figcaption></figure>
 
-Verifique nuevamente en Cherry Studio (ahora debería ser exitosa):
+<figure><img src="../.gitbook/assets/searxng_config_img_20.png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/searxng_config_img_21.png" alt=""><figcaption></figcaption></figure>
+Regrese a Cherry Studio para verificar: la verificación ahora será exitosa:
 
-Use `http://localhost:port` localmente o `http://host.docker.internal:port` para Docker.
+<figure><img src="../.gitbook/assets/searxng_config_img_21.png" alt=""><figcaption></figcaption></figure>
 
-Para instancias con autenticación HTTP básica, Cherry Studio mostrará error 401 durante la verificación:
+La dirección puede ser local: [http://localhost](http://localhost) :número_de_puerto\
+O la dirección de Docker: [http://host.docker.internal](http://host.docker.internal) :número_de_puerto
 
-<figure><img src="../../.gitbook/assets/searxng-basic-auth-client-setting-failed.png" alt=""><figcaption></figcaption></figure>
+Si implementó en servidor con proxy inverso configurado correctamente y habilitó el tipo de retorno JSON, al ingresar la dirección para verificación (con autenticación básica HTTP habilitada) debería recibir un error 401:
 
-Ingrese las credenciales en el cliente:
+<figure><img src="../.gitbook/assets/searxng-basic-auth-client-setting-failed.png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/searxng-basic-auth-client-setting.png" alt=""><figcaption></figcaption></figure>
+Configure la autenticación básica HTTP en el cliente con el nombre de usuario y contraseña establecidos:
 
-La verificación ahora debería ser exitosa.
+<figure><img src="../.gitbook/assets/searxng-basic-auth-client-setting.png" alt=""><figcaption></figcaption></figure>
 
-### Otras Configuraciones
+Realice la verificación nuevamente; debería ser exitosa.
 
-SearXNG tiene capacidades de búsqueda predeterminadas. Para personalizar motores de búsqueda:
+### Otras configuraciones
 
-Estos ajustes no afectan las llamadas de modelos grandes:
+SearXNG ahora tiene capacidad de búsqueda web predeterminada. Para personalizar motores de búsqueda, configure manualmente:
 
-<figure><img src="../../.gitbook/assets/searxng_config_img_22.png" alt=""><figcaption></figcaption></figure>
+Nota: Estas preferencias no afectan la configuración utilizada por los modelos grandes durante la invocación
 
-Para motores usados por modelos grandes, edite el archivo de configuración:
+<figure><img src="../.gitbook/assets/searxng_config_img_22.png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/searxng_config_img_23.png" alt=""><figcaption></figcaption></figure>
+Para configurar motores de búsqueda invocados por modelos grandes, establezca en el archivo de configuración:
 
-<figure><img src="../../.gitbook/assets/searxng_config_img_24.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/searxng_config_img_23.png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../.gitbook/assets/searxng_config_img_24.png" alt=""><figcaption></figcaption></figure>
 
 Referencia de configuración de idioma:
 
-<figure><img src="../../.gitbook/assets/searxng_config_img_25.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/searxng_config_img_25.png" alt=""><figcaption></figcaption></figure>
 
-Si el contenido es extenso, edítelo localmente y pegue los cambios.
+Si el contenido es demasiado largo para editar directamente, cópielo en un IDE local, modifíquelo y luego péguelo de vuelta en el archivo de configuración.
 
-## Causas Comunes de Falla en Verificación
+## Causas comunes de fallo en verificación
 
-### Formato de Retorno Sin JSON
+### Formato de retorno sin JSON agregado
 
-Agregue json al formato en el archivo de configuración:
+Agregue json al formato de retorno en el archivo de configuración:
 
-<figure><img src="../../.gitbook/assets/searxng_json_format.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/searxng_json_format.png" alt=""><figcaption></figcaption></figure>
 
-### Motor de Búsqueda Mal Configurado
+### Motor de búsqueda configurado incorrectamente
 
-Cherry Studio usa motores con categorías `web` y `general`. Google puede fallar en algunas regiones. Para usar Baidu:
+Cherry Studio selecciona por defecto motores cuyas categorías incluyen web y general. Predeterminadamente selecciona Google, pero en China continental este no es accesible. Agregue esta configuración para forzar a SearXNG a usar Baidu:
 
 ```
 use_default_settings:
@@ -355,8 +366,8 @@ engines:
     disabled: false
 ```
 
-### Velocidad de Acceso Demasiado Alta
+### Tasa de acceso demasiado rápida
 
-Desactive el limitador en la configuración:
+La configuración limiter de SearXNG bloquea el acceso API. Intente desactivarla en la configuración:
 
-<figure><img src="../../.gitbook/assets/searxng_limiter.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/searxng_limiter.png" alt=""><figcaption></figcaption></figure>

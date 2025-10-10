@@ -11,20 +11,20 @@ Este documento foi traduzido do chinês por IA e ainda não foi revisado.
 
 
 
-Nesta página, você pode configurar o tema de cores, layout da página ou [CSS personalizado](../../../personalization-settings/css.md) para personalizações.
+Nesta página, você pode definir o tema de cores do software, o layout da página ou [CSS personalizado](../../../personalization-settings/css.md) para realizar personalizações.
 
 ### Seleção de Tema
 
-Aqui você define o modo de cor padrão da interface (claro, escuro ou seguir o sistema).
+Aqui você pode definir o modo de cor padrão da interface (modo claro, modo escuro ou seguir o sistema).
 
-### Configurações de Tópicos
+### Configurações de Conversa
 
-Essas configurações controlam o layout da interface de conversa.
+Essas configurações são para o layout da interface de conversa.
 
-#### Posição dos Tópicos
+#### Posição da Conversa
 
 {% tabs %}
-{% tab title="Esquerda (Padrão)" %}
+{% tab title="Esquerda (padrão)" %}
 <figure><img src="../../../.gitbook/assets/image (10) (1).png" alt=""><figcaption></figcaption></figure>
 {% endtab %}
 
@@ -33,12 +33,12 @@ Essas configurações controlam o layout da interface de conversa.
 {% endtab %}
 {% endtabs %}
 
-#### Alternar Automaticamente para Tópico
+#### Mudança Automática para Conversa
 
-Quando ativado, clicar no nome de um assistente alterna automaticamente para seu tópico.
+Quando ativada, clicar no nome do assistente mudará automaticamente para a página da conversa correspondente.
 
 {% tabs %}
-{% tab title="Desativado (Padrão)" %}
+{% tab title="Desativado (padrão)" %}
 <figure><img src="../../../.gitbook/assets/Honeycam 2025-01-04 17-35-43.gif" alt=""><figcaption></figcaption></figure>
 {% endtab %}
 
@@ -47,9 +47,9 @@ Quando ativado, clicar no nome de um assistente alterna automaticamente para seu
 {% endtab %}
 {% endtabs %}
 
-#### Exibir Horário do Tópico
+#### Exibir Horário da Conversa
 
-Mostra o horário de **criação** abaixo de cada tópico quando ativado.
+Quando ativado, exibe o horário de **criação** abaixo da conversa.
 
 {% tabs %}
 {% tab title="Desativado" %}
@@ -63,4 +63,4 @@ Mostra o horário de **criação** abaixo de cada tópico quando ativado.
 
 ### CSS Personalizado
 
-Permite modificações avançadas na interface. Consulte o guia [CSS Personalizado](../../../personalization-settings/css.md) para detalhes.
+Permite alterações flexíveis na interface para personalização. Para métodos detalhados, consulte [CSS Personalizado](../../../personalization-settings/css.md) no tutorial avançado.

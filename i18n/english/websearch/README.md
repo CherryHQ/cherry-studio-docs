@@ -2,57 +2,60 @@
 description: 如何在 Cherry Studio 使用联网模式
 icon: globe
 ---
+# Network Access
+
 
 {% hint style="warning" %}
 This document was translated from Chinese by AI and has not yet been reviewed.
 {% endhint %}
 
-# Internet Mode
+
+
 
 {% hint style="info" %}
-Examples of scenarios that require internet access:
+Examples of scenarios requiring network access:
 
-* Time-sensitive information: such as today's/this week's/just now's gold futures prices.
-* Real-time data: such as weather, exchange rates, and other dynamic values.
-* Emerging knowledge: such as new things, new concepts, new technologies, etc.
+*   Time-sensitive information: such as today's/this week's/just now's gold futures prices.
+*   Real-time data: such as dynamic values for weather, exchange rates.
+*   Emerging knowledge: such as new things, new concepts, new technologies, etc.
 {% endhint %}
 
-### How to Enable Internet Access
+### I. How to enable network access
 
-In the Cherry Studio question window, click the 【Globe】 icon to enable internet access.
+In Cherry Studio's prompt window, click the "globe" icon to enable network access.
 
-<figure><img src="../.gitbook/assets/image (94).png" alt=""><figcaption><p>Click the globe icon - Enable internet</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (94).png" alt=""><figcaption><p>Click the globe icon - Enable network access</p></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/image (96).png" alt=""><figcaption><p>Indicates - Internet function is enabled</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (96).png" alt=""><figcaption><p>Indicates - Network access function is enabled</p></figcaption></figure>
 
-### Important Note: Two Modes for Internet Access
+### II. Special attention: There are two modes for network access
 
-#### Mode 1: Models with built-in internet function from providers
+#### Mode 1: Large models from model service providers come with network access
 
-When using such models, enabling internet access requires no extra steps - it's straightforward.
+In this case, once network access is enabled, you can directly use the network service, which is very simple.
 
 {% hint style="warning" %}
-Quickly identify internet-enabled models by checking for a small globe icon next to the model name above the chat interface.
+You can quickly determine if a model supports network access by checking if there's a small map icon next to the model name above the chat interface.
 {% endhint %}
 
 <figure><img src="../.gitbook/assets/image (100).png" alt=""><figcaption></figcaption></figure>
 
-This method also helps quickly distinguish internet-enabled models in the Model Management page.
+On the model management page, this method also allows you to quickly distinguish which models support network access and which do not.
 
 <figure><img src="../.gitbook/assets/image (101).png" alt=""><figcaption></figcaption></figure>
 
-> <mark style="color:green;">**Cherry Studio currently supports internet-enabled models from**</mark>
+> <mark style="color:green;">**Currently supported network-enabled model service providers in Cherry Studio include**</mark>
 >
-> * <mark style="color:green;">Google Gemini</mark>
-> * <mark style="color:green;">OpenRouter (all models support internet)</mark>
-> * <mark style="color:green;">Tencent Hunyuan</mark>
-> * <mark style="color:green;">Zhipu AI</mark>
-> * <mark style="color:green;">Alibaba Bailian, etc.</mark>
+> *   <mark style="color:green;">Google Gemini</mark>
+> *   <mark style="color:green;">OpenRouter (All models support network access)</mark>
+> *   <mark style="color:green;">Tencent Hunyuan</mark>
+> *   <mark style="color:green;">Zhipu AI</mark>
+> *   <mark style="color:green;">Alibaba Cloud BaiLian, etc.</mark>
 
 {% hint style="danger" %}
-Important note:
+Special note:
 
-Special cases exist where models may access internet without the globe icon, as explained in the tutorial below.
+There is a special case where a model can still achieve network access even if it doesn't have a small globe icon, as explained in the tutorial below.
 {% endhint %}
 
 {% content-ref url="volcengine.md" %}
@@ -61,42 +64,42 @@ Special cases exist where models may access internet without the globe icon, as 
 
 ***
 
-#### Mode 2: Models without internet function use Tavily service
+#### Mode 2: Models without network access use Tavily service to achieve network access
 
-When using models without built-in internet (no globe icon), use Tavily search service to process real-time information.
+When we use a large model that does not have network access (no small globe icon next to its name), but we need it to retrieve and process some real-time information, then the Tavily web search service is needed.
 
-**First-time Tavily setup** triggers a setup prompt - simply follow the instructions!
+**When using Tavily service for the first time**, a pop-up will prompt you to set up some information. Please follow the instructions - it's very simple!
 
-<figure><img src="../.gitbook/assets/image (102).png" alt=""><figcaption><p>Popup window, click: Go to settings</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (102).png" alt=""><figcaption><p>Pop-up, click: Go to Settings</p></figcaption></figure>
 
 <figure><img src="../.gitbook/assets/image (104).png" alt=""><figcaption><p>Click to get API key</p></figcaption></figure>
 
-After clicking, you'll be redirected to **Tavily's website** to register/login. Create and copy your API key back to Cherry Studio.
+After clicking to get the API key, it will automatically jump to **Tavily's official website** login and registration page. After registering and logging in, create an API key, then copy the key to Cherry Studio.
 
 {% hint style="danger" %}
-Registration guide available in Tavily tutorial within this documentation directory.
+If you don't know how to register, refer to the Tavily network access login and registration tutorial in the same directory as this document.
 {% endhint %}
 
-**Tavily registration reference:**
+**Tavily registration reference document:**
 
 {% content-ref url="tavily.md" %}
 [tavily.md](tavily.md)
 {% endcontent-ref %}
 
-The following interface confirms successful registration.
+The following interface indicates successful registration.
 
-<figure><img src="../.gitbook/assets/image (105).png" alt=""><figcaption><p>Copy API key</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (105).png" alt=""><figcaption><p>Copy key</p></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/image (108).png" alt=""><figcaption><p>Paste key - setup complete!</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (108).png" alt=""><figcaption><p>Paste key, job done!</p></figcaption></figure>
 
-Test again for results: shows normal internet search with default result count (5).
+Let's try it again to see the effect. The results show that network search is normal, and the number of search results is our default value: 5.
 
 <figure><img src="../.gitbook/assets/image (107).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="danger" %}
-Note: Tavily has monthly free tier limits - exceeding requires payment~~
+Note: Tavily has a free tier limit per month, exceeding it requires payment~~
 {% endhint %}
 
 <figure><img src="../.gitbook/assets/image (106).png" alt=""><figcaption></figcaption></figure>
 
-> PS: Please report any issues you encounter.
+> PS: If you find any errors, please feel free to contact us.

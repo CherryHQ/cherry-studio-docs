@@ -1,14 +1,17 @@
 ---
 icon: file-code
 ---
+# 自訂 CSS
+
 
 {% hint style="warning" %}
 此文件由 AI 從中文翻譯而來，尚未經過審閱。
 {% endhint %}
 
-# 自訂CSS
 
-透過自訂 CSS 可以修改軟體的外觀更加符合自己的喜好，例如這樣：
+
+
+透過自訂 CSS 可以修改軟體的外觀使其更符合個人喜好，例如：
 
 <figure><img src="../../.gitbook/assets/telegram-cloud-photo-size-5-6311935435315724879-y.jpg" alt=""><figcaption><p>自訂 CSS</p></figcaption></figure>
 
@@ -32,10 +35,10 @@ icon: file-code
 
 ```css
 :root {
-  font-family: "汉仪唐美人" !important; /* 字體 */
+  font-family: "汉仪唐美人" !important; /* 字型 */
 }
 
-/* 深度思考展開字體顏色 */
+/* 深度思考展開字型顏色 */
 .ant-collapse-content-box .markdown {
   color: red;
 }
@@ -48,13 +51,13 @@ icon: file-code
 
 /* 深色主題 */
 body[theme-mode="dark"] {
-  /* 顏色 */
+  /* 色彩 */
   --color-background: #2b2b2b; /* 深色背景色 */
   --color-background-soft: #303030; /* 淺色背景色 */
   --color-background-mute: #282c34; /* 中性背景色 */
   --navbar-background: var(-–color-black-soft); /* 導覽列背景色 */
   --chat-background: var(–-color-black-soft); /* 聊天背景色 */
-  --chat-background-user: #323332; /* 使用者聊天背景色 */
+  --chat-background-user: #323332; /* 用戶聊天背景色 */
   --chat-background-assistant: #2d2e2d; /* 助手聊天背景色 */
 }
 
@@ -87,14 +90,14 @@ body[theme-mode="dark"] {
 
 /* 淺色主題 */
 body[theme-mode="light"] {
-  /* 顏色 */
+  /* 色彩 */
   --color-white: #ffffff; /* 白色 */
   --color-background: #ebe8e2; /* 淺色背景色 */
   --color-background-soft: #cbc7be; /* 淺色背景色 */
   --color-background-mute: #e4e1d7; /* 中性背景色  */
   --navbar-background: var(-–color-white-soft); /* 導覽列背景色 */
   --chat-background: var(-–color-white-soft); /* 聊天背景色 */
-  --chat-background-user: #f8f7f2; /* 使用者聊天背景色 */
+  --chat-background-user: #f8f7f2; /* 用戶聊天背景色 */
   --chat-background-assistant: #f6f4ec; /* 助手聊天背景色 */
 }
 

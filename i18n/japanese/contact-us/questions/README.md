@@ -1,18 +1,22 @@
 ---
 icon: address-card
 ---
+# ビジネス提携
+
 
 {% hint style="warning" %}
 このドキュメントはAIによって中国語から翻訳されており、まだレビューされていません。
 {% endhint %}
 
-# ビジネス提携
 
-連絡先：何氏  
+
+
+連絡先：ホー様  
 📮：yinsenho@cherry-ai.com  
-📱：18954281942 （カスタマーサービス電話ではありません）
+📱：18954281942 (カスタマーサービス電話ではない)
 
 {% hint style="warning" %}
-使用上の問題については、support@cherry-ai.com までメールでお問い合わせください。
-または、issuesを提出してください：[https://github.com/CherryHQ/cherry-studio/issues](https://github.com/CherryHQ/cherry-studio/issues)
+利用に関するお問い合わせは support@cherry-ai.com までメールでお願いいたします
+
+または issues を提出してください：[https://github.com/CherryHQ/cherry-studio/issues](https://github.com/CherryHQ/cherry-studio/issues)）
 {% endhint %}

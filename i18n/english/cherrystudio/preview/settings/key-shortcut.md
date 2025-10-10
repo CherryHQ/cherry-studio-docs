@@ -1,11 +1,14 @@
 ---
 icon: keyboard
 ---
+# Shortcut Settings
+
 
 {% hint style="warning" %}
 This document was translated from Chinese by AI and has not yet been reviewed.
 {% endhint %}
 
-# Shortcut Keys Settings
 
-This interface allows you to enable/disable and configure shortcut keys for certain functions. Please refer to the on-screen instructions for specific setup.
+
+
+In this interface, you can enable (disable) and set shortcut keys for some functions, according to the instructions on the interface.

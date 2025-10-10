@@ -1,12 +1,15 @@
 ---
 icon: hexagon-exclamation
 ---
+# Preguntas Frecuentes
+
 
 {% hint style="warning" %}
 Este documento ha sido traducido del chino por IA y aún no ha sido revisado.
 {% endhint %}
 
-# Preguntas Frecuentes
+
+
 
 ### 1. mcp-server-time
 
@@ -19,5 +22,5 @@ En la columna "Parámetros", complete:
 ```
 mcp-server-time
 --local-timezone
-<tu zona horaria estándar, por ejemplo: Asia/Shanghai>
+<su zona horaria estándar, ej: Asia/Shanghai>
 ```

@@ -1,4 +1,4 @@
-# Expérience Gratuite | GLM-4.5-Air de Zhipu, Nouveau Choix Léger et Efficace !
+# Free Trial | ZHIPU GLM-4.5-Air, Nouveau Choix Léger et Efficace !
 
 
 {% hint style="warning" %}
@@ -8,96 +8,96 @@ Ce document a été traducido del chino por IA y aún no ha sido revisado.
 
 
 
-Pour permettre à chaque développeur et utilisateur d'expérimenter facilement les capacités des grands modèles de pointe, **Zhipu ouvre gratuitement le modèle GLM-4.5-Air aux utilisateurs de Cherry Studio**. Conçu spécialement pour les applications d'agents intelligents (Agent), ce modèle fondamental efficace offre un équilibre exceptionnel entre performance et coût, représentant le choix idéal pour construire des applications intelligentes.
+Pour permettre à chaque développeur et utilisateur d'expérimenter facilement les capacités des modèles de pointe, **ZHIPU ouvre gratuitement le modèle GLM-4.5-Air aux utilisateurs de Cherry Studio**. Conçu spécifiquement pour les applications d'agents intelligents, ce modèle fondamental efficace réalise un équilibre remarquable entre performance et coût, ce qui en fait le choix idéal pour construire des applications intelligentes.
 
 ***
 
 **🚀 Qu'est-ce que GLM-4.5-Air ?**
 
-GLM-4.5-Air est le dernier modèle linguistique haute performance de Zhipu, utilisant une architecture avancée **d'experts mixtes (Mixture-of-Experts, MoE)** qui maintient une capacité de raisonnement exceptionnelle tout en réduisant significativement la consommation de ressources informatiques.
+GLM-4.5-Air est le dernier modèle linguistique haute performance de ZHIPU, utilisant une architecture avancée de **Mélange d'Experts (Mixture-of-Experts, MoE)**. Il maintient des capacités de raisonnement exceptionnelles tout en réduisant significativement la consommation de ressources de calcul.
 
 * **Paramètres totaux : 106 milliards**
-* **Paramètres activés : 12 milliards** 
+* **Paramètres activés : 12 milliards**
 
-Grâce à sa conception épurée, GLM-4.5-Air offre une meilleure efficacité d'inférence, idéale pour des déploiements en environnement contraint tout en conservant une aptitude à traiter des tâches complexes.
+Grâce à sa conception épurée, GLM-4.5-Air offre une efficacité de raisonnement supérieure, adaptée aux déploiements dans des environnements à ressources limitées, tout en restant performant pour le traitement de tâches complexes.
 
 <figure><img src="../../../.gitbook/assets/benchmark-0.avif" alt=""><figcaption></figcaption></figure>
 
 ***
 
-**📚 Flux de formation unifié, base solide d'intelligence**
+**📚 Flux d'entraînement unifié, fondations intelligentes solides**
 
-GLM-4.5-Air partage le même flux de formation que la série phare, garantissant une base solide de capacités universelles :
+GLM-4.5-Air partage le même flux d'entraînement que la série phare, assurant des capacités générales robustes :
 
-1. **Préformation à grande échelle** : Entraînement sur un corpus général de **15 000 milliards de tokens** accumulant une large compréhension ;
-2. **Optimisation spécifique** : Renforcement sur tâches clés comme la génération de code, le raisonnement logique et les interactions agents ;
-3. **Contexte étendu** : Longueur de contexte augmentée à **128K tokens**, traitant documents longs, dialogues complexes ou projets de code volumineux ;
-4. **Amélioration par apprentissage par renforcement** : Optimisation des capacités décisionnelles en planification et appel d'outils via RL.
+1. **Pré-entraînement à grande échelle** : Formé sur un corpus général de **15 000 milliards de tokens**, construisant une large compréhension des connaissances ;
+2. **Optimisation spécifique** : Renforcement sur des tâches clés comme la génération de code, le raisonnement logique ou l'interaction avec des agents ;
+3. **Prise en charge de contextes longs** : Longueur de contexte étendue à **128K tokens**, capable de traiter des documents longs, des conversations complexes ou de grands projets de code ;
+4. **Amélioration par apprentissage par renforcement** : Optimisation des capacités décisionnelles en planification de raisonnement et utilisation d'outils via le RL.
 
-Ce système confère à GLM-4.5-Air une excellente capacité de généralisation et d'adaptation aux tâches.
+Ce système d'entraînement confère à GLM-4.5-Air une excellente capacité de généralisation et d'adaptation aux tâches.
 
 <figure><img src="../../../.gitbook/assets/benchmark-top5.avif" alt=""><figcaption></figcaption></figure>
 
 ***
 
-**⚙️ Capacités optimisées pour les agents intelligents**
+**⚙️ Capacités clés optimisées pour les agents intelligents**
 
-GLM-4.5-Air est spécialement adapté aux scénarios d'agents avec ces capacités pratiques :
+GLM-4.5-Air est spécialement adapté aux scénarios d'agents intelligents avec ces capacités pratiques :
 
-✅ **Appel d'outils** : Interfaçage normé pour automatiser des tâches via des outils externes  
-✅ **Navigation et extraction web** : Compréhension et interaction avec du contenu dynamique via extensions  
-✅ **Assistance génie logiciel** : Analyse des besoins, génération de code, détection/réparation de bugs  
-✅ **Support front-end** : Bonne compréhension/génération des technologies HTML/CSS/JavaScript  
+✅ **Prise en charge de l'appel d'outils** : Peut appeler des outils externes via des interfaces standardisées pour automatiser des tâches\
+✅ **Navigation web et extraction d'informations** : Peut collaborer avec des extensions de navigateur pour comprendre et interagir avec du contenu dynamique\
+✅ **Assistance en ingénierie logicielle** : Prend en charge l'analyse des besoins, la génération de code, l'identification et la correction de bugs\
+✅ **Prise en charge du développement frontend** : Bonne compréhension et capacité de génération pour les technologies frontend comme HTML, CSS, JavaScript
 
-Intégrable aux frameworks d'agents de code comme **Claude Code** ou **Roo Code**, il sert aussi de moteur central pour tout agent personnalisé.
+Ce modèle peut s'intégrer facilement à des frameworks d'agents de code comme **Claude Code, Roo Code**, ou servir de moteur central pour tout agent personnalisé.
 
 <figure><img src="../../../.gitbook/assets/benchmark-2.avif" alt=""><figcaption></figcaption></figure>
 
 ***
 
-**💡 Mode "réflexion intelligente", adaptation souple aux requêtes**
+**💡 Mode "Réflexion intelligente", réponses flexibles à toutes les demandes**
 
-GLM-4.5-Air propose un **mode de raisonnement hybride** contrôlé par le paramètre `thinking.type` :
+GLM-4.5-Air prend en charge le **mode de raisonnement hybride**, permettant aux utilisateurs de contrôler l'activation de la réflexion approfondie via le paramètre `thinking.type` :
 
-* `enabled` : Réflexion approfondie pour tâches complexes nécessitant une planification  
-* `disabled` : Désactivée pour requêtes simples ou réponses instantanées  
-* Valeur par défaut : **mode réflexion dynamique** (auto-évaluation de la nécessité d'analyse)  
+* `enabled` : Active la réflexion, adapté aux tâches complexes nécessitant un raisonnement étapé
+* `disabled` : Désactive la réflexion, pour les requêtes simples ou réponses instantanées
+* Paramètre par défaut : **mode réflexion dynamique**, le modèle décide automatiquement si une analyse approfondie est nécessaire
 
 | Type de tâche                   | Exemple                                                                 |
-| ------------------------------ | ------------------------------------------------------------------------ |
-| **Tâche simple** (réflexion déconseillée)     | • Question : "Quand Zhipu AI a été créée ?" <br>• Traduction : "Traduis 'I love you' en chinois" |
-| **Tâche moyenne** (réflexion conseillée)      | • Comparaison avion/TGV Pékin-Shanghai <br>• Explication du nombre élevé de lunes de Jupiter       |
-| **Tâche complexe** (réflexion fortement conseillée) | • Explication de la collaboration experte dans MoE <br>• Analyse d'opportunité d'achat d'ETF        |
+| -------------------------- | ------------------------------------------------------------------------ |
+| **Tâche simple** (désactiver la réflexion) | <p>- Demander "la date de fondation de ZHIPU AI"<br>- Traduire "I love you" en chinois</p> |
+| **Tâche moyenne** (activer la réflexion) | <p>- Comparer avion et TGV Pékin-Shanghai<br>- Expliquer pourquoi Jupiter a plus de satellites</p> |
+| **Tâche complexe** (activer fortement la réflexion) | <p>- Expliquer la collaboration des experts dans MoE<br>- Analyser l'achat d'ETF basé sur les données de marché</p> |
 
 ***
 
-**🌟 Efficace et rentable, déploiement simplifié**
+**🌟 Haute efficacité à faible coût, déploiement simplifié**
 
-GLM-4.5-Air atteint un équilibre optimal performance/coût pour déploiements professionnels :
+GLM-4.5-Air réalise un équilibre optimal entre performance et coût, idéal pour les déploiements opérationnels :
 
-* ⚡ **Vitesse > 100 tokens/sec** pour interactions réactives à faible latence  
-* 💰 **Coût API très bas** : Entrée **0.8 ¥ / million tokens**, sortie **2 ¥ / million tokens**  
-* 🖥️ Faible consommation de ressources informatiques, déploiement aisé local/cloud haute concurrency  
+*  **Vitesse de génération > 100 tokens/seconde**, réponse rapide avec faible latence
+* 💰 **Coût API très bas** : Entrée seulement **0.8 ¥/million tokens**, Sortie **2 ¥/million tokens**
+*  🖥️ Faible nombre de paramètres activés, besoins réduits en puissance de calcul, facile à exécuter localement ou cloud à haute concurrence
 
-Une véritable expérience IA "haute performance, faible barrière d'entrée".
+Offrant véritablement une expérience IA "haute performance, faible barrière".
 
 <figure><img src="../../../.gitbook/assets/benchmark2.avif" alt=""><figcaption></figcaption></figure>
 
 ***
 
-**🧠 Capacité clé : génération intelligente de code**
+**🧠 Capacités pratiques ciblées : Génération intelligente de code**
 
 GLM-4.5-Air excelle en génération de code avec :
 
-* Support des langages **Python, JavaScript, Java**  
-* Génération de code **lisible, maintenable** via instructions naturelles  
-* Réduction du code "boilerplate", alignement aux besoins réels  
+* Prise en charge des langages principaux (**Python, JavaScript, Java**, etc.)
+* Génération de code **structurellement clair et maintenable** à partir d'instructions en langage naturel
+* Production moins standardisée, adaptée aux besoins réels du développement
 
-Idéal pour prototypage rapide, complétion auto et correction de bugs.
+Parfait pour les tâches fréquentes : prototypage rapide, complétion automatique, correction de bugs.
 
 ***
 
-Expérimentez gratuitement **GLM-4.5-Air** dès maintenant et lancez votre projet d'agent intelligent !  
-Que vous construisiez un assistant auto, un compagnon de programmation ou une application IA nouvelle génération, GLM-4.5-Air sera votre moteur IA fiable et performant.
+Essayez gratuitement **GLM-4.5-Air** dès maintenant pour démarrer votre aventure de développement d'agents intelligents !\
+Que vous souhaitiez créer un assistant automatisé, un compagnon de programmation ou explorer la prochaine génération d'applications IA, GLM-4.5-Air sera votre moteur IA fiable et efficace.
 
-📘 Connectez-vous immédiatement pour libérer votre créativité !
+📘 Intégrez-le maintenant et libérez votre créativité !

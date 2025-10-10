@@ -19,7 +19,7 @@ Here you can set the default interface color mode (light mode, dark mode, or fol
 
 ### Topic Settings
 
-These settings are for the layout of the chat interface.
+This setting is for the layout of the conversation interface.
 
 #### Topic Position
 
@@ -33,9 +33,9 @@ These settings are for the layout of the chat interface.
 {% endtab %}
 {% endtabs %}
 
-#### Automatically Switch to Topic
+#### Automatically switch to topic
 
-When this setting is enabled, clicking on the assistant's name will automatically switch to the corresponding topic page.
+When this setting is enabled, clicking the assistant's name will automatically switch to the corresponding topic page.
 
 {% tabs %}
 {% tab title="When off (Default)" %}
@@ -47,9 +47,9 @@ When this setting is enabled, clicking on the assistant's name will automaticall
 {% endtab %}
 {% endtabs %}
 
-#### Display Topic Time
+#### Show topic time
 
-When enabled, the **creation** time of the topic will be displayed below it.
+When enabled, the **creation** time of the topic will be displayed below the topic.
 
 {% tabs %}
 {% tab title="When off" %}
@@ -63,4 +63,4 @@ When enabled, the **creation** time of the topic will be displayed below it.
 
 ### Custom CSS
 
-This setting allows flexible customization of the interface. For specific methods, please refer to [Custom CSS](../../../personalization-settings/css.md) in the advanced tutorial.
+This setting allows flexible customization and modification of the interface. For specific methods, refer to [Custom CSS](../../../personalization-settings/css.md) in the advanced tutorial.

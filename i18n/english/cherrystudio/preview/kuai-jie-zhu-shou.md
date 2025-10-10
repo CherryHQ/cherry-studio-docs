@@ -1,45 +1,48 @@
 ---
 icon: browsers
 ---
+# Quick Assistant
+
 
 {% hint style="warning" %}
 This document was translated from Chinese by AI and has not yet been reviewed.
 {% endhint %}
 
-# Quick Assistant
 
-Quick Assistant is a convenient tool provided by Cherry Studio that allows you to quickly access AI functions in any application, enabling instant operations like asking questions, translation, summarization, and explanations.
+
+
+The Quick Assistant is a convenient tool provided by Cherry Studio that allows you to quickly access AI features in any application, enabling instant questioning, translation, summarization, and explanation.
 
 ### Enable Quick Assistant
 
-1. **Open Settings:** Navigate to `Settings` -> `Shortcuts` -> `Quick Assistant`.
-2. **Enable Switch:** Find and toggle on the `Quick Assistant` button.
+1.  **Open Settings:** Navigate to `Settings` -> `Shortcuts` -> `Quick Assistant`.
+2.  **Toggle On:** Find and turn on the corresponding button for `Quick Assistant`.
 
-<figure><img src="../../.gitbook/assets/快捷助手-0.png" alt=""><figcaption><p>Schematic diagram for enabling Quick Assistant</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/快捷助手-0.png" alt=""><figcaption><p>Diagram for enabling Quick Assistant</p></figcaption></figure>
 
-3. **Set Shortcut Key (Optional):**
-   * Default shortcut for Windows: <kbd>Ctrl</kbd> + <kbd>E</kbd>
-   * Default shortcut for macOS: <kbd>⌘</kbd> + <kbd>E</kbd>
-   * Customize your shortcut here to avoid conflicts or match your usage habits.
+3.  **Set Hotkey (Optional):**
+    *   The default hotkey for Windows is <kbd>Ctrl</kbd> + <kbd>E</kbd>.
+    *   The default hotkey for macOS is <kbd>⌘</kbd> + <kbd>E</kbd>.
+    *   You can customize the hotkey here to avoid conflicts or make it more suitable for your usage habits.
 
 ### Using Quick Assistant
 
-1. **Activate:** Press your configured shortcut key (or default shortcut) in any application to open Quick Assistant.
-2. **Interact:** Within the Quick Assistant window, you can directly perform:
-   * **Quick Questions:** Ask any question to the AI.
-   * **Text Translation:** Input text to be translated.
-   * **Content Summarization:** Input long text for summarization.
-   * **Explanation:** Input concepts or terms requiring explanation.
+1.  **Invoke:** In any application, press your set hotkey (or the default hotkey) to open the Quick Assistant.
+2.  **Interaction:** In the Quick Assistant window, you can directly perform the following operations:
+    *   **Quick Question:** Ask AI any question.
+    *   **Text Translation:** Enter the text to be translated.
+    *   **Content Summarization:** Enter long text for summarization.
+    *   **Explanation:** Enter concepts or terms that need explanation.
 
-       <figure><img src="../../.gitbook/assets/快捷助手-1.png" alt=""><figcaption><p>Schematic diagram of Quick Assistant interface</p></figcaption></figure>
-3. **Close:** Press <kbd>ESC</kbd> or click anywhere outside the Quick Assistant window.
+    <figure><img src="../../.gitbook/assets/快捷助手-1.png" alt=""><figcaption><p>Diagram of the Quick Assistant interface</p></figcaption></figure>
+3.  **Close:** Press the <kbd>ESC</kbd> key or click anywhere outside the Quick Assistant window to close it.
 
 {% hint style="info" %}
-Quick Assistant uses the [Global Default Conversation Model](settings/default-models.md#mo-ren-zhu-shou-mo-xing).
+The model used by Quick Assistant is the [Global Default Conversation Model](settings/default-models.md#mo-ren-zhu-shou-mo-xing).
 {% endhint %}
 
-### Tips & Tricks
+### Tips and Tricks
 
-* **Shortcut Conflicts:** Modify shortcuts if defaults conflict with other applications.
-* **Explore More Functions:** Beyond documented features, Quick Assistant may support operations like code generation and style transfer. Continuously explore during usage.
-* **Feedback & Improvements:** Report issues or suggestions to the Cherry Studio team via [feedback](../../../question-contact/suggestions.md).
+*   **Hotkey Conflicts:** If the default hotkey conflicts with other applications, please modify it.
+*   **Explore More Features:** In addition to the features mentioned in the document, Quick Assistant may also support other operations, such as code generation, style conversion, etc. It is recommended that you keep exploring during use.
+*   **Feedback and Improvements:** If you encounter any problems or have any suggestions for improvement during use, please promptly provide [feedback](../../../question-contact/suggestions.md) to the Cherry Studio team.

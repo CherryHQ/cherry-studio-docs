@@ -1,15 +1,18 @@
 ---
 icon: file-lines
 ---
+# Contribute to Documentation
+
 
 {% hint style="warning" %}
 This document was translated from Chinese by AI and has not yet been reviewed.
 {% endhint %}
 
-# Contributing Documentation
 
-Email support@cherry-ai.com to obtain editing privileges
 
-Subject: Request for Cherry Studio Docs Editing Privileges
+
+Contact support@cherry-ai.com to get editing access
+
+Subject: Request for Cherry Studio Docs Editing Access
 
 Body: State your reason for applying

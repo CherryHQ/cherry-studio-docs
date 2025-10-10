@@ -1,19 +1,22 @@
 ---
 icon: image
 ---
+# Painting
+
 
 {% hint style="warning" %}
 This document was translated from Chinese by AI and has not yet been reviewed.
 {% endhint %}
 
-# Drawing
 
-The drawing feature currently supports painting models from DMXAPI, TokenFlux, AiHubMix, and [SiliconFlow](../../pre-basic/providers/siliconcloud.md). You can register an account at [SiliconFlow](https://www.siliconflow.cn/) and [add it as a provider](settings/providers.md) to use this feature.
 
-For questions about parameters, hover your mouse over the `?` icon in corresponding areas to view descriptions.
+
+The painting function currently supports painting models from DMXAPI, TokenFlux, AiHubMix, and [Siliconflow](../../pre-basic/providers/siliconcloud.md). You can go to [Siliconflow](https://www.siliconflow.cn/) to register an account and [add it to providers](settings/providers.md) for use.
+
+For questions about parameters, you can hover your mouse over the `?` in the corresponding area to view the introduction.
 
 {% hint style="info" %}
-More providers will be added in the future. Stay tuned.
+More providers will be added in the future, so please stay tuned.
 {% endhint %}
 
 {% include "../../.gitbook/includes/Gemini图片生成注意事项.md" %}

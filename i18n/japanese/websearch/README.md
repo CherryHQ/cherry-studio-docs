@@ -2,58 +2,59 @@
 description: 如何在 Cherry Studio 使用联网模式
 icon: globe
 ---
+# オンラインンモード
 
-# オンラインモード
 
 {% hint style="warning" %}
 このドキュメントはAIによって中国語から翻訳されており、まだレビューされていません。
 {% endhint %}
 
-## オンラインモード
+
+
 
 {% hint style="info" %}
-ネットワーク接続が必要なシナリオの例：
+ネットワーク接続が必要なシシナリオ例：
 
-* 最新情報：今日/今週/直近の金先物価格など。
-* リアルタイムデータ：天気、為替レートなどの動的な数値。
-* 新興知識：新しいもの、新概念、新技術など...
+* タイムリーな情報：例）今日/今週/直近の金先物価格など
+* リアルタイムデータ：例）天気、為替レートなどの動的値
+* 新興知識：例）新事物、新概念、新技術など...
 {% endhint %}
 
-#### 1. オンラインへの接続方法
+### 一、ネットワーク接続の有効化方法
 
-Cherry Studioの質問ウィンドウで、地球のアイコンをクリックするとオンライン機能を開始できます。
+Cherry Studioの質問ウィンドウで【地球アイコン】をクリックするとネットワーク接続が有効になります。
 
-<figure><img src="../.gitbook/assets/image (94).png" alt=""><figcaption><p>地球アイコンをクリック - オンライン接続を開始</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (94).png" alt=""><figcaption><p>地球アイコンをクリック - ネットワーク接続を有効化</p></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/image (96).png" alt=""><figcaption><p>表示 - オンライン機能が有効化されました</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (96).png" alt=""><figcaption><p>表示 - ネットワーク接続機能が有効化されました</p></figcaption></figure>
 
-#### 2. 特别注意：オンライン機能には二つのモードがあります
+### 二、特記事項：ネットワーク接続の2つのモード
 
-**モード1：モデルプロバイダーの大規模モデルにデフォルトでオンライン機能が組み込まれている**
+#### モード1：モデルプロバイダーが提供するネットワーク対応モデル
 
-この場合、オンライン機能を開始するだけで、簡単に利用できます。
+この場合、ネットワーク接続を有効にするだけで直接利用可能です。
 
 {% hint style="warning" %}
-質問インターフェースの上部、モデル名の後に小さな地球マークが表示されているかどうかで、そのモデルがオンライン機能をサポートしているかをすばやく判断できます。
+質問インターフェース上部のモデル名横に地球マークが表示されているかどうかで、そのモデルのネットワーク対応状況を即座に判断できます。
 {% endhint %}
 
 <figure><img src="../.gitbook/assets/image (100).png" alt=""><figcaption></figcaption></figure>
 
-モデル管理ページでも、この方法で、どのモデルがオンライン機能をサポートしているか一目でわかります。
+モデル管理ページでも、この方法でネットワーク対応モデルを迅速に識別できます。
 
 <figure><img src="../.gitbook/assets/image (101).png" alt=""><figcaption></figcaption></figure>
 
-> <mark style="color:green;">**現在、Cherry Studioでオンライン機能をサポートしているモデルプロバイダーは以下の通りです**</mark>
+> <mark style="color:green;">**Cherry Studio が現在サポートするネットワーク対応モデルプロバイダー:**</mark>
 >
 > * <mark style="color:green;">Google Gemini</mark>
-> * <mark style="color:green;">OpenRouter（すべてのモデルでオンライン機能をサポート）</mark>
+> * <mark style="color:green;">OpenRouter（全モデルネットワーク対応）</mark>
 > * <mark style="color:green;">Tencent Hunyuan</mark>
 > * <mark style="color:green;">Zhipu AI</mark>
-> * <mark style="color:green;">Alibaba Cloud Bailianなど</mark>
+> * <mark style="color:green;">Alibaba Cloud Bailian など</mark>
 
 {% hint style="danger" %}
-特別注意：\
-モデルに地球マークがない場合でもオンライン機能が利用できるケースがあります。以下の攻略チュートリアルで説明されています。
+特記事項：
+モデルに地球アイコンが表示されていなくてもネットワーク接続が可能な特殊ケースがあります（下記チュートリアル参照）。
 {% endhint %}
 
 {% content-ref url="volcengine.md" %}
@@ -62,42 +63,42 @@ Cherry Studioの質問ウィンドウで、地球のアイコンをクリック�
 
 ***
 
-**モード2：モデルにオンライン機能がなく、Tavilyサービスで実現する**
+#### モード2：Tavilyサービスによるネットワーク機能拡張
 
-オンライン機能を持たない大規模モデルを使用している場合（名前の後に地球マークがない）、リアルタイム情報を取得したいときにTavilyネットワーク検索サービスが必要です。
+地球アイコンが表示されていないモデルでリアルタイム情報が必要な場合、Tavilyウェブ検索サービスを利用します。
 
-**初めてTavilyサービスを使用する際**、ポップアップが表示され設定を案内します。指示に従って操作してください - 非常に簡単です！
+**初回Tavily利用時**は設定ポップアップが表示されます。指示に従って操作してください。
 
-<figure><img src="../.gitbook/assets/image (102).png" alt=""><figcaption><p>ポップアップで「設定へ」をクリック</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (102).png" alt=""><figcaption><p>ポップアップ表示 → [設定]をクリック</p></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/image (104).png" alt=""><figcaption><p>APIキーを取得をクリック</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (104).png" alt=""><figcaption><p>[キーを取得]をクリック</p></figcaption></figure>
 
-APIキーの取得をクリックすると、自動的に**Tavily公式サイト**のログインページにリダイレクトされます。登録し、ログイン後、APIキーを作成し、そのキーをCherry Studioにコピーしてください。
+キー取得クリック後、**Tavily公式サイト**の登録ページへ自動遷移します。登録後、APIキーを作成しCherry Studioにコピーします。
 
 {% hint style="danger" %}
-登録方法がわからない場合は、本ドキュメントの同じディレクトリにあるtavily登録チュートリアルを参照してください。
+登録方法が不明な場合、同ディレクトリのtavily登録チュートリアルを参照してください。
 {% endhint %}
 
-**tavily登録参考ドキュメント：**
+**Tavily登録参考資料：**
 
 {% content-ref url="tavily.md" %}
 [tavily.md](tavily.md)
 {% endcontent-ref %}
 
-以下のインターフェイスが表示され、登録成功を示しています。
+下記画面表示で登録成功です。
 
 <figure><img src="../.gitbook/assets/image (105).png" alt=""><figcaption><p>キーをコピー</p></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/image (108).png" alt=""><figcaption><p>キーを貼り付け、完了</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (108).png" alt=""><figcaption><p>キーを貼り付け → 設定完了</p></figcaption></figure>
 
-再度試して効果を確認しましょう。結果は、正常にオンライン検索が行われ、デフォルトで5件の検索結果が取得されています。
+再度実行すると、デフォルト設定値（5件）で正常に検索されます。
 
 <figure><img src="../.gitbook/assets/image (107).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="danger" %}
-注意：Tavilyには毎月の無料利用制限があり、超過すると課金が必要です〜
+注意：Tavilyは月間無料利用制限があり、超過時は課金が発生します
 {% endhint %}
 
 <figure><img src="../.gitbook/assets/image (106).png" alt=""><figcaption></figcaption></figure>
 
-> PS：問題を見つけた場合は、お気軽にお問い合わせください。
+> PS：不具合を発見された場合はお知らせください。

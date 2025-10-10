@@ -11,23 +11,23 @@ Ce document a été traducido del chino por IA y aún no ha sido revisado.
 
 
 
-Cette interface permet d'effectuer des sauvegardes et restaurations locales ou cloud, de consulter le répertoire des données locales et de vider le cache, d'exporter les paramètres et de configurer des connexions tierces.
+Cette interface permet d'effectuer des opérations de sauvegarde et de récupération locales et cloud des données, de consulter le répertoire de données local, d'effacer le cache, de configurer l'exportation, et de gérer les connexions tierces.
 
 ### Sauvegarde des données
 
-Actuellement, la sauvegarde prend en charge trois méthodes : sauvegarde locale, sauvegarde WebDAV et sauvegarde dans un stockage compatible S3 (stockage d'objets). Pour des explications détaillées et des tutoriels, veuillez consulter les documents suivants :
+La sauvegarde des données prend actuellement en charge trois méthodes : sauvegarde locale, sauvegarde WebDAV et sauvegarde sur stockage compatible S3 (stockage objet). Pour des explications détaillées et des tutoriels, consultez les documents suivants :
 
 - [Tutoriel de sauvegarde WebDAV](../../../data-settings/WebDAV.md)
-- [Sauvegarde dans un stockage compatible S3](../../../data-settings/s3-compatible.md)
+- [Sauvegarde sur stockage compatible S3](../../../data-settings/s3-compatible.md)
 
 ### Paramètres d'exportation
 
-Les paramètres d'exportation permettent de configurer les options d'exportation affichées dans le menu. Vous pouvez également définir le chemin par défaut pour l'export Markdown, le style d'affichage, etc.
+Les paramètres d'exportation permettent de configurer les options d'exportation affichées dans le menu, ainsi que de définir le chemin par défaut pour l'exportation Markdown, les styles d'affichage, etc.
 
 ### Connexions tierces
 
-Cette section configure la connexion entre Cherry Studio et des applications tierces pour exporter rapidement le contenu des conversations vers vos outils de gestion des connaissances. Actuellement pris en charge : Notion, Obsidian, SiYuan Note, YuQue et Joplin. Tutoriels de configuration :
+Les connexions tierces permettent de configurer l'intégration de Cherry Studio avec des applications externes, facilitant l'exportation rapide des conversations vers vos applications de gestion des connaissances préférées. Les applications actuellement prises en charge sont : Notion, Obsidian, SiYuan Notes, YuQue et Joplin. Pour des tutoriels de configuration, consultez les documents suivants :
 
-- [Configuration pour Notion](../../../data-settings/notion.md)
-- [Configuration pour Obsidian](../../../data-settings/obsidian.md)
-- [Configuration pour SiYuan Note](../../../data-settings/siyuan.md)
+- [Tutoriel de configuration Notion](../../../data-settings/notion.md)
+- [Tutoriel de configuration Obsidian](../../../data-settings/obsidian.md)
+- [Tutoriel de configuration SiYuan Notes](../../../data-settings/siyuan.md)

@@ -1,26 +1,7 @@
 ---
 icon: message
 ---
-<think>
-We are translating the given Chinese document to Japanese. We must strictly follow the translation rules:
-1. Translate only textual content displayed to users, preserving all Markdown formatting and structural elements.
-2. Preserve code blocks, links, image paths, and other technical syntax unchanged.
-3. Translate comments within code blocks if any, but in this document, there are no code blocks with comments.
-4. Preserve all links, image paths, file names, URLs, and version numbers exactly as in the original.
-5. Maintain GitBook-style hint blocks by translating the content inside `{% hint %}` tags but keeping the tags themselves.
-6. The document does not have a frontmatter, so no issue.
-7. Do not add any extra explanations; return only the translated content.
-8. This is not a table of contents file, so we translate all headings and text.
-9. Preserve GitHub-specific terminology (e.g., pull request, fork) but in this text, there aren't any such terms that need to remain in English. However, technical terms like "Token", "prompt", "model", etc., should remain as they are since they are universal in the AI context.
-10. All URLs, file paths, and version numbers must be preserved unchanged.
-
-Let's break down the document and translate section by section.
-
-Note: The original document uses some Markdown extensions like tabs and hint blocks, which we must keep in structure.
-
-We start:
-
-# 对话界面 → # チャットインターフェース
+# チャットインターーフェース
 
 
 {% hint style="warning" %}
@@ -30,154 +11,274 @@ We start:
 
 
 
-## 助手和话题 → ## アシスタントとトピック
+## アシスタントとトピック
 
-### 助手 → ### アシスタント
+### アシスタント
 
-Translate the paragraph about "助手" and "系统默认助手", keeping the code backticks and links.
+`アシスタント`は、選択したモデルに対してプロンプトプリセットやパラメータ設定などのパーソナライズされた設定を行い、モデルの動作を期待する作業に適合させる機能です。
 
-`助手` 是对所选模型做一些个性化的设置... → 
-`アシスタント`は、選択したモデルに対してパーソナライズ設定を行うもので、プロンプトのプリセットやパラメータのプリセットなどを通じて、選択したモデルが期待する作業により適合するようにします。
+`システムデフォルトアシスタント`は汎用的なパラメータ（プロンプトなし）がプリセットされており、直接使用するか[エージェントページ](agents.md)で必要なプリセットを探して使用できます。
 
-`系统默认助手` 预设了一个比较通用的参数... → 
-`システムデフォルトのアシスタント`は、比較的汎用的なパラメータ（プロンプトなし）がプリセットされています。直接使用するか、[エージェントページ](agents.md)で必要なプリセットを探して使用できます。
+### トピック
 
-### 话题 → ### トピック
-
-`助手` 是 `话题` 的父集... → 
-`アシスタント`は`トピック`の親集合です。単一のアシスタントで複数のトピック（つまり会話）を作成でき、すべての`トピック`は`アシスタント`のパラメータ設定やプロンプトプリセットなどのモデル設定を共有します。
-
-Then we have two figures. Preserve the image paths.
+`アシスタント`は`トピック`の親集合です。1つのアシスタントで複数のトピック（会話）を作成でき、全ての`トピック`は`アシスタント`のパラメータ設定やプロンプトなどのモデル設定を共有します。
 
 <figure><img src="../../.gitbook/assets/image (4) (1) (1).png" alt=""><figcaption></figcaption></figure>
+
 <figure><img src="../../.gitbook/assets/image (5) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-## 对话框内按钮 → ## ダイアログ内のボタン
+## ダイアログ内ボタン
 
-<figure> with an image of the dialog box.
+<figure><img src="../../.gitbook/assets/对话界面/对话框.png" alt=""><figcaption></figcaption></figure>
 
-Then we have a series of buttons with images and descriptions. We must translate the text but keep the image paths and the icon representations.
+![](../../.gitbook/assets/对话界面/新话题.png) `新トピック`：現在のアシスタント内で新しいトピックを作成します。
 
-Example: 
-![](../../.gitbook/assets/对话界面/新话题.png) `新话题` 在当前助手内创建一个新话题。 → 
-![](../../.gitbook/assets/对话界面/新话题.png) `新規トピック`：現在のアシスタント内に新しいトピックを作成します。
+![](../../.gitbook/assets/对话界面/上传图片或文档.png) `画像/ドキュメントアップロード`：画像アップロードはモデルのサポートが必要です。ドキュメントは自動的に解析され、モデルにコンコンテキストとして提供されます。
 
-Similarly, for each button:
+![](../../.gitbook/assets/对话界面/网络搜索.png) `ウェブ検索`：設定で検索情報を設定する必要があります。検索結果は大規模モデルにコンテキストとして返されます。詳細は[ネットワークモード](../../websearch/)を参照。
 
-- `上传图片或文档` → `画像またはドキュメントをアップロード`
-- `网络搜索` → `ウェブ検索`
-- `知识库` → `ナレッジベース`
-- `MCP 服务器` → `MCP サーバー` (note: MCP is an acronym, so it remains)
-- `生成图片` → `画像を生成`
-- `选择模型` → `モデルを選択`
-- `快捷短语` → `クイックフレーズ`
-- `清空消息` → `メッセージをクリア`
-- `展开` → `展開`
-- `清除上下文` → `コンテキストをクリア`
-- `预估 Token 数` → `トークン数の見積もり`
-- `翻译` → `翻訳`
+![](../../.gitbook/assets/对话界面/知识库.png) `ナレッジベース`：ナレッジベースを有効化。詳細は[ナレッジベースチュートリアル](../../knowledge-base/knowledge-base.md)を参照。
 
-Then, the hint block for the image generation button:
+![](<../../.gitbook/assets/对话界面/MCP 服务器.png>) `MCPサーサーバー`：MCPサーバー機能を有効化。詳細は[MCP使用チュートリアル](../../advanced-basic/mcp/)を参照。
+
+![](../../.gitbook/assets/对话界面/生成图片.png) `画像生成`：デフォルトでは表示されません。画像生成をサポートするモデル（Geminiなど）で手動で有効化する必要があります。
+
 {% hint style="info" %}
-由于技术原因... → 
-{% hint style="info" %}
-技術的な理由により、画像を生成するにはボタンを手動で点灯させる必要があります。この機能が最適化された後、このボタンは削除されます。
+技術的な理由により、画像を生成するにはボタンを手動で有効化する必要があります。この機能が最適化された後、ボタンは削除されます。
 {% endhint %}
 
-For the token estimation:
+![](../../.gitbook/assets/对话界面/选择模型.png) `モデル選択`：以降の会話で指定したモデルに切り替え、コンコンテキストを保持します。
+
+![](../../.gitbook/assets/对话界面/快捷短语.png) `クイックフレーズ`：設定であらかじめよく使うフレーズを設定し、ここで呼び出して直接入力します。変数がサポートされます。
+
+![](../../.gitbook/assets/对话界面/清空消息.png) `メッセージクリア`：このトピックの全ての内容を削除します。
+
+![](../../.gitbook/assets/对话界面/展开.png) `展開`：長文入力のためにダイアログを拡大します。
+
+![](../../.gitbook/assets/对话界面/清除上下文.png) `コンコンテキストクリア`：内容を削除せずに、モデルが取得できるコンテキストを切断します。つまり、モデルは以前の会話内容を「忘れ」ます。
+
+![](<../../.gitbook/assets/对话界面/预估 Token 数.png>) `トークン数推定`：推定トークン数を表示。4つのデータはそれぞれ`現在のコンテキスト数`、`最大コンコンテキスト数`（∞は無制限）、`現在の入力ボックス内のメッセージ単語数`、`推定トークン数`です。
+
 {% hint style="info" %}
-此功能仅用于预估... → 
-{% hint style="info" %}
-この機能はトークン数の見積もりのみを目的としており、実際のトークン数はモデルごとに異なります。モデルプロバイダーのデータを参照してください。
+この機能はトークン数の推定のみに使用されます。実際のトークン数はモデルごとに異なるため、モデルプロバイダーのデータを参照してください。
 {% endhint %}
 
-## 对话设置 → ## チャット設定
+![](../../.gitbook/assets/对话界面/翻译.png) `翻訳`：現在の入力ボックス内の内容を英語に翻訳します。
 
-<figure> with image.
+## チャット設定
 
-### 模型设置 → ### モデル設定
+<figure><img src="../../.gitbook/assets/image (7) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-Text: 模型设置与助手设置当中的... → 
-モデル設定はアシスタント設定の`モデル設定`パラメータと同期しています。詳細は[アシスタント設定](chat.md#bian-ji-zhu-shou)を参照してください。
+### モデル設定
 
-Then a hint block:
+モデル設定はアシスタント設定の`モデル設定`パラメータと同期します。詳細は[アシスタント設定](chat.md#bian-ji-zhu-shou)を参照。
+
 {% hint style="info" %}
-在对话设置当中... → 
-{% hint style="info" %}
-チャット設定では、このモデル設定のみが現在のアシスタントに適用され、他の設定はグローバルに適用されます。例：メッセージスタイルをバブルに設定すると、どのアシスタントのどのトピックでもバブルスタイルになります。
+チャット設定では、このモデル設定のみが現在のアシスタントに適用され、その他の設定はグローバルに適用されます。例：メッセージスタイルをバブルに設定すると、すべてのアシスタントの全てのトピックでバブルスタイルになります。
 {% endhint %}
 
-### 消息设置 → ### メッセージ設定
+### メッセージ設定
 
-#### <mark style="color:blue;">**`消息分割线`**</mark>: → #### <mark style="color:blue;">**`メッセージ分割線`**</mark>:
+#### <mark style="color:blue;">**`メッセージ区切り線`**</mark>:
 
-Translate description.
+区切り線を使用してメッセージ本文と操作バーを分離します。
 
-Then tabs:
 {% tabs %}
-{% tab title="打开时" %} → {% tab title="オン時" %}
-{% tab title="关闭时" %} → {% tab title="オフ時" %}
-With figures for each.
+{% tab title="オン時" %}
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+{% endtab %}
 
-Similarly for the other settings:
+{% tab title="オフ時" %}
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+{% endtab %}
+{% endtabs %}
 
-- `使用衬线字体` → `セリフ体を使用`
-- `代码显示行号` → `コードに行番号を表示`
-- `代码块可折叠` → `コードブロックを折りたたみ可能`
-- `代码块可换行` → `コードブロックを折り返し可能`
-- `思考内容自动折叠` → `思考内容を自動折りたたみ`
-- `消息样式` → `メッセージスタイル`
-- `代码风格` → `コードスタイル`
-- `数学公式引擎` → `数式レンダリングエンジン`
-- `消息字体大小` → `メッセージフォントサイズ`
+#### <mark style="color:blue;">**`セリフ体フォントの使用`**</mark>：
 
-For the mathematical formula engines:
-* KaTeX → KaTeX (remain)
-* MathJax → MathJax (remain)
-and translate the descriptions.
+フォントスタイルの切り替え。[カスタムCSS](../../personalization-settings/)でフォントを変更することも可能です。
 
-### 输入设置 → ### 入力設定
+#### <mark style="color:blue;">**`コードに行番号を表示`**</mark>：
 
-Similarly:
-- `显示预估 Token 数` → `トークン数の見積もりを表示`
-- `长文本粘贴为文件` → `長いテキストをファイルとして貼り付け`
-- `Markdown 渲染输入消息` → `Markdownで入力メッセージをレンダリング`
-- `快速敲击3次空格翻译` → `スペースを3回素早く押して翻訳`
-- `目标语言` → `ターゲット言語`
+モデルがコードスニペットを出力する際に行番号を表示します。
 
-With tabs and figures.
+{% tabs %}
+{% tab title="オフ時" %}
+<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+{% endtab %}
 
-Hint block for the triple space translation:
-{% hint style="warning" %}
-注意：该操作会覆盖原文。 → 
+{% tab title="オン時" %}
+<figure><img src="../../.gitbook/assets/image (3) (1) (1).png" alt=""><figcaption></figcaption></figure>
+{% endtab %}
+{% endtabs %}
+
+#### <mark style="color:blue;">**`コードブロックの折りたたみ`**</mark>：
+
+有効にすると、コードスニペットが長い場合に自動的にコードブロックを折りたたみます。
+
+#### <mark style="color:blue;">**`コードブロックの折り返し`**</mark>：
+
+有効にすると、1行のコードが長い場合（ウィンドウを超える）に自動的に折り返します。
+
+#### <mark style="color:blue;">**`思考内容の自動折りたたみ`**</mark>：
+
+有効にすると、思考をサポートするモデルは思考完了後に思考プロセスを自動的に折りたたみます。
+
+#### <mark style="color:blue;">**`メッセージスタイル`**</mark>：
+
+チャットインターフェースをバブルスタイルまたはリストスタイルに切り替えられます。
+
+#### <mark style="color:blue;">**`コードスタイル`**</mark>：
+
+コードスニペットの表示スタイルを切り替えられます。
+
+#### <mark style="color:blue;">**`数式エンジン`**</mark>：
+
+* KaTeX: パフォーマンス最適化のため、レンダリングが高速
+* MathJax: レンダリング速度は遅いが機能が豊富で、より多くの数学記号やコマンドをサポート
+
+#### <mark style="color:blue;">**`メッセージフォントサイズ`**</mark>：
+
+チャットインターーフェースのフォントサイズを調整します。
+
+### 入力設定
+
+#### <mark style="color:blue;">**`推定トークン数の表示`**</mark>：
+
+入力ボックスに入力テキストの推定消費トークン数を表示します（実際のコンテキスト消費トークンではなく、参考値）。
+
+#### <mark style="color:blue;">**`長文をファイルとして貼り付け`**</mark>：
+
+他の場所から長文をコピーして入力ボックスに貼り付けると、ファイルスタイルで自動表示され、後続の入力の干渉を減らします。
+
+#### <mark style="color:blue;">**`入力メッセージのMarkdownレンダリング`**</mark>：
+
+オフ時はモデル応答メッセージのみレンダリングし、送信メッセージはレンダリングしません。
+
+{% tabs %}
+{% tab title="オフ時" %}
+<figure><img src="../../.gitbook/assets/image (4) (1).png" alt="" width="563"><figcaption></figcaption></figure>
+{% endtab %}
+
+{% tab title="オン時" %}
+<figure><img src="../../.gitbook/assets/image (7) (1).png" alt="" width="563"><figcaption></figcaption></figure>
+{% endtab %}
+{% endtabs %}
+
+#### <mark style="color:blue;">**`スペース3回連打で翻訳`**</mark>：
+
+チャットインターフェースの入力ボックスでメッセージ入力後、スペースを3回連打すると入力内容を英語に翻訳します。
+
 {% hint style="warning" %}
 注意：この操作は原文を上書きします。
 {% endhint %}
 
-## 助手设置 → ## アシスタント設定
+#### <mark style="color:blue;">**`ターゲット言語`**</mark>：
 
-Instructions about where to set: 在助手界面选择... → 
-アシスタントインターフェースで設定したい<mark style="background-color:yellow;">アシスタント名</mark>を選択→<mark style="background-color:yellow;">右クリックメニュー</mark>で対応する設定を選択
+入力ボックスの翻訳ボタンおよびスペース3回連打翻訳のターゲット言語を設定します。
 
-### 编辑助手 → ### アシスタントの編集
+## アシスタント設定
 
-Hint block:
+アシスタントインターーフェースで設定したい<mark style="background-color:yellow;">アシスタント名</mark>を選択→<mark style="background-color:yellow;">右クリックメニュー</mark>で対応する設定を選択
+
+### アシスタント編集
+
 {% hint style="info" %}
-助手设置作用于该助手下的所有话题。 → 
-{% hint style="info" %}
-アシスタント設定は、そのアシスタント下のすべてのトピックに適用されます。
+アシスタント設定はそのアシスタントのすべてのトピックに適用されます。
 {% endhint %}
 
-Then the figure.
+<figure><img src="../../.gitbook/assets/image (6) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-#### 提示词设置 → #### プロンプト設定
+#### プロンプト設定
 
-- `名称` → `名前`
-- `提示词` → `プロンプト`
+#### <mark style="color:blue;">**`名前`**</mark>：
 
-#### 模型设置 → #### モデル設定
+識別しやすいカスタムアシスタント名。
 
-- `默认模型` → `デフォルトモデル`
-- `自动重置模型` → `モデルを自動リセット`
-- `温度 (Temperature)` → `温度 (Temperature)`
-- `Top P (核采样)` → `Top P (核
+#### <mark style="color:blue;">**`プロンプト`**</mark>：
+
+プロンプト。エージェントページのプロンプト記述方法を参考に編集できます。
+
+#### モデル設定
+
+#### <mark style="color:blue;">**`デフォルトモデル`**</mark>：
+
+アシスタントに固定のデフォルトモデルを設定でき、エージェントページから追加時またはアシスタントコピー時の初期モデルになります。設定しない場合、初期モデルはグローバル初期モデル（[デフォルトアシスタントモデル](settings/default-models.md#mo-ren-zhu-shou-mo-xing)）になります。
+
+{% hint style="info" %}
+アシスタントのデフォルトモデルには[グローバルデフォルトチャットモデル](settings/default-models.md#mo-ren-zhu-shou-mo-xing)とアシスタントデフォルトモデルの2種類があります。アシスタントデフォルトモデルはグローバルデフォルトチャットモデルより優先されます。アシスタントデフォルトモデルを設定しない場合、アシスタントデフォルトモデル＝グローバルデフォルトチャットモデルになります。
+{% endhint %}
+
+#### <mark style="color:blue;">**`モデルの自動リセット`**</mark>：
+
+オン時 - トピック使用中に他のモデルに切り替えた場合、新しいトピック作成時にはアシスタントのデフォルトモデルにリセットされます。オフ時は新しいトピックのモデルが前のトピックで使用したモデルを引き継ぎます。
+
+> 例：アシスタントのデフォルトモデルがgpt-3.5-turboの場合、このアシスタントでトピック1を作成し、トピック1の会話中にgpt-4oに切り替えた場合：
+> 
+> 自動リセット有効時：トピック2作成時、デフォルトモデルはgpt-3.5-turbo
+> 
+> 自動リセット無効時：トピック2作成時、デフォルトモデルはgpt-4o
+
+#### <mark style="color:blue;">**`温度 (Temperature)`**</mark> ：
+
+温度パラメータはモデル生成テキストのランダム性と創造性を制御します（デフォルト値0.7）。具体的には：
+
+* 低い値(0-0.3)：
+  * 出力がより確定的で集中
+  * コード生成、データ分析など正確性が必要な場面に適する
+  * 最も可能性の高い単語を選択
+* 中程度の値(0.4-0.7)：
+  * 創造性と一貫性のバランス
+  * 日常会話、一般的なライティングに適する
+  * チャットボット会話に推奨(0.5前後)
+* 高い値(0.8-1.0)：
+  * より創造的で多様な出力
+  * 創造的ライティング、ブレインストーーミングに適する
+  * テキストの一貫性が低下する可能性
+
+#### <mark style="color:blue;">**`Top P (核サンプリング)`**</mark>：
+
+デフォルト値1。値が小さいほど、AI生成内容は単調で理解しやすくなります。値が大きいほど、AI応答の語彙範囲が広く多様化します。
+
+核サンプリングは語彙選択の確率しきい値制御で出力に影響：
+
+* 小さい値(0.1-0.3)：
+  * 高確率語彙のみ考慮
+  * 出力が保守的で制御しやすい
+  * コードコメント、技術文書などに適する
+* 中程度(0.4-0.6)：
+  * 語彙多様性と正確性のバランス
+  * 一般的な会話やライティングタスクに適する
+* 大きい値(0.7-1.0)：
+  * 幅広い語彙選択を考慮
+  * より豊富で多様なコンコンテンンツ生成
+  * 多様な表現が必要な創造的ライティングに適する
+
+{% hint style="info" %}
+- これらのパラメータは単独または組み合わせて使用可能
+- 特定のタスクタイプに適したパラメータ値を選択
+- 実験を通じて特定用途に最適なパラメータ組み合わせを見つけることを推奨
+- 上記内容は参考および概念理解用で、パラメータ範囲は全てのモデルに適合するとは限りません。モデル関連ドキュメントの推奨パラメータを参照してください。
+{% endhint %}
+
+#### <mark style="color:blue;">**`コンコンテキスト数 (Context Window)`**</mark>
+
+コンテキストに保持するメッセージ数。値が大きいほどコンテキストが長くなり、消費トークンが増加：
+
+* 5-10：通常の会話向け
+* \>10：より長い記憶が必要な複雑タスク向け（例：執筆アウトラインに基づく長文生成タスク）
+* 注意：メッセージ数が多いほどトークン消費量増加
+
+#### <mark style="color:blue;">**`メッセージ長制限の有効化 (MaxToken)`**</mark>
+
+単一応答の最大 [トークン](https://docs.cherry-ai.com/question-contact/knowledge#shen-me-shi-tokens) 数。大規模言語モデルでは、max token（最大トークン数）は応答の品質と長さに直接影響する重要パラメータです。
+
+> 例：CherryStudioでキー入力後、モデル接続テスト時には特定内容不要でモデルが正しく応答するか確認のみの場合、MaxTokenを1に設定可能。
+
+大半のモデルのMaxToken上限は32kトークン（64k以上も存在）。詳細は対応紹介ページを参照。
+
+必要に応じて設定しますが、以下が参考になります。
+
+{% hint style="success" %}
+推奨設定：
+* 通常チャット：500-800
+*

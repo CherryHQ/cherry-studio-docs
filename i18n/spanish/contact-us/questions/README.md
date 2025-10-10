@@ -1,19 +1,21 @@
 ---
 icon: address-card
 ---
+# Cooperación Comercial
+
 
 {% hint style="warning" %}
 Este documento ha sido traducido del chino por IA y aún no ha sido revisado.
 {% endhint %}
 
-# Negocios
 
-Contacto: Sr. He  
+
+
+Contacto: Sr. Ho  
 📮: yinsenho@cherry-ai.com  
-📱: 18954281942 (no línea de atención)
+📱: 18954281942 (no es el teléfono de servicio al cliente)
 
 {% hint style="warning" %}
-Para consultas técnicas, escriba a support@cherry-ai.com  
-o presente incidencias en:  
-[https://github.com/CherryHQ/cherry-studio/issues](https://github.com/CherryHQ/cherry-studio/issues)
+Para consultas sobre problemas de uso, envíe un correo a support@cherry-ai.com  
+o presente incidencias en: [https://github.com/CherryHQ/cherry-studio/issues](https://github.com/CherryHQ/cherry-studio/issues))
 {% endhint %}

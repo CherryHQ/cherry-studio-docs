@@ -1,14 +1,17 @@
 ---
 icon: file-code
 ---
+# Custom CSS
+
 
 {% hint style="warning" %}
 This document was translated from Chinese by AI and has not yet been reviewed.
 {% endhint %}
 
-# Custom CSS
 
-By customizing CSS, you can modify the software's appearance to better suit your preferences, like this:
+
+
+By customizing CSS, you can modify the software's appearance to better suit your preferences, for example:
 
 <figure><img src="../../.gitbook/assets/telegram-cloud-photo-size-5-6311935435315724879-y.jpg" alt=""><figcaption><p>Custom CSS</p></figcaption></figure>
 
@@ -35,7 +38,7 @@ By customizing CSS, you can modify the software's appearance to better suit your
   font-family: "汉仪唐美人" !important; /* Font */
 }
 
-/* Color of expanded deep thinking text */
+/* Deep thought expansion font color */
 .ant-collapse-content-box .markdown {
   color: red;
 }
@@ -52,31 +55,31 @@ body[theme-mode="dark"] {
   --color-background: #2b2b2b; /* Dark background color */
   --color-background-soft: #303030; /* Light background color */
   --color-background-mute: #282c34; /* Neutral background color */
-  --navbar-background: var(-–color-black-soft); /* Navigation bar background */
-  --chat-background: var(–-color-black-soft); /* Chat background */
-  --chat-background-user: #323332; /* User chat background */
-  --chat-background-assistant: #2d2e2d; /* Assistant chat background */
+  --navbar-background: var(-–color-black-soft); /* Navbar background color */
+  --chat-background: var(–-color-black-soft); /* Chat background color */
+  --chat-background-user: #323332; /* User chat background color */
+  --chat-background-assistant: #2d2e2d; /* Assistant chat background color */
 }
 
 /* Dark theme specific styles */
 body[theme-mode="dark"] {
   #content-container {
-    background-color: var(-–chat-background-assistant) !important; /* Content container background */
+    background-color: var(-–chat-background-assistant) !important; /* Content container background color */
   }
 
   #content-container #messages {
-    background-color: var(-–chat-background-assistant); /* Messages background */
+    background-color: var(-–chat-background-assistant); /* Message background color */
   }
 
   .inputbar-container {
-    background-color: #3d3d3a; /* Input bar background */
+    background-color: #3d3d3a; /* Input bar background color */
     border: 1px solid #5e5d5940; /* Input bar border color */
-    border-radius: 8px; /* Input bar border radius */
+    border-radius: 8px; /* Input bar border-radius */
   }
 
-  /* Code styles */
+  /* Code style */
   code {
-    background-color: #e5e5e20d; /* Code background */
+    background-color: #e5e5e20d; /* Code background color */
     color: #ea928a; /* Code text color */
   }
 
@@ -89,34 +92,34 @@ body[theme-mode="dark"] {
 body[theme-mode="light"] {
   /* Colors */
   --color-white: #ffffff; /* White */
-  --color-background: #ebe8e2; /* Light background */
-  --color-background-soft: #cbc7be; /* Light background */
-  --color-background-mute: #e4e1d7; /* Neutral background */
-  --navbar-background: var(-–color-white-soft); /* Navigation bar background */
-  --chat-background: var(-–color-white-soft); /* Chat background */
-  --chat-background-user: #f8f7f2; /* User chat background */
-  --chat-background-assistant: #f6f4ec; /* Assistant chat background */
+  --color-background: #ebe8e2; /* Light background color */
+  --color-background-soft: #cbc7be; /* Light background color */
+  --color-background-mute: #e4e1d7; /* Neutral background color */
+  --navbar-background: var(-–color-white-soft); /* Navbar background color */
+  --chat-background: var(-–color-white-soft); /* Chat background color */
+  --chat-background-user: #f8f7f2; /* User chat background color */
+  --chat-background-assistant: #f6f4ec; /* Assistant chat background color */
 }
 
 /* Light theme specific styles */
 body[theme-mode="light"] {
   #content-container {
-    background-color: var(-–chat-background-assistant) !important; /* Content container background */
+    background-color: var(-–chat-background-assistant) !important; /* Content container background color */
   }
 
   #content-container #messages {
-    background-color: var(-–chat-background-assistant); /* Messages background */
+    background-color: var(-–chat-background-assistant); /* Message background color */
   }
 
   .inputbar-container {
-    background-color: #ffffff; /* Input bar background */
+    background-color: #ffffff; /* Input bar background color */
     border: 1px solid #87867f40; /* Input bar border color */
-    border-radius: 8px; /* Input bar border radius */
+    border-radius: 8px; /* Input bar border-radius, modify to your preferred size */
   }
 
-  /* Code styles */
+  /* Code style */
   code {
-    background-color: #3d39290d; /* Code background */
+    background-color: #3d39290d; /* Code background color */
     color: #7c1b13; /* Code text color */
   }
 
@@ -126,13 +129,10 @@ body[theme-mode="light"] {
 }
 ```
 
-For more theme variables, refer to the source code:  
-[https://github.com/CherryHQ/cherry-studio/tree/main/src/renderer/src/assets/styles](https://github.com/CherryHQ/cherry-studio/tree/main/src/renderer/src/assets/styles)
+For more theme variables, please refer to the source code: [https://github.com/CherryHQ/cherry-studio/tree/main/src/renderer/src/assets/styles](https://github.com/CherryHQ/cherry-studio/tree/main/src/renderer/src/assets/styles)
 
 ### Related Recommendations
 
-Cherry Studio Theme Library:  
-[https://github.com/boilcy/cherrycss](https://github.com/boilcy/cherrycss)
+Cherry Studio Theme Library: [https://github.com/boilcy/cherrycss](https://github.com/boilcy/cherrycss)
 
-Share some Chinese-style Cherry Studio theme skins:  
-[https://linux.do/t/topic/325119/129](https://linux.do/t/topic/325119/129)
+Sharing some Chinese style Cherry Studio theme skins: [https://linux.do/t/topic/325119/129](https://linux.do/t/topic/325119/129)

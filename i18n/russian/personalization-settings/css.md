@@ -1,14 +1,17 @@
 ---
 icon: file-code
 ---
+# Пользовательский CSS
+
 
 {% hint style="warning" %}
 Этот документ переведен с китайского языка с помощью ИИ и еще не был проверен.
 {% endhint %}
 
-# Пользовательский CSS
 
-С помощью пользовательского CSS вы можете изменить внешний вид программы, чтобы он лучше соответствовал вашим предпочтениям, например:
+
+
+С помощью пользовательского CSS вы можете настроить внешний вид ПО по своему вкусу. Пример:
 
 <figure><img src="../../.gitbook/assets/telegram-cloud-photo-size-5-6311935435315724879-y.jpg" alt=""><figcaption><p>Пользовательский CSS</p></figcaption></figure>
 
@@ -35,43 +38,43 @@ icon: file-code
   font-family: "汉仪唐美人" !important; /* Шрифт */
 }
 
-/* Цвет текста при раскрытии глубокого размышления */
+/* Цвет текста при раскрытии блока */
 .ant-collapse-content-box .markdown {
   color: red;
 }
 
 /* Переменные темы */
 :root {
-  --color-black-soft: #2a2b2a; /* Темный цвет фона */
+  --color-black-soft: #2a2b2a; /* Тёмный цвет фона */
   --color-white-soft: #f8f7f2; /* Светлый цвет фона */
 }
 
-/* Темная тема */
+/* Тёмная тема */
 body[theme-mode="dark"] {
   /* Цвета */
-  --color-background: #2b2b2b; /* Темный цвет фона */
+  --color-background: #2b2b2b; /* Тёмный цвет фона */
   --color-background-soft: #303030; /* Светлый цвет фона */
   --color-background-mute: #282c34; /* Нейтральный цвет фона */
-  --navbar-background: var(-–color-black-soft); /* Цвет фона панели навигации */
+  --navbar-background: var(–-color-black-soft); /* Цвет фона навигации */
   --chat-background: var(–-color-black-soft); /* Цвет фона чата */
   --chat-background-user: #323332; /* Цвет фона сообщений пользователя */
   --chat-background-assistant: #2d2e2d; /* Цвет фона сообщений ассистента */
 }
 
-/* Специфичные стили для темной темы */
+/* Стили для тёмной темы */
 body[theme-mode="dark"] {
   #content-container {
-    background-color: var(-–chat-background-assistant) !important; /* Цвет фона контейнера контента */
+    background-color: var(–-chat-background-assistant) !important; /* Цвет фона контейнера */
   }
 
   #content-container #messages {
-    background-color: var(-–chat-background-assistant); /* Цвет фона сообщений */
+    background-color: var(–-chat-background-assistant); /* Цвет фона сообщений */
   }
 
   .inputbar-container {
     background-color: #3d3d3a; /* Цвет фона поля ввода */
-    border: 1px solid #5e5d5940; /* Цвет границы поля ввода */
-    border-radius: 8px; /* Скругление границ поля ввода */
+    border: 1px solid #5e5d5940; /* Цвет рамки поля ввода */
+    border-radius: 8px; /* Скругление рамки */
   }
 
   /* Стили кода */
@@ -81,37 +84,37 @@ body[theme-mode="dark"] {
   }
 
   pre code {
-    color: #abb2bf; /* Цвет текста в предварительно отформатированном коде */
+    color: #abb2bf; /* Цвет текста в блоке кода */
   }
 }
 
 /* Светлая тема */
 body[theme-mode="light"] {
   /* Цвета */
-  --color-white: #ffffff; /* Белый цвет */
+  --color-white: #ffffff; /* Белый */
   --color-background: #ebe8e2; /* Светлый цвет фона */
   --color-background-soft: #cbc7be; /* Светлый цвет фона */
   --color-background-mute: #e4e1d7; /* Нейтральный цвет фона */
-  --navbar-background: var(-–color-white-soft); /* Цвет фона панели навигации */
-  --chat-background: var(-–color-white-soft); /* Цвет фона чата */
+  --navbar-background: var(–-color-white-soft); /* Цвет фона навигации */
+  --chat-background: var(–-color-white-soft); /* Цвет фона чата */
   --chat-background-user: #f8f7f2; /* Цвет фона сообщений пользователя */
   --chat-background-assistant: #f6f4ec; /* Цвет фона сообщений ассистента */
 }
 
-/* Специфичные стили для светлой темы */
+/* Стили для светлой темы */
 body[theme-mode="light"] {
   #content-container {
-    background-color: var(-–chat-background-assistant) !important; /* Цвет фона контейнера контента */
+    background-color: var(–-chat-background-assistant) !important; /* Цвет фона контейнера */
   }
 
   #content-container #messages {
-    background-color: var(-–chat-background-assistant); /* Цвет фона сообщений */
+    background-color: var(–-chat-background-assistant); /* Цвет фона сообщений */
   }
 
   .inputbar-container {
     background-color: #ffffff; /* Цвет фона поля ввода */
-    border: 1px solid #87867f40; /* Цвет границы поля ввода */
-    border-radius: 8px; /* Скругление границ поля ввода, настройте по вкусу */
+    border: 1px solid #87867f40; /* Цвет рамки поля ввода */
+    border-radius: 8px; /* Скругление рамки */
   }
 
   /* Стили кода */
@@ -121,15 +124,15 @@ body[theme-mode="light"] {
   }
 
   pre code {
-    color: #000000; /* Цвет текста в предварительно отформатированном коде */
+    color: #000000; /* Цвет текста в блоке кода */
   }
 }
 ```
 
-Для получения дополнительных переменных темы обратитесь к исходному коду: [https://github.com/CherryHQ/cherry-studio/tree/main/src/renderer/src/assets/styles](https://github.com/CherryHQ/cherry-studio/tree/main/src/renderer/src/assets/styles)
+Больше переменных темы в исходном коде: [https://github.com/CherryHQ/cherry-studio/tree/main/src/renderer/src/assets/styles](https://github.com/CherryHQ/cherry-studio/tree/main/src/renderer/src/assets/styles)
 
-### Рекомендации
+### Рекомендуем
 
-Тематическая библиотека Cherry Studio: [https://github.com/boilcy/cherrycss](https://github.com/boilcy/cherrycss)
+Библиотека тем Cherry Studio: [https://github.com/boilcy/cherrycss](https://github.com/boilcy/cherrycss)
 
-Коллекция тем для Cherry Studio в китайском стиле: [https://linux.do/t/topic/325119/129](https://linux.do/t/topic/325119/129)
+Коллекция тем Cherry Studio в китайском стиле: [https://linux.do/t/topic/325119/129](https://linux.do/t/topic/325119/129)

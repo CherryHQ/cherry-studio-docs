@@ -1,14 +1,19 @@
 ---
 icon: floppy-disk
 ---
+# Change Storage Location
+
 
 {% hint style="warning" %}
 This document was translated from Chinese by AI and has not yet been reviewed.
 {% endhint %}
 
-# Default Storage Location
 
-Cherry Studio data storage follows system specifications. Data is automatically placed in the user directory at the following locations:
+
+
+## Default Storage Location
+
+Cherry Studio data storage adheres to system specifications, and data is automatically placed in the user directory. The specific directory locations are as follows:
 
 > macOS: /Users/username/Library/Application Support/CherryStudioDev
 
@@ -16,23 +21,23 @@ Cherry Studio data storage follows system specifications. Data is automatically 
 
 > Linux: /home/username/.config/CherryStudio
 
-You can also view it at:
-<figure><img src="../../.gitbook/assets/image (31).png" alt=""><figcaption></figcaption></figure>
+You can also view it in the following location:
 
-# Changing Storage Location (For Reference)
+<figure><img src="../.gitbook/assets/image (31).png" alt=""><figcaption></figcaption></figure>
+
+## Change Storage Location (for reference)
 
 Method 1:
 
-This can be achieved by creating a symbolic link. Exit the application, move the data to your desired location, then create a link at the original location pointing to the new path.
+This can be achieved by creating a symbolic link. Exit the software, move the data to your desired location, and then create a link in the original location pointing to the new location.
 
-For detailed steps, refer to:  
-[https://github.com/CherryHQ/cherry-studio/issues/621#issuecomment-2588652880](https://github.com/CherryHQ/cherry-studio/issues/621#issuecomment-2588652880)
+For detailed steps, please refer to: [https://github.com/CherryHQ/cherry-studio/issues/621#issuecomment-2588652880](https://github.com/CherryHQ/cherry-studio/issues/621#issuecomment-2588652880)
 
-Method 2:  
-Based on Electron application characteristics, modify the storage location by configuring launch parameters.
+Method 2:
+Based on the characteristics of Electron applications, modify the storage location by configuring startup parameters.
 
-> --user-data-dir  
-> Example: Cherry-Studio-*-x64-portable.exe --user-data-dir="%user_data_dir%"
+> \--user-data-dir\
+> E.g.: Cherry-Studio-\*-x64-portable.exe --user-data-dir="%user\_data\_dir%"
 
 > Example:
 
@@ -40,7 +45,7 @@ Based on Electron application characteristics, modify the storage location by co
 PS D:\CherryStudio> dir
 
 
-    目录: D:\CherryStudio
+    Directory: D:\CherryStudio
 
 
 Mode                 LastWriteTime         Length Name
@@ -50,51 +55,51 @@ d-----         2025/4/18     14:05                user-data-dir
 -a----         2025/4/18     14:05            701 init_cherry_studio.bat
 ```
 
-> init_cherry_studio.bat (encoding: ANSI)
+> init\_cherry\_studio.bat (encoding: ANSI)
 
 ```bash
 @title CherryStudio Initialization
 @echo off
 
 set current_path_dir=%~dp0
-@echo Current path: %current_path_dir%
+@echo Current path:%current_path_dir%
 set user_data_dir=%current_path_dir%user-data-dir
-@echo CherryStudio data path: %user_data_dir%
+@echo CherryStudio Data Path:%user_data_dir%
 
-@echo Searching for Cherry-Studio-*-portable.exe in current directory
+@echo Searching for Cherry-Studio-*-portable.exe in current path
 setlocal enabledelayedexpansion
 
-for /f "delims=" %%F in ('dir /b /a-d "Cherry-Studio-*-portable*.exe" 2^>nul') do ( # Compatible with GitHub and official releases. Modify for other versions
+for /f "delims=" %%F in ('dir /b /a-d "Cherry-Studio-*-portable*.exe" 2^>nul') do ( #This code is adapted for versions downloaded from GitHub and the official website, please modify for others
     set "target_file=!cd!\%%F"
     goto :break
 )
 :break
 if defined target_file (
-    echo Found file: %target_file%
+    echo File found: %target_file%
 ) else (
-    echo No matching files found. Exiting script
+    echo No matching file found, exiting script
     pause
     exit
 )
 
-@echo Press any key to continue...
+@echo Confirm to continue
 pause
 
-@echo Launching CherryStudio
+@echo Starting CherryStudio
 start %target_file% --user-data-dir="%user_data_dir%"
 
-@echo Operation completed
+@echo Operation finished
 @echo on
 exit
 ```
 
-> Initial structure of user-data-dir:
+> Directory structure after user-data-dir initialization:
 
 ```shell
 PS D:\CherryStudio> dir .\user-data-dir\
 
 
-    目录: D:\CherryStudio\user-data-dir
+    Directory: D:\CherryStudio\user-data-dir
 
 
 Mode                 LastWriteTime         Length Name

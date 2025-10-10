@@ -1,16 +1,19 @@
 ---
 icon: file-code
 ---
+# カスタムCSS
+
 
 {% hint style="warning" %}
 このドキュメントはAIによって中国語から翻訳されており、まだレビューされていません。
 {% endhint %}
 
-# カスタムCSS
 
-カスタムCSSを使用すると、ソフトウェアの外観を変更して自分の好みに合わせることができます。例えば：
 
-<figure><img src="../../.gitbook/assets/telegram-cloud-photo-size-5-6311935435315724879-y.jpg" alt=""><figcaption><p>カスタムCSS</p></figcaption></figure>
+
+カスタム CSS を使用してソフトウェアの外観を変更し、自分の好みに合わせることができます。例：
+
+<figure><img src="../../.gitbook/assets/telegram-cloud-photo-size-5-6311935435315724879-y.jpg" alt=""><figcaption><p>カスタム CSS</p></figcaption></figure>
 
 ```css
 :root {
@@ -35,7 +38,7 @@ icon: file-code
   font-family: "汉仪唐美人" !important; /* フォント */
 }
 
-/* 深い思考展開時のフォントカラー */
+/* 深い思考展開時のフォント色 */
 .ant-collapse-content-box .markdown {
   color: red;
 }
@@ -48,20 +51,20 @@ icon: file-code
 
 /* ダークテーマ */
 body[theme-mode="dark"] {
-  /* カラー */
+  /* カラー設定 */
   --color-background: #2b2b2b; /* ダーク背景色 */
-  --color-background-soft: #303030; /* ライト背景色 */
-  --color-background-mute: #282c34; /* ニュートラル背景色 */
-  --navbar-background: var(-–color-black-soft); /* ナビゲーションバー背景色 */
+  --color-background-soft: #303030; /* ソフト背景色 */
+  --color-background-mute: #282c34; /* ミュート背景色 */
+  --navbar-background: var(-–color-black-soft); /* ナビゲーションバーの背景色 */
   --chat-background: var(–-color-black-soft); /* チャット背景色 */
-  --chat-background-user: #323332; /* ユーザーチャット背景色 */
-  --chat-background-assistant: #2d2e2d; /* アシスタントチャット背景色 */
+  --chat-background-user: #323332; /* ユーザーのチャット背景色 */
+  --chat-background-assistant: #2d2e2d; /* アシスタントのチャット背景色 */
 }
 
-/* ダークテーマ固有スタイル */
+/* ダークテーマ固有のスタイル */
 body[theme-mode="dark"] {
   #content-container {
-    background-color: var(-–chat-background-assistant) !important; /* コンテンツコンテナ背景色 */
+    background-color: var(-–chat-background-assistant) !important; /* コンテンツコンテナの背景色 */
   }
 
   #content-container #messages {
@@ -69,9 +72,9 @@ body[theme-mode="dark"] {
   }
 
   .inputbar-container {
-    background-color: #3d3d3a; /* 入力バー背景色 */
-    border: 1px solid #5e5d5940; /* 入力バーボーダーカラー */
-    border-radius: 8px; /* 入力バーボーダー角丸 */
+    background-color: #3d3d3a; /* 入力バーの背景色 */
+    border: 1px solid #5e5d5940; /* 入力バーのボーダー色 */
+    border-radius: 8px; /* 入力バーの角丸 */
   }
 
   /* コードスタイル */
@@ -87,21 +90,21 @@ body[theme-mode="dark"] {
 
 /* ライトテーマ */
 body[theme-mode="light"] {
-  /* カラー */
-  --color-white: #ffffff; /* ホワイト */
+  /* カラー設定 */
+  --color-white: #ffffff; /* 白色 */
   --color-background: #ebe8e2; /* ライト背景色 */
-  --color-background-soft: #cbc7be; /* ライト背景色 */
-  --color-background-mute: #e4e1d7; /* ニュートラル背景色 */
-  --navbar-background: var(-–color-white-soft); /* ナビゲーションバー背景色 */
+  --color-background-soft: #cbc7be; /* ソフト背景色 */
+  --color-background-mute: #e4e1d7; /* ミュート背景色 */
+  --navbar-background: var(-–color-white-soft); /* ナビゲーションバーの背景色 */
   --chat-background: var(-–color-white-soft); /* チャット背景色 */
-  --chat-background-user: #f8f7f2; /* ユーザーチャット背景色 */
-  --chat-background-assistant: #f6f4ec; /* アシスタントチャット背景色 */
+  --chat-background-user: #f8f7f2; /* ユーザーのチャット背景色 */
+  --chat-background-assistant: #f6f4ec; /* アシスタントのチャット背景色 */
 }
 
-/* ライトテーマ固有スタイル */
+/* ライトテーマ固有のスタイル */
 body[theme-mode="light"] {
   #content-container {
-    background-color: var(-–chat-background-assistant) !important; /* コンテンツコンテナ背景色 */
+    background-color: var(-–chat-background-assistant) !important; /* コンコンテンンツコンコンテナの背景色 */
   }
 
   #content-container #messages {
@@ -109,9 +112,9 @@ body[theme-mode="light"] {
   }
 
   .inputbar-container {
-    background-color: #ffffff; /* 入力バー背景色 */
-    border: 1px solid #87867f40; /* 入力バーボーダーカラー */
-    border-radius: 8px; /* 入力バーボーダー角丸（お好みのサイズに調整可） */
+    background-color: #ffffff; /* 入力バーの背景色 */
+    border: 1px solid #87867f40; /* 入力バーのボーーダー色 */
+    border-radius: 8px; /* 入力バーの角丸（好みのサイズに変更可） */
   }
 
   /* コードスタイル */
@@ -126,10 +129,10 @@ body[theme-mode="light"] {
 }
 ```
 
-より多くのテーマ変数についてはソースコードを参照してください：[https://github.com/CherryHQ/cherry-studio/tree/main/src/renderer/src/assets/styles](https://github.com/CherryHQ/cherry-studio/tree/main/src/renderer/src/assets/styles)
+その他のテーマ変数については、ソースコードを参照してください：[https://github.com/CherryHQ/cherry-studio/tree/main/src/renderer/src/assets/styles](https://github.com/CherryHQ/cherry-studio/tree/main/src/renderer/src/assets/styles)
 
 ### 関連のおすすめ
 
 Cherry Studio テーマライブラリ: [https://github.com/boilcy/cherrycss](https://github.com/boilcy/cherrycss)
 
-中国風Cherry Studioテーマスキンのシェア: [https://linux.do/t/topic/325119/129](https://linux.do/t/topic/325119/129)
+中国風のCherry Studioテーマスキンのいくつかを共有: [https://linux.do/t/topic/325119/129](https://linux.do/t/topic/325119/129)

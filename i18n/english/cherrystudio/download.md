@@ -20,7 +20,7 @@ Current latest official version: v1.6.3
 ### Windows Version
 
 {% hint style="warning" %}
-Note: Windows 7 operating system does not support installing Cherry Studio.
+Note: Windows 7 system does not support installing Cherry Studio.
 {% endhint %}
 
 #### Installer (Setup)
@@ -29,7 +29,7 @@ Note: Windows 7 operating system does not support installing Cherry Studio.
 
 <summary>x64 Version</summary>
 
-Main Line:
+Mainline:
 
 【[Cherry Studio Official Website](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.0-rc.2/Cherry-Studio-1.6.3-rc.2-x64-setup.exe)】
 
@@ -43,7 +43,7 @@ Alternative Lines:
 
 <summary>ARM64 Version</summary>
 
-Main Line:
+Mainline:
 
 【[Cherry Studio Official Website](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.0-rc.2/Cherry-Studio-1.6.3-rc.2-arm64-setup.exe)】
 
@@ -59,7 +59,7 @@ Alternative Lines:
 
 <summary>x64 Version</summary>
 
-Main Line:
+Mainline:
 
 【[Cherry Studio Official Website](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.0-rc.2/Cherry-Studio-1.6.3-rc.2-x64-portable.exe)】
 
@@ -73,7 +73,7 @@ Alternative Lines:
 
 <summary>ARM64 Version</summary>
 
-Main Line:
+Mainline:
 
 【[Cherry Studio Official Website](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.0-rc.2/Cherry-Studio-1.6.3-rc.2-arm64-portable.exe)】
 
@@ -91,7 +91,7 @@ Alternative Lines:
 
 <summary>Intel Chip Version (x64)</summary>
 
-Main Line:
+Mainline:
 
 【[Cherry Studio Official Website](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.0-rc.2/Cherry-Studio-1.6.3-rc.2-x64.dmg)】
 
@@ -105,7 +105,7 @@ Alternative Lines:
 
 <summary>Apple Silicon Version (ARM64, M-series chips)</summary>
 
-Main Line:
+Mainline:
 
 【[Cherry Studio Official Website](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.0-rc.2/Cherry-Studio-1.6.3-rc.2-arm64.dmg)】
 
@@ -123,7 +123,7 @@ Alternative Lines:
 
 <summary>x86_64 Version</summary>
 
-Main Line:
+Mainline:
 
 【[Cherry Studio Official Website](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.0-rc.2/Cherry-Studio-1.6.3-rc.2-x86_64.AppImage)】
 
@@ -137,7 +137,7 @@ Alternative Lines:
 
 <summary>ARM64 Version</summary>
 
-Main Line:
+Mainline:
 
 【[Cherry Studio Official Website](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.0-rc.2/Cherry-Studio-1.6.3-rc.2-arm64.AppImage)】
 

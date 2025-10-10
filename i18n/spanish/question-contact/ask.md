@@ -1,55 +1,46 @@
 ---
 icon: messages-question
 ---
+# Métodos Eficientes para Hacer Preguntas
 
-# Cómo preguntar eficazmente
 
 {% hint style="warning" %}
 Este documento ha sido traducido del chino por IA y aún no ha sido revisado.
 {% endhint %}
 
-## Métodos de Preguntas Eficientes
 
-Cherry Studio es un proyecto gratuito y de código abierto. A medida que el proyecto crece, la carga de trabajo del equipo también aumenta. Para reducir los costos de comunicación y resolver tus problemas de manera rápida y eficiente, les pedimos que sigan los siguientes pasos al enfrentar dificultades. Esto nos permitirá dedicar más tiempo al mantenimiento y desarrollo del proyecto. ¡Agradecemos su cooperación!
 
-### 1. Consulta y búsqueda en la documentación
 
-La mayoría de los problemas básicos pueden resolverse revisando detenidamente la documentación:
+Cherry Studio es un proyecto gratuito y de código abierto. A medida que el proyecto crece, la carga de trabajo del equipo también aumenta. Para reducir los costos de comunicación y resolver sus preguntas de manera rápida y eficiente, esperamos que antes de hacer una pregunta siga estos pasos y métodos para manejar los problemas encontrados. Esto permitirá al equipo dedicar más tiempo al mantenimiento y desarrollo del proyecto. ¡Gracias por su cooperación!
 
-* Las funciones y el uso del software se explican en [Introducción a las funcionalidades](../cherrystudio/preview/);
-* Las preguntas frecuentes se recopilan en [Preguntas comunes](questions.md);
-* Problemas complejos pueden resolverse mediante búsquedas directas o usando el cuadro de búsqueda;
-* **Lean atentamente** los cuadros de sugerencias en cada documento para evitar problemas;
-* Consulten o busquen problemas similares en la página de [Issues de GitHub](https://github.com/CherryHQ/cherry-studio/issues).
+## I. Consulta y búsqueda de documentación
 
-### 2. Búsqueda web y consulta a IA
+La mayoría de los problemas básicos se pueden resolver consultando cuidadosamente la documentación.
 
-Para problemas no relacionados con la funcionalidad del cliente (errores del modelo, respuestas inesperadas, configuración de parámetros):
+* Las funciones y problemas de uso del software se pueden consultar en el documento [Introducción a las funciones](../cherrystudio/preview/);
+* Las preguntas frecuentes se recopilan en la página [Preguntas comunes](questions.md), donde puede verificar primero si hay soluciones disponibles;
+* Para problemas más complejos, puede resolverlos directamente mediante búsquedas o preguntando en el cuadro de búsqueda;
+* Asegúrese de leer cuidadosamente el contenido de los cuadros de sugerencia en cada documento, esto puede ayudarle a evitar muchos problemas;
+* Consulte o busque problemas y soluciones similares en la página de [Issues](https://github.com/CherryHQ/cherry-studio/issues) de GitHub.
 
-* Primero busque soluciones en la web;
-* Describa el error y el problema a una IA para encontrar soluciones.
+## II. Búsqueda en Internet y preguntar a la IA
 
-### 3. Consulta en comunidades oficiales o apertura de un issue
+Para problemas no relacionados con las funciones del cliente (como errores del modelo, respuestas inesperadas, configuración de parámetros, etc.), se recomienda primero buscar soluciones en Internet o describir el contenido del error y el problema a una IA para encontrar soluciones.
 
-Si los pasos anteriores no resuelven su problema:
+## III. Preguntar en comunidades oficiales o abrir un issue en GitHub
 
-* Comuníquese en el [canal de Telegram](https://t.me/CherryStudioAI), [Discord](https://discord.com/invite/wez8HtpxqQ) o [Grupo QQ](#user-content-fn-1)[^1] ([unirse](https://qm.qq.com/cgi-bin/qm/qr?authKey=xe5nfGVZLMYnlJq%2F%2B4kN03YWcDBB2lnD7tc9rWus2mxS0JHUbOzk79cO7MYuqyGR\&k=UKVgl3YPHmwPaU8qeO1VG03NcUkACKsc\&noverify=0)), detallando el problema.
+Si los dos pasos anteriores no encontraron respuesta o no resolvieron su problema, puede visitar el [canal de Telegram](https://t.me/CherryStudioAI), el [canal de Discord](https://discord.com/invite/wez8HtpxqQ) o el [grupo de QQ](#user-content-fn-1)[^1] ([unirse directamente](https://qm.qq.com/cgi-bin/qm/qr?authKey=xe5nfGVZLMYnlJq%2F%2B4kN03YWcDBB2lnD7tc9rWus2mxS0JHUbOzk79cO7MYuqyGR\&k=UKVgl3YPHmwPaU8qeO1VG03NcUkACKsc\&noverify=0)) para describir detalladamente el problema y buscar ayuda.
 
-**Requisitos para reportar problemas**:
-
-1. **Errores del modelo**:
-   * Proporcione capturas completas y errores de la consola (oculte datos sensibles pero muestre nombre del modelo, configuración y mensaje de error).
-   * [Método para ver errores en consola](questions.md#kong-zhi-tai-bao-cuo-cha-kan-fang-fa).
-2. **Bugs de software**:
-   * Describa el error y [pasos detallados](#user-content-fn-2)[^2] para reproducirlo.
-   * Si es un error intermitente, incluya contexto, entorno y parámetros.
-   * Especifique: **plataforma** (Windows/Mac/Linux) y **versión del software**.
+1. Si es un error del modelo, proporcione una captura de pantalla completa de la interfaz y la información de error de la consola. Puede ocultar información confidencial, pero asegúrese de incluir en la captura el nombre del modelo, la configuración de parámetros y el contenido del error. El método para ver la información de error de la consola está disponible [haciendo clic aquí](questions.md#kong-zhi-tai-bao-cuo-cha-kan-fang-fa).
+2. Si es un error del software, proporcione una <mark style="background-color:green;">descripción específica del error</mark> y pasos detallados <mark style="background-color:green;">para</mark>[<mark style="background-color:green;">reproducirlo</mark>](#user-content-fn-2)[^2], facilitando así la depuración y reparación por parte de los desarrolladores. Si es un problema ocasional que no se puede reproducir, describa en detalle el escenario, contexto y parámetros de configuración cuando ocurrió el problema.  
+   Además, debe incluir en la descripción del problema información como la <mark style="background-color:green;">plataforma</mark> (Windows, Mac o Linux) y el <mark style="background-color:green;">número de versión del software</mark>.
 
 {% hint style="success" %}
-**Solicitudes o sugerencias sobre documentación**\
-Contacte a `@Wangmouuu` en Telegram, QQ (`1355873789`) o envíe un correo a: `sunrise@cherry-ai.com`.
+**Solicitar documentación o sugerencias**
+
+Puede contactar al canal de Telegram `@Wangmouuu`, QQ (`1355873789`) o enviar un correo electrónico a: `sunrise@cherry-ai.com`.
 {% endhint %}
 
-[^1]: ID del grupo: 611659451
+[^1]: Número de grupo: 611659451
 
-[^2]: Reproducción (vuelva a ocurrir el error)
+[^2]: Es decir, (el error) vuelve a aparecer

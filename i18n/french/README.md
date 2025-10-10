@@ -15,112 +15,89 @@ Ce document a été traducido del chino por IA y aún no ha sido revisado.
 
 Suivez nos comptes sociaux : [Twitter(X)](https://x.com/CherryStudioHQ), [Xiaohongshu](https://www.xiaohongshu.com/user/profile/662b6853000000000b031d9a), [Weibo](https://weibo.com/u/7975656228), [Bilibili](https://space.bilibili.com/3546657515898892), [Douyin](https://www.douyin.com/user/MS4wLjABAAAAmw9A54m5J0hHVMQY5eGrVJ-EHDoOS0hgJ6M1F9MN2Tn2V163A0xrC4_KVzfmQSxC)
 
-Rejoignez nos communautés : [Groupe QQ (575014769)](https://qm.qq.com/q/lo0D4qVZKi), [Telegram](https://t.me/CherryStudioAI), [Discord](https://discord.gg/wez8HtpxqQ), [Groupe Wechat (cliquez pour voir)](https://www.cherry-ai.com/#Community)
+Rejoignez nos communautés : [Groupe QQ (575014769)](https://qm.qq.com/q/lo0D4qVZKi), [Telegram](https://t.me/CherryStudioAI), [Discord](https://discord.gg/wez8HtpxqQ), [Groupe WeChat (cliquez pour voir)](https://www.cherry-ai.com/#Community)
 
 ***
 
-Cherry Studio est une plateforme d'assistant IA polyvalente intégrant des fonctionnalités multiformes telles que dialogues multimodèles, gestion de bases de connaissances, peinture IA et traduction.\
-La conception hautement personnalisable, les capacités d'extension puissantes et l'expérience utilisateur conviviale de Cherry Studio en font un choix idéal pour les professionnels et les passionnés d'IA. Que vous soyez débutant ou développeur, chacun trouvera dans Cherry Studio les fonctionnalités IA adaptées pour améliorer sa productivité et créativité.
+Cherry Studio est une plateforme tout-en-un d'assistant IA intégrant des conversations multi-modèles, la gestion de bases de connaissances, la génération d'images IA, la traduction et d'autres fonctionnalités.  
+Grâce à sa conception hautement personnalisable, ses puissantes capacités d'extension et son expérience utilisateur conviviale, Cherry Studio constitue le choix idéal pour les professionnels et les passionnés d'IA. Que vous soyez un utilisateur débutant ou un développeur, vous trouverez des fonctionnalités IA adaptées à vos besoins pour améliorer votre productivité et créativité.
+
+<figure><img src=".gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src=".gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
 ***
 
-### **Fonctionnalités clés et caractéristiques**
+### **Fonctionnalités principales et caractéristiques**
 
-#### **1. Fonctions de dialogue de base**
+#### **1. Fonctions de conversation de base**
 
-* **Réponses multiples** : Permet d'obtenir simultanément plusieurs réponses à une même question via différents modèles, facilitant la comparaison des performances. Voir [interface de dialogue](cherrystudio/preview/chat.md).
+* **Réponses multiples** : Génération simultanée de réponses par plusieurs modèles pour une même question, permettant de comparer leurs performances (voir [Interface de conversation](cherrystudio/preview/chat.md)).
+* **Regroupement automatique** : Historique des conversations organisé par assistant pour un accès rapide.
+* **Exportation de conversations** : Conversion complète ou partielle en formats variés (Markdown, Word, etc.).
+* **Paramètres personnalisables** : Réglages avancés et paramètres spécifiques pour des besoins individuels.
+* **Marché d'assistants** : Des milliers d'assistants spécialisés par secteur (traduction, programmation, rédaction) avec création personnalisée.
+* **Rendu multi-format** : Prise en charge du Markdown, des formules mathématiques et des prévisualisations HTML.
 
-<figure><img src=".gitbook/assets/docs-readme-1 (1).png" alt=""><figcaption></figcaption></figure>
+#### **2. Intégration de fonctions spécialisées**
 
-* **Regroupement automatique** : L'historique des conversations est automatiquement organisé par assistant pour un accès rapide.
-* **Export des dialogues** : Export complet ou partiel au format Markdown, Word etc.
-* **Paramètres hautement personnalisables** : Paramètres avancés et possibilité d'entrer des paramètres personnalisés.
-
-<figure><img src=".gitbook/assets/docs-readme-2 (2).png" alt=""><figcaption></figcaption></figure>
-
-* **Marché d'assistants** : Des milliers d'assistants spécialisés par secteur (traduction, programmation, rédaction) + assistants personnalisables.
-
-<figure><img src=".gitbook/assets/docs-readme-4.png" alt=""><figcaption></figcaption></figure>
-
-* **Multiformats de rendu** : Prise en charge du Markdown, des formules mathématiques et du prévisualisation HTML.
-
-<figure><img src=".gitbook/assets/docs-readme-3 (1).png" alt=""><figcaption></figcaption></figure>
-
-#### **2. Fonctionnalités intégrées**
-
-* **Peinture IA** : Panneau dédié pour générer des images via description textuelle.
-
-<figure><img src=".gitbook/assets/docs-readme-5.png" alt=""><figcaption></figcaption></figure>
-
-* **Mini-applications IA** : Intégration d'outils IA web sans navigation externe.
-* **Traduction** : Scénarios multiples (panneau dédié, traduction conversationnelle).
-* **Gestion des fichiers** : Classification unifiée des fichiers des conversations, peinture et connaissances.
-
-<figure><img src=".gitbook/assets/docs-readme-6.png" alt=""><figcaption></figcaption></figure>
-
+* **Génération d'images IA** : Panneau dédié pour créer des images via descriptions textuelles.
+* **Mini-applications IA** : Outils Web IA intégrés, utilisables sans navigateur externe.
+* **Traduction** : Panneau de traduction, traduction conversationnelle et de prompts.
+* **Gestion de fichiers** : Classement unifié des fichiers de conversations, d'images et de bases de connaissances.
 * **Recherche globale** : Localisation rapide dans l'historique et les bases de connaissances.
-
-<figure><img src=".gitbook/assets/docs-readme-7.png" alt=""><figcaption></figcaption></figure>
 
 #### **3. Gestion unifiée multi-fournisseurs**
 
-* **Aggrégation de modèles** : Intégration OpenAI, Gemini, Anthropic, Azure etc.
-* **Récupération automatique** : Liste complète des modèles sans configuration manuelle.
-* **Rotation de clés** : Utilisation cyclique de multiples clés API contre les limitations.
-* **Avatars personnalisés** : Attribution automatique d'icônes identitaires par modèle.
-* **Fournisseurs personnalisés** : Compatibilité avec services tiers respectant les normes OpenAI/Gemini/Anthropic.
+* **Agrégation de modèles** : Support des principaux fournisseurs (OpenAI, Gemini, Anthropic, Azure).
+* **Récupération automatique de modèles** : Liste complète sans configuration manuelle.
+* **Rotation de clés API** : Utilisation cyclique de multiples clés pour éviter les limites.
+* **Avatars spécifiques** : Attribution automatique d'icônes distinctives par modèle.
+* **Fournisseurs personnalisés** : Intégration de services tiers compatibles (OpenAI, Gemini, Anthropic).
 
-<figure><img src=".gitbook/assets/docs-readme-8.png" alt=""><figcaption></figcaption></figure>
+#### **4. Interface et mise en page personnalisables**
 
-#### **4. Interface entièrement personnalisable**
+* **CSS personnalisé** : Style global adaptable à vos préférences.
+* **Disposition conversationnelle** : Choix entre liste ou bulles, avec personnalisation des messages.
+* **Avatars personnalisables** : Définition d'icônes pour l'application et les assistants.
+* **Menu latéral modulable** : Masquage ou réorganisation des fonctions selon les besoins.
 
-* **CSS personnalisé** : Personnalisation globale du style visuel.
-* **Dispositions de chat** : Différents modes d'affichage inclus.
-* **Personnalisation d'avatar** : Icônes personnalisées pour logiciel et assistants.
-* **Menu latéral ajustable** : Masquage/réorganisation des éléments selon besoins.
+#### **5. Système de base de connaissances locale**
 
-<figure><img src=".gitbook/assets/docs-readme-9.png" alt=""><figcaption></figcaption></figure>
+* **Formats multiples** : Prise en charge de PDF, DOCX, PPTX, XLSX, TXT, MD, etc.
+* **Sources variées** : Fichiers locaux, URLs, sitemaps ou entrée manuelle.
+* **Exportation de bases** : Partage des connaissances structurées.
+* **Vérification intégrée** : Test de segmentation et de traitement après import.
 
-#### **5. Système local de base de connaissances**
+#### **6. Fonctions de focus spécialisé**
 
-* **Multiformats** : Import PDF, DOCX, PPTX, XLSX, TXT, MD etc.
-* **Sources variées** : Fichiers locaux, URL, sitemaps ou saisie manuelle.
-* **Export des connaissances** : Partage des bases traitées.
-* **Vérification intégrée** : Tests de segmentation et résultats immédiats après import.
-
-<figure><img src=".gitbook/assets/docs-readme-10.png" alt=""><figcaption></figcaption></figure>
-
-#### **6. Fonctions contextuelles**
-
-* **Questions rapides** : Assistance instantanée depuis toute application (Wechat, navigateur).
-* **Traduction rapide** : Traduction contextuelle de textes sélectionnés.
-* **Résumé** : Synthèse rapide de contenus longs.
-* **Explications contextuelles** : Clarification sans prompts complexes.
-
-<figure><img src=".gitbook/assets/docs-readme-11.png" alt=""><figcaption></figcaption></figure>
+* **Questions rapides** : Assistant contextuel accessible depuis tout environnement (WeChat, navigateur).
+* **Traduction instantanée** : Traduction rapide de mots ou textes externes.
+* **Synthèse de contenu** : Résumé accéléré de longs textes.
+* **Explications simplifiées** : Clarification en un clic sans prompts complexes.
 
 #### **7. Sécurité des données**
 
-* **Sauvegardes multiples** : Locale, WebDAV et programmée.
-* **Confiance locale totale** : Usage complet en environnement offline avec modèles locaux.
+* **Solutions de sauvegarde** : Locale, WebDAV et programmée.
+* **Protection des données** : Utilisation entièrement locale avec modèles locaux pour éviter les fuites.
 
 ***
 
-### **Avantages**
+### **Avantages du projet**
 
-1. **Convivial pour débutants** : Accessible sans connaissances techniques préalables.
-2. **Documentation complète** : Guides détaillés et FAQ complète.
-3. **Améliorations continues** : Évolutions régulières basées sur les retours utilisateurs.
-4. **Ouverture et extensibilité** : Code source ouvert pour customisations avancées.
+1. **Accessibilité** : Interface intuitive pour les débutants, permettant de se concentrer sur le travail ou la création.
+2. **Documentation complète** : Guides d'utilisation et dépannage détaillés.
+3. **Amélioration continue** : Optimisations régulières basées sur les retours utilisateurs.
+4. **Open source et extensible** : Personnalisation via code source ouvert.
 
 ***
 
-### **Cas d'usage**
+### **Cas d'utilisation**
 
-* **Gestion & consultation de connaissances** : Recherche académique, éducation...
-* **Dialogues créatifs** : Génération de contenu multimodal.
-* **Traduction & automatisation** : Communication multilingue et traitement documentaire.
-* **Peinture IA & design** : Visualisation créative par description textuelle.
+* **Gestion de connaissances** : Construction et interrogation rapide de bases spécialisées (recherche, éducation).
+* **Conversations multi-modèles** : Création de contenu et collecte d'informations accélérée.
+* **Traduction et automatisation** : Assistance linguistique et traitement de documents.
+* **Design par IA** : Génération d'images à partir de descriptions textuelles.
 
 ### Star History
 

@@ -1,14 +1,17 @@
 ---
 icon: file-code
 ---
+# CSS Personalizado
+
 
 {% hint style="warning" %}
 Este documento foi traduzido do chinês por IA e ainda não foi revisado.
 {% endhint %}
 
-# CSS Personalizado  
 
-Você pode alterar a aparência do software para se adequar melhor às suas preferências personalizando o CSS. Por exemplo:  
+
+
+Com CSS personalizado, você pode modificar a aparência do software para se adequar melhor às suas preferências, por exemplo:
 
 <figure><img src="../../.gitbook/assets/telegram-cloud-photo-size-5-6311935435315724879-y.jpg" alt=""><figcaption><p>CSS Personalizado</p></figcaption></figure>
 
@@ -28,19 +31,19 @@ Você pode alterar a aparência do software para se adequar melhor às suas pref
 }
 ```
 
-### Variáveis Integradas  
+### Variáveis Internas
 
 ```css
 :root {
   font-family: "汉仪唐美人" !important; /* Fonte */
 }
 
-/* Cor da fonte expandida em reflexão profunda */
+/* Cor do texto expandido de pensamento profundo */
 .ant-collapse-content-box .markdown {
   color: red;
 }
 
-/* Variáveis de tema */
+/* Variáveis do tema */
 :root {
   --color-black-soft: #2a2b2a; /* Cor de fundo escura */
   --color-white-soft: #f8f7f2; /* Cor de fundo clara */
@@ -48,7 +51,7 @@ Você pode alterar a aparência do software para se adequar melhor às suas pref
 
 /* Tema escuro */
 body[theme-mode="dark"] {
-  /* Cores */
+  /* Colors */
   --color-background: #2b2b2b; /* Cor de fundo escura */
   --color-background-soft: #303030; /* Cor de fundo clara */
   --color-background-mute: #282c34; /* Cor de fundo neutra */
@@ -58,10 +61,10 @@ body[theme-mode="dark"] {
   --chat-background-assistant: #2d2e2d; /* Cor de fundo do chat do assistente */
 }
 
-/* Estilos específicos para tema escuro */
+/* Estilos específicos do tema escuro */
 body[theme-mode="dark"] {
   #content-container {
-    background-color: var(-–chat-background-assistant) !important; /* Cor de fundo do container de conteúdo */
+    background-color: var(-–chat-background-assistant) !important; /* Cor de fundo do contêiner de conteúdo */
   }
 
   #content-container #messages {
@@ -69,25 +72,25 @@ body[theme-mode="dark"] {
   }
 
   .inputbar-container {
-    background-color: #3d3d3a; /* Cor de fundo da barra de entrada */
-    border: 1px solid #5e5d5940; /* Cor da borda da barra de entrada */
-    border-radius: 8px; /* Raio da borda da barra de entrada */
+    background-color: #3d3d3a; /* Cor de fundo da caixa de entrada */
+    border: 1px solid #5e5d5940; /* Cor da borda da caixa de entrada */
+    border-radius: 8px; /* Raio da borda da caixa de entrada */
   }
 
-  /* Estilos de código */
+  /* Estilo de código */
   code {
     background-color: #e5e5e20d; /* Cor de fundo do código */
     color: #ea928a; /* Cor do texto do código */
   }
 
   pre code {
-    color: #abb2bf; /* Cor do texto de código pré-formatado */
+    color: #abb2bf; /* Cor do texto do código pré-formatado */
   }
 }
 
 /* Tema claro */
 body[theme-mode="light"] {
-  /* Cores */
+  /* Colors */
   --color-white: #ffffff; /* Branco */
   --color-background: #ebe8e2; /* Cor de fundo clara */
   --color-background-soft: #cbc7be; /* Cor de fundo clara */
@@ -98,10 +101,10 @@ body[theme-mode="light"] {
   --chat-background-assistant: #f6f4ec; /* Cor de fundo do chat do assistente */
 }
 
-/* Estilos específicos para tema claro */
+/* Estilos específicos do tema claro */
 body[theme-mode="light"] {
   #content-container {
-    background-color: var(-–chat-background-assistant) !important; /* Cor de fundo do container de conteúdo */
+    background-color: var(-–chat-background-assistant) !important; /* Cor de fundo do contêiner de conteúdo */
   }
 
   #content-container #messages {
@@ -109,27 +112,27 @@ body[theme-mode="light"] {
   }
 
   .inputbar-container {
-    background-color: #ffffff; /* Cor de fundo da barra de entrada */
-    border: 1px solid #87867f40; /* Cor da borda da barra de entrada */
-    border-radius: 8px; /* Raio da borda da barra de entrada (ajuste conforme preferência) */
+    background-color: #ffffff; /* Cor de fundo da caixa de entrada */
+    border: 1px solid #87867f40; /* Cor da borda da caixa de entrada */
+    border-radius: 8px; /* Raio da borda da caixa de entrada (ajuste conforme preferência) */
   }
 
-  /* Estilos de código */
+  /* Estilo de código */
   code {
     background-color: #3d39290d; /* Cor de fundo do código */
     color: #7c1b13; /* Cor do texto do código */
   }
 
   pre code {
-    color: #000000; /* Cor do texto de código pré-formatado */
+    color: #000000; /* Cor do texto do código pré-formatado */
   }
 }
 ```
 
-Consulte o código-fonte para mais variáveis de tema: [https://github.com/CherryHQ/cherry-studio/tree/main/src/renderer/src/assets/styles](https://github.com/CherryHQ/cherry-studio/tree/main/src/renderer/src/assets/styles)  
+Para mais variáveis de tema, consulte o código-fonte: [https://github.com/CherryHQ/cherry-studio/tree/main/src/renderer/src/assets/styles](https://github.com/CherryHQ/cherry-studio/tree/main/src/renderer/src/assets/styles)
 
-### Recomendações Relacionadas  
+### Recomendações Relacionadas
 
-Biblioteca de temas do Cherry Studio: [https://github.com/boilcy/cherrycss](https://github.com/boilcy/cherrycss)  
+Biblioteca de temas do Cherry Studio: [https://github.com/boilcy/cherrycss](https://github.com/boilcy/cherrycss)
 
-Compartilhando skins de tema estilo chinês para Cherry Studio: [https://linux.do/t/topic/325119/129](https://linux.do/t/topic/325119/129)
+Compartilhe temas de Cherry Studio com estilo chinês: [https://linux.do/t/topic/325119/129](https://linux.do/t/topic/325119/129)

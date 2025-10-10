@@ -1,102 +1,104 @@
 # Provedores Personalizados
 
+
 {% hint style="warning" %}
 Este documento foi traduzido do chinês por IA e ainda não foi revisado.
 {% endhint %}
 
-## Provedores Personalizados
 
-O Cherry Studio não apenas integra os principais serviços de modelos de IA, mas também oferece poderosas capacidades de personalização. Com o recurso **Provedores Personalizados de IA**, você pode integrar facilmente qualquer modelo de IA que necessitar.
 
-### Por que usar Provedores Personalizados de IA?
 
-* **Flexibilidade:** Liberte-se das limitações da lista pré-definida de provedores e escolha livremente os modelos de IA mais adequados às suas necessidades.
-* **Diversidade:** Experimente modelos de IA de várias plataformas para explorar seus pontos fortes exclusivos.
+Cherry Studio não apenas integra os principais serviços de modelos de IA, mas também oferece recursos poderosos de personalização. Com o recurso **Provedores de IA Personalizados**, você pode integrar facilmente qualquer modelo de IA que desejar.
+
+## Por que usar provedores de IA personalizados?
+
+* **Flexibilidade:** Não fique limitado à lista de provedores pré-definidos, escolha livremente os modelos de IA que melhor atendem às suas necessidades.
+* **Diversidade:** Experimente modelos de IA de várias plataformas diferentes e descubra suas vantagens únicas.
 * **Controle:** Gerencie diretamente suas chaves de API e endereços de acesso, garantindo segurança e privacidade.
-* **Personalização:** Integre modelos implantados de forma privada para atender a cenários comerciais específicos.
+* **Personalização:** Integre modelos implantados de forma privada para atender às necessidades de cenários de negócios específicos.
 
-### Como adicionar um Provedor Personalizado de IA?
+## Como adicionar um provedor de IA personalizado?
 
-Siga estes passos simples para adicionar seu provedor personalizado no Cherry Studio:
+Em apenas alguns passos simples, você pode adicionar seu provedor de IA personalizado no Cherry Studio:
 
 <figure><img src="../../.gitbook/assets/image (2) (5).png" alt=""><figcaption></figcaption></figure>
 
-1. **Abra as Configurações:** Na barra de navegação esquerda do Cherry Studio, clique em "Configurações" (ícone de engrenagem).
-2. **Acesse Serviços de Modelos:** Na página de configurações, selecione a aba "Serviços de Modelos".
-3. **Adicione Provedor:** Na página "Serviços de Modelos", você verá a lista de provedores existentes. Clique no botão "+ Adicionar" abaixo da lista para abrir o pop-up "Adicionar Provedor".
-4. **Preencha as Informações:** No pop-up, preencha:
-   * **Nome do Provedor:** Dê um nome identificável (ex: MyCustomOpenAI).
-   * **Tipo de Provedor:** Selecione na lista suspensa. Atualmente suportado:
+1. **Abrir configurações:** Na barra de navegação esquerda do Cherry Studio, clique em "Configurações" (ícone de engrenagem).
+2. **Acessar serviços de modelo:** Na página de configurações, selecione a guia "Serviços de Modelo".
+3. **Adicionar provedor:** Na página "Serviços de Modelo", você verá a lista de provedores existentes. Clique no botão "+ Adicionar" abaixo da lista para abrir o pop-up "Adicionar Provedor".
+4. **Preencher informações:** No pop-up, preencha os seguintes campos:
+   * **Nome do provedor:** Dê um nome identificável ao seu provedor personalizado (ex: MyCustomOpenAI).
+   * **Tipo de provedor:** Selecione o tipo na lista suspensa. Atualmente suportados:
      * OpenAI
      * Gemini
      * Anthropic
      * Azure OpenAI
-5. **Salve a Configuração:** Após preencher, clique em "Adicionar" para salvar.
+5. **Salvar configuração:** Após preencher, clique em "Adicionar" para salvar sua configuração.
 
-### Configurando o Provedor Personalizado
+## Configurar provedor de IA personalizado
 
 <figure><img src="../../.gitbook/assets/image (3) (5) (1).png" alt=""><figcaption></figcaption></figure>
 
-Após adicionar, encontre seu provedor na lista e configure:
+Após adicionar, encontre seu provedor na lista e faça a configuração detalhada:
 
-1. **Status de Ativação:** O interruptor à direita da lista ativa/desativa o serviço.
-2. **Chave da API:**
-   * Insira sua chave de API (API Key) fornecida pelo provedor.
-   * Clique em "Verificar" à direita para validar a chave.
+1. **Status de ativação:** No extremo direito da lista de provedores personalizados há um interruptor de ativação. Ative para habilitar o serviço personalizado.
+2. **Chave de API:**
+   * Insira a chave de API (API Key) fornecida pelo seu provedor de IA.
+   * Clique no botão "Verificar" à direita para validar a chave.
 3. **Endereço da API:**
-   * Insira o endereço de acesso da API (Base URL).
-   * Consulte a documentação oficial do provedor para obter o endereço correto.
-4.  **Gerenciamento de Modelos:**
-
-    * Clique em "+ Adicionar" para incluir manualmente os IDs dos modelos que deseja usar (ex: `gpt-3.5-turbo`, `gemini-pro`).
+   * Insira o endereço base da API (Base URL).
+   * Consulte sempre a documentação oficial do seu provedor de IA para obter o endereço correto.
+4. **Gerenciamento de modelos:**
+   * Clique em "+ Adicionar" para incluir manualmente os IDs dos modelos que deseja usar neste provedor (ex: `gpt-3.5-turbo`, `gemini-pro`).
 
     <figure><img src="../../.gitbook/assets/image (4) (5).png" alt=""><figcaption></figcaption></figure>
 
-    \* Consulte a documentação oficial se não souber os nomes exatos.\
-    \* Clique em "Gerenciar" para editar ou excluir modelos adicionados.
+    * Consulte a documentação oficial do seu provedor de IA se não souber os nomes exatos dos modelos.
+    * Clique em "Gerenciar" para editar ou remover modelos já adicionados.
 
-### Começando a Usar
+## Começando a usar
 
-Após a configuração, selecione seu provedor e modelo no chat do Cherry Studio para iniciar conversas com a IA!
+Após completar as configurações, você poderá selecionar seu provedor de IA personalizado e modelo na interface de chat do Cherry Studio para iniciar conversas com a IA!
 
-### Usando o vLLM como Provedor Personalizado
+## Usando vLLM como provedor de IA personalizado
 
-O vLLM é uma biblioteca de inferência de LLM rápida e fácil de usar, similar ao Ollama. Siga estes passos para integrá-lo ao Cherry Studio:
+vLLM é uma biblioteca de inferência para LLMs rápida e fácil de usar, similar ao Ollama. Veja como integrá-lo ao Cherry Studio:
 
-1.  **Instale o vLLM:** Siga o guia oficial ([https://docs.vllm.ai/en/latest/getting\_started/quickstart.html](https://docs.vllm.ai/en/latest/getting_started/quickstart.html)).
+1. **Instalar vLLM:** Siga a documentação oficial do vLLM ([https://docs.vllm.ai/en/latest/getting_started/quickstart.html](https://docs.vllm.ai/en/latest/getting_started/quickstart.html)) para instalação.
 
     ```sh
-    pip install vllm  # Se usar pip
-    uv pip install vllm  # Se usar uv
+    pip install vllm # se você usa pip
+    uv pip install vllm # se você usa uv
     ```
-2.  **Inicie o Serviço vLLM:** Use a interface compatível com OpenAI:
+2. **Iniciar serviço vLLM:** Use a interface compatível com OpenAI fornecida pelo vLLM. Duas formas principais:
 
-    * Via `vllm.entrypoints.openai.api_server`:
+    * Usando `vllm.entrypoints.openai.api_server`
 
     ```sh
     python -m vllm.entrypoints.openai.api_server --model gpt2
     ```
 
-    * Via `uvicorn`:
+    * Usando `uvicorn`
 
     ```sh
     vllm --model gpt2 --served-model-name gpt2
     ```
 
-    O serviço rodará na porta padrão `8000`. Use `--port` para especificar outra porta.
-3. **Adicione o vLLM no Cherry Studio:**
-   * Siga os passos anteriores para adicionar novo provedor.
-   * **Nome do Provedor:** `vLLM`
-   * **Tipo de Provedor:** Selecione `OpenAI`.
-4. **Configure o vLLM:**
-   * **Chave da API:** Deixe em branco ou insira qualquer conteúdo (vLLM não requer chave).
-   * **Endereço da API:** Insira o endereço do vLLM (padrão: `http://localhost:8000/`).
-   * **Gerenciamento de Modelos:** Adicione o nome do modelo carregado (ex: `gpt2` para o exemplo acima).
-5. **Inicie as Conversas:** Selecione o provedor vLLM e o modelo (ex: `gpt2`) para conversar com o LLM via vLLM!
+Certifique-se que o serviço iniciou corretamente na porta padrão `8000`. Você pode especificar outra porta usando o parâmetro `--port`.
 
-### Dicas e Truques
+3. **Adicionar provedor vLLM no Cherry Studio:**
+   * Siga os passos anteriores para adicionar um novo provedor de IA personalizado.
+   * **Nome do provedor:** `vLLM`
+   * **Tipo de provedor:** Selecione `OpenAI`.
+4. **Configurar provedor vLLM:**
+   * **Chave de API:** Como vLLM não requer chave, deixe em branco ou insira qualquer valor.
+   * **Endereço da API:** Insira o endereço da API do vLLM. Padrão: `http://localhost:8000/` (ajuste se usar porta diferente).
+   * **Gerenciamento de modelos:** Adicione o nome do modelo carregado no vLLM. No exemplo `python -m vllm.entrypoints.openai.api_server --model gpt2`, insira `gpt2`.
+5. **Iniciar conversa:** Selecione agora o provedor vLLM e o modelo `gpt2` no Cherry Studio para conversar com o LLM acionado pelo vLLM!
 
-* **Leia a Documentação:** Antes de adicionar provedores, consulte a documentação oficial sobre chaves de API, endereços e nomes de modelos.
-* **Verifique as Chaves:** Use o botão "Verificar" para validar chaves rapidamente.
-* **Endereços Precisos:** Diferentes provedores e modelos podem ter endereços distintos.
-* **Modelos Necessários:** Adicione apenas modelos que realmente utilizará para evitar excessos.
+## Dicas e boas práticas
+
+* **Revise a documentação:** Sempre consulte a documentação oficial do seu provedor de IA antes de adicioná-lo.
+* **Verifique a chave API:** Use o botão "Verificar" para evitar falhas devido a chaves inválidas.
+* **Atenção ao endereço API:** Diferentes provedores e modelos podem exigir endereços distintos.
+* **Adição seletiva de modelos:** Adicione apenas modelos que realmente utilizará, evitando excessos.

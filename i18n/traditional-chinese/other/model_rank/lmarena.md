@@ -10,7 +10,7 @@
 
 這是一個基於 Chatbot Arena (lmarena.ai) 資料的排行榜，透過自動化流程產生。
 
-> **資料更新時間**: 2025-09-29 11:35:52 UTC / 2025-09-29 19:35:52 CST (北京時間)
+> **資料更新時間**: 2025-10-10 08:10:01 UTC / 2025-10-10 16:10:01 CST (北京時間)
 
 {% hint style="info" %}
 點擊排行榜中的 **模型名稱** 可跳轉至其詳細資訊或試用頁面。
@@ -18,36 +18,110 @@
 
 ## 排行榜
 
-|   排名(UB) |   排名(StyleCtrl) | 模型名                                                                                                                             |   分數 | 置信區間    | 票數      | 服務商                    | 許可協議                    | 知識截止日期   |
-|:---|:---|:---|:---|:---|:---|:---|:---|:---|
-|        1 |               1 | [Gemini-2.5-Pro](http://aistudio.google.com/app/prompts/new_chat?model=gemini-2.5-pro)                                          | 1470 | +5/-5   | 26,019  | Google                 | Proprietary             | nan      |
-|        2 |               2 | [Gemini-2.5-Pro-Preview-05-06](http://aistudio.google.com/app/prompts/new_chat?model=gemini-2.5-pro-preview-05-06)              | 1446 | +6/-6   | 13,715  | Google                 | Proprietary             | nan      |
-|        3 |               2 | [GLM-4.5](https://z.ai/blog/glm-4.5)                                                                                            | 1434 | +9/-9   | 4,112   | Z.ai                   | MIT                     | nan      |
-|        4 |               2 | [Grok-4-0709](https://docs.x.ai/docs/models/grok-4-0709)                                                                        | 1434 | +6/-6   | 13,058  | xAI                    | Proprietary             | nan      |
-|        5 |               3 | [ChatGPT-4o-latest (2025-03-26)](https://x.com/OpenAI/status/1905331956856050135)                                               | 1429 | +4/-4   | 30,777  | OpenAI                 | Proprietary             | nan      |
-|        6 |               3 | [o3-2025-04-16](https://openai.com/index/introducing-o3-and-o4-mini/)                                                           | 1428 | +4/-4   | 32,033  | OpenAI                 | Proprietary             | nan      |
-|        7 |               3 | [Qwen3-235B-A22B-Instruct-2507](https://huggingface.co/Qwen/Qwen3-235B-A22B-Instruct-2507)                                      | 1427 | +9/-9   | 4,154   | Alibaba                | Apache 2.0              | nan      |
-|        8 |               3 | [DeepSeek-R1-0528](https://api-docs.deepseek.com/news/news250528)                                                               | 1427 | +5/-5   | 18,284  | DeepSeek               | MIT                     | nan      |
-|        9 |               4 | [Grok-3-Preview-02-24](https://x.ai/blog/grok-3)                                                                                | 1423 | +4/-4   | 31,757  | xAI                    | Proprietary             | nan      |
-|       10 |               8 | [Llama-4-Maverick-03-26-Experimental](https://ai.meta.com/blog/llama-4-multimodal-intelligence/)                                | 1416 | +4/-4   | 26,604  | Meta                   | nan                     | nan      |
-（以下表格內容完整保留原始結構和技術術語，僅翻譯中文字段。因篇幅限制，此處展示前10行，完整表格保持相同處理原則）
-
-## 說明
-
-- **排名(UB)**：基於 Bradley-Terry 模型計算的排名。此排名反映了模型在競技場中的綜合表現，並提供了其 Elo 分數的 **上界** 估計，幫助理解模型的潛在競爭力。
-- **排名(StyleCtrl)**：經過對話風格控制後的排名。此排名旨在減少因模型回覆風格（例如冗長、簡潔）帶來的偏好偏差，更純粹地評估模型的核心能力。
-- **模型名**：大型語言模型 (LLM) 的名稱。此列已嵌入模型相關連結，點擊可跳轉。
-- **分數**：模型在競技場中透過使用者投票獲得的 Elo 評分。Elo 評分是一種相對排名系統，分數越高表示模型表現越好。該分數是動態變化的，反映了模型在當前競爭環境中的相對實力。
-- **置信區間**：模型 Elo 評分的95%置信區間（例如：`+6/-6`）。這個區間越小，表示模型的評分越穩定和可靠；反之，區間越大可能意味著資料量不足或模型表現波動較大。它提供了對評分準確性的量化評估。
-- **票數**：該模型在競技場中收到的總投票數量。投票數越多，通常意味著其評分的統計可靠性越高。
-- **服務商**：提供該模型的組織或公司。
-- **許可協議**：模型的許可協議類型，例如專有 (Proprietary)、Apache 2.0、MIT 等。
-- **知識截止日期**：模型訓練資料的知識截止日期。**暫無資料** 表示相關資訊未提供或未知。
-
-## 資料來源與更新頻率
-
-本排行榜資料由 [fboulnois/llm-leaderboard-csv](https://github.com/fboulnois/llm-leaderboard-csv) 專案自動產生並提供，該專案從 [lmarena.ai](https://lmarena.ai/) 取得並處理資料。此排行榜由 GitHub Actions 每天自動更新。
-
-## 免責聲明
-
-本報告僅供參考。排行榜資料是動態變化的，並基於特定時間段內使用者在 Chatbot Arena 上的偏好投票。資料的完整性和準確性取決於上游資料源及 `fboulnois/llm-leaderboard-csv` 專案的更新和處理。不同模型可能採用不同的許可協議，使用時請務必參考模型供應商的官方說明。
+|   排名 (UB) | 模型                                               | 分數              | 95% 置信區間 (±)   |     票數 | 組織/公司                  | 許可證                     |
+|----------:|:-------------------------------------------------|:----------------|:---------------|-------:|:-----------------------|:------------------------|
+|         1 | gemini-2.5-pro                                   | 1452            | ±4             |  52621 | Google                 | Proprietary             |
+|         1 | Anthropicclaude-sonnet-4-5-20250929-thinking-32k | 1448            | ±9             |   4415 | Anthropic              | Proprietary             |
+|         1 | Anthropicclaude-opus-4-1-20250805-thinking-16k   | 1448            | ±5             |  19933 | Anthropic              | Proprietary             |
+|         2 | chatgpt-4o-latest-20250326                       | 1441            | ±4             |  37775 | OpenAI                 | Proprietary             |
+|         2 | gpt-4.5-preview-2025-02-27                       | 1441            | ±6             |  14644 | OpenAI                 | Proprietary             |
+|         2 | gpt-5-high                                       | 1440            | ±6             |  21844 | OpenAI                 | Proprietary             |
+|         2 | o3-2025-04-16                                    | 1440            | ±4             |  50195 | OpenAI                 | Proprietary             |
+|         2 | Anthropicclaude-opus-4-1-20250805                | 1438            | ±5             |  31452 | Anthropic              | Proprietary             |
+|         2 | Anthropicclaude-sonnet-4-5-20250929              | 1437            | ±9             |   4116 | Anthropic              | Proprietary             |
+|         3 | qwen3-max-preview                                | 1434            | ±6             |  16788 | Alibaba                | Proprietary             |
+|         8 | qwen3-max-2025-09-23                             | 1425            | ±8             |   5484 | Alibaba                | Proprietary             |
+|         9 | gpt-5-chat                                       | 1426            | ±5             |  20244 | OpenAI                 | Proprietary             |
+|         9 | glm-4.6                                          | 1421            | ±11            |   3056 | Z.ai                   | MIT                     |
+|         9 | grok-4-fast                                      | 1420            | ±8             |   6139 | xAI                    | Proprietary             |
+|         9 | deepseek-v3.2-exp-thinking                       | 1418            | ±11            |   3017 | DeepSeek AI            | MIT                     |
+|        11 | Anthropicclaude-opus-4-20250514-thinking-16k     | 1420            | ±5             |  34260 | Anthropic              | Proprietary             |
+|        11 | qwen3-235b-a22b-instruct-2507                    | 1418            | ±5             |  28000 | Alibaba                | Apache 2.0              |
+|        11 | qwen3-vl-235b-a22b-instruct                      | 1418            | ±8             |   4940 | Alibaba                | Apache 2.0              |
+|        11 | deepseek-r1-0528                                 | 1417            | ±6             |  19488 | DeepSeek               | MIT                     |
+|        11 | MoonshotAIkimi-k2-0905-preview                   | 1416            | ±7             |  10930 | Moonshot               | Modified MIT            |
+|        11 | deepseek-v3.2-exp                                | 1416            | ±11            |   3138 | DeepSeek AI            | MIT                     |
+|        11 | deepseek-v3.1-terminus                           | 1415            | ±10            |   3837 | DeepSeek AI            | MIT                     |
+|        11 | deepseek-v3.1-thinking                           | 1415            | ±7             |  12276 | DeepSeek               | MIT                     |
+|        11 | deepseek-v3.1                                    | 1415            | ±6             |  15610 | DeepSeek               | MIT                     |
+|        11 | deepseek-v3.1-terminus-thinking                  | 1414            | ±10            |   3585 | DeepSeek AI            | MIT                     |
+|        12 | MoonsshotAIkimi-k2-0711-preview                   | 1416            | ±5             |  28720 | Moonshot               | Modified MIT            |
+|        12 | grok-4-0709                                      | 1415            | ±5             |  28195 | xAI                    | Proprietary             |
+|        13 | Anthropicclaude-opus-4-20250514                  | 1412            | ±5             |  42040 | Anthropic              | Proprietary             |
+|        13 | gpt-4.1-2025-04-14                               | 1411            | ±4             |  40796 | OpenAI                 | Proprietary             |
+|        14 | grok-3-preview-02-24                             | 1409            | ±4             |  34398 | xAI                    | Proprietary             |
+|        14 | gemini-2.5-flash-preview-09-2025                 | 1406            | ±8             |   5240 | Google                 | Proprietary             |
+|        15 | gemini-2.5-flash                                 | 1408            | ±4             |  52124 | Google                 | Proprietary             |
+|        15 | mistral-medium-2508                              | 1407            | ±5             |  22377 | Mistral                | Proprietary             |
+|        16 | glm-4.5                                          | 1406            | ±5             |  21546 | Z.ai                   | MIT                     |
+|        22 | qwen3-next-80b-a3b-instruct                      | 1403            | ±7             |  11329 | Alibaba                | Apache 2.0              |
+|        26 | longcat-flash-chat                               | 1400            | ±7             |  10719 | Meituan                | MIT                     |
+|        32 | o1-2024-12-17                                    | 1399            | ±4             |  28039 | OpenAI                 | Proprietary             |
+|        32 | Anthropicclaude-sonnet-4-20250514-thinking-32k   | 1398            | ±5             |  32667 | Anthropic              | Proprietary             |
+|        32 | qwen3-235b-a22b-thinking-2507                    | 1397            | ±6             |   9481 | Alibaba                | Apache 2.0              |
+|        33 | qwen3-235b-a22b-no-thinking                      | 1397            | ±5             |  38912 | Alibaba                | Apache 2.0              |
+|        34 | deepseek-r1                                      | 1394            | ±5             |  18718 | DeepSeek               | MIT                     |
+|        34 | gpt-5-mini-high                                  | 1394            | ±6             |  17047 | OpenAI                 | Proprietary             |
+|        36 | deepseek-v3-0324                                 | 1391            | ±4             |  43304 | DeepSeek               | MIT                     |
+|        36 | o4-mini-2025-04-16                               | 1391            | ±4             |  40364 | OpenAI                 | Proprietary             |
+|        36 | mai-1-preview                                    | 1390            | ±6             |  13584 | Microsoft AI           | Proprietary             |
+|        36 | qwen3-vl-235b-a22b-thinking                      | 1387            | ±9             |   4648 | Alibaba                | Apache 2.0              |
+|        39 | Anthropicclaude-sonnet-4-20250514                | 1389            | ±5             |  38182 | Anthropic              | Proprietary             |
+|        39 | Tencenthunyuan-t1-20250711                       | 1384            | ±9             |   4912 | Tencent                | Proprietary             |
+|        40 | qwen3-30b-a3b-instruct-2507                      | 1385            | ±5             |  20539 | Alibaba                | Apache 2.0              |
+|        41 | o1-preview                                       | 1386            | ±5             |  31505 | OpenAI                 | Proprietary             |
+|        41 | Anthropicclaude-3-7-sonnet-20250219-thinking-32k | 1385            | ±4             |  39149 | Anthropic              | Proprietary             |
+|        42 | qwen3-coder-480b-a35b-instruct                   | 1383            | ±5             |  22533 | Alibaba                | Apache 2.0              |
+|        45 | mistral-medium-2505                              | 1381            | ±5             |  33891 | Mistral                | Proprietary             |
+|        45 | Tencenthunyuan-turbos-20250416                   | 1379            | ±6             |  11218 | Tencent                | Proprietary             |
+|        46 | gpt-4.1-mini-2025-04-14                          | 1379            | ±4             |  39894 | OpenAI                 | Proprietary             |
+|        52 | qwen3-235b-a22b                                  | 1371            | ±5             |  26485 | Alibaba                | Apache 2.0              |
+|        54 | qwen2.5-max                                      | 1371            | ±4             |  33673 | Alibaba                | Proprietary             |
+|        54 | qwen3-next-80b-a3b-thinking                      | 1369            | ±7             |  10184 | Alibaba                | Apache 2.0              |
+|        55 | glm-4.5-air                                      | 1368            | ±5             |  20682 | Z.ai                   | MIT                     |
+|        56 | AnthropicClaude 3.5 Sonnet (10/22)               | 1369            | ±3             |  89073 | Anthropic              | Proprietary             |
+|        56 | Minimaxminimax-m1                                | 1367            | ±5             |  30848 | MiniMax                | Apache 2.0              |
+|        56 | grok-3-mini-high                                 | 1362            | ±5             |  17012 | xAI                    | Proprietary             |
+|        58 | o3-mini-high                                     | 1361            | ±5             |  18735 | OpenAI                 | Proprietary             |
+|        59 | gemma-3-27b-it                                   | 1362            | ±4             |  43379 | Google                 | Gemma                   |
+|        62 | grok-3-mini-beta                                 | 1356            | ±5             |  23124 | xAI                    | Proprietary             |
+|        62 | deepseek-v3                                      | 1356            | ±5             |  21994 | DeepSeek               | DeepSeek                |
+|        62 | ling-flash-2.0                                   | 1349Preliminary | ±10            |   3513 | Ant Group              | MIT                     |
+|        62 | glm-4.5v                                         | 1348            | ±9             |   4043 | Z.ai                   | MIT                     |
+|        64 | mistral-small-2506                               | 1351            | ±5             |  17636 | Mistral                | Apache 2.0              |
+|        65 | gemini-2.0-flash-lite-preview-02-05              | 1351            | ±4             |  25215 | Google                 | Proprietary             |
+|        65 | Gemini-1.5-Pro-002                               | 1350            | ±3             |  56012 | Google                 | Proprietary             |
+|        65 | Coherecommand-a-03-2025                          | 1348            | ±4             |  46245 | Cohere                 | CC-BY-NC-4.0            |
+|        65 | gpt-oss-120b                                     | 1347            | ±6             |  19799 | OpenAI                 | Apache 2.0              |
+|        65 | Tencenthunyuan-turbos-20250226                   | 1344            | ±12            |   2250 | Tencent                | Proprietary             |
+|        65 | Nvidiallama-3.1-nemotron-ultra-253b-v1           | 1344            | ±12            |   2573 | Nvidia                 | Nvidia Open Model       |
+|        65 | qwen3-32b                                        | 1343            | ±10            |   3943 | Alibaba                | Apache 极客版 2.0              |
+|        66 | qwen-plus-0125                                   | 1343            | ±8             |   5861 | Alibaba                | Proprietary             |
+|        67 | o3-mini                                          | 1347            | ±3             |  58293 | OpenAI                 | Proprietary             |
+|        67 | Stepfunstep-3                                    | 1343            | ±8             |   5777 | StepFun                | Apache 2.0              |
+|        67 | glm-4-plus-0111                                  | 1342            | ±8             |   5806 | Zhipu                  | Proprietary             |
+|        67 | gemma-3-12b-it                                   | 1340            | ±10            |   3866 | Google                 | Gemma                   |
+|        67 | Nvidianvidia-llama-3.3-nemotron-super-49b-v1.5   | 1339            | ±10            |   3548 | Nvidia                 | Nvidia Open             |
+|        67 | Tencenthunyuan-turbo-0110                        | 1337            | ±11            |   2322 | Tencent                | Proprietary             |
+|        69 | gpt-4o-2024-05-13                                | 1343            | ±3             | 113568 | OpenAI                 | Proprietary             |
+|        70 | gpt-5-nano-high                                  | 1339            | ±极客版 7             |   7544 | OpenAI                 | Proprietary             |
+|        72 | AnthropicClaude 3.5 Sonnet (06/20)               | 1340            | ±3             |  82864 | Anthropic              | Proprietary             |
+|        75 | Stepfunstep-2-16k-exp-202412                     | 1331            | ±8             |   4895 | StepFun                | Proprietary             |
+|        76 | Metallama-3.1-405b-instruct-bf16                 | 1334            | ±4             |  41932 | Meta                   | Llama 3.1 Community     |
+|        77 | o1-mini                                          | 1333            | ±3             |  52301极客版 | OpenAI                 | Proprietary             |
+|        77 | GPT-4o (08/06)                                   | 1332            | ±4             |  45787 | OpenAI                 | Proprietary             |
+|        77 | Metallama-3.1-405b-instruct-fp8                  | 1332            | ±3             |  60272 | Meta                   | Llama 3.1 Community     |
+|        77 | grok-2-2024-08-13                                | 1332            | ±3             |  63725 | xAI                    | Proprietary             |
+|        77 | gemini-advanced-0514                             | 1332            | ±5             |  50654 | Google                 | Proprietary             |
+|        77 | qwq-32b                                          | 1332            | ±4             |  25743 | Alibaba                | Apache 2.0              |
+|        77 | Nvidiallama-3.3-nemotron-49b-super-v1            | 1323            | ±12            |   2243 | Nvidia                 | Nvidia                  |
+|        83 | Tencenthunyuan-large-2025-02-10                  | 1323            | ±10            |   3760 | Tencent                | Proprietary             |
+|        84 | Metallama-4-maverick-17b-128e-instruct           | 1326            | ±4             |  40594 | Meta                   | Llama 4                 |
+|        84 | 01.AIyi-lightning                                | 1326            | ±5             |  27624 | 01 AI                  | Proprietary             |
+|        87 | qwen3-30b-a3b                                    | 1325            | ±5             |  26741 | Alibaba                | Apache 2.0              |
+|        91 | deepseek-v2.5-1210                               | 1320            | ±8             |   6877 | DeepSeek               | DeepSeek                |
+|        93 | gpt-4-turbo-2024-04-09                           | 1322            | ±4             |  98965 | OpenAI                 | Proprietary             |
+|        93 | gpt-4.1-nano-2025-04-14                          | 1319            | ±8             |   6143 | OpenAI                 | Proprietary             |
+|        93 | Stepfunstep-1o-turbo-202506                      | 1319            | ±7             |   9748 | StepFun                | Proprietary             |
+|        93 | ring-flash-2.0                                   | 1315Preliminary | ±10            |   3560 | Ant Group              | MIT                     |
+|        94 | Anthropicclaude-3-op

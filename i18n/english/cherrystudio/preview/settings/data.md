@@ -11,18 +11,18 @@ This document was translated from Chinese by AI and has not yet been reviewed.
 
 
 
-This interface allows for local and cloud data backup and recovery, local data directory inquiry and cache clearing, export settings, and third-party connections.
+This interface allows for local and cloud data backup and recovery, local data directory query and cache clearing, export settings, and third-party connections, among other operations.
 
 ### Data Backup
 
-Currently, data backup supports three methods: local backup, WebDAV backup, and S3-compatible storage (object storage) backup. For specific introductions and tutorials, please refer to the following documents:
+Data backup currently supports three methods: local backup, WebDAV backup, and S3-compatible storage (object storage) backup. For detailed introductions and tutorials, please refer to the following documents:
 
 - [WebDAV Backup Tutorial](../../../data-settings/WebDAV.md)
-- [S3-Compatible Storage Backup](../../../data-settings/s3-compatible.md)
+- [S3 Compatible Storage Backup](../../../data-settings/s3-compatible.md)
 
 ### Export Settings
 
-Export settings allow you to configure the export options displayed in the export menu, as well as set the default path for Markdown exports, display styles, and more.
+Export settings allow you to configure the export options displayed in the export menu, as well as set the default path, display style, and more for Markdown exports.
 
 ### Third-Party Connections
 

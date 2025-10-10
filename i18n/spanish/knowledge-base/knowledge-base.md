@@ -1,39 +1,42 @@
 ---
 icon: book-open-cover
 ---
+# Tutorial de Base de Conocimientos
+
 
 {% hint style="warning" %}
 Este documento ha sido traducido del chino por IA y aún no ha sido revisado.
 {% endhint %}
 
-# Tutorial de Base de Conocimientos
 
-En la versión 0.9.1, CherryStudio introdujo la tan esperada función de base de conocimientos.
 
-A continuación, presentamos instrucciones detalladas paso a paso sobre cómo usar CherryStudio.
 
-## Agregar Modelos de Incrustación
+En la versión 0.9.1, CherryStudio presenta la tan esperada función de base de conocimientos.
 
-1. Busca modelos en el servicio de gestión de modelos; puedes filtrar rápidamente haciendo clic en "Modelos de Incrustación";
-2. Encuentra el modelo necesario y agrégalo a Mis Modelos.
+A continuación, proporcionaremos instrucciones detalladas paso a paso para usar CherryStudio.
+
+## Agregar Modelo de Incrustación
+
+1. Busque modelos en el servicio de gestión de modelos; puede hacer clic en "Modelo de Incrustación" para filtrar rápidamente;
+2. Encuentre el modelo que necesita y agréguelo a Mis Modelos.
 
 <figure><img src="../.gitbook/assets/image.webp" alt=""><figcaption></figcaption></figure>
 
 ## Crear Base de Conocimientos
 
-1. Entrada a la base de conocimientos: en la barra de herramientas izquierda de CherryStudio, haz clic en el icono de base de conocimientos para acceder a la página de gestión;
-2. Agregar base de conocimientos: haz clic en Agregar para comenzar a crear una base de conocimientos;
-3. Nombrar: ingresa el nombre de la base de conocimientos y agrega un modelo de incrustación; tomando bge-m3 como ejemplo, podrás completar la creación.
+1. Acceso a la base de conocimientos: en la barra de herramientas izquierda de CherryStudio, haga clic en el icono de base de conocimientos para ingresar a la página de gestión;
+2. Agregar base de conocimientos: haga clic en Agregar para comenzar a crear una base de conocimientos;
+3. Nombre: ingrese el nombre de la base de conocimientos y agregue un modelo de incrustación, tomando bge-m3 como ejemplo, para completar la creación.
 
 <figure><img src="../.gitbook/assets/image-1 (1).webp" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../.gitbook/assets/image-2 (1).webp" alt=""><figcaption></figcaption></figure>
 
-## Agregar Archivos y Vectorización
+## Agregar Archivos y Vectorizar
 
-1. Agregar archivos: haz clic en el botón Agregar archivos para abrir el selector de archivos;
-2. Seleccionar archivos: elige formatos compatibles como pdf, docx, pptx, xlsx, txt, md, mdx, etc., y ábrelos;
-3. Vectorización: el sistema procesará la vectorización automáticamente; cuando se muestre "Completado" (✓ verde), indica que la vectorización ha finalizado.
+1. Agregar archivos: haga clic en el botón para agregar archivos para abrir el selector de archivos;
+2. Seleccionar archivos: elija entre los formatos admitidos, como pdf, docx, pptx, xlsx, txt, md, mdx, etc., y ábralos;
+3. Vectorización: el sistema realizará automáticamente el procesamiento de vectorización; cuando se muestre completado (marca verde ✓), significa que la vectorización ha finalizado.
 
 <figure><img src="../.gitbook/assets/image-3.webp" alt=""><figcaption></figcaption></figure>
 
@@ -43,43 +46,43 @@ A continuación, presentamos instrucciones detalladas paso a paso sobre cómo us
 
 ## Agregar Datos de Múltiples Fuentes
 
-CherryStudio admite varias formas de agregar datos:
+CherryStudio admite múltiples formas de agregar datos:
 
-1. Directorios: puedes agregar directorios completos; los archivos compatibles se vectorizarán automáticamente;
-2. Enlaces web: admite URLs como [https://docs.siliconflow.cn/introduction](https://docs.siliconflow.cn/introduction);
-3. Mapas de sitio: admite mapas de sitio en formato XML como [https://docs.siliconflow.cn/sitemap.xml](https://docs.siliconflow.cn/sitemap.xml);
-4. Notas de texto plano: admite contenido personalizado mediante entrada de texto plano.
+1. Directorio de carpetas: puede agregar un directorio completo; los archivos en formatos admitidos dentro de este directorio se vectorizarán automáticamente;
+2. Enlace URL: admite URL, como [https://docs.siliconflow.cn/introduction](https://docs.siliconflow.cn/introduction);
+3. Mapa del sitio: admite mapas de sitio en formato XML, como [https://docs.siliconflow.cn/sitemap.xml](https://docs.siliconflow.cn/sitemap.xml);
+4. Notas de texto plano: admite la entrada de contenido personalizado en texto plano.
 
 {% hint style="info" %}
 Nota:
 
-1. Las ilustraciones en documentos importados aún no son compatibles con la conversión a vectores; debes convertirlas manualmente a texto;
-2. El uso de URLs como fuente no siempre es exitoso, ya que algunos sitios tienen medidas anti-scraping estrictas (o requieren inicio de sesión/autorización). Se recomienda probar con una búsqueda después de la creación;
-3. La mayoría de sitios web ofrecen sitemap, como el [sitemap de CherryStudio](https://docs.cherry-ai.com/sitemap-pages.xml). Generalmente se accede agregando `/sitemap.xml` a la URL raíz (ej: `aaa.com/sitemap.xml`);
-4. Si un sitio no tiene sitemap o tiene URLs complejas, puedes crear manualmente un archivo XML. El archivo debe tener un enlace público accesible. Los enlaces locales no se reconocen.
+1. Las ilustraciones en los documentos importados a la base de conocimientos aún no se pueden convertir en vectores; deben convertirse manualmente en texto.
+2. Al utilizar una URL como fuente de la base de conocimientos, puede que no siempre sea exitoso. Algunos sitios web tienen mecanismos anti-rastreo estrictos (o requieren inicio de sesión, autorización, etc.), por lo que este método podría no obtener el contenido preciso. Se recomienda realizar una búsqueda de prueba después de la creación.
+3. Generalmente, los sitios web proporcionan un sitemap, como el [sitemap](https://docs.cherry-ai.com/sitemap-pages.xml) de CherryStudio. Por lo general, puede obtener la información relevante agregando `/sitemap.xml` a la dirección raíz del sitio (es decir, la URL). Por ejemplo: `aaa.com/sitemap.xml`.
+4. Si el sitio web no proporciona un sitemap o las URL son demasiado complejas, puede crear manualmente un archivo XML de sitemap. Temporalmente, el archivo debe ser un enlace directo accesible públicamente; los enlaces a archivos locales no serán reconocidos.
 
-> 1) Puedes usar IA para generar sitemap o crear una herramienta generadora de HTML para sitemap;
-> 2) Para enlaces directos, usa OSS o servicios de almacenamiento. Sin herramientas, puedes iniciar sesión en [ocoolAI](https://one.ocoolai.com/login) y usar su herramienta gratuita de subida de archivos.
+> 1) Puede pedir a una IA que genere un archivo sitemap o que escriba una herramienta generadora de sitemap en HTML.
+> 2) Para los enlaces directos, puede utilizar enlaces directos de OSS o de servicios de almacenamiento en la nube. Si no tiene una herramienta existente, puede visitar el sitio web oficial de [ocoolAI](https://one.ocoolai.com/login), iniciar sesión y utilizar la herramienta gratuita de carga de archivos en la barra superior para generar un enlace directo.
 {% endhint %}
 
 ## Buscar en la Base de Conocimientos
 
-Cuando los archivos se vectorizan, puedes realizar consultas:
+Cuando la vectorización de archivos y materiales esté completa, puede realizar consultas:
 
-1. Haz clic en el botón "Buscar en Base de Conocimientos";
-2. Introduce el contenido a consultar;
-3. Revisa los resultados;
-4. Verifica la puntuación de coincidencia de cada resultado.
+1. Haga clic en el botón "Buscar en la base de conocimientos" en la parte inferior de la página;
+2. Ingrese el contenido de la consulta;
+3. Se mostrarán los resultados de la búsqueda;
+4. Y se mostrará la puntuación de coincidencia de cada resultado.
 
 <figure><img src="../.gitbook/assets/image-7.webp" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../.gitbook/assets/image-8.webp" alt=""><figcaption></figcaption></figure>
 
-## Generar Respuestas Citando la Base de Conocimientos en Conversaciones
+## Generar Respuestas Citando la Base de Conocimientos en una Conversación
 
-1. Crea un nuevo tema; en la barra de herramientas de conversación, haz clic en "Base de Conocimientos" para ver la lista. Selecciona la base deseada;
-2. Envía tu pregunta; el modelo generará una respuesta usando los resultados de búsqueda;
-3. Las fuentes de datos citadas aparecerán bajo la respuesta para acceso rápido.
+1. Cree un nuevo tema; en la barra de herramientas de conversación, haga clic en "Base de Conocimientos" para expandir la lista de bases de conocimientos creadas y seleccione la que desee citar;
+2. Ingrese y envíe la pregunta; el modelo devolverá una respuesta generada a partir de los resultados de la búsqueda;
+3. Además, las fuentes de datos citadas se adjuntarán debajo de la respuesta para una revisión rápida del archivo fuente.
 
 <figure><img src="../.gitbook/assets/image-9.webp" alt=""><figcaption></figcaption></figure>
 

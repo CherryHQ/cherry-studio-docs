@@ -15,29 +15,23 @@ Este documento foi traduzido do chinês por IA e ainda não foi revisado.
 ## Abrir o site oficial
 
 {% hint style="warning" %}
-Nota: O sistema Windows 7 não suporta a instalação do Cherry Studio.
+Atenção: O Windows 7 não suporta a instalação do Cherry Studio.
 {% endhint %}
 
-Clique em download para escolher a versão adequada
+## Download
 
 {% embed url="https://cherry-ai.com/download" %}
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Abrir o site oficial</p></figcaption></figure>
-
-## Aguardar o download ser concluído
-
-<figure><img src="../../.gitbook/assets/download.webp" alt="" width="563"><figcaption><p>Navegador Edge está a fazer download</p></figcaption></figure>
-
-> Se o navegador avisar que o arquivo não é de confiança, basta escolher "Manter"
->
-> `Escolher Manter` → `Confiar em Cherry-Studio`
-
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
-
-## Abrir o ficheiro
-
-<figure><img src="../../.gitbook/assets/download (1).webp" alt="" width="563"><figcaption><p>Lista de downloads do Edge</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Abrir site oficial</p></figcaption></figure>
 
 ## Instalação
 
-<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Interface de instalação do software</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Interface de instalação do software</p></figcaption></figure>
+
+### Bibliotecas de dependência
+
+Este software requer a biblioteca de tempo de execução Visual C++ Redistributable. Se solicitado durante a instalação, clique em "Sim" para instalar as dependências.
+
+Ou faça o download manual aqui: [https://aka.ms/vs/17/release/vc\_redist.x64.exe](https://aka.ms/vs/17/release/vc_redist.x64.exe)
+
+<div data-full-width="true"><figure><img src="../../.gitbook/assets/image (155).png" alt=""><figcaption></figcaption></figure></div>

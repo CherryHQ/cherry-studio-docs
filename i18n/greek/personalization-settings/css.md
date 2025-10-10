@@ -1,14 +1,17 @@
 ---
 icon: file-code
 ---
+# Προσαρμοσμένο CSS
+
 
 {% hint style="warning" %}
 Αυτό το έγγραφο μεταφράστηκε από τα Κινεζικά με AI και δεν έχει ακόμη ελεγχθεί.
 {% endhint %}
 
-# Προσαρμοσμένο CSS
 
-Με το προσαρμοσμένο CSS, μπορείτε να αλλάξετε την εμφάνιση του λογισμικού ώστε να ταιριάζει καλύτερα στις προτιμήσεις σας, όπως φαίνεται παρακάτω:
+
+
+Με την προσαρμογή του CSS μπορείτε να τροποποιήσετε την εμφάνιση του λογισμικού σύμφωνα με τις προτιμήσεις σας, όπως εδώ:
 
 <figure><img src="../../.gitbook/assets/telegram-cloud-photo-size-5-6311935435315724879-y.jpg" alt=""><figcaption><p>Προσαρμοσμένο CSS</p></figcaption></figure>
 
@@ -35,101 +38,101 @@ icon: file-code
   font-family: "汉仪唐美人" !important; /* γραμματοσειρά */
 }
 
-/* χρώμα γραμματοσειράς για την ανάπτυξη βαθιάς σκέψης */
+/* Χρώμα κειμένου για επεκτεταμένη βαθιά σκέψη */
 .ant-collapse-content-box .markdown {
   color: red;
 }
 
-/* μεταβλητές θέματος */
+/* Μεταβλητές θέματος */
 :root {
-  --color-black-soft: #2a2b2a; /* σκούρο χρώμα φόντου */
-  --color-white-soft: #f8f7f2; /* ανοιχτό χρώμα φόντου */
+  --color-black-soft: #2a2b2a; /* Σκούρο χρώμα φόντου */
+  --color-white-soft: #f8f7f2; /* Ανοιχτό χρώμα φόντου */
 }
 
-/* σκούρο θέμα */
+/* Σκούρο θέμα */
 body[theme-mode="dark"] {
   /* Χρώματα */
-  --color-background: #2b2b2b; /* σκούρο χρώμα φόντου */
-  --color-background-soft: #303030; /* ανοιχτό χρώμα φόντου */
-  --color-background-mute: #282c34; /* ουδέτερο χρώμα φόντου */
-  --navbar-background: var(-–color-black-soft); /* χρώμα φόντου γραμμής πλοήγησης */
-  --chat-background: var(–-color-black-soft); /* χρώμα φόντου συζήτησης */
-  --chat-background-user: #323332; /* χρώμα φόντου συζήτησης χρήστη */
-  --chat-background-assistant: #2d2e2d; /* χρώμα φόντου συζήτησης βοηθού */
+  --color-background: #2b2b2b; /* Σκούρο χρώμα φόντου */
+  --color-background-soft: #303030; /* Ανοιχτό χρώμα φόντου */
+  --color-background-mute: #282c34; /* Ουδέτερο χρώμα φόντου */
+  --navbar-background: var(-–color-black-soft); /* Χρώμα φόντου γραμμής πλοήγησης */
+  --chat-background: var(–-color-black-soft); /* Χρώμα φόντου συνομιλίας */
+  --chat-background-user: #323332; /* Χρώμα φόντου χρήστη */
+  --chat-background-assistant: #2d2e2d; /* Χρώμα φόντου βοηθού */
 }
 
-/* ειδικά στυλ για σκούρο θέμα */
+/* Συγκεκριμένα στυλ για σκούρο θέμα */
 body[theme-mode="dark"] {
   #content-container {
-    background-color: var(-–chat-background-assistant) !important; /* χρώμα φόντου περιέκτη περιεχομένων */
+    background-color: var(-–chat-background-assistant) !important; /* Χρώμα φόντου περιεχομένου */
   }
 
   #content-container #messages {
-    background-color: var(-–chat-background-assistant); /* χρώμα φόντου μηνυμάτων */
+    background-color: var(-–chat-background-assistant); /* Χρώμα φόντου μηνυμάτων */
   }
 
   .inputbar-container {
-    background-color: #3d3d3a; /* χρώμα φόντου γραμμής εισαγωγής */
-    border: 1px solid #5e5d5940; /* χρώμα περιγράμματος γραμμής εισαγωγής */
-    border-radius: 8px; /* ακτίνα περιθωρίου γραμμής εισαγωγής */
+    background-color: #3d3d3a; /* Χρώμα φόντου πλαισίου εισαγωγής */
+    border: 1px solid #5e5d5940; /* Χρώμα περιγράμματος πλαισίου εισαγωγής */
+    border-radius: 8px; /* Ακτίνα περιγράμματος πλαισίου εισαγωγής */
   }
 
-  /* στυλ κώδικα */
+  /* Στυλ κώδικα */
   code {
-    background-color: #e5e5e20d; /* χρώμα φόντου κώδικα */
-    color: #ea928a; /* χρώμα κειμένου κώδικα */
+    background-color: #e5e5e20d; /* Χρώμα φόντου κώδικα */
+    color: #ea928a; /* Χρώμα κειμένου κώδικα */
   }
 
   pre code {
-    color: #abb2bf; /* χρώμα κειμένου προμορφωμένου κώδικα */
+    color: #abb2bf; /* Χρώμα κειμένου μορφοποιημένου κώδικα */
   }
 }
 
-/* ανοιχτό θέμα */
+/* Ανοιχτόχρωμο θέμα */
 body[theme-mode="light"] {
   /* Χρώματα */
-  --color-white: #ffffff; /* λευκό */
-  --color-background: #ebe8e2; /* ανοιχτό χρώμα φόντου */
-  --color-background-soft: #cbc7be; /* ανοιχτό χρώμα φόντου */
-  --color-background-mute: #e4e1d7; /* ουδέτερο χρώμα φόντου */
-  --navbar-background: var(-–color-white-soft); /* χρώμα φόντου γραμμής πλοήγησης */
-  --chat-background: var(-–color-white-soft); /* χρώμα φόντου συζήτησης */
-  --chat-background-user: #f8f7f2; /* χρώμα φόντου συζήτησης χρήστη */
-  --chat-background-assistant: #f6f4ec; /* χρώμα φόντου συζήτησης βοηθού */
+  --color-white: #ffffff; /* Λευκό */
+  --color-background: #ebe8e2; /* Ανοιχτό χρώμα φόντου */
+  --color-background-soft: #cbc7be; /* Ανοιχτό χρώμα φόντου */
+  --color-background-mute: #e4e1d7; /* Ουδέτερο χρώμα φόντου */
+  --navbar-background: var(-–color-white-soft); /* Χρώμα φόντου γραμμής πλοήγησης */
+  --chat-background: var(-–color-white-soft); /* Χρώμα φόντου συνομιλίας */
+  --chat-background-user: #f8f7f2; /* Χρώμα φόντου χρήστη */
+  --chat-background-assistant: #f6f4ec; /* Χρώμα φόντου βοηθού */
 }
 
-/* ειδικά στυλ για ανοιχτό θέμα */
+/* Συγκεκριμένα στυλ για ανοιχτόχρωμο θέμα */
 body[theme-mode="light"] {
   #content-container {
-    background-color: var(-–chat-background-assistant) !important; /* χρώμα φόντου περιέκτη περιεχομένων */
+    background-color: var(-–chat-background-assistant) !important; /* Χρώμα φόντου περιεχομένου */
   }
 
   #content-container #messages {
-    background-color: var(-–chat-background-assistant); /* χρώμα φόντου μηνυμάτων */
+    background-color: var(-–chat-background-assistant); /* Χρώμα φόντου μηνυμάτων */
   }
 
   .inputbar-container {
-    background-color: #ffffff; /* χρώμα φόντου γραμμής εισαγωγής */
-    border: 1px solid #87867f40; /* χρώμα περιγράμματος γραμμής εισαγωγής */
-    border-radius: 8px; /* ακτίνα περιθωρίου γραμμής εισαγωγής, αλλάξτε στο μέγεθος που προτιμάτε */
+    background-color: #ffffff; /* Χρώμα φόντου πλαισίου εισαγωγής */
+    border: 1px solid #87867f40; /* Χρώμα περιγράμματος πλαισίου εισαγωγής */
+    border-radius: 8px; /* Ακτίνα περιγράμματος πλαισίου εισαγωγής, αλλάξτε σύμφωνα με προτιμήσεις */
   }
 
-  /* στυλ κώδικα */
+  /* Στυλ κώδικα */
   code {
-    background-color: #3d39290d; /* χρώμα φόντου κώδικα */
-    color: #7c1b13; /* χρώμα κειμένου κώδικα */
+    background-color: #3d39290d; /* Χρώμα φόντου κώδικα */
+    color: #7c1b13; /* Χρώμα κειμένου κώδικα */
   }
 
   pre code {
-    color: #000000; /* χρώμα κειμένου προμορφωμένου κώδικα */
+    color: #000000; /* Χρώμα κειμένου μορφοποιημένου κώδικα */
   }
 }
 ```
 
-Περισσότερες μεταβλητές θέματος μπορείτε να βρείτε στον πηγαίο κώδικα: [https://github.com/CherryHQ/cherry-studio/tree/main/src/renderer/src/assets/styles](https://github.com/CherryHQ/cherry-studio/tree/main/src/renderer/src/assets/styles)
+Περισσότερες μεταβλητές θέματος: [https://github.com/CherryHQ/cherry-studio/tree/main/src/renderer/src/assets/styles](https://github.com/CherryHQ/cherry-studio/tree/main/src/renderer/src/assets/styles)
 
 ### Σχετικές Προτάσεις
 
-Αποθήκη θεμάτων του Cherry Studio: [https://github.com/boilcy/cherrycss](https://github.com/boilcy/cherrycss)
+Βιβλιοθήκη θεμάτων Cherry Studio: [https://github.com/boilcy/cherrycss](https://github.com/boilcy/cherrycss)
 
-Κοινή χρήση κινεζικών θεμάτων για το Cherry Studio: [https://linux.do/t/topic/325119/129](https://linux.do/t/topic/325119/129)
+Κινεζικά θεμέλια για το Cherry Studio: [https://linux.do/t/topic/325119/129](https://linux.do/t/topic/325119/129)

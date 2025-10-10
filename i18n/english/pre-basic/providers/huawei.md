@@ -1,66 +1,83 @@
 # Huawei Cloud
 
+
 {% hint style="warning" %}
 This document was translated from Chinese by AI and has not yet been reviewed.
 {% endhint %}
 
-## Huawei Cloud
 
-1. Create an account and log in at [Huawei Cloud](https://auth.huaweicloud.com/authui/login)
-2. Click [this link](https://console.huaweicloud.com/modelarts/?region=cn-southwest-2#/model-studio/homepage) to enter the MaaS control panel
-3. Authorization
+
+
+I. Go to [Huawei Cloud](https://auth.huaweicloud.com/authui/login) to create an account and log in.
+
+II. Click [this link](https://console.huaweicloud.com/modelarts/?region=cn-southwest-2#/model-studio/homepage) to enter the Maa S console.
+
+III. Authorization
 
 <details>
 
-<summary>Authorization steps (skip if already authorized)</summary>
+<summary>Authorization Steps (Skip if already authorized)</summary>
 
-1. After entering the link from step 2, follow the prompts to the authorization page (click IAM sub-account → Add Authorization → General User)\
-   ![](<../../.gitbook/assets/image (49).png>)
-2. After clicking create, return to the link from step 2
-3. If prompted "insufficient access permissions", click "click here" in the prompt
-4. Append existing authorization and confirm\
-   ![](<../../.gitbook/assets/image (50).png>)\
-   Note: This method is suitable for beginners; no need to read excessive content, just follow the prompts. If you can successfully authorize using your own method, proceed accordingly.
+1. After entering the link page from step (II), follow the prompts to enter the authorization page (click IAM Sub-user → New Delegation → Ordinary User).
+
+![](<../../.gitbook/assets/image (49).png>)
+
+2. After clicking Create, return to the link page from step (II).
+3. If prompted with insufficient access permissions, click "Click here" in the prompt.
+4. Add existing authorization and confirm.
+
+![](<../../.gitbook/assets/image (50).png>)
+
+&#x20;Note: This method is suitable for beginners. You don't need to read too much content; just click according to the prompts. If you can authorize successfully in one go, you can do it your way.
 
 </details>
 
-4.  Click Authentication Management in the sidebar, create an API Key (secret key) and copy it
+IV. Click "Authentication Management" in the sidebar, create an API Key, and copy it.
 
-    <figure><img src="../../.gitbook/assets/微信截图_20250214034650.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/微信截图_20250214034650.png" alt=""><figcaption></figcaption></figure>
 
-    Then create a new service provider in CherryStudio
+Then, create a new provider in CherryStudio.
 
-    <figure><img src="../../.gitbook/assets/image (1) (2).png" alt="" width="300"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (2).png" alt="" width="300"><figcaption></figcaption></figure>
 
-    After creation, enter the secret key
-5.  Click Model Deployment in the sidebar, claim all offerings
+After creation, fill in the API Key.
 
-    <figure><img src="../../.gitbook/assets/微信截图_20250214034751.png" alt=""><figcaption></figcaption></figure>
-6.  Click Call
+V. Click "Model Deployment" in the sidebar and claim all.
 
-    <figure><img src="../../.gitbook/assets/image (1) (2) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/微信截图_20250214034751.png" alt=""><figcaption></figcaption></figure>
 
-    Copy the address from ①, paste it into CherryStudio's service provider address field and add a "#" at the end\
-    and add a "#" at the end\
-    and add a "#" at the end\
-    and add a "#" at the end\
-    and add a "#" at the end\
-    Why add "#"? \[see here]\(https://docs.cherry-ai.com/cherrystudio/preview/settings/providers#api-di-zhi)\
-    \> You can choose not to read that and just follow this tutorial;\
-    \> Alternatively, you can fill it by removing v1/chat/completions - feel free to use your own method if you know how, but if not, strictly follow this tutorial.
+VI. Click "Invoke".
 
-    <figure><img src="../../.gitbook/assets/image (2) (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (2) (1).png" alt=""><figcaption></figcaption></figure>
 
-    Then copy the model name from ②, and click the "+ Add" button in CherryStudio to create a new model
+Copy the address from ①, paste it into the CherryStudio provider address, and add a "#" at the end.
 
-    <figure><img src="../../.gitbook/assets/image (4) (3).png" alt=""><figcaption></figcaption></figure>
+And add a "#" at the end.
 
-    Enter the model name exactly as shown - do not add or remove anything, and don't include quotes. Copy exactly as in the example.
+And add a "#" at the end.
 
-    <figure><img src="../../.gitbook/assets/image (3) (3).png" alt=""><figcaption></figcaption></figure>
+And add a "#" at the end.
 
-    Click the Add Model button to complete.
+And add a "#" at the end.
+
+Why add "#"? [See here](https://docs.cherry-ai.com/cherrystudio/preview/settings/providers#api-di-zhi)
+
+> Of course, you can also skip reading that and just follow the tutorial;
+>
+> You can also fill it in by deleting "v1/chat/completions". If you know how to fill it, you can do it your way. If not, be sure to follow the tutorial.
+
+<figure><img src="../../.gitbook/assets/image (2) (3).png" alt=""><figcaption></figcaption></figure>
+
+Then, copy the model name from ②, and click the "+ Add" button in CherryStudio to create a new model.
+
+<figure><img src="../../.gitbook/assets/image (4) (3).png" alt=""><figcaption></figcaption></figure>
+
+Enter the model name, do not embellish or add quotes; copy it exactly as shown in the example.
+
+<figure><img src="../../.gitbook/assets/image (3) (3).png" alt=""><figcaption></figcaption></figure>
+
+Click the "Add Model" button to complete the addition.
 
 {% hint style="info" %}
-In Huawei Cloud, since each model has a different endpoint, you'll need to create a new service provider for each model. Repeat the above steps accordingly.
+In Huawei Cloud, since the address for each model is different, each model requires a new provider. You can repeat the steps above.
 {% endhint %}

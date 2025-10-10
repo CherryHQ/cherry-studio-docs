@@ -1,28 +1,31 @@
+# Google Gemini
+
 
 {% hint style="warning" %}
 このドキュメントはAIによって中国語から翻訳されており、まだレビューされていません。
 {% endhint %}
 
-# Google Gemini
+
+
 
 ## APIキーの取得
 
-* Gemini の API キーを取得する前に、Google Cloud プロジェクトが必要です（すでに所有している場合、この手順はスキップできます）。
-* [Google Cloud](https://console.cloud.google.com/projectcreate) にアクセスし、プロジェクトを作成します。プロジェクト名を入力し、「プロジェクトを作成」をクリックしてください。
+* GeminiのAPIキーを取得する前に、Google Cloudプロジェクトが必要です（既にお持ちの場合はこの手順をスキップできます）
+* [Google Cloud](https://console.cloud.google.com/projectcreate) にアクセスし、プロジェクト名を入力して「プロジェクトを作成」をクリック
 
 <figure><img src="../../.gitbook/assets/image (74).png" alt=""><figcaption></figcaption></figure>
 
-* 公式の [API Keyページ](https://aistudio.google.com/app/apikey?hl=zh-cn) で、`鍵 APIキーを作成` をクリックしてください。
+* 公式の [API Keyページ](https://aistudio.google.com/app/apikey?hl=zh-cn) で `密钥 创建API密钥` をクリック
 
 <figure><img src="../../.gitbook/assets/image (72).png" alt=""><figcaption></figcaption></figure>
 
-* 生成されたキーをコピーし、CherryStudio の [サービスプロバイダ設定](broken-reference) を開いてください。
-* サービスプロバイダ Gemini を選択し、取得したキーを入力してください。
+* 生成されたキーをコピーし、CherryStudioの [サービスプロバイダー設定](broken-reference) を開く
+* Geminiプロバイダーを選択し、取得したキーを入力
 
 <figure><img src="../../.gitbook/assets/image (75).png" alt=""><figcaption></figcaption></figure>
 
-* 最下部の「管理」または「追加」をクリックし、サポートされているモデルを追加し、右上のサービスプロバイダスイッチをオンにすると、使用可能になります。
+* 下部の「管理」または「追加」をクリックし、サポートモデルを追加後、右上のサービスプロバイダートグルを有効化すると利用可能になります
 
 {% hint style="info" %}
-- 中国では台湾を除く地域で Google Gemini サービスを直接利用できません。プロキシの問題を解決する必要があります。
+- 中国本土（台湾を除く）ではGoogle Geminiサービスが直接利用できません。プロキシ設定を自身で解決する必要があります
 {% endhint %}

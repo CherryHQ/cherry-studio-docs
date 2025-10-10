@@ -25,7 +25,7 @@
 
 ## Basic Tutorials <a href="#pre-basic" id="pre-basic"></a>
 
-* [Installation Tutorial](pre-basic/installation/README.md)
+* [Installation Guide](pre-basic/installation/README.md)
   * [Windows](pre-basic/installation/windows.md)
   * [macOS](pre-basic/installation/macos.md)
 * [Model Service Configuration](pre-basic/providers/README.md)
@@ -37,15 +37,15 @@
   * [OpenAI](pre-basic/providers/openai.md)
   * [OneAPI](pre-basic/providers/oneapi.md)
   * [NewAPI](pre-basic/providers/newapi.md)
-  * [ModelScope（魔搭）](pre-basic/providers/modelscope.md)
+  * [ModelScope](pre-basic/providers/modelscope.md)
   * [Ollama](pre-basic/providers/ollama.md)
   * [GitHub Copilot](pre-basic/providers/github-copilot.md)
-  * [PPIO 派欧云](pre-basic/providers/ppio.md)
+  * [PPIO](pre-basic/providers/ppio.md)
   * [Alibaba Cloud Bailian](pre-basic/providers/a-li-yun-bai-lian.md)
   * [Silicon Cloud](pre-basic/providers/siliconcloud.md)
   * [Volcano Engine](pre-basic/providers/doubao.md)
   * [Huawei Cloud](pre-basic/providers/huawei.md)
-  * [Wuwengxinquan](pre-basic/providers/wu-wen-xin-qiong.md)
+  * [Wuwensiqiong](pre-basic/providers/wu-wen-xin-qiong.md)
   * [Custom Provider](pre-basic/providers/zi-ding-yi-fu-wu-shang.md)
 
 ***
@@ -53,8 +53,8 @@
 * [Web Search Mode](websearch/README.md)
   * [Free Web Search Mode](websearch/mian-fei-lian-wang-mo-shi.md)
   * [Web Search Blacklist Configuration](websearch/blacklist.md)
-  * [Volcano Engine Web Access](websearch/volcengine.md)
-  * [Tavily Web Login and Registration Tutorial](websearch/tavily.md)
+  * [Volcano Engine Web Integration](websearch/volcengine.md)
+  * [Tavily Web Search Login and Registration Tutorial](websearch/tavily.md)
   * [SearXNG Local Deployment and Configuration](websearch/searxng.md)
 * [Data Settings](data-settings/README.md)
   * [WebDAV Backup](data-settings/WebDAV.md)
@@ -84,7 +84,7 @@
   * [Built-in MCP Configuration](advanced-basic/mcp/in-memory.md)
   * [Configure Dify Knowledge Base](advanced-basic/mcp/dify.md)
   * [Add ModelScope MCP Server](advanced-basic/mcp/tian-jia-modelscope-mcp-fu-wu-qi.md)
-  * [FAQ](advanced-basic/mcp/chang-jian-wen-ti.md)
+  * [Frequently Asked Questions](advanced-basic/mcp/chang-jian-wen-ti.md)
 * [Call Chain Usage Instructions](advanced-basic/diao-yong-lian-shi-yong-shuo-ming.md)
 * [Code Tools Usage Tutorial](advanced-basic/code-tools-shi-yong-jiao-cheng.md)
 
@@ -95,14 +95,14 @@
 
 ## Questions & Feedback <a href="#question-contact" id="question-contact"></a>
 
-* [FAQ](question-contact/questions.md)
+* [Frequently Asked Questions](question-contact/questions.md)
 * [How to Ask Questions Efficiently](question-contact/ask.md)
 * [Knowledge Popularization](question-contact/knowledge.md)
 * [Feedback & Suggestions](question-contact/suggestions.md)
 
 ## Contact Us <a href="#contact-us" id="contact-us"></a>
 
-* [Business Collaboration](contact-us/questions.md)
+* [Business Cooperation](contact-us/questions.md)
   * [Cherry Studio Commercial License Agreement](contact-us/questions/cherrystudio-xu-ke-xie-yi.md)
 
 ## About <a href="#about" id="about"></a>

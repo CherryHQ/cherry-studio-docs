@@ -11,54 +11,54 @@ icon: cloud-arrow-up
 
 
 
-Cherry Studioのデータバックアップは、WebDAV方式によるバックアップをサポートしています。適切なWebDAVサービスを選択してクラウドバックアップを行えます。
+Cherry StudioのデータバックアップはWebDAV方式をサポートしています。適切なWebDAVサービスを選択してクラウドバックアップを行うことができます。
 
-WebDAVを使用すると、`Aコンピュータ` $$\xrightarrow{\text{バックアップ}}$$ `WebDAV` $$\xrightarrow{\text{復元}}$$ `Bコンピュータ` の方法で、複数のデバイス間のデータ同期を実現できます。
+WebDAVを利用すると、`Aコンコンピュータ` $$\xrightarrow{\text{バックアップ}}$$ `WebDAV` $$\xrightarrow{\text{復元}}$$ `Bコンピュータ` の形式で複数端末間のデータ同期を実現できます。
 
-#### Nutstoreを例として
+#### 坚果云を例とする
 
-1. Nutstoreにログインし、右上のユーザー名をクリックして「アカウント情報」を選択:
+1.  坚果云にログインし、右上のユーザー名をクリックして「アカウント情報」を選択：
 
 <figure><img src="../../../.gitbook/assets/image (39).png" alt=""><figcaption></figcaption></figure>
 
-2. 「セキュリティオプション」を選択し、「アプリを追加」をクリック
+2.  「セキュリティオプション」を選択し、「アプリの追加」をクリック
 
 <figure><img src="../../../.gitbook/assets/image (40).png" alt=""><figcaption></figcaption></figure>
 
-3. アプリ名を入力し、ランダムパスワードを生成:
+3.  アプリ名を入力し、ランダムパスワードを生成；
 
 <figure><img src="../../../.gitbook/assets/image (41).png" alt=""><figcaption></figcaption></figure>
 
-4. パスワードをコピーして保存:
+4.  パスワードをコピーして保存；
 
 <figure><img src="../../../.gitbook/assets/image (42).png" alt=""><figcaption></figcaption></figure>
 
-5. サーバーアドレス、アカウント、パスワードを取得:
+5.  サーサーバーアドレス、アカウント、パスワードを取得；
 
 <figure><img src="../../../.gitbook/assets/image (43).png" alt=""><figcaption></figcaption></figure>
 
-6. Cherry Studio設定→データ設定でWebDAV情報を入力:
+6.  Cherry Studio設定→データ設定でWebDAV情報を入力；
 
 <figure><img src="../../../.gitbook/assets/image (48).png" alt=""><figcaption></figcaption></figure>
 
-7. データのバックアップまたは復元を選択し、自動バックアップの時間間隔を設定できます
+7.  バックアップまたはデータ復元を選択し、自動バックアップの時間間隔を設定可能。
 
 <figure><img src="../../../.gitbook/assets/image (47).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="success" %}
-導入が比較的容易なWebDAVサービスは主にクラウドストレージです：
+WebDAVサービスの導入ハードルが比較的低いクラウドストレージ：
 
-- [Nutstore](https://www.jianguoyun.com/)
-- [123 Pan](https://www.123pan.com/)（会員制）
-- [Alibaba Cloud Drive](https://www.alipan.com/)（購入が必要）
-- [Box](https://www.box.com/) (無料容量10GB、単一ファイル制限250MB)
-- [Dropbox](https://www.dropbox.com/) (基本無料2GB、招待で最大16GBまで拡張可能)
-- [TeraCloud](https://teracloud.jp/en/) (無料容量10GB、招待で5GB追加可能)
-- [Yandex Disk](https://disk.yandex.com/) (無料ユーザー向け容量10GB)
+- [坚果云](https://www.jianguoyun.com/)
+- [123 パン](https://www.123pan.com/)（会員制）
+- [アリクラウドドライブ](https://www.alipan.com/)（有料購入必要）
+- [Box](https://www.box.com/) (無料容量10GB，単一ファイル制限250MB)
+- [Dropbox](https://www.dropbox.com/) (無料2GB，招待で最大16GB拡張可能)
+- [TeraCloud](https://teracloud.jp/en/) (無料10GB，招待で5GB追加獲得可能)
+- [Yandex Disk](https://disk.yandex.com/) (無料ユーザー10GB容量)
 
-次に、自己ホスティングが必要なサービス：
+自己デプロイが必要なソリューション：
 
 - [Alist](https://alist.nn.ci/zh/)
 - [Cloudreve](https://cloudreve.org/)
 - [sharelist](https://github.com/reruin/sharelist)
-{% endhint %}
+  {% endhint %}

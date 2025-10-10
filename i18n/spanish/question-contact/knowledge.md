@@ -1,65 +1,66 @@
 ---
 icon: book-bookmark
 ---
+# Knowledge Science
+
 
 {% hint style="warning" %}
 Este documento ha sido traducido del chino por IA y aún no ha sido revisado.
 {% endhint %}
 
-# Divulgación de Conocimientos
 
-## ¿Qué son los tokens?
 
-Los tokens son la unidad básica que los modelos de IA utilizan para procesar texto, y pueden entenderse como la unidad mínima de "pensamiento" del modelo. No son equivalentes exactos a caracteres o palabras como los entendemos los humanos, sino una forma especial de segmentación de texto propia del modelo.
 
-#### 1. Segmentación de texto en chino
-* Un carácter chino típicamente se codifica en 1-2 tokens
-* Ejemplo: `"你好"` ≈ 2-4 tokens
+## What are tokens?
 
-#### 2. Segmentación de texto en inglés
-* Las palabras comunes generalmente son 1 token
-* Palabras largas o poco comunes se dividen en múltiples tokens
-* Ejemplo:
+Tokens are the fundamental units of text processing in AI models, which can be understood as the smallest units of "thought" for the model. They don't exactly correspond to characters or words as we understand them, but rather represent the model's unique way of segmenting text.
+
+#### 1. Chinese segmentation
+* One Chinese character is typically encoded as 1-2 tokens
+* Example: `"你好"` ≈ 2-4 tokens
+
+#### 2. English segmentation
+* Common words are usually 1 token
+* Longer or uncommon words are broken into multiple tokens
+* Example:
   * `"hello"` = 1 token
   * `"indescribable"` = 4 tokens
 
-#### 3. Caracteres especiales
-* Los espacios, signos de puntuación también consumen tokens
-* Un salto de línea suele ser 1 token
+#### 3. Special characters
+* Spaces, punctuation marks also consume tokens
+* Line breaks are typically 1 token
 
 {% hint style="info" %}
-Los Tokenizers varían entre proveedores de servicios, e incluso entre diferentes modelos del mismo proveedor. Este conocimiento solo sirve para comprender el concepto de token.
+Different providers have different Tokenizers, and even different models from the same provider may have variations. This knowledge is solely for clarifying the concept of tokens.
 {% endhint %}
 
 ***
 
-## ¿Qué es un Tokenizer?
+## What is a Tokenizer?
 
-El Tokenizer (segmentador de texto) es la herramienta que convierte texto en tokens para que los modelos de IA puedan procesarlo. Determina cómo dividir el texto de entrada en unidades mínimas comprensibles para el modelo.
+The Tokenizer is the tool that converts text into tokens for AI models. It determines how to split input text into the smallest units understandable by the model.
 
-### ¿Por qué los tokenizadores difieren entre modelos?
+### Why do different models have different Tokenizers?
 
-#### 1. Datos de entrenamiento diferentes
-* Corpus diferentes conducen a enfoques de optimización distintos
-* Grados variables de soporte multilingüe
-* Optimizaciones específicas para dominios (médico, legal, etc.)
+#### 1. Different training data
+* Different corpora lead to different optimization directions
+* Variations in multilingual support
+* Specialized optimization for specific domains (medical, legal, etc.)
 
-#### 2. Algoritmos de tokenización diferentes
-* BPE (Byte Pair Encoding) - usado en la serie GPT de OpenAI
-* WordPiece - usado en BERT de Google
-* SentencePiece - adecuado para escenarios multilingües
+#### 2. Different segmentation algorithms
+* BPE (Byte Pair Encoding) - OpenAI GPT series
+* WordPiece - Google BERT
+* SentencePiece - Suitable for multilingual scenarios
 
-#### 3. Objetivos de optimización diferentes
-* Algunos priorizan eficiencia de compresión
-* Otros enfatizan la preservación semántica
-* Algunos optimizan velocidad de procesamiento
+#### 3. Different optimization goals
+* Some focus on compression efficiency
+* Some prioritize semantic preservation
+* Others emphasize processing speed
 
-### Impacto práctico
-
-El mismo texto puede tener diferentes recuentos de tokens en distintos modelos:
-
+### Practical impact
+The same text may have different token counts across models:
 ```
-输入："Hello, world!"
+Input: "Hello, world!"
 GPT-3: 4 tokens
 BERT: 3 tokens
 Claude: 3 tokens
@@ -67,56 +68,58 @@ Claude: 3 tokens
 
 ***
 
-## ¿Qué es un Modelo de Incrustación (Embedding Model)?
+## What is an Embedding Model?
 
-**Concepto básico:** Técnica que convierte datos discretos de alta dimensión (texto, imágenes) en vectores continuos de baja dimensión, permitiendo a las máquinas comprender y procesar mejor información compleja. Funciona como un "traductor" en el ecosistema de IA, transformando información humana a formato numérico procesable.
+**Basic concept:** An embedding model is a technique that converts high-dimensional discrete data (text, images, etc.) into low-dimensional continuous vectors. This transformation allows machines to better understand and process complex data. Imagine simplifying a complex puzzle into a simple coordinate point that still retains the puzzle's key features. In the large model ecosystem, it acts as a "translator," converting human-understandable information into computable numerical forms for AI.
 
-**Funcionamiento:** En procesamiento de lenguaje natural, mapea palabras a posiciones específicas en espacios vectoriales donde términos semánticamente similares se agrupan automáticamente. Por ejemplo:
-* "rey" y "reina" tienen vectores cercanos
-* "gato" y "perro" (como palabras de mascotas) también están próximos
-* "coche" y "pan" (semánticamente no relacionados) están distantes
+**Working principle:** Taking natural language processing as an example, an embedding model maps words to specific positions in vector space. In this space, semantically similar words automatically cluster together. For instance:
+* Vectors for "king" and "queen" will be very close
+* Words like "cat" and "dog" will also be nearby
+* Semantically unrelated words like "car" and "bread" will be distant
 
-**Aplicaciones principales:**
-* Análisis de texto: clasificación documental, análisis de sentimientos
-* Sistemas de recomendación: contenido personalizado
-* Procesamiento de imágenes: búsqueda de imágenes similares
-* Motores de búsqueda: optimización semántica
+**Main application scenarios:**
+* Text analysis: Document classification, sentiment analysis
+* Recommendation systems: Personalized content recommendations
+* Image processing: Similar image retrieval
+* Search engines: Semantic search optimization
 
-**Ventajas clave:**
-1. Reducción dimensional: simplifica datos complejos a vectores manejables
-2. Preservación semántica: mantiene relaciones semánticas críticas
-3. Eficiencia computacional: mejora entrenamiento e inferencia de modelos
+**Core advantages:**
+1. Dimensionality reduction: Simplifies complex data into manageable vector forms
+2. Semantic preservation: Retains key semantic information from original data
+3. Computational efficiency: Significantly improves training and inference efficiency for ML models
 
-**Valor técnico:** Componente fundamental de sistemas modernos de IA que proporciona representaciones de datos de alta calidad para tareas de aprendizaje automático, clave en avances de PNL y visión computacional.
-
-***
-
-## Funcionamiento de Embeddings en Recuperación de Conocimiento
-
-**Flujo básico:**
-
-1. **Preprocesamiento del repositorio**
-* Segmentación de documentos en chunks (fragmentos)
-* Conversión de cada chunk a vector mediante embedding
-* Almacenamiento de vectores y texto en base de datos vectorial
-
-2. **Procesamiento de consultas**
-* Conversión de preguntas de usuario a vectores
-* Recuperación de contenido similar en el almacén vectorial
-* Suministro de contexto relevante al LLM (Large Language Model)
+**Technical value:** Embedding models are foundational components of modern AI systems, providing high-quality data representations for machine learning tasks, serving as key technologies driving advancements in NLP, computer vision, and other fields.
 
 ***
 
-## ¿Qué es MCP (Model Context Protocol)?
+## How Embedding Models Work in Knowledge Retrieval
 
-Protocolo de código abierto que proporciona contexto a LLMs mediante un enfoque estandarizado.
+**Basic workflow:**
 
-* **Analogía:** MCP funciona como una "unidad USB" para IA: almacena módulos de contexto ("archivos") que los LLMs pueden "conectar" según necesidad para enriquecer capacidades.
-* **Comparación con Herramientas de Función:** Mientras estas ofrecen funcionalidades específicas, MCP constituye una abstracción de mayor nivel para adquisición modular de contexto.
+1. **Knowledge base preprocessing phase**
+* Split documents into appropriately sized chunks
+* Convert each chunk into vectors using embedding models
+* Store vectors and original text in vector databases
 
-### Ventajas clave de MCP
+2. **Query processing phase**
+* Convert user questions into vectors
+* Retrieve similar content from vector databases
+* Provide retrieved relevant content as context to LLMs
 
-1. **Estandarización:** Interfaz unificada para colaboración fluida entre LLMs y proveedores de contexto
-2. **Modularidad:** Contexto organizado en componentes independientes (plugins) para gestión y reutilización
-3. **Flexibilidad:** Selección dinámica de módulos según necesidades específicas de interacción
-4. **Escalabilidad:** Diseño extensible que admite nuevos tipos de plugins para ampliar capacidades de LLMs sin límites
+***
+
+## What is MCP (Model Context Protocol)?
+
+MCP is an open-source protocol designed to provide context information to large language models (LLMs) in a standardized manner.
+
+* **Analogy:** Think of MCP as a "USB drive" for the AI field. Just as USB drives store various files that become immediately usable when plugged into a computer, the MCP Server can "plug in" various context-providing "plugins." LLMs can request these plugins from the MCP Server as needed, acquiring richer context information to enhance their capabilities.
+* **Comparison with Function Tools:** Traditional Function Tools also provide external capabilities to LLMs, but MCP represents a higher-level abstraction. Function Tools are more task-specific utilities, while MCP offers a more universal, modular context acquisition mechanism.
+
+### Core Advantages of MCP
+
+1. **Standardization:** Provides unified interfaces and data formats enabling seamless collaboration between different LLMs and context providers.
+2. **Modularity:** Allows developers to decompose context information into independent modules (plugins) for easy management and reuse.
+3. **Flexibility:** LLMs can dynamically select required context plugins based on their needs, enabling smarter and more personalized interactions.
+4. **Scalability:** The design supports future addition of more context plugin types, offering unlimited possibilities for expanding LLM capabilities.
+
+***

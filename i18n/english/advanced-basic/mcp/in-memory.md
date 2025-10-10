@@ -1,32 +1,41 @@
+# Built-in MCP Configuration
+
 
 {% hint style="warning" %}
 This document was translated from Chinese by AI and has not yet been reviewed.
 {% endhint %}
 
-# Built-in MCP Configurations
 
-### @cherry/mcp-auto-install  
-Automatically install MCP service (Beta)
 
-### @cherry/memory  
-Persistence memory base implementation based on local knowledge graph. This enables models to remember user-related information across different conversations.
+
+### @cherry/mcp-auto-install
+
+Automatically installs MCP services (beta)
+
+### @cherry/memory
+
+A persistent memory base implementation based on a local knowledge graph. This allows the model to remember relevant user information across different conversations.
 
 ```typescript
 MEMORY_FILE_PATH=/path/to/your/file.json
 ```
 
-### @cherry/sequentialthinking  
-An MCP server implementation providing tools for dynamic and reflective problem-solving through structured thought processes.
+### @cherry/sequentialthinking
 
-### @cherry/brave-search  
-An MCP server implementation integrated with Brave Search API, offering dual functionality for both web and local searches.
+An MCP server implementation that provides tools for dynamic and reflective problem-solving through structured thinking processes.
+
+### @cherry/brave-search
+
+An MCP server implementation integrated with the Brave search API, providing both web and local search capabilities.
 
 ```typescript
 BRAVE_API_KEY=YOUR_API_KEY
 ```
 
-### @cherry/fetch  
-MCP server for retrieving web content from URLs.
+### @cherry/fetch
 
-### @cherry/filesystem  
-Node.js server implementing the Model Context Protocol (MCP) for file system operations.
+An MCP server used to fetch web content from URLs.
+
+### @cherry/filesystem
+
+A Node.js server that implements the Model Context Protocol (MCP) for file system operations.

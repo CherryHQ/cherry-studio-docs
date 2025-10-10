@@ -1,7 +1,7 @@
 ---
 icon: cloud-arrow-up
 ---
-# WebDAV Αντιγράφων Ασφαλείας
+# WebDAV Αντίγραφα ασφαλείας
 
 
 {% hint style="warning" %}
@@ -11,55 +11,47 @@ icon: cloud-arrow-up
 
 
 
+{% hint style="warning" %}
+Το Cherry Studio υποστηρίζει τη δημιουργία αντιγράφων ασφαλείας δεδομένων μέσω WebDAV. Μπορείτε να επιλέξετε μια κατάλληλη υπηρεσία WebDAV για αντίγραφα ασφαλείας στο σύννεφο.
+
+Μέσω WebDAV, μπορείτε να συγχρονίσετε δεδομένα σε πολλαπλές συσκευές με τον εξής τρόπο: `Υπολογιστής A` $$\xrightarrow{\text{αντίγραφο ασφαλείας}}$$ `WebDAV` $$\xrightarrow{\text{αποκατάσταση}}$$ `Υπολογιστής B`.
+{% endhint %}
+
+#### Παράδειγμα με το Nutstore
+
+1. Συνδεθείτε στο Nutstore, κάντε κλικ στο όνομα χρήστη επάνω δεξιά και επιλέξτε "Πληροφορίες λογαριασμού":
+<figure><img src="../../../.gitbook/assets/image (39).png" alt=""><figcaption></figcaption></figure>
+
+2. Επιλέξτε "Επιλογές ασφαλείας" και κάντε κλικ στο "Προσθήκη εφαρμογής":
+<figure><img src="../../../.gitbook/assets/image (40).png" alt=""><figcaption></figcaption></figure>
+
+3. Εισαγάγετε όνομα εφαρμογής και δημιουργήστε τυχαίο κωδικό:
+<figure><img src="../../../.gitbook/assets/image (41).png" alt=""><figcaption></figcaption></figure>
+
+4. Αντιγράψτε τον κωδικό:
+<figure><img src="../../../.gitbook/assets/image (42).png" alt=""><figcaption></figcaption></figure>
+
+5. Λάβετε διεύθυνση διακομιστή, λογαριασμό και κωδικό:
+<figure><img src="../../../.gitbook/assets/image (43).png" alt=""><figcaption></figcaption></figure>
+
+6. Στο Cherry Studio > Ρυθμίσεις > Ρυθμίσεις δεδομένων, συμπληρώστε τα στοιχεία WebDAV:
+<figure><img src="../../../.gitbook/assets/image (48).png" alt=""><figcaption></figcaption></figure>
+
+7. Επιλέξτε δημιουργία αντιγράφου ασφαλείας ή αποκατάσταση δεδομένων και ρυθμίστε το χρονικό διάστημα αυτόματων αντιγράφων:
+<figure><img src="../../../.gitbook/assets/image (47).png" alt=""><figcaption></figcaption></figure>
+
 {% hint style="success" %}
-Το WebDAV έχει σχετικά χαμηλό όριο για υπηρεσίες, με τις πιο συνηθισμένες να είναι οι χωροφύλακες:
+Υπηρεσίες WebDAV με χαμηλά εμπόδια χρήσης είναι κυρίως cloud storage:
+- [Nutstore](https://www.jianguoyun.com/)
+- [123 Pan](https://www.123pan.com/) (απαιτείται συνδρομή)
+- [Aliyun Drive](https://www.alipan.com/) (απαιτείται αγορά)
+- [Box](https://www.box.com/) (10GB δωρεάν, μέγιστο μέγεθος αρχείου 250MB)
+- [Dropbox](https://www.dropbox.com/) (2GB δωρεάν, +16GB με προσκλήσεις)
+- [TeraCloud](https://teracloud.jp/en/) (10GB δωρεάν, +5GB με προσκλήσεις)
+- [Yandex Disk](https://disk.yandex.com/) (10GB για δωρεάν λογαριασμούς)
 
-- [Jianguoyun](https://www.jianguoyun.com/)
-- [123 Pan](https://www.123pan.com/) (απαιτεί συνδρομή)
-- [Alibaba Cloud Drive](https://www.alipan.com/) (απαιτεί αγορά)
-- [Box](https://www.box.com/) (δωρεάν χώρος 10GB, μέγιστο μέγεθος αρχείου 250MB)
-- [Dropbox](https://www.dropbox.com/) (δωρεάν χώρος 2GB, επεκτάσιμο έως 16GB με προσκλήσεις)
-- [TeraCloud](https://teracloud.jp/en/) (δωρεάν χώρος 10GB + 5GB με πρόσκληση)
-- [Yandex Disk](https://disk.yandex.com/) (δωρεάν χώρος 10GB)
-
-Εναλλακτικά, μερικές υπηρεσίες απαιτούν την εγκατάστασή τους:
-
+Εναλλακτικές που απαιτούν αυτο-φιλοξενία:
 - [Alist](https://alist.nn.ci/zh/)
 - [Cloudreve](https://cloudreve.org/)
 - [sharelist](https://github.com/reruin/sharelist)
 {% endhint %}
-
-Η δημιουργία αντιγράφων ασφαλείας στο Cherry Studio υποστηρίζεται μέσω του πρωτοκόλλου WebDAV. Μπορείτε να επιλέξετε μια κατάλληλη υπηρεσία WebDAV για την υποστήριξη στα σύννεφα.
-
-Μέσω WebDAV μπορείτε να επιτύχετε συγχρονισμό δεδομένων πολλαπλών συσκευών:  
-`Υπολογιστής Α` $$\xrightarrow{\text{αντιγράφων ασφαλείας}}$$ `WebDAV` $$\xrightarrow{\text{αποκατάσταση}}$$ `Υπολογιστής Β`
-
-#### Παράδειγμα με τον Jianguoyun
-
-1. Συνδεθείτε στο jianguoyun.com, επιλέξτε το όνομα χρήστη και πατήστε "Πληροφορίες λογαριασμού":
-
-<figure><img src="../../../.gitbook/assets/image (39).png" alt=""><figcaption></figcaption></figure>
-
-2. Επιλέξτε "Καταστατικά ασφαλείας" και πατήστε "Προσθήκη εφαρμογής":
-
-<figure><img src="../../../.gitbook/assets/image (40).png" alt=""><figcaption></figcaption></figure>
-
-3. Εισάγετε όνομα εφαρμογής και δημιουργήστε τυχαίο κωδικό:
-
-<figure><img src="../../../.gitbook/assets/image (41).png" alt=""><figcaption></figcaption></figure>
-
-4. Αντιγράψτε και αποθηκεύστε τον κωδικό:
-
-<figure><img src="../../../.gitbook/assets/image (42).png" alt=""><figcaption></figcaption></figure>
-
-5. Λάβετε τη διεύθυνση διακομιστή, το όνομα χρήστη και τον κωδικό:
-
-<figure><img src="../../../.gitbook/assets/image (43).png" alt=""><figcaption></figcaption></figure>
-
-6. Στο Cherry Studio > Ρυθμίσεις > Ρυθμίσεις δεδομένων, συμπληρώστε τις πληροφορίες WebDAV:
-
-<figure><img src="../../../.gitbook/assets/image (48).png" alt=""><figcaption></figcaption></figure>
-
-7. Επιλέξτε δημιουργία αντιγράφου ασφαλείας ή αποκατάσταση δεδομένων και ορίστε τη συχνότητα αυτόματης δημιουργίας αντιγράφων:
-
-<figure><img src="../../../.gitbook/assets/image (47).png" alt=""><figcaption></figcaption></figure>

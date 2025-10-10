@@ -1,7 +1,7 @@
 ---
 icon: database
 ---
-# Configuración de Datos
+# Configuración de datos
 
 
 {% hint style="warning" %}
@@ -11,23 +11,23 @@ Este documento ha sido traducido del chino por IA y aún no ha sido revisado.
 
 
 
-Esta interfaz permite realizar operaciones como copia de seguridad local y en la nube, consulta de directorios de datos locales, limpieza de caché, configuración de exportación y conexión con terceros.
+Esta interfaz permite realizar operaciones como copia de seguridad y restauración de datos locales/en la nube, consulta de directorios de datos locales, limpieza de caché, configuración de exportación y conexiones de terceros.
 
-### Copia de Seguridad de Datos
+### Copia de seguridad de datos
 
-Actualmente se admiten tres métodos de copia de seguridad: local, mediante WebDAV y almacenamiento compatible con S3 (almacenamiento de objetos). Consulte los siguientes documentos para obtener información detallada y tutoriales:
+Actualmente, la copia de seguridad admite tres métodos: local, mediante WebDAV y en almacenamiento compatible con S3 (almacenamiento de objetos). Para detalles y tutoriales, consulta estos documentos:
 
-- [Tutorial de copia de seguridad con WebDAV](../../../data-settings/WebDAV.md)
+- [Tutorial de copia de seguridad WebDAV](../../../data-settings/WebDAV.md)
 - [Copia de seguridad en almacenamiento compatible con S3](../../../data-settings/s3-compatible.md)
 
-### Configuración de Exportación
+### Configuración de exportación
 
-La configuración de exportación permite definir las opciones de exportación mostradas en el menú, además de establecer la ruta predeterminada para exportar Markdown, el estilo visual, etc.
+Permite configurar las opciones de exportación mostradas en el menú, además de establecer la ruta predeterminada para exportación Markdown, estilos de visualización, etc.
 
-### Conexión con Terceros
+### Conexiones de terceros
 
-Esta función configura la conexión entre Cherry Studio y aplicaciones de terceros, permitiendo exportar rápidamente contenidos de conversación a herramientas de gestión de conocimiento. Actualmente se admiten: Notion, Obsidian, SiYuan Notes, Yuque y Joplin. Consulte los tutoriales de configuración en estos documentos:
+Configura la integración de Cherry Studio con aplicaciones externas para exportar rápidamente conversaciones a tus herramientas de gestión de conocimiento. Actualmente compatible con: Notion, Obsidian, SiYuan Notes, Yuque y Joplin. Tutoriales de configuración:
 
-- [Tutorial de configuración de Notion](../../../data-settings/notion.md)
-- [Tutorial de configuración de Obsidian](../../../data-settings/obsidian.md)
-- [Tutorial de configuración de SiYuan Notes](../../../data-settings/siyuan.md)
+- [Tutorial de configuración para Notion](../../../data-settings/notion.md)
+- [Tutorial de configuración para Obsidian](../../../data-settings/obsidian.md)
+- [Tutorial de configuración para SiYuan Notes](../../../data-settings/siyuan.md)

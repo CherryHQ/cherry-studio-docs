@@ -1,11 +1,14 @@
 ---
 icon: sliders
 ---
+# General Settings
+
 
 {% hint style="warning" %}
 This document was translated from Chinese by AI and has not yet been reviewed.
 {% endhint %}
 
-# General Settings
 
-On this page, you can configure the software's interface language, proxy settings, and other options.
+
+
+On this page, you can set the software's interface language, proxy settings, and more.

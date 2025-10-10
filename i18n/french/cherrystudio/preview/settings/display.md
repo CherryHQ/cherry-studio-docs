@@ -11,17 +11,17 @@ Ce document a été traducido del chino por IA y aún no ha sido revisado.
 
 
 
-Sur cette page, vous pouvez configurer le thème de couleur du logiciel, la mise en page ou [personnaliser le CSS](../../../personalization-settings/css.md) pour effectuer des réglages personnalisés.
+Sur cette page, vous pouvez configurer le thème de couleur du logiciel, la disposition des pages ou personnaliser l'apparence avec du [CSS personnalisé](../../../personalization-settings/css.md).
 
 ### Sélection du thème
 
-Vous pouvez définir ici le mode de couleur par défaut de l'interface (mode clair, mode sombre ou suivi du système)
+Vous pouvez définir ici le mode de couleur par défaut de l'interface (mode clair, mode sombre ou suivant le système).
 
-### Paramètres des conversations
+### Paramètres de conversation
 
-Ces paramètres concernent la mise en page de l'interface de discussion.
+Ces paramètres concernent la disposition de l'interface de dialogue.
 
-#### Position des conversations
+#### Position de la conversation
 
 {% tabs %}
 {% tab title="Gauche (par défaut)" %}
@@ -35,7 +35,7 @@ Ces paramètres concernent la mise en page de l'interface de discussion.
 
 #### Basculer automatiquement vers la conversation
 
-Lorsque ce paramètre est activé, cliquer sur le nom de l'assistant basculera automatiquement vers la page de conversation correspondante.
+Lorsque cette option est activée, cliquer sur le nom d'un assistant bascule automatiquement vers la page de conversation correspondante.
 
 {% tabs %}
 {% tab title="Désactivé (par défaut)" %}
@@ -61,6 +61,6 @@ Lorsqu'activé, affiche l'heure de **création** sous chaque conversation.
 {% endtab %}
 {% endtabs %}
 
-### Personnalisation CSS
+### CSS personnalisé
 
-Ce paramètre permet d'apporter des modifications personnalisées flexibles à l'interface. Voir les méthodes spécifiques dans le tutoriel avancé : [Personnalisation CSS](../../../personalization-settings/css.md).
+Ce paramètre permet d'apporter des modifications personnalisées flexibles à l'interface. Pour les méthodes spécifiques, consultez le tutoriel avancé sur le [CSS personnalisé](../../../personalization-settings/css.md).

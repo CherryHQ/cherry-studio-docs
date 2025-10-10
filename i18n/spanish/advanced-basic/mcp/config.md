@@ -1,4 +1,4 @@
-# Configurar y usar MCP
+# Configuración y uso de MCP
 
 
 {% hint style="warning" %}
@@ -10,31 +10,31 @@ Este documento ha sido traducido del chino por IA y aún no ha sido revisado.
 
 <figure><img src="../../.gitbook/assets/image (8) (1).png" alt=""><figcaption></figcaption></figure>
 
-1. Abra la configuración de Cherry Studio.
-2. Busque la opción `Servidor MCP`.
-3. Haga clic en `Agregar servidor`.
-4. Complete los parámetros del servidor MCP ([enlace de referencia](https://github.com/modelcontextprotocol/servers/tree/main/src/fetch)). Los campos a completar pueden incluir:
-   * Nombre: Un nombre personalizado, por ejemplo `fetch-server`
-   * Tipo: Seleccione `STDIO`
-   * Comando: Ingrese `uvx`
-   * Parámetros: Ingrese `mcp-server-fetch`
-   * (Puede haber otros parámetros dependiendo del servidor específico)
-5. Haga clic en `Guardar`.
+1. Abre la configuración de Cherry Studio.
+2. Ubica la opción `Servidor MCP`.
+3. Haz clic en `Agregar servidor`.
+4. Completa los parámetros del MCP Server ([enlace de referencia](https://github.com/modelcontextprotocol/servers/tree/main/src/fetch)). Los campos pueden incluir:
+   * Nombre: Personaliza un nombre, por ejemplo `fetch-server`
+   * Tipo: Selecciona `STDIO`
+   * Comando: Ingresa `uvx`
+   * Parámetros: Ingresa `mcp-server-fetch`
+   * (Puede haber otros parámetros según el servidor específico)
+5. Haz clic en `Guardar`.
 
 {% hint style="success" %}
-¡Después de completar esta configuración, Cherry Studio descargará automáticamente el servidor MCP necesario - `fetch server`. Una vez descargado, ¡podremos empezar a usarlo! Nota: Si mcp-server-fetch no se configura correctamente, intente reiniciar su computadora.
+Tras completar esta configuración, Cherry Studio descargará automáticamente el MCP Server necesario: `fetch server`. Una vez finalizada la descarga, ¡podremos comenzar a usarlo! Nota: Si la configuración de mcp-server-fetch falla, intenta reiniciar el equipo.
 {% endhint %}
 
-### Habilitar servicios MCP en el cuadro de chat
+### Habilitar el servicio MCP en el cuadro de chat
 
 <figure><img src="../../.gitbook/assets/MCP-输入框按钮示例.png" alt=""><figcaption></figcaption></figure>
 
-* El servidor MCP debe estar configurado correctamente en `Servidor MCP`
+* Se ha agregado exitosamente un servidor MCP en la configuración de `Servidor MCP`
 
 <figure><img src="../../.gitbook/assets/MCP服务器示例.png" alt=""><figcaption></figcaption></figure>
 
-### **Demostración de efectos de uso**
+### **Demostración del efecto de uso**
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-Como se muestra en la imagen superior, al combinar la función `fetch` de MCP, Cherry Studio puede comprender mejor la intención de consulta del usuario, obtener información relevante de Internet y brindar respuestas más precisas y completas.
+Como muestra la imagen superior, al combinar la función `fetch` de MCP, Cherry Studio comprende mejor la intención de consulta del usuario, obtiene información relevante de la web y proporciona respuestas más precisas y completas.

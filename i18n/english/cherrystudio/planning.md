@@ -11,12 +11,12 @@ This document was translated from Chinese by AI and has not yet been reviewed.
 
 
 
-* [x] Quick pop-up (read clipboard, quick question, explain, translate, summarize)
+* [x] Quick Pop-up (read clipboard, quick ask, explain, translate, summarize)
 * [x] Multi-model answer comparison
-* [x] Support login using SSO provided by service providers
+* [x] Support login with SSO provided by service providers
 * [x] All models support internet access
-* [x] Release of the first official version
-* [x] Slide word assistant
+* [x] Release the first official version
+* [x] Hover word assistant
 * [x] Note-taking feature
 * [ ] iOS & Android clients (Q4)
 * [ ] Voice input and output (Q4)

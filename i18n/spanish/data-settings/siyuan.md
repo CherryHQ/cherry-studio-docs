@@ -1,60 +1,63 @@
 ---
 icon: map
 ---
+# Tutorial de Configuración de SiYuan Note
+
 
 {% hint style="warning" %}
 Este documento ha sido traducido del chino por IA y aún no ha sido revisado.
 {% endhint %}
 
-# Tutorial de Configuración de SiYuan Note
+
+
 
 Permite exportar temas y mensajes a SiYuan Note.
 
-## Paso 1
+## Primer paso
 
-Abra SiYuan Note y cree un cuaderno de notas
+Abre SiYuan Note y crea un cuaderno
 
-<figure><img src="../.gitbook/assets/siyuan-image-1.png" alt=""><figcaption><p>Haga clic en "Nuevo cuaderno de notas"</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/siyuan-image-1.png" alt=""><figcaption><p>Haz clic en "Nuevo cuaderno"</p></figcaption></figure>
 
-## Paso 2
+## Segundo paso
 
-Abra la configuración del cuaderno y copie el `ID del cuaderno`
+Abre la configuración del cuaderno y copia el `ID del cuaderno`
 
-<figure><img src="../.gitbook/assets/siyuan-image-2.png" alt="" width="400"><figcaption><p>Abrir configuración del cuaderno de notas</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/siyuan-image-2.png" alt="" width="400"><figcaption><p>Abrir configuración del cuaderno</p></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/siyuan-image-3.png" alt=""><figcaption><p>Haga clic en el botón "Copiar ID del cuaderno de notas"</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/siyuan-image-3.png" alt=""><figcaption><p>Haz clic en el botón "Copiar ID del cuaderno"</p></figcaption></figure>
 
-## Paso 3
+## Tercer paso
 
-Pegue el ID del cuaderno en la configuración de Cherry Studio
+Pega el ID del cuaderno en la configuración de Cherry Studio
 
-<figure><img src="../.gitbook/assets/siyuan-image-4.png" alt=""><figcaption><p>Complete el ID del cuaderno de notas en la configuración de datos</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/siyuan-image-4.png" alt=""><figcaption><p>Ingresa el ID del cuaderno en la configuración de datos</p></figcaption></figure>
 
-## Paso 4
+## Cuarto paso
 
-Complete la dirección de SiYuan Note
+Ingresa la dirección de SiYuan Note
 
 * **Local**\
   Normalmente `http://127.0.0.1:6806`
-* **Auto implementado**\
-  Su dominio `http://note.domain.com`
+* **Auto-despliegue**\
+  Tu dominio `http://note.domain.com`
 
-<figure><img src="../.gitbook/assets/siyuan-image-5.png" alt=""><figcaption><p>Ingrese su dirección de SiYuan Note</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/siyuan-image-5.png" alt=""><figcaption><p>Ingresa tu dirección de SiYuan Note</p></figcaption></figure>
 
-## Paso 5
+## Quinto paso
 
-Copie el `API Token` de SiYuan Note
+Copia el `Token de API` de SiYuan Note
 
-<figure><img src="../.gitbook/assets/siyuan-image-6.png" alt=""><figcaption><p>Copie el token de la API de SiYuan Note</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/siyuan-image-6.png" alt=""><figcaption><p>Copiar token de SiYuan Note</p></figcaption></figure>
 
-Ingréselo en la configuración de Cherry Studio y verifique
+Pégalo en la configuración de Cherry Studio y comprueba
 
-<figure><img src="../.gitbook/assets/siyuan-image-7.png" alt=""><figcaption><p>Complete la ID de la base de datos y haga clic en "Comprobar"</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/siyuan-image-7.png" alt=""><figcaption><p>Ingresa el ID de base de datos y haz clic en "Comprobar"</p></figcaption></figure>
 
-## Paso 6
+## Sexto paso
 
-¡Felicidades! La configuración de SiYuan Note se ha completado ✅. Ahora puede exportar contenido de Cherry Studio a su SiYuan Note
+¡Felicidades! La configuración de SiYuan Note está completa ✅ Ahora puedes exportar contenido de Cherry Studio a tu SiYuan Note
 
 <figure><img src="../.gitbook/assets/siyuan-image-8.png" alt=""><figcaption><p>Exportar a SiYuan Note</p></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/siyuan-image-9.png" alt=""><figcaption><p>Ver el resultado de la exportación</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/siyuan-image-9.png" alt=""><figcaption><p>Ver resultado de exportación</p></figcaption></figure>

@@ -1,16 +1,19 @@
 ---
 icon: floppy-disk
 ---
+# Изменение места хранения
 
-# Изменение хранилища
 
 {% hint style="warning" %}
 Этот документ переведен с китайского языка с помощью ИИ и еще не был проверен.
 {% endhint %}
 
-## Стандартное расположение хранения данных
 
-Данные Cherry Studio сохраняются согласно системным стандартам и автоматически размещаются в пользовательском каталоге. Точные пути следующие:
+
+
+## Место хранения по умолчанию
+
+Хранение данных Cherry Studio соответствует системным спецификациям. Данные автоматически размещаются в домашнем каталоге пользователя по следующим путям:
 
 > macOS: /Users/username/Library/Application Support/CherryStudioDev
 
@@ -18,24 +21,25 @@ icon: floppy-disk
 
 > Linux: /home/username/.config/CherryStudio
 
-Также можно посмотреть расположение здесь:
+Также можно просмотреть расположение здесь:
 
-<figure><img src="../../.gitbook/assets/image%20(31).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (31).png" alt=""><figcaption></figcaption></figure>
 
-## Изменение места хранения данных (справочно)
+## Изменение места хранения (справочно)
 
-**Способ 1:**\
-Создайте символическую ссылку. Завершите работу приложения, переместите данные в нужное расположение, затем создайте ссылку из оригинального пути к новому местоположению.
+Способ 1:
 
-Подробные инструкции смотрите здесь: [https://github.com/CherryHQ/cherry-studio/issues/621#issuecomment-2588652880](https://github.com/CherryHQ/cherry-studio/issues/621#issuecomment-2588652880)
+Можно создать символическую ссылку. Закройте приложение, переместите данные в желаемое место, затем создайте ссылку из исходного местоположения на новое.
 
-**Способ 2:**\
-Используйте особенности приложений Electron и измените путь через параметры запуска.
+Подробные шаги смотрите в: [https://github.com/CherryHQ/cherry-studio/issues/621#issuecomment-2588652880](https://github.com/CherryHQ/cherry-studio/issues/621#issuecomment-2588652880)
+
+Способ 2:\
+Измените место хранения через параметры запуска, используя особенности приложений Electron.
 
 > \--user-data-dir\
-> Пример: Cherry-Studio-\*-x64-portable.exe --user-data-dir="%user\_data\_dir%"
+> Например: Cherry-Studio-\*-x64-portable.exe --user-data-dir="%user\_data\_dir%"
 
-> Пример реализации:
+> Пример:
 
 ```shell
 PS D:\CherryStudio> dir
@@ -54,18 +58,18 @@ d-----         2025/4/18     14:05                user-data-dir
 > init\_cherry\_studio.bat (кодировка: ANSI)
 
 ```bash
-@title CherryStudio Initialization
+@title Инициализация CherryStudio
 @echo off
 
 set current_path_dir=%~dp0
 @echo Текущий путь:%current_path_dir%
 set user_data_dir=%current_path_dir%user-data-dir
-@echo Путь к данным CherryStudio:%user_data_dir%
+@echo Путь данных CherryStudio:%user_data_dir%
 
-@echo Поиск Cherry-Studio-*-portable.exe в текущей директории
+@echo Поиск Cherry-Studio-*-portable.exe в текущем каталоге
 setlocal enabledelayedexpansion
 
-for /f "delims=" %%F in ('dir /b /a-d "Cherry-Studio-*-portable*.exe" 2^>nul') do ( # Этот код совместим с версиями с GitHub и с официального сайта; для других версий измените самостоятельно
+for /f "delims=" %%F in ('dir /b /a-d "Cherry-Studio-*-portable*.exe" 2^>nul') do ( # Этот код подходит для версий с GitHub и официального сайта; для других случаев измените самостоятельно
     set "target_file=!cd!\%%F"
     goto :break
 )
@@ -73,12 +77,12 @@ for /f "delims=" %%F in ('dir /b /a-d "Cherry-Studio-*-portable*.exe" 2^>nul') d
 if defined target_file (
     echo Найден файл: %target_file%
 ) else (
-    echo Совпадающие файлы не найдены, выход из скрипта
+    echo Совпадений не найдено, выход из скрипта
     pause
     exit
 )
 
-@echo Подтвердите действие
+@echo Подтвердите для продолжения
 pause
 
 @echo Запуск CherryStudio
