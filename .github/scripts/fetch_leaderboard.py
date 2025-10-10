@@ -5,18 +5,20 @@ import os
 from io import StringIO
 import time
 import requests
+from bs4 import BeautifulSoup
+
 
 def fetch_and_parse_leaderboard():
     """
-    使用 ScraperAPI 抓取并解析 LMArena 排行榜页面，并增加了重试逻辑。
+    使用 ScraperAPI 抓取并使用 BeautifulSoup 解析 LMArena 排行榜页面，
     """
     api_key = os.getenv('SCRAPER_API_KEY')
     if not api_key:
         print("错误：SCRAPER_API_KEY 环境变量未设置。")
-        print("请在 GitHub Secrets 中配置它，或在本地终端中导出：export SCRAPER_API_KEY='your_key'")
         raise ValueError("SCRAPER_API_KEY is not set.")
 
     target_url = "https://lmarena.ai/leaderboard/text"
+    base_url = "https://lmarena.ai" # 用于拼接相对链接
     scraperapi_url = f'http://api.scraperapi.com?api_key={api_key}&url={target_url}'
 
     retries = 3
@@ -25,16 +27,47 @@ def fetch_and_parse_leaderboard():
     for i in range(retries):
         try:
             print(f"Attempt {i+1}/{retries} to fetch data via ScraperAPI...")
-            response = requests.get(scraperapi_url, timeout=60)
+            response = requests.get(scraperapi_url, timeout=120) # 增加超时时间
             response.raise_for_status()
             print("Successfully fetched data via ScraperAPI.")
+
+            # --- 使用 BeautifulSoup 解析 ---
+            soup = BeautifulSoup(response.text, 'lxml')
             
-            tables = pd.read_html(StringIO(response.text))
-            if tables:
-                return tables[0]
-            else:
+            table = soup.find('table')
+            if not table:
                 print("No tables found on the page.")
                 return None
+
+            # 提取表头
+            headers = [th.get_text(strip=True) for th in table.find('thead').find_all('th')]
+            
+            # 提取表格数据行
+            rows = []
+            for tr in table.find('tbody').find_all('tr'):
+                cells = tr.find_all('td')
+                row_data = []
+                for idx, cell in enumerate(cells):
+                    # 检查是否是“Model”列（通常是第二列，索引为1）
+                    if idx == 1:
+                        link_tag = cell.find('a')
+                        if link_tag and link_tag.has_attr('href'):
+                            model_name = link_tag.get_text(strip=True)
+                            href = link_tag['href']
+                            # 拼接成完整的 URL
+                            full_url = f"{base_url}{href}" if href.startswith('/') else href
+                            # 创建 Markdown 格式的链接
+                            markdown_link = f"{model_name} [<sup>1</sup>]({full_url})"
+                            row_data.append(markdown_link)
+                        else:
+                            row_data.append(cell.get_text(strip=True))
+                    else:
+                        row_data.append(cell.get_text(strip=True))
+                rows.append(row_data)
+
+            # 创建 DataFrame
+            df = pd.DataFrame(rows, columns=headers)
+            return df
 
         except requests.exceptions.HTTPError as e:
             if i < retries - 1:
@@ -55,7 +88,7 @@ def fetch_and_parse_leaderboard():
     
     return None
 
-# --- 修改后的 generate_markdown 函数 ---
+# --- generate_markdown 函数保持不变（使用上一版的修改） ---
 
 def generate_markdown(df):
     """
@@ -64,7 +97,6 @@ def generate_markdown(df):
     if df is None or df.empty:
         return "未能获取或解析排行榜数据。"
 
-    # 1. 定义列名中英文字典
     column_mapping = {
         'Rank (UB)': '排名 (UB)',
         'Model': '模型',
@@ -75,7 +107,6 @@ def generate_markdown(df):
         'License': '许可证'
     }
 
-    # 2. 重命名 DataFrame 的列
     df.rename(columns=column_mapping, inplace=True)
 
     utc_now = datetime.now(pytz.utc)
@@ -85,18 +116,14 @@ def generate_markdown(df):
     utc_time_str = utc_now.strftime('%Y-%m-%d %H:%M:%S %Z')
     beijing_time_str = beijing_now.strftime('%Y-%m-%d %H:%M:%S %Z')
 
+    # to_markdown 会自动处理单元格内的 Markdown 链接
     md_table = df.to_markdown(index=False)
 
-    # 3. 更新 Markdown 模板内容，特别是“说明”部分
     markdown_content = f"""# LLM Arena 排行榜 (实时更新)
 
 这是一个基于 Chatbot Arena (lmarena.ai) 数据的排行榜，通过自动化流程生成。
 
 > **数据更新时间**: {utc_time_str} / {beijing_time_str} (北京时间)
-
-{{% hint style="info" %}}
-点击排行榜中的 **模型名称** 可跳转至其详细信息或试用页面。
-{{% endhint %}}
 
 ## 排行榜
 
@@ -114,7 +141,7 @@ def generate_markdown(df):
 
 ## 数据来源与更新频率
 
-本排行榜数据由自动化脚本直接从 [官方网站](https://lmarena.ai/) 获取，由 GitHub Actions 每天自动更新。
+本排行榜数据由自动化脚本直接从 <sup>1</sup> [<sup>2</sup>](https://lmarena.ai/) 官方网站获取。此排行榜由 GitHub Actions 每天自动更新。
 
 ## 免责声明
 
