@@ -441,7 +441,9 @@ def translate_text(text, target_lang_code):
                     except Exception:
                         continue
                 translated_content = "".join(translated_content_parts)
-                if not translated_content.strip():
+                # 删除整段思维链内容，确保与非流式分支行为一致
+                translated_content = re.sub(r'<think>.*?</think>', '', translated_content, flags=re.DOTALL).strip()
+                if not translated_content:
                     raise ValueError("empty stream content")
             except Exception:
                 resp = client.chat.completions.create(
