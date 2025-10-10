@@ -114,7 +114,7 @@ def generate_markdown(df):
 
 ## 数据来源与更新频率
 
-本排行榜数据由自动化脚本直接从 [<sup>1</sup>](https://lmarena.ai/) 官方网站获取。此排行榜由 GitHub Actions 每天自动更新。
+本排行榜数据由自动化脚本直接从 [官方网站](https://lmarena.ai/) 获取，由 GitHub Actions 每天自动更新。
 
 ## 免责声明
 
