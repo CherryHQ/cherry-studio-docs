@@ -1,7 +1,7 @@
 ---
 icon: download
 ---
-# Descarga del Cliente
+# Descarga del cliente
 
 
 {% hint style="warning" %}
@@ -12,30 +12,30 @@ Este documento ha sido traducido del chino por IA y aún no ha sido revisado.
 
 
 {% hint style="info" %}
-Versión estable actual más reciente: v1.6.3
+Versión estable más reciente: v1.6.4
 {% endhint %}
 
-## Descarga Directa
+## Descarga directa
 
 ### Versión para Windows
 
 {% hint style="warning" %}
-Nota: Cherry Studio no es compatible con Windows 7.
+Nota: Cherry Studio no es compatible con el sistema Windows 7.
 {% endhint %}
 
-#### Versión instalable (Setup)
+#### Versión de instalación (Setup)
 
 <details>
 
 <summary>Versión x64</summary>
 
-Línea principal:
+Servidor principal:
 
-【[Sitio web oficial de Cherry Studio](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.0-rc.2/Cherry-Studio-1.6.3-rc.2-x64-setup.exe)】
+【[Sitio web oficial de Cherry Studio](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.0-rc.2/Cherry-Studio-1.6.4-rc.2-x64-setup.exe)】
 
-Líneas alternativas:
+Servidores de respaldo:
 
-【[Línea 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.0-rc.2/Cherry-Studio-1.6.3-rc.2-x64-setup.exe)】 【[Línea 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.0-rc.2/Cherry-Studio-1.6.3-rc.2-x64-setup.exe)】 【[Línea 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.0-rc.2/Cherry-Studio-1.6.3-rc.2-x64-setup.exe)】
+【[Servidor 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.0-rc.2/Cherry-Studio-1.6.4-rc.2-x64-setup.exe)】 【[Servidor 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.0-rc.2/Cherry-Studio-1.6.4-rc.2-x64-setup.exe)】 【[Servidor 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.0-rc.2/Cherry-Studio-1.6.4-rc.2-x64-setup.exe)】
 
 </details>
 
@@ -43,29 +43,29 @@ Líneas alternativas:
 
 <summary>Versión ARM64</summary>
 
-Línea principal:
+Servidor principal:
 
-【[Sitio web oficial de Cherry Studio](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.0-rc.2/Cherry-Studio-1.6.3-rc.2-arm64-setup.exe)】
+【[Sitio web oficial de Cherry Studio](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.0-rc.2/Cherry-Studio-1.6.4-rc.2-arm64-setup.exe)】
 
-Líneas alternativas:
+Servidores de respaldo:
 
-【[Línea 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.0-rc.2/Cherry-Studio-1.6.3-rc.2-arm64-setup.exe)】 【[Línea 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.0-rc.2/Cherry-Studio-1.6.3-rc.2-arm64-setup.exe)】 【[Línea 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.0-rc.2/Cherry-Studio-1.6.3-rc.2-arm64-setup.exe)】
+【[Servidor 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.0-rc.2/Cherry-Studio-1.6.4-rc.2-arm64-setup.exe)】 【[Servidor 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.0-rc.2/Cherry-Studio-1.6.4-rc.2-arm64-setup.exe)】 【[Servidor 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.0-rc.2/Cherry-Studio-1.6.4-rc.2-arm64-setup.exe)】
 
 </details>
 
-#### Versión portátil (Portable)
+#### Versión portable (Portable)
 
 <details>
 
 <summary>Versión x64</summary>
 
-Línea principal:
+Servidor principal:
 
-【[Sitio web oficial de Cherry Studio](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.0-rc.2/Cherry-Studio-1.6.3-rc.2-x64-portable.exe)】
+【[Sitio web oficial de Cherry Studio](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.0-rc.2/Cherry-Studio-1.6.4-rc.2-x64-portable.exe)】
 
-Líneas alternativas:
+Servidores de respaldo:
 
-【[Línea 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.0-rc.2/Cherry-Studio-1.6.3-rc.2-x64-portable.exe)】 【[Línea 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.0-rc.2/Cherry-Studio-1.6.3-rc.2-x64-portable.exe)】 【[Línea 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.0-rc.2/Cherry-Studio-1.6.3-rc.2-x64-portable.exe)】
+【[Servidor 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.0-rc.2/Cherry-Studio-1.6.4-rc.2-x64-portable.exe)】 【[Servidor 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.0-rc.2/Cherry-Studio-1.6.4-rc.2-x64-portable.exe)】 【[Servidor 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.0-rc.2/Cherry-Studio-1.6.4-rc.2-x64-portable.exe)】
 
 </details>
 
@@ -73,13 +73,13 @@ Líneas alternativas:
 
 <summary>Versión ARM64</summary>
 
-Línea principal:
+Servidor principal:
 
-【[Sitio web oficial de Cherry Studio](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.0-rc.2/Cherry-Studio-1.6.3-rc.2-arm64-portable.exe)】
+【[Sitio web oficial de Cherry Studio](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.0-rc.2/Cherry-Studio-1.6.4-rc.2-arm64-portable.exe)】
 
-Líneas alternativas:
+Servidores de respaldo:
 
-【[Línea 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.0-rc.2/Cherry-Studio-1.6.3-rc.2-arm64-portable.exe)】 【[Línea 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.0-rc.2/Cherry-Studio-1.6.3-rc.2-arm64-portable.exe)】 【[Línea 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.0-rc.2/Cherry-Studio-1.6.3-rc.2-arm64-portable.exe)】
+【[Servidor 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.0-rc.2/Cherry-Studio-1.6.4-rc.2-arm64-portable.exe)】 【[Servidor 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.0-rc.2/Cherry-Studio-1.6.4-rc.2-arm64-portable.exe)】 【[Servidor 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.0-rc.2/Cherry-Studio-1.6.4-rc.2-arm64-portable.exe)】
 
 </details>
 
@@ -91,13 +91,13 @@ Líneas alternativas:
 
 <summary>Versión para chips Intel (x64)</summary>
 
-Línea principal:
+Servidor principal:
 
-【[Sitio web oficial de Cherry Studio](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.0-rc.2/Cherry-Studio-1.6.3-rc.2-x64.dmg)】
+【[Sitio web oficial de Cherry Studio](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.0-rc.2/Cherry-Studio-1.6.4-rc.2-x64.dmg)】
 
-Líneas alternativas:
+Servidores de respaldo:
 
-【[Línea 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.0-rc.2/Cherry-Studio-1.6.3-rc.2.dmg)】 【[Línea 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.0-rc.2/Cherry-Studio-1.6.3-rc.2-x64.dmg)】 【[Línea 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.0-rc.2/Cherry-Studio-1.6.3-rc.2-x64.dmg)】
+【[Servidor 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.0-rc.2/Cherry-Studio-1.6.4-rc.2.dmg)】 【[Servidor 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.0-rc.2/Cherry-Studio-1.6.4-rc.2-x64.dmg)】 【[Servidor 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.0-rc.2/Cherry-Studio-1.6.4-rc.2-x64.dmg)】
 
 </details>
 
@@ -105,13 +105,13 @@ Líneas alternativas:
 
 <summary>Versión para Apple Silicon (ARM64, chips serie M)</summary>
 
-Línea principal:
+Servidor principal:
 
-【[Sitio web oficial de Cherry Studio](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.0-rc.2/Cherry-Studio-1.6.3-rc.2-arm64.dmg)】
+【[Sitio web oficial de Cherry Studio](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.0-rc.2/Cherry-Studio-1.6.4-rc.2-arm64.dmg)】
 
-Líneas alternativas:
+Servidores de respaldo:
 
-【[Línea 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.0-rc.2/Cherry-Studio-1.6.3-rc.2-arm64.dmg)】 【[Línea 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.0-rc.2/Cherry-Studio-1.6.3-rc.2-arm64.dmg)】 【[Línea 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.0-rc.2/Cherry-Studio-1.6.3-rc.2-arm64.dmg)】
+【[Servidor 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.0-rc.2/Cherry-Studio-1.6.4-rc.2-arm64.dmg)】 【[Servidor 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.0-rc.2/Cherry-Studio-1.6.4-rc.2-arm64.dmg)】 【[Servidor 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.0-rc.2/Cherry-Studio-1.6.4-rc.2-arm64.dmg)】
 
 </details>
 
@@ -123,13 +123,13 @@ Líneas alternativas:
 
 <summary>Versión x86_64</summary>
 
-Línea principal:
+Servidor principal:
 
-【[Sitio web oficial de Cherry Studio](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.0-rc.2/Cherry-Studio-1.6.3-rc.2-x86_64.AppImage)】
+【[Sitio web oficial de Cherry Studio](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.0-rc.2/Cherry-Studio-1.6.4-rc.2-x86_64.AppImage)】
 
-Líneas alternativas:
+Servidores de respaldo:
 
-【[Línea 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.0-rc.2/Cherry-Studio-1.6.3-rc.2-x86_64.AppImage)】 【[Línea 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.0-rc.2/Cherry-Studio-1.6.3-rc.2-x86_64.AppImage)】 【[Línea 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.0-rc.2/Cherry-Studio-1.6.3-rc.2-x86_64.AppImage)】
+【[Servidor 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.0-rc.2/Cherry-Studio-1.6.4-rc.2-x86_64.AppImage)】 【[Servidor 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.0-rc.2/Cherry-Studio-1.6.4-rc.2-x86_64.AppImage)】 【[Servidor 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.0-rc.2/Cherry-Studio-1.6.4-rc.2-x86_64.AppImage)】
 
 </details>
 
@@ -137,18 +137,18 @@ Líneas alternativas:
 
 <summary>Versión ARM64</summary>
 
-Línea principal:
+Servidor principal:
 
-【[Sitio web oficial de Cherry Studio](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.0-rc.2/Cherry-Studio-1.6.3-rc.2-arm64.AppImage)】
+【[Sitio web oficial de Cherry Studio](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.0-rc.2/Cherry-Studio-1.6.4-rc.2-arm64.AppImage)】
 
-Líneas alternativas:
+Servidores de respaldo:
 
-【[Línea 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.0-rc.2/Cherry-Studio-1.6.3-rc.2-arm64.AppImage)】 【[Línea 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.0-rc.2/Cherry-Studio-1.6.3-rc.2-arm64.AppImage)】 【[Línea 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.0-rc.2/Cherry-Studio-1.6.3-rc.2-arm64-AppImage)】
+【[Servidor 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.0-rc.2/Cherry-Studio-1.6.4-rc.2-arm64.AppImage)】 【[Servidor 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.0-rc.2/Cherry-Studio-1.6.4-rc.2-arm64.AppImage)】 【[Servidor 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.0-rc.2/Cherry-Studio-1.6.4-rc.2-arm64-AppImage)】
 
 </details>
 
 ***
 
-## Descarga desde Almacenamiento en la Nube
+## Descarga desde almacenamiento en la nube
 
 [Quark](https://pan.quark.cn/s/4044324d0ecd#/list/share)
