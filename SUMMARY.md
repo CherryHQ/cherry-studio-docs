@@ -47,6 +47,7 @@
   * [华为云](pre-basic/providers/huawei.md)
   * [无问芯穹](pre-basic/providers/wu-wen-xin-qiong.md)
   * [自定义服务商](pre-basic/providers/zi-ding-yi-fu-wu-shang.md)
+  * [CherryIN](pre-basic/providers/cherryin-1.md)
 
 ***
 
