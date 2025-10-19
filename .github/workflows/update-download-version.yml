@@ -14,7 +14,7 @@ jobs:
   update-version:
     # 添加条件判断：如果是 repository_dispatch 触发（自动触发）
     # 且版本号包含 "rc" 或 "beta" 或 "alpha"，则跳过此 job
-    if: ${{ github.event_name != 'repository_dispatch' || (github.event_name == 'repository_dispatch' && (!contains(github.event.client_payload.version, 'rc') && !contains(github.event.client_payload.version, 'beta') && (!contains(github.event.client_payload.version, 'alpha'))) }}
+    if: ${{ github.event_name != 'repository_dispatch' || (github.event_name == 'repository_dispatch' && !contains(github.event.client_payload.version, 'rc') && !contains(github.event.client_payload.version, 'beta') && (!contains(github.event.client_payload.version, 'alpha'))) }}
     runs-on: ubuntu-latest
     permissions:
       contents: write
