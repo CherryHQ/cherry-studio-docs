@@ -1,4 +1,4 @@
-# LLM Arena 排行榜 (實時更新)
+# LLM Arena 排行榜（即時更新）
 
 
 {% hint style="warning" %}
@@ -10,7 +10,7 @@
 
 這是一個基於 Chatbot Arena (lmarena.ai) 數據的排行榜，通過自動化流程生成。
 
-> **數據更新時間**: 2025-10-20 08:08:23 UTC / 2025-10-20 16:08:23 CST (北京時間)
+> **數據更新時間**: 2025-10-21 08:08:35 UTC / 2025-10-21 16:08:35 CST（北京時間）
 
 ## 排行榜
 
@@ -92,13 +92,13 @@
 |        67 | gpt-oss-120b [<sup>1</sup>](https://openai.com/index/introducing-gpt-oss/)                                                                                                                                 | 1348            | ±5             | 21,119  | OpenAI                 | Apache 2.0              |
 |        67 | hunyuan-turbos-20250226 [<sup>1</sup>](https://cloud.tencent.com/document/product/1729/104753)                                                                                                             | 1345            | ±12            | 2,250   | Tencent                | Proprietary             |
 |        67 | llama-3.1-nemotron-ultra-253b-v1 [<sup>1</sup>](https://huggingface.co/nvidia/Llama-3_1-Nemotron-Ultra-253B-v1)                                                                                            | 1344            | ±12            | 2,573   | Nvidia                 | Nvidia Open Model       |
-|        67 | amazon-nova-experimental-chat-10-09 [<sup>1</sup>](https://nova.amazon.com/faqs)                                                                                                                           | 1344初步 | ±11            | 2,911   | Amazon                 | Proprietary             |
+|        67 | amazon-nova-experimental-chat-10-09 [<sup>1</sup>](https://nova.amazon.com/faqs)                                                                                                                           | 1344Preliminary | ±11            | 2,911   | Amazon                 | Proprietary             |
 |        67 | qwen3-32b [<sup>1</sup>](https://qwenlm.github.io/blog/qwen3/)                                                                                                                                             | 1344            | ±9             | 3,943   | Alibaba                | Apache 2.0              |
 |        68 | qwen-plus-0125 [<sup>1</sup>](https://www.alibabacloud.com/help/en/model-studio/developer-reference/what-is-qwen-llm)                                                                                      | 1343            | ±8             | 5,861   | Alibaba                | Proprietary             |
 |        69 | o3-mini [<sup>1</sup>](https://openai.com/index/openai-o3-mini/)                                                                                                                                           | 1347            | ±3             | 58,935  | OpenAI                 | Proprietary             |
 |        69 | step-3 [<sup>1</sup>](https://stepfun.ai/research/en/step3)                                                                                                                                                | 1344            | ±7             | 6,686   | StepFun                | Apache 2.0              |
 |        69 | glm-4-plus-0111 [<sup>1</sup>](https://bigmodel.cn/dev/howuse/glm-4)                                                                                                                                       | 1343            | ±8             | 5,806   | Zhipu                  | Proprietary             |
-|        69 | ling-flash-2.0 [<sup>1</sup>](https://huggingface.co/inclusionAI/Ling-flash-2.0)                                                                                                                           | 1341初步 | ±9             | 4,893   | Ant Group              | MIT                     |
+|        69 | ling-flash-2.0 [<sup>1</sup>](https://huggingface.co/inclusionAI/Ling-flash-2.0)                                                                                                                           | 1341Preliminary | ±9             | 4,893   | Ant Group              | MIT                     |
 |        69 | gemma-3-12b-it [<sup>1</sup>](https://aistudio.google.com/app/prompts/new_chat?model=gemma-3-12b-it)                                                                                                       | 1340            | ±10            | 3,866   | Google                 | Gemma                   |
 |        69 | nvidia-llama-3.3-nemotron-super-49b-v1.5 [<sup>1</sup>](https://huggingface.co/nvidia/Llama-3_3-Nemotron-Super-49B-v1_5)                                                                                   | 1339            | ±10            | 3,488   | Nvidia                 | Nvidia Open             |
 |        69 | hunyuan-turbo-0110 [<sup>1</sup>](https://cloud.tencent.com/document/product/1729/104753)                                                                                                                  | 1337            | ±11            | 2,322   | Tencent                | Proprietary             |
@@ -123,12 +123,12 @@
 |        96 | llama-4-scout-17b-16e-instruct [<sup>1</sup>](https://huggingface.co/meta-llama/Llama-4-Scout-17B-16E-Instruct)                                                                                            | 1322            | ±5             | 31,329  | Meta                   | Llama                   |
 |        96 | gpt-4.1-nano-2025-04-14 [<sup>1</sup>](https://openai.com/index/gpt-4-1/)                                                                                                                                  | 1319            | ±8             | 6,143   | OpenAI                 | Proprietary             |
 |        97 | claude-3-opus-20240229 [<sup>1</sup>](https://www.anthropic.com/news/claude-3-family)                                                                                                                      | 1321            | ±3             | 196,368 | Anthropic              | Proprietary             |
-|        97 | claude-3-5-haiku-20241022 [<sup>1</sup>](https://www.anthropic.com/news/3-5-models-and-computer-use)                                                                                                       | 1320            | ±3             | 71,507  | Anthropic              | Propretrary             |
+|        97 | claude-3-5-haiku-20241022 [<sup>1</sup>](https://www.anthropic.com/news/3-5-models-and-computer-use)                                                                                                       | 1320            | ±3             | 71,507  | Anthropic              | Propretary              |
 |        97 | gemini-1.5-pro-001 [<sup>1</sup>](https://aistudio.google.com/app/prompts/new_chat?model=gemini-1.5-pro)                                                                                                   | 1320            | ±4             | 79,769  | Google                 | Proprietary             |
 |        97 | step-1o-turbo-202506 [<sup>1</sup>](https://platform.stepfun.com/docs/llm/vision)                                                                                                                          | 1319            | ±7             | 9,685   | StepFun                | Proprietary             |
 |        97 | gemma-3n-e4b-it [<sup>1</sup>](https://aistudio.google.com/app/prompts/new_chat?model=gemma-3n-e4b-it)                                                                                                     | 1318            | ±5             | 23,541  | Google                 | Gemma                   |
 |        97 | gpt-oss-20b [<sup>1</sup>](https://openai.com/index/introducing-gpt-oss/)                                                                                                                                  | 1317            | ±6             | 10,906  | OpenAI                 | Apache 2.0              |
-|        97 | ring-flash-2.0 [<sup>1</sup>](https://huggingface.co/inclusionAI/Ring-flash-2.0)                                                                                                                           | 1314初步 | ±9             | 4,971   | Ant Group              | MIT                     |
+|        97 | ring-flash-2.0 [<sup>1</sup>](https://huggingface.co/inclusionAI/Ring-flash-2.0)                                                                                                                           | 1314Preliminary | ±9             | 4,971   | Ant Group              | MIT                     |
 |       100 | llama-3.3-70b-instruct [<sup>1</sup>](https://huggingface.co/meta-llama/Llama-3.3-70B-Instruct)                                                                                                            | 1319            | ±3             | 56,024  | Meta                   | Llama-3.3               |
 |       100 | glm-4-plus [<sup>1</sup>](https://bigmodel.cn/dev/howuse/glm-4)                                                                                                                                            | 1317            | ±5             | 26,342  | Zhipu AI               | Proprietary             |
 |       100 | qwen-max-0919 [<sup>1</sup>](https://help.aliyun.com/zh/dashscope/developer-reference/model-introduction)                                                                                                  | 1316            | ±6             | 16,598  | Alibaba                | Qwen                    |
@@ -277,10 +277,10 @@
 
 ## 說明
 
-- **排名（UB）**：基於 Bradley-Terry 模型計算的排名。此排名反映了模型在競技場中的綜合表現，並提供了其 Elo 分數的 **上界** 估計，幫助理解模型的潛在競爭力。
+- **排名 (UB)**：基於 Bradley-Terry 模型計算的排名。此排名反映了模型在競技場中的綜合表現，並提供了其 Elo 分數的 **上界** 估計，幫助理解模型的潛在競爭力。
 - **模型**：大型語言模型 (LLM) 的名稱。部分模型名稱可能已嵌入相關連結。
 - **分數**：模型在競技場中通過用戶投票獲得的 Elo 評分。Elo 評分是一種相對排名系統，分數越高表示模型表現越好。
-- **95% 置信區間（±）**：模型 Elo 評分的95%置信區間（例如：`±6`）。這個區間越小，表示模型的評分越穩定和可靠。
+- **95% 置信區間 (±)**：模型 Elo 評分的95%置信區間（例如：`±6`）。這個區間越小，表示模型的評分越穩定和可靠。
 - **票數**：該模型在競技場中收到的總投票數量。投票數越多，通常意味著其評分的統計可靠性越高。
 - **組織/公司**：提供該模型的組織或公司。
 - **許可證**：模型的許可協議類型，例如專有 (Proprietary)、Apache 2.0、MIT 等。
