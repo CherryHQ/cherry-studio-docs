@@ -8,24 +8,24 @@
 * [Présentation des fonctionnalités](cherrystudio/preview/README.md)
   * [Interface de conversation](cherrystudio/preview/chat.md)
   * [Agents intelligents](cherrystudio/preview/agents.md)
-  * [Dessin](cherrystudio/preview/drawing.md)
+  * [Peinture](cherrystudio/preview/drawing.md)
   * [Traduction](cherrystudio/preview/translation.md)
   * [Mini-programmes](cherrystudio/preview/app.md)
   * [Base de connaissances](cherrystudio/preview/knowledge-base.md)
   * [Fichiers](cherrystudio/preview/files.md)
-  * [Assistants rapides](cherrystudio/preview/kuai-jie-zhu-shou.md)
+  * [Assistant de raccourcis](cherrystudio/preview/kuai-jie-zhu-shou.md)
   * [Paramètres](cherrystudio/preview/settings/README.md)
-    * [Configuration des services de modèles](cherrystudio/preview/settings/providers.md)
+    * [Paramètres des services de modèles](cherrystudio/preview/settings/providers.md)
     * [Paramètres des modèles par défaut](cherrystudio/preview/settings/default-models.md)
     * [Paramètres généraux](cherrystudio/preview/settings/general.md)
     * [Paramètres d'affichage](cherrystudio/preview/settings/display.md)
-    * [Configuration des raccourcis clavier](cherrystudio/preview/settings/key-shortcut.md)
-    * [Paramètres de données](cherrystudio/preview/settings/data.md)
+    * [Paramètres des raccourcis clavier](cherrystudio/preview/settings/key-shortcut.md)
+    * [Paramètres des données](cherrystudio/preview/settings/data.md)
     * [Fonctionnalités vocales](cherrystudio/preview/settings/yu-yin-gong-neng.md)
 
 ## Tutoriels de base <a href="#pre-basic" id="pre-basic"></a>
 
-* [Tutoriel d'installation](pre-basic/installation/README.md)
+* [Guide d'installation](pre-basic/installation/README.md)
   * [Windows](pre-basic/installation/windows.md)
   * [macOS](pre-basic/installation/macos.md)
 * [Configuration des services de modèles](pre-basic/providers/README.md)
@@ -37,37 +37,37 @@
   * [OpenAI](pre-basic/providers/openai.md)
   * [OneAPI](pre-basic/providers/oneapi.md)
   * [NewAPI](pre-basic/providers/newapi.md)
-  * [ModelScope (Mó Dā)](pre-basic/providers/modelscope.md)
+  * [ModelScope (Mo Da)](pre-basic/providers/modelscope.md)
   * [Ollama](pre-basic/providers/ollama.md)
   * [GitHub Copilot](pre-basic/providers/github-copilot.md)
-  * [PPIO Pàio Cloud](pre-basic/providers/ppio.md)
+  * [PPIO (Pai'ou Yun)](pre-basic/providers/ppio.md)
   * [Bailian d'Alibaba Cloud](pre-basic/providers/a-li-yun-bai-lian.md)
   * [SiliconCloud](pre-basic/providers/siliconcloud.md)
-  * [Doubao (VolcEngine)](pre-basic/providers/doubao.md)
+  * [Volc Engine](pre-basic/providers/doubao.md)
   * [Huawei Cloud](pre-basic/providers/huawei.md)
-  * [WuWen XinQiong](pre-basic/providers/wu-wen-xin-qiong.md)
-  * [Fournisseurs de services personnalisés](pre-basic/providers/zi-ding-yi-fu-wu-shang.md)
+  * [Wuwen Xinqiong](pre-basic/providers/wu-wen-xin-qiong.md)
+  * [Fournisseur de services personnalisé](pre-basic/providers/zi-ding-yi-fu-wu-shang.md)
   * [CherryIN](pre-basic/providers/cherryin-1.md)
 
 ***
 
-* [Mode connecté](websearch/README.md)
-  * [Mode connecté gratuit](websearch/mian-fei-lian-wang-mo-shi.md)
+* [Mode de connexion Internet](websearch/README.md)
+  * [Mode de connexion Internet gratuit](websearch/mian-fei-lian-wang-mo-shi.md)
   * [Configuration de la liste noire de recherche réseau](websearch/blacklist.md)
-  * [Connexion via VolcEngine](websearch/volcengine.md)
-  * [Tutoriel d'inscription et de connexion Tavily pour la connexion réseau](websearch/tavily.md)
+  * [Connexion via Volc Engine](websearch/volcengine.md)
+  * [Tutoriel d'inscription et de connexion Tavily](websearch/tavily.md)
   * [Déploiement et configuration locale de SearXNG](websearch/searxng.md)
-* [Paramètres de données](data-settings/README.md)
+* [Paramètres des données](data-settings/README.md)
   * [Sauvegarde WebDAV](data-settings/WebDAV.md)
-  * [Sauvegarde de stockage compatible S3](data-settings/s3-compatible.md)
-  * [Tutoriel de configuration de Notion](data-settings/notion.md)
-  * [Tutoriel de configuration d'Obsidian](data-settings/obsidian.md)
-  * [Tutoriel de configuration de SiYuan Notes](data-settings/siyuan.md)
-* [Paramètres personnalisés](personalization-settings/README.md)
+  * [Sauvegarde avec stockage compatible S3](data-settings/s3-compatible.md)
+  * [Tutoriel de configuration Notion](data-settings/notion.md)
+  * [Tutoriel de configuration Obsidian](data-settings/obsidian.md)
+  * [Tutoriel de configuration Siyuan Notes](data-settings/siyuan.md)
+* [Paramètres de personnalisation](personalization-settings/README.md)
   * [CSS personnalisé](personalization-settings/css.md)
-  * [Recommandations de polices](personalization-settings/font.md)
-  * [Modification de l'emplacement de stockage](personalization-settings/storage.md)
-  * [Effacement des paramètres CSS](personalization-settings/clear-css.md)
+  * [Polices recommandées](personalization-settings/font.md)
+  * [Modifier l'emplacement de stockage](personalization-settings/storage.md)
+  * [Effacer les paramètres CSS](personalization-settings/clear-css.md)
 
 ## Tutoriels de la base de connaissances <a href="#knowledge-base" id="knowledge-base"></a>
 
@@ -85,27 +85,27 @@
   * [Configuration MCP intégrée](advanced-basic/mcp/in-memory.md)
   * [Configuration de la base de connaissances Dify](advanced-basic/mcp/dify.md)
   * [Ajout d'un serveur MCP ModelScope](advanced-basic/mcp/tian-jia-modelscope-mcp-fu-wu-qi.md)
-  * [Questions fréquentes](advanced-basic/mcp/chang-jian-wen-ti.md)
-* [Instructions d'utilisation des chaînes d'appel](advanced-basic/diao-yong-lian-shi-yong-shuo-ming.md)
-* [Tutoriel d'utilisation de Code Tools](advanced-basic/code-tools-shi-yong-jiao-cheng.md)
-* [Tutoriel d'utilisation de Cherry Agent](advanced-basic/cherry-agent-shi-yong-jiao-cheng.md)
+  * [FAQ](advanced-basic/mcp/chang-jian-wen-ti.md)
+* [Guide d'utilisation de la chaîne d'appel](advanced-basic/diao-yong-lian-shi-yong-shuo-ming.md)
+* [Tutoriel d'utilisation des outils de code](advanced-basic/code-tools-shi-yong-jiao-cheng.md)
+* [Tutoriel d'utilisation de Cherry Agent](advanced-basic/agent.md)
 
 ## Contribution au projet <a href="#contribution" id="contribution"></a>
 
-* [Contribuer du code](contribution/code.md)
+* [Contribuer au code](contribution/code.md)
 * [Contribuer à la documentation](contribution/docs.md)
 
-## Questions & Retours <a href="#question-contact" id="question-contact"></a>
+## Questions et feedback <a href="#question-contact" id="question-contact"></a>
 
-* [Questions fréquentes](question-contact/questions.md)
+* [FAQ](question-contact/questions.md)
 * [Comment poser des questions efficacement](question-contact/ask.md)
-* [Vulgarisation des connaissances](question-contact/knowledge.md)
-* [Retours & Suggestions](question-contact/suggestions.md)
+* [Diffusion des connaissances](question-contact/knowledge.md)
+* [Feedback et suggestions](question-contact/suggestions.md)
 
 ## Nous contacter <a href="#contact-us" id="contact-us"></a>
 
 * [Partenariats commerciaux](contact-us/questions.md)
-  * [Accord de licence commerciale de Cherry Studio](contact-us/questions/cherrystudio-xu-ke-xie-yi.md)
+  * [Licence open source de Cherry Studio](contact-us/questions/cherrystudio-xu-ke-xie-yi.md)
 
 ## À propos <a href="#about" id="about"></a>
 
