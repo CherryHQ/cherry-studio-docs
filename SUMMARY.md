@@ -105,7 +105,7 @@
 ## 联系我们 <a href="#contact-us" id="contact-us"></a>
 
 * [商务合作](contact-us/questions.md)
-  * [Cherry Studio 商用许可协议](contact-us/questions/cherrystudio-xu-ke-xie-yi.md)
+  * [Cherry Studio 开源许可协议](contact-us/questions/cherrystudio-xu-ke-xie-yi.md)
 
 ## 关于 <a href="#about" id="about"></a>
 
