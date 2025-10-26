@@ -10,7 +10,7 @@
 
 這是一個基於 Chatbot Arena (lmarena.ai) 數據的排行榜，通過自動化流程生成。
 
-> **數據更新時間**: 2025-10-25 08:07:04 UTC / 2025-10-25 16:07:04 CST (北京時間)
+> **數據更新時間**: 2025-10-26 08:07:19 UTC / 2025-10-26 16:07:19 CST (北京時間)
 
 ## 排行榜
 
@@ -142,7 +142,7 @@
 |       107 | Gemini-1.5-Flash-002 [<sup>1</sup>](https://aistudio.google.com/app/prompts/new_chat?model=gemini-1.5-flash-002)                                                                                           | 1310            | ±4             | 35,180  | Google                 | Proprietary             |
 |       114 | gemma-3-4b-it [<sup>1</sup>](https://aistudio.google.com/app/prompts/new_chat?model=gemma-3-4b-it)                                                                                                         | 1302            | ±9             | 4,195   | Google                 | Gemma                   |
 |       117 | magistral-medium-2506 [<sup>1</sup>](https://mistral.ai/news/magistral)                                                                                                                                    | 1304            | ±6             | 12,018  | Mistral                | Proprietary             |
-|       118 | grok-2-mini-2024-08-13 [<sup>1</sup>](https://x.ai/blog/grok-2)                                                                                                                                            | 1306            | ±4             | 52,789  | xAI                    | Proprietary             |
+|       118 | grok-2-2024-08-13 [<sup>1</sup>](https://x.ai/blog/grok-2)                                                                                                                                                | 1306            | ±4             | 52,789  | xAI                    | Proprietary             |
 |       118 | deepseek-v2.5 [<sup>1</sup>](https://huggingface.co/deepseek-ai/DeepSeek-V2.5)                                                                                                                             | 1305            | ±5             | 24,839  | DeepSeek               | DeepSeek                |
 |       118 | athene-70b-0725 [<sup>1</sup>](https://huggingface.co/Nexusflow/Athene-70B)                                                                                                                                | 1304            | ±6             | 19,796  | NexusFlow              | CC-BY-NC-4.0            |
 |       120 | mistral-large-2411 [<sup>1</sup>](https://huggingface.co/mistralai/Mistral-Large-Instruct-2411)                                                                                                            | 1303            | ±4             | 28,455  | Mistral                | MRL                     |
