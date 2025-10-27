@@ -10,7 +10,7 @@
 
 這是一個基於 Chatbot Arena (lmarena.ai) 數據的排行榜，通過自動化流程生成。
 
-> **數據更新時間**: 2025-10-26 08:07:19 UTC / 2025-10-26 16:07:19 CST (北京時間)
+> **數據更新時間**: 2025-10-27 08:08:29 UTC / 2025-10-27 16:08:29 CST (北京時間)
 
 ## 排行榜
 
@@ -123,7 +123,7 @@
 |        96 | llama-4-scout-17b-16e-instruct [<sup>1</sup>](https://huggingface.co/meta-llama/Llama-4-Scout-17B-16E-Instruct)                                                                                            | 1322            | ±5             | 31,329  | Meta                   | Llama                   |
 |        96 | gpt-4.1-nano-2025-04-14 [<sup>1</sup>](https://openai.com/index/gpt-4-1/)                                                                                                                                  | 1319            | ±8             | 6,143   | OpenAI                 | Proprietary             |
 |        97 | claude-3-opus-20240229 [<sup>1</sup>](https://www.anthropic.com/news/claude-3-family)                                                                                                                      | 1321            | ±3             | 196,368 | Anthropic              | Proprietary             |
-|        97 | claude-3-5-haiku-20241022 [<sup>1</sup>](https://www.anthropic.com/news/3-5-models-and-computer-use)                                                                                                       | 1320            | ±3             | 71,507  | Anthropic              | Propretary              |
+|        97 | claude-3-5-haiku-20241022 [<sup>1</sup>](https://www.anthropic.com/news/3-5-models-and-computer-use)                                                                                                       | 1320            | ±3             | 71,507  | Anthropic              | Proprietary             |
 |        97 | gemini-1.5-pro-001 [<sup>1</sup>](https://aistudio.google.com/app/prompts/new_chat?model=gemini-1.5-pro)                                                                                                   | 1320            | ±4             | 79,769  | Google                 | Proprietary             |
 |        97 | step-1o-turbo-202506 [<sup>1</sup>](https://platform.stepfun.com/docs/llm/vision)                                                                                                                          | 1319            | ±7             | 9,685   | StepFun                | Proprietary             |
 |        97 | gemma-3n-e4b-it [<sup>1</sup>](https://aistudio.google.com/app/prompts/new_chat?model=gemma-3n-e4b-it)                                                                                                     | 1318            | ±5             | 23,541  | Google                 | Gemma                   |
@@ -142,7 +142,7 @@
 |       107 | Gemini-1.5-Flash-002 [<sup>1</sup>](https://aistudio.google.com/app/prompts/new_chat?model=gemini-1.5-flash-002)                                                                                           | 1310            | ±4             | 35,180  | Google                 | Proprietary             |
 |       114 | gemma-3-4b-it [<sup>1</sup>](https://aistudio.google.com/app/prompts/new_chat?model=gemma-3-4b-it)                                                                                                         | 1302            | ±9             | 4,195   | Google                 | Gemma                   |
 |       117 | magistral-medium-2506 [<sup>1</sup>](https://mistral.ai/news/magistral)                                                                                                                                    | 1304            | ±6             | 12,018  | Mistral                | Proprietary             |
-|       118 | grok-2-2024-08-13 [<sup>1</sup>](https://x.ai/blog/grok-2)                                                                                                                                                | 1306            | ±4             | 52,789  | xAI                    | Proprietary             |
+|       118 | grok-2-mini-2024-08-13 [<sup>1</sup>](https://x.ai/blog/grok-2)                                                                                                                                            | 1306            | ±4             | 52,789  | xAI                    | Proprietary             |
 |       118 | deepseek-v2.5 [<sup>1</sup>](https://huggingface.co/deepseek-ai/DeepSeek-V2.5)                                                                                                                             | 1305            | ±5             | 24,839  | DeepSeek               | DeepSeek                |
 |       118 | athene-70b-0725 [<sup>1</sup>](https://huggingface.co/Nexusflow/Athene-70B)                                                                                                                                | 1304            | ±6             | 19,796  | NexusFlow              | CC-BY-NC-4.0            |
 |       120 | mistral-large-2411 [<sup>1</sup>](https://huggingface.co/mistralai/Mistral-Large-Instruct-2411)                                                                                                            | 1303            | ±4             | 28,455  | Mistral                | MRL                     |
