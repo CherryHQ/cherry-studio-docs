@@ -10,7 +10,7 @@
 
 這是一個基於 Chatbot Arena (lmarena.ai) 數據的排行榜，通過自動化流程生成。
 
-> **數據更新時間**: 2025-10-29 08:08:13 UTC / 2025-10-29 16:08:13 CST (北京時間)
+> **數據更新時間**: 2025-10-30 08:07:35 UTC / 2025-10-30 16:07:35 CST (北京時間)
 
 ## 排行榜
 
@@ -34,7 +34,7 @@
 |        11 | deepseek-v3.2-exp-thinking [<sup>1</sup>](https://api-docs.deepseek.com/news/news250929)                                                                                                                   | 1419 | ±9             | 4,320   | DeepSeek AI            | MIT                     |
 |        11 | qwen3-vl-235b-a22b-instruct [<sup>1</sup>](https://qwen.ai/blog?id=99f0335c4ad9ff6153e517418d48535ab6d8afef&from=research.latest-advancements-list)                                                        | 1418 | ±8             | 6,312   | Alibaba                | Apache 2.0              |
 |        11 | qwen3-235b-a22b-instruct-2507 [<sup>1</sup>](https://huggingface.co/Qwen/Qwen3-235B-A22B-Instruct-2507)                                                                                                    | 1418 | ±5             | 29,343  | Alibaba                | Apache 2.0              |
-|        11 | deepseek-v3.1-0528 [<sup>1</sup>](https://api-docs.deepseek.com/news/news250528)                                                                                                                             | 1417 | ±6             | 19,284  | DeepSeek               | MIT                     |
+|        11 | deepseek-r1-0528 [<sup>1</sup>](https://api-docs.deepseek.com/news/news250528)                                                                                                                             | 1417 | ±6             | 19,284  | DeepSeek               | MIT                     |
 |        11 | kimi-k2-0905-preview [<sup>1</sup>](https://huggingface.co/moonshotai/Kimi-K2-Instruct-0905)                                                                                                               | 1417 | ±7             | 10,772  | Moonshot               | Modified MIT            |
 |        11 | deepseek-v3.1 [<sup>1</sup>](https://api-docs.deepseek.com/news/news250821)                                                                                                                                | 1416 | ±6             | 15,380  | DeepSeek               | MIT                     |
 |        11 | deepseek-v3.1-thinking [<sup>1</sup>](https://api-docs.deepseek.com/news/news250821)                                                                                                                       | 1415 | ±7             | 12,098  | DeepSeek               | MIT                     |
@@ -123,7 +123,7 @@
 |        96 | llama-4-scout-17b-16e-instruct [<sup>1</sup>](https://huggingface.co/meta-llama/Llama-4-Scout-17B-16E-Instruct)                                                                                            | 1322 | ±5             | 31,329  | Meta                   | Llama                   |
 |        96 | gpt-4.1-nano-2025-04-14 [<sup>1</sup>](https://openai.com/index/gpt-4-1/)                                                                                                                                  | 1319 | ±8             | 6,143   | OpenAI                 | Proprietary             |
 |        97 | claude-3-opus-20240229 [<sup>1</sup>](https://www.anthropic.com/news/claude-3-family)                                                                                                                      | 1321 | ±3             | 196,368 | Anthropic              | Proprietary             |
-|        97 | claude-3-5-haiku-20241022 [<sup>1</sup>](https://www.anthropic.com/news/3-5-models-and-computer-use)                                                                                                       | 1320 | ±3             | 71,507  | Anthropic              | Propretary              |
+|        97 | claude-3-5-haiku-20241022 [<sup>1</sup>](https://www.anthropic.com/news/3-5-models-and-computer-use)                                                                                                       | 1320 | ±3             | 71,507  | Anthropic              | Proprietary             |
 |        97 | gemini-1.5-pro-001 [<sup>1</sup>](https://aistudio.google.com/app/prompts/new_chat?model=gemini-1.5-pro)                                                                                                   | 1320 | ±4             | 79,769  | Google                 | Proprietary             |
 |        97 | step-1o-turbo-202506 [<sup>1</sup>](https://platform.stepfun.com/docs/llm/vision)                                                                                                                          | 1319 | ±7             | 9,685   | StepFun                | Proprietary             |
 |        97 | gemma-3n-e4b-it [<sup>1</sup>](https://aistudio.google.com/app/prompts/new_chat?model=gemma-3n-e4b-it)                                                                                                     | 1318 | ±5             | 23,541  | Google                 | Gemma                   |
@@ -278,7 +278,7 @@
 ## 說明
 
 - **排名 (UB)**：基於 Bradley-Terry 模型計算的排名。此排名反映了模型在競技場中的綜合表現，並提供了其 Elo 分數的 **上界** 估計，幫助理解模型的潛在競爭力。
-- **模型**：大型語言模型 (LLM) 的名稱。部分模型名稱可能已嵌入相關鏈接。
+- **模型**：大型語言模型 (LLM) 的名稱。部分模型名稱可能已嵌入相關連結。
 - **分數**：模型在競技場中通過用戶投票獲得的 Elo 評分。Elo 評分是一種相對排名系統，分數越高表示模型表現越好。
 - **95% 置信區間 (±)**：模型 Elo 評分的95%置信區間（例如：`±6`）。這個區間越小，表示模型的評分越穩定和可靠。
 - **票數**：該模型在競技場中收到的總投票數量。投票數越多，通常意味著其評分的統計可靠性越高。
