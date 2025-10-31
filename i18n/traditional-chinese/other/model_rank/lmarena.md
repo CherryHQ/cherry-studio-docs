@@ -10,7 +10,7 @@
 
 這是一個基於 Chatbot Arena (lmarena.ai) 數據的排行榜，通過自動化流程生成。
 
-> **數據更新時間**: 2025-10-30 08:07:35 UTC / 2025-10-30 16:07:35 CST (北京時間)
+> **數據更新時間**: 2025-10-31 08:07:30 UTC / 2025-10-31 16:07:30 CST (北京時間)
 
 ## 排行榜
 
@@ -123,7 +123,7 @@
 |        96 | llama-4-scout-17b-16e-instruct [<sup>1</sup>](https://huggingface.co/meta-llama/Llama-4-Scout-17B-16E-Instruct)                                                                                            | 1322 | ±5             | 31,329  | Meta                   | Llama                   |
 |        96 | gpt-4.1-nano-2025-04-14 [<sup>1</sup>](https://openai.com/index/gpt-4-1/)                                                                                                                                  | 1319 | ±8             | 6,143   | OpenAI                 | Proprietary             |
 |        97 | claude-3-opus-20240229 [<sup>1</sup>](https://www.anthropic.com/news/claude-3-family)                                                                                                                      | 1321 | ±3             | 196,368 | Anthropic              | Proprietary             |
-|        97 | claude-3-5-haiku-20241022 [<sup>1</sup>](https://www.anthropic.com/news/3-5-models-and-computer-use)                                                                                                       | 1320 | ±3             | 71,507  | Anthropic              | Proprietary             |
+|        97 | claude-3-5-haiku-20241022 [<sup>1</sup>](https://www.anthropic.com/news/3-5-models-and-computer-use)                                                                                                       | 1320 | ±3             | 71,507  | Anthropic              | Propretery              |
 |        97 | gemini-1.5-pro-001 [<sup>1</sup>](https://aistudio.google.com/app/prompts/new_chat?model=gemini-1.5-pro)                                                                                                   | 1320 | ±4             | 79,769  | Google                 | Proprietary             |
 |        97 | step-1o-turbo-202506 [<sup>1</sup>](https://platform.stepfun.com/docs/llm/vision)                                                                                                                          | 1319 | ±7             | 9,685   | StepFun                | Proprietary             |
 |        97 | gemma-3n-e4b-it [<sup>1</sup>](https://aistudio.google.com/app/prompts/new_chat?model=gemma-3n-e4b-it)                                                                                                     | 1318 | ±5             | 23,541  | Google                 | Gemma                   |
@@ -283,7 +283,7 @@
 - **95% 置信區間 (±)**：模型 Elo 評分的95%置信區間（例如：`±6`）。這個區間越小，表示模型的評分越穩定和可靠。
 - **票數**：該模型在競技場中收到的總投票數量。投票數越多，通常意味著其評分的統計可靠性越高。
 - **組織/公司**：提供該模型的組織或公司。
-- **許可證**：模型的許可協議類型，例如專有 (Proprietary)、Apache 2.0、MIT 等。
+- **許可證**：模型的授權協議類型，例如專有 (Proprietary)、Apache 2.0、MIT 等。
 
 ## 數據來源與更新頻率
 
@@ -291,4 +291,4 @@
 
 ## 免責聲明
 
-本報告僅供參考。排行榜數據是動態變化的，並基於特定時間段內用戶在 Chatbot Arena 上的偏好投票。數據的完整性和準確性取決於上游數據源。不同模型可能採用不同的許可協議，使用時請務必參考模型提供商的官方說明。
+本報告僅供參考。排行榜數據是動態變化的，並基於特定時間段內用戶在 Chatbot Arena 上的偏好投票。數據的完整性和準確性取決於上游數據源。不同模型可能採用不同的授權協議，使用時請務必參考模型提供商的官方說明。
