@@ -1,4 +1,4 @@
-# LLM Arena 排行榜（即時更新）
+# LLM Arena 排行榜 (即時更新)
 
 
 {% hint style="warning" %}
@@ -10,7 +10,7 @@
 
 這是一個基於 Chatbot Arena (lmarena.ai) 數據的排行榜，通過自動化流程生成。
 
-> **數據更新時間**: 2025-11-01 08:07:17 UTC / 2025-11-01 16:07:17 CST (北京時間)
+> **數據更新時間**: 2025-11-02 08:07:26 UTC / 2025-11-02 16:07:26 CST (北京時間)
 
 ## 排行榜
 
@@ -123,7 +123,7 @@
 |        96 | llama-4-scout-17b-16e-instruct [<sup>1</sup>](https://huggingface.co/meta-llama/Llama-4-Scout-17B-16E-Instruct)                                                                                            | 1322 | ±5             | 31,329  | Meta                   | Llama                   |
 |        96 | gpt-4.1-nano-2025-04-14 [<sup>1</sup>](https://openai.com/index/gpt-4-1/)                                                                                                                                  | 1319 | ±8             | 6,143   | OpenAI                 | Proprietary             |
 |        97 | claude-3-opus-20240229 [<sup>1</sup>](https://www.anthropic.com/news/claude-3-family)                                                                                                                      | 1321 | ±3             | 196,368 | Anthropic              | Proprietary             |
-|        97 | claude-3-5-haiku-20241022 [<sup>1</sup>](https://www.anthropic.com/news/3-5-models-and-computer-use)                                                                                                       | 1320 | ±3             | 71,507  | Anthropic              | Propretary              |
+|        97 | claude-3-5-haiku-20241022 [<sup>1</sup>](https://www.anthropic.com/news/3-5-models-and-computer-use)                                                                                                       | 1320 | ±3             | 71,507  | Anthropic              | Proprietary             |
 |        97 | gemini-1.5-pro-001 [<sup>1</sup>](https://aistudio.google.com/app/prompts/new_chat?model=gemini-1.5-pro)                                                                                                   | 1320 | ±4             | 79,769  | Google                 | Proprietary             |
 |        97 | step-1o-turbo-202506 [<sup>1</sup>](https://platform.stepfun.com/docs/llm/vision)                                                                                                                          | 1319 | ±7             | 9,685   | StepFun                | Proprietary             |
 |        97 | gemma-3n-e4b-it [<sup>1</sup>](https://aistudio.google.com/app/prompts/new_chat?model=gemma-3n-e4b-it)                                                                                                     | 1318 | ±5             | 23,541  | Google                 | Gemma                   |
