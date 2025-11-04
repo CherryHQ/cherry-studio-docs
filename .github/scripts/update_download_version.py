@@ -48,17 +48,17 @@ icon: download
 
 # 客户端下载
 
-{% hint style="info" %}
+{{% hint style="info" %}}
 当前最新正式版：v{version}
-{% endhint %}
+{{% endhint %}}
 
 ## 直链下载
 
 ### Windows 版本
 
-{% hint style="warning" %}
+{{% hint style="warning" %}}
 注意：Windows 7 系统不支持安装 Cherry Studio。
-{% endhint %}
+{{% endhint %}}
 
 #### 安装版（Setup）
 
