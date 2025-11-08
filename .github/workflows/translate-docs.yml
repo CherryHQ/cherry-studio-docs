@@ -1,5 +1,11 @@
 name: Translate Documentation
 
+# 使用 cancel-in-progress 策略。由于脚本通过Git标签持久化状态，
+# 我们永远只需要最新的工作流运行即可。它会处理自上次标签以来的所有累积变更。
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 on:
   push:
     branches:
@@ -15,7 +21,7 @@ jobs:
   translate:
     runs-on: ubuntu-latest
     permissions:
-      contents: write # 允许写入仓库内容
+      contents: read # 此 job 只需要读取权限
     strategy:
       matrix:
         lang_code: ["en", "es", "fr", "zh-tw", "el", "ru", "pt", "ja"]
@@ -24,12 +30,13 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0 # 获取完整的历史记录，以便进行文件差异比较
+          # 获取完整的Git历史，这对于基于标签的比较至关重要
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.14'
+          python-version: '3.11'
 
       - name: Install dependencies
         run: |
@@ -38,23 +45,19 @@ jobs:
 
       - name: Run Translation Script
         env:
-          GEMINI_API_KEY: ${{ secrets.AIHUBMIX }} # 从GitHub Secrets获取API密钥
-          PPIO_API_KEY: ${{ secrets.PPIO }} # 从GitHub Secrets获取 PPIO OpenAI 兼容 API 密钥
-          PUSH_BEFORE_SHA: ${{ github.event_name == 'push' && github.event.before || github.event.client_payload.before_sha }}
-          PUSH_AFTER_SHA: ${{ github.event_name == 'push' && github.sha || github.event.client_payload.after_sha }}
-        id: run-translation # 添加 id 以便引用输出
+          GEMINI_API_KEY: ${{ secrets.AIHUBMIX }}
+          PPIO_API_KEY: ${{ secrets.PPIO }}
+          # GITHUB_SHA 会被脚本自动读取，无需额外传递
         run: python .github/scripts/translate_docs.py ${{ matrix.lang_code }}
 
       - name: Upload translated docs artifact
         uses: actions/upload-artifact@v4
         with:
-          name: ${{ steps.run-translation.outputs.lang_dir }}
-          # 使用多行字符串来定义路径，包括一个包含模式和排除模式
+          name: translated-docs-${{ matrix.lang_code }}
           path: |
-            i18n/${{ steps.run-translation.outputs.lang_dir }}/**
-            !i18n/${{ steps.run-translation.outputs.lang_dir }}/.github/**
+            i18n/${{ matrix.lang_code }}/**
+            !i18n/${{ matrix.lang_code }}/.github/**
           retention-days: 1
-          include-hidden-files: true # 确保包含以点开头的文件夹（如 .gitbook）
 
       - name: Upload translation status artifact
         uses: actions/upload-artifact@v4
@@ -65,19 +68,22 @@ jobs:
 
   commit_and_push:
     runs-on: ubuntu-latest
-    needs: translate # 确保在所有翻译 job 完成后运行
+    needs: translate # 等待所有翻译 job 完成
     permissions:
-      contents: write # 允许写入仓库内容
+      contents: write # 需要写权限来推送 commit 和 tag
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0 # 获取完整的历史记录
+          fetch-depth: 0
 
       - name: Download all translated docs artifacts
         uses: actions/download-artifact@v4
         with:
-          path: i18n/ # 下载到 i18n 目录下，会自动合并
+          # 使用 pattern 和 merge-multiple 来优雅地合并所有语言的构建产物
+          pattern: translated-docs-*
+          path: i18n/
+          merge-multiple: true
 
       - name: Configure Git
         run: |
@@ -87,22 +93,57 @@ jobs:
       - name: Download all translation status artifacts
         uses: actions/download-artifact@v4
         with:
-          pattern: translation-status-* # 使用 pattern 参数下载所有匹配的 artifact
-          path: translation_status_output/ # 下载到临时目录
+          pattern: translation-status-*
+          path: translation_status_output/
 
       - name: Summarize translation results
         run: |
           python .github/scripts/summarize_translation.py translation_status_output/
-        continue-on-error: true # 确保即使 summarize_translation.py 失败（有语言翻译失败），工作流也能继续执行 commit_and_push
+        continue-on-error: true
 
-      - name: Clean up temporary status directories in i18n
-        run: |
-          # 清理由 artifact 下载产生的临时状态目录，避免其被提交到 Git 仓库。
-          find i18n/ -maxdepth 1 -type d -name "translation-status-*" -exec rm -rf {} +
-        continue-on-error: true # 确保即使没有找到文件也不会失败
+      - name: Clean up temporary status directories
+        run: rm -rf translation_status_output/
+        continue-on-error: true
 
-      - name: Commit and push changes
+      - name: Commit, Push, and Update Tag
+        env:
+          # 将触发工作流的 commit SHA 传递给脚本，用于标记
+          TRIGGERING_SHA: ${{ github.sha }}
         run: |
+          # 确保在正确的本地分支上操作
+          git checkout main
+
+          # 拉取最新的远程变更，以防万一在工作流运行时有手动提交等情况
+          git pull --rebase --autostash
+
+          # 添加所有翻译文件的变更
           git add i18n/
-          git diff --cached --quiet || git commit -m "Auto: Translate documentation to multiple languages"
-          git push || echo "No changes to commit or push."
+
+          # 检查是否有实际的文件变更需要提交
+          if ! git diff --cached --quiet; then
+            echo "Changes detected. Committing and pushing..."
+            git commit -m "Auto: Translate documentation to multiple languages"
+            
+            # 为应对罕见的网络或竞态问题，增加推送重试机制
+            for i in 1 2 3; do
+              git push && break || sleep 5
+              if [ $i -eq 3 ]; then
+                echo "Push failed after 3 attempts."
+                exit 1
+              fi
+              echo "Push failed. Retrying (Attempt $(($i+1)))..."
+              git pull --rebase --autostash
+            done
+            
+            echo "Push successful."
+          else
+            echo "No changes to commit."
+          fi
+
+          echo "Updating 'last-translated' tag to the latest processed commit..."
+          # 无论是否有文件提交，都将标签更新到触发本次工作流的commit
+          # 这可以防止因某些原因（如无内容变更）导致重复处理相同的commits
+          git tag -f last-translated $TRIGGERING_SHA
+          
+          # 强制将更新后的标签推送到远程仓库
+          git push origin last-translated --force
