@@ -63,6 +63,7 @@
   * [Notion 配置教程](data-settings/notion.md)
   * [Obsidian 配置教程](data-settings/obsidian.md)
   * [思源笔记配置教程](data-settings/siyuan.md)
+  * [助手订阅配置](data-settings/assistants-subscribe.md)
 * [个性化设置](personalization-settings/README.md)
   * [自定义 CSS](personalization-settings/css.md)
   * [字体推荐](personalization-settings/font.md)
