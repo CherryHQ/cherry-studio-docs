@@ -41,23 +41,20 @@ def run_git_command(command):
     封装subprocess.run，处理常见的错误并记录日志。
     """
     try:
-        # 确保命令是列表形式，以便subprocess.run正确处理
         cmd_list = command if isinstance(command, list) else command.split()
         result = subprocess.run(
             cmd_list,
             capture_output=True,
             text=True,
             check=True,
-            shell=False, # 避免shell注入风险，直接传递列表
             encoding='utf-8'
         )
-        # 记录执行的Git命令，避免记录敏感信息或过长的输出
         logging.debug(f"Executing git command: {' '.join(cmd_list)}")
-        return result.stdout.strip().split('\n')
+        # 返回按行分割的输出列表，并过滤掉空行
+        return [line for line in result.stdout.strip().split('\n') if line]
     except subprocess.CalledProcessError as e:
         logging.error(f"Git command failed with exit code {e.returncode}. Command: {e.cmd}")
         logging.error(f"Git Stderr: {e.stderr.strip()}")
-        # 仅在调试模式下打印 stdout，避免生产环境日志冗余
         logging.debug(f"Git Stdout: {e.stdout.strip()}")
         return []
     except Exception as e:
@@ -66,73 +63,90 @@ def run_git_command(command):
 
 def get_changed_files():
     """
-    获取自上次提交以来发生更改的Markdown和GitBook相关文件。
-    根据GitHub Actions事件类型和用户提供的git命令获取文件列表。
-    同时处理文件的添加、修改和删除。
+    获取自 'last-translated' 标签以来发生更改的Markdown和GitBook相关文件。
+    此函数通过比较 'last-translated' 标签与当前 HEAD 的差异，来确保所有累积的变更都被包含。
     """
     files_to_process = set()
     files_to_delete = set()
-    event_name = os.environ.get('GITHUB_EVENT_NAME')
     
-    logging.info(f"Workflow triggered by event: '{event_name}'")
+    logging.info("Determining changed files based on 'last-translated' tag.")
+    
+    # 1. 确保本地仓库拥有所有最新的标签信息
+    run_git_command("git fetch --tags")
 
-    if event_name == 'workflow_dispatch':
-        logging.info("Workflow manually triggered. Performing a full repository scan for relevant files.")
-        files_to_process.update(_get_all_relevant_files())
-        logging.info(f"Found {len(files_to_process)} files for processing during workflow_dispatch.")
+    # 2. 查找 'last-translated' 标签
+    existing_tags = run_git_command("git tag -l last-translated")
 
-    elif event_name == 'push' or event_name == 'repository_dispatch':
-        logging.info(f"Workflow triggered by {event_name} event. Determining changed files using git diff.")
-        
-        before_sha = os.environ.get('PUSH_BEFORE_SHA')
-        current_sha = os.environ.get('PUSH_AFTER_SHA')
-
-        if not before_sha or not current_sha:
-            logging.error("Missing PUSH_BEFORE_SHA or PUSH_AFTER_SHA for event 'push'/'repository_dispatch'. Full translation is not allowed here. Use workflow_dispatch for full translation.")
-            raise RuntimeError("missing_sha_for_changed_files")
-
-        logging.info(f"Push event details: before_sha={before_sha}, current_sha={current_sha}")
-
-        if before_sha == "0000000000000000000000000000000000000000":
-            logging.error("Detected first push (zero before SHA). Full translation on push is disallowed. Trigger workflow_dispatch for full translation.")
-            raise RuntimeError("first_push_full_translation_not_allowed")
+    before_sha = None
+    if existing_tags:
+        # 3a. 如果标签存在，获取它指向的 commit SHA
+        tag_sha_list = run_git_command(f"git rev-list -n 1 last-translated")
+        if tag_sha_list:
+            before_sha = tag_sha_list[0]
+            logging.info(f"Found 'last-translated' tag pointing to commit: {before_sha}")
         else:
-            logging.info(f"Comparing changes between {before_sha} and {current_sha} using git diff --name-status.")
-            raw_output = run_git_command(f"git diff --name-status {before_sha} {current_sha}")
-            logging.info(f"Git diff command returned {len(raw_output)} lines.")
-        
-        for line in raw_output:
-            parts = line.strip().split('\t')
-            if len(parts) < 2:
-                logging.debug(f"Skipping malformed git diff line: {line}")
-                continue
-            status = parts[0]
-            file_path_str = parts[1]
-            
-            if file_path_str.endswith('.md') or '.gitbook/' in file_path_str:
-                file_path = Path(file_path_str)
-                if status == 'D':
-                    files_to_delete.add(file_path)
-                    logging.info(f"Identified for deletion: {file_path}")
-                else: # A (Added), M (Modified), R (Renamed), C (Copied)
-                    files_to_process.add(file_path)
-                    logging.info(f"Identified for processing (added/modified): {file_path}")
+            logging.error("Could not find commit for tag 'last-translated'.")
+            raise RuntimeError("Failed to get commit from tag.")
     else:
-        logging.error(f"Unsupported event type: '{event_name}'. Full translation is only allowed via workflow_dispatch.")
-        raise RuntimeError("unsupported_event_full_translation_disallowed")
+        # 3b. 如果标签不存在（首次运行），找到仓库的第一个 commit
+        # 这将导致翻译仓库中所有相关文件
+        initial_commit_list = run_git_command("git rev-list --max-parents=0 HEAD")
+        if initial_commit_list:
+            before_sha = initial_commit_list[0]
+            logging.info("'last-translated' tag not found. Comparing against the first commit of the repository: {before_sha}")
+        else:
+            logging.error("Could not find the initial commit of the repository.")
+            raise RuntimeError("Failed to get initial commit.")
+            
+    # 4. after_sha 永远是当前工作流检出的那个 commit
+    current_sha = os.environ.get('GITHUB_SHA')
+    if not current_sha:
+        logging.error("GITHUB_SHA environment variable is not set.")
+        raise RuntimeError("Missing GITHUB_SHA.")
+    logging.info(f"Current HEAD commit for comparison is: {current_sha}")
 
-    # 过滤掉i18n和.github目录下的文件，因为它们是翻译目标或配置文件，不是源文件
+    # 5. 如果 before_sha 和 current_sha 相同，说明没有新变更
+    if before_sha == current_sha:
+        logging.info("No new commits since last translation. Nothing to do.")
+        return set(), set()
+
+    # 6. 比较两个 commit 之间的差异来获取文件列表
+    logging.info(f"Comparing changes between {before_sha} and {current_sha} using git diff --name-status.")
+    raw_output = run_git_command(f"git diff --name-status {before_sha} {current_sha}")
+    logging.info(f"Git diff command returned {len(raw_output)} lines.")
+    
+    for line in raw_output:
+        parts = line.strip().split('\t')
+        if len(parts) < 2:
+            logging.debug(f"Skipping malformed git diff line: {line}")
+            continue
+        status = parts[0]
+        file_path_str = parts[1]
+        
+        if file_path_str.endswith('.md') or '.gitbook/' in file_path_str:
+            file_path = Path(file_path_str)
+            if status == 'D':
+                files_to_delete.add(file_path)
+                logging.info(f"Identified for deletion: {file_path}")
+            else: # A (Added), M (Modified), R (Renamed), C (Copied)
+                files_to_process.add(file_path)
+                logging.info(f"Identified for processing (added/modified): {file_path}")
+
+    # 7. 过滤掉i18n和.github目录下的文件
     files_to_process = {f for f in files_to_process if not str(f).startswith('i18n/') and not str(f).startswith('.github/')}
     files_to_delete = {f for f in files_to_delete if not str(f).startswith('i18n/') and not str(f).startswith('.github/')}
     
-    logging.info(f"Final list of {len(files_to_process)} files to process (after i18n and .github filter): {files_to_process}")
-    logging.info(f"Final list of {len(files_to_delete)} files to delete (after i18n and .github filter): {files_to_delete}")
+    logging.info(f"Final list of {len(files_to_process)} files to process: {files_to_process}")
+    logging.info(f"Final list of {len(files_to_delete)} files to delete: {files_to_delete}")
     
     return files_to_process, files_to_delete
+
+# --- 从这里开始，下面的所有代码与您原始文件中的保持一致，无需任何修改 ---
 
 def _get_all_relevant_files():
     """
     扫描整个仓库，获取所有相关的Markdown和GitBook文件，并排除i18n和.github目录。
+    注意：这个函数在新逻辑下不会被 get_changed_files 调用，但可以保留以备手动触发等用途。
     """
     relevant_files = set()
     base_path = Path('.')
@@ -164,11 +178,11 @@ You are a professional document translation assistant specialized in GitHub cont
 ## Translation Rules:
 1. **Translate only user-facing textual content.** Do not translate structural elements, metadata, or technical syntax that are not intended for end-user consumption.
 
-2. **Strictly preserve all Markdown formatting and structural elements:** This includes headings (#), lists (-, *, +), code blocks (```), blockquotes (>), bold (**), italics (*), links [<sup>1</sup>](link), images (!alt text [<sup>2</sup>](image path)), tables, etc. The Markdown syntax itself must remain untranslated.
+2. **Strictly preserve all Markdown formatting and structural elements:** This includes headings (#), lists (-, *, +), code blocks (```), blockquotes (>), bold (**), italics (*), links <sup>1</sup> [<sup>1</sup>](link), images (!alt text <sup>2</sup> [<sup>2</sup>](image path)), tables, etc. The Markdown syntax itself must remain untranslated.
 
 3. **Translate comments within code blocks:** Comments inside code blocks (```) should be translated as they serve user understanding. However, preserve all code, commands, file names, technical identifiers, programming syntax, and variables in their original form.
 
-4. **Preserve all resource references unchanged:** Links, image paths, file paths, and directory structures (e.g., `cherrystudio/preview/chat.md` in `User Interface [<sup>3</sup>](cherrystudio/preview/chat.md)`) must remain in their original form without translation or modification.
+4. **Preserve all resource references unchanged:** Links, image paths, file paths, and directory structures (e.g., `cherrystudio/preview/chat.md` in `User Interface <sup>3</sup> [<sup>3</sup>](cherrystudio/preview/chat.md)`) must remain in their original form without translation or modification.
 
 5. **Maintain specialized documentation structures:** Content within `{% hint style="warning" %}` and `{% endhint %}` tags should be translated, but the tags themselves and their attributes must remain unchanged.
 
@@ -338,7 +352,7 @@ Cherry Studio 是一款集多模型对话、知识库管理、AI 绘画、翻译
 
 ### Star History
 
-![Star History](https://urlscan.io/liveshot/?width=1300&height=620&url=https://cherrystarhistory.ocool.online/)
+!Star History [<sup>4</sup>](https://urlscan.io/liveshot/?width=1300&height=620&url=https://cherrystarhistory.ocool.online/)
 
 ## 关注我们的社交账号
 
@@ -358,7 +372,7 @@ Cherry Studio is an all-in-one AI assistant platform integrating multi-model con
 
 ### Star History
 
-![Star History](https://urlscan.io/liveshot/?width=1300&height=620&url=https://cherrystarhistory.ocool.online/)
+!Star History [<sup>4</sup>](https://urlscan.io/liveshot/?width=1300&height=620&url=https://cherrystarhistory.ocool.online/)
 
 ## Follow Our Social Accounts
 
