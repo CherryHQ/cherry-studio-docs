@@ -12,7 +12,7 @@
   * [翻譯](cherrystudio/preview/translation.md)
   * [小程序](cherrystudio/preview/app.md)
   * [知識庫](cherrystudio/preview/knowledge-base.md)
-  * [文件](cherrystudio/preview/files.md)
+  * [檔案](cherrystudio/preview/files.md)
   * [快捷助手](cherrystudio/preview/kuai-jie-zhu-shou.md)
   * [設定](cherrystudio/preview/settings/README.md)
     * [模型服務設定](cherrystudio/preview/settings/providers.md)
@@ -55,16 +55,17 @@
   * [免費聯網模式](websearch/mian-fei-lian-wang-mo-shi.md)
   * [網路搜尋黑名單配置](websearch/blacklist.md)
   * [火山引擎接入聯網](websearch/volcengine.md)
-  * [Tavily 聯網登錄註冊教程](websearch/tavily.md)
-  * [SearXNG 本地部署與配置](websearch/searxng.md)
+  * [Tavily 聯網登入註冊教程](websearch/tavily.md)
+  * [SearXNG 本機部署與配置](websearch/searxng.md)
 * [資料設定](data-settings/README.md)
   * [WebDAV 備份](data-settings/WebDAV.md)
-  * [S3 相容儲存備份](data-settings/s3-compatible.md)
+  * [S3 相容存儲備份](data-settings/s3-compatible.md)
   * [Notion 配置教程](data-settings/notion.md)
   * [Obsidian 配置教程](data-settings/obsidian.md)
   * [思源筆記配置教程](data-settings/siyuan.md)
+  * [助手訂閱配置](data-settings/assistants-subscribe.md)
 * [個性化設定](personalization-settings/README.md)
-  * [自定義 CSS](personalization-settings/css.md)
+  * [自訂 CSS](personalization-settings/css.md)
   * [字型推薦](personalization-settings/font.md)
   * [修改儲存位置](personalization-settings/storage.md)
   * [清除 CSS 設定](personalization-settings/clear-css.md)
@@ -84,23 +85,23 @@
   * [自動安裝 MCP](advanced-basic/mcp/auto-install.md)
   * [內建 MCP 配置](advanced-basic/mcp/in-memory.md)
   * [配置 Dify 知識庫](advanced-basic/mcp/dify.md)
-  * [添加 ModelScope MCP 伺服器](advanced-basic/mcp/tian-jia-modelscope-mcp-fu-wu-qi.md)
+  * [新增 ModelScope MCP 伺服器](advanced-basic/mcp/tian-jia-modelscope-mcp-fu-wu-qi.md)
   * [常見問題](advanced-basic/mcp/chang-jian-wen-ti.md)
 * [調用鏈使用說明](advanced-basic/diao-yong-lian-shi-yong-shuo-ming.md)
 * [Code Tools 使用教程](advanced-basic/code-tools-shi-yong-jiao-cheng.md)
 * [Cherry Agent 使用教程](advanced-basic/agent.md)
 
-## 項目貢獻 <a href="#contribution" id="contribution"></a>
+## 專案貢獻 <a href="#contribution" id="contribution"></a>
 
 * [貢獻程式碼](contribution/code.md)
 * [貢獻文件](contribution/docs.md)
 
-## 問題&反饋 <a href="#question-contact" id="question-contact"></a>
+## 問題&回饋 <a href="#question-contact" id="question-contact"></a>
 
 * [常見問題](question-contact/questions.md)
 * [如何高效提問](question-contact/ask.md)
 * [知識科普](question-contact/knowledge.md)
-* [反饋 & 建議](question-contact/suggestions.md)
+* [回饋 & 建議](question-contact/suggestions.md)
 
 ## 聯繫我們 <a href="#contact-us" id="contact-us"></a>
 
@@ -109,7 +110,7 @@
 
 ## 關於 <a href="#about" id="about"></a>
 
-* [隱私協議](about/privacypolicy.md)
+* [隱私權協議](about/privacypolicy.md)
 
 ## 其他內容 <a href="#other" id="other"></a>
 
