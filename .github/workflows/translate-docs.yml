@@ -36,7 +36,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.11'
+          python-version: '3.14'
 
       - name: Install dependencies
         run: |
@@ -48,16 +48,19 @@ jobs:
           GEMINI_API_KEY: ${{ secrets.AIHUBMIX }}
           PPIO_API_KEY: ${{ secrets.PPIO }}
           # GITHUB_SHA 会被脚本自动读取，无需额外传递
+        id: run-translation # 添加 id 以便引用输出
         run: python .github/scripts/translate_docs.py ${{ matrix.lang_code }}
 
       - name: Upload translated docs artifact
         uses: actions/upload-artifact@v4
         with:
-          name: translated-docs-${{ matrix.lang_code }}
+          name: ${{ steps.run-translation.outputs.lang_dir }}
+          # 使用多行字符串来定义路径，包括一个包含模式和排除模式
           path: |
-            i18n/${{ matrix.lang_code }}/**
-            !i18n/${{ matrix.lang_code }}/.github/**
+            i18n/${{ steps.run-translation.outputs.lang_dir }}/**
+            !i18n/${{ steps.run-translation.outputs.lang_dir }}/.github/**
           retention-days: 1
+          include-hidden-files: true # 确保包含以点开头的文件夹（如 .gitbook）
 
       - name: Upload translation status artifact
         uses: actions/upload-artifact@v4
