@@ -80,24 +80,15 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Download all translated docs artifacts
+      - name: Download all artifacts
         uses: actions/download-artifact@v4
         with:
-          # 使用 pattern 和 merge-multiple 来优雅地合并所有语言的构建产物
-          pattern: translated-docs-*
           path: i18n/
-          merge-multiple: true
 
       - name: Configure Git
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-
-      - name: Download all translation status artifacts
-        uses: actions/download-artifact@v4
-        with:
-          pattern: translation-status-*
-          path: translation_status_output/
 
       - name: Summarize translation results
         run: |
