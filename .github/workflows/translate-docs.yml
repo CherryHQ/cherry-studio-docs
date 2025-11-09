@@ -54,7 +54,7 @@ jobs:
       - name: Upload translated docs artifact
         uses: actions/upload-artifact@v4
         with:
-          name: ${{ steps.run-translation.outputs.lang_dir }}
+          name: translated-docs-${{ steps.run-translation.outputs.lang_dir }}
           # 使用多行字符串来定义路径，包括一个包含模式和排除模式
           path: |
             i18n/${{ steps.run-translation.outputs.lang_dir }}/**
