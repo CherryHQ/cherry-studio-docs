@@ -54,7 +54,7 @@ jobs:
       - name: Upload translated docs artifact
         uses: actions/upload-artifact@v4
         with:
-          name: translated-docs-${{ steps.run-translation.outputs.lang_dir }}
+          name: ${{ steps.run-translation.outputs.lang_dir }}
           # 使用多行字符串来定义路径，包括一个包含模式和排除模式
           path: |
             i18n/${{ steps.run-translation.outputs.lang_dir }}/**
@@ -94,9 +94,11 @@ jobs:
         run: |
           python .github/scripts/summarize_translation.py translation_status_output/
 
-      - name: Clean up temporary status directories
-        run: rm -rf translation_status_output/
-        continue-on-error: true
+      - name: Clean up temporary status directories in i18n
+        run: |
+          # 清理由 artifact 下载产生的临时状态目录，避免其被提交到 Git 仓库。
+          find i18n/ -maxdepth 1 -type d -name "translation-status-*" -exec rm -rf {} +
+        continue-on-error: true # 确保即使没有找到文件也不会失败
 
       - name: Commit, Push, and Update Tag
         env:
