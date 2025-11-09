@@ -20,11 +20,12 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: '3.14'
+          cache: 'pip'
 
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install beautifulsoup4 pandas pytz lxml requests tabulate
+          pip install --upgrade beautifulsoup4 pandas pytz lxml requests tabulate
 
       - name: Run script to fetch and update leaderboard
         env:
