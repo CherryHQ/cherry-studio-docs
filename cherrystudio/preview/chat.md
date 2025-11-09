@@ -34,11 +34,7 @@ icon: message
 
 ![](<../../.gitbook/assets/对话界面/MCP 服务器.png>) `MCP 服务器` 开启 MCP 服务器功能，详见 [MCP 使用教程](../../advanced-basic/mcp/)。
 
-![](../../.gitbook/assets/对话界面/生成图片.png) `生成图片` 默认不显示，对于支持生成图片的模型（如 Gemini），需手动点亮后才能生成图片。
-
-{% hint style="info" %}
-由于技术原因，您必须手动点亮按钮才能生成图片，该按钮在此功能优化后会移除。
-{% endhint %}
+![](../../.gitbook/assets/对话界面/生成图片.png) `生成图片` 只有选择的 **对话模型** 支持生图时才会显示。（非对话生图模型请前往 [绘图](./drawing.md)）
 
 ![](../../.gitbook/assets/对话界面/选择模型.png) `选择模型` 对于接下来的对话，切换成指定的模型，保留上下文。
 
