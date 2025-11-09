@@ -628,7 +628,7 @@ def process_markdown_file(source_path, target_lang_code):
 
         if current_hash == new_hash:
             logging.info(f"No content changes detected for {target_path}. Skipping file write.")
-            return False
+            return True
         else:
             with open(target_path, 'w', encoding='utf-8') as f:
                 f.write(final_content)
