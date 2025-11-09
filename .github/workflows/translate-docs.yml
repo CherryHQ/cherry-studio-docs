@@ -90,6 +90,12 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
+      - name: Download all translation status artifacts
+        uses: actions/download-artifact@v4
+        with:
+          pattern: translation-status-* # 使用 pattern 参数下载所有匹配的 artifact
+          path: translation_status_output/ # 下载到临时目录
+
       - name: Summarize translation results
         run: |
           python .github/scripts/summarize_translation.py translation_status_output/
