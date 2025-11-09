@@ -1,4 +1,4 @@
-# Licença de Código Aberto Cherry Studio
+# Licença Pública Geral Affero GNU do Cherry Studio
 
 
 {% hint style="warning" %}

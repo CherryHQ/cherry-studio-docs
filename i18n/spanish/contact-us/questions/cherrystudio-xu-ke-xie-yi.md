@@ -1,4 +1,4 @@
-# Acuerdo de Licencia de Código Abierto Cherry Studio
+# Licencia de código abierto de Cherry Studio
 
 
 {% hint style="warning" %}

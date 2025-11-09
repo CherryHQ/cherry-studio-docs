@@ -1,4 +1,4 @@
-# Cherry Studio オープンソースライセンス
+# Cherry Studio オープンソースライセンス契約
 
 
 {% hint style="warning" %}

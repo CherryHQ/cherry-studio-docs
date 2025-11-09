@@ -12,7 +12,7 @@ Ce document a été traducido del chino por IA y aún no ha sido revisado.
 
 
 {% hint style="info" %}
-Version officielle actuelle : v1.6.7
+Version officielle la plus récente : v1.6.7
 {% endhint %}
 
 ## Téléchargement direct
@@ -20,7 +20,7 @@ Version officielle actuelle : v1.6.7
 ### Version Windows
 
 {% hint style="warning" %}
-Attention : Windows 7 ne supporte pas l'installation de Cherry Studio.
+Attention : Le système Windows 7 ne prend pas en charge l'installation de Cherry Studio.
 {% endhint %}
 
 #### Version d'installation (Setup)
@@ -89,7 +89,7 @@ Liens de secours :
 
 <details>
 
-<summary>Version pour processeurs Intel (x64)</summary>
+<summary>Version pour puces Intel (x64)</summary>
 
 Lien principal :
 
@@ -103,7 +103,7 @@ Liens de secours :
 
 <details>
 
-<summary>Version Apple Silicon (ARM64, puces M série)</summary>
+<summary>Version Apple Silicon (ARM64, puces série M)</summary>
 
 Lien principal :
 

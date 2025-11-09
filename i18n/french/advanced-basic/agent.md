@@ -11,18 +11,18 @@ Ce document a été traducido del chino por IA y aún no ha sido revisado.
 
 
 
-La version v1.7.0.alpha de Cherry Studio a introduit l'Agent, permettant d'utiliser Cherry Agent dans Cherry Studio. Ce tutoriel vous guidera à travers le processus complet de configuration et de démarrage.
+La version v1.7.0.alpha de Cherry Studio introduit les Agents, permettant d'utiliser Cherry Agent dans Cherry Studio. Ce tutoriel vous guidera à travers le processus complet de configuration et de lancement.
 
 ### 1. Créer un fournisseur de type Anthropic
 
-&#x20;Tout fournisseur prenant en charge les points de terminaison Anthropic peut être utilisé. Par exemple avec CherryIn, créez un nouveau fournisseur Agent, renseignez la clé et l'adresse, puis ajoutez n'importe quel modèle.
+Tout fournisseur de services prenant en charge les endpoints Anthropic peut être utilisé ; prenons CherryIn comme exemple : créez un nouveau fournisseur de services Agent, remplissez la clé et l'adresse, puis ajoutez n'importe quel modèle.
 
 {% hint style="warning" %}
-Le mode Agent consomme énormément de tokens, veuillez surveiller votre utilisation des tokens
+Le mode Agent consomme énormément de tokens, veuillez surveiller votre utilisation des tokens.
 {% endhint %}
 
 {% hint style="info" %}
-Les utilisateurs abonnés à Claude Code peuvent également saisir la clé et l'adresse URL pour obtenir le modèle
+Les utilisateurs abonnés à Claude Code peuvent également saisir leur clé et l'adresse URL pour accéder aux modèles.
 {% endhint %}
 
 <figure><img src="../.gitbook/assets/CleanShot 2025-10-12 at 20.26.35@2x.png" alt=""><figcaption></figcaption></figure>
@@ -35,7 +35,7 @@ Les utilisateurs abonnés à Claude Code peuvent également saisir la clé et l'
 
 <figure><img src="../.gitbook/assets/CleanShot 2025-10-12 at 20.24.43@2x.png" alt=""><figcaption></figcaption></figure>
 
-Un clic droit sur l'Agent permet d'accéder à l'interface d'édition pour modifier les permissions de l'Agent ainsi que les outils ou services MCP utilisables.
+Un clic droit sur l'Agent permet d'accéder à l'interface d'édition pour modifier les permissions de l'Agent ainsi que les outils ou services mcp pouvant être utilisés.
 
 <figure><img src="../.gitbook/assets/CleanShot 2025-10-12 at 20.25.10@2x (1).png" alt=""><figcaption></figcaption></figure>
 

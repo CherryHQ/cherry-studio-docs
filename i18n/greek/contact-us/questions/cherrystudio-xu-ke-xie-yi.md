@@ -1,4 +1,4 @@
-# Cherry Studio Άδεια Ανοικτού Λογισμικού
+# Άδεια Ανοιχτού Κώδικα Cherry Studio
 
 
 {% hint style="warning" %}
