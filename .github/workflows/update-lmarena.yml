@@ -9,12 +9,12 @@ jobs:
   update-leaderboard:
     runs-on: ubuntu-latest
     outputs:
-      latest_sha: ${{ steps.get_latest_sha.outputs.sha }}
+      has_changes: ${{ steps.commit_push.outputs.changes }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0  # 确保获取完整历史，以便后续比较
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -37,7 +37,6 @@ jobs:
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
           git add other/model_rank/lmarena.md
-          # 检查是否有实际更改
           if [ -n "$(git status --porcelain)" ]; then
             git commit -m "Update LLM leaderboard"
             git push
@@ -49,12 +48,12 @@ jobs:
 
   dispatch-translation-workflow:
     needs: update-leaderboard
-    if: success() && needs.update-leaderboard.outputs.changes == 'true'  # 仅当有更新时触发
+    if: success() && needs.update-leaderboard.outputs.has_changes == 'true' 
     runs-on: ubuntu-latest
     steps:
       - name: Dispatch translate-docs workflow
         uses: peter-evans/repository-dispatch@v3
         with:
-          token: ${{ secrets.REPO_DISPATCH_TOKEN }}  # 需要具有 repo 权限的 token
-          repository: ${{ github.repository }}  # 正确触发当前仓库的工作流
-          event-type: trigger-translation  # 触发 translate-docs.yml 的事件
+          token: ${{ secrets.REPO_DISPATCH_TOKEN }}
+          repository: ${{ github.repository }}
+          event-type: trigger-translation
