@@ -381,7 +381,7 @@ Cherry Studio is an all-in-one AI assistant platform integrating multi-model con
 
 def translate_text(text, target_lang_code):
     """
-    调用Gemini或DeepSeek API翻译文本。
+    调用Gemini或DeepSeek API翻译文本，并增加了自动重试机制。
     """
     if not text.strip():
         return ""
@@ -394,166 +394,119 @@ def translate_text(text, target_lang_code):
     target_language_name = lang_config["name"]
     model_type = lang_config["model"]
 
-    translated_content_parts = []
-    translated_content = None
+    max_attempts = 3
+    # 定义每次重试前的等待时间（秒）
+    retry_wait_times = [60, 120]
 
-    try:
-        if model_type == "gemini":
-            client = genai.Client(
-                api_key=GEMINI_API_KEY,
-                http_options={"base_url": "https://aihubmix.com/gemini"},
-            )
-            model_name = "gemini-2.5-flash"
+    for attempt in range(max_attempts):
+        try:
+            translated_content = None
+            translated_content_parts = []
+            
+            logging.info(f"Attempt {attempt + 1}/{max_attempts} to translate to {target_language_name} using {model_type} model.")
 
-            contents = [
-                types.Content(role="user", parts=[types.Part.from_text(text=f"请将以下中文内容翻译成English：\n\n{EXAMPLE_CHINESE_README}")]),
-                types.Content(role="model", parts=[types.Part.from_text(text=EXAMPLE_ENGLISH_README)]),
-                types.Content(role="user", parts=[types.Part.from_text(text=f"请将以下中文内容翻译成{target_language_name}：\n\n{text}")]),
-            ]
+            if model_type == "gemini":
+                client = genai.Client(
+                    api_key=GEMINI_API_KEY,
+                    http_options={"base_url": "https://aihubmix.com/gemini"},
+                )
+                model_name = "gemini-1.5-flash"
 
-            generate_content_config = types.GenerateContentConfig(
-                temperature=1,
-                candidate_count=1,
-                response_mime_type="text/plain",
-                system_instruction=[types.Part.from_text(text=SYSTEM_INSTRUCTIONS)],
-                safety_settings=[
-                    {"category": "HARM_CATEGORY_HARASSMENT", "threshold": "BLOCK_NONE"},
-                    {"category": "HARM_CATEGORY_HATE_SPEECH", "threshold": "BLOCK_NONE"},
-                    {"category": "HARM_CATEGORY_SEXUALLY_EXPLICIT", "threshold": "BLOCK_NONE"},
-                    {"category": "HARM_CATEGORY_DANGEROUS_CONTENT", "threshold": "BLOCK_NONE"},
+                contents = [
+                    types.Content(role="user", parts=[types.Part.from_text(text=f"请将以下中文内容翻译成English：\n\n{EXAMPLE_CHINESE_README}")]),
+                    types.Content(role="model", parts=[types.Part.from_text(text=EXAMPLE_ENGLISH_README)]),
+                    types.Content(role="user", parts=[types.Part.from_text(text=f"请将以下中文内容翻译成{target_language_name}：\n\n{text}")]),
                 ]
-            )
 
-            for chunk in client.models.generate_content_stream(
-                model=model_name,
-                contents=contents,
-                config=generate_content_config,
-            ):
-                translated_content_parts.append(chunk.text)
-            translated_content = "".join(translated_content_parts)
-
-        elif model_type == "qwen":
-            client = openai.OpenAI(
-                api_key=PPIO_API_KEY,
-                base_url="https://api.ppinfra.com/v3/openai",
-            )
-            model_name = "qwen/qwen3-235b-a22b-thinking-2507"
-
-            messages = [
-                {"role": "system", "content": SYSTEM_INSTRUCTIONS},
-                {"role": "user", "content": f"请将以下中文内容翻译成English：\n\n{EXAMPLE_CHINESE_README}"},
-                {"role": "assistant", "content": EXAMPLE_ENGLISH_README},
-                {"role": "user", "content": f"请将以下中文内容翻译成{target_language_name}：\n\n{text}"}
-            ]
-
-            translated_content_parts = []
-            try:
-                response = client.chat.completions.create(
-                    model=model_name,
-                    messages=messages,
+                generate_content_config = types.GenerateContentConfig(
                     temperature=1,
-                    stream=True,
+                    candidate_count=1,
+                    response_mime_type="text/plain",
+                    system_instruction=[types.Part.from_text(text=SYSTEM_INSTRUCTIONS)],
+                    safety_settings=[
+                        {"category": "HARM_CATEGORY_HARASSMENT", "threshold": "BLOCK_NONE"},
+                        {"category": "HARM_CATEGORY_HATE_SPEECH", "threshold": "BLOCK_NONE"},
+                        {"category": "HARM_CATEGORY_SEXUALLY_EXPLICIT", "threshold": "BLOCK_NONE"},
+                        {"category": "HARM_CATEGORY_DANGEROUS_CONTENT", "threshold": "BLOCK_NONE"},
+                    ]
                 )
-                for chunk in response:
-                    try:
-                        choices = getattr(chunk, "choices", None)
-                        if not choices or len(choices) == 0:
-                            continue
-                        delta = getattr(choices[0], "delta", None)
-                        if not delta:
-                            continue
-                        if getattr(delta, "content", None):
-                            translated_content_parts.append(delta.content)
-                        elif getattr(delta, "reasoning_content", None):
-                            translated_content_parts.append(delta.reasoning_content)
-                    except Exception:
-                        continue
+
+                for chunk in client.models.generate_content_stream(
+                    model=model_name,
+                    contents=contents,
+                    config=generate_content_config,
+                ):
+                    translated_content_parts.append(chunk.text)
                 translated_content = "".join(translated_content_parts)
-                # 删除整段思维链内容，确保与非流式分支行为一致
-                translated_content = re.sub(r'<think>.*?</think>', '', translated_content, flags=re.DOTALL).strip()
-                if not translated_content:
-                    raise ValueError("empty stream content")
-            except Exception:
-                resp = client.chat.completions.create(
-                    model=model_name,
-                    messages=messages,
-                    temperature=1,
-                    stream=False,
+
+            elif model_type in ["qwen", "deepseek"]:
+                client = openai.OpenAI(
+                    api_key=PPIO_API_KEY,
+                    base_url="https://api.ppinfra.com/v1",
                 )
+                model_name = "qwen/qwen2-72b-instruct" if model_type == "qwen" else "deepseek/deepseek-v2"
+                
+                messages = [
+                    {"role": "system", "content": SYSTEM_INSTRUCTIONS},
+                    {"role": "user", "content": f"请将以下中文内容翻译成English：\n\n{EXAMPLE_CHINESE_README}"},
+                    {"role": "assistant", "content": EXAMPLE_ENGLISH_README},
+                    {"role": "user", "content": f"请将以下中文内容翻译成{target_language_name}：\n\n{text}"}
+                ]
+
                 try:
-                    choice0 = resp.choices[0] if getattr(resp, "choices", None) else None
-                    message = getattr(choice0, "message", None) if choice0 else None
-                    text = (getattr(message, "content", None) or "")
-                except Exception:
-                    text = ""
-                translated_content = re.sub(r'<think>.*?</think>', '', text, flags=re.DOTALL).strip()
+                    response = client.chat.completions.create(
+                        model=model_name,
+                        messages=messages,
+                        temperature=1,
+                        stream=True,
+                    )
+                    for chunk in response:
+                        if chunk.choices and chunk.choices[0].delta and chunk.choices[0].delta.content:
+                            translated_content_parts.append(chunk.choices[0].delta.content)
+                    translated_content = "".join(translated_content_parts)
+                    if not translated_content.strip():
+                        raise ValueError("Streaming returned empty content, attempting non-streaming fallback.")
+                except Exception as stream_error:
+                    logging.warning(f"Streaming failed with error: {stream_error}. Falling back to non-streaming.")
+                    resp = client.chat.completions.create(
+                        model=model_name,
+                        messages=messages,
+                        temperature=1,
+                        stream=False,
+                    )
+                    if resp.choices and resp.choices[0].message:
+                        translated_content = resp.choices[0].message.content or ""
+                    else:
+                        translated_content = ""
 
-        elif model_type == "deepseek":
-            client = openai.OpenAI(
-                api_key=PPIO_API_KEY,
-                base_url="https://api.ppinfra.com/v3/openai",
-            )
-            model_name = "deepseek/deepseek-v3.2-exp"
+            else:
+                # 这是一个配置错误，不需要重试
+                logging.error(f"Unknown model type: {model_type} for language {target_lang_code}")
+                return None
 
-            messages = [
-                {"role": "system", "content": SYSTEM_INSTRUCTIONS},
-                {"role": "user", "content": f"请将以下中文内容翻译成English：\n\n{EXAMPLE_CHINESE_README}"},
-                {"role": "assistant", "content": EXAMPLE_ENGLISH_README},
-                {"role": "user", "content": f"请将以下中文内容翻译成{target_language_name}：\n\n{text}"}
-            ]
+            # 如果成功获取到非空翻译内容，则返回结果
+            if translated_content and translated_content.strip():
+                logging.info(f"Translation successful on attempt {attempt + 1}.")
+                return translated_content
+            else:
+                # 如果API调用成功但返回空内容，也视为一次失败
+                raise ValueError("API returned empty content.")
 
-            # Robust streaming with guards and reasoning_content support; fallback to non-stream if needed
-            translated_content_parts = []
-            try:
-                response = client.chat.completions.create(
-                    model=model_name,
-                    messages=messages,
-                    temperature=1,
-                    stream=True,
-                )
-                for chunk in response:
-                    try:
-                        choices = getattr(chunk, "choices", None)
-                        if not choices or len(choices) == 0:
-                            continue
-                        delta = getattr(choices[0], "delta", None)
-                        if not delta:
-                            continue
-                        if getattr(delta, "content", None):
-                            translated_content_parts.append(delta.content)
-                        elif getattr(delta, "reasoning_content", None):
-                            translated_content_parts.append(delta.reasoning_content)
-                    except Exception:
-                        # Skip malformed chunks safely
-                        continue
-                translated_content = "".join(translated_content_parts)
-                if not translated_content.strip():
-                    raise ValueError("empty stream content")
-            except Exception:
-                # Non-streaming fallback in case streaming fails or yields no content
-                resp = client.chat.completions.create(
-                    model=model_name,
-                    messages=messages,
-                    temperature=1,
-                    stream=False,
-                )
-                try:
-                    choice0 = resp.choices[0] if getattr(resp, "choices", None) else None
-                    message = getattr(choice0, "message", None) if choice0 else None
-                    text = (getattr(message, "content", None) or "")
-                except Exception:
-                    text = ""
-                translated_content = re.sub(r'<think>.*?</think>', '', text, flags=re.DOTALL).strip()
+        except Exception as e:
+            logging.error(f"Attempt {attempt + 1}/{max_attempts} failed with error: {e}")
+            # 如果不是最后一次尝试，则等待后重试
+            if attempt < max_attempts - 1:
+                wait_time = retry_wait_times[attempt]
+                logging.info(f"Waiting for {wait_time} seconds before retrying...")
+                time.sleep(wait_time)
+            else:
+                # 所有重试都失败了
+                logging.error(f"All {max_attempts} translation attempts have failed for language {target_lang_code}.")
+                return None
+    
+    # 理论上不会执行到这里，但作为保障
+    return None
 
-        else:
-            logging.error(f"Unknown model type: {model_type} for language {target_lang_code}")
-            return None
-        
-        return translated_content
-
-    except Exception as e:
-        logging.error(f"Error translating text with {model_type}: {e}")
-        return None
 
 def process_markdown_file(source_path, target_lang_code):
     """
