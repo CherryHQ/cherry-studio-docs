@@ -381,7 +381,7 @@ Cherry Studio is an all-in-one AI assistant platform integrating multi-model con
 
 def translate_text(text, target_lang_code):
     """
-    调用Gemini或DeepSeek API翻译文本，并增加了自动重试机制。
+    调用Gemini或Qwen/DeepSeek API翻译文本。
     """
     if not text.strip():
         return ""
@@ -395,7 +395,6 @@ def translate_text(text, target_lang_code):
     model_type = lang_config["model"]
 
     max_attempts = 3
-    # 定义每次重试前的等待时间（秒）
     retry_wait_times = [60, 120]
 
     for attempt in range(max_attempts):
@@ -410,7 +409,7 @@ def translate_text(text, target_lang_code):
                     api_key=GEMINI_API_KEY,
                     http_options={"base_url": "https://aihubmix.com/gemini"},
                 )
-                model_name = "gemini-1.5-flash"
+                model_name = "gemini-2.5-flash"
 
                 contents = [
                     types.Content(role="user", parts=[types.Part.from_text(text=f"请将以下中文内容翻译成English：\n\n{EXAMPLE_CHINESE_README}")]),
@@ -442,9 +441,9 @@ def translate_text(text, target_lang_code):
             elif model_type in ["qwen", "deepseek"]:
                 client = openai.OpenAI(
                     api_key=PPIO_API_KEY,
-                    base_url="https://api.ppinfra.com/v1",
+                    base_url="https://api.ppinfra.com/v3/openai",
                 )
-                model_name = "qwen/qwen2-72b-instruct" if model_type == "qwen" else "deepseek/deepseek-v2"
+                model_name = "qwen/qwen3-235b-a22b-thinking-2507" if model_type == "qwen" else "deepseek/deepseek-v3.2-exp"
                 
                 messages = [
                     {"role": "system", "content": SYSTEM_INSTRUCTIONS},
@@ -461,50 +460,62 @@ def translate_text(text, target_lang_code):
                         stream=True,
                     )
                     for chunk in response:
-                        if chunk.choices and chunk.choices[0].delta and chunk.choices[0].delta.content:
-                            translated_content_parts.append(chunk.choices[0].delta.content)
+                        try:
+                            choices = getattr(chunk, "choices", None)
+                            if not choices or len(choices) == 0:
+                                continue
+                            delta = getattr(choices[0], "delta", None)
+                            if not delta:
+                                continue
+                            if getattr(delta, "content", None):
+                                translated_content_parts.append(delta.content)
+                            elif getattr(delta, "reasoning_content", None):
+                                translated_content_parts.append(delta.reasoning_content)
+                        except Exception:
+                            # 安全地跳过格式错误的块
+                            continue
                     translated_content = "".join(translated_content_parts)
-                    if not translated_content.strip():
-                        raise ValueError("Streaming returned empty content, attempting non-streaming fallback.")
-                except Exception as stream_error:
-                    logging.warning(f"Streaming failed with error: {stream_error}. Falling back to non-streaming.")
+                    # 恢复对<think>标签的移除，以确保输出纯净
+                    translated_content = re.sub(r'<think>.*?</think>', '', translated_content, flags=re.DOTALL).strip()
+                    if not translated_content:
+                        raise ValueError("empty stream content")
+                except Exception:
+                    # 如果流式传输失败或产生空内容，则回退到非流式传输
                     resp = client.chat.completions.create(
                         model=model_name,
                         messages=messages,
                         temperature=1,
                         stream=False,
                     )
-                    if resp.choices and resp.choices[0].message:
-                        translated_content = resp.choices[0].message.content or ""
-                    else:
-                        translated_content = ""
+                    try:
+                        choice0 = resp.choices[0] if getattr(resp, "choices", None) else None
+                        message = getattr(choice0, "message", None) if choice0 else None
+                        text_content = (getattr(message, "content", None) or "")
+                    except Exception:
+                        text_content = ""
+                    # 同样移除<think>标签
+                    translated_content = re.sub(r'<think>.*?</think>', '', text_content, flags=re.DOTALL).strip()
 
             else:
-                # 这是一个配置错误，不需要重试
                 logging.error(f"Unknown model type: {model_type} for language {target_lang_code}")
                 return None
 
-            # 如果成功获取到非空翻译内容，则返回结果
             if translated_content and translated_content.strip():
                 logging.info(f"Translation successful on attempt {attempt + 1}.")
                 return translated_content
             else:
-                # 如果API调用成功但返回空内容，也视为一次失败
                 raise ValueError("API returned empty content.")
 
         except Exception as e:
             logging.error(f"Attempt {attempt + 1}/{max_attempts} failed with error: {e}")
-            # 如果不是最后一次尝试，则等待后重试
             if attempt < max_attempts - 1:
                 wait_time = retry_wait_times[attempt]
                 logging.info(f"Waiting for {wait_time} seconds before retrying...")
                 time.sleep(wait_time)
             else:
-                # 所有重试都失败了
                 logging.error(f"All {max_attempts} translation attempts have failed for language {target_lang_code}.")
                 return None
     
-    # 理论上不会执行到这里，但作为保障
     return None
 
 
