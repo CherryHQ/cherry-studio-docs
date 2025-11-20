@@ -2,279 +2,282 @@
 
 这是一个基于 Chatbot Arena (lmarena.ai) 数据的排行榜，通过自动化流程生成。
 
-> **数据更新时间**: 2025-11-19 08:08:17 UTC / 2025-11-19 16:08:17 CST (北京时间)
+> **数据更新时间**: 2025-11-20 08:08:26 UTC / 2025-11-20 16:08:26 CST (北京时间)
 
 ## 排行榜
 
 |   Rank | Rank Spread(Upper-Lower)   | 模型                                                | 分数              | 95% 置信区间 (±)   | 票数      | 组织/公司                  | 许可证                     |
 |-------:|:---------------------------|:--------------------------------------------------|:----------------|:---------------|:--------|:-----------------------|:------------------------|
-|      1 | 1◄─►2                      | gemini-3-pro                                      | 1501Preliminary | ±11            | 3,089   | Google                 | Proprietary             |
-|      2 | 1◄─►3                      | grok-4.1-thinking                                 | 1484Preliminary | ±11            | 3,394   | xAI                    | Proprietary             |
-|      3 | 2◄─►5                      | grok-4.1                                          | 1465Preliminary | ±10            | 3,508   | xAI                    | Proprietary             |
-|      4 | 3◄─►8                      | gemini-2.5-pro                                    | 1451            | ±4             | 65,549  | Google                 | Proprietary             |
-|      5 | 3◄─►9                      | Anthropicclaude-sonnet-4-5-20250929-thinking-32k  | 1449            | ±5             | 16,595  | Anthropic              | Proprietary             |
-|      6 | 4◄─►8                      | Anthropicclaude-opus-4-1-20250805-thinking-16k    | 1449            | ±4             | 32,125  | Anthropic              | Proprietary             |
-|      7 | 4◄─►12                     | Anthropicclaude-sonnet-4-5-20250929               | 1445            | ±6             | 11,156  | Anthropic              | Proprietary             |
-|      8 | 4◄─►14                     | gpt-4.5-preview-2025-02-27                        | 1442            | ±6             | 14,644  | OpenAI                 | Proprietary             |
-|      9 | 6◄─►14                     | Anthropicclaude-opus-4-1-20250805                 | 1440            | ±4             | 44,844  | Anthropic              | Proprietary             |
-|     10 | 7◄─►14                     | chatgpt-4o-latest-20250326                        | 1438            | ±4             | 51,366  | OpenAI                 | Proprietary             |
-|     11 | 7◄─►15                     | gpt-5-high                                        | 1437            | ±5             | 32,955  | OpenAI                 | Proprietary             |
-|     12 | 8◄─►15                     | o3-2025-04-16                                     | 1434            | ±4             | 61,684  | OpenAI                 | Proprietary             |
-|     13 | 8◄─►17                     | qwen3-max-preview                                 | 1433            | ±5             | 28,191  | Alibaba                | Proprietary             |
-|     14 | 7◄─►25                     | MoonshotAIkimi-k2-thinking                        | 1432            | ±9             | 5,779   | Moonshot               | Modified MIT            |
-|     15 | 11◄─►28                    | glm-4.6                                           | 1428            | ±6             | 13,925  | Z.ai                   | MIT                     |
-|     16 | 13◄─►29                    | gpt-5-chat                                        | 1425            | ±4             | 32,219  | OpenAI                 | Proprietary             |
-|     17 | 13◄─►31                    | qwen3-max-2025-09-23                              | 1423            | ±6             | 9,282   | Alibaba                | Proprietary             |
-|     18 | 14◄─►31                    | Anthropicclaude-opus-4-20250514-thinking-16k      | 1423            | ±4             | 37,941  | Anthropic              | Proprietary             |
-|     19 | 14◄─►33                    | deepseek-v3.2-exp-thinking                        | 1421            | ±7             | 9,233   | DeepSeek AI            | MIT                     |
-|     20 | 14◄─►31                    | qwen3-235b-a22b-instruct-2507                     | 1421            | ±4             | 40,049  | Alibaba                | Apache 2.0              |
-|     21 | 14◄─►37                    | grok-4-fast                                       | 1420            | ±8             | 7,083   | xAI                    | Proprietary             |
-|     22 | 14◄─►39                    | ernie-5.0-preview-1022                            | 1419Preliminary | ±9             | 4,720   | Baidu                  | Proprietary             |
-|     23 | 15◄─►37                    | deepseek-r1-0528                                  | 1418            | ±6             | 19,251  | DeepSeek               | MIT                     |
-|     24 | 14◄─►39                    | MoonshotAIkimi-k2-0905-preview                    | 1417            | ±7             | 10,674  | Moonshot               | Modified MIT            |
-|     25 | 15◄─►39                    | deepseek-v3.1                                     | 1416            | ±6             | 15,271  | DeepSeek               | MIT                     |
-|     26 | 15◄─►39                    | deepseek-v3.1-thinking                            | 1416            | ±7             | 12,006  | DeepSeek               | MIT                     |
-|     27 | 17◄─►37                    | MoonshotAIkimi-k2-0711-preview                    | 1416            | ±5             | 28,223  | Moonshot               | Modified MIT            |
-|     28 | 14◄─►42                    | deepseek-v3.1-terminus                            | 1415            | ±10            | 3,760   | DeepSeek AI            | MIT                     |
-|     29 | 16◄─►39                    | qwen3-vl-235b-a22b-instruct                       | 1415            | ±7             | 8,552   | Alibaba                | Apache 2.0              |
-|     30 | 14◄─►44                    | deepseek-v3.1-terminus-thinking                   | 1414            | ±10            | 3,531   | DeepSeek AI            | MIT                     |
-|     31 | 17◄─►40                    | deepseek-v3.2-exp                                 | 1413            | ±6             | 11,064  | DeepSeek AI            | MIT                     |
-|     32 | 20◄─►40                    | Anthropicclaude-opus-4-20250514                   | 1412            | ±4             | 45,726  | Anthropic              | Proprietary             |
-|     33 | 20◄─►40                    | gpt-4.1-2025-04-14                                | 1412            | ±4             | 52,649  | OpenAI                 | Proprietary             |
-|     34 | 21◄─►42                    | mistral-medium-2508                               | 1410            | ±4             | 34,282  | Mistral                | Proprietary             |
-|     35 | 21◄─►42                    | grok-3-preview-02-24                              | 1410            | ±4             | 34,155  | xAI                    | Proprietary             |
-|     36 | 21◄─►42                    | grok-4-0709                                       | 1409            | ±4             | 39,585  | xAI                    | Proprietary             |
-|     37 | 21◄─►46                    | glm-4.5                                           | 1409            | ±5             | 24,869  | Z.ai                   | MIT                     |
-|     38 | 24◄─►47                    | gemini-2.5-flash                                  | 1407            | ±4             | 64,812  | Google                 | Proprietary             |
-|     39 | 24◄─►47                    | gemini-2.5-flash-preview-09-2025                  | 1406            | ±5             | 17,872  | Google                 | Proprietary             |
-|     40 | 29◄─►49                    | grok-4-fast-reasoning                             | 1403            | ±5             | 15,806  | xAI                    | Proprietary             |
-|     41 | 32◄─►52                    | Anthropicclaude-haiku-4-5-20251001                | 1401            | ±6             | 14,267  | Anthropic              | Proprietary             |
-|     42 | 36◄─►50                    | o1-2024-12-17                                     | 1400            | ±4             | 28,039  | OpenAI                 | Proprietary             |
-|     43 | 36◄─►52                    | qwen3-next-80b-a3b-instruct                       | 1400            | ±5             | 23,174  | Alibaba                | Apache 2.0              |
-|     44 | 32◄─►55                    | longcat-flash-chat                                | 1399            | ±6             | 11,531  | Meituan                | MIT                     |
-|     45 | 37◄─►52                    | Anthropicclaude-sonnet-4-20250514-thinking-32k    | 1399            | ±4             | 36,267  | Anthropic              | Proprietary             |
-|     46 | 38◄─►53                    | qwen3-235b-a22b-no-thinking                       | 1399            | ±5             | 39,423  | Alibaba                | Apache 2.0              |
-|     47 | 37◄─►56                    | qwen3-235b-a22b-thinking-2507                     | 1397            | ±6             | 9,353   | Alibaba                | Apache 2.0              |
-|     48 | 40◄─►57                    | deepseek-r1                                       | 1395            | ±5             | 18,718  | DeepSeek               | MIT                     |
-|     49 | 40◄─►60                    | qwen3-vl-235b-a22b-thinking                       | 1393            | ±7             | 7,998   | Alibaba                | Apache 2.0              |
-|     50 | 41◄─►58                    | gpt-5-mini-high                                   | 1393            | ±5             | 27,508  | OpenAI                 | Proprietary             |
-|     51 | 42◄─►58                    | deepseek-v3-0324                                  | 1392            | ±4             | 46,840  | DeepSeek               | MIT                     |
-|     52 | 45◄─►59                    | o4-mini-2025-04-16                                | 1391            | ±4             | 46,907  | OpenAI                 | Proprietary             |
-|     53 | 42◄─►62                    | mai-1-preview                                     | 1390            | ±5             | 18,211  | Microsoft AI           | Proprietary             |
-|     54 | 46◄─►63                    | Anthropicclaude-sonnet-4-20250514                 | 1389            | ±4             | 41,696  | Anthropic              | Proprietary             |
-|     55 | 47◄─►63                    | o1-preview                                        | 1387            | ±5             | 31,505  | OpenAI                 | Proprietary             |
-|     56 | 48◄─►63                    | Anthropicclaude-3-7-sonnet-20250219-thinking-32k  | 1387            | ±4             | 39,941  | Anthropic              | Proprietary             |
-|     57 | 49◄─►63                    | qwen3-coder-480b-a35b-instruct                    | 1386            | ±5             | 23,186  | Alibaba                | Apache 2.0              |
-|     58 | 46◄─►65                    | Tencenthunyuan-t1-20250711                        | 1385            | ±9             | 4,824   | Tencent                | Proprietary             |
-|     59 | 51◄─►65                    | mistral-medium-2505                               | 1383            | ±5             | 34,536  | Mistral                | Proprietary             |
-|     60 | 52◄─►65                    | qwen3-30b-a3b-instruct-2507                       | 1382            | ±5             | 24,241  | Alibaba                | Apache 2.0              |
-|     61 | 53◄─►66                    | gemini-2.5-flash-lite-preview-09-2025-no-thinking | 1381            | ±5             | 17,670  | Google                 | Proprietary             |
-|     62 | 54◄─►66                    | gpt-4.1-mini-2025-04-14                           | 1380            | ±4             | 40,525  | OpenAI                 | Proprietary             |
-|     63 | 53◄─►68                    | Tencenthunyuan-turbos-20250416                    | 1380            | ±6             | 11,138  | Tencent                | Proprietary             |
-|     64 | 58◄─►69                    | gemini-2.5-flash-lite-preview-06-17-thinking      | 1375            | ±5             | 34,020  | Google                 | Proprietary             |
-|     65 | 58◄─►70                    | qwen3-235b-a22b                                   | 1374            | ±5             | 27,187  | Alibaba                | Apache 2.0              |
-|     66 | 61◄─►70                    | qwen2.5-max                                       | 1372            | ±4             | 33,553  | Alibaba                | Proprietary             |
-|     67 | 63◄─►70                    | AnthropicClaude 3.5 Sonnet (10/22)                | 1372            | ±3             | 89,867  | Anthropic              | Proprietary             |
-|     68 | 63◄─►73                    | glm-4.5-air                                       | 1370            | ±4             | 31,730  | Z.ai                   | MIT                     |
-|     69 | 64◄─►75                    | qwen3-next-80b-a3b-thinking                       | 1367            | ±6             | 13,861  | Alibaba                | Apache 2.0              |
-|     70 | 65◄─►75                    | Minimaxminimax-m1                                 | 1366            | ±4             | 36,919  | MiniMax                | Apache 2.0              |
-|     71 | 68◄─►75                    | gemma-3-27b-it                                    | 1365            | ±4             | 49,371  | Google                 | Gemma                   |
-|     72 | 68◄─►80                    | grok-3-mini-high                                  | 1362            | ±5             | 17,609  | xAI                    | Proprietary             |
-|     73 | 68◄─►79                    | o3-mini-high                                      | 1362            | ±5             | 18,735  | OpenAI                 | Proprietary             |
-|     74 | 69◄─►89                    | deepseek-v3                                       | 1357            | ±5             | 21,994  | DeepSeek               | DeepSeek                |
-|     75 | 69◄─►90                    | grok-3-mini-beta                                  | 1357            | ±5             | 23,822  | xAI                    | Proprietary             |
-|     76 | 72◄─►95                    | mistral-small-2506                                | 1354            | ±5             | 18,358  | Mistral                | Apache 2.0              |
-|     77 | 73◄─►95                    | gpt-oss-120b                                      | 1353            | ±4             | 31,331  | OpenAI                 | Apache 2.0              |
-|     78 | 74◄─►95                    | gemini-2.0-flash-lite-preview-02-05               | 1352            | ±4             | 25,215  | Google                 | Proprietary             |
-|     79 | 74◄─►95                    | Coherecommand-a-03-2025                           | 1352            | ±3             | 57,909  | Cohere                 | CC-BY-NC-4.0            |
-|     80 | 72◄─►98                    | glm-4.5v                                          | 1352            | ±8             | 4,987   | Z.ai                   | MIT                     |
-|     81 | 74◄─►95                    | Gemini-1.5-Pro-002                                | 1351            | ±3             | 56,012  | Google                 | Proprietary             |
-|     82 | 72◄─►99                    | amazon-nova-experimental-chat-10-20               | 1350Preliminary | ±10            | 3,956   | Amazon                 | Proprietary             |
-|     83 | 76◄─►98                    | o3-mini                                           | 1348            | ±3             | 58,852  | OpenAI                 | Proprietary             |
-|     84 | 74◄─►100                   | Minimaxminimax-m2                                 | 1346            | ±8             | 7,140   | MiniMax                | Apache 2.0              |
-|     85 | 72◄─►107                   | Tencenthunyuan-turbos-20250226                    | 1346            | ±12            | 2,250   | Tencent                | Proprietary             |
-|     86 | 74◄─►100                   | ling-flash-2.0                                    | 1346            | ±7             | 7,173   | Ant Group              | MIT                     |
-|     87 | 74◄─►108                   | Nvidiallama-3.1-nemotron-ultra-253b-v1            | 1345            | ±12            | 2,573   | Nvidia                 | Nvidia Open Model       |
-|     88 | 74◄─►104                   | Stepfunstep-3                                     | 1345            | ±7             | 6,663   | StepFun                | Apache 2.0              |
-|     89 | 74◄─►108                   | amazon-nova-experimental-chat-10-09               | 1345            | ±11            | 2,899   | Amazon                 | Proprietary             |
-|     90 | 81◄─►98                    | gpt-4o-2024-05-13                                 | 1344            | ±3             | 113,568 | OpenAI                 | Proprietary             |
-|     91 | 74◄─►107                   | qwen3-32b                                         | 1344            | ±9             | 3,943   | Alibaba                | Apache 2.0              |
-|     92 | 74◄─►107                   | qwen-plus-0125                                    | 1344            | ±8             | 5,861   | Alibaba                | Proprietary             |
-|     93 | 76◄─►107                   | glm-4-plus-0111                                   | 1343            | ±8             | 5,806   | Zhipu                  | Proprietary             |
-|     94 | 81◄─►100                   | AnthropicClaude 3.5 Sonnet (06/20)                | 1342            | ±3             | 82,864  | Anthropic              | Proprietary             |
-|     95 | 76◄─►110                   | gemma-3-12b-it                                    | 1340            | ±9             | 3,866   | Google                 | Gemma                   |
-|     96 | 76◄─►111                   | Nvidianvidia-llama-3.3-nemotron-super-49b-v1.5    | 1340            | ±10            | 3,496   | Nvidia                 | Nvidia Open             |
-|     97 | 76◄─►114                   | Tencenthunyuan-turbo-0110                         | 1338            | ±11            | 2,322   | Tencent                | Proprietary             |
-|     98 | 81◄─►110                   | gpt-5-nano-high                                   | 1338            | ±7             | 8,411   | OpenAI                 | Proprietary             |
-|     99 | 85◄─►110                   | Metallama-3.1-405b-instruct-bf16                  | 1335            | ±4             | 41,932  | Meta                   | Llama 3.1 Community     |
-|    100 | 88◄─►110                   | o1-mini                                           | 1335            | ±3             | 52,301  | OpenAI                 | Proprietary             |
-|    101 | 88◄─►112                   | GPT-4o (08/06)                                    | 1334            | ±4             | 45,787  | OpenAI                 | Proprietary             |
-|    102 | 89◄─►111                   | grok-2-2024-08-13                                 | 1334            | ±4             | 63,725  | xAI                    | Proprietary             |
-|    103 | 88◄─►112                   | qwq-32b                                           | 1333            | ±4             | 26,292  | Alibaba                | Apache 2.0              |
-|    104 | 89◄─►112                   | Metallama-3.1-405b-instruct-fp8                   | 1333            | ±3             | 60,272  | Meta                   | Llama 3.1 Community     |
-|    105 | 88◄─►112                   | gemini-advanced-0514                              | 1333            | ±5             | 50,654  | Google                 | Proprietary             |
-|    106 | 84◄─►121                   | Stepfunstep-2-16k-exp-202412                      | 1332            | ±8             | 4,895   | StepFun                | Proprietary             |
-|    107 | 95◄─►122                   | 01.AIyi-lightning                                 | 1328            | ±5             | 27,624  | 01 AI                  | Proprietary             |
-|    108 | 95◄─►122                   | Metallama-4-maverick-17b-128e-instruct            | 1327            | ±4             | 41,249  | Meta                   | Llama 4                 |
-|    109 | 99◄─►125                   | qwen3-30b-a3b                                     | 1326            | ±5             | 27,511  | Alibaba                | Apache 2.0              |
-|    110 | 89◄─►133                   | Nvidiallama-3.3-nemotron-49b-super-v1             | 1325            | ±12            | 2,243   | Nvidia                 | Nvidia                  |
-|    111 | 93◄─►132                   | Tencenthunyuan-large-2025-02-10                   | 1324            | ±10            | 3,760   | Tencent                | Proprietary             |
-|    112 | 106◄─►127                  | gpt-4-turbo-2024-04-09                            | 1323            | ±4             | 98,965  | OpenAI                 | Proprietary             |
-|    113 | 105◄─►128                  | Metallama-4-scout-17b-16e-instruct                | 1322            | ±5             | 31,245  | Meta                   | Llama                   |
-|    114 | 106◄─►128                  | Anthropicclaude-3-5-haiku-20241022                | 1322            | ±3             | 71,439  | Anthropic              | Propretary              |
-|    115 | 101◄─►133                  | deepseek-v2.5-1210                                | 1322            | ±8             | 6,877   | DeepSeek               | DeepSeek                |
-|    116 | 106◄─►128                  | Anthropicclaude-3-opus-20240229                   | 1322            | ±3             | 196,368 | Anthropic              | Proprietary             |
-|    117 | 106◄─►128                  | gemini-1.5-pro-001                                | 1321            | ±4             | 79,769  | Google                 | Proprietary             |
-|    118 | 105◄─►133                  | gpt-4.1-nano-2025-04-14                           | 1320            | ±8             | 6,143   | OpenAI                 | Proprietary             |
-|    119 | 106◄─►133                  | ring-flash-2.0                                    | 1319            | ±7             | 7,292   | Ant Group              | MIT                     |
-|    120 | 106◄─►133                  | Stepfunstep-1o-turbo-202506                       | 1319            | ±7             | 9,674   | StepFun                | Proprietary             |
-|    121 | 109◄─►132                  | Metallama-3.3-70b-instruct                        | 1319            | ±3             | 56,026  | Meta                   | Llama-3.3               |
-|    122 | 107◄─►133                  | gemma-3n-e4b-it                                   | 1318            | ±5             | 23,499  | Google                 | Gemma                   |
-|    123 | 109◄─►133                  | glm-4-plus                                        | 1318            | ±5             | 26,342  | Zhipu AI               | Proprietary             |
-|    124 | 106◄─►134                  | gpt-oss-20b                                       | 1318            | ±6             | 10,868  | OpenAI                 | Apache 2.0              |
-|    125 | 109◄─►134                  | qwen-max-0919                                     | 1317            | ±6             | 16,598  | Alibaba                | Qwen                    |
-|    126 | 111◄─►133                  | GPT-4o-mini (07/18)                               | 1316            | ±3             | 69,291  | OpenAI                 | Proprietary             |
-|    127 | 110◄─►140                  | qwen2.5-plus-1127                                 | 1314            | ±6             | 10,252  | Alibaba                | Proprietary             |
-|    128 | 115◄─►138                  | gpt-4-1106-preview                                | 1313            | ±4             | 101,117 | OpenAI                 | Proprietary             |
-|    129 | 115◄─►138                  | mistral-large-2407                                | 1313            | ±4             | 45,968  | Mistral                | Mistral Research        |
-|    130 | 115◄─►138                  | gpt-4-0125-preview                                | 1313            | ±4             | 94,534  | OpenAI                 | Proprietary             |
-|    131 | 115◄─►139                  | athene-v2-chat                                    | 1313            | ±4             | 24,880  | NexusFlow              | NexusFlow               |
-|    132 | 117◄─►140                  | Gemini-1.5-Flash-002                              | 1310            | ±4             | 35,180  | Google                 | Proprietary             |
-|    133 | 110◄─►143                  | Tencenthunyuan-standard-2025-02-10                | 1310            | ±10            | 3,920   | Tencent                | Proprietary             |
-|    134 | 127◄─►143                  | grok-2-mini-2024-08-13                            | 1307            | ±4             | 52,789  | xAI                    | Proprietary             |
-|    135 | 127◄─►143                  | deepseek-v2.5                                     | 1306            | ±5             | 24,839  | DeepSeek               | DeepSeek                |
-|    136 | 127◄─►143                  | magistral-medium-2506                             | 1305            | ±6             | 12,008  | Mistral                | Proprietary             |
-|    137 | 130◄─►143                  | mistral-large-2411                                | 1304            | ±4             | 28,455  | Mistral                | MRL                     |
-|    138 | 127◄─►143                  | athene-70b-0725                                   | 1304            | ±6             | 19,796  | NexusFlow              | CC-BY-NC-4.0            |
-|    139 | 131◄─►143                  | mistral-small-3.1-24b-instruct-2503               | 1303            | ±4             | 34,177  | Mistral                | Apache 2.0              |
-|    140 | 125◄─►148                  | gemma-3-4b-it                                     | 1303            | ±9             | 4,195   | Google                 | Gemma                   |
-|    141 | 133◄─►143                  | qwen2.5-72b-instruct                              | 1301            | ±4             | 39,632  | Alibaba                | Qwen                    |
-|    142 | 133◄─►151                  | Nvidiallama-3.1-nemotron-70b-instruct             | 1297            | ±8             | 7,216   | Nvidia                 | Llama 3.1               |
-|    143 | 133◄─►152                  | Tencenthunyuan-large-vision                       | 1294            | ±9             | 5,602   | Tencent                | Proprietary             |
-|    144 | 141◄─►151                  | MetaMeta-Llama-3.1-70B-Instruct                   | 1293            | ±4             | 56,003  | Meta                   | Llama 3.1 Community     |
-|    145 | 142◄─►154                  | amazon-nova-pro-v1.0                              | 1288            | ±4             | 25,218  | Amazon                 | Proprietary             |
-|    146 | 141◄─►156                  | jamba-1.5-large                                   | 1288            | ±7             | 8,730   | AI21 Labs              | Jamba Open              |
-|    147 | 141◄─►156                  | reka-core-20240904                                | 1287            | ±7             | 7,380   | Reka AI                | Proprietary             |
-|    148 | 142◄─►154                  | gemma-2-27b-it                                    | 1287            | ±3             | 76,195  | Google                 | Gemma license           |
-|    149 | 141◄─►162                  | Nvidiallama-3.1-nemotron-51b-instruct             | 1286            | ±10            | 3,777   | Nvidia                 | Llama 3.1               |
-|    150 | 142◄─►156                  | gpt-4-0314                                        | 1286            | ±5             | 54,754  | OpenAI                 | Proprietary             |
-|    151 | 141◄─►162                  | llama-3.1-tulu-3-70b                              | 1286            | ±10            | 2,881   | Ai2                    | Llama 3.1               |
-|    152 | 144◄─►156                  | gemini-1.5-flash-001                              | 1284            | ±4             | 63,418  | Google                 | Proprietary             |
-|    153 | 145◄─►162                  | Anthropicclaude-3-sonnet-20240229                 | 1281            | ±4             | 110,173 | Anthropic              | Proprietary             |
-|    154 | 145◄─►162                  | gemma-2-9b-it-simpo                               | 1278            | ±7             | 10,108  | Princeton              | MIT                     |
-|    155 | 147◄─►162                  | Nvidianemotron-4-340b-instruct                    | 1277            | ±5             | 19,913  | Nvidia                 | NVIDIA Open Model       |
-|    156 | 147◄─►163                  | Coherecommand-r-plus-08-2024                      | 1277            | ±6             | 9,931   | Cohere                 | CC-BY-NC-4.0            |
-|    157 | 151◄─►162                  | Metallama-3-70b-instruct                          | 1275            | ±3             | 158,908 | Meta                   | Llama 3 Community       |
-|    158 | 151◄─►163                  | gpt-4-0613                                        | 1274            | ±4             | 89,612  | OpenAI                 | Proprietary             |
-|    159 | 151◄─►165                  | mistral-small-24b-instruct-2501                   | 1273            | ±6             | 14,830  | Mistral                | Apache 2.0              |
-|    160 | 151◄─►167                  | glm-4-0520                                        | 1272            | ±7             | 9,857   | Zhipu AI               | Proprietary             |
-|    161 | 151◄─►167                  | reka-flash-20240904                               | 1272            | ±7             | 7,583   | Reka AI                | Proprietary             |
-|    162 | 151◄─►171                  | qwen2.5-coder-32b-instruct                        | 1269            | ±8             | 5,452   | Alibaba                | Apache 2.0              |
-|    163 | 157◄─►171                  | Coherec4ai-aya-expanse-32b                        | 1266            | ±5             | 27,362  | Cohere                 | CC-BY-NC-4.0            |
-|    164 | 159◄─►171                  | gemma-2-9b-it                                     | 1264            | ±4             | 54,954  | Google                 | Gemma license           |
-|    165 | 159◄─►173                  | deepseek-coder-v2                                 | 1263            | ±6             | 15,242  | DeepSeek AI            | DeepSeek License        |
-|    166 | 160◄─►172                  | Coherecommand-r-plus                              | 1262            | ±4             | 78,401  | Cohere                 | CC-BY-NC-4.0            |
-|    167 | 160◄─►173                  | qwen2-72b-instruct                                | 1261            | ±5             | 37,688  | Alibaba                | Qianwen LICENSE         |
-|    168 | 162◄─►173                  | Anthropicclaude-3-haiku-20240307                  | 1261            | ±4             | 118,626 | Anthropic              | Proprietary             |
-|    169 | 162◄─►173                  | amazon-nova-lite-v1.0                             | 1260            | ±5             | 19,760  | Amazon                 | Proprietary             |
-|    170 | 162◄─►173                  | gemini-1.5-flash-8b-001                           | 1259            | ±4             | 35,914  | Google                 | Proprietary             |
-|    171 | 165◄─►173                  | Azurephi-4                                        | 1255            | ±4             | 24,354  | Microsoft              | MIT                     |
-|    172 | 162◄─►178                  | olmo-2-0325-32b-instruct                          | 1252            | ±11            | 3,377   | Allen AI               | Apache-2.0              |
-|    173 | 166◄─►177                  | Coherecommand-r-08-2024                           | 1251            | ±7             | 10,229  | Cohere                 | CC-BY-NC-4.0            |
-|    174 | 172◄─►182                  | mistral-large-2402                                | 1242            | ±5             | 63,404  | Mistral                | Proprietary             |
-|    175 | 172◄─►182                  | amazon-nova-micro-v1.0                            | 1241            | ±5             | 19,774  | Amazon                 | Proprietary             |
-|    176 | 172◄─►187                  | jamba-1.5-mini                                    | 1238            | ±7             | 8,918   | AI21 Labs              | Jamba Open              |
-|    177 | 172◄─►190                  | ministral-8b-2410                                 | 1236            | ±9             | 4,833   | Mistral                | MRL                     |
-|    178 | 174◄─►189                  | qwen1.5-110b-chat                                 | 1234            | ±5             | 26,679  | Alibaba                | Qianwen LICENSE         |
-|    179 | 174◄─►191                  | gemini-pro-dev-api                                | 1233            | ±7             | 18,454  | Google                 | Proprietary             |
-|    180 | 174◄─►190                  | qwen1.5-72b-chat                                  | 1233            | ±5             | 39,689  | Alibaba                | Qianwen LICENSE         |
-|    181 | 174◄─►191                  | reka-flash-21b-20240226-online                    | 1233            | ±7             | 15,606  | Reka AI                | Proprietary             |
-|    182 | 173◄─►192                  | Tencenthunyuan-standard-256k                      | 1233            | ±12            | 2,761   | Tencent                | Proprietary             |
-|    183 | 176◄─►191                  | mixtral-8x22b-instruct-v0.1                       | 1229            | ±4             | 52,214  | Mistral                | Apache 2.0              |
-|    184 | 176◄─►192                  | Coherecommand-r                                   | 1228            | ±5             | 54,710  | Cohere                 | CC-BY-NC-4.0            |
-|    185 | 176◄─►193                  | reka-flash-21b-20240226                           | 1226            | ±6             | 25,026  | Reka AI                | Proprietary             |
-|    186 | 178◄─►193                  | gpt-3.5-turbo-0125                                | 1224            | ±5             | 67,214  | OpenAI                 | Proprietary             |
-|    187 | 177◄─►194                  | Coherec4ai-aya-expanse-8b                         | 1223            | ±7             | 9,922   | Cohere                 | CC-BY-NC-4.0            |
-|    188 | 177◄─►194                  | mistral-medium                                    | 1223            | ±5             | 34,893  | Mistral                | Proprietary             |
-|    189 | 180◄─►193                  | Metallama-3-8b-instruct                           | 1223            | ±4             | 106,055 | Meta                   | Llama 3 Community       |
-|    190 | 176◄─►196                  | llama-3.1-tulu-3-8b                               | 1221            | ±11            | 2,943   | Ai2                    | Llama 3.1               |
-|    191 | 176◄─►197                  | gemini-pro                                        | 1221            | ±12            | 6,418   | Google                 | Proprietary             |
-|    192 | 183◄─►198                  | HuggingFacezephyr-orpo-141b-A35b-v0.1             | 1213            | ±11            | 4,712   | HuggingFace            | Apache 2.0              |
-|    193 | 188◄─►197                  | 01.AIyi-1.5-34b-chat                              | 1213            | ±5             | 24,417  | 01 AI                  | Apache-2.0              |
-|    194 | 190◄─►197                  | Metallama-3.1-8b-instruct                         | 1211            | ±4             | 50,234  | Meta                   | Llama 3.1 Community     |
-|    195 | 185◄─►203                  | granite-3.1-8b-instruct                           | 1210            | ±11            | 3,142   | IBM                    | Apache 2.0              |
-|    196 | 190◄─►203                  | qwen1.5-32b-chat                                  | 1205            | ±6             | 22,068  | Alibaba                | Qianwen LICENSE         |
-|    197 | 191◄─►205                  | gpt-3.5-turbo-1106                                | 1201            | ±9             | 16,760  | OpenAI                 | Proprietary             |
-|    198 | 194◄─►205                  | Azurephi-3-medium-4k-instruct                     | 1198            | ±5             | 25,301  | Microsoft              | MIT                     |
-|    199 | 195◄─►204                  | gemma-2-2b-it                                     | 1198            | ±4             | 46,901  | Google                 | Gemma license           |
-|    200 | 195◄─►205                  | mixtral-8x7b-instruct-v0.1                        | 1197            | ±4             | 74,303  | Mistral                | Apache 2.0              |
-|    201 | 195◄─►210                  | dbrx-instruct-preview                             | 1195            | ±6             | 32,760  | Databricks             | DBRX LICENSE            |
-|    202 | 195◄─►213                  | qwen1.5-14b-chat                                  | 1192            | ±7             | 18,066  | Alibaba                | Qianwen LICENSE         |
-|    203 | 195◄─►213                  | InternLMinternlm2_5-20b-chat                      | 1192            | ±7             | 10,038  | InternLM               | Other                   |
-|    204 | 197◄─►220                  | Azurewizardlm-70b                                 | 1184            | ±9             | 8,270   | Microsoft              | Llama 2 Community       |
-|    205 | 197◄─►221                  | deepseek-llm-67b-chat                             | 1183            | ±12            | 4,950   | DeepSeek AI            | DeepSeek License        |
-|    206 | 201◄─►218                  | 01.AIyi-34b-chat                                  | 1183            | ±7             | 15,624  | 01 AI                  | Yi License              |
-|    207 | 201◄─►220                  | granite-3.0-8b-instruct                           | 1183            | ±9             | 6,727   | IBM                    | Apache 2.0              |
-|    208 | 201◄─►221                  | OpenChatopenchat-3.5-0106                         | 1182            | ±8             | 12,712  | OpenChat               | Apache-2.0              |
-|    209 | 201◄─►221                  | OpenChatopenchat-3.5                              | 1181            | ±10            | 8,009   | OpenChat               | Apache-2.0              |
-|    210 | 201◄─►222                  | granite-3.1-2b-instruct                           | 1181            | ±11            | 3,235   | IBM                    | Apache 2.0              |
-|    211 | 202◄─►221                  | Snowflakesnowflake-arctic-instruct                | 1180            | ±6             | 33,272  | Snowflake              | Apache 2.0              |
-|    212 | 204◄─►221                  | gemma-1.1-7b-it                                   | 1179            | ±6             | 24,327  | Google                 | Gemma license           |
-|    213 | 202◄─►223                  | tulu-2-dpo-70b                                    | 1178            | ±10            | 6,579   | AllenAI/UW             | AI2 ImpACT Low-risk     |
-|    214 | 202◄─►225                  | openhermes-2.5-mistral-7b                         | 1176            | ±10            | 5,026   | NousResearch           | Apache-2.0              |
-|    215 | 204◄─►224                  | vicuna-33b                                        | 1173            | ±6             | 22,613  | LMSYS                  | Non-commercial          |
-|    216 | 204◄─►225                  | starling-lm-7b-beta                               | 1172            | ±7             | 16,190  | Nexusflow              | Apache-2.0              |
-|    217 | 204◄─►225                  | Azurephi-3-small-8k-instruct                      | 1172            | ±6             | 17,983  | Microsoft              | MIT                     |
-|    218 | 205◄─►225                  | Metallama-2-70b-chat                              | 1171            | ±5             | 38,767  | Meta                   | Llama 2 Community       |
-|    219 | 205◄─►228                  | starling-lm-7b-alpha                              | 1168            | ±8             | 10,267  | UC Berkeley            | CC-BY-NC-4.0            |
-|    220 | 207◄─►228                  | Metallama-3.2-3b-instruct                         | 1167            | ±8             | 8,043   | Meta                   | Llama 3.2               |
-|    221 | 204◄─►230                  | nous-hermes-2-mixtral-8x7b-dpo                    | 1165            | ±12            | 3,792   | NousResearch           | Apache-2.0              |
-|    222 | 212◄─►234                  | qwq-32b-preview                                   | 1160            | ±11            | 3,256   | Alibaba                | Apache 2.0              |
-|    223 | 219◄─►234                  | granite-3.0-2b-instruct                           | 1157            | ±8             | 6,922   | IBM                    | Apache 2.0              |
-|    224 | 213◄─►237                  | Nvidiallama2-70b-steerlm-chat                     | 1156            | ±13            | 3,605   | Nvidia                 | Llama 2 Community       |
-|    225 | 215◄─►239                  | solar-10.7b-instruct-v1.0                         | 1153            | ±13            | 4,187   | Upstage AI             | CC-BY-NC-4.0            |
-|    226 | 214◄─►243                  | dolphin-2.2.1-mistral-7b                          | 1151            | ±15            | 1,685   | Cognitive Computations | Apache-2.0              |
-|    227 | 221◄─►237                  | mistral-7b-instruct-v0.2                          | 1150            | ±7             | 19,603  | Mistral                | Apache-2.0              |
-|    228 | 219◄─►242                  | mpt-30b-chat                                      | 1150            | ±12            | 2,606   | MosaicML               | CC-BY-NC-SA-4.0         |
-|    229 | 221◄─►239                  | Azurewizardlm-13b                                 | 1149            | ±9             | 7,122   | Microsoft              | Llama 2 Community       |
-|    230 | 219◄─►246                  | falcon-180b-chat                                  | 1146            | ±17            | 1,312   | TII                    | Falcon-180B TII License |
-|    231 | 222◄─►244                  | qwen1.5-7b-chat                                   | 1143            | ±10            | 4,782   | Alibaba                | Qianwen LICENSE         |
-|    232 | 222◄─►242                  | Azurephi-3-mini-4k-instruct-june-2024             | 1143            | ±6             | 12,415  | Microsoft              | MIT                     |
-|    233 | 222◄─►243                  | Metallama-2-13b-chat                              | 1142            | ±7             | 19,357  | Meta                   | Llama 2 Community       |
-|    234 | 224◄─►244                  | vicuna-13b                                        | 1141            | ±7             | 19,539  | LMSYS                  | Llama 2 Community       |
-|    235 | 222◄─►246                  | qwen-14b-chat                                     | 1138            | ±11            | 5,004   | Alibaba                | Qianwen LICENSE         |
-|    236 | 224◄─►246                  | Metacodellama-34b-instruct                        | 1136            | ±9             | 7,417   | Meta                   | Llama 2 Community       |
-|    237 | 224◄─►246                  | palm-2                                            | 1136            | ±9             | 8,634   | Google                 | Proprietary             |
-|    238 | 226◄─►246                  | gemma-7b-it                                       | 1134            | ±9             | 9,034   | Google                 | Gemma license           |
-|    239 | 228◄─►247                  | HuggingFacezephyr-7b-beta                         | 1131            | ±9             | 11,220  | HuggingFace            | MIT                     |
-|    240 | 228◄─►246                  | Azurephi-3-mini-128k-instruct                     | 1131            | ±7             | 21,024  | Microsoft              | MIT                     |
-|    241 | 232◄─►247                  | Azurephi-3-mini-4k-instruct                       | 1129            | ±6             | 20,539  | Microsoft              | MIT                     |
-|    242 | 226◄─►251                  | HuggingFacezephyr-7b-alpha                        | 1128            | ±16            | 1,803   | HuggingFace            | MIT                     |
-|    243 | 228◄─►251                  | guanaco-33b                                       | 1127            | ±12            | 2,955   | UW                     | Non-commercial          |
-|    244 | 234◄─►251                  | stripedhyena-nous-7b                              | 1120            | ±11            | 5,214   | Together AI            | Apache 2.0              |
-|    245 | 230◄─►252                  | Metacodellama-70b-instruct                        | 1118            | ±18            | 1,151   | Meta                   | Llama 2 Community       |
-|    246 | 234◄─►251                  | HuggingFacesmollm2-1.7b-instruct                  | 1118            | ±14            | 2,244   | HuggingFace            | Apache 2.0              |
-|    247 | 240◄─►251                  | vicuna-7b                                         | 1114            | ±9             | 6,972   | LMSYS                  | Llama 2 Community       |
-|    248 | 242◄─►251                  | gemma-1.1-2b-it                                   | 1113            | ±8             | 11,035  | Google                 | Gemma license           |
-|    249 | 242◄─►251                  | Metallama-3.2-1b-instruct                         | 1113            | ±8             | 8,166   | Meta                   | Llama 3.2               |
-|    250 | 242◄─►252                  | mistral-7b-instruct                               | 1110            | ±9             | 9,042   | Mistral                | Apache 2.0              |
-|    251 | 242◄─►252                  | Metallama-2-7b-chat                               | 1108            | ±7             | 14,272  | Meta                   | Llama 2 Community       |
-|    252 | 249◄─►256                  | gemma-2b-it                                       | 1090            | ±12            | 4,817   | Google                 | Gemma license           |
-|    253 | 252◄─►254                  | qwen1.5-4b-chat                                   | 1090            | ±9             | 7,662   | Alibaba                | Qianwen LICENSE         |
-|    254 | 252◄─►259                  | olmo-7b-instruct                                  | 1074            | ±11            | 6,412   | Allen AI               | Apache-2.0              |
-|    255 | 253◄─►259                  | koala-13b                                         | 1069            | ±10            | 6,998   | UC Berkeley            | Non-commercial          |
-|    256 | 254◄─►259                  | alpaca-13b                                        | 1065            | ±12            | 5,828   | Stanford               | Non-commercial          |
-|    257 | 253◄─►260                  | gpt4all-13b-snoozy                                | 1064            | ±15            | 1,773   | Nomic AI               | Non-commercial          |
-|    258 | 254◄─►260                  | mpt-7b-chat                                       | 1060            | ±12            | 3,977   | MosaicML               | CC-BY-NC-SA-4.0         |
-|    259 | 254◄─►260                  | chatglm3-6b                                       | 1056            | ±12            | 4,692   | Tsinghua               | Apache-2.0              |
-|    260 | 257◄─►262                  | RWKVRWKV-4-Raven-14B                              | 1040            | ±11            | 4,898   | RWKV                   | Apache 2.0              |
-|    261 | 260◄─►262                  | chatglm2-6b                                       | 1025            | ±14            | 2,683   | Tsinghua               | Apache-2.0              |
-|    262 | 260◄─►262                  | oasst-pythia-12b                                  | 1021            | ±11            | 6,343   | OpenAssistant          | Apache 2.0              |
-|    263 | 263◄─►266                  | chatglm-6b                                        | 995             | ±13            | 4,968   | Tsinghua               | Non-commercial          |
-|    264 | 263◄─►266                  | fastchat-t5-3b                                    | 990             | ±12            | 4,270   | LMSYS                  | Apache 2.0              |
-|    265 | 263◄─►267                  | dolly-v2-12b                                      | 977             | ±14            | 3,471   | Databricks             | MIT                     |
-|    266 | 263◄─►267                  | Metallama-13b                                     | 968             | ±16            | 2,441   | Meta                   | Non-commercial          |
-|    267 | 265◄─►267                  | Stabilitystablelm-tuned-alpha-7b                  | 950             | ±13            | 3,325   | Stability AI           | CC-BY-NC-SA-4.0         |
+|      1 | 1◄─►2                      | gemini-3-pro                                      | 1498Preliminary | ±11            | 3,768   | Google                 | Proprietary             |
+|      2 | 1◄─►3                      | grok-4.1-thinking                                 | 1483Preliminary | ±11            | 3,467   | xAI                    | Proprietary             |
+|      3 | 2◄─►6                      | grok-4.1                                          | 1464Preliminary | ±10            | 3,588   | xAI                    | Proprietary             |
+|      4 | 3◄─►10                     | gpt-5.1-high                                      | 1454            | ±11            | 3,796   | OpenAI                 | Proprietary             |
+|      5 | 3◄─►9                      | gemini-2.5-pro                                    | 1451            | ±4             | 66,734  | Google                 | Proprietary             |
+|      6 | 3◄─►10                     | Anthropicclaude-sonnet-4-5-20250929-thinking-32k  | 1450            | ±5             | 17,822  | Anthropic              | Proprietary             |
+|      7 | 4◄─►9                      | Anthropicclaude-opus-4-1-20250805-thinking-16k    | 1449            | ±4             | 33,404  | Anthropic              | Proprietary             |
+|      8 | 4◄─►13                     | Anthropicclaude-sonnet-4-5-20250929               | 1445            | ±6             | 12,510  | Anthropic              | Proprietary             |
+|      9 | 4◄─►16                     | gpt-4.5-preview-2025-02-27                        | 1442            | ±6             | 14,644  | OpenAI                 | Proprietary             |
+|     10 | 6◄─►16                     | Anthropicclaude-opus-4-1-20250805                 | 1440            | ±4             | 46,166  | Anthropic              | Proprietary             |
+|     11 | 8◄─►16                     | chatgpt-4o-latest-20250326                        | 1438            | ±4             | 52,665  | OpenAI                 | Proprietary             |
+|     12 | 8◄─►17                     | gpt-5-high                                        | 1437            | ±5             | 32,916  | OpenAI                 | Proprietary             |
+|     13 | 9◄─►17                     | o3-2025-04-16                                     | 1434            | ±4             | 61,640  | OpenAI                 | Proprietary             |
+|     14 | 9◄─►19                     | qwen3-max-preview                                 | 1433            | ±5             | 28,149  | Alibaba                | Proprietary             |
+|     15 | 8◄─►31                     | gpt-5.1                                           | 1432            | ±10            | 3,828   | OpenAI                 | Proprietary             |
+|     16 | 9◄─►29                     | MoonshotAIkimi-k2-thinking                        | 1430            | ±8             | 6,951   | Moonshot               | Modified MIT            |
+|     17 | 12◄─►31                    | glm-4.6                                           | 1427            | ±6             | 15,078  | Z.ai                   | MIT                     |
+|     18 | 14◄─►31                    | gpt-5-chat                                        | 1425            | ±4             | 32,163  | OpenAI                 | Proprietary             |
+|     19 | 14◄─►33                    | qwen3-max-2025-09-23                              | 1423            | ±6             | 9,266   | Alibaba                | Proprietary             |
+|     20 | 15◄─►33                    | Anthropicclaude-opus-4-20250514-thinking-16k      | 1423            | ±4             | 37,909  | Anthropic              | Proprietary             |
+|     21 | 15◄─►35                    | deepseek-v3.2-exp-thinking                        | 1421            | ±7             | 9,219   | DeepSeek AI            | MIT                     |
+|     22 | 15◄─►33                    | qwen3-235b-a22b-instruct-2507                     | 1421            | ±4             | 41,172  | Alibaba                | Apache 2.0              |
+|     23 | 15◄─►39                    | grok-4-fast                                       | 1420            | ±8             | 7,067   | xAI                    | Proprietary             |
+|     24 | 15◄─►41                    | ernie-5.0-preview-1022                            | 1419Preliminary | ±9             | 4,706   | Baidu                  | Proprietary             |
+|     25 | 15◄─►39                    | deepseek-r1-0528                                  | 1418            | ±6             | 19,249  | DeepSeek               | MIT                     |
+|     26 | 15◄─►41                    | MoonshotAIkimi-k2-0905-preview                    | 1417            | ±7             | 10,655  | Moonshot               | Modified MIT            |
+|     27 | 16◄─►41                    | deepseek-v3.1                                     | 1416            | ±6             | 15,262  | DeepSeek               | MIT                     |
+|     28 | 15◄─►41                    | deepseek-v3.1-thinking                            | 1416            | ±7             | 11,997  | DeepSeek               | MIT                     |
+|     29 | 19◄─►39                    | MoonshotAIkimi-k2-0711-preview                    | 1416            | ±5             | 28,207  | Moonshot               | Modified MIT            |
+|     30 | 16◄─►41                    | qwen3-vl-235b-a22b-instruct                       | 1415            | ±7             | 8,538   | Alibaba                | Apache 2.0              |
+|     31 | 15◄─►44                    | deepseek-v3.1-terminus                            | 1415            | ±10            | 3,752   | DeepSeek AI            | MIT                     |
+|     32 | 15◄─►46                    | deepseek-v3.1-terminus-thinking                   | 1414            | ±10            | 3,525   | DeepSeek AI            | MIT                     |
+|     33 | 19◄─►43                    | deepseek-v3.2-exp                                 | 1413            | ±6             | 11,039  | DeepSeek AI            | MIT                     |
+|     34 | 22◄─►41                    | Anthropicclaude-opus-4-20250514                   | 1412            | ±4             | 45,701  | Anthropic              | Proprietary             |
+|     35 | 22◄─►41                    | gpt-4.1-2025-04-14                                | 1412            | ±4             | 52,602  | OpenAI                 | Proprietary             |
+|     36 | 23◄─►43                    | mistral-medium-2508                               | 1410            | ±4             | 35,478  | Mistral                | Proprietary             |
+|     37 | 23◄─►43                    | grok-3-preview-02-24                              | 1410            | ±4             | 34,149  | xAI                    | Proprietary             |
+|     38 | 23◄─►46                    | grok-4-0709                                       | 1409            | ±4             | 40,826  | xAI                    | Proprietary             |
+|     39 | 23◄─►49                    | glm-4.5                                           | 1408            | ±5             | 24,841  | Z.ai                   | MIT                     |
+|     40 | 26◄─►49                    | gemini-2.5-flash                                  | 1407            | ±4             | 65,978  | Google                 | Proprietary             |
+|     41 | 26◄─►50                    | gemini-2.5-flash-preview-09-2025                  | 1406            | ±5             | 19,076  | Google                 | Proprietary             |
+|     42 | 33◄─►53                    | grok-4-fast-reasoning                             | 1403            | ±5             | 17,010  | xAI                    | Proprietary             |
+|     43 | 33◄─►53                    | Anthropicclaude-haiku-4-5-20251001                | 1401            | ±5             | 15,604  | Anthropic              | Proprietary             |
+|     44 | 37◄─►53                    | o1-2024-12-17                                     | 1400            | ±4             | 28,039  | OpenAI                 | Proprietary             |
+|     45 | 37◄─►55                    | qwen3-next-80b-a3b-instruct                       | 1400            | ±5             | 23,121  | Alibaba                | Apache 2.0              |
+|     46 | 36◄─►58                    | longcat-flash-chat                                | 1399            | ±6             | 11,510  | Meituan                | MIT                     |
+|     47 | 39◄─►56                    | Anthropicclaude-sonnet-4-20250514-thinking-32k    | 1399            | ±4             | 36,243  | Anthropic              | Proprietary             |
+|     48 | 39◄─►56                    | qwen3-235b-a22b-no-thinking                       | 1399            | ±5             | 39,400  | Alibaba                | Apache 2.0              |
+|     49 | 39◄─►60                    | qwen3-235b-a22b-thinking-2507                     | 1397            | ±6             | 9,349   | Alibaba                | Apache 2.0              |
+|     50 | 42◄─►60                    | deepseek-r1                                       | 1395            | ±5             | 18,718  | DeepSeek               | MIT                     |
+|     51 | 42◄─►63                    | qwen3-vl-235b-a22b-thinking                       | 1393            | ±7             | 7,988   | Alibaba                | Apache 2.0              |
+|     52 | 42◄─►61                    | gpt-5-mini-high                                   | 1393            | ±5             | 27,469  | OpenAI                 | Proprietary             |
+|     53 | 45◄─►62                    | deepseek-v3-0324                                  | 1391            | ±4             | 46,817  | DeepSeek               | MIT                     |
+|     54 | 41◄─►67                    | Tencenthunyuan-vision-1.5-thinking                | 1391            | ±12            | 2,216   | Tencent                | Proprietary             |
+|     55 | 46◄─►62                    | o4-mini-2025-04-16                                | 1391            | ±4             | 46,876  | OpenAI                 | Proprietary             |
+|     56 | 45◄─►65                    | mai-1-preview                                     | 1390            | ±5             | 18,195  | Microsoft AI           | Proprietary             |
+|     57 | 48◄─►65                    | Anthropicclaude-sonnet-4-20250514                 | 1389            | ±4             | 41,677  | Anthropic              | Proprietary             |
+|     58 | 49◄─►66                    | o1-preview                                        | 1387            | ±5             | 31,505  | OpenAI                 | Proprietary             |
+|     59 | 49◄─►66                    | Anthropicclaude-3-7-sonnet-20250219-thinking-32k  | 1387            | ±4             | 39,929  | Anthropic              | Proprietary             |
+|     60 | 51◄─►66                    | qwen3-coder-480b-a35b-instruct                    | 1385            | ±5             | 23,166  | Alibaba                | Apache 2.0              |
+|     61 | 48◄─►68                    | Tencenthunyuan-t1-20250711                        | 1385            | ±9             | 4,821   | Tencent                | Proprietary             |
+|     62 | 52◄─►68                    | mistral-medium-2505                               | 1383            | ±5             | 34,535  | Mistral                | Proprietary             |
+|     63 | 54◄─►68                    | qwen3-30b-a3b-instruct-2507                       | 1382            | ±5             | 24,217  | Alibaba                | Apache 2.0              |
+|     64 | 57◄─►69                    | gpt-4.1-mini-2025-04-14                           | 1380            | ±4             | 40,508  | OpenAI                 | Proprietary             |
+|     65 | 55◄─►69                    | gemini-2.5-flash-lite-preview-09-2025-no-thinking | 1380            | ±5             | 18,937  | Google                 | Proprietary             |
+|     66 | 55◄─►71                    | Tencenthunyuan-turbos-20250416                    | 1380            | ±6             | 11,137  | Tencent                | Proprietary             |
+|     67 | 60◄─►72                    | gemini-2.5-flash-lite-preview-06-17-thinking      | 1375            | ±5             | 33,992  | Google                 | Proprietary             |
+|     68 | 61◄─►73                    | qwen3-235b-a22b                                   | 1374            | ±5             | 27,178  | Alibaba                | Apache 2.0              |
+|     69 | 64◄─►73                    | qwen2.5-max                                       | 1372            | ±4             | 33,553  | Alibaba                | Proprietary             |
+|     70 | 66◄─►73                    | AnthropicClaude 3.5 Sonnet (10/22)                | 1372            | ±3             | 89,856  | Anthropic              | Proprietary             |
+|     71 | 66◄─►76                    | glm-4.5-air                                       | 1370            | ±4             | 31,674  | Z.ai                   | MIT                     |
+|     72 | 67◄─►78                    | qwen3-next-80b-a3b-thinking                       | 1367            | ±6             | 13,844  | Alibaba                | Apache 2.0              |
+|     73 | 68◄─►78                    | Minimaxminimax-m1                                 | 1366            | ±4             | 36,887  | MiniMax                | Apache 2.0              |
+|     74 | 71◄─►78                    | gemma-3-27b-it                                    | 1364            | ±4             | 49,345  | Google                 | Gemma                   |
+|     75 | 71◄─►82                    | o3-mini-high                                      | 1362            | ±5             | 18,735  | OpenAI                 | Proprietary             |
+|     76 | 71◄─►82                    | grok-3-mini-high                                  | 1362            | ±5             | 17,597  | xAI                    | Proprietary             |
+|     77 | 72◄─►92                    | deepseek-v3                                       | 1357            | ±5             | 21,994  | DeepSeek               | DeepSeek                |
+|     78 | 72◄─►93                    | grok-3-mini-beta                                  | 1357            | ±5             | 23,812  | xAI                    | Proprietary             |
+|     79 | 75◄─►98                    | mistral-small-2506                                | 1354            | ±5             | 18,340  | Mistral                | Apache 2.0              |
+|     80 | 77◄─►98                    | gpt-oss-120b                                      | 1353            | ±4             | 31,284  | OpenAI                 | Apache 2.0              |
+|     81 | 77◄─►98                    | gemini-2.0-flash-lite-preview-02-05               | 1352            | ±4             | 25,215  | Google                 | Proprietary             |
+|     82 | 77◄─►98                    | Coherecommand-a-03-2025                           | 1352            | ±3             | 57,859  | Cohere                 | CC-BY-NC-4.0            |
+|     83 | 75◄─►101                   | glm-4.5v                                          | 1352            | ±8             | 4,983   | Z.ai                   | MIT                     |
+|     84 | 77◄─►99                    | Gemini-1.5-Pro-002                                | 1351            | ±3             | 56,012  | Google                 | Proprietary             |
+|     85 | 75◄─►102                   | amazon-nova-experimental-chat-10-20               | 1349Preliminary | ±10            | 3,943   | Amazon                 | Proprietary             |
+|     86 | 79◄─►101                   | o3-mini                                           | 1348            | ±3             | 58,832  | OpenAI                 | Proprietary             |
+|     87 | 77◄─►104                   | Minimaxminimax-m2                                 | 1346            | ±8             | 7,126   | MiniMax                | Apache 2.0              |
+|     88 | 77◄─►102                   | ling-flash-2.0                                    | 1346            | ±7             | 7,160   | Ant Group              | MIT                     |
+|     89 | 75◄─►110                   | Tencenthunyuan-turbos-20250226                    | 1346            | ±12            | 2,250   | Tencent                | Proprietary             |
+|     90 | 77◄─►106                   | Stepfunstep-3                                     | 1345            | ±7             | 6,652   | StepFun                | Apache 2.0              |
+|     91 | 77◄─►111                   | Nvidiallama-3.1-nemotron-ultra-253b-v1            | 1345            | ±12            | 2,573   | Nvidia                 | Nvidia Open Model       |
+|     92 | 83◄─►101                   | gpt-4o-2024-05-13                                 | 1345            | ±3             | 113,568 | OpenAI                 | Proprietary             |
+|     93 | 77◄─►111                   | amazon-nova-experimental-chat-10-09               | 1345            | ±11            | 2,894   | Amazon                 | Proprietary             |
+|     94 | 77◄─►110                   | qwen3-32b                                         | 1344            | ±9             | 3,943   | Alibaba                | Apache 2.0              |
+|     95 | 78◄─►110                   | qwen-plus-0125                                    | 1344            | ±8             | 5,861   | Alibaba                | Proprietary             |
+|     96 | 79◄─►110                   | glm-4-plus-0111                                   | 1343            | ±8             | 5,806   | Zhipu                  | Proprietary             |
+|     97 | 84◄─►103                   | AnthropicClaude 3.5 Sonnet (06/20)                | 1342            | ±3             | 82,864  | Anthropic              | Proprietary             |
+|     98 | 79◄─►113                   | gemma-3-12b-it                                    | 1340            | ±9             | 3,866   | Google                 | Gemma                   |
+|     99 | 79◄─►114                   | Nvidianvidia-llama-3.3-nemotron-super-49b-v1.5    | 1340            | ±10            | 3,496   | Nvidia                 | Nvidia Open             |
+|    100 | 84◄─►112                   | gpt-5-nano-high                                   | 1339            | ±7             | 8,399   | OpenAI                 | Proprietary             |
+|    101 | 79◄─►118                   | Tencenthunyuan-turbo-0110                         | 1338            | ±11            | 2,322   | Tencent                | Proprietary             |
+|    102 | 89◄─►113                   | Metallama-3.1-405b-instruct-bf16                  | 1335            | ±4             | 41,932  | Meta                   | Llama 3.1 Community     |
+|    103 | 90◄─►113                   | o1-mini                                           | 1335            | ±3             | 52,301  | OpenAI                 | Proprietary             |
+|    104 | 91◄─►114                   | GPT-4o (08/06)                                    | 1334            | ±4             | 45,787  | OpenAI                 | Proprietary             |
+|    105 | 92◄─►114                   | grok-2-2024-08-13                                 | 1334            | ±4             | 63,725  | xAI                    | Proprietary             |
+|    106 | 90◄─►115                   | gemini-advanced-0514                              | 1334            | ±5             | 50,654  | Google                 | Proprietary             |
+|    107 | 92◄─►115                   | qwq-32b                                           | 1333            | ±4             | 26,281  | Alibaba                | Apache 2.0              |
+|    108 | 92◄─►115                   | Metallama-3.1-405b-instruct-fp8                   | 1333            | ±3             | 60,272  | Meta                   | Llama 3.1 Community     |
+|    109 | 87◄─►124                   | Stepfunstep-2-16k-exp-202412                      | 1332            | ±9             | 4,895   | StepFun                | Proprietary             |
+|    110 | 98◄─►125                   | 01.AIyi-lightning                                 | 1328            | ±5             | 27,624  | 01 AI                  | Proprietary             |
+|    111 | 99◄─►125                   | Metallama-4-maverick-17b-128e-instruct            | 1327            | ±4             | 41,232  | Meta                   | Llama 4                 |
+|    112 | 102◄─►128                  | qwen3-30b-a3b                                     | 1326            | ±5             | 27,509  | Alibaba                | Apache 2.0              |
+|    113 | 92◄─►136                   | Nvidiallama-3.3-nemotron-49b-super-v1             | 1325            | ±12            | 2,243   | Nvidia                 | Nvidia                  |
+|    114 | 96◄─►135                   | Tencenthunyuan-large-2025-02-10                   | 1324            | ±10            | 3,760   | Tencent                | Proprietary             |
+|    115 | 108◄─►129                  | gpt-4-turbo-2024-04-09                            | 1324            | ±4             | 98,965  | OpenAI                 | Proprietary             |
+|    116 | 109◄─►131                  | Anthropicclaude-3-5-haiku-20241022                | 1322            | ±3             | 71,416  | Anthropic              | Propretary              |
+|    117 | 108◄─►131                  | Metallama-4-scout-17b-16e-instruct                | 1322            | ±5             | 31,225  | Meta                   | Llama                   |
+|    118 | 109◄─►131                  | Anthropicclaude-3-opus-20240229                   | 1322            | ±3             | 196,368 | Anthropic              | Proprietary             |
+|    119 | 109◄─►131                  | gemini-1.5-pro-001                                | 1322            | ±4             | 79,769  | Google                 | Proprietary             |
+|    120 | 105◄─►136                  | deepseek-v2.5-1210                                | 1322            | ±8             | 6,877   | DeepSeek               | DeepSeek                |
+|    121 | 108◄─►136                  | gpt-4.1-nano-2025-04-14                           | 1320            | ±8             | 6,143   | OpenAI                 | Proprietary             |
+|    122 | 109◄─►136                  | ring-flash-2.0                                    | 1320            | ±7             | 7,283   | Ant Group              | MIT                     |
+|    123 | 109◄─►136                  | Stepfunstep-1o-turbo-202506                       | 1319            | ±7             | 9,673   | StepFun                | Proprietary             |
+|    124 | 112◄─►135                  | Metallama-3.3-70b-instruct                        | 1319            | ±3             | 56,025  | Meta                   | Llama-3.3               |
+|    125 | 110◄─►136                  | gemma-3n-e4b-it                                   | 1318            | ±5             | 23,485  | Google                 | Gemma                   |
+|    126 | 112◄─►136                  | glm-4-plus                                        | 1318            | ±5             | 26,342  | Zhipu AI               | Proprietary             |
+|    127 | 109◄─►137                  | gpt-oss-20b                                       | 1318            | ±6             | 10,862  | OpenAI                 | Apache 2.0              |
+|    128 | 112◄─►137                  | qwen-max-0919                                     | 1317            | ±6             | 16,598  | Alibaba                | Qwen                    |
+|    129 | 114◄─►136                  | GPT-4o-mini (07/18)                               | 1316            | ±3             | 69,291  | OpenAI                 | Proprietary             |
+|    130 | 113◄─►143                  | qwen2.5-plus-1127                                 | 1314            | ±6             | 10,252  | Alibaba                | Proprietary             |
+|    131 | 118◄─►141                  | gpt-4-1106-preview                                | 1313            | ±4             | 101,117 | OpenAI                 | Proprietary             |
+|    132 | 118◄─►141                  | gpt-4-0125-preview                                | 1313            | ±4             | 94,534  | OpenAI                 | Proprietary             |
+|    133 | 118◄─►141                  | mistral-large-2407                                | 1313            | ±4             | 45,968  | Mistral                | Mistral Research        |
+|    134 | 118◄─►142                  | athene-v2-chat                                    | 1313            | ±4             | 24,880  | NexusFlow              | NexusFlow               |
+|    135 | 120◄─►143                  | Gemini-1.5-Flash-002                              | 1310            | ±4             | 35,180  | Google                 | Proprietary             |
+|    136 | 114◄─►146                  | Tencenthunyuan-standard-2025-02-10                | 1310            | ±10            | 3,920   | Tencent                | Proprietary             |
+|    137 | 130◄─►146                  | grok-2-mini-2024-08-13                            | 1307            | ±4             | 52,789  | xAI                    | Proprietary             |
+|    138 | 130◄─►146                  | deepseek-v2.5                                     | 1306            | ±5             | 24,839  | DeepSeek               | DeepSeek                |
+|    139 | 130◄─►146                  | magistral-medium-2506                             | 1304            | ±6             | 12,000  | Mistral                | Proprietary             |
+|    140 | 130◄─►146                  | athene-70b-0725                                   | 1304            | ±6             | 19,796  | NexusFlow              | CC-BY-NC-4.0            |
+|    141 | 133◄─►146                  | mistral-large-2411                                | 1304            | ±4             | 28,455  | Mistral                | MRL                     |
+|    142 | 134◄─►146                  | mistral-small-3.1-24b-instruct-2503               | 1303            | ±4             | 34,150  | Mistral                | Apache 2.0              |
+|    143 | 128◄─►151                  | gemma-3-4b-it                                     | 1302            | ±9             | 4,195   | Google                 | Gemma                   |
+|    144 | 136◄─►146                  | qwen2.5-72b-instruct                              | 1301            | ±4             | 39,632  | Alibaba                | Qwen                    |
+|    145 | 136◄─►154                  | Nvidiallama-3.1-nemotron-70b-instruct             | 1297            | ±8             | 7,216   | Nvidia                 | Llama 3.1               |
+|    146 | 136◄─►155                  | Tencenthunyuan-large-vision                       | 1294            | ±9             | 5,602   | Tencent                | Proprietary             |
+|    147 | 144◄─►154                  | MetaMeta-Llama-3.1-70B-Instruct                   | 1293            | ±4             | 56,003  | Meta                   | Llama 3.1 Community     |
+|    148 | 144◄─►159                  | jamba-1.5-large                                   | 1288            | ±7             | 8,730   | AI21 Labs              | Jamba Open              |
+|    149 | 145◄─►157                  | amazon-nova-pro-v1.0                              | 1288            | ±4             | 25,218  | Amazon                 | Proprietary             |
+|    150 | 144◄─►159                  | reka-core-20240904                                | 1287            | ±7             | 7,380   | Reka AI                | Proprietary             |
+|    151 | 145◄─►157                  | gemma-2-27b-it                                    | 1287            | ±3             | 76,195  | Google                 | Gemma license           |
+|    152 | 145◄─►159                  | gpt-4-0314                                        | 1286            | ±5             | 54,754  | OpenAI                 | Proprietary             |
+|    153 | 144◄─►165                  | Nvidiallama-3.1-nemotron-51b-instruct             | 1286            | ±10            | 3,777   | Nvidia                 | Llama 3.1               |
+|    154 | 144◄─►165                  | llama-3.1-tulu-3-70b                              | 1286            | ±10            | 2,881   | Ai2                    | Llama 3.1               |
+|    155 | 147◄─►160                  | gemini-1.5-flash-001                              | 1284            | ±4             | 63,418  | Google                 | Proprietary             |
+|    156 | 148◄─►164                  | Anthropicclaude-3-sonnet-20240229                 | 1281            | ±4             | 110,173 | Anthropic              | Proprietary             |
+|    157 | 148◄─►165                  | gemma-2-9b-it-simpo                               | 1278            | ±7             | 10,108  | Princeton              | MIT                     |
+|    158 | 150◄─►165                  | Nvidianemotron-4-340b-instruct                    | 1278            | ±5             | 19,913  | Nvidia                 | NVIDIA Open Model       |
+|    159 | 150◄─►166                  | Coherecommand-r-plus-08-2024                      | 1277            | ±6             | 9,931   | Cohere                 | CC-BY-NC-4.0            |
+|    160 | 154◄─►165                  | Metallama-3-70b-instruct                          | 1276            | ±3             | 158,908 | Meta                   | Llama 3 Community       |
+|    161 | 154◄─►166                  | gpt-4-0613                                        | 1275            | ±4             | 89,612  | OpenAI                 | Proprietary             |
+|    162 | 154◄─►168                  | mistral-small-24b-instruct-2501                   | 1273            | ±6             | 14,830  | Mistral                | Apache 2.0              |
+|    163 | 152◄─►170                  | glm-4-0520                                        | 1273            | ±7             | 9,857   | Zhipu AI               | Proprietary             |
+|    164 | 154◄─►170                  | reka-flash-20240904                               | 1272            | ±7             | 7,583   | Reka AI                | Proprietary             |
+|    165 | 155◄─►174                  | qwen2.5-coder-32b-instruct                        | 1269            | ±8             | 5,452   | Alibaba                | Apache 2.0              |
+|    166 | 160◄─►174                  | Coherec4ai-aya-expanse-32b                        | 1266            | ±5             | 27,362  | Cohere                 | CC-BY-NC-4.0            |
+|    167 | 162◄─►174                  | gemma-2-9b-it                                     | 1264            | ±4             | 54,954  | Google                 | Gemma license           |
+|    168 | 162◄─►176                  | deepseek-coder-v2                                 | 1263            | ±6             | 15,242  | DeepSeek AI            | DeepSeek License        |
+|    169 | 163◄─►175                  | Coherecommand-r-plus                              | 1263            | ±4             | 78,401  | Cohere                 | CC-BY-NC-4.0            |
+|    170 | 163◄─►176                  | qwen2-72b-instruct                                | 1262            | ±5             | 37,688  | Alibaba                | Qianwen LICENSE         |
+|    171 | 165◄─►176                  | Anthropicclaude-3-haiku-20240307                  | 1261            | ±4             | 118,626 | Anthropic              | Proprietary             |
+|    172 | 165◄─►176                  | amazon-nova-lite-v1.0                             | 1259            | ±5             | 19,760  | Amazon                 | Proprietary             |
+|    173 | 165◄─►176                  | gemini-1.5-flash-8b-001                           | 1259            | ±4             | 35,914  | Google                 | Proprietary             |
+|    174 | 168◄─►176                  | Azurephi-4                                        | 1255            | ±4             | 24,354  | Microsoft              | MIT                     |
+|    175 | 165◄─►182                  | olmo-2-0325-32b-instruct                          | 1252            | ±11            | 3,377   | Allen AI               | Apache-2.0              |
+|    176 | 169◄─►180                  | Coherecommand-r-08-2024                           | 1251            | ±7             | 10,229  | Cohere                 | CC-BY-NC-4.0            |
+|    177 | 175◄─►185                  | mistral-large-2402                                | 1242            | ±5             | 63,404  | Mistral                | Proprietary             |
+|    178 | 175◄─►185                  | amazon-nova-micro-v1.0                            | 1241            | ±5             | 19,774  | Amazon                 | Proprietary             |
+|    179 | 175◄─►190                  | jamba-1.5-mini                                    | 1239            | ±7             | 8,918   | AI21 Labs              | Jamba Open              |
+|    180 | 175◄─►193                  | ministral-8b-2410                                 | 1236            | ±9             | 4,833   | Mistral                | MRL                     |
+|    181 | 177◄─►192                  | qwen1.5-110b-chat                                 | 1234            | ±5             | 26,679  | Alibaba                | Qianwen LICENSE         |
+|    182 | 176◄─►193                  | gemini-pro-dev-api                                | 1234            | ±7             | 18,454  | Google                 | Proprietary             |
+|    183 | 177◄─►193                  | qwen1.5-72b-chat                                  | 1234            | ±5             | 39,689  | Alibaba                | Qianwen LICENSE         |
+|    184 | 177◄─►194                  | reka-flash-21b-20240226-online                    | 1233            | ±7             | 15,606  | Reka AI                | Proprietary             |
+|    185 | 176◄─►195                  | Tencenthunyuan-standard-256k                      | 1233            | ±12            | 2,761   | Tencent                | Proprietary             |
+|    186 | 179◄─►194                  | mixtral-8x22b-instruct-v0.1                       | 1230            | ±4             | 52,214  | Mistral                | Apache 2.0              |
+|    187 | 179◄─►195                  | Coherecommand-r                                   | 1228            | ±5             | 54,710  | Cohere                 | CC-BY-NC-4.0            |
+|    188 | 179◄─►195                  | reka-flash-21b-20240226                           | 1227            | ±6             | 25,026  | Reka AI                | Proprietary             |
+|    189 | 181◄─►196                  | gpt-3.5-turbo-0125                                | 1224            | ±5             | 67,214  | OpenAI                 | Proprietary             |
+|    190 | 180◄─►197                  | mistral-medium                                    | 1224            | ±5             | 34,893  | Mistral                | Proprietary             |
+|    191 | 180◄─►197                  | Coherec4ai-aya-expanse-8b                         | 1223            | ±7             | 9,922   | Cohere                 | CC-BY-NC-4.0            |
+|    192 | 184◄─►196                  | Metallama-3-8b-instruct                           | 1223            | ±4             | 106,055 | Meta                   | Llama 3 Community       |
+|    193 | 179◄─►200                  | gemini-pro                                        | 1222            | ±12            | 6,418   | Google                 | Proprietary             |
+|    194 | 179◄─►199                  | llama-3.1-tulu-3-8b                               | 1221            | ±11            | 2,943   | Ai2                    | Llama 3.1               |
+|    195 | 186◄─►201                  | HuggingFacezephyr-orpo-141b-A35b-v0.1             | 1214            | ±11            | 4,712   | HuggingFace            | Apache 2.0              |
+|    196 | 191◄─►200                  | 01.AIyi-1.5-34b-chat                              | 1213            | ±5             | 24,417  | 01 AI                  | Apache-2.0              |
+|    197 | 193◄─►200                  | Metallama-3.1-8b-instruct                         | 1211            | ±4             | 50,234  | Meta                   | Llama 3.1 Community     |
+|    198 | 189◄─►206                  | granite-3.1-8b-instruct                           | 1210            | ±11            | 3,142   | IBM                    | Apache 2.0              |
+|    199 | 193◄─►205                  | qwen1.5-32b-chat                                  | 1205            | ±6             | 22,068  | Alibaba                | Qianwen LICENSE         |
+|    200 | 194◄─►208                  | gpt-3.5-turbo-1106                                | 1202            | ±9             | 16,760  | OpenAI                 | Proprietary             |
+|    201 | 197◄─►208                  | Azurephi-3-medium-4k-instruct                     | 1198            | ±5             | 25,301  | Microsoft              | MIT                     |
+|    202 | 198◄─►208                  | mixtral-8x7b-instruct-v0.1                        | 1198            | ±4             | 74,303  | Mistral                | Apache 2.0              |
+|    203 | 198◄─►208                  | gemma-2-2b-it                                     | 1198            | ±4             | 46,901  | Google                 | Gemma license           |
+|    204 | 198◄─►213                  | dbrx-instruct-preview                             | 1196            | ±6             | 32,760  | Databricks             | DBRX LICENSE            |
+|    205 | 198◄─►216                  | qwen1.5-14b-chat                                  | 1193            | ±7             | 18,066  | Alibaba                | Qianwen LICENSE         |
+|    206 | 199◄─►217                  | InternLMinternlm2_5-20b-chat                      | 1192            | ±7             | 10,038  | InternLM               | Other                   |
+|    207 | 200◄─►223                  | Azurewizardlm-70b                                 | 1185            | ±9             | 8,270   | Microsoft              | Llama 2 Community       |
+|    208 | 200◄─►224                  | deepseek-llm-67b-chat                             | 1184            | ±11            | 4,950   | DeepSeek AI            | DeepSeek License        |
+|    209 | 204◄─►221                  | 01.AIyi-34b-chat                                  | 1184            | ±7             | 15,624  | 01 AI                  | Yi License              |
+|    210 | 204◄─►223                  | granite-3.0-8b-instruct                           | 1183            | ±9             | 6,727   | IBM                    | Apache 2.0              |
+|    211 | 204◄─►223                  | OpenChatopenchat-3.5-0106                         | 1183            | ±8             | 12,712  | OpenChat               | Apache-2.0              |
+|    212 | 204◄─►224                  | OpenChatopenchat-3.5                              | 1182            | ±10            | 8,009   | OpenChat               | Apache-2.0              |
+|    213 | 204◄─►226                  | granite-3.1-2b-instruct                           | 1181            | ±11            | 3,235   | IBM                    | Apache 2.0              |
+|    214 | 205◄─►223                  | Snowflakesnowflake-arctic-instruct                | 1180            | ±6             | 33,272  | Snowflake              | Apache 2.0              |
+|    215 | 206◄─►224                  | gemma-1.1-7b-it                                   | 1180            | ±6             | 24,327  | Google                 | Gemma license           |
+|    216 | 205◄─►226                  | tulu-2-dpo-70b                                    | 1179            | ±10            | 6,579   | AllenAI/UW             | AI2 ImpACT Low-risk     |
+|    217 | 205◄─►228                  | openhermes-2.5-mistral-7b                         | 1176            | ±10            | 5,026   | NousResearch           | Apache-2.0              |
+|    218 | 207◄─►227                  | vicuna-33b                                        | 1174            | ±6             | 22,613  | LMSYS                  | Non-commercial          |
+|    219 | 207◄─►228                  | starling-lm-7b-beta                               | 1173            | ±7             | 16,190  | Nexusflow              | Apache-2.0              |
+|    220 | 207◄─►228                  | Azurephi-3-small-8k-instruct                      | 1172            | ±6             | 17,983  | Microsoft              | MIT                     |
+|    221 | 208◄─►228                  | Metallama-2-70b-chat                              | 1172            | ±5             | 38,767  | Meta                   | Llama 2 Community       |
+|    222 | 208◄─►231                  | starling-lm-7b-alpha                              | 1168            | ±8             | 10,267  | UC Berkeley            | CC-BY-NC-4.0            |
+|    223 | 212◄─►232                  | Metallama-3.2-3b-instruct                         | 1167            | ±8             | 8,043   | Meta                   | Llama 3.2               |
+|    224 | 207◄─►233                  | nous-hermes-2-mixtral-8x7b-dpo                    | 1166            | ±12            | 3,792   | NousResearch           | Apache-2.0              |
+|    225 | 215◄─►238                  | qwq-32b-preview                                   | 1159            | ±11            | 3,256   | Alibaba                | Apache 2.0              |
+|    226 | 215◄─►240                  | Nvidiallama2-70b-steerlm-chat                     | 1157            | ±13            | 3,605   | Nvidia                 | Llama 2 Community       |
+|    227 | 222◄─►238                  | granite-3.0-2b-instruct                           | 1157            | ±8             | 6,922   | IBM                    | Apache 2.0              |
+|    228 | 218◄─►242                  | solar-10.7b-instruct-v1.0                         | 1154            | ±13            | 4,187   | Upstage AI             | CC-BY-NC-4.0            |
+|    229 | 217◄─►246                  | dolphin-2.2.1-mistral-7b                          | 1152            | ±15            | 1,685   | Cognitive Computations | Apache-2.0              |
+|    230 | 222◄─►244                  | mpt-30b-chat                                      | 1151            | ±12            | 2,606   | MosaicML               | CC-BY-NC-SA-4.0         |
+|    231 | 224◄─►241                  | mistral-7b-instruct-v0.2                          | 1151            | ±7             | 19,603  | Mistral                | Apache-2.0              |
+|    232 | 223◄─►242                  | Azurewizardlm-13b                                 | 1150            | ±9             | 7,122   | Microsoft              | Llama 2 Community       |
+|    233 | 222◄─►249                  | falcon-180b-chat                                  | 1147            | ±17            | 1,312   | TII                    | Falcon-180B TII License |
+|    234 | 225◄─►247                  | qwen1.5-7b-chat                                   | 1144            | ±10            | 4,782   | Alibaba                | Qianwen LICENSE         |
+|    235 | 225◄─►246                  | Azurephi-3-mini-4k-instruct-june-2024             | 1143            | ±6             | 12,415  | Microsoft              | MIT                     |
+|    236 | 225◄─►246                  | Metallama-2-13b-chat                              | 1143            | ±7             | 19,357  | Meta                   | Llama 2 Community       |
+|    237 | 225◄─►247                  | vicuna-13b                                        | 1142            | ±7             | 19,539  | LMSYS                  | Llama 2 Community       |
+|    238 | 225◄─►249                  | qwen-14b-chat                                     | 1139            | ±11            | 5,004   | Alibaba                | Qianwen LICENSE         |
+|    239 | 227◄─►249                  | Metacodellama-34b-instruct                        | 1137            | ±9             | 7,417   | Meta                   | Llama 2 Community       |
+|    240 | 227◄─►249                  | palm-2                                            | 1137            | ±9             | 8,634   | Google                 | Proprietary             |
+|    241 | 229◄─►249                  | gemma-7b-it                                       | 1135            | ±9             | 9,034   | Google                 | Gemma license           |
+|    242 | 231◄─►250                  | HuggingFacezephyr-7b-beta                         | 1132            | ±9             | 11,220  | HuggingFace            | MIT                     |
+|    243 | 232◄─►250                  | Azurephi-3-mini-128k-instruct                     | 1131            | ±7             | 21,024  | Microsoft              | MIT                     |
+|    244 | 235◄─►250                  | Azurephi-3-mini-4k-instruct                       | 1129            | ±6             | 20,539  | Microsoft              | MIT                     |
+|    245 | 228◄─►254                  | HuggingFacezephyr-7b-alpha                        | 1129            | ±16            | 1,803   | HuggingFace            | MIT                     |
+|    246 | 231◄─►253                  | guanaco-33b                                       | 1128            | ±12            | 2,955   | UW                     | Non-commercial          |
+|    247 | 237◄─►254                  | stripedhyena-nous-7b                              | 1121            | ±11            | 5,214   | Together AI            | Apache 2.0              |
+|    248 | 232◄─►255                  | Metacodellama-70b-instruct                        | 1119            | ±18            | 1,151   | Meta                   | Llama 2 Community       |
+|    249 | 237◄─►254                  | HuggingFacesmollm2-1.7b-instruct                  | 1118            | ±14            | 2,244   | HuggingFace            | Apache 2.0              |
+|    250 | 242◄─►254                  | vicuna-7b                                         | 1115            | ±9             | 6,972   | LMSYS                  | Llama 2 Community       |
+|    251 | 245◄─►254                  | gemma-1.1-2b-it                                   | 1114            | ±8             | 11,035  | Google                 | Gemma license           |
+|    252 | 245◄─►254                  | Metallama-3.2-1b-instruct                         | 1113            | ±8             | 8,166   | Meta                   | Llama 3.2               |
+|    253 | 245◄─►255                  | mistral-7b-instruct                               | 1111            | ±9             | 9,042   | Mistral                | Apache 2.0              |
+|    254 | 246◄─►255                  | Metallama-2-7b-chat                               | 1109            | ±7             | 14,272  | Meta                   | Llama 2 Community       |
+|    255 | 255◄─►257                  | qwen1.5-4b-chat                                   | 1091            | ±9             | 7,662   | Alibaba                | Qianwen LICENSE         |
+|    256 | 252◄─►259                  | gemma-2b-it                                       | 1091            | ±12            | 4,817   | Google                 | Gemma license           |
+|    257 | 255◄─►262                  | olmo-7b-instruct                                  | 1075            | ±11            | 6,412   | Allen AI               | Apache-2.0              |
+|    258 | 256◄─►262                  | koala-13b                                         | 1070            | ±10            | 6,998   | UC Berkeley            | Non-commercial          |
+|    259 | 257◄─►262                  | alpaca-13b                                        | 1066            | ±11            | 5,828   | Stanford               | Non-commercial          |
+|    260 | 256◄─►263                  | gpt4all-13b-snoozy                                | 1065            | ±15            | 1,773   | Nomic AI               | Non-commercial          |
+|    261 | 257◄─►263                  | mpt-7b-chat                                       | 1062            | ±12            | 3,977   | MosaicML               | CC-BY-NC-SA-4.0         |
+|    262 | 257◄─►263                  | chatglm3-6b                                       | 1057            | ±12            | 4,692   | Tsinghua               | Apache-2.0              |
+|    263 | 260◄─►265                  | RWKVRWKV-4-Raven-14B                              | 1042            | ±11            | 4,898   | RWKV                   | Apache 2.0              |
+|    264 | 263◄─►265                  | chatglm2-6b                                       | 1026            | ±14            | 2,683   | Tsinghua               | Apache-2.0              |
+|    265 | 263◄─►265                  | oasst-pythia-12b                                  | 1022            | ±11            | 6,343   | OpenAssistant          | Apache 2.0              |
+|    266 | 266◄─►269                  | chatglm-6b                                        | 996             | ±13            | 4,968   | Tsinghua               | Non-commercial          |
+|    267 | 266◄─►269                  | fastchat-t5-3b                                    | 991             | ±12            | 4,270   | LMSYS                  | Apache 2.0              |
+|    268 | 266◄─►270                  | dolly-v2-12b                                      | 978             | ±14            | 3,471   | Databricks             | MIT                     |
+|    269 | 266◄─►270                  | Metallama-13b                                     | 970             | ±16            | 2,441   | Meta                   | Non-commercial          |
+|    270 | 268◄─►270                  | Stabilitystablelm-tuned-alpha-7b                  | 952             | ±13            | 3,325   | Stability AI           | CC-BY-NC-SA-4.0         |
 
 ## 说明
 
