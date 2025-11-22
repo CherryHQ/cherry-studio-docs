@@ -1,4 +1,4 @@
-# LLM Arena 排行榜 (即時更新)
+# LLM Arena 排行榜（即時更新）
 
 
 {% hint style="warning" %}
@@ -8,9 +8,9 @@
 
 
 
-這是一個基於 Chatbot Arena (lmarena.ai) 資料的排行榜，透過自動化流程生成。
+這是一個基於 Chatbot Arena (lmarena.ai) 數據的排行榜，通過自動化流程生成。
 
-> **資料更新時間**: 2025-11-21 08:08:41 UTC / 2025-11-21 16:08:41 CST (北京時間)
+> **數據更新時間**: 2025-11-22 08:07:09 UTC / 2025-11-22 16:07:09 CST（北京時間）
 
 ## 排行榜
 
@@ -99,7 +99,7 @@
 |     81 | 76◄─►100                   | mistral-small-2506                                | 1354            | ±5             | 18,337  | Mistral                | Apache 2.0              |
 |     82 | 78◄─►101                   | gpt-oss-120b                                      | 1352            | ±4             | 31,298  | OpenAI                 | Apache 2.0              |
 |     83 | 78◄─►101                   | gemini-2.0-flash-lite-preview-02-05               | 1352            | ±4             | 25,215  | Google                 | Proprietary             |
-|     84 | 79◄─►100                   | Coherecommand-a-03-2025                           | 1352            | ±3             | 57,871  | Cohere                 | CC-BY-NC-4.0            |
+|     84 | 79◄─►101                   | Coherecommand-a-03-2025                           | 1352            | ±3             | 57,871  | Cohere                 | CC-BY-NC-4.0            |
 |     85 | 76◄─►103                   | glm-4.5v                                          | 1352            | ±8             | 4,984   | Z.ai                   | MIT                     |
 |     86 | 79◄─►101                   | gemini-1.5-pro-002                                | 1351            | ±3             | 56,012  | Google                 | Proprietary             |
 |     87 | 76◄─►105                   | amazon-nova-experimental-chat-10-20               | 1349Preliminary | ±10            | 3,952   | Amazon                 | Proprietary             |
@@ -113,7 +113,7 @@
 |     95 | 79◄─►113                   | amazon-nova-experimental-chat-10-09               | 1345            | ±11            | 2,895   | Amazon                 | Proprietary             |
 |     96 | 79◄─►112                   | qwen3-32b                                         | 1344            | ±9             | 3,943   | Alibaba                | Apache 2.0              |
 |     97 | 80◄─►112                   | qwen-plus-0125                                    | 1344            | ±8             | 5,861   | Alibaba                | Proprietary             |
-|     98 | 81◄─►112                   | glm-4-plus-0111                                   | 1343            | ±8             | 5,806   | 智譜                  | Proprietary             |
+|     98 | 81◄─►112                   | glm-4-plus-0111                                   | 1343            | ±8             | 5,806   | Zhipu                  | Proprietary             |
 |     99 | 86◄─►104                   | Anthropicclaude-3-5-sonnet-20240620               | 1343            | ±3             | 82,864  | Anthropic              | Proprietary             |
 |    100 | 81◄─►115                   | gemma-3-12b-it                                    | 1340            | ±9             | 3,866   | Google                 | Gemma                   |
 |    101 | 81◄─►117                   | Nvidianvidia-llama-3.3-nemotron-super-49b-v1.5    | 1340            | ±10            | 3,496   | Nvidia                 | Nvidia Open             |
@@ -142,7 +142,7 @@
 |    124 | 111◄─►139                  | ring-flash-2.0                                    | 1319            | ±7             | 7,286   | Ant Group              | MIT                     |
 |    125 | 111◄─►139                  | Stepfunstep-1o-turbo-202506                       | 1319            | ±7             | 9,671   | StepFun                | Proprietary             |
 |    126 | 114◄─►138                  | Metallama-3.3-70b-instruct                        | 1319            | ±3             | 56,021  | Meta                   | Llama-3.3               |
-|    127 | 114◄─►139                  | glm-4-plus                                        | 1318            | ±5             | 26,342  | 智譜 AI                | Proprietary             |
+|    127 | 114◄─►139                  | glm-4-plus                                        | 1318            | ±5             | 26,342  | Zhipu AI               | Proprietary             |
 |    128 | 112◄─►139                  | gemma-3n-e4b-it                                   | 1318            | ±5             | 23,483  | Google                 | Gemma                   |
 |    129 | 111◄─►140                  | gpt-oss-20b                                       | 1318            | ±6             | 10,858  | OpenAI                 | Apache 2.0              |
 |    130 | 114◄─►140                  | qwen-max-0919                                     | 1317            | ±6             | 16,598  | Alibaba                | Qwen                    |
@@ -180,7 +180,7 @@
 |    162 | 152◄─►169                  | Coherecommand-r-plus-08-2024                      | 1277            | ±6             | 9,931   | Cohere                 | CC-BY-NC-4.0            |
 |    163 | 157◄─►168                  | Metallama-3-70b-instruct                          | 1276            | ±3             | 158,908 | Meta                   | Llama 3 Community       |
 |    164 | 157◄─►168                  | gpt-4-0613                                        | 1276            | ±4             | 89,612  | OpenAI                 | Proprietary             |
-|    165 | 155◄─►173                  | glm-4-0520                                        | 1274            | ±7             | 9,857   | 智譜 AI                | Proprietary             |
+|    165 | 155◄─►173                  | glm-4-0520                                        | 1274            | ±7             | 9,857   | Zhipu AI               | Proprietary             |
 |    166 | 157◄─►172                  | mistral-small-24b-instruct-2501                   | 1273            | ±6             | 14,830  | Mistral                | Apache 2.0              |
 |    167 | 157◄─►173                  | reka-flash-20240904                               | 1273            | ±7             | 7,583   | Reka AI                | Proprietary             |
 |    168 | 158◄─►177                  | qwen2.5-coder-32b-instruct                        | 1269            | ±8             | 5,452   | Alibaba                | Apache 2.0              |
@@ -189,7 +189,7 @@
 |    171 | 165◄─►179                  | deepseek-coder-v2                                 | 1264            | ±6             | 15,242  | DeepSeek AI            | DeepSeek License        |
 |    172 | 165◄─►178                  | Coherecommand-r-plus                              | 1264            | ±4             | 78,401  | Cohere                 | CC-BY-NC-4.0            |
 |    173 | 166◄─►179                  | qwen2-72b-instruct                                | 1262            | ±5             | 37,688  | Alibaba                | Qianwen LICENSE         |
-|    174 | 168◄─►179                  | Anthropicclaude-3-haiku-20240307                  | 1262            | ±4             | 118,626 | Anthropic              | Proprietary             |
+|    174 | 168◄─►178                  | Anthropicclaude-3-haiku-20240307                  | 1262            | ±4             | 118,626 | Anthropic              | Proprietary             |
 |    175 | 168◄─►179                  | amazon-nova-lite-v1.0                             | 1259            | ±5             | 19,760  | Amazon                 | Proprietary             |
 |    176 | 168◄─►179                  | gemini-1.5-flash-8b-001                           | 1259            | ±4             | 35,914  | Google                 | Proprietary             |
 |    177 | 171◄─►179                  | Azurephi-4                                        | 1255            | ±4             | 24,354  | Microsoft              | MIT                     |
@@ -217,7 +217,7 @@
 |    199 | 195◄─►203                  | 01.AIyi-1.5-34b-chat                              | 1214            | ±5             | 24,417  | 01 AI                  | Apache-2.0              |
 |    200 | 196◄─►203                  | Metallama-3.1-8b-instruct                         | 1211            | ±4             | 50,234  | Meta                   | Llama 3.1 Community     |
 |    201 | 192◄─►209                  | granite-3.1-8b-instruct                           | 1210            | ±11            | 3,142   | IBM                    | Apache 2.0              |
-|    202 | 196◄─►208                  | qwen1.5-32b-chat                                  | 1206            | ±6             | 22,068  | Alibaba                | Qianwen LICENSE         |
+|    202 | 196◄─►211                  | qwen1.5-32b-chat                                  | 1206            | ±6             | 22,068  | Alibaba                | Qianwen LICENSE         |
 |    203 | 196◄─►211                  | gpt-3.5-turbo-1106                                | 1203            | ±9             | 16,760  | OpenAI                 | Proprietary             |
 |    204 | 200◄─►211                  | Azurephi-3-medium-4k-instruct                     | 1199            | ±5             | 25,301  | Microsoft              | MIT                     |
 |    205 | 201◄─►211                  | mixtral-8x7b-instruct-v0.1                        | 1199            | ±4             | 74,303  | Mistral                | Apache 2.0              |
@@ -227,7 +227,7 @@
 |    209 | 202◄─►220                  | InternLMinternlm2_5-20b-chat                      | 1193            | ±7             | 10,038  | InternLM               | Other                   |
 |    210 | 203◄─►226                  | Azurewizardlm-70b                                 | 1186            | ±9             | 8,270   | Microsoft              | Llama 2 Community       |
 |    211 | 203◄─►227                  | deepseek-llm-67b-chat                             | 1185            | ±11            | 4,950   | DeepSeek AI            | DeepSeek License        |
-|    212 | 207◄─►224                  | 01.AIyi-34b-chat                                  | 1185            | ±7             | 15,624  | 01 AI                  | Yi License              |
+|    212 | 207◄─►226                  | 01.AIyi-34b-chat                                  | 1185            | ±7             | 15,624  | 01 AI                  | Yi License              |
 |    213 | 207◄─►226                  | OpenChatopenchat-3.5-0106                         | 1184            | ±8             | 12,712  | OpenChat               | Apache-2.0              |
 |    214 | 207◄─►226                  | granite-3.0-8b-instruct                           | 1184            | ±9             | 6,727   | IBM                    | Apache 2.0              |
 |    215 | 207◄─►227                  | OpenChatopenchat-3.5                              | 1183            | ±10            | 8,009   | OpenChat               | Apache-2.0              |
@@ -235,8 +235,8 @@
 |    217 | 207◄─►229                  | granite-3.1-2b-instruct                           | 1181            | ±11            | 3,235   | IBM                    | Apache 2.0              |
 |    218 | 209◄─►227                  | gemma-1.1-7b-it                                   | 1180            | ±6             | 24,327  | Google                 | Gemma license           |
 |    219 | 208◄─►229                  | tulu-2-dpo-70b                                    | 1180            | ±10            | 6,579   | AllenAI/UW             | AI2 ImpACT Low-risk     |
-|    220 | 208◄─►231                  | openhermes-2.5-mistral-7b                         | 1177            | ±10            | 5,026   | NousResearch           | Apache-2.0              |
-|    221 | 210◄─►230                  | vicuna-33b                                        | 1175            | ±6             | 22,613  | LMSYS                  | Non-commercial          |
+|    220 | 210◄─►230                  | openhermes-2.5-mistral-7b                         | 1177            | ±10            | 5,026   | NousResearch           | Apache-2.0              |
+|    221 | 210◄─►231                  | vicuna-33b                                        | 1175            | ±6             | 22,613  | LMSYS                  | Non-commercial          |
 |    222 | 210◄─►231                  | starling-lm-7b-beta                               | 1174            | ±7             | 16,190  | Nexusflow              | Apache-2.0              |
 |    223 | 210◄─►231                  | Azurephi-3-small-8k-instruct                      | 1173            | ±6             | 17,983  | Microsoft              | MIT                     |
 |    224 | 211◄─►231                  | Metallama-2-70b-chat                              | 1173            | ±5             | 38,767  | Meta                   | Llama 2 Community       |
@@ -270,13 +270,13 @@
 |    252 | 240◄─►257                  | HuggingFacesmollm2-1.7b-instruct                  | 1119            | ±14            | 2,244   | HuggingFace            | Apache 2.0              |
 |    253 | 245◄─►257                  | vicuna-7b                                         | 1117            | ±9             | 6,972   | LMSYS                  | Llama 2 Community       |
 |    254 | 248◄─►257                  | gemma-1.1-2b-it                                   | 1114            | ±8             | 11,035  | Google                 | Gemma license           |
-|    255 | 248◄─►258                  | Metallama-3.2-1b-instruct                         | 1113            | ±8             | 8,166   | Meta                   | Llama 3.2               |
+|    255 | 248◄─►257                  | Metallama-3.2-1b-instruct                         | 1113            | ±8             | 8,166   | Meta                   | Llama 3.2               |
 |    256 | 248◄─►258                  | mistral-7b-instruct                               | 1112            | ±9             | 9,042   | Mistral                | Apache 2.0              |
 |    257 | 249◄─►258                  | Metallama-2-7b-chat                               | 1110            | ±7             | 14,272  | Meta                   | Llama 2 Community       |
 |    258 | 258◄─►260                  | qwen1.5-4b-chat                                   | 1092            | ±9             | 7,662   | Alibaba                | Qianwen LICENSE         |
 |    259 | 255◄─►262                  | gemma-2b-it                                       | 1092            | ±12            | 4,817   | Google                 | Gemma license           |
-|    260 | 258◄─►265                  | olmo-7b-instruct                                  | 1076            | ±11            | 6,412   | Allen AI               | Apache-2.0              |
-|    261 | 259◄─►265                  | koala-13b                                         | 1073            | ±10            | 6,998   | UC Berkeley            | Non-commercial          |
+|    260 | 259◄─►265                  | olmo-7b-instruct                                  | 1076            | ±11            | 6,412   | Allen AI               | Apache-2.0              |
+|    261 | 259◄─►266                  | koala-13b                                         | 1073            | ±10            | 6,998   | UC Berkeley            | Non-commercial          |
 |    262 | 260◄─►265                  | alpaca-13b                                        | 1068            | ±11            | 5,828   | Stanford               | Non-commercial          |
 |    263 | 259◄─►266                  | gpt4all-13b-snoozy                                | 1068            | ±15            | 1,773   | Nomic AI               | Non-commercial          |
 |    264 | 260◄─►266                  | mpt-7b-chat                                       | 1064            | ±12            | 3,977   | MosaicML               | CC-BY-NC-SA-4.0         |
@@ -300,10 +300,10 @@
 - **組織/公司**：提供該模型的組織或公司。
 - **許可證**：模型的許可協議類型，例如專有 (Proprietary)、Apache 2.0、MIT 等。
 
-## 資料來源與更新頻率
+## 數據來源與更新頻率
 
-本排行榜資料由自動化腳本直接從 <sup>1</sup> [<sup>2</sup>](https://lmarena.ai/) 官方網站獲取。此排行榜由 GitHub Actions 每天自動更新。
+本排行榜數據由自動化腳本直接從 <sup>1</sup> [<sup>2</sup>](https://lmarena.ai/) 官方網站獲取。此排行榜由 GitHub Actions 每天自動更新。
 
 ## 免責聲明
 
-本報告僅供參考。排行榜資料是動態變化的，並基於特定時間段內用戶在 Chatbot Arena 上的偏好投票。資料的完整性和準確性取決於上游資料來源。不同模型可能採用不同的許可協議，使用時請務必參考模型提供商的官方說明。
+本報告僅供參考。排行榜數據是動態變化的，並基於特定時間段內用戶在 Chatbot Arena 上的偏好投票。數據的完整性和準確性取決於上游數據源。不同模型可能採用不同的許可協議，使用時請務必參考模型提供商的官方說明。
