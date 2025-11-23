@@ -2,7 +2,7 @@
 
 这是一个基于 Chatbot Arena (lmarena.ai) 数据的排行榜，通过自动化流程生成。
 
-> **数据更新时间**: 2025-11-22 08:07:09 UTC / 2025-11-22 16:07:09 CST (北京时间)
+> **数据更新时间**: 2025-11-23 08:07:03 UTC / 2025-11-23 16:07:03 CST (北京时间)
 
 ## 排行榜
 
@@ -23,7 +23,7 @@
 |     13 | 7◄─►23                     | gpt-5.1                                           | 1435            | ±9             | 5,135   | OpenAI                 | Proprietary             |
 |     14 | 9◄─►17                     | o3-2025-04-16                                     | 1434            | ±4             | 61,635  | OpenAI                 | Proprietary             |
 |     15 | 9◄─►19                     | qwen3-max-preview                                 | 1433            | ±5             | 28,154  | Alibaba                | Proprietary             |
-|     16 | 9◄─►30                     | MoonshotAIkimi-k2-thinking                        | 1429            | ±7             | 8,126   | Moonshot               | Modified MIT            |
+|     16 | 9◄─►30                     | MoonshotAIkimi-k2-thinking-turbo                  | 1429            | ±7             | 8,126   | Moonshot               | Modified MIT            |
 |     17 | 13◄─►32                    | glm-4.6                                           | 1426            | ±5             | 16,268  | Z.ai                   | MIT                     |
 |     18 | 14◄─►31                    | gpt-5-chat                                        | 1425            | ±4             | 32,171  | OpenAI                 | Proprietary             |
 |     19 | 14◄─►33                    | qwen3-max-2025-09-23                              | 1423            | ±6             | 9,266   | Alibaba                | Proprietary             |
