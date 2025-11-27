@@ -33,14 +33,12 @@ icon: cloud-check
 > Cherry Studio 会自动拼接剩余的路径（<mark style="background-color:green;">/v1/chat/completions</mark>），未按要求填写可能会导致无法正常使用。
 
 {% hint style="info" %}
-说明：大多数服务商的大语言模型路由是统一的，一般情况下不需要进行如下操作。如果服务商的API路径是v2、v3/chat/completions或者其他版本时,可在地址栏手动输入对应版本以"`/`"结尾；当服务商请求路由不是常规的<mark style="background-color:green;">/v1/chat/completions</mark>时使用服务商提供的完整的地址，并以 `#`结尾。
+说明：大多数服务商的大语言模型路由是统一的，一般情况下不需要进行如下操作。如果服务商请求路由不是常规的 <mark style="background-color:green;">/v1/chat/completions</mark> 时，可在 API 地址栏手动输入 **完整的API地址**，并以 `#`结尾。
 
 即：
 
-* API地址使用 `/` 结尾时只拼接"<mark style="background-color:green;">chat/completions</mark>"
 * API地址使用 `#` 结尾时不执行拼接操作，只使用填入的地址。
-
-<img src="../../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt="" data-size="original"><img src="../../../.gitbook/assets/image (15).png" alt="" data-size="original">
+<img src="../../../.gitbook/assets/image (15).png" alt="" data-size="original">
 {% endhint %}
 
 ### 添加模型
