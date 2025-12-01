@@ -28,7 +28,7 @@ icon: globe
 这种情况下，开启联网后，直接就可以使用联网服务了，非常简单。
 
 {% hint style="warning" %}
-可以通过问答界面上方，模型名字后面是否带有小地图标记，迅速判断该模型是否支持联网。
+可以通过问答界面上方，模型名字后面是否带有小地球标记，迅速判断该模型是否支持联网。
 {% endhint %}
 
 <figure><img src="../.gitbook/assets/image (100).png" alt=""><figcaption></figcaption></figure>
