@@ -2,7 +2,7 @@
 
 这是一个基于 Chatbot Arena (lmarena.ai) 数据的排行榜，通过自动化流程生成。
 
-> **数据更新时间**: 2025-12-01 08:09:12 UTC / 2025-12-01 16:09:12 CST (北京时间)
+> **数据更新时间**: 2025-12-02 08:08:49 UTC / 2025-12-02 16:08:49 CST (北京时间)
 
 ## 排行榜
 
@@ -128,7 +128,7 @@
 |    118 | 97◄─►142                   | Nvidiallama-3.3-nemotron-49b-super-v1             | 1325 | ±12            | 2,243   | Nvidia                 | Nvidia                  |
 |    119 | 101◄─►141                  | Tencenthunyuan-large-2025-02-10                   | 1324 | ±10            | 3,760   | Tencent                | Proprietary             |
 |    120 | 113◄─►135                  | gpt-4-turbo-2024-04-09                            | 1324 | ±4             | 98,965  | OpenAI                 | Proprietary             |
-|    121 | 114◄─►136                  | Anthropicclaude-3-5-haiku-20241022                | 1323 | ±3             | 71,404  | Anthropic              | Propretary              |
+|    121 | 114◄─►136                  | Anthropicclaude-3-5-haiku-20241022                | 1323 | ±3             | 71,404  | Anthropic              | Proprietary             |
 |    122 | 113◄─►137                  | Metallama-4-scout-17b-16e-instruct                | 1323 | ±5             | 31,208  | Meta                   | Llama                   |
 |    123 | 114◄─►137                  | Anthropicclaude-3-opus-20240229                   | 1322 | ±3             | 196,368 | Anthropic              | Proprietary             |
 |    124 | 110◄─►142                  | deepseek-v2.5-1210                                | 1322 | ±8             | 6,877   | DeepSeek               | DeepSeek                |
