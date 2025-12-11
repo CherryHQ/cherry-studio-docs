@@ -22,9 +22,9 @@
 帮我安装一个 filesystem mcp server
 ```
 
-<figure><img src="../../.gitbook/assets/mcp-auto-install_shot1.png" alt=""><figcaption><p>输入指令安装 MCP 服务器</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/mcp-auto-install_shot1 (1).png" alt=""><figcaption><p>输入指令安装 MCP 服务器</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/mcp-auto-install_shot2.png" alt=""><figcaption><p>MCP 服务器配置界面</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/mcp-auto-install_shot2 (1).png" alt=""><figcaption><p>MCP 服务器配置界面</p></figcaption></figure>
 
 系统会自动识别你的需求，并通过 `@mcpmarket/mcp-auto-install` 完成安装。这个工具支持多种类型的 MCP 服务器，包括但不限于：
 

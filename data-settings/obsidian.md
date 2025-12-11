@@ -19,9 +19,9 @@ Cherry Studio 支持与 Obsidian 联动，将完整对话或单条对话导出�
 
 ### 第一步：配置 Cherry Studio
 
-打开 Cherry Studio &#x7684;_&#x8BBE;置_ →  _数据设置_ → _Obsidian 配&#x7F6E;_&#x83DC;单，下拉框中会自动出现在本机打开过的 Obsidian 库名，选择你的目标 Obsidian 库：
+打开 Cherry Studio &#x7684;_&#x8BBE;置_ → _数据设置_ → _Obsidian 配&#x7F6E;_&#x83DC;单，下拉框中会自动出现在本机打开过的 Obsidian 库名，选择你的目标 Obsidian 库：
 
-<figure><img src="../.gitbook/assets/image (142).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (142) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### 第二步：导出对话
 
@@ -29,7 +29,7 @@ Cherry Studio 支持与 Obsidian 联动，将完整对话或单条对话导出�
 
 回到 Cherry Studio 的对话界面，右键点击对话，选&#x62E9;_&#x5BFC;出_，点&#x51FB;_&#x5BFC;出到 Obsidian_：
 
-<figure><img src="../.gitbook/assets/image (143).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (143) (1).png" alt=""><figcaption></figcaption></figure>
 
 此时会弹出一个窗口，用于调整这条导出到 Obsidian 中的对话笔记的 **Properties（属性）、**&#x6240;放置在Obsidian的**文件夹位置**以及导出到 Obsidian 中的**处理方式：**
 
@@ -49,11 +49,11 @@ Cherry Studio 支持与 Obsidian 联动，将完整对话或单条对话导出�
 只有第一种方式会附带 Properties（属性），后两种方式不会附带 Properties（属性）。
 {% endhint %}
 
-<figure><img src="../.gitbook/assets/image (144).png" alt=""><figcaption><p>配置笔记属性</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (144) (1).png" alt=""><figcaption><p>配置笔记属性</p></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/image (145).png" alt=""><figcaption><p>选择路径</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (145) (1).png" alt=""><figcaption><p>选择路径</p></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/image (146).png" alt=""><figcaption><p>选择处理方式</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (146) (1).png" alt=""><figcaption><p>选择处理方式</p></figcaption></figure>
 
 选择完所有选项后，点击确定即可导出完整对话到对应的 Obsidian 库的对应文件夹。
 
@@ -61,7 +61,7 @@ Cherry Studio 支持与 Obsidian 联动，将完整对话或单条对话导出�
 
 对于单条对话的导出，则点击对话下方&#x7684;_&#x4E09;条杠菜单_，选&#x62E9;_&#x5BFC;出_，点&#x51FB;_&#x5BFC;出到 Obsidian_：
 
-<figure><img src="../.gitbook/assets/image (147).png" alt=""><figcaption><p>导出单条对话</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (147) (1).png" alt=""><figcaption><p>导出单条对话</p></figcaption></figure>
 
 之后也会弹出与导出完整对话时一样的窗口，要求你配置**笔记属性**与**笔记的处理方式**，一样按照[上方的教程](obsidian.md#dao-chu-wan-zheng-dui-hua)完成即可。
 
@@ -69,11 +69,9 @@ Cherry Studio 支持与 Obsidian 联动，将完整对话或单条对话导出�
 
 🎉 到这里，恭喜你完成了 Cherry Studio 联动 Obsidian 的所有配置，并完整地将导出流程走了一遍，enjoy yourselves!
 
-<figure><img src="../.gitbook/assets/image (140).png" alt=""><figcaption><p>导出到 Obsidian</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (140) (1).png" alt=""><figcaption><p>导出到 Obsidian</p></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/image (139).png" alt=""><figcaption><p>查看导出结果</p></figcaption></figure>
-
-
+<figure><img src="../.gitbook/assets/image (139) (1).png" alt=""><figcaption><p>查看导出结果</p></figcaption></figure>
 
 ***
 
@@ -83,15 +81,15 @@ Cherry Studio 支持与 Obsidian 联动，将完整对话或单条对话导出�
 
 打开 Obsidian 库，创建一个用于保存导出对话的`文件夹`（图中以 Cherry Studio 文件夹为例）：
 
-<figure><img src="../.gitbook/assets/image (127).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (127) (1).png" alt=""><figcaption></figcaption></figure>
 
 注意记住左下角框出来的文字，这里是你的`保管库`名。
 
 ### 第二步：配置 Cherry Studio
 
-在 Cherry Studio &#x7684;_&#x8BBE;置_ →  _数据设置_ → _Obsidian 配&#x7F6E;_&#x83DC;单中，输入在[第一步](obsidian.md#di-yi-bu)中获取到的`保管库`名与`文件夹`名：
+在 Cherry Studio &#x7684;_&#x8BBE;置_ → _数据设置_ → _Obsidian 配&#x7F6E;_&#x83DC;单中，输入在[第一步](obsidian.md#di-yi-bu)中获取到的`保管库`名与`文件夹`名：
 
-<figure><img src="../.gitbook/assets/image (129).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (129) (1).png" alt=""><figcaption></figcaption></figure>
 
 `全局标签`处是可选的，可设定所有对话导出后在 Obsidian 中的标签，按需填写。
 
@@ -101,7 +99,7 @@ Cherry Studio 支持与 Obsidian 联动，将完整对话或单条对话导出�
 
 回到 Cherry Studio 的对话界面，右键点击对话，选&#x62E9;_&#x5BFC;出_，点&#x51FB;_&#x5BFC;出到 Obsidian_。
 
-<figure><img src="../.gitbook/assets/image (138).png" alt=""><figcaption><p>导出完整对话</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (138) (1).png" alt=""><figcaption><p>导出完整对话</p></figcaption></figure>
 
 此时会弹出一个窗口，用于调整这条导出到 Obsidian 中的对话笔记的 **Properties（属性）**，以及导出到 Obsidian 中的**处理方式**。导出到 Obsidian 中的**处理方式**有以下三种可选：
 
@@ -109,7 +107,7 @@ Cherry Studio 支持与 Obsidian 联动，将完整对话或单条对话导出�
 * **前置**：在已存在同名笔记的情况下，将选中的对话内容导出添加到该笔记的开头
 * **追加**：在已存在同名笔记的情况下，将选中的对话内容导出添加到该笔记的末尾
 
-<figure><img src="../.gitbook/assets/image (137).png" alt=""><figcaption><p>配置笔记属性</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (137) (1).png" alt=""><figcaption><p>配置笔记属性</p></figcaption></figure>
 
 {% hint style="info" %}
 只有第一种方式会附带 Properties（属性），后两种方式不会附带 Properties（属性）。
@@ -119,7 +117,7 @@ Cherry Studio 支持与 Obsidian 联动，将完整对话或单条对话导出�
 
 对于单条对话的导出，则点击对话下方&#x7684;_&#x4E09;条杠菜单_，选&#x62E9;_&#x5BFC;出_，点&#x51FB;_&#x5BFC;出到 Obsidian_。
 
-<figure><img src="../.gitbook/assets/image (141).png" alt=""><figcaption><p>导出单条对话</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (141) (1).png" alt=""><figcaption><p>导出单条对话</p></figcaption></figure>
 
 之后也会弹出与导出完整对话时一样的窗口，要求你配置**笔记属性**与**笔记的处理方式**，一样按照[上方的教程](obsidian.md#dao-chu-wan-zheng-dui-hua)完成即可。
 
@@ -127,6 +125,6 @@ Cherry Studio 支持与 Obsidian 联动，将完整对话或单条对话导出�
 
 🎉 到这里，恭喜你完成了 Cherry Studio 联动 Obsidian 的所有配置，并完整地将导出流程走了一遍，enjoy yourselves!
 
-<figure><img src="../.gitbook/assets/image (140).png" alt=""><figcaption><p>导出到 Obsidian</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (140) (1).png" alt=""><figcaption><p>导出到 Obsidian</p></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/image (139).png" alt=""><figcaption><p>查看导出结果</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (139) (1).png" alt=""><figcaption><p>查看导出结果</p></figcaption></figure>

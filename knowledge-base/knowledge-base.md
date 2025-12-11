@@ -13,7 +13,7 @@ icon: book-open-cover
 1. 在模型管理服务中查找模型，可以点击“嵌入模型”快速筛选；
 2. 找到需要的模型，添加到我的模型。
 
-<figure><img src="../.gitbook/assets/image.webp" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1).webp" alt=""><figcaption></figcaption></figure>
 
 ## 创建知识库
 
@@ -31,13 +31,11 @@ icon: book-open-cover
 2. 选择文件：选择支持的文件格式，如 pdf，docx，pptx，xlsx，txt，md，mdx 等，并打开；
 3. 向量化：系统会自动进行向量化处理，当显示完成时（绿色 ✓），代表向量化已完成。
 
-<figure><img src="../.gitbook/assets/image-3.webp" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image-3 (1).webp" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/image-4.webp" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image-4 (1).webp" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/image-5.webp" alt=""><figcaption></figcaption></figure>
-
-
+<figure><img src="../.gitbook/assets/image-5 (1).webp" alt=""><figcaption></figcaption></figure>
 
 ## 添加多种来源的数据
 
@@ -69,9 +67,9 @@ CherryStudio 支持多种添加数据的方式：
 3. 呈现搜索的结果；
 4. 并显示该条结果的匹配分数。
 
-<figure><img src="../.gitbook/assets/image-7.webp" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image-7 (1).webp" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/image-8.webp" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image-8 (1).webp" alt=""><figcaption></figcaption></figure>
 
 ## 对话中引用知识库生成回复
 
@@ -79,6 +77,6 @@ CherryStudio 支持多种添加数据的方式：
 2. 输入并发送问题，模型即返回通过检索结果生成的答案 ；
 3. 同时，引用的数据来源会附在答案下方，可快捷查看源文件。
 
-<figure><img src="../.gitbook/assets/image-9.webp" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image-9 (1).webp" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/image-10.webp" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image-10 (1).webp" alt=""><figcaption></figcaption></figure>

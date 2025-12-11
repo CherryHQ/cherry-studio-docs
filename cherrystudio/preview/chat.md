@@ -16,9 +16,9 @@ icon: message
 
 `助手` 是 `话题` 的父集，单个助手下可以创建多个话题（即对话），所有 `话题` 共用 `助手` 的参数设置和预设词（prompt）等模型设置。
 
-<figure><img src="../../.gitbook/assets/image (4) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (4) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (5) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (5) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## 对话框内按钮
 
@@ -34,7 +34,7 @@ icon: message
 
 ![](<../../.gitbook/assets/对话界面/MCP 服务器.png>) `MCP 服务器` 开启 MCP 服务器功能，详见 [MCP 使用教程](../../advanced-basic/mcp/)。
 
-![](../../.gitbook/assets/对话界面/生成图片.png) `生成图片` 只有选择的 **对话模型** 支持生图时才会显示。（非对话生图模型请前往 [绘图](./drawing.md)）
+![](../../.gitbook/assets/对话界面/生成图片.png) `生成图片` 只有选择的 **对话模型** 支持生图时才会显示。（非对话生图模型请前往 [绘图](drawing.md)）
 
 ![](../../.gitbook/assets/对话界面/选择模型.png) `选择模型` 对于接下来的对话，切换成指定的模型，保留上下文。
 
@@ -56,7 +56,7 @@ icon: message
 
 ## 对话设置
 
-<figure><img src="../../.gitbook/assets/image (7) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (7) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### 模型设置
 
@@ -74,11 +74,11 @@ icon: message
 
 {% tabs %}
 {% tab title="打开时" %}
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (2).png" alt=""><figcaption></figcaption></figure>
 {% endtab %}
 
 {% tab title="关闭时" %}
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 {% endtab %}
 {% endtabs %}
 
@@ -92,11 +92,11 @@ icon: message
 
 {% tabs %}
 {% tab title="关闭时" %}
-<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 {% endtab %}
 
 {% tab title="打开时" %}
-<figure><img src="../../.gitbook/assets/image (3) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 {% endtab %}
 {% endtabs %}
 
@@ -145,11 +145,11 @@ icon: message
 
 {% tabs %}
 {% tab title="关闭时" %}
-<figure><img src="../../.gitbook/assets/image (4) (1).png" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (4) (1) (2).png" alt="" width="563"><figcaption></figcaption></figure>
 {% endtab %}
 
 {% tab title="打开时" %}
-<figure><img src="../../.gitbook/assets/image (7) (1).png" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (6) (1) (2).png" alt="" width="563"><figcaption></figcaption></figure>
 {% endtab %}
 {% endtabs %}
 
@@ -175,7 +175,7 @@ icon: message
 助手设置作用于该助手下的所有话题。
 {% endhint %}
 
-<figure><img src="../../.gitbook/assets/image (6) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (6) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 #### 提示词设置
 

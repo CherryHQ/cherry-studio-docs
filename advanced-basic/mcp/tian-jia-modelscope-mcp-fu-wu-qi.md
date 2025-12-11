@@ -10,47 +10,47 @@
 
 点击设置中的 MCP 服务器设置，选 `同步服务器`
 
-<figure><img src="../../.gitbook/assets/image (2) (6).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (6) (2).png" alt=""><figcaption></figcaption></figure>
 
 ### 发现 MCP 服务：
 
 选择 ModelScope，并浏览发现 MCP 服务
 
-<figure><img src="../../.gitbook/assets/image (1) (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (4) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### 查看 MCP 服务器详情
 
 注册登录 ModelScope，并查看 MCP 服务详情；
 
-<figure><img src="../../.gitbook/assets/image (2) (6) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (6) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### 连接服务器
 
 在 MCP 服务详情中，选择连接服务；
 
-<figure><img src="../../.gitbook/assets/image (3) (6).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3) (6) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### 申请并复制粘贴 api 令牌
 
 点击 Cherry Studio 中的“获取api” 令牌，跳转 ModelScope 官网，复制 api 令牌，并回到 Cherry Studio 中粘贴。
 
-<figure><img src="../../.gitbook/assets/image (4) (6).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (4) (6) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (5) (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (5) (4) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (6) (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (6) (4) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### 成功同步
 
 在 Cherry Studio 的 MCP 服务器列表中，可以看到 ModelScope 连接的 MCP 服务并在对话中调用。
 
-<figure><img src="../../.gitbook/assets/image (7) (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (7) (3) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### 增量更新
 
 在后续 ModelScope 网页新连接的 MCP 服务器，直接点击 `同步服务器` 就可以实现增量的 MCP 服务器添加。
 
-<figure><img src="../../.gitbook/assets/image (148).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (148) (1).png" alt=""><figcaption></figcaption></figure>
 
 通过以上步骤，你已经成功掌握了如何在 Cherry Studio 中便捷地同步 ModelScope 上的 MCP 服务器，整个配置过程不仅大大简化，有效避免了手动配置的繁琐和潜在错误，更让你能够轻松接入 ModelScope 社区提供的海量 MCP 服务器资源。
 

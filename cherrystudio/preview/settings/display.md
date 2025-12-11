@@ -18,11 +18,11 @@ icon: table-columns
 
 {% tabs %}
 {% tab title="左侧（默认）" %}
-<figure><img src="../../../.gitbook/assets/image (10) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (10) (1) (1).png" alt=""><figcaption></figcaption></figure>
 {% endtab %}
 
 {% tab title="右侧" %}
-<figure><img src="../../../.gitbook/assets/image (11).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (11) (1).png" alt=""><figcaption></figcaption></figure>
 {% endtab %}
 {% endtabs %}
 
@@ -32,11 +32,11 @@ icon: table-columns
 
 {% tabs %}
 {% tab title="关闭时（默认）" %}
-<figure><img src="../../../.gitbook/assets/Honeycam 2025-01-04 17-35-43.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Honeycam 2025-01-04 17-35-43 (1).gif" alt=""><figcaption></figcaption></figure>
 {% endtab %}
 
 {% tab title="打开时" %}
-<figure><img src="../../../.gitbook/assets/Honeycam 2025-01-04 17-38-18.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Honeycam 2025-01-04 17-38-18 (1).gif" alt=""><figcaption></figcaption></figure>
 {% endtab %}
 {% endtabs %}
 
@@ -46,11 +46,11 @@ icon: table-columns
 
 {% tabs %}
 {% tab title="关闭时" %}
-<figure><img src="../../../.gitbook/assets/image (14).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (14) (1).png" alt=""><figcaption></figcaption></figure>
 {% endtab %}
 
 {% tab title="打开时" %}
-<figure><img src="../../../.gitbook/assets/image (12).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (12) (1).png" alt=""><figcaption></figcaption></figure>
 {% endtab %}
 {% endtabs %}
 

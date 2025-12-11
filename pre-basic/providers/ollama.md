@@ -49,7 +49,7 @@ Ollama 是一个简化大型语言模型（LLM）部署和使用的工具。它�
 * **进入模型服务：** 在设置页面中，选择“模型服务”选项卡。
 * **添加提供商：** 点击列表中的 Ollama。
 
-<figure><img src="../../.gitbook/assets/image (5) (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (5) (3) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### **3. 配置 Ollama 服务商**
 

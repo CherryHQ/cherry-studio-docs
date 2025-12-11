@@ -15,7 +15,7 @@ Qwen3-8B 是阿里巴巴于 2025 年 4 月发布的通义千问第三代大模�
 
 尽管体积小巧，Qwen3-8B 在推理、代码、数学和 Agent 能力方面表现稳定，性能媲美前代更大的模型，在实际应用中展现出极高的实用性。
 
-<figure><img src="../../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (2) (2).png" alt=""><figcaption></figcaption></figure>
 
 ***
 
@@ -30,10 +30,9 @@ Qwen3-8B 基于 **约 36 万亿 token 的高质量多语言数据**完成预训�
 ✅ 多语言翻译与表达\
 ✅ 工具调用与任务规划
 
-得益于训练体系的全面升级，**Qwen3-8B 的实际表现接近甚至超越 Qwen2.5-14B**，实现显著的参数效率跃迁。\
+得益于训练体系的全面升级，**Qwen3-8B 的实际表现接近甚至超越 Qwen2.5-14B**，实现显著的参数效率跃迁。\\
 
-
-<figure><img src="../../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1) (1) (3).png" alt=""><figcaption></figcaption></figure>
 
 ***
 
@@ -86,7 +85,6 @@ Qwen3-8B 在多个高频应用场景中表现优异：
 
 ***
 
-现在就通过 **硅基流动** 免费体验 Qwen3-8B，开启你的轻量 AI 应用之旅！\
-
+现在就通过 **硅基流动** 免费体验 Qwen3-8B，开启你的轻量 AI 应用之旅！\\
 
 📘 立即使用，让 AI 触手可及！

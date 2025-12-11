@@ -37,8 +37,7 @@ icon: cloud-check
 
 即：
 
-* API地址使用 `#` 结尾时不执行拼接操作，只使用填入的地址。
-<img src="../../../.gitbook/assets/image (15).png" alt="" data-size="original">
+* API地址使用 `#` 结尾时不执行拼接操作，只使用填入的地址。 <img src="../../../.gitbook/assets/image (15) (1).png" alt="" data-size="original">
 {% endhint %}
 
 ### 添加模型

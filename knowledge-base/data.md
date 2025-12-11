@@ -2,11 +2,11 @@
 icon: database
 ---
 
-# 数据存储说明
+# 知识库数据
 
 在 Cherry Studio 知识库中添加的数据全部存储在本地，在添加过程中会复制一份文档放在 Cherry Studio 数据存储目录
 
-<figure><img src="../.gitbook/assets/mermaid-diagram-1739241680067.png" alt=""><figcaption><p>知识库处理流程图</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/mermaid-diagram-1739241680067 (1).png" alt=""><figcaption><p>知识库处理流程图</p></figcaption></figure>
 
 向量数据库：[https://turso.tech/libsql](https://turso.tech/libsql)
 

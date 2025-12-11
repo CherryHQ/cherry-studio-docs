@@ -15,11 +15,11 @@ icon: windows
 
 {% embed url="https://cherry-ai.com/download" %}
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>打开官方网站</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>打开官方网站</p></figcaption></figure>
 
 ## 安装
 
-<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>软件安装界面</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (2).png" alt=""><figcaption><p>软件安装界面</p></figcaption></figure>
 
 ### 软件依赖库
 
@@ -27,5 +27,4 @@ icon: windows
 
 或者手动下载安装：[https://aka.ms/vs/17/release/vc\_redist.x64.exe](https://aka.ms/vs/17/release/vc_redist.x64.exe)
 
-<div data-full-width="true"><figure><img src="../../.gitbook/assets/image (155).png" alt=""><figcaption></figcaption></figure></div>
-
+<div data-full-width="true"><figure><img src="../../.gitbook/assets/image (155) (1).png" alt=""><figcaption></figcaption></figure></div>

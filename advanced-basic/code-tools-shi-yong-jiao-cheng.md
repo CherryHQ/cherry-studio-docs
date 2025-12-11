@@ -15,7 +15,7 @@ Cherry Studio v1.5.7 版本引入了操作简单，强大的 Code Agent 功能�
 
 首先，请确保您的 Cherry Studio 已升级到 **v1.5.7** 或更高版本。您可以前往 [GitHub Releases](https://github.com/CherryHQ/cherry-studio/releases) 或官方网站下载最新版本。
 
-<figure><img src="../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (1) (2).png" alt=""><figcaption></figcaption></figure>
 
 #### 2. 调整导航栏位置
 
@@ -24,19 +24,19 @@ Cherry Studio v1.5.7 版本引入了操作简单，强大的 Code Agent 功能�
 * 操作路径：`设置` -> `显示设置` -> `导航栏设置`
 * 将“导航栏位置”选项设置为 **`顶部`**。
 
-<figure><img src="../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1) (1) (2).png" alt=""><figcaption></figcaption></figure>
 
 #### 3. 新建标签页
 
 点击界面顶部的“+”号图标，新建一个空白标签页。
 
-<figure><img src="../.gitbook/assets/image (2) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (1) (1) (2).png" alt=""><figcaption></figcaption></figure>
 
 #### 4. 打开 Code Agent 功能
 
 在新建的标签页中，点击 `Code`（或 `</>`）图标，进入 Code Agent 配置界面。
 
-<figure><img src="../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (3) (4).png" alt=""><figcaption></figcaption></figure>
 
 #### 5. 选择 CLI 工具
 
@@ -47,39 +47,39 @@ Cherry Studio v1.5.7 版本引入了操作简单，强大的 Code Agent 功能�
 * **Qwen Code**
 * **OpenAI Codex**
 
-<figure><img src="../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (4) (2).png" alt=""><figcaption></figcaption></figure>
 
 #### 6. 选择 Agent 调用的模型
 
 在模型下拉列表中，选择与您所选 CLI 工具兼容的模型。 _（详细的模型兼容性说明，请参考下方的“重要注意事项”）_
 
-<figure><img src="../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (5) (1).png" alt=""><figcaption></figcaption></figure>
 
 #### 7. 指定工作目录
 
 点击“选择目录”按钮，为 Agent 指定一个工作目录。Agent 将拥有访问此目录下所有文件和子目录的权限，以便于它理解项目上下文、读取文件和执行代码。
 
-<figure><img src="../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (6) (3).png" alt=""><figcaption></figcaption></figure>
 
 #### 8. 设置环境变量
 
 * **自动配置**：您在第 6 步（模型）和第 7 步（工作目录）中的选择，会自动生成相应的环境变量。
 * **自定义添加**：如果您的 Agent 或项目需要其他特定的环境变量（例如 `PROXY_URL` 等），可以在此区域自定义添加。
 
-<figure><img src="../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (7) (1).png" alt=""><figcaption></figcaption></figure>
 
 #### 9. 更新选项
 
 * **内置可执行文件**：Cherry Studio 已为您集成了上述所有 Code Agent 的可执行文件，在大多数情况下，您无需联网即可直接使用。
 * **自动更新**：如果您希望 Agent 始终保持最新版本，可以勾选 **`检查更新并安装最新版本`** 的选项。勾选后，每次启动时程序都会联网检查并更新 Agent 工具。
 
-<figure><img src="../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (8) (3).png" alt=""><figcaption></figcaption></figure>
 
 #### 10. 启动 Agent
 
 所有配置完成后，点击 **`启动`** 按钮。 Cherry Studio 会自动调用您系统自带的 Terminal（终端）工具，并在其中加载好所有环境变量，然后运行您选择的 Code Agent。现在您可以在弹出的终端窗口中与 AI Agent 进行交互了。
 
-<figure><img src="../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (9) (1).png" alt=""><figcaption></figcaption></figure>
 
 ***
 

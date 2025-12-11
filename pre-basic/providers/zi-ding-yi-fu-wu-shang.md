@@ -13,7 +13,7 @@ Cherry Studio 不仅集成了主流的 AI 模型服务，还赋予了您强大�
 
 只需简单几步，即可在 Cherry Studio 中添加您的自定义 AI 服务商：
 
-<figure><img src="../../.gitbook/assets/image (2) (5).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (5) (1).png" alt=""><figcaption></figcaption></figure>
 
 1. **打开设置：** 在 Cherry Studio 界面左侧导航栏中，点击“设置”（齿轮图标）。
 2. **进入模型服务：** 在设置页面中，选择“模型服务”选项卡。
@@ -29,7 +29,7 @@ Cherry Studio 不仅集成了主流的 AI 模型服务，还赋予了您强大�
 
 ## 配置自定义 AI 服务商
 
-<figure><img src="../../.gitbook/assets/image (3) (5) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3) (5) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 添加完成后，您需要在列表中找到您刚刚添加的服务商，并进行详细配置：
 
@@ -44,7 +44,7 @@ Cherry Studio 不仅集成了主流的 AI 模型服务，还赋予了您强大�
 
     * 点击“+ 添加”按钮，手动添加此提供商下您想要使用的模型ID。例如 `gpt-3.5-turbo`、`gemini-pro` 等。
 
-    <figure><img src="../../.gitbook/assets/image (4) (5).png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../../.gitbook/assets/image (4) (5) (1).png" alt=""><figcaption></figcaption></figure>
 
     * 如果您不确定具体的模型名称，请参考您的 AI 服务商提供的官方文档。
     * 点击"管理"按钮，可以对已经添加的模型进行编辑或者删除。

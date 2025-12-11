@@ -8,7 +8,7 @@ Cherry Studio 的翻译功能为您提供快速、准确的文本翻译服务，
 
 ### 界面概览
 
-<figure><img src="../../.gitbook/assets/翻译.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/翻译 (2).png" alt=""><figcaption></figcaption></figure>
 
 翻译界面主要由以下几个部分组成：
 

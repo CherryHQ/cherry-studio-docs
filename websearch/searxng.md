@@ -22,49 +22,49 @@ CherryStudio 支持通过 SearXNG 进行网络搜索，SearXNG 是一个可本�
 
 #### 1. 下载安装并配置 [docker](https://www.docker.com/)
 
-<figure><img src="../.gitbook/assets/searxng_config_img_01.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/searxng_config_img_01 (1).png" alt=""><figcaption></figcaption></figure>
 
 安装后选择一个镜像存储路径：
 
-<figure><img src="../.gitbook/assets/searxng_config_img_02.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/searxng_config_img_02 (1).png" alt=""><figcaption></figcaption></figure>
 
 #### 2. 搜索并拉取 SearXNG 镜像
 
 搜索栏输入 **searxng** ：
 
-<figure><img src="../.gitbook/assets/searxng_config_img_03.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/searxng_config_img_03 (1).png" alt=""><figcaption></figcaption></figure>
 
 拉取镜像：
 
-<figure><img src="../.gitbook/assets/searxng_config_img_04.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/searxng_config_img_04 (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/searxng_config_img_05.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/searxng_config_img_05 (1).png" alt=""><figcaption></figcaption></figure>
 
 #### 3. 运行镜像
 
 拉取成功后来到 **images** 页面：
 
-<figure><img src="../.gitbook/assets/searxng_config_img_06.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/searxng_config_img_06 (1).png" alt=""><figcaption></figcaption></figure>
 
 选择拉取的镜像点击运行：
 
-<figure><img src="../.gitbook/assets/searxng_config_img_07.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/searxng_config_img_07 (1).png" alt=""><figcaption></figcaption></figure>
 
 打开设置项进行配置：
 
-<figure><img src="../.gitbook/assets/searxng_config_img_08.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/searxng_config_img_08 (1).png" alt=""><figcaption></figcaption></figure>
 
 以 `8085` 端口为例：
 
-<figure><img src="../.gitbook/assets/searxng_config_img_09.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/searxng_config_img_09 (1).png" alt=""><figcaption></figcaption></figure>
 
 运行成功后点击链接即可打开 SearXNG 的前端界面：
 
-<figure><img src="../.gitbook/assets/searxng_config_img_10.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/searxng_config_img_10 (1).png" alt=""><figcaption></figcaption></figure>
 
 出现这个页面说明部署成功：
 
-<figure><img src="../.gitbook/assets/searxng_config_img_11.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/searxng_config_img_11 (1).png" alt=""><figcaption></figcaption></figure>
 
 ## 服务器部署
 
@@ -255,7 +255,7 @@ echo "example_name:$(openssl passwd -5 'example_password')" > /etc/nginx/conf.d/
 
 这时可以打开一下网页，已经会提示你输入用户名和密码，请输入前面设定的用户名和密码查看能否成功进入 SearXNG 搜索页面，藉此检查配置是否正确。
 
-<figure><img src="../.gitbook/assets/searxng-basic-auth-example.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/searxng-basic-auth-example (1).png" alt=""><figcaption></figcaption></figure>
 
 ## Cherry Studio 相关配置
 
@@ -263,54 +263,54 @@ SearXNG 本地或在服务器部署成功后，接下来是 CherryStudio 的相�
 
 来到网络搜索设置页面，选择 Searxng ：
 
-<figure><img src="../.gitbook/assets/searxng_config_img_12.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/searxng_config_img_12 (1).png" alt=""><figcaption></figcaption></figure>
 
 直接输入本地部署的链接发现验证失败，此时不用担心：
 
-<figure><img src="../.gitbook/assets/searxng_config_img_13.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/searxng_config_img_13 (1).png" alt=""><figcaption></figcaption></figure>
 
 因为直接部署后默认并没有配置 json 返回类型，所以无法获取数据，需要修改配置文件。
 
 回到 Docker，来到 Files 标签页找到镜像中找到带标签的文件夹：
 
-<figure><img src="../.gitbook/assets/searxng_config_img_14.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/searxng_config_img_14 (1).png" alt=""><figcaption></figcaption></figure>
 
 展开后继续往下翻，会发现另一个带标签的文件夹：
 
-<figure><img src="../.gitbook/assets/searxng_config_img_15.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/searxng_config_img_15 (1).png" alt=""><figcaption></figcaption></figure>
 
 继续展开，找到 **settings.yml** 配置文件：
 
-<figure><img src="../.gitbook/assets/searxng_config_img_16.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/searxng_config_img_16 (1).png" alt=""><figcaption></figcaption></figure>
 
 点击打开文件编辑器：
 
-<figure><img src="../.gitbook/assets/searxng_config_img_17.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/searxng_config_img_17 (1).png" alt=""><figcaption></figcaption></figure>
 
 找到 78 行，可以看到类型只有一个 html
 
-<figure><img src="../.gitbook/assets/searxng_config_img_18.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/searxng_config_img_18 (1).png" alt=""><figcaption></figcaption></figure>
 
 添加 json 类型后保存，重新运行镜像
 
-<figure><img src="../.gitbook/assets/searxng_config_img_19.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/searxng_config_img_19 (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/searxng_config_img_20.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/searxng_config_img_20 (1).png" alt=""><figcaption></figcaption></figure>
 
 重新回到 Cherry Studio 进行验证，验证成功：
 
-<figure><img src="../.gitbook/assets/searxng_config_img_21.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/searxng_config_img_21 (1).png" alt=""><figcaption></figcaption></figure>
 
 地址既可以填写本地： [http://localhost](http://localhost) : 端口号\
 也可以填写 docker 地址：[http://host.docker.internal](http://host.docker.internal) : 端口号
 
 如果用户遵循前面的示例在服务器上部署并正确配置了反向代理，已经开启了 json 返回类型。输入地址后进行验证，由于已给反向代理配置了 HTTP 基本认证，此时验证则应返回 401 错误码：
 
-<figure><img src="../.gitbook/assets/searxng-basic-auth-client-setting-failed.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/searxng-basic-auth-client-setting-failed (1).png" alt=""><figcaption></figcaption></figure>
 
 在客户端配置 HTTP 基本认证，输入刚才设置的用户名与密码：
 
-<figure><img src="../.gitbook/assets/searxng-basic-auth-client-setting.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/searxng-basic-auth-client-setting (1).png" alt=""><figcaption></figcaption></figure>
 
 进行验证，应当验证成功。
 
@@ -320,17 +320,17 @@ SearXNG 本地或在服务器部署成功后，接下来是 CherryStudio 的相�
 
 需要注意的是此处首选项并不能影响大模型调用时的配置
 
-<figure><img src="../.gitbook/assets/searxng_config_img_22.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/searxng_config_img_22 (1).png" alt=""><figcaption></figcaption></figure>
 
 如需配置需要大模型调用的搜索引擎，需在配置文件中设置：
 
-<figure><img src="../.gitbook/assets/searxng_config_img_23.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/searxng_config_img_23 (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/searxng_config_img_24.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/searxng_config_img_24 (1).png" alt=""><figcaption></figcaption></figure>
 
 配置语言参考：
 
-<figure><img src="../.gitbook/assets/searxng_config_img_25.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/searxng_config_img_25 (1).png" alt=""><figcaption></figcaption></figure>
 
 若内容太长直接修改不方便，可将其复制到本地 IDE 中，修改后粘贴到配置文件中即可。
 
@@ -340,7 +340,7 @@ SearXNG 本地或在服务器部署成功后，接下来是 CherryStudio 的相�
 
 在配置文件中将返回格式加上 json：
 
-<figure><img src="../.gitbook/assets/searxng_json_format.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/searxng_json_format (1).png" alt=""><figcaption></figcaption></figure>
 
 ### 未正确配置搜索引擎
 
@@ -364,4 +364,4 @@ engines:
 
 searxng 的 limiter 配置阻碍了 API 访问，请尝试将其在设置中设为 false：
 
-<figure><img src="../.gitbook/assets/searxng_limiter.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/searxng_limiter (1).png" alt=""><figcaption></figcaption></figure>

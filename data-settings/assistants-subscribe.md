@@ -6,9 +6,9 @@ icon: rss
 
 通过修改助手订阅的链接，可以快速切换助手库中的助手模版
 
-<figure><img src="../.gitbook/assets/assistants-subscribe.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/assistants-subscribe (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/assistants-subscribe-settings.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/assistants-subscribe-settings (1).png" alt=""><figcaption></figcaption></figure>
 
 访问订阅地址应该返回下面结构的 JSON 数据：
 
@@ -42,5 +42,3 @@ icon: rss
 ```
 
 配置完链接地址后，就可以看到助手模版库中的助手已经是订阅链接里面的数据
-
-参考数据源：[https://raw.githubusercontent.com/CherryHQ/cherry-studio/refs/heads/main/resources/data/agents-en.json](https://raw.githubusercontent.com/CherryHQ/cherry-studio/refs/heads/main/resources/data/agents-en.json)

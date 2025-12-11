@@ -1,4 +1,4 @@
-# 免费体验 | 智谱 GLM-4.5-Air ，轻量高效新选择！
+# 智谱 GLM-4.5-Air
 
 为了让每一位开发者和用户都能轻松体验前沿大模型的能力，**智谱向免费为 Cherry Studio 的用户开放了 GLM-4.5-Air 模型**。作为专为智能体（Agent）应用打造的高效基础模型，GLM-4.5-Air 在性能与成本之间实现了出色平衡，是构建智能应用的理想选择。
 
@@ -13,7 +13,7 @@ GLM-4.5-Air 是智谱最新推出的高性能语言模型，采用先进的**混
 
 通过精简设计，GLM-4.5-Air 实现了更高的推理效率，适合在资源受限环境下部署，同时仍能胜任复杂任务处理。
 
-<figure><img src="../../../.gitbook/assets/benchmark-0.avif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/benchmark-0 (1).avif" alt=""><figcaption></figcaption></figure>
 
 ***
 
@@ -28,7 +28,7 @@ GLM-4.5-Air 与旗舰系列共享一致的训练流程，确保其具备扎实�
 
 这一训练体系为 GLM-4.5-Air 赋予了出色的泛化能力和任务适应性。
 
-<figure><img src="../../../.gitbook/assets/benchmark-top5.avif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/benchmark-top5 (1).avif" alt=""><figcaption></figcaption></figure>
 
 ***
 
@@ -43,7 +43,7 @@ GLM-4.5-Air 针对智能体应用场景进行了深度适配，具备以下实�
 
 该模型可灵活集成至 **Claude Code、Roo Code** 等代码智能体框架，也可作为任意自定义 Agent 的核心引擎使用。
 
-<figure><img src="../../../.gitbook/assets/benchmark-2.avif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/benchmark-2 (1).avif" alt=""><figcaption></figcaption></figure>
 
 ***
 
@@ -73,7 +73,7 @@ GLM-4.5-Air 在性能与成本之间实现了优秀平衡，特别适合实际�
 
 真正实现“高性能、低门槛”的 AI 服务体验。
 
-<figure><img src="../../../.gitbook/assets/benchmark2.avif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/benchmark2 (1).avif" alt=""><figcaption></figcaption></figure>
 
 ***
 
