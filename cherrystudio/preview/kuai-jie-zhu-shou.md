@@ -31,7 +31,7 @@ icon: browsers
 3. **关闭：** 按下 <kbd>ESC</kbd> 键或点击快捷助手窗口外部的任意位置即可关闭。
 
 {% hint style="info" %}
-快捷助手使用的模型为 [全局默认对话模型](settings/default-models.md#mo-ren-zhu-shou-mo-xing)。
+快捷助手使用的模型为 [全局默认对话模型](../../pre-basic/settings/default-models.md#mo-ren-zhu-shou-mo-xing)。
 {% endhint %}
 
 ### 提示与技巧

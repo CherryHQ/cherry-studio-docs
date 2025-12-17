@@ -22,4 +22,4 @@ https://iorate.github.io/ublacklist/subscriptions
 | [uBlacklist subscription compilation](https://github.com/eallion/uBlacklist-subscription-compilation) | https://git.io/ublacklist                                                                            | 中文   |
 | [uBlockOrigin-HUGE-AI-Blocklist](https://github.com/laylavish/uBlockOrigin-HUGE-AI-Blocklist)         | https://raw.githubusercontent.com/laylavish/uBlockOrigin-HUGE-AI-Blocklist/main/list\_uBlacklist.txt | AI生成 |
 
-<figure><img src="../.gitbook/assets/blacklist1 (1).jpg" alt=""><figcaption><p>订阅源配置</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/blacklist1 (1).jpg" alt=""><figcaption><p>订阅源配置</p></figcaption></figure>

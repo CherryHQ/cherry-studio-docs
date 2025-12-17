@@ -28,7 +28,7 @@ icon: message
 
 ![](../../.gitbook/assets/对话界面/上传图片或文档.png) `上传图片或文档` 上传图片需要模型支持，上传文档会自动解析为文字作为上下文提供给模型。
 
-![](../../.gitbook/assets/对话界面/网络搜索.png) `网络搜索` 须在设置中配置网络搜索相关信息，搜索结果作为上下文返回给大模型，详见 [联网模式](../../websearch/)。
+![](../../.gitbook/assets/对话界面/网络搜索.png) `网络搜索` 须在设置中配置网络搜索相关信息，搜索结果作为上下文返回给大模型，详见 [联网模式](../../pre-basic/websearch/)。
 
 ![](../../.gitbook/assets/对话界面/知识库.png) `知识库` 开启知识库，详见 [知识库教程](../../knowledge-base/knowledge-base.md)。
 
@@ -84,7 +84,7 @@ icon: message
 
 #### <mark style="color:blue;">**`使用衬线字体`**</mark>：
 
-字体样式切换，现在你也可以通过 [自定义css](../../personalization-settings/) 来更换字体。
+字体样式切换，现在你也可以通过 [自定义css](../../pre-basic/personalization-settings/) 来更换字体。
 
 #### <mark style="color:blue;">**`代码显示行号`**</mark>：
 
@@ -191,10 +191,10 @@ icon: message
 
 #### <mark style="color:blue;">**`默认模型`**</mark>：
 
-可以为该助手固定一个默认模型，从智能体页面添加时或复制助手时初始模型为该模型。不设置该项初始模型则为全局初始模型(即 [默认助手模型](settings/default-models.md#mo-ren-zhu-shou-mo-xing) )。
+可以为该助手固定一个默认模型，从智能体页面添加时或复制助手时初始模型为该模型。不设置该项初始模型则为全局初始模型(即 [默认助手模型](../../pre-basic/settings/default-models.md#mo-ren-zhu-shou-mo-xing) )。
 
 {% hint style="info" %}
-助手的默认模型有两种，一为 [全局默认对话模型](settings/default-models.md#mo-ren-zhu-shou-mo-xing) ，另一为助手默认模型；助手的默认模型优先级高于全局默认对话模型。当不设置助手默认模型时，助手默认模型=全局默认对话模型。
+助手的默认模型有两种，一为 [全局默认对话模型](../../pre-basic/settings/default-models.md#mo-ren-zhu-shou-mo-xing) ，另一为助手默认模型；助手的默认模型优先级高于全局默认对话模型。当不设置助手默认模型时，助手默认模型=全局默认对话模型。
 {% endhint %}
 
 #### <mark style="color:blue;">**`自动重置模型`**</mark>：

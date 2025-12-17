@@ -6,7 +6,7 @@ icon: file-code
 
 通过自定义 CSS 可以修改软件的外观更加符合自己的喜好，例如这样：
 
-<figure><img src="../.gitbook/assets/telegram-cloud-photo-size-5-6311935435315724879-y (1).jpg" alt=""><figcaption><p>自定义 CSS</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/telegram-cloud-photo-size-5-6311935435315724879-y (1).jpg" alt=""><figcaption><p>自定义 CSS</p></figcaption></figure>
 
 ```css
 :root {

@@ -16,7 +16,7 @@ Cherry Studio 数据存储遵循系统规范，数据会自动放在用户目录
 
 也可以在以下位置查看：
 
-<figure><img src="../.gitbook/assets/image (31) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (31) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## 修改存储位置（供参考）
 

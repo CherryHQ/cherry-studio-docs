@@ -6,9 +6,9 @@ icon: rss
 
 通过修改助手订阅的链接，可以快速切换助手库中的助手模版
 
-<figure><img src="../.gitbook/assets/assistants-subscribe (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/assistants-subscribe (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/assistants-subscribe-settings (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/assistants-subscribe-settings (1).png" alt=""><figcaption></figcaption></figure>
 
 访问订阅地址应该返回下面结构的 JSON 数据：
 

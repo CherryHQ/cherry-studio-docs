@@ -30,7 +30,7 @@
 
 <figure><img src="../../.gitbook/assets/火山引擎_模型ID (1).png" alt="火山引擎模型ID列表示例"><figcaption></figcaption></figure>
 
-* 打开 Cherry Studio 的 [模型服务](../../cherrystudio/preview/settings/providers.md) 设置找到火山引擎
+* 打开 Cherry Studio 的 [模型服务](../settings/providers.md) 设置找到火山引擎
 * 点击添加，将之前获得的 模型ID 复制至 模型ID 文本对话框即可
 
 <figure><img src="../../.gitbook/assets/volc_ark_01 (1).png" alt=""><figcaption></figcaption></figure>
@@ -47,7 +47,7 @@ API地址有两种写法
 {% hint style="info" %}
 两种写法没什么区别，保持默认即可，无需修改。
 
-关于 `/` 和 `#` 结尾的区别参考文档服务商设置的 API 地址部分，[点击前往](../../cherrystudio/preview/settings/providers.md#api-di-zhi)
+关于 `/` 和 `#` 结尾的区别参考文档服务商设置的 API 地址部分，[点击前往](../settings/providers.md#api-di-zhi)
 {% endhint %}
 
 <figure><img src="../../.gitbook/assets/image (3) (2) (1).png" alt=""><figcaption><p>官方文档cURL示例</p></figcaption></figure>

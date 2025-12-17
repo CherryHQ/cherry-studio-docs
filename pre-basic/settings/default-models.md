@@ -20,4 +20,4 @@ icon: robot
 
 ## 快捷助手模型
 
-快捷助手功能使用的模型，详见 [快捷助手](../kuai-jie-zhu-shou.md)
+快捷助手功能使用的模型，详见 [快捷助手](../../cherrystudio/preview/kuai-jie-zhu-shou.md)
