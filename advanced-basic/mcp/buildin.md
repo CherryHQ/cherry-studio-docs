@@ -31,3 +31,12 @@ BRAVE_API_KEY=YOUR_API_KEY
 ### @cherry/filesystem
 
 实现文件系统操作的模型上下文协议（MCP）的 Node.js 服务器。
+
+环境变量：
+
+```
+WORKSPACE_ROOT=目录路径地址 (可选）
+```
+
+如果没有配置环境变量需要在模型对话的时候输入路径地址
+
