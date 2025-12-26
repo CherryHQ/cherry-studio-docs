@@ -2,7 +2,7 @@
 
 这是一个基于 Chatbot Arena (lmarena.ai) 数据的排行榜，通过自动化流程生成。
 
-> **数据更新时间**: 2025-12-25 08:08:22 UTC / 2025-12-25 16:08:22 CST (北京时间)
+> **数据更新时间**: 2025-12-26 08:08:19 UTC / 2025-12-26 16:08:19 CST (北京时间)
 
 ## 排行榜
 
@@ -76,7 +76,7 @@
 |     66 | 58◄─►75       | o4-mini-2025-04-16                                | 1391            | ±4             | 46,697  | OpenAI                 | Proprietary             |
 |     67 | 56◄─►76       | mai-1-preview                                     | 1391            | ±5             | 18,102  | Microsoft AI           | Proprietary             |
 |     68 | 60◄─►77       | Anthropicclaude-sonnet-4-20250514                 | 1389            | ±4             | 41,477  | Anthropic              | Proprietary             |
-|     69 | 53◄─►82       | mimo-v2-flash                                     | 1388Preliminary | ±12            | 2,604   | Xiaomi                 | MIT                     |
+|     69 | 53◄─►82       | mimo-v2-flash (thinking-disabled)                 | 1388            | ±12            | 2,604   | Xiaomi                 | MIT                     |
 |     70 | 60◄─►78       | o1-preview                                        | 1387            | ±5             | 31,505  | OpenAI                 | Proprietary             |
 |     71 | 61◄─►77       | Anthropicclaude-3-7-sonnet-20250219-thinking-32k  | 1387            | ±4             | 39,815  | Anthropic              | Proprietary             |
 |     72 | 60◄─►78       | qwen3-coder-480b-a35b-instruct                    | 1386            | ±5             | 24,124  | Alibaba                | Apache 2.0              |
