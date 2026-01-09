@@ -2,7 +2,7 @@
 
 这是一个基于 Chatbot Arena (lmarena.ai) 数据的排行榜，通过自动化流程生成。
 
-> **数据更新时间**: 2026-01-08 08:08:51 UTC / 2026-01-08 16:08:51 CST (北京时间)
+> **数据更新时间**: 2026-01-09 08:08:50 UTC / 2026-01-09 16:08:50 CST (北京时间)
 
 ## 排行榜
 
@@ -37,22 +37,22 @@
 |     27 | 23◄─►45       | gpt-5-chat                                        | 1425            | ±4             | 32,013  | OpenAI                 | Proprietary             |
 |     28 | 24◄─►45       | glm-4.6                                           | 1425            | ±4             | 29,344  | Z.ai                   | MIT                     |
 |     29 | 21◄─►45       | qwen3-max-2025-09-23                              | 1424            | ±6             | 9,212   | Alibaba                | Proprietary             |
-|     30 | 22◄─►45       | deepseek-v3.2-exp                                 | 1423            | ±7             | 11,915  | DeepSeek               | MIT                     |
+|     30 | 22◄─►45       | deepseek-v3.2-exp                                 | 1423            | ±7             | 11,915  | DeepSeek AI            | MIT                     |
 |     31 | 24◄─►45       | Anthropicclaude-opus-4-20250514-thinking-16k      | 1423            | ±4             | 37,682  | Anthropic              | Proprietary             |
-|     32 | 24◄─►48       | deepseek-v3.2-exp-thinking                        | 1422            | ±7             | 9,181   | DeepSeek               | MIT                     |
+|     32 | 24◄─►48       | deepseek-v3.2-exp-thinking                        | 1422            | ±7             | 9,181   | DeepSeek AI            | MIT                     |
 |     33 | 25◄─►45       | qwen3-235b-a22b-instruct-2507                     | 1421            | ±3             | 56,921  | Alibaba                | Apache 2.0              |
 |     34 | 24◄─►50       | grok-4-fast-chat                                  | 1421            | ±8             | 7,030   | xAI                    | Proprietary             |
-|     35 | 24◄─►49       | deepseek-v3.2                                     | 1420            | ±6             | 13,952  | DeepSeek               | MIT                     |
-|     36 | 24◄─►51       | deepseek-v3.2-thinking                            | 1419            | ±7             | 11,086  | DeepSeek               | MIT                     |
+|     35 | 24◄─►49       | deepseek-v3.2                                     | 1420            | ±6             | 13,952  | DeepSeek AI            | MIT                     |
+|     36 | 24◄─►51       | deepseek-v3.2-thinking                            | 1419            | ±7             | 11,086  | DeepSeek AI            | MIT                     |
 |     37 | 26◄─►50       | deepseek-r1-0528                                  | 1419            | ±6             | 19,152  | DeepSeek               | MIT                     |
 |     38 | 25◄─►51       | MoonshotAIkimi-k2-0905-preview                    | 1418            | ±7             | 11,942  | Moonshot               | Modified MIT            |
 |     39 | 26◄─►52       | deepseek-v3.1                                     | 1417            | ±6             | 15,203  | DeepSeek               | MIT                     |
 |     40 | 27◄─►51       | MoonshotAIkimi-k2-0711-preview                    | 1416            | ±5             | 28,504  | Moonshot               | Modified MIT            |
 |     41 | 26◄─►52       | deepseek-v3.1-thinking                            | 1416            | ±7             | 11,939  | DeepSeek               | MIT                     |
-|     42 | 24◄─►55       | deepseek-v3.1-terminus                            | 1416            | ±10            | 3,733   | DeepSeek               | MIT                     |
+|     42 | 24◄─►55       | deepseek-v3.1-terminus                            | 1416            | ±10            | 3,733   | DeepSeek AI            | MIT                     |
 |     43 | 26◄─►53       | mistral-large-3                                   | 1415            | ±6             | 11,789  | Mistral                | Apache 2.0              |
 |     44 | 27◄─►53       | qwen3-vl-235b-a22b-instruct                       | 1414            | ±7             | 10,249  | Alibaba                | Apache 2.0              |
-|     45 | 26◄─►60       | deepseek-v3.1-terminus-thinking                   | 1414            | ±10            | 3,505   | DeepSeek               | MIT                     |
+|     45 | 26◄─►60       | deepseek-v3.1-terminus-thinking                   | 1414            | ±10            | 3,505   | DeepSeek AI            | MIT                     |
 |     46 | 33◄─►53       | gpt-4.1-2025-04-14                                | 1412            | ±4             | 52,332  | OpenAI                 | Proprietary             |
 |     47 | 33◄─►53       | mistral-medium-2508                               | 1412            | ±4             | 50,801  | Mistral                | Proprietary             |
 |     48 | 33◄─►53       | Anthropicclaude-opus-4-20250514                   | 1412            | ±4             | 45,430  | Anthropic              | Proprietary             |
@@ -198,7 +198,7 @@
 |    188 | 177◄─►197     | qwen2.5-coder-32b-instruct                        | 1269            | ±8             | 5,452   | Alibaba                | Apache 2.0              |
 |    189 | 183◄─►197     | Coherec4ai-aya-expanse-32b                        | 1267            | ±5             | 27,362  | Cohere                 | CC-BY-NC-4.0            |
 |    190 | 185◄─►197     | gemma-2-9b-it                                     | 1265            | ±4             | 54,957  | Google                 | Gemma license           |
-|    191 | 185◄─►199     | deepseek-coder-v2                                 | 1264            | ±6             | 15,242  | DeepSeek               | DeepSeek License        |
+|    191 | 185◄─►199     | deepseek-coder-v2                                 | 1264            | ±6             | 15,242  | DeepSeek AI            | DeepSeek License        |
 |    192 | 186◄─►198     | Coherecommand-r-plus                              | 1263            | ±4             | 78,400  | Cohere                 | CC-BY-NC-4.0            |
 |    193 | 186◄─►199     | qwen2-72b-instruct                                | 1262            | ±5             | 37,688  | Alibaba                | Qianwen LICENSE         |
 |    194 | 188◄─►199     | Anthropicclaude-3-haiku-20240307                  | 1261            | ±4             | 118,626 | Anthropic              | Proprietary             |
@@ -238,7 +238,7 @@
 |    228 | 221◄─►240     | qwen1.5-14b-chat                                  | 1193            | ±7             | 18,066  | Alibaba                | Qianwen LICENSE         |
 |    229 | 222◄─►240     | InternLMinternlm2_5-20b-chat                      | 1192            | ±7             | 10,038  | InternLM               | Other                   |
 |    230 | 223◄─►246     | Azurewizardlm-70b                                 | 1185            | ±9             | 8,270   | Microsoft              | Llama 2 Community       |
-|    231 | 223◄─►247     | deepseek-llm-67b-chat                             | 1184            | ±12            | 4,950   | DeepSeek               | DeepSeek License        |
+|    231 | 223◄─►247     | deepseek-llm-67b-chat                             | 1184            | ±12            | 4,950   | DeepSeek AI            | DeepSeek License        |
 |    232 | 227◄─►244     | 01.AIyi-34b-chat                                  | 1184            | ±7             | 15,624  | 01 AI                  | Yi License              |
 |    233 | 227◄─►246     | granite-3.0-8b-instruct                           | 1184            | ±9             | 6,727   | IBM                    | Apache 2.0              |
 |    234 | 227◄─►246     | OpenChatopenchat-3.5-0106                         | 1183            | ±8             | 12,712  | OpenChat               | Apache-2.0              |
