@@ -2,7 +2,7 @@
 
 这是一个基于 Chatbot Arena (lmarena.ai) 数据的排行榜，通过自动化流程生成。
 
-> **数据更新时间**: 2026-01-26 08:09:24 UTC / 2026-01-26 16:09:24 CST (北京时间)
+> **数据更新时间**: 2026-01-27 08:09:16 UTC / 2026-01-27 16:09:16 CST (北京时间)
 
 ## 排行榜
 
@@ -26,7 +26,7 @@
 |     16 | 8◄─►24        | gpt-5.2                                           | 1445            | ±9             | 5,187   | OpenAI                 | Proprietary             |
 |     17 | 10◄─►22       | gpt-4.5-preview-2025-02-27                        | 1444            | ±6             | 14,549  | OpenAI                 | Proprietary             |
 |     18 | 14◄─►22       | chatgpt-4o-latest-20250326                        | 1442            | ±3             | 74,853  | OpenAI                 | Proprietary             |
-|     19 | 10◄─►25       | glm-4.7                                           | 1441Preliminary | ±7             | 9,556   | Z.ai                   | MIT                     |
+|     19 | 10◄─►25       | glm-4.7                                           | 1441            | ±7             | 9,556   | Z.ai                   | MIT                     |
 |     20 | 14◄─►33       | gpt-5.2-high                                      | 1436            | ±8             | 8,594   | OpenAI                 | Proprietary             |
 |     21 | 16◄─►27       | gpt-5.1                                           | 1435            | ±5             | 26,241  | OpenAI                 | Proprietary             |
 |     22 | 16◄─►28       | gpt-5-high                                        | 1435            | ±5             | 32,688  | OpenAI                 | Proprietary             |
@@ -88,7 +88,7 @@
 |     78 | 67◄─►85       | qwen3-30b-a3b-instruct-2507                       | 1383            | ±5             | 24,110  | Alibaba                | Apache 2.0              |
 |     79 | 65◄─►88       | Tencenthunyuan-turbos-20250416                    | 1382            | ±6             | 11,060  | Tencent                | Proprietary             |
 |     80 | 68◄─►86       | gpt-4.1-mini-2025-04-14                           | 1382            | ±4             | 40,558  | OpenAI                 | Proprietary             |
-|     81 | 65◄─►89       | Minimaxminimax-m2.1-preview                       | 1382Preliminary | ±7             | 8,722   | MiniMax                | MIT                     |
+|     81 | 65◄─►89       | Minimaxminimax-m2.1-preview                       | 1382            | ±7             | 8,722   | MiniMax                | MIT                     |
 |     82 | 74◄─►90       | gemini-2.5-flash-lite-preview-09-2025-no-thinking | 1378            | ±4             | 40,079  | Google                 | Proprietary             |
 |     83 | 65◄─►95       | glm-4.6v                                          | 1378            | ±11            | 2,831   | Z.ai                   | MIT                     |
 |     84 | 77◄─►92       | gemini-2.5-flash-lite-preview-06-17-thinking      | 1375            | ±4             | 33,956  | Google                 | Proprietary             |
