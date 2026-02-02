@@ -11,11 +11,15 @@
 恰好，最近 月之暗面发布并开源了 **Kimi K2.5** 模型。——它是 Kimi 迄今最智能、最全能的开源模型，在 **Agent、代码、图像/视频** 等任务上达到开源 SOTA。
 
 \
-**于是，我产生了一个大胆的想法：** 既然人脑处理不过来这么多杂乱的信息，**能不能让 Kimi K2.5 住在 Cherry Studio 的 Agent 里，帮我把这次“黄金暴跌”扒个底朝天？**&#x4ECA;天这篇，不是枯燥的说明书，而是带你用最新的模型、最硬核的 Agent 技能，给自己配一个 24 小时待命的金融分析团队。文末会提供这个 Agent 的文件夹 `Kimi Agent`。你下载后，配置 3 分钟，就能跑。下面，我把设计逻辑、文件夹结构、组件拆解、运行流程，全扒给你看，如果你盯着 K 线纠结“要不要抄底”，或者被新闻轰炸却找不到真因，那你需要这个。<br>
+**于是，我产生了一个大胆的想法：** 既然人脑处理不过来这么多杂乱的信息，**能不能让 Kimi K2.5 住在 Cherry Studio 的 Agent 里，帮我把这次“黄金暴跌”扒个底朝天？**
 
-<figure><img src="https://mcnnox2fhjfq.feishu.cn/space/api/box/stream/download/asynccode/?code=NGNlY2IxYjE3MzQ2MzMxOTg0NDIyYzY5YmM3YmFjN2RfbkFmU0pJWnpFYjhRV21IQmE0MmNkeUl1Q1pKT3RodzBfVG9rZW46WHlURGI3NWk5b1FKaEt4bnZZdGNEUjM1blhjXzE3NzAwMTUyNzY6MTc3MDAxODg3Nl9WNA" alt=""><figcaption></figcaption></figure>
+今天这篇，不是枯燥的说明书，而是带你用最新的模型、最硬核的 Agent 技能，给自己配一个 24 小时待命的金融分析团队。文末会提供这个 Agent 的文件夹 `Kimi Agent`。
 
-### **为什么这样设计？（3 条硬逻辑，不绕弯）**
+你下载后，配置 3 分钟，就能跑。下面，我把设计逻辑、文件夹结构、组件拆解、运行流程，全扒给你看，如果你盯着 K 线纠结“要不要抄底”，或者被新闻轰炸却找不到真因，那你需要这个。<br>
+
+<figure><img src="https://mcnnox2fhjfq.feishu.cn/space/api/box/stream/download/asynccode/?code=YWQxY2VjNGU3NmU5NzY1NWZmNDU3YzdiZGQyN2EwOTFfQ1JFRm52WVhJRGV2aGhQaGJsbDR2clltWkdoUmRHTGRfVG9rZW46WHlURGI3NWk5b1FKaEt4bnZZdGNEUjM1blhjXzE3NzAwMTYyNzc6MTc3MDAxOTg3N19WNA" alt=""><figcaption></figcaption></figure>
+
+## **为什么这样设计？（3 条硬逻辑，不绕弯）**
 
 1. **数据真实第一，零容忍编造**：金融分析最怕“AI 幻觉”。所以强制每步标注来源 + 时间戳，抓不到就报错（不猜）。公开源（如 Kitco、Investing.com）确保零 API Key 门槛。
 2. **任务拆模块化 + 并行**：Kimi K2.5 的亮点是“Agent 集群”（自主分身、并行 1500 步）。我们用 Cherry Studio 的 Skills + Sub-agents 模拟：数据抓取、新闻搜集、报告生成三路并进，效率翻倍。
@@ -27,7 +31,7 @@
 
 核心是 `.claude/` 目录——Cherry Studio 认这个，能自动加载 Skills 和配置。完整结构来自你的 `06-DIRECTORY_STRUCTURE.md`：
 
-<figure><img src="https://mcnnox2fhjfq.feishu.cn/space/api/box/stream/download/asynccode/?code=MjBiZGMwYzM4MTFmMzlkMzdmNTc1OTk1MWU0M2ViYjZfM0RXbkhKVWoyTTlGeG9NVFNUMXZ3S0wwU3dCZkdkZFFfVG9rZW46S1ZKSWJ6WHFjbzNYZkJ4MnR3QmNiQkNIbjRmXzE3NzAwMTUyNzY6MTc3MDAxODg3Nl9WNA" alt=""><figcaption></figcaption></figure>
+<figure><img src="https://mcnnox2fhjfq.feishu.cn/space/api/box/stream/download/asynccode/?code=MGE5ODBmMWIxYjQ0Yzc2MTU2YzBiMmVkMzFiYzliMWVfelFBa2k5YnV2RXRzQVVGN3A2eW51SlllbU5yN3lZVW9fVG9rZW46S1ZKSWJ6WHFjbzNYZkJ4MnR3QmNiQkNIbjRmXzE3NzAwMTYyNzc6MTc3MDAxOTg3N19WNA" alt=""><figcaption></figcaption></figure>
 
 ```python
 Kimi Agent/                           # 项目根目录
@@ -59,13 +63,15 @@ Kimi Agent/                           # 项目根目录
 
 <br>
 
-### **🔧 核心组件拆解：3 个 Skills + 插件 + Sub-agents**<br>
+### **🔧 核心组件拆解：3 个 Skills + 插件 + Sub-agents**
+
+
 
 #### **🧩 三大核心 Skills 设计详情**
 
 我们来看看这三个“分身”具体是如何设计的，以及为什么要这么设计。
 
-1. **Skill A：`financial-data-fetcher` (数据猎手) —— 拒绝幻觉**
+**Skill A：`financial-data-fetcher` (数据猎手) —— 拒绝幻觉**
 
 * **设计痛点**：通用 LLM 最容易“瞎编”价格。你问金价，它可能编个 2023 年的数据给你。
 * **Skill 逻辑**：
@@ -74,7 +80,9 @@ Kimi Agent/                           # 项目根目录
   * **数据清洗**：它会将爬下来的乱七八糟的 HTML 清洗为干净的 `JSON` 格式（时间戳、开盘、收盘、涨跌幅）。
 * **Kimi K2.5 的作用**：利用其强大的**长文档抽取能力**，从几万行网页代码中精准定位到那个 `$2,xxx.xx` 的数字。
 
-2. **Skill B：`geopolitical-analyst` (地缘逻辑库) —— 拒绝噪音**
+
+
+**Skill B：`geopolitical-analyst` (地缘逻辑库) —— 拒绝噪音**
 
 * **设计痛点**：黄金暴跌原因很多（美元涨？打仗？抛售？）。普通搜索会把营销号的假新闻也吸进来。
 * **Skill 逻辑**：
@@ -86,7 +94,9 @@ Kimi Agent/                           # 项目根目录
     * _结论：_ 暴跌由通胀数据引发。
 * **Kimi K2.5 的作用**：利用其 **Agent 集群（分身）能力**，它能模拟“同时阅读 20 篇新闻”，并过滤掉情绪化噪音，只保留事实。
 
-3. **Skill C：`financial-report-generator` (前端工程师) —— 拒绝平庸**
+
+
+**Skill C：`financial-report-generator` (前端工程师) —— 拒绝平庸**
 
 * **设计痛点**：也是 Cherry Studio 最惊艳的一步。大多数 Agent 只会给你吐一段 Markdown 文字，甚至表格都歪歪扭扭。
 * **Skill 逻辑**：
@@ -95,9 +105,10 @@ Kimi Agent/                           # 项目根目录
   * **视觉集成**：它会将组件 B 的分析结论，以“卡片”或“时间轴”的形式，嵌入到网页布局中。
 * **Kimi K2.5 的作用**：利用其升级的 **Code（编程）** 能力，特别是前端构建能力。Kimi K2.5 生成的代码健壮性极高，几乎不需要人工 Debug 就能在浏览器跑通。
 
+\
 <br>
 
-2. ### **Sub-agent 在这套 Agent 里的定位是什么？🧩**
+#### **Sub-agent 在这套 Agent 里的定位是什么？🧩**
 
 下面把 **Kimi Agent（黄金市场分析 Agent）** 里“Sub-agent（子代理）”这一层讲清楚：它们是什么、为什么要用、怎么协作、你在文件夹里能看到什么。
 
@@ -118,7 +129,7 @@ Kimi Agent/                           # 项目根目录
 \
 **这套配置里有哪些 Sub-agent？分别干什么？✅**&#x8FD9;个包里 Sub-agent 主要是三类（两类是系统预置，一类是自定义）：
 
-#### **A. 系统预置：**`search-specialist`**（搜索与资料整理）**
+**A. 系统预置：`search-specialist`（搜索与资料整理）**
 
 * **name**: `search-specialist`
 * **职责**：高级搜索、筛选结果、跨来源验证、整理引用
@@ -130,7 +141,9 @@ Kimi Agent/                           # 项目根目录
 * 央行、宏观数据发布（如 CPI、利率决议）对应的官方/权威来源页面
 * 同一指标的多源校验（比如 Kitco vs GoldPrice vs Investing）
 
-#### **B. 系统预置：**`business-analyst`**（指标与相关性分析）**
+
+
+**B. 系统预置：`business-analyst`（指标与相关性分析）**
 
 它的工具是 `Read, Write, Bash`，很适合做**结构化分析**：
 
@@ -140,7 +153,9 @@ Kimi Agent/                           # 项目根目录
 
 它的价值在于：**把“看起来像分析”的描述，变成“可计算、有中间过程”的结论。**
 
-#### **C. 自定义 Sub-agent：**`financial-intelligence-agent`**（历史数据/技术指标/预测）**
+
+
+**C. 自定义 Sub-agent：`financial-intelligence-agent`（历史数据/技术指标/预测）**
 
 路径：`.claude/agents/subagent_financial_intelligence.md`它覆盖了更偏“量化流水线”的工作：
 
@@ -152,22 +167,26 @@ Kimi Agent/                           # 项目根目录
 
 <br>
 
-2. ### **Sub-agent 是怎么被“调度”的？（并行策略）⚙️**
+#### **Sub-agent 是怎么被“调度”的？（并行策略）⚙️**
 
 这套系统优先走 **并行**，因为黄金复盘天然是多源信息任务。
 
-#### **Phase 1：并行收集（减少等待）**
+**Phase 1：并行收集（减少等待）**
 
 * `search-specialist`：搜“暴跌当天关键新闻/数据发布时间线”
 * `financial-intelligence-agent`：拉取近一年价格序列 + 计算指标
 * `business-analyst`：计算相关性、整理 ETF/宏观的解释框架
 
-#### **Phase 2：串行计算（有依赖的放后面）**
+
+
+**Phase 2：串行计算（有依赖的放后面）**
 
 * 只有当历史数据落盘后，才计算指标/波动率/支撑阻力等
 * 若发现数据缺口，再回到 `search-specialist` 补来源
 
-#### **Phase 3：汇总交付**
+
+
+**Phase 3：汇总交付**
 
 * 主 Agent把三路结果“对齐时间戳、对齐口径”
 * 再调用报告生成模块输出 HTML（含图表、时间线、引用清单）
@@ -176,7 +195,7 @@ Kimi Agent/                           # 项目根目录
 
 ***
 
-4. ### **Sub-agent 和 Skills 的关系：别搞混了🤝**
+#### **Sub-agent 和 Skills 的关系：别搞混了🤝**
 
 在你的包里，两者是互补的：
 
@@ -188,7 +207,7 @@ Kimi Agent/                           # 项目根目录
 
 简单说： **Sub-agent 负责把工作分出去；Skills 负责让每一步更稳、更可复用。**<br>
 
-5. ### **你在文件夹里怎么确认 Sub-agent “真的生效了”？🔍**
+#### **你在文件夹里怎么确认 Sub-agent “真的生效了”？🔍**
 
 看两个地方就够了：
 
@@ -204,41 +223,41 @@ Kimi Agent/                           # 项目根目录
 
 这样读者一眼就能看出：这不是聊天，这是流水线。<br>
 
-#### **🛠️ 实战教程：三步复刻你的专属 Agent**
+## **🛠️ 实战教程：三步复刻你的专属 Agent**
 
 不用写代码，不用配环境。我打包了一&#x4E2A;**“Kimi Agent”文件夹**，你只要会“复制粘贴”就能用。
 
-**Step 1：模型配置（月之暗面 的 `kimi-K2.5` + Anthropic 端点）**
+### **Step 1：模型配置（月之暗面 的 `kimi-K2.5` + Anthropic 端点）**
 
 这是让 AI 变聪明的核心。
 
 1. 打开 Cherry Studio → **模型服务** → 点击 **月之暗面**
 
-<figure><img src="https://mcnnox2fhjfq.feishu.cn/space/api/box/stream/download/asynccode/?code=MjAxNTk2NmU2Mjc4YTEwMmI5MGNjNzc2MmQ1MDk1NTBfOFdwVExLZ3I3SFBqaUlrUWg4OXE5dWdIS3RpUWlDdEZfVG9rZW46SmY1ZmJQS1ZjbzhVY3F4dEZxSmM0V0dRbnZnXzE3NzAwMTUyNzY6MTc3MDAxODg3Nl9WNA" alt=""><figcaption></figcaption></figure>
+<figure><img src="https://mcnnox2fhjfq.feishu.cn/space/api/box/stream/download/asynccode/?code=ODM3MTNkZDUzMDVlODQ2MWMyZjc1ODA2YmRjZDYzMjlfN29ERG56cTRYWU44bE14T1NWS1lQMzl4dUo3Uzc1MWFfVG9rZW46SmY1ZmJQS1ZjbzhVY3F4dEZxSmM0V0dRbnZnXzE3NzAwMTYyNzc6MTc3MDAxOTg3N19WNA" alt=""><figcaption></figcaption></figure>
 
 2. 跳转 月之暗面 开放平台获取 **API Key**（模型调用需要；数据抓取不需要额外 Key）
 
 **⚠️ 高能预警（必做）：** 在 Cherry Studio 的配置里，把 **“端点类型 (Endpoint Type)”** 必须改为 `Anthropic`。
 
-<figure><img src="https://mcnnox2fhjfq.feishu.cn/space/api/box/stream/download/asynccode/?code=MDA0NGM2ZDRjNDgwZGNjNzQxZjgyOWVkODY2ZmI3OTZfdklZWlZDa3B6VnI4bEFhVjN5REQ2WXA2SDNvemJVcERfVG9rZW46SDc1OGIxZ1N1b1d2TkF4MXZiRWNPcmpnbktoXzE3NzAwMTUyNzY6MTc3MDAxODg3Nl9WNA" alt=""><figcaption></figcaption></figure>
+<figure><img src="https://mcnnox2fhjfq.feishu.cn/space/api/box/stream/download/asynccode/?code=N2QwZGIwZThhNjg5MDIzNDQ4NTUzNzdlOWU2M2Q0N2VfN1A0UzB0R3QyUTFIRDJGV05FN0UxVkVwa0d3MGM0RHRfVG9rZW46SDc1OGIxZ1N1b1d2TkF4MXZiRWNPcmpnbktoXzE3NzAwMTYyNzc6MTc3MDAxOTg3N19WNA" alt=""><figcaption></figcaption></figure>
 
 * _为什么要改？_ 因为 Cherry Studio 的 Agent 协议需要在 Anthropic 端点模式下运行，这样才能让 Kimi K2.5 完美调度上面提到的那些 Skills。
 
 \
 <br>
 
-**Step 2：创建 Agent（直接挂载文件夹 `Kimi Agent`）**
+### **Step 2：创建 Agent（直接挂载文件夹 `Kimi Agent`）**
 
 > 文末我为你准备好了名为 `Kimi Agent` 的文件夹，里面预装了所有技能，你不需要手动重复写 Skills/Sub-agent。
 
-<figure><img src="https://mcnnox2fhjfq.feishu.cn/space/api/box/stream/download/asynccode/?code=Yzc5MGJkZGM3Y2UwZTdiMGRlZTM0ZDY2NTIwZGM4MzdfdnNFZFdNSURUNE5sWGI4ZmY3ekxmSGJwdjVLNDlIV1ZfVG9rZW46UzNvQmIxdFpmb3RkQ1J4dlZzT2NLbUZLbmJnXzE3NzAwMTUyNzY6MTc3MDAxODg3Nl9WNA" alt=""><figcaption></figcaption></figure>
+<figure><img src="https://mcnnox2fhjfq.feishu.cn/space/api/box/stream/download/asynccode/?code=YWEzYzJlOTBmNzJiNDJiYTBlZmNkNmFjOGE0MDQ1MjdfYkY1SEtLckNTNHQxd1RRQXg5VnBRR2ZaRVM2VFM5MVBfVG9rZW46UzNvQmIxdFpmb3RkQ1J4dlZzT2NLbUZLbmJnXzE3NzAwMTYyNzc6MTc3MDAxOTg3N19WNA" alt=""><figcaption></figcaption></figure>
 
 1. Cherry Studio → 助手列表旁点 **+** → **创建 Agent**
 2. 名称：`Gold Market Analysis Agent`(或者你喜欢的名字)。
 3. 模型：选择刚配置的 **月之暗面 /** `kimi-K2.5`
 4. 工作目录：选择你下载并解压的 `Kimi Agent` 文件夹
 
-<figure><img src="https://mcnnox2fhjfq.feishu.cn/space/api/box/stream/download/asynccode/?code=Y2E0NTY1NTYwZTQwY2VjNmY5N2UyOTA4M2EwNzcyM2VfQWtKM0thc0d0RnV1U3RLS0prajhoc3dqTllPSnVoME1fVG9rZW46RVFZWGJ3VkxJb2lKWkh4TThscmN6b1ZPbm5mXzE3NzAwMTUyNzY6MTc3MDAxODg3Nl9WNA" alt=""><figcaption></figcaption></figure>
+<figure><img src="https://mcnnox2fhjfq.feishu.cn/space/api/box/stream/download/asynccode/?code=YTRjNzk5Nzk5Mzc1NzE2MjgwMjYxZDYwNzZjYjQzMzZfbDV2OXhON1lzbEZpNGNKeWtWRDJManJnUkxPbDh6U2lfVG9rZW46RVFZWGJ3VkxJb2lKWkh4TThscmN6b1ZPbm5mXzE3NzAwMTYyNzc6MTc3MDAxOTg3N19WNA" alt=""><figcaption></figcaption></figure>
 
 5. 打开文件夹里的系统提示词（例如 `.claude/prompts/system_prompt_cn.md`），粘贴到 Cherry Studio 的 **系统提示词**框。
 
@@ -250,7 +269,7 @@ Kimi Agent/                           # 项目根目录
 
 1. **权限开启**：在 Agent 配置里开启权限并授权工具（少一个都可能卡住）：
 
-<figure><img src="https://mcnnox2fhjfq.feishu.cn/space/api/box/stream/download/asynccode/?code=YWRiMDYzOGQxNzZiNzliNDI0ZDc1M2E4MzYyZmM2MWRfdHRrajdjdmFsaGI5ekpnek9OM2tDaFVtbkgzTjNxdnRfVG9rZW46UnkzVGJrUjFTb21XQUp4NlpwRmM5dkFybmloXzE3NzAwMTUyNzY6MTc3MDAxODg3Nl9WNA" alt=""><figcaption></figcaption></figure>
+<figure><img src="https://mcnnox2fhjfq.feishu.cn/space/api/box/stream/download/asynccode/?code=YTU4NGU3MGJjZTA1NzY3YjJmMWE1ODZlM2M1ZTY5NzhfUEVXZW91V0Vta2lBUnNubjNEaU9DanVsVkZNOGEyZ0hfVG9rZW46UnkzVGJrUjFTb21XQUp4NlpwRmM5dkFybmloXzE3NzAwMTYyNzc6MTc3MDAxOTg3N19WNA" alt=""><figcaption></figcaption></figure>
 
 * `bash`
 * `fetch`
@@ -264,7 +283,7 @@ Kimi Agent/                           # 项目根目录
 
 添加系统预置 plugin：
 
-<figure><img src="https://mcnnox2fhjfq.feishu.cn/space/api/box/stream/download/asynccode/?code=MTE0NzBiZjI2NTk0YjI5M2E3MjI2ZjNiMDM0YTM0NDZfRTlUMDFQbU5hdmNmanNkaWUwRTVyaDM2Tnd0WnZMZkFfVG9rZW46T3huTWJGQlo3b3NuNmJ4SnNHQWNIME50bjBmXzE3NzAwMTUyNzY6MTc3MDAxODg3Nl9WNA" alt=""><figcaption></figcaption></figure>
+<figure><img src="https://mcnnox2fhjfq.feishu.cn/space/api/box/stream/download/asynccode/?code=M2Q4NzhhNmY4MTFjN2Y4MTk3NWFkM2M5OGE3YzExZGNfNm9CRlBrOTdkdkNEUjZxMnJKamFValdheE53NEF5NVhfVG9rZW46T3huTWJGQlo3b3NuNmJ4SnNHQWNIME50bjBmXzE3NzAwMTYyNzc6MTc3MDAxOTg3N19WNA" alt=""><figcaption></figcaption></figure>
 
 * `business-analyst`
 * `search-specialist`
@@ -275,13 +294,11 @@ Kimi Agent/                           # 项目根目录
 
 <br>
 
-**第三步：见证“魔法”**
+## **见证“魔法”**
 
 一切就绪。打开文件夹里的 `USER_PROMPT_EXAMPLE.md`，里面有一段写好的**深度指令**，直接复制发送给 Agent。**这段指令会让 Agent 做三件事：**
 
-<figure><img src="https://mcnnox2fhjfq.feishu.cn/space/api/box/stream/download/asynccode/?code=M2NmYmVmNmY4YWQzMDRkYzhlYWFjZTQ4MjE4NWI4YmVfVWFEY1YyOFF3RnVTSEcxcjZkY1VOaEw1blUwRDFnUlpfVG9rZW46WnpyU2JhbDZvbzBmT0F4UGFaUWNSR1RCbmVqXzE3NzAwMTUyNzY6MTc3MDAxODg3Nl9WNA" alt=""><figcaption></figcaption></figure>
-
-
+<figure><img src="https://mcnnox2fhjfq.feishu.cn/space/api/box/stream/download/asynccode/?code=MzQ1NzEwZmMyZDJkMzg5NjgyZjQ5ZmRmN2FkNmZhZDZfUEZzcHpEUzFaZlBja2xWZVpOYjhOM0Q3RVJGbUtpSnpfVG9rZW46WnpyU2JhbDZvbzBmT0F4UGFaUWNSR1RCbmVqXzE3NzAwMTYyNzc6MTc3MDAxOTg3N19WNA" alt=""><figcaption></figcaption></figure>
 
 1. **查**：搜索黄金暴跌的具体跌幅和发生时间。
 2. **找**：利用 Kimi K2.5 的联网能力，寻找月之暗面官方关于新模型的特性介绍（不准瞎编）。
@@ -289,11 +306,11 @@ Kimi Agent/                           # 项目根目录
 
 
 
-#### **📊 最终效果呈现：它交出了什么？**
+### **📊 最终效果呈现：它交出了什么？**
 
 点击发送，你会看到 Agent 开始疯狂运转。 日志里会显示：`Thinking...` -> `Searching News...` -> `Calculating...`一段时间后，你不会得到一句废话，而是会收到一份 **HTML 格式的深度研报**：
 
-<figure><img src="https://mcnnox2fhjfq.feishu.cn/space/api/box/stream/download/asynccode/?code=ZjQ1YzkzY2ExNjBkOTFkZDhjMTdhNTc5ZGU2MzhiNzlfN2t2SFZobTdrMFpMWWhVVm9OZkx4dWJGd1ZUVUNjcmhfVG9rZW46TVRFZmJSR2tPb2Z3dE14cUdmZWN4RTJabkRoXzE3NzAwMTUyNzY6MTc3MDAxODg3Nl9WNA" alt=""><figcaption></figcaption></figure>
+<figure><img src="https://mcnnox2fhjfq.feishu.cn/space/api/box/stream/download/asynccode/?code=Y2IzNzQyN2E5MDM2MWQ3MjA2YTc0NTE4Mzc1Y2IxZTFfUEJWV0ZtaTBJSGd3cHhsMUZ5YVVDRFhRUlNVYUhXbm1fVG9rZW46TVRFZmJSR2tPb2Z3dE14cUdmZWN4RTJabkRoXzE3NzAwMTYyNzc6MTc3MDAxOTg3N19WNA" alt=""><figcaption></figcaption></figure>
 
 * 📈 **近一年黄金走势可视化**（图表 + 表格）
 * 🧷 **关键暴涨/暴跌区间标注**（尤其是“暴跌”）
@@ -305,13 +322,15 @@ Kimi Agent/                           # 项目根目录
 \
 **最终，你会得到一个** `gold_analysis.html` **文件，打开即看：**<br>
 
-<figure><img src="../../.gitbook/assets/analysis.jpg" alt=""><figcaption></figcaption></figure>
+<figure><img src="https://mcnnox2fhjfq.feishu.cn/space/api/box/stream/download/asynccode/?code=MDI4NDk2Yzc4N2Q1MTAyMDFlYTkyMmFhNDZiNzUzMTJfVFQ2S1hJdkdjcXNLU2tDUzZzaGpoZ2UzYkpiMFl5ekZfVG9rZW46SzRTbGI5VXRLb0o5d2J4aE9nV2MwMDRsblJlXzE3NzAwMTYyNzc6MTc3MDAxOTg3N19WNA" alt=""><figcaption></figcaption></figure>
 
-#### **💭 写在最后**
+***
 
-这次体验让我最震惊的，不是 Kimi K2.5 变得多强，也不是 Cherry Studio 有多好用。 而是 **“确定性”**。在金融市场，信息就是金钱。 以前我们靠猜，现在我们靠 Agent。
+## **💭 写在最后**
 
-通过把 Kimi K2.5 装进 Cherry Studio，我们其实是给自己雇了一&#x4E2A;**“绝对理性、24小时联网、数据可溯源”**&#x7684;超级员工。
+这次体验让我最震惊的，不是 Kimi K2.5 变得多强，也不是 Cherry Studio 有多好用。 而是 **“确定性”**。在金融市场，信息就是金钱。
+
+&#x20;以前我们靠猜，现在我们靠 Agent。通过把 Kimi K2.5 装进 Cherry Studio，我们其实是给自己雇了一&#x4E2A;**“绝对理性、24小时联网、数据可溯源”**&#x7684;超级员工。
 
 **这次黄金暴跌也许你没躲过，但如果学会了这套 Agent 玩法，至少在认知的维度上，你已经赚回来了。**\
 \
@@ -322,15 +341,18 @@ Kimi Agent/                           # 项目根目录
 * **✈️ 极致旅行家**： 拒绝流水账攻略。让 Agent 根据你的预算实时比价机票酒店，综合天气与当地活动评价，规划一条精确到分钟的行程，甚至生成 PDF 路书。
 
 \
-**Agent 的真正魅力，不在于它能陪你聊多久，而在于它的自主性和交付力**——它能像今天的黄金分析师一样，在你喝咖啡的时候，默默把活儿干完。
+**Agent 的真正魅力，不在于它能陪你聊多久，而在于它的自主性和交付力**——它能像今天的黄金分析师一样，在你喝咖啡的时候，默默把活儿干完。这&#x79CD;**“任务自动化”**&#x7684;感觉，一旦体验过，就回不去了。
 
-这&#x79CD;**“任务自动化”**&#x7684;感觉，一旦体验过，就回不去了。我们诚挚地邀请你跳出框架，去探索更多硬核、有趣、实用的场景。无论是工作流优化，还是生活黑科技，请将你的奇思妙想和 Agent 配置文件分享出来。
+我们诚挚地邀请你跳出框架，去探索更多硬核、有趣、实用的场景。无论是工作流优化，还是生活黑科技，请将你的奇思妙想和 Agent 配置文件分享出来。
 
 📩 **投稿与交流**：[support@cherry-ai.com](mailto:support@cherry-ai.com)\
 **别等未来了。属于你的 AI Agent 时代，从这一刻，已经开始。**
 
 \
-👇 **现在就下载，接入 Kimi K2.5，构建你的第一支数字化团队：**&#xD83D;� **附：Kimi Agent 配置文件夹下载链接 ：**&#x68;ttps://pan.quark.cn/s/1ef986d1a9f&#x66;_(请确保已安装 Cherry Studio v1.7.0+ 版本)_\
+👇 **现在就下载，接入 Kimi K2.5，构建你的第一支数字化团队：**
+
+📥 **附：Kimi Agent 配置文件夹下载链接 ：**&#x68;ttps://pan.quark.cn/s/1ef986d1a9f&#x66;_(请确保已安装 Cherry Studio v1.7.0+ 版本)_<br>
+
 \
 \
 \
