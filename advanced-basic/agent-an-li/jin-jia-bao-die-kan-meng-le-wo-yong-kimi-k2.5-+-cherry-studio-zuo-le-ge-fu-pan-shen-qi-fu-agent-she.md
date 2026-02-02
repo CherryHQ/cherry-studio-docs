@@ -305,9 +305,7 @@ Kimi Agent/                           # 项目根目录
 \
 **最终，你会得到一个** `gold_analysis.html` **文件，打开即看：**<br>
 
-<figure><img src="https://mcnnox2fhjfq.feishu.cn/space/api/box/stream/download/asynccode/?code=OWIyMjhlYzU2NjExYjE4MTgzMmFkMmU3YjhjNzEyZGFfVGZtbEVLNG41NE5hZkQ0S0tGMTZQSDB2YTM5ZDVra25fVG9rZW46SzRTbGI5VXRLb0o5d2J4aE9nV2MwMDRsblJlXzE3NzAwMTUyNzY6MTc3MDAxODg3Nl9WNA" alt=""><figcaption></figcaption></figure>
-
-***
+<figure><img src="../../.gitbook/assets/analysis.jpg" alt=""><figcaption></figcaption></figure>
 
 #### **💭 写在最后**
 
