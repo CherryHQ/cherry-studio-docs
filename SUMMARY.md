@@ -84,6 +84,8 @@
 * [调用链使用教程](advanced-basic/trace.md)
 * [Code Tools 使用教程](advanced-basic/code-tools-shi-yong-jiao-cheng.md)
 * [Agent 使用教程](advanced-basic/agent.md)
+* [Agent 案例](advanced-basic/agent-an-li/README.md)
+  * [金价暴跌看懵了？我用 Kimi K2.5 + Cherry Studio 做了个“复盘神器”（附 Agent 设计+完整教程）](advanced-basic/agent-an-li/jin-jia-bao-die-kan-meng-le-wo-yong-kimi-k2.5-+-cherry-studio-zuo-le-ge-fu-pan-shen-qi-fu-agent-she.md)
 
 ## 项目贡献 <a href="#contribution" id="contribution"></a>
 
