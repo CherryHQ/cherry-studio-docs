@@ -1,6 +1,6 @@
 # MiniMax Coding Plan
 
-**Coding Plan** 是 MiniMax 推出的高性价比编程订阅服务（如 Starter/Plus 套餐）。通过在 Cherry Studio 中配置该套餐，你可以以极低的固定成本（最低 ¥29/月）使用顶级的 `MiniMax-M2.1` 模型。
+**Coding Plan** 是 MiniMax 推出的高性价比编程订阅服务（如 Starter/Plus 套餐）。通过在 Cherry Studio 中配置该套餐，你可以以极低的固定成本（最低 ¥29/月）使用 `MiniMax-M2.1` 模型。
 
 {% hint style="success" %}
 **核心优势**
