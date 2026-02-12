@@ -31,6 +31,7 @@
   * [OneAPI](pre-basic/providers/oneapi.md)
   * [Ollama](pre-basic/providers/ollama.md)
   * [GitHub Copilot](pre-basic/providers/github-copilot.md)
+  * [MiniMax Coding Plan](pre-basic/providers/minimax-coding-plan.md)
   * [ModelScope（魔搭）](pre-basic/providers/modelscope.md)
   * [PPIO 派欧云](pre-basic/providers/ppio.md)
   * [阿里云百炼](pre-basic/providers/a-li-yun-bai-lian.md)

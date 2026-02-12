@@ -4,7 +4,7 @@ icon: sliders
 
 # 常规设置
 
-<figure><img src="../../../.gitbook/assets/image (13).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (13) (1).png" alt=""><figcaption></figcaption></figure>
 
 #### 第一部分：基础环境配置 <a href="#headingc1f7c3c4e1e6438d82ae1f2c59b65b95-di-yi-bu-fen-ji-chu-huan-jing-pei-zhi-chang-gui-she-zhi-0" id="headingc1f7c3c4e1e6438d82ae1f2c59b65b95-di-yi-bu-fen-ji-chu-huan-jing-pei-zhi-chang-gui-she-zhi-0"></a>
 
@@ -14,7 +14,7 @@ icon: sliders
 
 * **功能详解：** 切换软件界面的显示语言。
 
-<figure><img src="../../../.gitbook/assets/image (16).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (16) (1).png" alt=""><figcaption></figcaption></figure>
 
 * **支持列表：** 点击右侧下拉菜单可见，支持 **简体中文、繁体中文、英语、德语、日语、俄语、希腊语、西班牙语、法语、葡萄牙语**。
 * **💡 使用场景：** 如果您习惯阅读英文技术文档或为了截图给国外开发者反馈问题，可在此切换。
