@@ -16,7 +16,7 @@
 1. 登录  [**MiniMax 开放平台**](https://platform.minimaxi.com/)。
 2.  进入 [**Coding Plan** 页面](https://platform.minimaxi.com/subscribe/coding-plan?code=FYWiC6CtHy\&source=link)，确保套餐已生效。
 
-    <figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 3. 在 **API 管理** 中复制你的专属 `API Key`（以 `sk-` 开头）。
 
 <figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
@@ -50,6 +50,9 @@
 Coding Plan 套餐仅支持特定的模型，选错模型将无法使用或产生额外费用。
 
 1. 点击配置页底部的 **管理 (Manage)** 按钮。
+
+<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+
 2. 在列表中找到并添加 **`MiniMax M2.1`**。
 
 {% hint style="warning" %}
