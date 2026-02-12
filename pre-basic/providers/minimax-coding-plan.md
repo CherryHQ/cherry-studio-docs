@@ -35,13 +35,9 @@
 
 #### 第二步：填写配置
 
-你**不需要**修改复杂的 API 地址，使用默认配置即可。
+**不需要**修改复杂的 API 地址，使用默认配置即可，请参考以下说明填写：
 
-| 参数项         | 填写说明                               |
-| ----------- | ---------------------------------- |
-| **API Key** | 粘贴你的 Coding Plan 专属密钥              |
-| **API 地址**  | 保持默认 `https://api.minimaxi.com/v1` |
-| **开关**      | 点击右上角开关，确保为 **绿色 (ON)**            |
+<table><thead><tr><th width="128.20703125">参数项</th><th>填写说明</th></tr></thead><tbody><tr><td><strong>API Key</strong></td><td>粘贴你的 Coding Plan 专属密钥<br><em>(注意：必须是购买套餐后生成的 Key，不要有多余空格)</em></td></tr><tr><td><strong>API 地址</strong></td><td>保持默认 <code>https://api.minimaxi.com/v1</code></td></tr><tr><td><strong>开关</strong></td><td>点击右上角开关，确保为 <strong>绿色 (ON)</strong></td></tr></tbody></table>
 
 <figure><img src="../../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
 
