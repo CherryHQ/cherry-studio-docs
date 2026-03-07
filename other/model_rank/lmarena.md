@@ -2,150 +2,150 @@
 
 这是一个基于 Chatbot Arena (lmarena.ai) 数据的排行榜，通过自动化流程生成。
 
-> **数据更新时间**: 2026-03-06 08:12:24 UTC / 2026-03-06 16:12:24 CST (北京时间)
+> **数据更新时间**: 2026-03-07 08:08:48 UTC / 2026-03-07 16:08:48 CST (北京时间)
 
 ## 排行榜
 
 |   Rank |   Rank Spread | 模型                                                                      | 分数                 |      票数 |
 |-------:|--------------:|:------------------------------------------------------------------------|:-------------------|--------:|
-|      1 |            14 | Anthropicclaude-opus-4-6Anthropic · Proprietary                         | 1504±7             |   8,945 |
-|      2 |            15 | gemini-3.1-pro-previewGoogle · Proprietary                              | 1500±9Preliminary  |   4,042 |
-|      3 |            14 | Anthropicclaude-opus-4-6-thinkingAnthropic · Proprietary                | 1500±7             |   8,073 |
-|      4 |            17 | grok-4.20-beta1xAI · Proprietary                                        | 1493±8Preliminary  |   5,071 |
-|      5 |            47 | gemini-3-proGoogle · Proprietary                                        | 1485±4             |  39,673 |
-|      6 |           411 | gpt-5.2-chat-latest-20260210OpenAI · Proprietary                        | 1481±8             |   5,502 |
-|      7 |           313 | gpt-5.4-highOpenAI · Proprietary                                        | 1480±12Preliminary |   2,290 |
-|      8 |           613 | gemini-3-flashGoogle · Proprietary                                      | 1473±5             |  30,621 |
-|      9 |           613 | grok-4.1-thinkingxAI · Proprietary                                      | 1473±4             |  39,058 |
-|     10 |           615 | Anthropicclaude-opus-4-5-20251101-thinking-32kAnthropic · Proprietary   | 1471±4             |  32,254 |
-|     11 |           716 | Anthropicclaude-opus-4-5-20251101Anthropic · Proprietary                | 1467±4             |  37,207 |
-|     12 |           619 | Bytedancedola-seed-2.0-previewBytedance · Proprietary                   | 1466±8Preliminary  |   6,410 |
-|     13 |          1019 | grok-4.1xAI · Proprietary                                               | 1463±4             |  43,318 |
-|     14 |          1119 | gemini-3-flash (thinking-minimal)Google · Proprietary                   | 1461±5             |  22,593 |
-|     15 |          1026 | Anthropicclaude-sonnet-4-6Anthropic · Proprietary                       | 1459±8             |   5,194 |
-|     16 |           730 | gpt-5.4OpenAI · Proprietary                                             | 1458±12Preliminary |   2,402 |
-|     17 |          1226 | gpt-5.1-highOpenAI · Proprietary                                        | 1455±4             |  35,926 |
-|     18 |          1230 | glm-5Z.ai · MIT                                                         | 1453±7             |   7,875 |
-|     19 |          1233 | qwen3.5-397b-a17bAlibaba · Apache 2.0                                   | 1451±7             |   6,576 |
-|     20 |          1531 | ernie-5.0-0110Baidu · Proprietary                                       | 1451±6             |  15,188 |
-|     21 |          1530 | Anthropicclaude-sonnet-4-5-20250929Anthropic · Proprietary              | 1451±4             |  48,489 |
-|     22 |          1532 | MoonshotAIkimi-k2.5-thinkingMoonshot · Modified MIT                     | 1450±6             |  12,488 |
-|     23 |          1530 | Anthropicclaude-sonnet-4-5-20250929-thinking-32kAnthropic · Proprietary | 1450±3             |  50,540 |
-|     24 |          1530 | gemini-2.5-proGoogle · Proprietary                                      | 1449±3             |  98,836 |
-|     25 |          1533 | ernie-5.0-preview-1203Baidu · Proprietary                               | 1449±7             |   9,711 |
-|     26 |          1531 | Anthropicclaude-opus-4-1-20250805-thinking-16kAnthropic · Proprietary   | 1448±4             |  49,565 |
-|     27 |          1733 | Anthropicclaude-opus-4-1-20250805Anthropic · Proprietary                | 1446±3             |  77,177 |
-|     28 |          1736 | gpt-4.5-preview-2025-02-27OpenAI · Proprietary                          | 1444±6             |  14,549 |
-|     29 |          2235 | chatgpt-4o-latest-20250326OpenAI · Proprietary                          | 1443±3             |  82,865 |
-|     30 |          1737 | gpt-5.2-highOpenAI · Proprietary                                        | 1443±5             |  20,902 |
-|     31 |          1738 | glm-4.7Z.ai · MIT                                                       | 1441±6             |  11,933 |
-|     32 |          2539 | gpt-5.2OpenAI · Proprietary                                             | 1439±5             |  17,865 |
-|     33 |          2839 | gpt-5.1OpenAI · Proprietary                                             | 1437±4             |  38,519 |
-|     34 |          2449 | gemini-3.1-flash-lite-previewGoogle · Proprietary                       | 1436±9Preliminary  |   3,853 |
-|     35 |          2847 | MoonshotAIkimi-k2.5-instantMoonshot · Modified MIT                      | 1435±7             |   8,596 |
-|     36 |          2945 | qwen3-max-previewAlibaba · Proprietary                                  | 1434±5             |  27,631 |
-|     37 |          3046 | gpt-5-highOpenAI · Proprietary                                          | 1434±5             |  32,322 |
-|     38 |          3147 | o3-2025-04-16OpenAI · Proprietary                                       | 1432±4             |  60,914 |
-|     39 |          3249 | grok-4-1-fast-reasoningxAI · Proprietary                                | 1430±4             |  32,825 |
-|     40 |          3452 | MoonshotAIkimi-k2-thinking-turboMoonshot · Modified MIT                 | 1429±4             |  37,587 |
-|     41 |          3459 | gpt-5-chatOpenAI · Proprietary                                          | 1426±4             |  31,594 |
-|     42 |          3661 | glm-4.6Z.ai · MIT                                                       | 1425±4             |  35,097 |
-|     43 |          3463 | qwen3-max-2025-09-23Alibaba · Proprietary                               | 1425±6             |   9,169 |
-|     44 |          3463 | deepseek-v3.2-expDeepSeek · MIT                                         | 1424±6             |  11,674 |
-|     45 |          3862 | Anthropicclaude-opus-4-20250514-thinking-16kAnthropic · Proprietary     | 1424±4             |  37,682 |
+|      1 |            14 | Anthropicclaude-opus-4-6Anthropic · Proprietary                         | 1504±7             |   9,170 |
+|      2 |            14 | Anthropicclaude-opus-4-6-thinkingAnthropic · Proprietary                | 1502±7             |   8,313 |
+|      3 |            14 | gemini-3.1-pro-previewGoogle · Proprietary                              | 1500±9Preliminary  |   4,041 |
+|      4 |            17 | grok-4.20-beta1xAI · Proprietary                                        | 1491±8Preliminary  |   5,280 |
+|      5 |            47 | gemini-3-proGoogle · Proprietary                                        | 1485±4             |  39,923 |
+|      6 |           412 | gpt-5.4-highOpenAI · Proprietary                                        | 1479±10Preliminary |   3,503 |
+|      7 |           412 | gpt-5.2-chat-latest-20260210OpenAI · Proprietary                        | 1479±8             |   5,786 |
+|      8 |           612 | gemini-3-flashGoogle · Proprietary                                      | 1473±4             |  30,600 |
+|      9 |           612 | grok-4.1-thinkingxAI · Proprietary                                      | 1473±4             |  39,309 |
+|     10 |           615 | Anthropicclaude-opus-4-5-20251101-thinking-32kAnthropic · Proprietary   | 1470±4             |  32,516 |
+|     11 |           616 | Anthropicclaude-opus-4-5-20251101Anthropic · Proprietary                | 1467±4             |  37,462 |
+|     12 |           619 | Bytedancedola-seed-2.0-previewBytedance · Proprietary                   | 1465±8Preliminary  |   6,712 |
+|     13 |          1018 | grok-4.1xAI · Proprietary                                               | 1462±4             |  43,536 |
+|     14 |          1020 | gemini-3-flash (thinking-minimal)Google · Proprietary                   | 1462±5             |  22,846 |
+|     15 |          1030 | gpt-5.4OpenAI · Proprietary                                             | 1457±10Preliminary |   3,417 |
+|     16 |          1128 | Anthropicclaude-sonnet-4-6Anthropic · Proprietary                       | 1457±8             |   5,509 |
+|     17 |          1226 | gpt-5.1-highOpenAI · Proprietary                                        | 1455±4             |  36,204 |
+|     18 |          1231 | glm-5Z.ai · MIT                                                         | 1452±7             |   8,095 |
+|     19 |          1431 | MoonshotAIkimi-k2.5-thinkingMoonshot · Modified MIT                     | 1451±6             |  12,710 |
+|     20 |          1531 | ernie-5.0-0110Baidu · Proprietary                                       | 1451±6             |  15,402 |
+|     21 |          1530 | Anthropicclaude-sonnet-4-5-20250929Anthropic · Proprietary              | 1451±4             |  48,736 |
+|     22 |          1333 | qwen3.5-397b-a17bAlibaba · Apache 2.0                                   | 1451±7             |   6,836 |
+|     23 |          1530 | Anthropicclaude-sonnet-4-5-20250929-thinking-32kAnthropic · Proprietary | 1450±3             |  50,801 |
+|     24 |          1533 | ernie-5.0-preview-1203Baidu · Proprietary                               | 1449±7             |   9,712 |
+|     25 |          1530 | gemini-2.5-proGoogle · Proprietary                                      | 1449±3             |  99,103 |
+|     26 |          1531 | Anthropicclaude-opus-4-1-20250805-thinking-16kAnthropic · Proprietary   | 1448±3             |  49,560 |
+|     27 |          1633 | Anthropicclaude-opus-4-1-20250805Anthropic · Proprietary                | 1446±3             |  77,173 |
+|     28 |          1636 | gpt-4.5-preview-2025-02-27OpenAI · Proprietary                          | 1444±6             |  14,549 |
+|     29 |          2135 | chatgpt-4o-latest-20250326OpenAI · Proprietary                          | 1443±3             |  82,864 |
+|     30 |          1737 | gpt-5.2-highOpenAI · Proprietary                                        | 1442±5             |  21,161 |
+|     31 |          1738 | glm-4.7Z.ai · MIT                                                       | 1441±6             |  11,936 |
+|     32 |          2539 | gpt-5.2OpenAI · Proprietary                                             | 1439±5             |  18,159 |
+|     33 |          2839 | gpt-5.1OpenAI · Proprietary                                             | 1438±4             |  38,793 |
+|     34 |          2549 | gemini-3.1-flash-lite-previewGoogle · Proprietary                       | 1435±9Preliminary  |   3,829 |
+|     35 |          2944 | qwen3-max-previewAlibaba · Proprietary                                  | 1434±5             |  27,631 |
+|     36 |          3045 | gpt-5-highOpenAI · Proprietary                                          | 1434±5             |  32,325 |
+|     37 |          2849 | MoonshotAIkimi-k2.5-instantMoonshot · Modified MIT                      | 1434±6             |   8,823 |
+|     38 |          3146 | o3-2025-04-16OpenAI · Proprietary                                       | 1432±4             |  60,909 |
+|     39 |          3249 | grok-4-1-fast-reasoningxAI · Proprietary                                | 1430±4             |  33,097 |
+|     40 |          3451 | MoonshotAIkimi-k2-thinking-turboMoonshot · Modified MIT                 | 1429±4             |  37,861 |
+|     41 |          3459 | gpt-5-chatOpenAI · Proprietary                                          | 1426±4             |  31,590 |
+|     42 |          3661 | glm-4.6Z.ai · MIT                                                       | 1425±4             |  35,102 |
+|     43 |          3463 | qwen3-max-2025-09-23Alibaba · Proprietary                               | 1425±6             |   9,168 |
+|     44 |          3463 | deepseek-v3.2-expDeepSeek · MIT                                         | 1424±6             |  11,672 |
+|     45 |          3762 | Anthropicclaude-opus-4-20250514-thinking-16kAnthropic · Proprietary     | 1424±4             |  37,678 |
 |     46 |          3465 | deepseek-v3.2-exp-thinkingDeepSeek · MIT                                | 1423±7             |   8,942 |
-|     47 |          4162 | qwen3-235b-a22b-instruct-2507Alibaba · Apache 2.0                       | 1422±3             |  73,052 |
-|     48 |          3567 | grok-4-fast-chatxAI · Proprietary                                       | 1422±8             |   6,963 |
-|     49 |          4165 | deepseek-v3.2DeepSeek · MIT                                             | 1421±4             |  32,274 |
-|     50 |          4166 | deepseek-v3.2-thinkingDeepSeek · MIT                                    | 1419±4             |  27,113 |
-|     51 |          3471 | qwen3.5-122b-a10bAlibaba · Apache 2.0                                   | 1419±11            |   3,003 |
-|     52 |          4167 | deepseek-r1-0528DeepSeek · MIT                                          | 1419±6             |  19,155 |
-|     53 |          3870 | ernie-5.0-preview-1022Baidu · Proprietary                               | 1419±9             |   4,555 |
-|     54 |          4170 | deepseek-v3.1DeepSeek · MIT                                             | 1418±6             |  15,193 |
-|     55 |          4170 | deepseek-v3.1-thinkingDeepSeek · MIT                                    | 1417±7             |  11,918 |
-|     56 |          4170 | MoonshotAIkimi-k2-0905-previewMoonshot · Modified MIT                   | 1417±6             |  11,909 |
-|     57 |          4270 | MoonshotAIkimi-k2-0711-previewMoonshot · Modified MIT                   | 1417±5             |  28,425 |
-|     58 |          4078 | deepseek-v3.1-terminusDeepSeek · MIT                                    | 1416±10            |   3,745 |
-|     59 |          4080 | deepseek-v3.1-terminus-thinkingDeepSeek · MIT                           | 1416±10            |   3,536 |
-|     60 |          4080 | amazon-nova-experimental-chat-26-01-10Amazon · Proprietary              | 1415±10            |   3,419 |
-|     61 |          4273 | qwen3-vl-235b-a22b-instructAlibaba · Apache 2.0                         | 1415±6             |  11,596 |
-|     62 |          4570 | mistral-large-3Mistral · Apache 2.0                                     | 1415±4             |  28,787 |
-|     63 |          4771 | gpt-4.1-2025-04-14OpenAI · Proprietary                                  | 1413±4             |  51,799 |
-|     64 |          4771 | Anthropicclaude-opus-4-20250514Anthropic · Proprietary                  | 1413±4             |  45,283 |
-|     65 |          4975 | grok-3-preview-02-24xAI · Proprietary                                   | 1411±4             |  33,823 |
-|     66 |          5275 | gemini-2.5-flashGoogle · Proprietary                                    | 1411±3             |  98,101 |
-|     67 |          5275 | mistral-medium-2508Mistral · Proprietary                                | 1410±3             |  67,344 |
-|     68 |          5081 | glm-4.5Z.ai · MIT                                                       | 1410±5             |  24,596 |
-|     69 |          4386 | qwen3.5-27bAlibaba · Apache 2.0                                         | 1410±10            |   3,104 |
-|     70 |          5281 | grok-4-0709xAI · Proprietary                                            | 1409±4             |  41,750 |
-|     71 |          5884 | Anthropicclaude-haiku-4-5-20251001Anthropic · Proprietary               | 1406±3             |  49,062 |
-|     72 |          6186 | gemini-2.5-flash-preview-09-2025Google · Proprietary                    | 1404±4             |  32,517 |
-|     73 |          6186 | grok-4-fast-reasoningxAI · Proprietary                                  | 1403±5             |  18,432 |
-|     74 |          6587 | qwen3-235b-a22b-no-thinkingAlibaba · Apache 2.0                         | 1402±4             |  39,270 |
-|     75 |          6588 | qwen3-next-80b-a3b-instructAlibaba · Apache 2.0                         | 1402±5             |  22,667 |
-|     76 |          6687 | o1-2024-12-17OpenAI · Proprietary                                       | 1402±4             |  27,822 |
-|     77 |          6292 | Minimaxminimax-m2.5MiniMax · Modified MIT                               | 1401±7             |   7,745 |
-|     78 |          6592 | longcat-flash-chatMeituan · MIT                                         | 1400±6             |  11,487 |
-|     79 |          7090 | Anthropicclaude-sonnet-4-20250514-thinking-32kAnthropic · Proprietary   | 1400±4             |  35,952 |
-|     80 |          6199 | qwen3.5-flashAlibaba · Proprietary                                      | 1399±9             |   4,083 |
-|     81 |          7096 | qwen3-235b-a22b-thinking-2507Alibaba · Apache 2.0                       | 1399±6             |   9,179 |
+|     47 |          4162 | qwen3-235b-a22b-instruct-2507Alibaba · Apache 2.0                       | 1422±3             |  73,293 |
+|     48 |          3567 | grok-4-fast-chatxAI · Proprietary                                       | 1422±8             |   6,964 |
+|     49 |          4165 | deepseek-v3.2DeepSeek · MIT                                             | 1421±4             |  32,541 |
+|     50 |          4165 | deepseek-v3.2-thinkingDeepSeek · MIT                                    | 1420±4             |  27,370 |
+|     51 |          4167 | deepseek-r1-0528DeepSeek · MIT                                          | 1419±6             |  19,153 |
+|     52 |          3771 | ernie-5.0-preview-1022Baidu · Proprietary                               | 1419±9             |   4,555 |
+|     53 |          4170 | deepseek-v3.1DeepSeek · MIT                                             | 1418±6             |  15,192 |
+|     54 |          3775 | qwen3.5-122b-a10bAlibaba · Apache 2.0                                   | 1418±10            |   3,251 |
+|     55 |          4171 | deepseek-v3.1-thinkingDeepSeek · MIT                                    | 1417±7             |  11,916 |
+|     56 |          4171 | MoonshotAIkimi-k2-0905-previewMoonshot · Modified MIT                   | 1417±6             |  11,907 |
+|     57 |          4270 | MoonshotAIkimi-k2-0711-previewMoonshot · Modified MIT                   | 1417±5             |  28,423 |
+|     58 |          4078 | deepseek-v3.1-terminusDeepSeek · MIT                                    | 1416±10            |   3,744 |
+|     59 |          4080 | deepseek-v3.1-terminus-thinkingDeepSeek · MIT                           | 1416±10            |   3,535 |
+|     60 |          4275 | qwen3-vl-235b-a22b-instructAlibaba · Apache 2.0                         | 1415±6             |  11,596 |
+|     61 |          4571 | mistral-large-3Mistral · Apache 2.0                                     | 1414±4             |  29,075 |
+|     62 |          4184 | amazon-nova-experimental-chat-26-01-10Amazon · Proprietary              | 1414±10            |   3,387 |
+|     63 |          4772 | gpt-4.1-2025-04-14OpenAI · Proprietary                                  | 1413±4             |  51,800 |
+|     64 |          4774 | Anthropicclaude-opus-4-20250514Anthropic · Proprietary                  | 1413±4             |  45,279 |
+|     65 |          5075 | grok-3-preview-02-24xAI · Proprietary                                   | 1411±4             |  33,823 |
+|     66 |          5275 | gemini-2.5-flashGoogle · Proprietary                                    | 1411±3             |  98,369 |
+|     67 |          4386 | qwen3.5-27bAlibaba · Apache 2.0                                         | 1411±10            |   3,368 |
+|     68 |          5275 | mistral-medium-2508Mistral · Proprietary                                | 1410±3             |  67,631 |
+|     69 |          5081 | glm-4.5Z.ai · MIT                                                       | 1410±5             |  24,595 |
+|     70 |          5280 | grok-4-0709xAI · Proprietary                                            | 1409±4             |  41,749 |
+|     71 |          5884 | Anthropicclaude-haiku-4-5-20251001Anthropic · Proprietary               | 1406±3             |  49,326 |
+|     72 |          5986 | gemini-2.5-flash-preview-09-2025Google · Proprietary                    | 1404±4             |  32,518 |
+|     73 |          5986 | grok-4-fast-reasoningxAI · Proprietary                                  | 1403±5             |  18,431 |
+|     74 |          5494 | qwen3.5-flashAlibaba · Proprietary                                      | 1402±9             |   4,330 |
+|     75 |          5991 | Minimaxminimax-m2.5MiniMax · Modified MIT                               | 1402±7             |   8,017 |
+|     76 |          6587 | qwen3-235b-a22b-no-thinkingAlibaba · Apache 2.0                         | 1402±4             |  39,264 |
+|     77 |          6588 | qwen3-next-80b-a3b-instructAlibaba · Apache 2.0                         | 1402±5             |  22,670 |
+|     78 |          6688 | o1-2024-12-17OpenAI · Proprietary                                       | 1402±4             |  27,822 |
+|     79 |          6594 | longcat-flash-chatMeituan · MIT                                         | 1400±6             |  11,486 |
+|     80 |          6989 | Anthropicclaude-sonnet-4-20250514-thinking-32kAnthropic · Proprietary   | 1400±4             |  35,948 |
+|     81 |          6996 | qwen3-235b-a22b-thinking-2507Alibaba · Apache 2.0                       | 1399±6             |   9,177 |
 |     82 |          7196 | deepseek-r1DeepSeek · MIT                                               | 1398±5             |  18,537 |
-|     83 |         71103 | qwen3-vl-235b-a22b-thinkingAlibaba · Apache 2.0                         | 1395±7             |   7,918 |
-|     84 |         68104 | qwen3.5-35b-a3bAlibaba · Apache 2.0                                     | 1395±10            |   3,145 |
-|     85 |         70104 | amazon-nova-experimental-chat-12-10Amazon · Proprietary                 | 1395±10            |   3,696 |
-|     86 |          7499 | deepseek-v3-0324DeepSeek · MIT                                          | 1394±4             |  46,411 |
+|     83 |         68104 | qwen3.5-35b-a3bAlibaba · Apache 2.0                                     | 1395±10            |   3,427 |
+|     84 |         71103 | qwen3-vl-235b-a22b-thinkingAlibaba · Apache 2.0                         | 1395±7             |   7,919 |
+|     85 |         69104 | amazon-nova-experimental-chat-12-10Amazon · Proprietary                 | 1395±10            |   3,696 |
+|     86 |          7499 | deepseek-v3-0324DeepSeek · MIT                                          | 1394±4             |  46,409 |
 |     87 |         66106 | Tencenthunyuan-vision-1.5-thinkingTencent · Proprietary                 | 1394±12            |   2,216 |
-|     88 |         76103 | mai-1-previewMicrosoft AI · Proprietary                                 | 1392±5             |  18,009 |
-|     89 |         77103 | mimo-v2-flash (non-thinking)Xiaomi · MIT                                | 1391±5             |  21,281 |
-|     90 |         78103 | o4-mini-2025-04-16OpenAI · Proprietary                                  | 1391±4             |  46,345 |
-|     91 |         78104 | gpt-5-mini-highOpenAI · Proprietary                                     | 1390±5             |  26,935 |
-|     92 |         79104 | Anthropicclaude-sonnet-4-20250514Anthropic · Proprietary                | 1389±4             |  41,341 |
-|     93 |         80106 | o1-previewOpenAI · Proprietary                                          | 1388±5             |  31,120 |
-|     94 |         82104 | Anthropicclaude-3-7-sonnet-20250219-thinking-32kAnthropic · Proprietary | 1388±4             |  39,708 |
-|     95 |         80106 | Stepfunstep-3.5-flashStepFun · Apache 2.0                               | 1387±6             |  10,176 |
-|     96 |         77108 | Tencenthunyuan-t1-20250711Tencent · Proprietary                         | 1387±9             |   4,766 |
-|     97 |         80106 | mimo-v2-flash (thinking)Xiaomi · MIT                                    | 1387±6             |  10,864 |
-|     98 |         82106 | qwen3-coder-480b-a35b-instructAlibaba · Apache 2.0                      | 1386±5             |  26,400 |
-|     99 |         82106 | Minimaxminimax-m2.1-previewMiniMax · MIT                                | 1385±5             |  17,070 |
-|    100 |         84106 | mistral-medium-2505Mistral · Proprietary                                | 1385±5             |  34,361 |
-|    101 |         84108 | qwen3-30b-a3b-instruct-2507Alibaba · Apache 2.0                         | 1384±5             |  23,936 |
-|    102 |         84109 | Tencenthunyuan-turbos-20250416Tencent · Proprietary                     | 1383±6             |  10,997 |
-|    103 |         88109 | gpt-4.1-mini-2025-04-14OpenAI · Proprietary                             | 1382±4             |  40,294 |
-|    104 |         93109 | gemini-2.5-flash-lite-preview-09-2025-no-thinkingGoogle · Proprietary   | 1380±4             |  46,832 |
-|    105 |         84119 | glm-4.6vZ.ai · MIT                                                      | 1378±11            |   2,785 |
-|    106 |        100116 | gemini-2.5-flash-lite-preview-06-17-thinkingGoogle · Proprietary        | 1375±4             |  33,644 |
-|    107 |        100116 | qwen3-235b-a22bAlibaba · Apache 2.0                                     | 1375±5             |  27,001 |
-|    108 |        102116 | qwen2.5-maxAlibaba · Proprietary                                        | 1374±4             |  33,189 |
-|    109 |         92121 | trinity-largeArcee AI · Apache 2.0                                      | 1374±10            |   3,917 |
-|    110 |        105118 | Anthropicclaude-3-5-sonnet-20241022Anthropic · Proprietary              | 1372±3             |  89,271 |
-|    111 |        105119 | glm-4.5-airZ.ai · MIT                                                   | 1372±4             |  31,137 |
-|    112 |        105119 | Anthropicclaude-3-7-sonnet-20250219Anthropic · Proprietary              | 1371±4             |  44,245 |
-|    113 |        105122 | qwen3-next-80b-a3b-thinkingAlibaba · Apache 2.0                         | 1369±6             |  13,768 |
-|    114 |        105125 | glm-4.7-flashZ.ai · MIT                                                 | 1367±6             |  11,756 |
-|    115 |        105122 | Minimaxminimax-m1MiniMax · Apache 2.0                                   | 1367±4             |  36,431 |
-|    116 |        105125 | amazon-nova-experimental-chat-11-10Amazon · Proprietary                 | 1366±5             |  20,697 |
-|    117 |        108123 | gemma-3-27b-itGoogle · Gemma                                            | 1365±4             |  48,423 |
+|     88 |         75103 | mai-1-previewMicrosoft AI · Proprietary                                 | 1392±5             |  18,005 |
+|     89 |         77103 | mimo-v2-flash (non-thinking)Xiaomi · MIT                                | 1392±5             |  21,546 |
+|     90 |         79103 | o4-mini-2025-04-16OpenAI · Proprietary                                  | 1391±4             |  46,343 |
+|     91 |         79104 | gpt-5-mini-highOpenAI · Proprietary                                     | 1390±5             |  26,935 |
+|     92 |         79104 | Anthropicclaude-sonnet-4-20250514Anthropic · Proprietary                | 1389±4             |  41,340 |
+|     93 |         78106 | Stepfunstep-3.5-flashStepFun · Apache 2.0                               | 1389±6             |  10,401 |
+|     94 |         81106 | o1-previewOpenAI · Proprietary                                          | 1388±5             |  31,120 |
+|     95 |         83104 | Anthropicclaude-3-7-sonnet-20250219-thinking-32kAnthropic · Proprietary | 1388±4             |  39,706 |
+|     96 |         81106 | mimo-v2-flash (thinking)Xiaomi · MIT                                    | 1387±6             |  10,861 |
+|     97 |         78109 | Tencenthunyuan-t1-20250711Tencent · Proprietary                         | 1387±9             |   4,764 |
+|     98 |         83106 | qwen3-coder-480b-a35b-instructAlibaba · Apache 2.0                      | 1386±5             |  26,393 |
+|     99 |         83106 | Minimaxminimax-m2.1-previewMiniMax · MIT                                | 1385±5             |  17,078 |
+|    100 |         84106 | mistral-medium-2505Mistral · Proprietary                                | 1385±5             |  34,358 |
+|    101 |         84108 | qwen3-30b-a3b-instruct-2507Alibaba · Apache 2.0                         | 1384±5             |  23,933 |
+|    102 |         84109 | Tencenthunyuan-turbos-20250416Tencent · Proprietary                     | 1383±6             |  10,995 |
+|    103 |         88109 | gpt-4.1-mini-2025-04-14OpenAI · Proprietary                             | 1382±4             |  40,288 |
+|    104 |         93109 | gemini-2.5-flash-lite-preview-09-2025-no-thinkingGoogle · Proprietary   | 1380±4             |  46,840 |
+|    105 |         84119 | glm-4.6vZ.ai · MIT                                                      | 1378±11            |   2,784 |
+|    106 |        100116 | gemini-2.5-flash-lite-preview-06-17-thinkingGoogle · Proprietary        | 1375±4             |  33,641 |
+|    107 |        100116 | qwen3-235b-a22bAlibaba · Apache 2.0                                     | 1375±5             |  27,000 |
+|    108 |        101116 | qwen2.5-maxAlibaba · Proprietary                                        | 1374±4             |  33,189 |
+|    109 |         93119 | trinity-largeArcee AI · Apache 2.0                                      | 1374±9             |   4,191 |
+|    110 |        105118 | Anthropicclaude-3-5-sonnet-20241022Anthropic · Proprietary              | 1372±3             |  89,270 |
+|    111 |        105119 | glm-4.5-airZ.ai · MIT                                                   | 1372±4             |  31,132 |
+|    112 |        105119 | Anthropicclaude-3-7-sonnet-20250219Anthropic · Proprietary              | 1371±4             |  44,242 |
+|    113 |        105122 | qwen3-next-80b-a3b-thinkingAlibaba · Apache 2.0                         | 1369±6             |  13,767 |
+|    114 |        105125 | glm-4.7-flashZ.ai · MIT                                                 | 1367±6             |  11,734 |
+|    115 |        105122 | Minimaxminimax-m1MiniMax · Apache 2.0                                   | 1367±4             |  36,424 |
+|    116 |        105125 | amazon-nova-experimental-chat-11-10Amazon · Proprietary                 | 1366±5             |  20,934 |
+|    117 |        108123 | gemma-3-27b-itGoogle · Gemma                                            | 1365±4             |  48,420 |
 |    118 |        108127 | o3-mini-highOpenAI · Proprietary                                        | 1364±5             |  18,584 |
-|    119 |        109129 | grok-3-mini-highxAI · Proprietary                                       | 1363±5             |  17,403 |
-|    120 |        112130 | gemini-2.0-flash-001Google · Proprietary                                | 1361±4             |  44,668 |
+|    119 |        109129 | grok-3-mini-highxAI · Proprietary                                       | 1363±5             |  17,400 |
+|    120 |        113130 | gemini-2.0-flash-001Google · Proprietary                                | 1361±4             |  44,666 |
 |    121 |        113138 | deepseek-v3DeepSeek · DeepSeek                                          | 1358±5             |  21,788 |
-|    122 |        115139 | grok-3-mini-betaxAI · Proprietary                                       | 1357±5             |  23,585 |
-|    123 |        112145 | intellect-3Prime Intellect · MIT                                        | 1356±8             |   5,285 |
-|    124 |        116143 | mistral-small-2506Mistral · Apache 2.0                                  | 1356±5             |  18,223 |
+|    122 |        115138 | grok-3-mini-betaxAI · Proprietary                                       | 1357±5             |  23,585 |
+|    123 |        113145 | intellect-3Prime Intellect · MIT                                        | 1356±8             |   5,285 |
+|    124 |        116143 | mistral-small-2506Mistral · Apache 2.0                                  | 1356±5             |  18,219 |
 |    125 |        119144 | gpt-oss-120bOpenAI · Apache 2.0                                         | 1354±4             |  30,747 |
 |    126 |        120145 | gemini-2.0-flash-lite-preview-02-05Google · Proprietary                 | 1353±4             |  24,951 |
-|    127 |        121144 | Coherecommand-a-03-2025Cohere · CC-BY-NC-4.0                            | 1353±3             |  57,067 |
-|    128 |        116146 | glm-4.5vZ.ai · MIT                                                      | 1353±8             |   4,948 |
+|    127 |        121144 | Coherecommand-a-03-2025Cohere · CC-BY-NC-4.0                            | 1353±3             |  57,059 |
+|    128 |        116146 | glm-4.5vZ.ai · MIT                                                      | 1353±8             |   4,947 |
 |    129 |        121145 | gemini-1.5-pro-002Google · Proprietary                                  | 1351±3             |  55,607 |
-|    130 |        121146 | amazon-nova-experimental-chat-10-20Amazon · Proprietary                 | 1351±6             |  11,322 |
+|    130 |        121146 | amazon-nova-experimental-chat-10-20Amazon · Proprietary                 | 1351±6             |  11,317 |
 |    131 |        118156 | Tencenthunyuan-turbos-20250226Tencent · Proprietary                     | 1349±12            |   2,226 |
-|    132 |        123146 | o3-miniOpenAI · Proprietary                                             | 1348±3             |  58,420 |
+|    132 |        123146 | o3-miniOpenAI · Proprietary                                             | 1348±3             |  58,415 |
 |    133 |        119158 | amazon-nova-experimental-chat-10-09Amazon · Proprietary                 | 1347±11            |   2,873 |
 |    134 |        121151 | ling-flash-2.0Ant Group · MIT                                           | 1347±7             |   6,988 |
 |    135 |        118159 | Nvidiallama-3.1-nemotron-ultra-253b-v1Nvidia · Nvidia Open Model        | 1347±12            |   2,546 |
 |    136 |        121156 | qwen3-32bAlibaba · Apache 2.0                                           | 1347±9             |   3,932 |
-|    137 |        121153 | Minimaxminimax-m2MiniMax · Apache 2.0                                   | 1347±8             |   6,683 |
-|    138 |        121153 | Stepfunstep-3StepFun · Apache 2.0                                       | 1347±7             |   6,566 |
+|    137 |        121153 | Minimaxminimax-m2MiniMax · Apache 2.0                                   | 1347±8             |   6,684 |
+|    138 |        121152 | Stepfunstep-3StepFun · Apache 2.0                                       | 1347±7             |   6,565 |
 |    139 |        121156 | qwen-plus-0125Alibaba · Proprietary                                     | 1346±8             |   5,823 |
 |    140 |        126149 | gpt-4o-2024-05-13OpenAI · Proprietary                                   | 1346±3             | 112,863 |
 |    141 |        123159 | glm-4-plus-0111Zhipu · Proprietary                                      | 1343±8             |   5,760 |
@@ -153,37 +153,37 @@
 |    143 |        123161 | gemma-3-12b-itGoogle · Gemma                                            | 1342±10            |   3,829 |
 |    144 |        123163 | Nvidianvidia-llama-3.3-nemotron-super-49b-v1.5Nvidia · Nvidia Open      | 1341±10            |   3,398 |
 |    145 |        122164 | Tencenthunyuan-turbo-0110Tencent · Proprietary                          | 1340±12            |   2,295 |
-|    146 |        132163 | nova-2-liteAmazon · Proprietary                                         | 1337±6             |  12,097 |
-|    147 |        132163 | gpt-5-nano-highOpenAI · Proprietary                                     | 1337±7             |   8,350 |
+|    146 |        132163 | nova-2-liteAmazon · Proprietary                                         | 1338±6             |  12,099 |
+|    147 |        132163 | gpt-5-nano-highOpenAI · Proprietary                                     | 1337±7             |   8,348 |
 |    148 |        133160 | o1-miniOpenAI · Proprietary                                             | 1337±4             |  51,986 |
 |    149 |        133162 | qwq-32bAlibaba · Apache 2.0                                             | 1336±4             |  25,985 |
-|    150 |        137163 | grok-2-2024-08-13xAI · Proprietary                                      | 1335±4             |  63,495 |
+|    150 |        136163 | grok-2-2024-08-13xAI · Proprietary                                      | 1335±4             |  63,495 |
 |    151 |        137163 | Metallama-3.1-405b-instruct-bf16Meta · Llama 3.1 Community              | 1335±4             |  41,392 |
 |    152 |        136163 | gpt-4o-2024-08-06OpenAI · Proprietary                                   | 1335±4             |  45,498 |
 |    153 |        134163 | gemini-advanced-0514Google · Proprietary                                | 1335±5             |  50,142 |
 |    154 |        132170 | Stepfunstep-2-16k-exp-202412StepFun · Proprietary                       | 1334±9             |   4,829 |
 |    155 |        140163 | Metallama-3.1-405b-instruct-fp8Meta · Llama 3.1 Community               | 1333±4             |  59,655 |
-|    156 |        140171 | olmo-3.1-32b-instructAi2 · Apache 2.0                                   | 1331±6             |  12,237 |
+|    156 |        140171 | olmo-3.1-32b-instructAi2 · Apache 2.0                                   | 1331±6             |  12,238 |
 |    157 |        124194 | molmo-2-8bAi2 · Apache 2.0                                              | 1329±21            |     812 |
 |    158 |        143174 | 01.AIyi-lightning01 AI · Proprietary                                    | 1328±5             |  27,340 |
-|    159 |        144174 | qwen3-30b-a3bAlibaba · Apache 2.0                                       | 1328±5             |  27,264 |
-|    160 |        145175 | Metallama-4-maverick-17b-128e-instructMeta · Llama 4                    | 1327±4             |  40,914 |
-|    161 |        134185 | Nvidiallama-3.3-nemotron-49b-super-v1Nvidia · Nvidia                    | 1327±12            |   2,230 |
+|    159 |        144174 | qwen3-30b-a3bAlibaba · Apache 2.0                                       | 1328±5             |  27,260 |
+|    160 |        145175 | Metallama-4-maverick-17b-128e-instructMeta · Llama 4                    | 1327±4             |  40,913 |
+|    161 |        135185 | Nvidiallama-3.3-nemotron-49b-super-v1Nvidia · Nvidia                    | 1327±12            |   2,230 |
 |    162 |        141185 | Tencenthunyuan-large-2025-02-10Tencent · Proprietary                    | 1326±10            |   3,738 |
 |    163 |        155181 | gpt-4-turbo-2024-04-09OpenAI · Proprietary                              | 1324±4             |  98,130 |
 |    164 |        146185 | deepseek-v2.5-1210DeepSeek · DeepSeek                                   | 1323±8             |   6,793 |
-|    165 |        155181 | Anthropicclaude-3-5-haiku-20241022Anthropic · Proprietary               | 1323±3             |  70,954 |
+|    165 |        155181 | Anthropicclaude-3-5-haiku-20241022Anthropic · Proprietary               | 1323±3             |  70,951 |
 |    166 |        155181 | gemini-1.5-pro-001Google · Proprietary                                  | 1323±4             |  79,132 |
-|    167 |        155183 | Metallama-4-scout-17b-16e-instructMeta · Llama                          | 1322±5             |  31,026 |
-|    168 |        155185 | Stepfunstep-1o-turbo-202506StepFun · Proprietary                        | 1322±7             |   9,608 |
+|    167 |        155183 | Metallama-4-scout-17b-16e-instructMeta · Llama                          | 1322±5             |  31,023 |
+|    168 |        155185 | Stepfunstep-1o-turbo-202506StepFun · Proprietary                        | 1322±7             |   9,606 |
 |    169 |        154186 | gpt-4.1-nano-2025-04-14OpenAI · Proprietary                             | 1322±8             |   6,107 |
 |    170 |        156182 | Anthropicclaude-3-opus-20240229Anthropic · Proprietary                  | 1322±3             | 194,904 |
 |    171 |        155187 | ring-flash-2.0Ant Group · MIT                                           | 1320±7             |   7,147 |
-|    172 |        157185 | gemma-3n-e4b-itGoogle · Gemma                                           | 1319±5             |  23,177 |
+|    172 |        157186 | gemma-3n-e4b-itGoogle · Gemma                                           | 1319±5             |  23,170 |
 |    173 |        157185 | glm-4-plusZhipu AI · Proprietary                                        | 1319±5             |  26,134 |
-|    174 |        160185 | Metallama-3.3-70b-instructMeta · Llama-3.3                              | 1319±3             |  55,437 |
+|    174 |        160185 | Metallama-3.3-70b-instructMeta · Llama-3.3                              | 1319±3             |  55,436 |
 |    175 |        157188 | qwen-max-0919Alibaba · Qwen                                             | 1318±6             |  16,479 |
-|    176 |        160185 | gpt-4o-mini-2024-07-18OpenAI · Proprietary                              | 1318±3             |  68,794 |
+|    176 |        160186 | gpt-4o-mini-2024-07-18OpenAI · Proprietary                              | 1318±3             |  68,794 |
 |    177 |        160188 | Nvidianvidia-nemotron-3-nano-30b-a3b-bf16Nvidia · NVIDIA Open Model     | 1317±6             |  15,394 |
 |    178 |        159192 | gpt-oss-20bOpenAI · Apache 2.0                                          | 1317±6             |  10,751 |
 |    179 |        160193 | qwen2.5-plus-1127Alibaba · Proprietary                                  | 1315±6             |  10,179 |
@@ -196,11 +196,11 @@
 |    186 |        160204 | mercuryInception AI · Proprietary                                       | 1308±14            |   1,884 |
 |    187 |        177197 | grok-2-mini-2024-08-13xAI · Proprietary                                 | 1308±4             |  52,574 |
 |    188 |        177197 | deepseek-v2.5DeepSeek · DeepSeek                                        | 1307±5             |  24,574 |
-|    189 |        177197 | athene-70b-0725NexusFlow · CC-BY-NC-4.0                                 | 1306±6             |  19,622 |
-|    190 |        173197 | olmo-3-32b-thinkAi2 · Apache 2.0                                        | 1306±8             |   5,863 |
+|    189 |        171197 | olmo-3-32b-thinkAi2 · Apache 2.0                                        | 1306±8             |   5,863 |
+|    190 |        177197 | athene-70b-0725NexusFlow · CC-BY-NC-4.0                                 | 1306±6             |  19,622 |
 |    191 |        180197 | mistral-large-2411Mistral · MRL                                         | 1305±4             |  28,081 |
-|    192 |        177197 | magistral-medium-2506Mistral · Proprietary                              | 1305±6             |  11,975 |
-|    193 |        183197 | mistral-small-3.1-24b-instruct-2503Mistral · Apache 2.0                 | 1304±4             |  33,878 |
+|    192 |        177197 | magistral-medium-2506Mistral · Proprietary                              | 1305±6             |  11,974 |
+|    193 |        183197 | mistral-small-3.1-24b-instruct-2503Mistral · Apache 2.0                 | 1304±4             |  33,870 |
 |    194 |        175204 | gemma-3-4b-itGoogle · Gemma                                             | 1303±9             |   4,177 |
 |    195 |        184197 | qwen2.5-72b-instructAlibaba · Qwen                                      | 1303±4             |  39,409 |
 |    196 |        184207 | Nvidiallama-3.1-nemotron-70b-instructNvidia · Llama 3.1                 | 1299±8             |   7,136 |
@@ -210,7 +210,7 @@
 |    200 |        194212 | jamba-1.5-largeAI21 Labs · Jamba Open                                   | 1288±7             |   8,659 |
 |    201 |        196210 | gemma-2-27b-itGoogle · Gemma license                                    | 1288±3             |  75,764 |
 |    202 |        194212 | reka-core-20240904Reka AI · Proprietary                                 | 1288±7             |   7,309 |
-|    203 |        194218 | ibm-granite-h-smallIBM · Apache 2.0                                     | 1287±8             |   5,618 |
+|    203 |        194218 | ibm-granite-h-smallIBM · Apache 2.0                                     | 1287±8             |   5,619 |
 |    204 |        196212 | gpt-4-0314OpenAI · Proprietary                                          | 1287±5             |  54,167 |
 |    205 |        194218 | llama-3.1-tulu-3-70bAi2 · Llama 3.1                                     | 1286±10            |   2,846 |
 |    206 |        194218 | Nvidiallama-3.1-nemotron-51b-instructNvidia · Llama 3.1                 | 1286±10            |   3,749 |
@@ -230,7 +230,7 @@
 |    220 |        215227 | gemma-2-9b-itGoogle · Gemma license                                     | 1265±4             |  54,615 |
 |    221 |        214228 | deepseek-coder-v2DeepSeek · DeepSeek License                            | 1264±6             |  15,147 |
 |    222 |        217228 | Coherecommand-r-plusCohere · CC-BY-NC-4.0                               | 1262±4             |  77,556 |
-|    223 |        216228 | qwen2-72b-instructAlibaba · Qianwen LICENSE                             | 1262±5             |  37,325 |
+|    223 |        216228 | qwen2-72b-instructAlibaba · Qianwen LICENSE                             | 1261±5             |  37,325 |
 |    224 |        218228 | Anthropicclaude-3-haiku-20240307Anthropic · Proprietary                 | 1261±4             | 117,705 |
 |    225 |        217229 | amazon-nova-lite-v1.0Amazon · Proprietary                               | 1261±5             |  19,376 |
 |    226 |        218229 | gemini-1.5-flash-8b-001Google · Proprietary                             | 1259±4             |  35,556 |
@@ -266,7 +266,7 @@
 |    256 |        251261 | mixtral-8x7b-instruct-v0.1Mistral · Apache 2.0                          | 1197±4             |  73,505 |
 |    257 |        251266 | dbrx-instruct-previewDatabricks · DBRX LICENSE                          | 1195±6             |  32,196 |
 |    258 |        251270 | InternLMinternlm2_5-20b-chatInternLM · Other                            | 1191±7             |   9,902 |
-|    259 |        251270 | qwen1.5-14b-chatAlibaba · Qianwen LICENSE                               | 1191±7             |  17,841 |
+|    259 |        251270 | qwen1.5-14b-chatAlibaba · Qianwen LICENSE                               | 1190±7             |  17,841 |
 |    260 |        254276 | Azurewizardlm-70bMicrosoft · Llama 2 Community                          | 1184±9             |   8,214 |
 |    261 |        253277 | deepseek-llm-67b-chatDeepSeek · DeepSeek License                        | 1184±12            |   4,933 |
 |    262 |        257273 | 01.AIyi-34b-chat01 AI · Yi License                                      | 1183±7             |  15,483 |
@@ -297,7 +297,7 @@
 |    287 |        277300 | qwen1.5-7b-chatAlibaba · Qianwen LICENSE                                | 1144±10            |   4,735 |
 |    288 |        278298 | Azurephi-3-mini-4k-instruct-june-2024Microsoft · MIT                    | 1143±6             |  12,296 |
 |    289 |        278300 | Metallama-2-13b-chatMeta · Llama 2 Community                            | 1141±7             |  19,171 |
-|    290 |        278300 | vicuna-13bLMSYS · Llama 2 Community                                     | 1141±7             |  19,366 |
+|    290 |        278300 | vicuna-13bLMSYS · Llama 2 Community                                     | 1140±7             |  19,366 |
 |    291 |        278302 | qwen-14b-chatAlibaba · Qianwen LICENSE                                  | 1138±11            |   4,964 |
 |    292 |        279302 | palm-2Google · Proprietary                                              | 1137±9             |   8,554 |
 |    293 |        280302 | Metacodellama-34b-instructMeta · Llama 2 Community                      | 1136±9             |   7,363 |
