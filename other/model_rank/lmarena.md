@@ -2,7 +2,7 @@
 
 这是一个基于 Chatbot Arena (lmarena.ai) 数据的排行榜，通过自动化流程生成。
 
-> **数据更新时间**: 2026-03-12 08:16:17 UTC / 2026-03-12 16:16:17 CST (北京时间)
+> **数据更新时间**: 2026-03-13 08:15:09 UTC / 2026-03-13 16:15:09 CST (北京时间)
 
 ## 排行榜
 
@@ -117,7 +117,7 @@
 |    107 |        100117 | qwen3-235b-a22bAlibaba · Apache 2.0                                     | 1375±5             |  26,961 | $0.46/$1.82  | 131.1K    |
 |    108 |        101117 | qwen2.5-maxAlibaba · Proprietary                                        | 1375±4             |  33,167 | N/A          | N/A       |
 |    109 |         96120 | trinity-largeArcee AI · Apache 2.0                                      | 1375±8             |   5,482 | N/A          | N/A       |
-|    110 |        105117 | Anthropicclaude-3-5-sonnet-20241022Anthropic · Proprietary              | 1372±3             |  89,218 | $3/$15       | 200K      |
+|    110 |        105117 | Anthropicclaude-3-5-sonnet-20241022Anthropic · Proprietary              | 1372±3             |  89,218 | $6/$30       | 200K      |
 |    111 |        105120 | glm-4.5-airZ.ai · MIT                                                   | 1372±4             |  31,058 | $0.13/$0.85  | 131.1K    |
 |    112 |        105120 | Anthropicclaude-3-7-sonnet-20250219Anthropic · Proprietary              | 1372±4             |  44,145 | $3/$15       | 200K      |
 |    113 |        105123 | qwen3-next-80b-a3b-thinkingAlibaba · Apache 2.0                         | 1369±6             |  13,704 | $0.10/$0.78  | 131.1K    |
@@ -150,7 +150,7 @@
 |    140 |        121157 | qwen-plus-0125Alibaba · Proprietary                                     | 1347±8             |   5,819 | $0.40/$1.20  | 131.1K    |
 |    141 |        127150 | gpt-4o-2024-05-13OpenAI · Proprietary                                   | 1346±3             | 112,881 | $5/$15       | 128K      |
 |    142 |        124160 | glm-4-plus-0111Zhipu · Proprietary                                      | 1343±8             |   5,760 | N/A          | N/A       |
-|    143 |        130155 | Anthropicclaude-3-5-sonnet-20240620Anthropic · Proprietary              | 1343±3             |  82,419 | $3/$15       | 200K      |
+|    143 |        130155 | Anthropicclaude-3-5-sonnet-20240620Anthropic · Proprietary              | 1343±3             |  82,419 | $6/$30       | 200K      |
 |    144 |        125162 | gemma-3-12b-itGoogle · Gemma                                            | 1342±10            |   3,829 | $0.04/$0.13  | 131.1K    |
 |    145 |        124164 | Nvidianvidia-llama-3.3-nemotron-super-49b-v1.5Nvidia · Nvidia Open      | 1342±10            |   3,400 | $0.10/$0.40  | 131.1K    |
 |    146 |        124165 | Tencenthunyuan-turbo-0110Tencent · Proprietary                          | 1341±12            |   2,290 | N/A          | N/A       |
