@@ -2,7 +2,7 @@
 
 这是一个基于 Chatbot Arena (lmarena.ai) 数据的排行榜，通过自动化流程生成。
 
-> **数据更新时间**: 2026-03-17 08:19:04 UTC / 2026-03-17 16:19:04 CST (北京时间)
+> **数据更新时间**: 2026-03-18 08:18:30 UTC / 2026-03-18 16:18:30 CST (北京时间)
 
 ## 排行榜
 
@@ -27,7 +27,7 @@
 |     17 |          1220 | grok-4.1xAI · Proprietary                                               | 1462±4             |  45,758 | $0.20/$0.50  | N/A       |
 |     18 |          1226 | Anthropicclaude-sonnet-4-6Anthropic · Proprietary                       | 1461±7             |   8,588 | $3/$15       | 1M        |
 |     19 |          1427 | gpt-5.1-highOpenAI · Proprietary                                        | 1456±4             |  38,804 | $1.25/$10    | 400K      |
-|     20 |          1431 | glm-5Z.ai · MIT                                                         | 1453±6             |  10,020 | $0.72/$2.30  | 202.8K    |
+|     20 |          1431 | glm-5Z.ai · MIT                                                         | 1453±6             |  10,020 | $0.72/$2.30  | 80K       |
 |     21 |          1631 | MoonshotAIkimi-k2.5-thinkingMoonshot · Modified MIT                     | 1453±5             |  15,234 | $0.60/$3     | N/A       |
 |     22 |          1730 | Anthropicclaude-sonnet-4-5-20250929Anthropic · Proprietary              | 1452±4             |  51,456 | $3/$15       | 200K      |
 |     23 |          1732 | ernie-5.0-0110Baidu · Proprietary                                       | 1452±5             |  17,606 | N/A          | N/A       |
@@ -58,9 +58,9 @@
 |     48 |          3765 | deepseek-v3.2-exp-thinkingDeepSeek · MIT                                | 1424±7             |   8,922 | $0.27/$0.41  | 163.8K    |
 |     49 |          3866 | deepseek-v3.2-expDeepSeek · MIT                                         | 1424±6             |  11,649 | $0.27/$0.41  | 163.8K    |
 |     50 |          4365 | qwen3-235b-a22b-instruct-2507Alibaba · Apache 2.0                       | 1423±3             |  75,677 | $0.26/$1.06  | N/A       |
-|     51 |          4265 | deepseek-v3.2DeepSeek · MIT                                             | 1422±4             |  35,098 | $0.26/$0.38  | 163.8K    |
+|     51 |          4265 | deepseek-v3.2DeepSeek · MIT                                             | 1422±4             |  35,098 | $0.26/$0.40  | 163.8K    |
 |     52 |          4072 | grok-4-fast-chatxAI · Proprietary                                       | 1422±8             |   6,952 | $3/$15       | 256K      |
-|     53 |          4367 | deepseek-v3.2-thinkingDeepSeek · MIT                                    | 1421±4             |  29,743 | $0.26/$0.38  | 163.8K    |
+|     53 |          4367 | deepseek-v3.2-thinkingDeepSeek · MIT                                    | 1421±4             |  29,743 | $0.26/$0.40  | 163.8K    |
 |     54 |          4370 | deepseek-r1-0528DeepSeek · MIT                                          | 1420±6             |  19,107 | $0.45/$2.15  | 163.8K    |
 |     55 |          4074 | ernie-5.0-preview-1022Baidu · Proprietary                               | 1420±9             |   4,536 | N/A          | N/A       |
 |     56 |          4373 | deepseek-v3.1DeepSeek · MIT                                             | 1419±6             |  15,170 | $1.23/$4.94  | N/A       |
@@ -82,7 +82,7 @@
 |     72 |          5483 | grok-4-0709xAI · Proprietary                                            | 1410±4             |  41,650 | $3/$15       | 256K      |
 |     73 |          5389 | qwen3.5-27bAlibaba · Apache 2.0                                         | 1408±8             |   5,989 | $0.20/$1.56  | 262.1K    |
 |     74 |          6187 | Anthropicclaude-haiku-4-5-20251001Anthropic · Proprietary               | 1407±3             |  52,008 | $1/$5        | 200K      |
-|     75 |          5989 | Minimaxminimax-m2.5MiniMax · Modified MIT                               | 1405±6             |  10,646 | $0.25/$1.20  | 196.6K    |
+|     75 |          5989 | Minimaxminimax-m2.5MiniMax · Modified MIT                               | 1405±6             |  10,646 | $0.20/$1.20  | 196.6K    |
 |     76 |          6489 | gemini-2.5-flash-preview-09-2025Google · Proprietary                    | 1405±4             |  32,433 | $0.30/$2.50  | 1M        |
 |     77 |          6389 | grok-4-fast-reasoningxAI · Proprietary                                  | 1405±5             |  18,351 | $0.20/$0.50  | 2M        |
 |     78 |          6890 | qwen3-235b-a22b-no-thinkingAlibaba · Apache 2.0                         | 1403±4             |  39,188 | $0.46/$1.82  | 131.1K    |
@@ -238,7 +238,7 @@
 |    228 |        222232 | Anthropicclaude-3-haiku-20240307Anthropic · Proprietary                 | 1261±4             | 117,701 | $0.25/$1.25  | 200K      |
 |    229 |        221233 | amazon-nova-lite-v1.0Amazon · Proprietary                               | 1261±5             |  19,372 | $0.06/$0.24  | 300K      |
 |    230 |        222233 | gemini-1.5-flash-8b-001Google · Proprietary                             | 1259±4             |  35,558 | $0.07/$0.30  | 1M        |
-|    231 |        225233 | Azurephi-4Microsoft · MIT                                               | 1256±5             |  24,126 | $0.06/$0.14  | 16.4K     |
+|    231 |        225233 | Azurephi-4Microsoft · MIT                                               | 1256±5             |  24,126 | $0.07/$0.14  | 16.4K     |
 |    232 |        222239 | olmo-2-0325-32b-instructAi2 · Apache-2.0                                | 1252±11            |   3,334 | $0.05/$0.20  | 128K      |
 |    233 |        229238 | Coherecommand-r-08-2024Cohere · CC-BY-NC-4.0                            | 1250±7             |  10,140 | $0.15/$0.60  | 128K      |
 |    234 |        232242 | mistral-large-2402Mistral · Proprietary                                 | 1243±5             |  62,436 | $4/$12       | 32K       |
