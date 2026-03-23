@@ -2,7 +2,7 @@
 
 这是一个基于 Chatbot Arena (lmarena.ai) 数据的排行榜，通过自动化流程生成。
 
-> **数据更新时间**: 2026-03-22 08:11:05 UTC / 2026-03-22 16:11:05 CST (北京时间)
+> **数据更新时间**: 2026-03-23 08:23:35 UTC / 2026-03-23 16:23:35 CST (北京时间)
 
 ## 排行榜
 
@@ -70,9 +70,9 @@
 |     60 |          4577 | qwen3.5-122b-a10bAlibaba · Apache 2.0                                   | 1417±7             |   6,946 | $0.26/$2.08  | 262.1K    |
 |     61 |          4776 | MoonshotAIkimi-k2-0711-previewMoonshot · Modified MIT                   | 1417±5             |  28,082 | $0.60/$2.50  | 131.1K    |
 |     62 |          4577 | deepseek-v3.1-thinkingDeepSeek · MIT                                    | 1417±7             |  11,885 | $1.23/$4.94  | N/A       |
-|     63 |          4485 | deepseek-v3.1-terminus-thinkingDeepSeek · MIT                           | 1416±10            |   3,497 | $0.21/$0.78  | 163.8K    |
+|     63 |          4485 | deepseek-v3.1-terminus-thinkingDeepSeek · MIT                           | 1416±10            |   3,497 | $0.21/$0.79  | 163.8K    |
 |     64 |          4876 | mistral-large-3Mistral · Apache 2.0                                     | 1416±4             |  33,200 | $0.50/$1.50  | N/A       |
-|     65 |          4587 | deepseek-v3.1-terminusDeepSeek · MIT                                    | 1416±10            |   3,736 | $0.21/$0.78  | 163.8K    |
+|     65 |          4587 | deepseek-v3.1-terminusDeepSeek · MIT                                    | 1416±10            |   3,736 | $0.21/$0.79  | 163.8K    |
 |     66 |          4680 | qwen3-vl-235b-a22b-instructAlibaba · Apache 2.0                         | 1415±6             |  11,645 | $0.20/$0.88  | 262.1K    |
 |     67 |          4589 | amazon-nova-experimental-chat-26-01-10Amazon · Proprietary              | 1414±10            |   3,439 | N/A          | N/A       |
 |     68 |          5479 | gpt-4.1-2025-04-14OpenAI · Proprietary                                  | 1413±4             |  51,831 | $2/$8        | 1M        |
