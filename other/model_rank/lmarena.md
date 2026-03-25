@@ -2,7 +2,7 @@
 
 这是一个基于 Chatbot Arena (lmarena.ai) 数据的排行榜，通过自动化流程生成。
 
-> **数据更新时间**: 2026-03-24 08:18:54 UTC / 2026-03-24 16:18:54 CST (北京时间)
+> **数据更新时间**: 2026-03-25 08:18:42 UTC / 2026-03-25 16:18:42 CST (北京时间)
 
 ## 排行榜
 
@@ -28,7 +28,7 @@
 |     18 |          1227 | Bytedancedola-seed-2.0-previewBytedance · Proprietary                   | 1462±6Preliminary  |  10,651 | N/A          | N/A       |
 |     19 |          1323 | grok-4.1xAI · Proprietary                                               | 1461±4             |  47,757 | $0.20/$0.50  | N/A       |
 |     20 |          1329 | gpt-5.1-highOpenAI · Proprietary                                        | 1455±4             |  40,759 | $1.25/$10    | 400K      |
-|     21 |          1332 | glm-5Z.ai · MIT                                                         | 1455±6             |  11,093 | $0.72/$2.30  | 80K       |
+|     21 |          1332 | glm-5Z.ai · MIT                                                         | 1455±6             |  11,093 | $1/$3.20     | 202.8K    |
 |     22 |          1533 | MoonshotAIkimi-k2.5-thinkingMoonshot · Modified MIT                     | 1453±5             |  16,262 | $0.60/$3     | N/A       |
 |     23 |          1732 | Anthropicclaude-sonnet-4-5-20250929Anthropic · Proprietary              | 1453±3             |  53,556 | $3/$15       | 200K      |
 |     24 |          1732 | Anthropicclaude-sonnet-4-5-20250929-thinking-32kAnthropic · Proprietary | 1453±3             |  55,811 | $3/$15       | 200K      |
