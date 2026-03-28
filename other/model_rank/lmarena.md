@@ -2,7 +2,7 @@
 
 这是一个基于 Chatbot Arena (lmarena.ai) 数据的排行榜，通过自动化流程生成。
 
-> **数据更新时间**: 2026-03-27 08:19:18 UTC / 2026-03-27 16:19:18 CST (北京时间)
+> **数据更新时间**: 2026-03-28 08:14:41 UTC / 2026-03-28 16:14:41 CST (北京时间)
 
 ## 排行榜
 
@@ -49,7 +49,7 @@
 |     39 |          3046 | gemini-3.1-flash-lite-previewGoogle · Proprietary                       | 1438±6             |  11,945 | $0.25/$1.50  | 1M        |
 |     40 |          3349 | qwen3-max-previewAlibaba · Proprietary                                  | 1435±5             |  27,958 | $0.78/$3.90  | 262.1K    |
 |     41 |          3451 | gpt-5-highOpenAI · Proprietary                                          | 1434±5             |  32,259 | $1.25/$10    | 400K      |
-|     42 |          3356 | MoonshotAIkimi-k2.5-instantMoonshot · Modified MIT                      | 1433±7             |   8,232 | $0.45/$2.20  | 262.1K    |
+|     42 |          3356 | MoonshotAIkimi-k2.5-instantMoonshot · Modified MIT                      | 1433±7             |   8,232 | $0.45/$2.22  | 262.1K    |
 |     43 |          3855 | o3-2025-04-16OpenAI · Proprietary                                       | 1431±4             |  60,188 | $2/$8        | 200K      |
 |     44 |          3856 | grok-4-1-fast-reasoningxAI · Proprietary                                | 1431±4             |  38,588 | $0.20/$0.50  | 2M        |
 |     45 |          3957 | MoonshotAIkimi-k2-thinking-turboMoonshot · Modified MIT                 | 1430±4             |  42,603 | $1.15/$8     | 262.1K    |
