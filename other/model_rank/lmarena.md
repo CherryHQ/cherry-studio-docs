@@ -2,7 +2,7 @@
 
 这是一个基于 Chatbot Arena (lmarena.ai) 数据的排行榜，通过自动化流程生成。
 
-> **数据更新时间**: 2026-03-28 08:14:41 UTC / 2026-03-28 16:14:41 CST (北京时间)
+> **数据更新时间**: 2026-03-29 08:14:53 UTC / 2026-03-29 16:14:53 CST (北京时间)
 
 ## 排行榜
 
@@ -49,7 +49,7 @@
 |     39 |          3046 | gemini-3.1-flash-lite-previewGoogle · Proprietary                       | 1438±6             |  11,945 | $0.25/$1.50  | 1M        |
 |     40 |          3349 | qwen3-max-previewAlibaba · Proprietary                                  | 1435±5             |  27,958 | $0.78/$3.90  | 262.1K    |
 |     41 |          3451 | gpt-5-highOpenAI · Proprietary                                          | 1434±5             |  32,259 | $1.25/$10    | 400K      |
-|     42 |          3356 | MoonshotAIkimi-k2.5-instantMoonshot · Modified MIT                      | 1433±7             |   8,232 | $0.45/$2.22  | 262.1K    |
+|     42 |          3356 | MoonshotAIkimi-k2.5-instantMoonshot · Modified MIT                      | 1433±7             |   8,232 | $0.42/$2.20  | 262.1K    |
 |     43 |          3855 | o3-2025-04-16OpenAI · Proprietary                                       | 1431±4             |  60,188 | $2/$8        | 200K      |
 |     44 |          3856 | grok-4-1-fast-reasoningxAI · Proprietary                                | 1431±4             |  38,588 | $0.20/$0.50  | 2M        |
 |     45 |          3957 | MoonshotAIkimi-k2-thinking-turboMoonshot · Modified MIT                 | 1430±4             |  42,603 | $1.15/$8     | 262.1K    |
@@ -85,7 +85,7 @@
 |     75 |          5787 | grok-4-0709xAI · Proprietary                                            | 1410±4             |  41,777 | $3/$15       | 256K      |
 |     76 |          6391 | Anthropicclaude-haiku-4-5-20251001Anthropic · Proprietary               | 1407±3             |  55,274 | $1/$5        | 200K      |
 |     77 |          5698 | Minimaxminimax-m2.7MiniMax · Proprietary                                | 1406±10Preliminary |   3,259 | $0.30/$1.20  | 204.8K    |
-|     78 |          6194 | Minimaxminimax-m2.5MiniMax · Modified MIT                               | 1406±6             |  13,000 | $0.20/$1.17  | 196.6K    |
+|     78 |          6194 | Minimaxminimax-m2.5MiniMax · Modified MIT                               | 1406±6             |  13,000 | $0.19/$1.15  | 196.6K    |
 |     79 |          5994 | qwen3.5-27bAlibaba · Apache 2.0                                         | 1405±7             |   8,055 | $0.20/$1.56  | 262.1K    |
 |     80 |          6794 | gemini-2.5-flash-preview-09-2025Google · Proprietary                    | 1405±4             |  33,171 | $0.30/$2.50  | 1M        |
 |     81 |          6594 | grok-4-fast-reasoningxAI · Proprietary                                  | 1405±5             |  18,901 | $0.20/$0.50  | 2M        |
