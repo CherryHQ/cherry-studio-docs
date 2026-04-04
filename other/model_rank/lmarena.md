@@ -2,7 +2,7 @@
 
 这是一个基于 Chatbot Arena (lmarena.ai) 数据的排行榜，通过自动化流程生成。
 
-> **数据更新时间**: 2026-04-03 08:21:09 UTC / 2026-04-03 16:21:09 CST (北京时间)
+> **数据更新时间**: 2026-04-04 08:15:44 UTC / 2026-04-04 16:15:44 CST (北京时间)
 
 ## 排行榜
 
@@ -34,7 +34,7 @@
 |     24 |          1638 | kimi-k2.5-thinkingMoonshot · Modified MIT                               | 1453±5            |  17,818 | $0.60/$3     | N/A       |
 |     25 |          1936 | Anthropicclaude-sonnet-4-5-20250929Anthropic · Proprietary              | 1453±3            |  56,199 | $3/$15       | 200K      |
 |     26 |          1936 | Anthropicclaude-sonnet-4-5-20250929-thinking-32kAnthropic · Proprietary | 1452±3            |  58,247 | $3/$15       | 200K      |
-|     27 |          1442 | gemma-4-31bGoogle · Apache 2.0                                          | 1452±9Preliminary |   4,679 | N/A          | N/A       |
+|     27 |          1442 | gemma-4-31bGoogle · Apache 2.0                                          | 1452±9Preliminary |   4,679 | $0.14/$0.40  | 262.1K    |
 |     28 |          1940 | ernie-5.0-0110Baidu · Proprietary                                       | 1450±5            |  20,836 | N/A          | N/A       |
 |     29 |          1942 | ernie-5.0-preview-1203Baidu · Proprietary                               | 1450±7            |   9,824 | N/A          | N/A       |
 |     30 |          1941 | qwen3.5-397b-a17bAlibaba · Apache 2.0                                   | 1449±6            |  12,994 | $0.39/$2.34  | 262.1K    |
@@ -53,7 +53,7 @@
 |     43 |          3250 | gemini-3.1-flash-lite-previewGoogle · Proprietary                       | 1438±6            |  13,569 | $0.25/$1.50  | 1M        |
 |     44 |          3552 | qwen3-max-previewAlibaba · Proprietary                                  | 1435±4            |  27,955 | $0.78/$3.90  | 262.1K    |
 |     45 |          3655 | gpt-5-highOpenAI · Proprietary                                          | 1434±5            |  32,246 | $1.25/$10    | 400K      |
-|     46 |          3561 | kimi-k2.5-instantMoonshot · Modified MIT                                | 1433±7            |   8,232 | $0.38/$1.91  | 262.1K    |
+|     46 |          3561 | kimi-k2.5-instantMoonshot · Modified MIT                                | 1433±7            |   8,232 | $0.38/$1.72  | 262.1K    |
 |     47 |          4159 | grok-4-1-fast-reasoningxAI · Proprietary                                | 1431±4            |  40,189 | $0.20/$0.50  | 2M        |
 |     48 |          4159 | o3-2025-04-16OpenAI · Proprietary                                       | 1431±4            |  60,179 | $2/$8        | 200K      |
 |     49 |          4262 | kimi-k2-thinking-turboMoonshot · Modified MIT                           | 1430±4            |  43,994 | $1.15/$8     | 262.1K    |
@@ -88,7 +88,7 @@
 |     78 |          6191 | grok-4-0709xAI · Proprietary                                            | 1410±4            |  41,766 | $3/$15       | 256K      |
 |     79 |          6289 | mistral-medium-2508Mistral · Proprietary                                | 1410±3            |  74,890 | $2.70/$8.10  | 32K       |
 |     80 |          6695 | Anthropicclaude-haiku-4-5-20251001Anthropic · Proprietary               | 1407±3            |  56,977 | $1/$5        | 200K      |
-|     81 |          6498 | minimax-m2.5MiniMax · Modified MIT                                      | 1406±5            |  14,615 | $0.12/$1     | 196.6K    |
+|     81 |          6498 | minimax-m2.5MiniMax · Modified MIT                                      | 1406±5            |  14,615 | $0.12/$0.99  | 196.6K    |
 |     82 |          7198 | gemini-2.5-flash-preview-09-2025Google · Proprietary                    | 1405±4            |  33,165 | $0.30/$2.50  | 1M        |
 |     83 |          6998 | grok-4-fast-reasoningxAI · Proprietary                                  | 1405±5            |  18,898 | $0.20/$0.50  | 2M        |
 |     84 |         66100 | qwen3.5-27bAlibaba · Apache 2.0                                         | 1404±6            |   9,564 | $0.20/$1.56  | 262.1K    |
