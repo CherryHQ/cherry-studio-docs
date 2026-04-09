@@ -2,7 +2,7 @@
 
 这是一个基于 Chatbot Arena (lmarena.ai) 数据的排行榜，通过自动化流程生成。
 
-> **数据更新时间**: 2026-04-08 08:30:03 UTC / 2026-04-08 16:30:03 CST (北京时间)
+> **数据更新时间**: 2026-04-09 08:36:09 UTC / 2026-04-09 16:36:09 CST (北京时间)
 
 ## 排行榜
 
@@ -21,7 +21,7 @@
 |     11 |           616 | Anthropicclaude-opus-4-5-20251101-thinking-32kAnthropic · Proprietary   | 1473±4            |  37,446 | $5/$25       | 200K      |
 |     12 |           719 | grok-4.1-thinkingxAI · Proprietary                                      | 1471±4            |  46,799 | N/A          | N/A       |
 |     13 |           921 | Anthropicclaude-opus-4-5-20251101Anthropic · Proprietary                | 1468±4            |  46,454 | $5/$25       | 200K      |
-|     14 |           625 | glm-5.1Z.ai · MIT                                                       | 1467±9            |   3,743 | $1.26/$3.96  | 202.8K    |
+|     14 |           625 | glm-5.1Z.ai · MIT                                                       | 1467±9            |   3,743 | $1.40/$4.40  | 202.8K    |
 |     15 |           823 | qwen3.5-max-previewAlibaba · Proprietary                                | 1466±7Preliminary |   7,256 | N/A          | N/A       |
 |     16 |           823 | gpt-5.4OpenAI · Proprietary                                             | 1466±7            |   9,012 | $2.50/$15    | 1.1M      |
 |     17 |          1223 | gemini-3-flash (thinking-minimal)Google · Proprietary                   | 1464±4            |  32,409 | $0.50/$3     | 1M        |
@@ -120,7 +120,7 @@
 |    110 |         89121 | Tencenthunyuan-t1-20250711Tencent · Proprietary                         | 1387±9            |   4,735 | N/A          | N/A       |
 |    111 |         98118 | Anthropicclaude-3-7-sonnet-20250219-thinking-32kAnthropic · Proprietary | 1386±4            |  39,000 | $3/$15       | 200K      |
 |    112 |         97118 | mistral-medium-2505Mistral · Proprietary                                | 1386±5            |  33,446 | $0.40/$2     | 131.1K    |
-|    113 |         97119 | minimax-m2.1-previewMiniMax · MIT                                       | 1386±5            |  17,234 | $0.27/$0.95  | 196.6K    |
+|    113 |         97119 | minimax-m2.1-previewMiniMax · MIT                                       | 1386±5            |  17,234 | $0.29/$0.95  | 196.6K    |
 |    114 |         99121 | qwen3-30b-a3b-instruct-2507Alibaba · Apache 2.0                         | 1383±5            |  23,953 | $0.09/$0.30  | 262.1K    |
 |    115 |         98123 | Tencenthunyuan-turbos-20250416Tencent · Proprietary                     | 1383±6            |  10,779 | N/A          | N/A       |
 |    116 |        102122 | gpt-4.1-mini-2025-04-14OpenAI · Proprietary                             | 1382±4            |  39,558 | $0.40/$1.60  | 1M        |
