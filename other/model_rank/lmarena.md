@@ -2,7 +2,7 @@
 
 这是一个基于 Chatbot Arena (lmarena.ai) 数据的排行榜，通过自动化流程生成。
 
-> **数据更新时间**: 2026-04-13 08:46:59 UTC / 2026-04-13 16:46:59 CST (北京时间)
+> **数据更新时间**: 2026-04-14 08:38:10 UTC / 2026-04-14 16:38:10 CST (北京时间)
 
 ## 排行榜
 
@@ -92,7 +92,7 @@
 |     82 |          6896 | Anthropicclaude-haiku-4-5-20251001Anthropic · Proprietary               | 1408±3             |  59,484 | $1/$5        | 200K      |
 |     83 |         73100 | gemini-2.5-flash-preview-09-2025Google · Proprietary                    | 1405±4             |  33,139 | $0.30/$2.50  | 1M        |
 |     84 |         71100 | grok-4-fast-reasoningxAI · Proprietary                                  | 1404±5             |  18,883 | $0.20/$0.50  | 2M        |
-|     85 |         67102 | minimax-m2.7MiniMax · Proprietary                                       | 1404±7             |   6,784 | $0.30/$1.20  | 196.6K    |
+|     85 |         67102 | minimax-m2.7MiniMax · Modified MIT                                      | 1404±7             |   6,784 | $0.30/$1.20  | 196.6K    |
 |     86 |         73101 | minimax-m2.5MiniMax · Modified MIT                                      | 1403±5             |  17,217 | $0.12/$0.99  | 196.6K    |
 |     87 |         76101 | qwen3-235b-a22b-no-thinkingAlibaba · Apache 2.0                         | 1403±4             |  38,476 | $0.46/$1.82  | 131.1K    |
 |     88 |         75103 | qwen3.5-27bAlibaba · Apache 2.0                                         | 1402±6             |  11,893 | $0.20/$1.56  | 262.1K    |
