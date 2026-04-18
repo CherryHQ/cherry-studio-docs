@@ -21,6 +21,8 @@
 
 * [模型服务](pre-basic/providers/README.md)
   * [CherryAI (免费)](pre-basic/providers/cherryai/README.md)
+    * [DeepSeek V3.2](pre-basic/providers/cherryai/mian-fei-ti-yan-deepseek-v3.2-qi-jian-xi-shu-zhu-yi-li-moe.md)
+    * [智谱 GLM-4.6V](pre-basic/providers/cherryai/mian-fei-ti-yan-zhi-pu-glm-4.6v-shi-jue-qi-jian-duo-mo-tai-moe.md)
     * [智谱 GLM-4.5-Air](pre-basic/providers/cherryai/mian-fei-ti-yan-zhi-pu-glm4.5air-qing-liang-gao-xiao-xin-xuan-ze.md)
     * [Qwen3-8B](pre-basic/providers/cherryai/mian-fei-ti-yan-qwen38b-you-gui-ji-liu-dong-ti-gong.md)
   * [CherryIN](pre-basic/providers/cherryin-1.md)
