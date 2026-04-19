@@ -2,7 +2,7 @@
 
 这是一个基于 Chatbot Arena (lmarena.ai) 数据的排行榜，通过自动化流程生成。
 
-> **数据更新时间**: 2026-04-18 08:17:56 UTC / 2026-04-18 16:17:56 CST (北京时间)
+> **数据更新时间**: 2026-04-19 08:24:16 UTC / 2026-04-19 16:24:16 CST (北京时间)
 
 ## 排行榜
 
@@ -57,7 +57,7 @@
 |     47 |          4057 | qwen3-max-previewAlibaba · Proprietary                                  | 1435±5            |  27,782 | $0.78/$3.90  | 262.1K    |
 |     48 |          3764 | longcat-flash-chat-2602-expMeituan · Proprietary                        | 1434±7Preliminary |   7,739 | N/A          | N/A       |
 |     49 |          4159 | gpt-5-highOpenAI · Proprietary                                          | 1433±5            |  31,994 | $1.25/$10    | 400K      |
-|     50 |          4067 | kimi-k2.5-instantMoonshot · Modified MIT                                | 1432±7            |   8,217 | $0.60/$3     | 262.1K    |
+|     50 |          4067 | kimi-k2.5-instantMoonshot · Modified MIT                                | 1432±7            |   8,217 | $0.38/$1.72  | 262.1K    |
 |     51 |          4360 | grok-4-1-fast-reasoningxAI · Proprietary                                | 1432±4            |  44,414 | $0.20/$0.50  | 2M        |
 |     52 |          4563 | o3-2025-04-16OpenAI · Proprietary                                       | 1431±4            |  59,810 | $2/$8        | 200K      |
 |     53 |          4565 | kimi-k2-thinking-turboMoonshot · Modified MIT                           | 1430±3            |  47,731 | $1.15/$8     | 262.1K    |
@@ -198,7 +198,7 @@
 |    188 |        173203 | ring-flash-2.0Ant Group · MIT                                           | 1321±7            |   7,157 | N/A          | N/A       |
 |    189 |        173203 | Stepfunstep-1o-turbo-202506StepFun · Proprietary                        | 1321±7            |   9,045 | N/A          | N/A       |
 |    190 |        175203 | glm-4-plusZhipu AI · Proprietary                                        | 1319±5            |  26,126 | $0.44/$1.76  | 204.8K    |
-|    191 |        178203 | Metallama-3.3-70b-instructMeta · Llama-3.3                              | 1318±3            |  54,757 | $0.10/$0.32  | 131.1K    |
+|    191 |        178203 | Metallama-3.3-70b-instructMeta · Llama-3.3                              | 1318±3            |  54,757 | $0.12/$0.38  | 131.1K    |
 |    192 |        176205 | gemma-3n-e4b-itGoogle · Gemma                                           | 1318±5            |  22,620 | $0.06/$0.12  | 32.8K     |
 |    193 |        175206 | qwen-max-0919Alibaba · Qwen                                             | 1318±6            |  16,478 | $1.60/$6.40  | 32.8K     |
 |    194 |        175209 | gpt-oss-20bOpenAI · Apache 2.0                                          | 1318±6            |  10,639 | $0.03/$0.14  | 131.1K    |
