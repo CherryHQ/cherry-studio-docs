@@ -2,7 +2,7 @@
 
 这是一个基于 Chatbot Arena (lmarena.ai) 数据的排行榜，通过自动化流程生成。
 
-> **数据更新时间**: 2026-04-21 08:42:13 UTC / 2026-04-21 16:42:13 CST (北京时间)
+> **数据更新时间**: 2026-04-22 08:40:12 UTC / 2026-04-22 16:40:12 CST (北京时间)
 
 ## 排行榜
 
@@ -23,7 +23,7 @@
 |     13 |           820 | grok-4.20-multi-agent-beta-0309xAI · Proprietary                        | 1474±6            |  12,841 | $2/$6        | 2M        |
 |     14 |           820 | Anthropicclaude-opus-4-5-20251101-thinking-32kAnthropic · Proprietary   | 1473±4            |  37,167 | $5/$25       | 200K      |
 |     15 |          1121 | grok-4.1-thinkingxAI · Proprietary                                      | 1469±4            |  50,170 | N/A          | N/A       |
-|     16 |          1025 | glm-5.1Z.ai · MIT                                                       | 1469±7            |   7,927 | $0.70/$4.40  | 202.8K    |
+|     16 |          1025 | glm-5.1Z.ai · MIT                                                       | 1469±7            |   7,927 | $1.05/$3.50  | 202.8K    |
 |     17 |          1122 | Anthropicclaude-opus-4-5-20251101Anthropic · Proprietary                | 1469±4            |  50,046 | $5/$25       | 200K      |
 |     18 |          1125 | gpt-5.4OpenAI · Proprietary                                             | 1467±6            |  12,870 | $2.50/$15    | 1.1M      |
 |     19 |          1125 | qwen3.5-max-previewAlibaba · Proprietary                                | 1466±6Preliminary |  10,245 | N/A          | N/A       |
@@ -36,7 +36,7 @@
 |     26 |          2038 | gpt-5.1-highOpenAI · Proprietary                                        | 1455±4            |  40,884 | $1.25/$10    | 400K      |
 |     27 |          2440 | Anthropicclaude-sonnet-4-5-20250929-thinking-32kAnthropic · Proprietary | 1452±3            |  62,470 | $3/$15       | 200K      |
 |     28 |          2441 | Anthropicclaude-sonnet-4-5-20250929Anthropic · Proprietary              | 1452±3            |  60,425 | $3/$15       | 200K      |
-|     29 |          2044 | gemma-4-31bGoogle · Apache 2.0                                          | 1451±8Preliminary |   5,822 | $0.14/$0.40  | 262.1K    |
+|     29 |          2044 | gemma-4-31bGoogle · Apache 2.0                                          | 1451±8            |   5,822 | $0.14/$0.40  | 262.1K    |
 |     30 |          2341 | ernie-5.0-0110Baidu · Proprietary                                       | 1451±5            |  24,817 | N/A          | N/A       |
 |     31 |          2343 | gpt-5.3-chat-latestOpenAI · Proprietary                                 | 1451±5            |  17,274 | $1.75/$14    | 128K      |
 |     32 |          2442 | kimi-k2.5-thinkingMoonshot · Modified MIT                               | 1451±5            |  23,091 | $0.60/$3     | N/A       |
@@ -52,12 +52,12 @@
 |     42 |          2852 | glm-4.7Z.ai · MIT                                                       | 1443±6            |  12,138 | $0.38/$1.74  | 202.8K    |
 |     43 |          3352 | gpt-5.2-highOpenAI · Proprietary                                        | 1441±4            |  33,089 | $1.75/$14    | 400K      |
 |     44 |          3653 | gpt-5.2OpenAI · Proprietary                                             | 1439±4            |  30,208 | $1.75/$14    | 400K      |
-|     45 |          3055 | gemma-4-26b-a4bGoogle · Apache 2.0                                      | 1439±8Preliminary |   5,780 | N/A          | N/A       |
+|     45 |          3055 | gemma-4-26b-a4bGoogle · Apache 2.0                                      | 1439±8            |   5,780 | N/A          | N/A       |
 |     46 |          3753 | gpt-5.1OpenAI · Proprietary                                             | 1439±4            |  43,525 | $1.25/$10    | 400K      |
 |     47 |          3655 | gemini-3.1-flash-lite-previewGoogle · Proprietary                       | 1438±5            |  18,747 | $0.25/$1.50  | 1M        |
 |     48 |          4058 | qwen3-max-previewAlibaba · Proprietary                                  | 1435±5            |  27,770 | $0.78/$3.90  | 262.1K    |
 |     49 |          4260 | gpt-5-highOpenAI · Proprietary                                          | 1433±5            |  31,997 | $1.25/$10    | 400K      |
-|     50 |          4066 | longcat-flash-chat-2602-expMeituan · Proprietary                        | 1433±7Preliminary |   8,528 | N/A          | N/A       |
+|     50 |          4066 | longcat-flash-chat-2602-expMeituan · Proprietary                        | 1433±7            |   8,528 | N/A          | N/A       |
 |     51 |          4168 | kimi-k2.5-instantMoonshot · Modified MIT                                | 1432±7            |   8,208 | $0.44/$2     | 262.1K    |
 |     52 |          4461 | grok-4-1-fast-reasoningxAI · Proprietary                                | 1432±4            |  45,216 | $0.20/$0.50  | 2M        |
 |     53 |          4664 | o3-2025-04-16OpenAI · Proprietary                                       | 1431±4            |  59,810 | $2/$8        | 200K      |
@@ -200,7 +200,7 @@
 |    190 |        174204 | Stepfunstep-1o-turbo-202506StepFun · Proprietary                        | 1320±7            |   9,044 | N/A          | N/A       |
 |    191 |        176204 | glm-4-plusZhipu AI · Proprietary                                        | 1319±5            |  26,126 | $0.44/$1.76  | 204.8K    |
 |    192 |        177206 | gemma-3n-e4b-itGoogle · Gemma                                           | 1318±5            |  22,621 | $0.06/$0.12  | 32.8K     |
-|    193 |        179204 | Metallama-3.3-70b-instructMeta · Llama-3.3                              | 1318±3            |  54,758 | $0.12/$0.38  | 131.1K    |
+|    193 |        179204 | Metallama-3.3-70b-instructMeta · Llama-3.3                              | 1318±3            |  54,758 | $0.10/$0.32  | 131.1K    |
 |    194 |        176207 | qwen-max-0919Alibaba · Qwen                                             | 1318±6            |  16,478 | $1.60/$6.40  | 32.8K     |
 |    195 |        176210 | gpt-oss-20bOpenAI · Apache 2.0                                          | 1317±6            |  10,638 | $0.03/$0.14  | 131.1K    |
 |    196 |        179204 | gpt-4o-mini-2024-07-18OpenAI · Proprietary                              | 1317±4            |  68,710 | $0.15/$0.60  | 128K      |
