@@ -2,7 +2,7 @@
 
 这是一个基于 Chatbot Arena (lmarena.ai) 数据的排行榜，通过自动化流程生成。
 
-> **数据更新时间**: 2026-04-25 08:23:57 UTC / 2026-04-25 16:23:57 CST (北京时间)
+> **数据更新时间**: 2026-04-26 08:30:58 UTC / 2026-04-26 16:30:58 CST (北京时间)
 
 ## 排行榜
 
@@ -27,10 +27,10 @@
 |     17 |          1124 | Anthropicclaude-opus-4-5-20251101Anthropic · Proprietary                | 1469±4            |  51,295 | $5/$25       | 200K      |
 |     18 |          1128 | gpt-5.4OpenAI · Proprietary                                             | 1467±6            |  14,170 | $2.50/$15    | 1.1M      |
 |     19 |          1128 | qwen3.5-max-previewAlibaba · Proprietary                                | 1466±6Preliminary |  11,416 | N/A          | N/A       |
-|     20 |          1135 | deepseek-v4-proDeepSeek · MIT                                           | 1463±9Preliminary |   4,163 | $1.74/$3.48  | 1M        |
+|     20 |          1135 | deepseek-v4-proDeepSeek · MIT                                           | 1463±9Preliminary |   4,163 | $0.43/$0.87  | 1M        |
 |     21 |          1530 | Anthropicclaude-sonnet-4-6Anthropic · Proprietary                       | 1463±6            |  13,434 | $3/$15       | 1M        |
 |     22 |          1529 | gemini-3-flash (thinking-minimal)Google · Proprietary                   | 1463±4            |  37,596 | $0.50/$3     | 1M        |
-|     23 |          1238 | deepseek-v4-pro-thinkingDeepSeek · MIT                                  | 1462±9Preliminary |   3,783 | $1.74/$3.48  | 1M        |
+|     23 |          1238 | deepseek-v4-pro-thinkingDeepSeek · MIT                                  | 1462±9Preliminary |   3,783 | $0.43/$0.87  | 1M        |
 |     24 |          1730 | grok-4.1xAI · Proprietary                                               | 1461±4            |  55,513 | N/A          | N/A       |
 |     25 |          1733 | Bytedancedola-seed-2.0-proBytedance · Proprietary                       | 1460±5            |  22,902 | N/A          | N/A       |
 |     26 |          1543 | kimi-k2.6Moonshot · Modified MIT                                        | 1458±9            |   4,355 | $0.74/$4.66  | 256K      |
