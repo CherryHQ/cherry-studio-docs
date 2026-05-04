@@ -2,7 +2,7 @@
 
 这是一个基于 Chatbot Arena (lmarena.ai) 数据的排行榜，通过自动化流程生成。
 
-> **数据更新时间**: 2026-05-03 08:38:36 UTC / 2026-05-03 16:38:36 CST (北京时间)
+> **数据更新时间**: 2026-05-04 08:54:31 UTC / 2026-05-04 16:54:31 CST (北京时间)
 
 ## 排行榜
 
@@ -91,10 +91,10 @@
 |     81 |          6696 | qwen3.5-122b-a10bAlibaba · Apache 2.0                                   | 1418±5            |  18,236 | $0.26/$2.08  | 262.1K    |
 |     82 |          6598 | kimi-k2-0905-previewMoonshot · Modified MIT                             | 1418±6            |  11,792 | $0.60/$2.50  | 262.1K    |
 |     83 |          6598 | deepseek-v3.1DeepSeek · MIT                                             | 1418±6            |  14,989 | $1.23/$4.94  | N/A       |
-|     84 |         63106 | deepseek-v3.1-terminus-thinkingDeepSeek · MIT                           | 1417±10           |   3,468 | $0.21/$0.79  | 163.8K    |
+|     84 |         63106 | deepseek-v3.1-terminus-thinkingDeepSeek · MIT                           | 1417±10           |   3,468 | $0.27/$0.95  | 163.8K    |
 |     85 |          6796 | kimi-k2-0711-previewMoonshot · Modified MIT                             | 1417±5            |  27,647 | $0.60/$2.50  | 131.1K    |
 |     86 |         65101 | deepseek-v3.1-thinkingDeepSeek · MIT                                    | 1417±7            |  11,762 | $1.23/$4.94  | N/A       |
-|     87 |         64107 | deepseek-v3.1-terminusDeepSeek · MIT                                    | 1416±10           |   3,712 | $0.21/$0.79  | 163.8K    |
+|     87 |         64107 | deepseek-v3.1-terminusDeepSeek · MIT                                    | 1416±10           |   3,712 | $0.27/$0.95  | 163.8K    |
 |     88 |         67101 | qwen3-vl-235b-a22b-instructAlibaba · Apache 2.0                         | 1415±6            |  11,530 | $0.20/$0.88  | 262.1K    |
 |     89 |         65109 | amazon-nova-experimental-chat-26-01-10Amazon · Proprietary              | 1415±10           |   3,411 | N/A          | N/A       |
 |     90 |          7299 | mistral-large-3Mistral · Apache 2.0                                     | 1414±4            |  41,333 | $0.50/$1.50  | N/A       |
@@ -123,7 +123,7 @@
 |    113 |         89135 | Tencenthunyuan-vision-1.5-thinkingTencent · Proprietary                 | 1396±12           |   2,218 | N/A          | N/A       |
 |    114 |         99130 | qwen3-vl-235b-a22b-thinkingAlibaba · Apache 2.0                         | 1396±7            |   7,952 | $0.26/$2.60  | 131.1K    |
 |    115 |         99135 | amazon-nova-experimental-chat-12-10Amazon · Proprietary                 | 1395±10           |   3,691 | N/A          | N/A       |
-|    116 |        102130 | qwen3.5-35b-a3bAlibaba · Apache 2.0                                     | 1395±5            |  18,465 | $0.16/$1.30  | 262.1K    |
+|    116 |        102130 | qwen3.5-35b-a3bAlibaba · Apache 2.0                                     | 1395±5            |  18,465 | $0.15/$1     | 262.1K    |
 |    117 |        103128 | deepseek-v3-0324DeepSeek · MIT                                          | 1395±4            |  45,541 | $3/$4.50     | 32.8K     |
 |    118 |        107132 | mimo-v2-flash (non-thinking)Xiaomi · MIT                                | 1392±4            |  36,053 | $0.09/$0.29  | 262.1K    |
 |    119 |        105134 | mai-1-previewMicrosoft AI · Proprietary                                 | 1392±5            |  17,900 | N/A          | N/A       |
@@ -200,7 +200,7 @@
 |    190 |        156227 | molmo-2-8bAi2 · Apache 2.0                                              | 1329±21           |     802 | $0.20/$0.20  | 36.9K     |
 |    191 |        176207 | 01.AIyi-lightning01 AI · Proprietary                                    | 1328±5            |  27,332 | N/A          | N/A       |
 |    192 |        166218 | llama-3.3-nemotron-49b-super-v1Nvidia · Nvidia                          | 1327±12           |   2,218 | N/A          | N/A       |
-|    193 |        179208 | qwen3-30b-a3bAlibaba · Apache 2.0                                       | 1327±5            |  26,499 | $0.08/$0.28  | 41K       |
+|    193 |        179208 | qwen3-30b-a3bAlibaba · Apache 2.0                                       | 1327±5            |  26,499 | $0.09/$0.45  | 41K       |
 |    194 |        181208 | Metallama-4-maverick-17b-128e-instructMeta · Llama 4                    | 1327±4            |  39,997 | $0.63/$1.80  | 131.1K    |
 |    195 |        174218 | Tencenthunyuan-large-2025-02-10Tencent · Proprietary                    | 1326±10           |   3,738 | N/A          | N/A       |
 |    196 |        188214 | gpt-4-turbo-2024-04-09OpenAI · Proprietary                              | 1324±4            |  98,114 | $10/$30      | 128K      |
