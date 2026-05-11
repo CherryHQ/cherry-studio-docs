@@ -2,7 +2,7 @@
 
 这是一个基于 Chatbot Arena (lmarena.ai) 数据的排行榜，通过自动化流程生成。
 
-> **数据更新时间**: 2026-05-10 08:40:56 UTC / 2026-05-10 16:40:56 CST (北京时间)
+> **数据更新时间**: 2026-05-11 09:14:55 UTC / 2026-05-11 17:14:55 CST (北京时间)
 
 ## 排行榜
 
@@ -70,7 +70,7 @@
 |     60 |          5174 | longcat-flash-chat-2602-expMeituan · Proprietary                        | 1434±6            |  13,311 | N/A          | N/A       |
 |     61 |          5273 | gpt-5-highOpenAI · Proprietary                                          | 1434±5            |  31,963 | $1.25/$10    | 400K      |
 |     62 |          4787 | deepseek-v4-flashDeepSeek · MIT                                         | 1433±9            |   3,506 | $0.14/$0.28  | 1M        |
-|     63 |          5283 | kimi-k2.5-instantMoonshot · Modified MIT                                | 1432±7            |   8,207 | $0.44/$2     | 262.1K    |
+|     63 |          5283 | kimi-k2.5-instantMoonshot · Modified MIT                                | 1432±7            |   8,207 | $0.40/$1.98  | 262.1K    |
 |     64 |          5575 | grok-4-1-fast-reasoningxAI · Proprietary                                | 1432±3            |  50,028 | $0.20/$0.50  | 2M        |
 |     65 |          5578 | o3-2025-04-16OpenAI · Proprietary                                       | 1431±4            |  59,783 | $2/$8        | 200K      |
 |     66 |          5780 | kimi-k2-thinking-turboMoonshot · Modified MIT                           | 1430±3            |  52,935 | $1.15/$8     | 262.1K    |
