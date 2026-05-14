@@ -2,7 +2,7 @@
 
 这是一个基于 Chatbot Arena (lmarena.ai) 数据的排行榜，通过自动化流程生成。
 
-> **数据更新时间**: 2026-05-13 09:06:40 UTC / 2026-05-13 17:06:40 CST (北京时间)
+> **数据更新时间**: 2026-05-14 09:00:43 UTC / 2026-05-14 17:00:43 CST (北京时间)
 
 ## 排行榜
 
@@ -62,13 +62,13 @@
 |     52 |          3764 | glm-4.7Z.ai · MIT                                                       | 1443±6            |  12,135 | $0.40/$1.75  | 202.8K    |
 |     53 |          4364 | gpt-5.2-highOpenAI · Proprietary                                        | 1441±4            |  39,499 | $1.75/$14    | 400K      |
 |     54 |          4664 | gpt-5.1OpenAI · Proprietary                                             | 1439±4            |  43,504 | $1.25/$10    | 400K      |
-|     55 |          4168 | deepseek-v4-flash-thinkingDeepSeek · MIT                                | 1438±7            |   7,882 | $0.14/$0.28  | 1M        |
+|     55 |          4168 | deepseek-v4-flash-thinkingDeepSeek · MIT                                | 1438±7            |   7,882 | $0.13/$0.25  | 1M        |
 |     56 |          4070 | gemma-4-26b-a4bGoogle · Apache 2.0                                      | 1438±8            |   5,777 | N/A          | N/A       |
 |     57 |          4767 | gemini-3.1-flash-lite-previewGoogle · Proprietary                       | 1438±5            |  25,108 | $0.25/$1.50  | 1M        |
 |     58 |          4967 | gpt-5.2OpenAI · Proprietary                                             | 1437±4            |  36,618 | $1.75/$14    | 400K      |
 |     59 |          5171 | qwen3-max-previewAlibaba · Proprietary                                  | 1435±5            |  27,747 | $0.78/$3.90  | 262.1K    |
 |     60 |          5173 | longcat-flash-chat-2602-expMeituan · Proprietary                        | 1435±5            |  14,633 | N/A          | N/A       |
-|     61 |          4978 | deepseek-v4-flashDeepSeek · MIT                                         | 1434±7            |   7,823 | $0.14/$0.28  | 1M        |
+|     61 |          4978 | deepseek-v4-flashDeepSeek · MIT                                         | 1434±7            |   7,823 | $0.13/$0.25  | 1M        |
 |     62 |          5273 | gpt-5-highOpenAI · Proprietary                                          | 1434±5            |  31,957 | $1.25/$10    | 400K      |
 |     63 |          5284 | kimi-k2.5-instantMoonshot · Modified MIT                                | 1432±7            |   8,207 | $0.40/$1.90  | 262.1K    |
 |     64 |          5575 | grok-4-1-fast-reasoningxAI · Proprietary                                | 1431±3            |  51,384 | $0.20/$0.50  | 2M        |
@@ -76,7 +76,7 @@
 |     66 |          5579 | kimi-k2-thinking-turboMoonshot · Modified MIT                           | 1430±3            |  54,232 | $1.15/$8     | 262.1K    |
 |     67 |          5291 | amazon-nova-experimental-chat-26-02-10Amazon · Proprietary              | 1428±10           |   3,422 | N/A          | N/A       |
 |     68 |          5888 | gpt-5-chatOpenAI · Proprietary                                          | 1426±4            |  31,604 | $1.25/$10    | 128K      |
-|     69 |          6090 | glm-4.6Z.ai · MIT                                                       | 1426±4            |  35,681 | $0.39/$1.90  | 204.8K    |
+|     69 |          6090 | glm-4.6Z.ai · MIT                                                       | 1426±4            |  35,681 | $0.43/$1.74  | 202.8K    |
 |     70 |          5791 | mimo-v2.5Xiaomi · MIT                                                   | 1425±7            |   7,595 | $0.40/$2     | 1M        |
 |     71 |          5891 | deepseek-v3.2-exp-thinkingDeepSeek · MIT                                | 1425±7            |   9,074 | $0.27/$0.41  | 163.8K    |
 |     72 |          5991 | qwen3-max-2025-09-23Alibaba · Proprietary                               | 1424±6            |   9,174 | $0.78/$3.90  | 262.1K    |
