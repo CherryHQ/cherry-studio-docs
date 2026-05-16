@@ -2,7 +2,7 @@
 
 这是一个基于 Chatbot Arena (lmarena.ai) 数据的排行榜，通过自动化流程生成。
 
-> **数据更新时间**: 2026-05-15 09:09:21 UTC / 2026-05-15 17:09:21 CST (北京时间)
+> **数据更新时间**: 2026-05-16 08:38:52 UTC / 2026-05-16 16:38:52 CST (北京时间)
 
 ## 排行榜
 
@@ -60,7 +60,7 @@
 |     50 |          3661 | gpt-4.5-preview-2025-02-27OpenAI · Proprietary                          | 1444±6            |  14,547 | $75/$150     | 128K      |
 |     51 |          3959 | chatgpt-4o-latest-20250326OpenAI · Proprietary                          | 1443±3            |  82,480 | $5/$15       | 128K      |
 |     52 |          3864 | glm-4.7Z.ai · MIT                                                       | 1443±6            |  12,136 | $0.40/$1.75  | 202.8K    |
-|     53 |          3966 | deepseek-v4-flash-thinkingDeepSeek · MIT                                | 1441±7            |   8,563 | $0.13/$0.25  | 1M        |
+|     53 |          3966 | deepseek-v4-flash-thinkingDeepSeek · MIT                                | 1441±7            |   8,563 | $0.11/$0.22  | 1M        |
 |     54 |          4464 | gpt-5.2-highOpenAI · Proprietary                                        | 1440±4            |  40,309 | $1.75/$14    | 400K      |
 |     55 |          4664 | gpt-5.1OpenAI · Proprietary                                             | 1439±4            |  43,500 | $1.25/$10    | 400K      |
 |     56 |          4666 | gemini-3.1-flash-lite-previewGoogle · Proprietary                       | 1438±5            |  25,946 | $0.25/$1.50  | 1M        |
@@ -68,7 +68,7 @@
 |     58 |          4968 | gpt-5.2OpenAI · Proprietary                                             | 1436±4            |  37,483 | $1.75/$14    | 400K      |
 |     59 |          5171 | qwen3-max-previewAlibaba · Proprietary                                  | 1435±5            |  27,748 | $0.78/$3.90  | 262.1K    |
 |     60 |          5173 | longcat-flash-chat-2602-expMeituan · Proprietary                        | 1434±5            |  15,412 | N/A          | N/A       |
-|     61 |          4876 | deepseek-v4-flashDeepSeek · MIT                                         | 1434±7            |   8,454 | $0.13/$0.25  | 1M        |
+|     61 |          4876 | deepseek-v4-flashDeepSeek · MIT                                         | 1434±7            |   8,454 | $0.11/$0.22  | 1M        |
 |     62 |          5272 | gpt-5-highOpenAI · Proprietary                                          | 1434±5            |  31,960 | $1.25/$10    | 400K      |
 |     63 |          5282 | kimi-k2.5-instantMoonshot · Modified MIT                                | 1432±7            |   8,203 | $0.40/$1.90  | 262.1K    |
 |     64 |          5576 | grok-4-1-fast-reasoningxAI · Proprietary                                | 1431±3            |  52,196 | $0.20/$0.50  | 2M        |
@@ -107,7 +107,7 @@
 |     97 |         80110 | grok-4-0709xAI · Proprietary                                            | 1410±4            |  41,417 | $3/$15       | 256K      |
 |     98 |         81107 | mistral-medium-2508Mistral · Proprietary                                | 1410±3            |  86,567 | $2.70/$8.10  | 32K       |
 |     99 |         81107 | Anthropicclaude-haiku-4-5-20251001Anthropic · Proprietary               | 1410±3            |  69,160 | $1/$5        | 200K      |
-|    100 |         80112 | minimax-m2.7MiniMax · Modified MIT                                      | 1408±5            |  15,500 | $0.28/$1.20  | 196.6K    |
+|    100 |         80112 | minimax-m2.7MiniMax · Modified MIT                                      | 1408±5            |  15,500 | $0.28/$1.20  | 204.8K    |
 |    101 |         81111 | qwen3.5-27bAlibaba · Apache 2.0                                         | 1408±5            |  20,914 | $0.20/$1.56  | 262.1K    |
 |    102 |         82115 | gpt-5.4-nano-highOpenAI · Proprietary                                   | 1407±5            |  16,660 | $0.20/$1.25  | 400K      |
 |    103 |         89116 | gemini-2.5-flash-preview-09-2025Google · Proprietary                    | 1405±4            |  32,926 | $0.30/$2.50  | 1M        |
@@ -116,17 +116,17 @@
 |    106 |         98120 | o1-2024-12-17OpenAI · Proprietary                                       | 1402±4            |  27,807 | $15/$60      | 200K      |
 |    107 |         96120 | qwen3-next-80b-a3b-instructAlibaba · Apache 2.0                         | 1402±5            |  22,885 | $0.09/$1.10  | 262.1K    |
 |    108 |         92122 | longcat-flash-chatMeituan · MIT                                         | 1401±6            |  11,406 | $0.20/$0.80  | 131.1K    |
-|    109 |         98127 | qwen3-235b-a22b-thinking-2507Alibaba · Apache 2.0                       | 1399±7            |   9,001 | $0.15/$1.50  | 131.1K    |
+|    109 |         98127 | qwen3-235b-a22b-thinking-2507Alibaba · Apache 2.0                       | 1399±7            |   9,001 | $0.15/$1.50  | 262.1K    |
 |    110 |        101123 | Anthropicclaude-sonnet-4-20250514-thinking-32kAnthropic · Proprietary   | 1399±4            |  35,129 | $3/$15       | 1M        |
 |    111 |        102125 | qwen3.5-35b-a3bAlibaba · Apache 2.0                                     | 1398±5            |  21,851 | $0.14/$1     | 262.1K    |
-|    112 |        102127 | deepseek-r1DeepSeek · MIT                                               | 1398±5            |  18,524 | $0.70/$2.50  | 64K       |
+|    112 |        102127 | deepseek-r1DeepSeek · MIT                                               | 1398±5            |  18,524 | $0.70/$2.50  | 163.8K    |
 |    113 |        103128 | qwen3.5-flashAlibaba · Proprietary                                      | 1397±5            |  21,669 | N/A          | N/A       |
 |    114 |         91135 | Tencenthunyuan-vision-1.5-thinkingTencent · Proprietary                 | 1396±12           |   2,219 | N/A          | N/A       |
 |    115 |        102133 | qwen3-vl-235b-a22b-thinkingAlibaba · Apache 2.0                         | 1396±7            |   7,945 | $0.26/$2.60  | 131.1K    |
 |    116 |        104129 | deepseek-v3-0324DeepSeek · MIT                                          | 1395±4            |  45,525 | $3/$4.50     | 32.8K     |
 |    117 |        104130 | Stepfunstep-3.5-flashStepFun · Apache 2.0                               | 1395±4            |  27,034 | $0.10/$0.30  | 262.1K    |
 |    118 |        100135 | amazon-nova-experimental-chat-12-10Amazon · Proprietary                 | 1395±10           |   3,685 | N/A          | N/A       |
-|    119 |        106131 | minimax-m2.5MiniMax · Modified MIT                                      | 1394±4            |  27,143 | $0.15/$1.15  | 196.6K    |
+|    119 |        106131 | minimax-m2.5MiniMax · Modified MIT                                      | 1394±4            |  27,143 | $0.15/$1.15  | 204.8K    |
 |    120 |        108131 | mimo-v2-flash (non-thinking)Xiaomi · MIT                                | 1393±4            |  39,257 | $0.10/$0.30  | 262.1K    |
 |    121 |        106134 | mai-1-previewMicrosoft AI · Proprietary                                 | 1393±5            |  17,892 | N/A          | N/A       |
 |    122 |        109135 | gpt-5-mini-highOpenAI · Proprietary                                     | 1390±5            |  27,051 | $0.25/$2     | 400K      |
@@ -138,7 +138,7 @@
 |    128 |        108140 | Tencenthunyuan-t1-20250711Tencent · Proprietary                         | 1387±9            |   4,712 | N/A          | N/A       |
 |    129 |        115136 | Anthropicclaude-3-7-sonnet-20250219-thinking-32kAnthropic · Proprietary | 1387±4            |  38,840 | $3/$15       | 200K      |
 |    130 |        114136 | mistral-medium-2505Mistral · Proprietary                                | 1387±5            |  33,239 | $0.40/$2     | 131.1K    |
-|    131 |        116137 | minimax-m2.1-previewMiniMax · MIT                                       | 1385±5            |  17,153 | $0.29/$0.95  | 196.6K    |
+|    131 |        116137 | minimax-m2.1-previewMiniMax · MIT                                       | 1385±5            |  17,153 | $0.29/$0.95  | 204.8K    |
 |    132 |        119140 | qwen3-30b-a3b-instruct-2507Alibaba · Apache 2.0                         | 1383±5            |  23,760 | $0.09/$0.30  | 262.1K    |
 |    133 |        118142 | Tencenthunyuan-turbos-20250416Tencent · Proprietary                     | 1382±6            |  10,722 | N/A          | N/A       |
 |    134 |        120141 | gpt-4.1-mini-2025-04-14OpenAI · Proprietary                             | 1382±4            |  39,355 | $0.40/$1.60  | 1M        |
@@ -152,13 +152,13 @@
 |    142 |        134148 | glm-4.5-airZ.ai · MIT                                                   | 1373±4            |  31,114 | $0.13/$0.85  | 131.1K    |
 |    143 |        136148 | Anthropicclaude-3-5-sonnet-20241022Anthropic · Proprietary              | 1372±3            |  88,355 | $3/$15       | 200K      |
 |    144 |        136152 | Anthropicclaude-3-7-sonnet-20250219Anthropic · Proprietary              | 1371±4            |  43,197 | $3/$15       | 200K      |
-|    145 |        136154 | qwen3-next-80b-a3b-thinkingAlibaba · Apache 2.0                         | 1369±6            |  13,708 | $0.10/$0.78  | 131.1K    |
+|    145 |        136154 | qwen3-next-80b-a3b-thinkingAlibaba · Apache 2.0                         | 1369±6            |  13,708 | $0.10/$0.78  | 262.1K    |
 |    146 |        136156 | glm-4.7-flashZ.ai · MIT                                                 | 1368±6            |  11,748 | $0.06/$0.40  | 202.8K    |
 |    147 |        136155 | amazon-nova-experimental-chat-11-10Amazon · Proprietary                 | 1367±4            |  25,422 | N/A          | N/A       |
 |    148 |        140156 | gemma-3-27b-itGoogle · Gemma                                            | 1366±4            |  47,566 | $0.08/$0.16  | 131.1K    |
 |    149 |        143159 | minimax-m1MiniMax · Apache 2.0                                          | 1364±4            |  35,220 | $0.40/$2.20  | 1M        |
 |    150 |        142161 | o3-mini-highOpenAI · Proprietary                                        | 1363±5            |  18,589 | $1.10/$4.40  | 200K      |
-|    151 |        143165 | grok-3-mini-highxAI · Proprietary                                       | 1362±5            |  16,977 | $0.30/$0.50  | 131.1K    |
+|    151 |        143165 | grok-3-mini-highxAI · Proprietary                                       | 1362±5            |  16,977 | $0.25/$1.27  | N/A       |
 |    152 |        142170 | nvidia-nemotron-3-super-120b-a12bNvidia · NVIDIA Open Model             | 1361±7            |   7,406 | N/A          | N/A       |
 |    153 |        145166 | gemini-2.0-flash-001Google · Proprietary                                | 1360±4            |  43,763 | $0.10/$0.40  | 1M        |
 |    154 |        146171 | deepseek-v3DeepSeek · DeepSeek                                          | 1358±5            |  21,770 | $1.14/$4.56  | N/A       |
@@ -176,10 +176,10 @@
 |    166 |        150190 | amazon-nova-experimental-chat-10-09Amazon · Proprietary                 | 1347±11           |   2,840 | N/A          | N/A       |
 |    167 |        157181 | o3-miniOpenAI · Proprietary                                             | 1347±4            |  57,362 | $1.10/$4.40  | 200K      |
 |    168 |        151191 | mercury-2Inception AI · Proprietary                                     | 1347±11           |   3,124 | $0.25/$0.75  | 128K      |
-|    169 |        152190 | qwen3-32bAlibaba · Apache 2.0                                           | 1347±9            |   3,926 | $0.08/$0.28  | 41K       |
+|    169 |        152190 | qwen3-32bAlibaba · Apache 2.0                                           | 1347±9            |   3,926 | $0.08/$0.28  | 131.1K    |
 |    170 |        150193 | llama-3.1-nemotron-ultra-253b-v1Nvidia · Nvidia Open Model              | 1347±12           |   2,549 | $0.60/$1.80  | 131.1K    |
 |    171 |        155187 | ling-flash-2.0Ant Group · MIT                                           | 1346±7            |   7,014 | N/A          | N/A       |
-|    172 |        154189 | minimax-m2MiniMax · Apache 2.0                                          | 1346±8            |   6,872 | $0.26/$1     | 196.6K    |
+|    172 |        154189 | minimax-m2MiniMax · Apache 2.0                                          | 1346±8            |   6,872 | $0.26/$1     | 204.8K    |
 |    173 |        153190 | qwen-plus-0125Alibaba · Proprietary                                     | 1346±8            |   5,819 | $0.40/$1.20  | 131.1K    |
 |    174 |        159183 | gpt-4o-2024-05-13OpenAI · Proprietary                                   | 1345±3            | 112,881 | $5/$15       | 128K      |
 |    175 |        155193 | nvidia-llama-3.3-nemotron-super-49b-v1.5Nvidia · Nvidia Open            | 1343±10           |   3,344 | $0.10/$0.40  | 131.1K    |
@@ -201,7 +201,7 @@
 |    191 |        158228 | molmo-2-8bAi2 · Apache 2.0                                              | 1329±21           |     803 | $0.20/$0.20  | 36.9K     |
 |    192 |        179209 | 01.AIyi-lightning01 AI · Proprietary                                    | 1328±5            |  27,332 | N/A          | N/A       |
 |    193 |        167219 | llama-3.3-nemotron-49b-super-v1Nvidia · Nvidia                          | 1328±12           |   2,218 | N/A          | N/A       |
-|    194 |        180209 | qwen3-30b-a3bAlibaba · Apache 2.0                                       | 1327±5            |  26,505 | $0.09/$0.45  | 41K       |
+|    194 |        180209 | qwen3-30b-a3bAlibaba · Apache 2.0                                       | 1327±5            |  26,505 | $0.09/$0.45  | 131.1K    |
 |    195 |        182209 | Metallama-4-maverick-17b-128e-instructMeta · Llama 4                    | 1327±4            |  39,996 | $0.63/$1.80  | 131.1K    |
 |    196 |        175218 | Tencenthunyuan-large-2025-02-10Tencent · Proprietary                    | 1326±10           |   3,738 | N/A          | N/A       |
 |    197 |        189215 | gpt-4-turbo-2024-04-09OpenAI · Proprietary                              | 1324±4            |  98,114 | $10/$30      | 128K      |
@@ -291,7 +291,7 @@
 |    281 |        267286 | llama-3.1-tulu-3-8bAi2 · Llama 3.1                                      | 1220±11           |   2,896 | N/A          | N/A       |
 |    282 |        278287 | 01.AIyi-1.5-34b-chat01 AI · Apache-2.0                                  | 1212±5            |  24,146 | N/A          | N/A       |
 |    283 |        273289 | zephyr-orpo-141b-A35b-v0.1HuggingFace · Apache 2.0                      | 1212±11           |   4,652 | N/A          | N/A       |
-|    284 |        280287 | Metallama-3.1-8b-instructMeta · Llama 3.1 Community                     | 1211±4            |  49,605 | $0.02/$0.05  | 16.4K     |
+|    284 |        280287 | Metallama-3.1-8b-instructMeta · Llama 3.1 Community                     | 1211±4            |  49,605 | $0.02/$0.05  | 131.1K    |
 |    285 |        277293 | granite-3.1-8b-instructIBM · Apache 2.0                                 | 1208±11           |   3,090 | N/A          | N/A       |
 |    286 |        282293 | qwen1.5-32b-chatAlibaba · Qianwen LICENSE                               | 1203±6            |  21,741 | N/A          | N/A       |
 |    287 |        280295 | gpt-3.5-turbo-1106OpenAI · Proprietary                                  | 1202±9            |  16,619 | $1/$2        | 16.4K     |
@@ -317,7 +317,7 @@
 |    307 |        295315 | phi-3-small-8k-instructMicrosoft · MIT                                  | 1170±6            |  17,766 | $0.15/$0.60  | N/A       |
 |    308 |        295315 | Metallama-2-70b-chatMeta · Llama 2 Community                            | 1170±6            |  38,492 | $0.70/$2.80  | 4.1K      |
 |    309 |        295318 | starling-lm-7b-alphaUC Berkeley · CC-BY-NC-4.0                          | 1166±8            |  10,224 | N/A          | N/A       |
-|    310 |        297318 | Metallama-3.2-3b-instructMeta · Llama 3.2                               | 1166±8            |   7,936 | $0.05/$0.34  | 80K       |
+|    310 |        297318 | Metallama-3.2-3b-instructMeta · Llama 3.2                               | 1166±8            |   7,936 | $0.05/$0.34  | 131.1K    |
 |    311 |        295321 | nous-hermes-2-mixtral-8x7b-dpoNousResearch · Apache-2.0                 | 1164±12           |   3,777 | $0.90/$0.90  | N/A       |
 |    312 |        303328 | qwq-32b-previewAlibaba · Apache 2.0                                     | 1155±11           |   3,231 | $0.50/$1     | 16.4K     |
 |    313 |        308324 | granite-3.0-2b-instructIBM · Apache 2.0                                 | 1155±8            |   6,837 | N/A          | N/A       |
@@ -346,7 +346,7 @@
 |    336 |        329341 | gemma-1.1-2b-itGoogle · Gemma license                                   | 1114±8            |  10,854 | N/A          | N/A       |
 |    337 |        329341 | vicuna-7bLMSYS · Llama 2 Community                                      | 1114±9            |   6,923 | $0.20/$0.20  | N/A       |
 |    338 |        325342 | smollm2-1.7b-instructHuggingFace · Apache 2.0                           | 1113±14           |   2,199 | N/A          | N/A       |
-|    339 |        332342 | Metallama-3.2-1b-instructMeta · Llama 3.2                               | 1110±8            |   8,045 | $0.03/$0.20  | 60K       |
+|    339 |        332342 | Metallama-3.2-1b-instructMeta · Llama 3.2                               | 1110±8            |   8,045 | $0.03/$0.20  | 131.1K    |
 |    340 |        332342 | mistral-7b-instructMistral · Apache 2.0                                 | 1109±9            |   8,977 | $0.07/$0.28  | 4.1K      |
 |    341 |        332342 | Metallama-2-7b-chatMeta · Llama 2 Community                             | 1107±7            |  14,148 | $0.15/$0.15  | 4.1K      |
 |    342 |        337345 | gemma-2b-itGoogle · Gemma license                                       | 1091±12           |   4,780 | $0.10/$0.10  | N/A       |
