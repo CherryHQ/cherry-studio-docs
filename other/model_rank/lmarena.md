@@ -2,7 +2,7 @@
 
 这是一个基于 Chatbot Arena (lmarena.ai) 数据的排行榜，通过自动化流程生成。
 
-> **数据更新时间**: 2026-05-17 08:47:01 UTC / 2026-05-17 16:47:01 CST (北京时间)
+> **数据更新时间**: 2026-05-18 09:17:07 UTC / 2026-05-18 17:17:07 CST (北京时间)
 
 ## 排行榜
 
@@ -168,7 +168,7 @@
 |    158 |        151177 | Coherecommand-a-03-2025Cohere · CC-BY-NC-4.0                            | 1354±3            |  56,296 | $2.50/$10    | 256K      |
 |    159 |        149180 | glm-4.5vZ.ai · MIT                                                      | 1353±8            |   4,964 | $0.60/$1.80  | 65.5K     |
 |    160 |        151178 | gemini-2.0-flash-lite-preview-02-05Google · Proprietary                 | 1353±4            |  24,955 | $0.07/$0.30  | 1M        |
-|    161 |        151179 | gpt-oss-120bOpenAI · Apache 2.0                                         | 1353±4            |  30,660 | $0.04/$0.19  | 131.1K    |
+|    161 |        151179 | gpt-oss-120bOpenAI · Apache 2.0                                         | 1353±4            |  30,660 | $0.04/$0.18  | 131.1K    |
 |    162 |        153179 | gemini-1.5-pro-002Google · Proprietary                                  | 1351±3            |  55,606 | $3.50/$10.50 | 2.1M      |
 |    163 |        153181 | amazon-nova-experimental-chat-10-20Amazon · Proprietary                 | 1350±6            |  11,474 | N/A          | N/A       |
 |    164 |        149190 | Tencenthunyuan-turbos-20250226Tencent · Proprietary                     | 1348±12           |   2,220 | N/A          | N/A       |
