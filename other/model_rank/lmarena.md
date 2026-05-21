@@ -2,7 +2,7 @@
 
 这是一个基于 Chatbot Arena (lmarena.ai) 数据的排行榜，通过自动化流程生成。
 
-> **数据更新时间**: 2026-05-20 09:13:29 UTC / 2026-05-20 17:13:29 CST (北京时间)
+> **数据更新时间**: 2026-05-21 09:13:23 UTC / 2026-05-21 17:13:23 CST (北京时间)
 
 ## 排行榜
 
@@ -126,7 +126,7 @@
 |    116 |        104130 | qwen3.5-flashAlibaba · Proprietary                                      | 1396±5             |  23,305 | N/A          | N/A       |
 |    117 |        104134 | qwen3-vl-235b-a22b-thinkingAlibaba · Apache 2.0                         | 1396±7             |   7,941 | $0.26/$2.60  | 131.1K    |
 |    118 |        106130 | deepseek-v3-0324DeepSeek · MIT                                          | 1395±4             |  45,520 | $3/$4.50     | 32.8K     |
-|    119 |        106132 | Stepfunstep-3.5-flashStepFun · Apache 2.0                               | 1395±4             |  28,558 | $0.10/$0.30  | 262.1K    |
+|    119 |        106132 | Stepfunstep-3.5-flashStepFun · Apache 2.0                               | 1395±4             |  28,558 | $0.09/$0.30  | 262.1K    |
 |    120 |        102137 | amazon-nova-experimental-chat-12-10Amazon · Proprietary                 | 1395±10            |   3,683 | N/A          | N/A       |
 |    121 |        108133 | minimax-m2.5MiniMax · Modified MIT                                      | 1394±4             |  28,912 | $0.15/$1.15  | 204.8K    |
 |    122 |        110133 | mimo-v2-flash (non-thinking)Xiaomi · MIT                                | 1393±4             |  40,885 | $0.10/$0.30  | 262.1K    |
