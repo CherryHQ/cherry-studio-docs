@@ -2,7 +2,7 @@
 
 这是一个基于 Chatbot Arena (lmarena.ai) 数据的排行榜，通过自动化流程生成。
 
-> **数据更新时间**: 2026-05-21 09:13:23 UTC / 2026-05-21 17:13:23 CST (北京时间)
+> **数据更新时间**: 2026-05-22 09:11:16 UTC / 2026-05-22 17:11:16 CST (北京时间)
 
 ## 排行榜
 
@@ -21,7 +21,7 @@
 |     11 |           523 | gpt-5.5OpenAI · Proprietary                                             | 1478±6             |  10,294 | $5/$30       | 1.1M      |
 |     12 |           721 | grok-4.20-beta1xAI · Proprietary                                        | 1478±5             |  22,458 | N/A          | N/A       |
 |     13 |           822 | gpt-5.2-chat-latest-20260210OpenAI · Proprietary                        | 1477±4             |  27,988 | $1.75/$14    | 128K      |
-|     14 |           531 | qwen3.7-max-previewAlibaba · Proprietary                                | 1475±10Preliminary |   3,741 | N/A          | N/A       |
+|     14 |           531 | qwen3.7-max-previewAlibaba · Proprietary                                | 1475±10Preliminary |   3,741 | $2.50/$7.50  | 1M        |
 |     15 |           826 | grok-4.20-beta-0309-reasoningxAI · Proprietary                          | 1475±5             |  21,572 | $2/$6        | 2M        |
 |     16 |           826 | grok-4.20-multi-agent-beta-0309xAI · Proprietary                        | 1474±5             |  21,565 | $2/$6        | 2M        |
 |     17 |           827 | gemini-3-flashGoogle · Proprietary                                      | 1473±4             |  30,742 | $0.50/$3     | 1M        |
@@ -59,7 +59,7 @@
 |     49 |          3856 | gemini-2.5-proGoogle · Proprietary                                      | 1446±3             | 118,726 | $1.25/$10    | 1M        |
 |     50 |          3860 | qwen3.5-397b-a17bAlibaba · Apache 2.0                                   | 1445±4             |  25,861 | $0.39/$2.34  | 262.1K    |
 |     51 |          3863 | gpt-4.5-preview-2025-02-27OpenAI · Proprietary                          | 1444±6             |  14,547 | $75/$150     | 128K      |
-|     52 |          3864 | qwen3.6-plusAlibaba · Proprietary                                       | 1444±6             |  12,075 | $0.33/$1.95  | 1M        |
+|     52 |          3864 | qwen3.6-plusAlibaba · Proprietary                                       | 1444±6             |  12,075 | $0.18/$1.07  | 1M        |
 |     53 |          4060 | chatgpt-4o-latest-20250326OpenAI · Proprietary                          | 1443±3             |  82,481 | $5/$15       | 128K      |
 |     54 |          3866 | glm-4.7Z.ai · MIT                                                       | 1443±6             |  12,134 | $0.40/$1.75  | 202.8K    |
 |     55 |          4070 | deepseek-v4-flash-thinkingDeepSeek · MIT                                | 1440±6             |  10,115 | $0.11/$0.22  | 1M        |
