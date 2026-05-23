@@ -2,7 +2,7 @@
 
 这是一个基于 Chatbot Arena (lmarena.ai) 数据的排行榜，通过自动化流程生成。
 
-> **数据更新时间**: 2026-05-22 09:11:16 UTC / 2026-05-22 17:11:16 CST (北京时间)
+> **数据更新时间**: 2026-05-23 11:47:22 UTC / 2026-05-23 19:47:22 CST (北京时间)
 
 ## 排行榜
 
@@ -59,10 +59,10 @@
 |     49 |          3856 | gemini-2.5-proGoogle · Proprietary                                      | 1446±3             | 118,726 | $1.25/$10    | 1M        |
 |     50 |          3860 | qwen3.5-397b-a17bAlibaba · Apache 2.0                                   | 1445±4             |  25,861 | $0.39/$2.34  | 262.1K    |
 |     51 |          3863 | gpt-4.5-preview-2025-02-27OpenAI · Proprietary                          | 1444±6             |  14,547 | $75/$150     | 128K      |
-|     52 |          3864 | qwen3.6-plusAlibaba · Proprietary                                       | 1444±6             |  12,075 | $0.18/$1.07  | 1M        |
+|     52 |          3864 | qwen3.6-plusAlibaba · Proprietary                                       | 1444±6             |  12,075 | $0.33/$1.95  | 1M        |
 |     53 |          4060 | chatgpt-4o-latest-20250326OpenAI · Proprietary                          | 1443±3             |  82,481 | $5/$15       | 128K      |
 |     54 |          3866 | glm-4.7Z.ai · MIT                                                       | 1443±6             |  12,134 | $0.40/$1.75  | 202.8K    |
-|     55 |          4070 | deepseek-v4-flash-thinkingDeepSeek · MIT                                | 1440±6             |  10,115 | $0.11/$0.22  | 1M        |
+|     55 |          4070 | deepseek-v4-flash-thinkingDeepSeek · MIT                                | 1440±6             |  10,115 | $0.10/$0.20  | 1M        |
 |     56 |          4866 | gpt-5.2-highOpenAI · Proprietary                                        | 1439±4             |  42,076 | $1.75/$14    | 400K      |
 |     57 |          4967 | gpt-5.1OpenAI · Proprietary                                             | 1439±4             |  43,497 | $1.25/$10    | 400K      |
 |     58 |          4072 | gemma-4-26b-a4bGoogle · Apache 2.0                                      | 1438±8             |   5,782 | N/A          | N/A       |
@@ -71,7 +71,7 @@
 |     61 |          5073 | longcat-flash-chat-2602-expMeituan · Proprietary                        | 1435±5             |  17,017 | N/A          | N/A       |
 |     62 |          5273 | qwen3-max-previewAlibaba · Proprietary                                  | 1435±5             |  27,731 | $0.78/$3.90  | 262.1K    |
 |     63 |          5475 | gpt-5-highOpenAI · Proprietary                                          | 1434±5             |  31,951 | $1.25/$10    | 400K      |
-|     64 |          5281 | deepseek-v4-flashDeepSeek · MIT                                         | 1433±6             |  10,124 | $0.11/$0.22  | 1M        |
+|     64 |          5281 | deepseek-v4-flashDeepSeek · MIT                                         | 1433±6             |  10,124 | $0.10/$0.20  | 1M        |
 |     65 |          5386 | kimi-k2.5-instantMoonshot · Modified MIT                                | 1432±7             |   8,201 | $0.40/$1.90  | 262.1K    |
 |     66 |          5778 | grok-4-1-fast-reasoningxAI · Proprietary                                | 1431±3             |  52,836 | $0.20/$0.50  | 2M        |
 |     67 |          5780 | o3-2025-04-16OpenAI · Proprietary                                       | 1431±4             |  59,771 | $2/$8        | 200K      |
