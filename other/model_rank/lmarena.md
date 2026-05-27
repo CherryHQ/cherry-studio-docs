@@ -2,7 +2,7 @@
 
 这是一个基于 Chatbot Arena (lmarena.ai) 数据的排行榜，通过自动化流程生成。
 
-> **数据更新时间**: 2026-05-26 09:16:05 UTC / 2026-05-26 17:16:05 CST (北京时间)
+> **数据更新时间**: 2026-05-27 09:13:54 UTC / 2026-05-27 17:13:54 CST (北京时间)
 
 ## 排行榜
 
@@ -21,7 +21,7 @@
 |     11 |           523 | gpt-5.5OpenAI · Proprietary                                             | 1478±6             |  10,294 | $5/$30       | 1.1M      |
 |     12 |           721 | grok-4.20-beta1xAI · Proprietary                                        | 1478±5             |  22,458 | N/A          | N/A       |
 |     13 |           822 | gpt-5.2-chat-latest-20260210OpenAI · Proprietary                        | 1477±4             |  27,988 | $1.75/$14    | 128K      |
-|     14 |           531 | qwen3.7-max-previewAlibaba · Proprietary                                | 1475±10Preliminary |   3,741 | $2.50/$7.50  | 1M        |
+|     14 |           531 | qwen3.7-max-previewAlibaba · Proprietary                                | 1475±10Preliminary |   3,741 | $1.25/$3.75  | 1M        |
 |     15 |           826 | grok-4.20-beta-0309-reasoningxAI · Proprietary                          | 1475±5             |  21,572 | $2/$6        | 2M        |
 |     16 |           826 | grok-4.20-multi-agent-beta-0309xAI · Proprietary                        | 1474±5             |  21,565 | $2/$6        | 2M        |
 |     17 |           827 | gemini-3-flashGoogle · Proprietary                                      | 1473±4             |  30,742 | $0.50/$3     | 1M        |
@@ -33,7 +33,7 @@
 |     23 |          1432 | Anthropicclaude-opus-4-5-20251101Anthropic · Proprietary                | 1468±3             |  58,884 | $5/$25       | 200K      |
 |     24 |          1333 | gpt-5.4OpenAI · Proprietary                                             | 1467±5             |  22,146 | $2.50/$15    | 1.1M      |
 |     25 |          1432 | grok-4.1-thinkingxAI · Proprietary                                      | 1467±3             |  59,368 | N/A          | N/A       |
-|     26 |          1438 | mimo-v2.5-proXiaomi · MIT                                               | 1465±6             |   9,700 | $1/$3        | 1M        |
+|     26 |          1438 | mimo-v2.5-proXiaomi · MIT                                               | 1465±6             |   9,700 | $0.43/$0.87  | 1M        |
 |     27 |          1636 | qwen3.5-max-previewAlibaba · Proprietary                                | 1464±5             |  17,346 | N/A          | N/A       |
 |     28 |          2036 | gemini-3-flash (thinking-minimal)Google · Proprietary                   | 1463±4             |  45,395 | $0.50/$3     | 1M        |
 |     29 |          1841 | kimi-k2.6Moonshot · Modified MIT                                        | 1462±6             |  10,281 | $0.95/$4     | 262.1K    |
@@ -76,7 +76,7 @@
 |     66 |          5778 | grok-4-1-fast-reasoningxAI · Proprietary                                | 1431±3             |  52,836 | $0.20/$0.50  | 2M        |
 |     67 |          5780 | o3-2025-04-16OpenAI · Proprietary                                       | 1431±4             |  59,771 | $2/$8        | 200K      |
 |     68 |          5781 | kimi-k2-thinking-turboMoonshot · Modified MIT                           | 1430±3             |  56,632 | $1.15/$8     | 262.1K    |
-|     69 |          5689 | mimo-v2.5Xiaomi · MIT                                                   | 1429±6             |   9,729 | $0.40/$2     | 1M        |
+|     69 |          5689 | mimo-v2.5Xiaomi · MIT                                                   | 1429±6             |   9,729 | $0.14/$0.28  | 1M        |
 |     70 |          5493 | amazon-nova-experimental-chat-26-02-10Amazon · Proprietary              | 1427±10            |   3,433 | N/A          | N/A       |
 |     71 |          6089 | gpt-5-chatOpenAI · Proprietary                                          | 1427±4             |  31,598 | $1.25/$10    | 128K      |
 |     72 |          6392 | glm-4.6Z.ai · MIT                                                       | 1426±4             |  35,672 | $0.43/$1.74  | 202.8K    |
@@ -150,7 +150,7 @@
 |    140 |        133149 | qwen3-235b-a22bAlibaba · Apache 2.0                                     | 1375±5             |  26,278 | $0.46/$1.82  | 131.1K    |
 |    141 |        133149 | gemini-2.5-flash-lite-preview-06-17-thinkingGoogle · Proprietary        | 1375±5             |  32,934 | $0.10/$0.40  | 1M        |
 |    142 |        135149 | qwen2.5-maxAlibaba · Proprietary                                        | 1374±4             |  32,624 | N/A          | N/A       |
-|    143 |        136150 | glm-4.5-airZ.ai · MIT                                                   | 1373±4             |  31,099 | $0.13/$0.85  | 131.1K    |
+|    143 |        136150 | glm-4.5-airZ.ai · MIT                                                   | 1373±4             |  31,099 | $0.13/$0.84  | 131.1K    |
 |    144 |        136154 | trinity-large-thinkingArcee AI · Apache 2.0                             | 1373±5             |  16,436 | $0.22/$0.85  | 262.1K    |
 |    145 |        138150 | Anthropicclaude-3-5-sonnet-20241022Anthropic · Proprietary              | 1372±3             |  88,356 | $3/$15       | 200K      |
 |    146 |        138154 | Anthropicclaude-3-7-sonnet-20250219Anthropic · Proprietary              | 1371±4             |  43,197 | $3/$15       | 200K      |
