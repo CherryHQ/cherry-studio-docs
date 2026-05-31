@@ -2,7 +2,7 @@
 
 这是一个基于 Chatbot Arena (lmarena.ai) 数据的排行榜，通过自动化流程生成。
 
-> **数据更新时间**: 2026-05-30 08:52:27 UTC / 2026-05-30 16:52:27 CST (北京时间)
+> **数据更新时间**: 2026-05-31 09:06:56 UTC / 2026-05-31 17:06:56 CST (北京时间)
 
 ## 排行榜
 
@@ -103,7 +103,7 @@
 |     93 |         75104 | mistral-large-3Mistral · Apache 2.0                                     | 1415±4             |  42,553 | $0.50/$1.50  | N/A       |
 |     94 |         69115 | mimo-v2-omniXiaomi · Proprietary                                        | 1414±11            |   2,968 | $0.40/$2     | 262.1K    |
 |     95 |         79104 | gpt-4.1-2025-04-14OpenAI · Proprietary                                  | 1413±4             |  50,997 | $2/$8        | 1M        |
-|     96 |         77106 | minimax-m2.7MiniMax · Modified MIT                                      | 1413±5             |  23,278 | $0.28/$1.20  | 204.8K    |
+|     96 |         77106 | minimax-m2.7MiniMax · Modified MIT                                      | 1413±5             |  23,278 | $0.26/$1.20  | 204.8K    |
 |     97 |         81107 | Anthropicclaude-opus-4-20250514Anthropic · Proprietary                  | 1412±4             |  44,223 | $15/$75      | 200K      |
 |     98 |         81110 | grok-3-preview-02-24xAI · Proprietary                                   | 1412±4             |  32,909 | $3/$15       | 131.1K    |
 |     99 |         81111 | glm-4.5Z.ai · MIT                                                       | 1411±5             |  24,322 | $0.60/$2.20  | 131.1K    |
@@ -119,7 +119,7 @@
 |    109 |         99121 | qwen3-next-80b-a3b-instructAlibaba · Apache 2.0                         | 1402±5             |  22,881 | $0.09/$1.10  | 262.1K    |
 |    110 |        101121 | o1-2024-12-17OpenAI · Proprietary                                       | 1402±4             |  27,807 | $15/$60      | 200K      |
 |    111 |         97124 | longcat-flash-chatMeituan · MIT                                         | 1401±6             |  11,405 | $0.20/$0.80  | 131.1K    |
-|    112 |        101128 | qwen3-235b-a22b-thinking-2507Alibaba · Apache 2.0                       | 1400±7             |   8,993 | $0.15/$1.50  | 262.1K    |
+|    112 |        101128 | qwen3-235b-a22b-thinking-2507Alibaba · Apache 2.0                       | 1400±7             |   8,993 | $0.10/$0.10  | 262.1K    |
 |    113 |        104125 | Anthropicclaude-sonnet-4-20250514-thinking-32kAnthropic · Proprietary   | 1399±4             |  35,127 | $3/$15       | 1M        |
 |    114 |        105129 | deepseek-r1DeepSeek · MIT                                               | 1398±5             |  18,524 | $0.70/$2.50  | 163.8K    |
 |    115 |        105130 | qwen3.5-35b-a3bAlibaba · Apache 2.0                                     | 1396±4             |  27,304 | $0.14/$1     | 262.1K    |
