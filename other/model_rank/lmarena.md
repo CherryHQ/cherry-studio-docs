@@ -2,7 +2,7 @@
 
 这是一个基于 Chatbot Arena (lmarena.ai) 数据的排行榜，通过自动化流程生成。
 
-> **数据更新时间**: 2026-05-31 09:06:56 UTC / 2026-05-31 17:06:56 CST (北京时间)
+> **数据更新时间**: 2026-06-01 09:55:28 UTC / 2026-06-01 17:55:28 CST (北京时间)
 
 ## 排行榜
 
@@ -235,7 +235,7 @@
 |    225 |        197241 | mercuryInception AI · Proprietary                                       | 1306±14            |   1,957 | $0.25/$0.75  | 128K      |
 |    226 |        212234 | athene-70b-0725NexusFlow · CC-BY-NC-4.0                                 | 1306±6             |  19,621 | N/A          | N/A       |
 |    227 |        209234 | olmo-3-32b-thinkAi2 · Apache 2.0                                        | 1305±8             |   5,947 | $0.15/$0.50  | 65.5K     |
-|    228 |        216234 | mistral-large-2411Mistral · MRL                                         | 1305±4             |  28,073 | $2/$6        | 131.1K    |
+|    228 |        216234 | mistral-large-2411Mistral · MRL                                         | 1305±4             |  28,073 | $2/$6        | 128K      |
 |    229 |        214234 | magistral-medium-2506Mistral · Proprietary                              | 1304±6             |  11,641 | $2/$5        | 40K       |
 |    230 |        219234 | mistral-small-3.1-24b-instruct-2503Mistral · Apache 2.0                 | 1303±5             |  33,220 | $0.10/$0.30  | 32K       |
 |    231 |        211241 | gemma-3-4b-itGoogle · Gemma                                             | 1303±9             |   4,171 | $0.04/$0.08  | 131.1K    |
