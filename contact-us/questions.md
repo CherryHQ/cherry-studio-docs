@@ -4,7 +4,11 @@ icon: address-card
 
 # 商务合作
 
+联系人：俞先生
+
 📮：bd@cherry-ai.com
+
+📱：+86 13681876646 (非客服电话)
 
 <figure><img src="../.gitbook/assets/img_v3_0212a_5333748a-c886-4463-9c36-153fa14b47dg (1).jpg" alt=""><figcaption></figcaption></figure>
 
