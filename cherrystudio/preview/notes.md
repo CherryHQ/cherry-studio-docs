@@ -1,5 +1,5 @@
 ---
-icon: notepad-text
+icon: note-sticky
 ---
 
 # 笔记
