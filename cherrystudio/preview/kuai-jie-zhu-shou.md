@@ -11,7 +11,7 @@ icon: browsers
 1. **打开设置：** 导航至 `设置` -> `快捷方式` -> `快捷助手`。
 2. **启用开关：** 找到并打开 `快捷助手` 对应按钮。
 
-<figure><img src="../../.gitbook/assets/快捷助手-0 (1).png" alt=""><figcaption><p>启用快捷助手示意图</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/快捷助手-0.png" alt=""><figcaption><p>启用快捷助手示意图</p></figcaption></figure>
 
 3. **设置快捷键（可选）：**
    * Windows 默认快捷键为 <kbd>Ctrl</kbd> + <kbd>E</kbd>。
@@ -27,7 +27,7 @@ icon: browsers
    * **内容总结：** 输入长文本进行摘要。
    *   **解释说明：** 输入需要解释的概念或术语。
 
-       <figure><img src="../../.gitbook/assets/快捷助手-1 (1).png" alt=""><figcaption><p>快捷助手界面示意图</p></figcaption></figure>
+       <figure><img src="../../.gitbook/assets/快捷助手-1.png" alt=""><figcaption><p>快捷助手界面示意图</p></figcaption></figure>
 3. **关闭：** 按下 <kbd>ESC</kbd> 键或点击快捷助手窗口外部的任意位置即可关闭。
 
 {% hint style="info" %}

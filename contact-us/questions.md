@@ -4,13 +4,9 @@ icon: address-card
 
 # 商务合作
 
-联系人：王先生
-
 📮：bd@cherry-ai.com
 
-📱：18954281942 (非客服电话)
-
-<div align="left"><figure><img src="../.gitbook/assets/6f5735eec7f416a03d38ea34329872ac (1).jpg" alt="" width="375"><figcaption></figcaption></figure></div>
+<figure><img src="../.gitbook/assets/img_v3_0212a_5333748a-c886-4463-9c36-153fa14b47dg (1).jpg" alt=""><figcaption></figcaption></figure>
 
 {% hint style="warning" %}
 使用问题咨询，可以在官网首页底部加入我们的用户交流群，也可邮件 support@cherry-ai.com

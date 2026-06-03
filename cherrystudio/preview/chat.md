@@ -16,47 +16,47 @@ icon: message
 
 `助手` 是 `话题` 的父集，单个助手下可以创建多个话题（即对话），所有 `话题` 共用 `助手` 的参数设置和预设词（prompt）等模型设置。
 
-<figure><img src="../../.gitbook/assets/image (4) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (4) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (5) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (5) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## 对话框内按钮
 
-<figure><img src="../../.gitbook/assets/对话界面/对话框.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/对话框.png" alt=""><figcaption></figcaption></figure>
 
-![](../../.gitbook/assets/对话界面/新话题.png) `新话题` 在当前助手内创建一个新话题。
+![](../../.gitbook/assets/新话题.png) `新话题` 在当前助手内创建一个新话题。
 
-![](../../.gitbook/assets/对话界面/上传图片或文档.png) `上传图片或文档` 上传图片需要模型支持，上传文档会自动解析为文字作为上下文提供给模型。
+![](../../.gitbook/assets/上传图片或文档.png) `上传图片或文档` 上传图片需要模型支持，上传文档会自动解析为文字作为上下文提供给模型。
 
-![](../../.gitbook/assets/对话界面/网络搜索.png) `网络搜索` 须在设置中配置网络搜索相关信息，搜索结果作为上下文返回给大模型，详见 [联网模式](../../pre-basic/websearch/)。
+![](../../.gitbook/assets/网络搜索.png) `网络搜索` 须在设置中配置网络搜索相关信息，搜索结果作为上下文返回给大模型，详见 [联网模式](../../pre-basic/websearch/)。
 
-![](../../.gitbook/assets/对话界面/知识库.png) `知识库` 开启知识库，详见 [知识库教程](../../knowledge-base/knowledge-base.md)。
+![](../../.gitbook/assets/知识库.png) `知识库` 开启知识库，详见 [知识库教程](../../knowledge-base/knowledge-base.md)。
 
-![](<../../.gitbook/assets/对话界面/MCP 服务器.png>) `MCP 服务器` 开启 MCP 服务器功能，详见 [MCP 使用教程](../../advanced-basic/mcp/)。
+![](<../../.gitbook/assets/MCP 服务器.png>) `MCP 服务器` 开启 MCP 服务器功能，详见 [MCP 使用教程](../../advanced-basic/mcp/)。
 
-![](../../.gitbook/assets/对话界面/生成图片.png) `生成图片` 只有选择的 **对话模型** 支持生图时才会显示。（非对话生图模型请前往 [绘图](drawing.md)）
+![](../../.gitbook/assets/生成图片.png) `生成图片` 只有选择的 **对话模型** 支持生图时才会显示。（非对话生图模型请前往 [绘图](drawing.md)）
 
-![](../../.gitbook/assets/对话界面/选择模型.png) `选择模型` 对于接下来的对话，切换成指定的模型，保留上下文。
+![](../../.gitbook/assets/选择模型.png) `选择模型` 对于接下来的对话，切换成指定的模型，保留上下文。
 
-![](../../.gitbook/assets/对话界面/快捷短语.png) `快捷短语` 需要先在设置中预设常用短语，在此处调用，直接输入，支持变量。
+![](../../.gitbook/assets/快捷短语.png) `快捷短语` 需要先在设置中预设常用短语，在此处调用，直接输入，支持变量。
 
-![](../../.gitbook/assets/对话界面/清空消息.png) `清空消息` 删除该话题下所有内容。
+![](../../.gitbook/assets/清空消息.png) `清空消息` 删除该话题下所有内容。
 
-![](../../.gitbook/assets/对话界面/展开.png) `展开` 让对话框变得更大，以便输入长文。
+![](../../.gitbook/assets/展开.png) `展开` 让对话框变得更大，以便输入长文。
 
-![](../../.gitbook/assets/对话界面/清除上下文.png) `清除上下文` 在不删除内容的情况下，截断模型能获得的上下文，也就是说模型将“忘记”之前的对话内容。
+![](../../.gitbook/assets/清除上下文.png) `清除上下文` 在不删除内容的情况下，截断模型能获得的上下文，也就是说模型将“忘记”之前的对话内容。
 
-![](<../../.gitbook/assets/对话界面/预估 Token 数.png>) `预估 Token 数` 展示预估 Token 数，四个数据分别为 `当前上下文数` 、 `最大上下文数` （ ∞ 表示无限上下文）、 `当前输入框内消息字数` 、 `预估 Token 数` 。
+![](<../../.gitbook/assets/预估 Token 数.png>) `预估 Token 数` 展示预估 Token 数，四个数据分别为 `当前上下文数` 、 `最大上下文数` （ ∞ 表示无限上下文）、 `当前输入框内消息字数` 、 `预估 Token 数` 。
 
 {% hint style="info" %}
 此功能仅用于预估 Token 数，实际 Token 数每个模型都是不一样的，请以模型提供商的数据为准。
 {% endhint %}
 
-![](../../.gitbook/assets/对话界面/翻译.png) `翻译` 将当前输入框内内容翻译成英文。
+![](../../.gitbook/assets/翻译.png) `翻译` 将当前输入框内内容翻译成英文。
 
 ## 对话设置
 
-<figure><img src="../../.gitbook/assets/image (7) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (7) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### 模型设置
 
@@ -74,11 +74,11 @@ icon: message
 
 {% tabs %}
 {% tab title="打开时" %}
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 {% endtab %}
 
 {% tab title="关闭时" %}
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 {% endtab %}
 {% endtabs %}
 
@@ -92,11 +92,11 @@ icon: message
 
 {% tabs %}
 {% tab title="关闭时" %}
-<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 {% endtab %}
 
 {% tab title="打开时" %}
-<figure><img src="../../.gitbook/assets/image (3) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3) (1) (1).png" alt=""><figcaption></figcaption></figure>
 {% endtab %}
 {% endtabs %}
 
@@ -145,11 +145,11 @@ icon: message
 
 {% tabs %}
 {% tab title="关闭时" %}
-<figure><img src="../../.gitbook/assets/image (4) (1) (2).png" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (4) (1).png" alt="" width="563"><figcaption></figcaption></figure>
 {% endtab %}
 
 {% tab title="打开时" %}
-<figure><img src="../../.gitbook/assets/image (6) (1) (2).png" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (6) (1).png" alt="" width="563"><figcaption></figcaption></figure>
 {% endtab %}
 {% endtabs %}
 
@@ -175,7 +175,7 @@ icon: message
 助手设置作用于该助手下的所有话题。
 {% endhint %}
 
-<figure><img src="../../.gitbook/assets/image (6) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (6) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 #### 提示词设置
 

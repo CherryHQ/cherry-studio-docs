@@ -4,7 +4,7 @@ icon: cloud-check
 
 # 模型服务设置
 
-当前页面仅做界面功能的介绍，配置教程可以参考基础教程中的 [服务商配置](../../../pre-basic/providers/) 教程。
+当前页面仅做界面功能的介绍，配置教程可以参考基础教程中的 [服务商配置](../providers/) 教程。
 
 {% hint style="info" %}
 * 在使用内置服务商时只需要填写对应的秘钥即可。
@@ -37,7 +37,7 @@ icon: cloud-check
 
 即：
 
-* API地址使用 `#` 结尾时不执行拼接操作，只使用填入的地址。 <img src="../../../.gitbook/assets/image (15) (1).png" alt="" data-size="original">
+* API地址使用 `#` 结尾时不执行拼接操作，只使用填入的地址。 <img src="../../.gitbook/assets/image (15).png" alt="" data-size="original">
 {% endhint %}
 
 ### 添加模型

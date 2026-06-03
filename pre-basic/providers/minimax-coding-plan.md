@@ -13,13 +13,13 @@
 
 在开始之前，请确保你已经购买了套餐并获取了密钥：
 
-1. 登录  [**MiniMax 开放平台**](https://platform.minimaxi.com/)。
+1. 登录 [**MiniMax 开放平台**](https://platform.minimaxi.com/)。
 2.  进入 [**Coding Plan** 页面](https://platform.minimaxi.com/subscribe/coding-plan?code=FYWiC6CtHy\&source=link)，确保套餐已生效。
 
     <figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 3. 在 **Coding Plan** 中复制你的专属 `API Key`（以 `sk-` 开头）。
 
-<figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
 
 ### 2. 配置步骤
 
@@ -39,7 +39,7 @@
 
 <table><thead><tr><th width="128.20703125">参数项</th><th>填写说明</th></tr></thead><tbody><tr><td><strong>API Key</strong></td><td>粘贴你的 Coding Plan 专属密钥<br><em>(注意：必须是购买套餐后生成的 Key，不要有多余空格)</em></td></tr><tr><td><strong>API 地址</strong></td><td>保持默认 <code>https://api.minimaxi.com/v1</code></td></tr><tr><td><strong>开关</strong></td><td>点击右上角开关，确保为 <strong>绿色 (ON)</strong></td></tr></tbody></table>
 
-<figure><img src="../../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
 
 #### 第三步：添加指定模型 (关键)
 
