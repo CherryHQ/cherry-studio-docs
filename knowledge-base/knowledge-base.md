@@ -4,22 +4,27 @@ icon: book-open-cover
 
 # 知识库教程
 
-在 0.9.1 版本中，CherryStudio 带来了期待已久的知识库功能。
+CherryStudio 自 0.9.1 起内置知识库，可把本地文档、网址、纯文本笔记向量化后用于对话检索。本页讲完整流程。
 
-下面我们将按步骤呈现 CherryStudio 的详细使用说明。
+{% hint style="info" %}
+**v1.9.x 起的两个变化**：
+1. 默认导航是**顶部 Tab**，传统左侧栏需在 `设置 → 常规设置` 中切换。本文以默认布局描述。
+2. 文档预处理（OCR 等）现已迁移到独立的 `设置 → 文档处理`，详见 [知识库文档预处理](document-preprocessing.md)。
+{% endhint %}
 
 ## 添加嵌入模型
 
-1. 在模型管理服务中查找模型，可以点击“嵌入模型”快速筛选；
-2. 找到需要的模型，添加到我的模型。
+1. 在 `设置 → 模型服务` 中，找到你常用的 Provider（如 CherryIN、硅基流动、OpenAI 等）；
+2. 点击 **获取模型列表**，在顶部 Tab 切到 **嵌入** 分类；
+3. 选择需要的嵌入模型添加到我的模型列表（推荐 `bge-m3` 或 `text-embedding-3-small`）。
 
 <figure><img src="../.gitbook/assets/image (1).webp" alt=""><figcaption></figcaption></figure>
 
 ## 创建知识库
 
-1. 知识库入口：在 CherryStudio 左侧工具栏，点击知识库图标，即可进入管理页面；
-2. 添加知识库：点击添加，开始创建知识库；
-3. 命名：输入知识库的名称并添加嵌入模型，以 bge-m3 为例，即可完成创建。
+1. **入口**：顶部 Tab `+` → **启动台** → 点击 `知识库`（或在左侧栏布局下点击知识库图标）；
+2. **添加**：点击 **+ 添加**，开始创建知识库；
+3. **命名 + 选模型**：输入名称并选择嵌入模型（以 `bge-m3` 为例），即可完成创建。
 
 <figure><img src="../.gitbook/assets/image-1 (1).webp" alt=""><figcaption></figcaption></figure>
 

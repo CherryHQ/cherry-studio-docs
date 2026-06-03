@@ -1,0 +1,35 @@
+# DeepSeek
+
+DeepSeek 是国内主流大模型厂商之一，以 V3 / R1 系列在编程与推理任务上有口皆碑，且价格亲民。
+
+## 获取 API Key
+
+* 前往 [DeepSeek Platform](https://platform.deepseek.com/) 注册账号
+* `API Keys` → `创建 API Key`，复制 `sk-...` 密钥
+* 充值任意金额（最低 ¥1 即可开通）
+
+## 在 Cherry Studio 配置
+
+* 打开 `设置 → 模型服务`，找到 **deepseek** Provider 进入详情页
+* **API 密钥** 填入 `sk-...`
+* **API 地址** 默认 `https://api.deepseek.com`，无需修改
+* 点击 **获取模型列表**
+
+## 推荐用法
+
+| 模型 | 适合场景 |
+|---|---|
+| `deepseek-chat`（V3 / V3.2）| 通用对话，性价比极高 |
+| `deepseek-reasoner`（R1）| 数学、代码、复杂推理。注意输出会带 `<thinking>` 思考块 |
+
+## 与全局记忆的搭配
+
+DeepSeek 自家没有嵌入模型。如果你要用 [全局记忆](../../advanced-basic/memory.md) 或知识库：
+
+* 嵌入模型推荐用其他 Provider 的（如 [硅基流动](siliconcloud.md) 的 `bge-m3` 或 [OpenAI](openai.md) 的 `text-embedding-3-small`）
+* 对话模型仍可用 DeepSeek
+
+{% hint style="info" %}
+* DeepSeek 价格按 token 计费，缓存命中可大幅降价（参考其官方文档）
+* `deepseek-reasoner` 的思考内容默认会渲染在对话中，可在 [对话设置](../../cherrystudio/preview/chat.md#dui-hua-she-zhi) 中切换"思考内容自动折叠"
+{% endhint %}

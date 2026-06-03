@@ -4,9 +4,18 @@ icon: face-viewfinder
 
 # 知识库文档预处理
 
-知识库文档预处理 需要将 Cherry Studio 升级至 v1.4.8 或更高版本。
+知识库文档预处理用于在向量化前对 PDF / 图片等非文本内容做 OCR 与结构解析，让知识库能正确检索这些资料。需 Cherry Studio v1.4.8 或更高版本。
+
+{% hint style="warning" %}
+**v1.9.x 改动**：文档处理（OCR + Provider 配置）已从"每个知识库内部"迁移到独立的 **`设置 → 文档处理`**。本页流程已按 v1.9.x 更新。
+{% endhint %}
 
 ### 配置OCR服务商
+
+打开 `设置 → 文档处理`，依次配置：
+
+* **系统 OCR**：macOS 用户开箱即用（无需配置）；Windows 需手动选择 OCR 引擎
+* **文档处理服务商**：默认 `MinerU`，可填写 `API Key` + `API Host`（默认 `https://mineru.net`）；也可切换为 Tesseract / Paddle OCR / OpenVINO / 三方 Provider
 
 <figure><img src="../.gitbook/assets/CleanShot 2025-06-03 at 11.50.10@2x (1) (1).jpg" alt=""><figcaption></figcaption></figure>
 
@@ -14,11 +23,11 @@ icon: face-viewfinder
 
 <figure><img src="../.gitbook/assets/CleanShot 2025-06-03 at 11.51.55@2x (1).jpg" alt=""><figcaption></figcaption></figure>
 
-### 配置知识库文档预处理
+### 在知识库中启用文档预处理
 
 <figure><img src="../.gitbook/assets/CleanShot 2025-06-03 at 20.01.03@2x (1).jpg" alt=""><figcaption></figcaption></figure>
 
-在创建好的知识库中进行如上配置，即可完成知识库文档预处理配置。
+在创建好的知识库设置中打开 **文档预处理** 开关，即可在添加文件时自动使用上一步配置的 OCR Provider。
 
 ### 上传文档
 
