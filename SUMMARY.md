@@ -16,6 +16,7 @@
   * [知识库](cherrystudio/preview/knowledge-base.md)
   * [文件](cherrystudio/preview/files.md)
   * [快捷助手](cherrystudio/preview/kuai-jie-zhu-shou.md)
+  * [笔记](cherrystudio/preview/notes.md)
 
 ## 基础教程 <a href="#pre-basic" id="pre-basic"></a>
 
@@ -86,7 +87,11 @@
   * [常见问题](advanced-basic/mcp/chang-jian-wen-ti.md)
 * [调用链使用教程](advanced-basic/trace.md)
 * [Code Tools 使用教程](advanced-basic/code-tools-shi-yong-jiao-cheng.md)
-* [Agent 使用教程](advanced-basic/agent.md)
+* [API 服务器](advanced-basic/api-server.md)
+* [Cherry Agent](advanced-basic/agent.md)
+* [频道（Cherry Claw）](advanced-basic/agent-channels.md)
+* [定时任务](advanced-basic/scheduled-tasks.md)
+* [全局记忆](advanced-basic/memory.md)
 * [Agent 案例](advanced-basic/agent-an-li/README.md)
   * [金价暴跌看懵了？我用 Kimi K2.5 + Cherry Studio 做了个“复盘神器”（附 Agent 设计+完整教程）](advanced-basic/agent-an-li/jin-jia-bao-die-kan-meng-le-wo-yong-kimi-k2.5-+-cherry-studio-zuo-le-ge-fu-pan-shen-qi-fu-agent-she.md)
 
