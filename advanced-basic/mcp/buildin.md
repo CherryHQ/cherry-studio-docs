@@ -1,5 +1,9 @@
 # 内置 MCP 配置
 
+Cherry Studio **预装了几个常用的 MCP**，不用单独安装即可启用。下面是清单与各自的作用，按需在 `设置 → MCP 服务器` 里开启即可。
+
+> 想自己装非预装的 MCP？看 [配置和使用 MCP](config.md)。
+
 ### @cherry/mcp-auto-install
 
 自动安装 MCP 服务（测试版）

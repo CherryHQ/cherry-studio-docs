@@ -1,15 +1,15 @@
 # MCP 环境安装
 
-**MCP(Model Context Protocol)** 是一种开源协议，旨在以标准化的方式向大语言模型（LLM）提供上下文信息。更多关于 MCP 的介绍请见 [#shen-me-shi-mcpmodel-context-protocol](../../question-contact/knowledge.md#shen-me-shi-mcpmodel-context-protocol "mention")
+第一次用 MCP 之前，需要装两个小工具：**uv** 和 **bun**。它们是 Cherry Studio 跑 MCP 的"地基"，绝大多数 MCP 都依赖其中之一来启动。
 
-## 在 Cherry Studio 中使用 MCP
+> 不清楚 MCP 是什么？先看 [MCP 使用教程总览](README.md)。
 
-下面以 `fetch` 功能为例，演示如何在 Cherry Studio 中使用 MCP，可以在 [文档](https://github.com/modelcontextprotocol/servers/tree/main/src/fetch) 中查找详情。
+好消息：**你不需要懂这两个工具的原理**，Cherry Studio 会**自动帮你下载安装**，你只需要点一下按钮。
 
-### **准备工作：安装 uv、bun**
+## 自动安装（推荐）
 
 {% hint style="warning" %}
-Cherry Studio 目前只使用内置的 [uv](https://github.com/astral-sh/uv) 和 [bun](https://github.com/oven-sh/bun)，**不会复用**系统中已经安装的 uv 和 bun。
+Cherry Studio 用的是**自己内置的** uv 和 bun，不会复用你电脑里可能已经装过的版本。所以即使你系统里已经有 uv，也仍然需要按下面步骤再装一次给 Cherry Studio 用。
 {% endhint %}
 
 在 `设置 - MCP 服务器` 中，点击 `安装` 按钮，即可自动下载并安装。因为是直接从 GitHub 上下载，速度可能会比较慢，且有较大可能失败。安装成功与否，以下文提到的文件夹内是否有文件为准。
