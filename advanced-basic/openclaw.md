@@ -4,10 +4,17 @@ icon: spider
 
 # OpenClaw
 
-OpenClaw 是一个独立的外部 Agent CLI 工具，Cherry Studio v1.9.x 提供原生集成入口，把你在 Cherry Studio 中已配置的 Provider / 模型暴露给 OpenClaw 使用。
+**OpenClaw 是另一个 AI 智能体工具**，长得像"在终端里跑的 Cherry Agent"，由独立团队开发。
+
+如果你日常工作离不开命令行（程序员、运维、自动化爱好者），可能更喜欢 OpenClaw 那种"打字就出活儿"的纯文本交互方式。Cherry Studio 提供了**和 OpenClaw 互通的口子**：你不必再到 OpenClaw 里重新配一次 Provider/key，Cherry Studio 里已经配好的，OpenClaw 可以直接用。
 
 {% hint style="info" %}
-OpenClaw 本身不是 Cherry Studio 的一部分。如果你只想在 Cherry Studio 内使用 Agent，请直接看 [Cherry Agent](agent.md)；OpenClaw 是给愿意用命令行 + 更深度自定义场景的用户准备的。
+**先确认你需不需要 OpenClaw**：
+
+* 只想在 Cherry Studio 图形界面里用智能体 → **不需要**，直接看 [Cherry Agent](agent.md) 即可
+* 想在终端里跑 Agent、想集成到自动化脚本/CI → 适合用 OpenClaw
+
+如果不确定，先用 Cherry Agent；将来想升级了再来折腾 OpenClaw。
 {% endhint %}
 
 ### 安装 OpenClaw

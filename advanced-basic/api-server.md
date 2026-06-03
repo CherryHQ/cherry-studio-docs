@@ -4,7 +4,17 @@ icon: server
 
 # API 服务器
 
-API 服务器是 Cherry Studio 在本地启动的一个 **OpenAI 兼容 HTTP 服务**，用于把 Cherry Studio 已配置的所有模型与能力暴露给本机其他程序使用。它同时是 [Cherry Agent](agent.md) 与 [频道（Cherry Claw）](agent-channels.md) 的运行底座 —— 想使用 Agent 必须先启用 API 服务器。
+听起来很技术，其实就一件事：**把 Cherry Studio 已经配好的 AI 能力，开一个本地"小窗口"借给别的程序用**。
+
+类比：你已经在 Cherry Studio 里把 OpenAI、Claude、DeepSeek 这些都配好了。现在你有另一个工具（比如某个写代码的插件、或者你自己写的小脚本）也想用这些 AI 能力。**API 服务器**就是 Cherry Studio 在你电脑上开的一扇"小后门"，让那些工具可以直接来用 Cherry Studio 里的模型，不必重新去各家服务商注册账号。
+
+**对普通用户：什么时候要打开它？**
+
+* 你想用 [Cherry Agent](agent.md) → **必须**开
+* 你想让 Agent 接到 IM 群（[频道](agent-channels.md)）→ **必须**开
+* 你只是用 Cherry Studio 普通对话、画画、翻译 → **不需要**开
+
+> 不清楚 Agent、频道是干啥的？先看 [5 分钟搞懂](concepts-101.md)。
 
 ### 启用 API 服务器
 

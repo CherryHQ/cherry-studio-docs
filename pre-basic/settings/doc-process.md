@@ -4,7 +4,17 @@ icon: file-code
 
 # 文档处理
 
-文档处理（DocProcess）是 v1.9.x 起独立出来的全局 OCR / 文档解析 pipeline，**所有需要把 PDF、图片、扫描件转换为文本的功能**（[知识库](../../knowledge-base/knowledge-base.md) 导入、对话中拖文件、Agent 读文件等）都会经过这里。
+简单说：**这是 Cherry Studio "把 PDF / 图片 / 扫描件认出文字" 的中央配置。**
+
+举几个例子，下面这些事都依赖它：
+
+* 你把一份扫描的合同 PDF 拖进对话框，想让 AI 读懂内容
+* 你把一堆图片格式的发票放进[知识库](../../knowledge-base/knowledge-base.md)，希望以后能搜
+* 你的 [Agent](../../advanced-basic/agent.md) 要打开本地文件夹里某张截图分析
+
+这些场景背后都需要先把"图像里的文字"变成"可以被 AI 读的文字"，这一步技术上叫 **OCR**（Optical Character Recognition，光学字符识别）。
+
+v1.9.x 起，OCR 的配置从每个知识库里搬到了**一个统一的设置页**。你在这里配一次，所有用到 OCR 的地方都会用同一套配置。
 
 ### 配置入口
 
@@ -12,22 +22,35 @@ icon: file-code
 
 <figure><img src="../../.gitbook/assets/cherry-docprocess.png" alt=""><figcaption><p>文档处理设置面板</p></figcaption></figure>
 
-主要分两块：
+面板分两块，分别管"图片识字"和"PDF 解析"。
 
-#### 1. 系统 OCR
+#### 1. 系统 OCR — 给图片认字
 
-* **macOS**：MacOS requires no configuration ✅（自动使用系统 OCR API）
-* **Windows**：需手动选择 OCR 引擎，可选 Tesseract / Paddle OCR / OpenVINO / 系统 OCR
+* **如果你用 macOS**：什么都不用配，Cherry Studio 直接借用系统自带的"识图"能力，免费、离线、效果还不错 ✅
+* **如果你用 Windows**：需要在下方选一个 OCR 引擎。如果你只是日常用，选默认的就行；不放心可以看下面的"选哪个 OCR 引擎"说明。
 
-#### 2. 文档处理服务商
+<details>
+<summary>选哪个 OCR 引擎？</summary>
 
-| 服务商 | 说明 |
+| 引擎 | 适合谁 |
 |---|---|
-| **MinerU**（默认） | 云端文档解析服务，需 API Key。免费额度足够日常使用 |
-| **Tesseract** | 离线 OCR，已捆绑在 Cherry Studio 中 |
-| **Paddle OCR** | 国产离线 OCR，对中文版式效果较好 |
-| **OpenVINO** | Intel 加速的本地 OCR |
-| **三方 Provider** | 通过 OpenAI 兼容接口调用三方 Vision 模型 |
+| **系统 OCR** | 优先尝试，免配置 |
+| **Tesseract** | 经典开源 OCR，已经内置在 Cherry Studio 里，离线可用 |
+| **Paddle OCR** | 中文识别效果更好（百度开源）；处理中文文档优先选 |
+| **OpenVINO** | 用了 Intel 显卡能加速的高级用户可选 |
+
+不知道选哪个就用默认。识别效果不满意时再换。
+</details>
+
+#### 2. 文档处理服务商 — 给 PDF / 复杂文档做结构化解析
+
+普通文本 PDF 直接读就行，但带表格、多栏、扫描页的 PDF 需要更复杂的处理 —— 这就是**文档处理服务商**的工作。默认用 **MinerU**（一个免费云服务）：
+
+| 服务商 | 简单说明 |
+|---|---|
+| **MinerU**（默认） | 免费云服务，专门处理复杂版式 PDF（学术论文、合同等），需到 [mineru.net](https://mineru.net) 注册拿一个 API Key |
+| **Tesseract / Paddle OCR / OpenVINO** | 离线方案，不联网也能跑 |
+| **三方 Provider** | 用你某家 AI 服务商的"看图"模型来识别（更智能但贵） |
 
 ### 配置 MinerU（默认方案）
 

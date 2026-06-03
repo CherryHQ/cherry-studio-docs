@@ -4,7 +4,17 @@ icon: sparkles
 
 # 技能（Skills）
 
-技能（Skills）是 Cherry Studio v1.9.x 引入的**可装卸能力包**，让你能给助手或 Agent 注入"写邮件"、"画流程图"、"生成 PPT"等专门技能，避免每次都手写完整提示词。
+**技能 = 给 AI 装"专业能力 App"**。
+
+打个比方：你的手机出厂自带相机、地图、计算器，但要刷视频你得装抖音、要点外卖你得装美团 —— **App 让手机会做更多专门的事**。
+
+Cherry Studio 里的 AI 也一样：默认会聊天，但要"会做小红书图文"、"会写专利申请"、"会画 Mermaid 流程图"，可以**装个对应的技能**。
+
+* **谁可以装**：你的[助手](../../cherrystudio/preview/agents.md)或 [Cherry Agent](../../advanced-basic/agent.md)
+* **谁不能装**：模型本身。技能是 Cherry Studio 这一层的概念，不存进模型
+* **装了之后**：聊到相关任务时，AI 自动按这套"专业方法"回话
+
+> 技能、MCP、助手到底有什么区别？看 [5 分钟搞懂](../../advanced-basic/concepts-101.md)。
 
 ### 在哪里管理技能
 

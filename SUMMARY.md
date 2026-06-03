@@ -90,6 +90,7 @@
 
 ## 进阶教程 <a href="#advanced-basic" id="advanced-basic"></a>
 
+* [5 分钟搞懂：助手 / 智能体 / 技能 / MCP / 频道](advanced-basic/concepts-101.md)
 * [MCP 使用教程](advanced-basic/mcp/README.md)
   * [MCP 环境安装](advanced-basic/mcp/install.md)
   * [配置和使用 MCP](advanced-basic/mcp/config.md)

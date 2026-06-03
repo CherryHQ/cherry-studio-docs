@@ -4,20 +4,38 @@ icon: robot
 
 # Cherry Agent
 
-Cherry Studio v1.7.0 起引入了 **Cherry Agent**，让 AI 不只是"回话"，而是能自主调用工具、访问文件、执行多步任务的智能体。本教程介绍从零开始创建并运行一个 Agent 的完整流程。
+想让 AI 不只是聊天，而是**真的帮你把事情做完**？这就是 Cherry Agent。
 
-### 前置准备
+打个比方：
 
-Cherry Agent 依赖 Anthropic 兼容端点（如 Claude / CherryIN），并通过本地 API 服务器运行：
+* 普通对话里的 AI 像是"**会说话的同事**" —— 你问它怎么做，它告诉你方法
+* Cherry Agent 像是"**有手脚的同事**" —— 你给它目标，它自己读文件、查资料、调工具，一步步完成
 
-1. **任选一个支持 Anthropic 协议的 Provider**，例如：
-   * **CherryIN**：一个 key 同时提供 OpenAI 与 Anthropic 双端点（最方便）
-   * **Anthropic 官方**：直接使用 Claude key
-   * 任何提供 Anthropic 兼容端点的网关
-2. **开启 [API 服务器](api-server.md)**：`设置 → API 服务器 → ▶ 启动`
+举几个真实场景：
+
+* "把 `~/Downloads` 里所有 PDF 整理成 Excel 清单"
+* "查一下今天主流科技媒体的头条，做一份 5 条要点的简报"
+* "review 我刚写的这个 Python 文件，给出改进建议并直接修改"
+* "每天早上 9 点自动做一遍上面这些事"（搭配[定时任务](scheduled-tasks.md)）
+
+> 还没搞清楚「助手 / 智能体 / 技能 / MCP / 频道」之间的关系？先看 [5 分钟搞懂](concepts-101.md)。
+
+### 开始前需要准备两样东西
+
+#### 1. 一家"支持 Claude 模型对话方式"的 AI 服务商
+
+为什么？因为 Cherry Agent 需要 AI 用"工具调用"的方式回话，而目前这种对话方式最成熟的是 Claude 系列模型。所以你需要找一家提供 Claude 或同类对话方式的 AI 服务商，常见选择：
+
+* **[CherryIN](../pre-basic/providers/cherryin-1.md)**（最方便）：一个账号同时支持普通对话和 Cherry Agent
+* **[Anthropic 官方](../pre-basic/providers/anthropic.md)**：直接用 Claude 账号
+* 其他主流 AI 网关（如 [OpenRouter](../pre-basic/providers/openrouter.md)）也可以
+
+#### 2. 打开"API 服务器"开关
+
+Cherry Studio 需要在你电脑上开一个"内部小服务"来运行 Agent。听起来很技术，实际就是 `设置 → API 服务器` 里点一下绿色启动按钮，详情见 [API 服务器](api-server.md)。
 
 {% hint style="warning" %}
-Agent 模式对话往往多轮、工具调用密集，**单次运行 token 消耗显著高于普通对话**，请关注 Provider 用量。
+**注意：Agent 会比普通聊天烧更多 token。** 因为它要多轮对话、调用各种工具，每一步都要消耗模型额度。建议在 AI 服务商后台设个月度上限避免意外超支。
 {% endhint %}
 
 ### 第 1 步：配置 Anthropic 类型的 Provider
