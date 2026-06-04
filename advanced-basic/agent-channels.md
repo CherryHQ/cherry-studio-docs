@@ -13,7 +13,7 @@ icon: radio
 * 飞书 / Lark（中国版 + 国际版）
 * Telegram
 * QQ（官方机器人 API）
-* 企业微信（通过 iLink Bot API）
+* 微信（通过 iLink Bot API）
 * Discord
 * Slack
 
@@ -24,6 +24,24 @@ icon: radio
 * **客服值班**：Discord 机器人按设定话术接待用户
 
 > 推荐先阅读 [概念入门](concepts-101.md) 了解 Agent、频道、定时任务的关系。
+
+## 不会自己配？让 AI 替你配
+
+频道功能涉及"创建第三方平台机器人 → 拿到凭据 → 填进 Cherry Studio"几个步骤，对非技术用户来说门槛偏高。**如果不熟悉这些操作，最简单的方式是把任务直接交给具备自主权限的 Agent（如内置的 Cherry Claw）**。
+
+在 Cherry Claw 的对话窗口中描述你的目标即可，例如：
+
+> "请帮我设置一个频道：每天早上 10 点把虎嗅、36 氪、机器之心三家媒体的 AI 相关新闻汇总成 5 条要点，发到我的飞书。"
+
+Cherry Claw 会自动判断需要做哪些事，向你索取必要的凭据（飞书 App ID 等），然后帮你完成频道创建与 [定时任务](scheduled-tasks.md) 配置。
+
+{% hint style="info" %}
+**前提**：在 Cherry Claw 的编辑面板中已开启 **自主模式** 或将权限模式设为 **无权限模式**。详见 [Cherry Agent](agent.md)。
+{% endhint %}
+
+如果你希望了解每一步的细节、或者需要自定义配置，可继续按下方手动流程操作。
+
+## 手动配置流程
 
 ### 前置要求
 
