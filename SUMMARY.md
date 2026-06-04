@@ -38,6 +38,8 @@
   * [Grok](pre-basic/providers/grok.md)
   * [Groq](pre-basic/providers/groq.md)
   * [OpenRouter](pre-basic/providers/openrouter.md)
+  * [Moonshot AI (Kimi)](pre-basic/providers/moonshot.md)
+  * [MiniMax](pre-basic/providers/minimax.md)
   * [NewAPI](pre-basic/providers/newapi.md)
   * [OneAPI](pre-basic/providers/oneapi.md)
   * [Ollama](pre-basic/providers/ollama.md)

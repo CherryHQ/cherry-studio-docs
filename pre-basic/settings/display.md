@@ -4,7 +4,9 @@ icon: table-columns
 
 # 显示设置
 
-在此页面你可以设置软件的颜色主题、页面布局或者 [自定义 CSS](../personalization-settings/css.md) 来进行一些个性化的设置。
+外观和布局相关的所有偏好都在这里：浅色/深色主题、对话区的话题位置、字体等。
+
+> 不喜欢默认外观？除了这里的设置，还可以走 [自定义 CSS](../personalization-settings/css.md) 路线深度定制。
 
 ### 主题选择
 
