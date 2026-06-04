@@ -43,7 +43,7 @@ icon: graduation-cap
 
 * **怎么用**：顶部 Tab `+` → 启动台 → `助手库` 浏览、添加或自建
 * **可以叠加**：助手可以挂载知识库、技能、工具
-* **细节文档**：[智能体（助手广场）](../cherrystudio/preview/agents.md)
+* **细节文档**：[助手库](../cherrystudio/preview/agents.md)
 
 ### 2. 智能体 / Cherry Agent —— 让 AI 具备执行能力
 

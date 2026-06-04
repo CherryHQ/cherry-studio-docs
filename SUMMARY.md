@@ -10,7 +10,7 @@
 * [功能介绍](cherrystudio/preview/README.md)
   * [启动台](cherrystudio/preview/launchpad.md)
   * [对话界面](cherrystudio/preview/chat.md)
-  * [智能体（助手广场）](cherrystudio/preview/agents.md)
+  * [助手库](cherrystudio/preview/agents.md)
   * [绘画](cherrystudio/preview/drawing.md)
   * [翻译](cherrystudio/preview/translation.md)
   * [小程序](cherrystudio/preview/app.md)
