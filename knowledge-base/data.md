@@ -2,13 +2,13 @@
 icon: database
 ---
 
-# 知识库背后是怎么工作的
+# 知识库工作原理
 
-如果你只想用知识库，**这一页不必看**；这是给好奇心强的读者讲背后原理的。
+本页面向希望了解知识库底层工作机制的用户。若只需要使用知识库，可直接参考 [知识库教程](knowledge-base.md)。
 
-## 一句话原理
+## 核心原理
 
-你放进去的文档会被**切成小片段 → 用嵌入模型转成"数字指纹" → 存进本地数据库**。之后你提问时，知识库会算一下你的问题的"数字指纹"，去找最像的那些片段，把它们塞进 AI 的视野里。
+加入知识库的文档会被**切分为小片段 → 由嵌入模型转换为数字向量 → 存入本地数据库**。提问时，知识库会将问题转换为同类向量，检索最相似的片段，并将这些片段提供给对话模型作为上下文。
 
 <figure><img src="../.gitbook/assets/mermaid-diagram-1739241680067 (1).png" alt=""><figcaption><p>知识库处理流程图</p></figcaption></figure>
 
@@ -27,9 +27,9 @@ icon: database
    - 系统找出"和问题数字最像"的若干片段
    - 这些片段连同问题一起送给对话模型，由它生成最终答案
 
-## 数据存在哪？
+## 数据存储位置
 
-**全部存在本地**，不会发到云端（除非你用的嵌入模型本身是云服务，那么文本片段会在嵌入时短暂经过该服务）。
+**所有数据保存在本地**，不会上传到云端（若使用的嵌入模型本身是云服务，文本片段会在嵌入处理过程中短暂经过该服务）。
 
 * **macOS**：`~/Library/Application Support/CherryStudio`
 * **Windows**：`%APPDATA%\CherryStudio`
@@ -37,13 +37,13 @@ icon: database
 
 ## 数据隐私建议
 
-如果资料特别敏感（合同、医疗、内部代码）：
+如资料涉及敏感信息（合同、医疗、内部代码等）：
 
-* 用**本地嵌入模型**（如通过 [Ollama](../pre-basic/providers/ollama.md) 或 [LM Studio](../pre-basic/providers/lm-studio.md) 跑 `bge-m3`），整个流程完全离线
-* 对话模型也尽量选本地（同上方案）
-* 配合 [修改存储位置](../pre-basic/personalization-settings/storage.md) 把数据放到加密磁盘
+* 使用**本地嵌入模型**（如通过 [Ollama](../pre-basic/providers/ollama.md) 或 [LM Studio](../pre-basic/providers/lm-studio.md) 运行 `bge-m3`），全流程离线
+* 对话模型同样建议选择本地部署
+* 可配合 [修改存储位置](../pre-basic/personalization-settings/storage.md) 将数据存放至加密磁盘
 
-## 想看具体技术细节？
+## 延伸阅读
 
 * 向量数据库（libSQL / Turso）：[https://turso.tech/libsql](https://turso.tech/libsql)
-* 嵌入相关原理：搜索"vector embedding"、"RAG"概念
+* 嵌入与检索增强生成：可查阅"vector embedding"、"RAG"相关资料

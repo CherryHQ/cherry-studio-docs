@@ -4,38 +4,38 @@ icon: robot
 
 # Cherry Agent
 
-想让 AI 不只是聊天，而是**真的帮你把事情做完**？这就是 Cherry Agent。
+Cherry Agent 让 AI 不仅能对话，更能**自主完成任务**。
 
-打个比方：
+类比：
 
-* 普通对话里的 AI 像是"**会说话的同事**" —— 你问它怎么做，它告诉你方法
-* Cherry Agent 像是"**有手脚的同事**" —— 你给它目标，它自己读文件、查资料、调工具，一步步完成
+* 普通对话中的 AI 类似"**仅能给建议的同事**" —— 你询问方法，它告诉你步骤
+* Cherry Agent 类似"**具备执行能力的同事**" —— 你给定目标，它自主读取文件、查询资料、调用工具，逐步完成
 
-举几个真实场景：
+适用场景示例：
 
-* "把 `~/Downloads` 里所有 PDF 整理成 Excel 清单"
-* "查一下今天主流科技媒体的头条，做一份 5 条要点的简报"
-* "review 我刚写的这个 Python 文件，给出改进建议并直接修改"
-* "每天早上 9 点自动做一遍上面这些事"（搭配[定时任务](scheduled-tasks.md)）
+* "将 `~/Downloads` 中所有 PDF 整理为 Excel 清单"
+* "查询今日主流科技媒体头条，生成一份 5 条要点的简报"
+* "审阅指定的 Python 文件，给出改进建议并直接修改"
+* "每日早上 9 点自动执行以上任务"（结合 [定时任务](scheduled-tasks.md)）
 
-> 还没搞清楚「助手 / 智能体 / 技能 / MCP / 频道」之间的关系？先看 [5 分钟搞懂](concepts-101.md)。
+> 推荐先阅读 [概念入门](concepts-101.md) 理清助手 / 智能体 / 技能 / MCP / 频道之间的关系。
 
-### 开始前需要准备两样东西
+### 开始前的两项准备
 
-#### 1. 一家"支持 Claude 模型对话方式"的 AI 服务商
+#### 1. 一家支持 Anthropic 协议的 Provider
 
-为什么？因为 Cherry Agent 需要 AI 用"工具调用"的方式回话，而目前这种对话方式最成熟的是 Claude 系列模型。所以你需要找一家提供 Claude 或同类对话方式的 AI 服务商，常见选择：
+Cherry Agent 依赖"工具调用"格式的对话方式，目前最成熟的实现是 Anthropic Claude 系列模型。因此需要一家提供该协议的模型服务商，推荐选项：
 
-* **[CherryIN](../pre-basic/providers/cherryin-1.md)**（最方便）：一个账号同时支持普通对话和 Cherry Agent
-* **[Anthropic 官方](../pre-basic/providers/anthropic.md)**：直接用 Claude 账号
-* 其他主流 AI 网关（如 [OpenRouter](../pre-basic/providers/openrouter.md)）也可以
+* **[CherryIN](../pre-basic/providers/cherryin-1.md)**（最便捷）：单一账号即可同时支持普通对话与 Cherry Agent
+* **[Anthropic 官方](../pre-basic/providers/anthropic.md)**：直接使用 Claude 账号
+* 其他主流 AI 网关（如 [OpenRouter](../pre-basic/providers/openrouter.md)）
 
-#### 2. 打开"API 服务器"开关
+#### 2. 启用 API 服务器
 
-Cherry Studio 需要在你电脑上开一个"内部小服务"来运行 Agent。听起来很技术，实际就是 `设置 → API 服务器` 里点一下绿色启动按钮，详情见 [API 服务器](api-server.md)。
+Cherry Studio 需要在本地运行一个内部服务以承载 Agent。操作上仅需在 `设置 → API 服务器` 中点击启动按钮即可，详见 [API 服务器](api-server.md)。
 
 {% hint style="warning" %}
-**注意：Agent 会比普通聊天烧更多 token。** 因为它要多轮对话、调用各种工具，每一步都要消耗模型额度。建议在 AI 服务商后台设个月度上限避免意外超支。
+**Token 消耗提示**：Agent 模式涉及多轮对话与工具调用，单次任务的 token 消耗显著高于普通对话。建议在 Provider 后台设置月度上限以避免超支。
 {% endhint %}
 
 ### 第 1 步：配置 Anthropic 类型的 Provider

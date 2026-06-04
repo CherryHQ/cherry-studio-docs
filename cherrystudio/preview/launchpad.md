@@ -38,6 +38,6 @@ icon: grid
 
 * 启动台不是必经的"主页"，所有应用都可通过 Tab 栏 + 快捷键直接进入
 * 应用列表会随 Cherry Studio 更新而扩充（如新增的 [Cherry Agent](../../advanced-basic/agent.md) 顶部 Tab 与 [全局记忆](../../advanced-basic/memory.md) 设置项不在启动台中，而在专属 Tab / 设置菜单内）
-* 想要"全屏沉浸"工作？用 <kbd>⌘</kbd> + <kbd>[</kbd> 和 <kbd>⌘</kbd> + <kbd>]</kbd> 收起两侧栏
+* 如需"全屏沉浸"工作模式，可用 <kbd>⌘</kbd> + <kbd>[</kbd> 和 <kbd>⌘</kbd> + <kbd>]</kbd> 收起两侧栏
 
 如遇问题，请在 [反馈与建议](../../question-contact/suggestions.md) 中提交反馈。

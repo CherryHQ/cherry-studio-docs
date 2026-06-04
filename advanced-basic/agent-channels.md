@@ -4,32 +4,32 @@ icon: radio
 
 # 频道（Cherry Claw）
 
-你已经在 Cherry Studio 里训练好了一个智能体（比如"研报机器人"、"客服小助手"），但每次跟它说话都要打开 Cherry Studio。如果想**让它住到飞书群里**，群成员 at 一下就能让它回话呢？这就是「频道」要做的事。
+当你在 Cherry Studio 中配置好一个智能体（如"研报机器人"、"客服助手"），如果希望它**驻留在 IM 群中**为多人服务，可以使用「频道」功能。
 
-**频道（产品里的代号叫 Cherry Claw）** = 把你的 [Cherry Agent](agent.md) **派到 IM 平台当机器人上班**。
+**频道（产品代号 Cherry Claw）** 将 [Cherry Agent](agent.md) **接入 IM 平台**作为机器人对外服务。
 
-当前支持的"上班平台"：
+当前支持的平台：
 
 * 飞书 / Lark（中国版 + 国际版）
 * Telegram
 * QQ（官方机器人 API）
-* 微信（通过 iLink Bot API）
+* 企业微信（通过 iLink Bot API）
 * Discord
 * Slack
 
-举几个真实玩法：
+适用场景示例：
 
-* **公司内部知识机器人**：在飞书群里 @ 机器人问产品问题，它从你的[知识库](../knowledge-base/knowledge-base.md)查答案
-* **个人助理**：Telegram 私聊机器人帮你订日历提醒、查股价、做翻译
-* **客服值班**：Discord 上的机器人按你设定的话术接待用户
+* **公司内部知识机器人**：飞书群成员 @ 机器人提问，它从绑定的 [知识库](../knowledge-base/knowledge-base.md) 检索答案
+* **个人助理**：Telegram 私聊机器人协助管理日程、查询信息、提供翻译
+* **客服值班**：Discord 机器人按设定话术接待用户
 
-> 还没搞清楚 Agent / 频道 / 定时任务 的关系？先看 [5 分钟搞懂](concepts-101.md)。
+> 推荐先阅读 [概念入门](concepts-101.md) 了解 Agent、频道、定时任务的关系。
 
 ### 前置要求
 
-1. 已创建好一个 [Cherry Agent](agent.md)（"派去上班的人"先得有）
-2. 已打开 [API 服务器](api-server.md)（智能体要能跑起来）
-3. **拿到目标 IM 平台的"机器人身份证"**（详见下方"按平台准备凭据"，每个平台叫法不同，但本质都是该平台官方颁发的一组 token/key，证明你有权用机器人）
+1. 已创建一个 [Cherry Agent](agent.md)
+2. 已启用 [API 服务器](api-server.md)
+3. **获取目标 IM 平台的机器人凭据**（详见下方"按平台准备凭据"，各平台命名不同，本质均为平台官方颁发的 token / key，用于验证机器人身份）
 
 ### 频道在哪儿
 

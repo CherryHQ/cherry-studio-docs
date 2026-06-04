@@ -38,4 +38,4 @@ icon: books
 * **知识库 + [Cherry Agent](../../advanced-basic/agent.md)**：让 Agent 在任务过程中自己查知识库
 * **知识库 + [频道（Cherry Claw）](../../advanced-basic/agent-channels.md)**：把"会查公司文档"的 Agent 派到飞书群里值班
 
-> 还没分清楚知识库 / Agent / MCP？看 [5 分钟搞懂](../../advanced-basic/concepts-101.md)。
+> 推荐先阅读 [概念入门](../../advanced-basic/concepts-101.md) 了解知识库与 Agent / MCP 等功能的关系。

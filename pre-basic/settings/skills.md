@@ -4,17 +4,17 @@ icon: sparkles
 
 # 技能（Skills）
 
-**技能 = 给 AI 装"专业能力 App"**。
+**技能为 AI 加装"专业能力组件"**。
 
-打个比方：你的手机出厂自带相机、地图、计算器，但要刷视频你得装抖音、要点外卖你得装美团 —— **App 让手机会做更多专门的事**。
+类比：手机出厂自带相机、地图、计算器等基础应用，但若需要观看短视频则需安装抖音、若需要点外卖则需安装美团 —— **应用扩展了手机的专项能力**。
 
-Cherry Studio 里的 AI 也一样：默认会聊天，但要"会做小红书图文"、"会写专利申请"、"会画 Mermaid 流程图"，可以**装个对应的技能**。
+Cherry Studio 中的 AI 同样如此：默认具备对话能力，若需要"撰写小红书图文"、"起草专利申请"、"绘制 Mermaid 流程图"等专项任务，可**为其加装对应的技能**。
 
-* **谁可以装**：你的[助手](../../cherrystudio/preview/agents.md)或 [Cherry Agent](../../advanced-basic/agent.md)
-* **谁不能装**：模型本身。技能是 Cherry Studio 这一层的概念，不存进模型
-* **装了之后**：聊到相关任务时，AI 自动按这套"专业方法"回话
+* **可加装对象**：[助手](../../cherrystudio/preview/agents.md) 或 [Cherry Agent](../../advanced-basic/agent.md)
+* **不可加装对象**：底层模型。技能属于 Cherry Studio 层的能力，不影响模型本身
+* **启用效果**：处理相关任务时，AI 自动按技能定义的专业方式响应
 
-> 技能、MCP、助手到底有什么区别？看 [5 分钟搞懂](../../advanced-basic/concepts-101.md)。
+> 推荐先阅读 [概念入门](../../advanced-basic/concepts-101.md) 了解技能、MCP、助手的差异。
 
 ### 在哪里管理技能
 

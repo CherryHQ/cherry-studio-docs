@@ -4,20 +4,20 @@ icon: list
 
 # 全部 Provider 快速参考
 
-Cherry Studio v1.9.x 内置 **60+ 家 Provider**，本页是一张总览表，**找你想用的那家照着填密钥即可**。已有专题页的会带链接；没有的就按通用步骤（[Provider 总览](README.md)）配置。
+Cherry Studio v1.9.x 内置 **60+ 家 Provider**，本页提供总览表，找到目标 Provider 后**按指引填写密钥即可使用**。已有专题文档的 Provider 提供跳转链接，其余按通用步骤（[Provider 总览](README.md)）配置。
 
-## 怎么用这张表
+## 使用步骤
 
-1. **找你听过的 / 想用的名字**（Ctrl/⌘+F 搜更快）
-2. 点 **官网** 注册账号、拿 API Key
-3. 在 Cherry Studio `设置 → 模型服务` 中找到对应 Provider、填密钥、点"获取模型列表"
-4. 完成 ✅
+1. **查找目标 Provider**（可用 Ctrl/⌘+F 快速搜索）
+2. 点击 **官网** 注册账号并获取 API Key
+3. 在 Cherry Studio `设置 → 模型服务` 中找到对应 Provider，填写密钥后点击"获取模型列表"
+4. 完成配置
 
 ## 一句话决策
 
 | 你的需求 | 推荐方向 |
 |---|---|
-| **新手想最快用上**，不想搞复杂 | [CherryIN](cherryin-1.md) 或 [CherryAI](cherryai/) |
+| **新手快速上手**，避免复杂流程 | [CherryIN](cherryin-1.md) 或 [CherryAI](cherryai/) |
 | **国内访问最方便** | DeepSeek / Moonshot / 硅基流动 / 智谱 |
 | **海外最强模型** | OpenAI / Anthropic / Gemini |
 | **一个 key 通用 200 家** | [OpenRouter](openrouter.md) |

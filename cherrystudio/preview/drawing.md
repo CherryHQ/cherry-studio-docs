@@ -4,7 +4,7 @@ icon: image
 
 # 绘画
 
-绘画页面是 Cherry Studio 内置的**文生图工具**：你用文字描述想要的画面，AI 帮你画出来。和直接打开 Midjourney / DALL·E 网站效果类似，但**好处是用你已经在 Cherry Studio 里配好的账号**，不用再去外面单独注册。
+绘画页面是 Cherry Studio 内置的**文生图工具**：通过文字描述生成图像，效果与 Midjourney / DALL·E 等网页服务类似。**主要优势在于直接复用 Cherry Studio 中已配置的服务商账号**，无需另行注册各家平台。
 
 ## 进入绘画
 
