@@ -45,7 +45,7 @@
 
 1. 在 [对话界面](../../cherrystudio/preview/chat.md) 的输入框下方找到 **MCP 工具** 图标
 2. 点开，勾选你刚才添加的服务器
-3. 正常提问，比如："**帮我抓一下 https://docs.cherry-ai.com 这个页面的标题和大纲**"
+3. 正常提问，比如：**帮我抓一下 `https://docs.cherry-ai.com` 这个页面的标题和大纲**
 4. AI 会自动调用 fetch MCP 去拿网页，然后回答你
 
 <figure><img src="../../.gitbook/assets/MCP-输入框按钮示例 (1).png" alt=""><figcaption><p>对话框里的 MCP 工具选择</p></figcaption></figure>

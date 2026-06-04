@@ -1,5 +1,5 @@
 ---
-icon: text-cursor-input
+icon: highlighter
 ---
 
 # 划词助手
