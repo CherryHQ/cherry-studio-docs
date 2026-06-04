@@ -23,6 +23,7 @@
 ## 基础教程 <a href="#pre-basic" id="pre-basic"></a>
 
 * [模型服务](pre-basic/providers/README.md)
+  * [全部 Provider 快速参考](pre-basic/providers/quick-reference.md)
   * [CherryAI (免费)](pre-basic/providers/cherryai/README.md)
     * [DeepSeek V3.2](pre-basic/providers/cherryai/mian-fei-ti-yan-deepseek-v3.2-qi-jian-xi-shu-zhu-yi-li-moe.md)
     * [智谱 GLM-4.6V](pre-basic/providers/cherryai/mian-fei-ti-yan-zhi-pu-glm-4.6v-shi-jue-qi-jian-duo-mo-tai-moe.md)
