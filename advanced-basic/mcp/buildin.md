@@ -28,6 +28,14 @@ WORKSPACE_ROOT=/Users/yourname/your-project-dir
 
 在 Pyodide 沙盒中执行 Python 代码，支持多数标准库与科学计算包。让 AI"自己跑一段 Python"做数据分析、画图、转换格式都很合适。
 
+#### `@cherry/brave_search`
+
+集成 [Brave Search API](https://brave.com/search/api/) 的搜索工具，提供网页与本地搜索双重功能。需要先到 Brave 申请 API Key 并配置环境变量：
+
+```text
+BRAVE_API_KEY=你的_brave_api_key
+```
+
 ### 记忆类
 
 #### `@cherry/memory`
@@ -73,6 +81,7 @@ MEMORY_FILE_PATH=/path/to/memory.json
 | 适用场景 | 推荐内置 MCP |
 |---|---|
 | 想让 AI 读网页 | `@cherry/fetch` 或 `@cherry/browser` |
+| 想让 AI 搜网络（结构化结果）| `@cherry/brave_search` |
 | 想让 AI 处理本地文件 | `@cherry/filesystem` |
 | 想让 AI 跑 Python 代码 | `@cherry/python` |
 | 想让 AI 接 Dify 知识库 | `@cherry/dify_knowledge` |
