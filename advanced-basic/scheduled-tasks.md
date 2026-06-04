@@ -17,13 +17,13 @@ icon: calendar-clock
 定时任务依赖 Agent 运行，所以必须先满足：
 
 1. **已启用 [API 服务器](api-server.md)**
-2. **已配置至少一个 Agent**，且该 Agent 开启了下列 **任一权限**：
-   * **灵魂模式**（Soul Mode）：允许 Agent 在无人值守时自主决策
-   * **无权限模式**（Bypass Permissions）：允许 Agent 跳过敏感操作的人工确认
+2. **已配置至少一个 Agent**，且该 Agent 开启了下列 **任一项**：
+   * **自主模式**（基础设置中的开关）：允许 Agent 在无人值守时自主推进任务
+   * **无权限模式**（权限模式中的选项）：允许 Agent 跳过敏感操作的人工确认
 
 未启用上述权限的 Agent，**不会**出现在新建任务的下拉里，列表会显示提示：
 
-> 定时任务需要开启灵魂模式或无权限模式的 Agent 才能运行。请先在 Agent 设置中启用。
+> 定时任务需要开启自主模式或无权限模式的 Agent 才能运行，请先在 Agent 设置中启用。
 
 <figure><img src="../.gitbook/assets/cherry-tasks-empty.png" alt=""><figcaption><p>未配置可用 Agent 时的空态</p></figcaption></figure>
 
