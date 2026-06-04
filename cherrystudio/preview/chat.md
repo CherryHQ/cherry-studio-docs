@@ -41,7 +41,7 @@ icon: message
 
 <figure><img src="../../.gitbook/assets/cherry-chat-input-toolbar.png" alt=""><figcaption><p>v1.9.9 对话框工具栏</p></figcaption></figure>
 
-v1.9.x 的对话框工具栏从左到右默认按"输入辅助 → 历史管理"分组排列，中间用一道竖线分隔。具体顺序可由你长按拖拽自行调整。
+Cherry Studio 的对话框工具栏从左到右默认按"输入辅助 → 历史管理"排列。具体顺序可由你长按拖拽自行调整。
 
 ### 默认显示的工具（左侧栏）
 
