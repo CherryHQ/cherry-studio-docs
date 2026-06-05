@@ -4,7 +4,7 @@ icon: grid
 
 # 启动台
 
-启动台（Launchpad）是 Cherry Studio v1.9.x 引入的**应用抽屉**，集中展示所有功能入口。顶部 Tab 栏的 `+` 按钮即指向启动台。
+启动台（Launchpad）是 Cherry Studio 的**应用抽屉**，集中展示所有功能入口。顶部 Tab 栏的 `+` 按钮即指向启动台。
 
 <figure><img src="../../.gitbook/assets/cherry-launchpad.png" alt=""><figcaption><p>启动台中的 9 个应用</p></figcaption></figure>
 

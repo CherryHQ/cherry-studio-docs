@@ -4,7 +4,7 @@ icon: list
 
 # 全部 Provider 快速参考
 
-Cherry Studio v1.9.x 内置 **60+ 家 Provider**，本页提供总览表，找到目标 Provider 后**按指引填写密钥即可使用**。已有专题文档的 Provider 提供跳转链接，其余按通用步骤（[Provider 总览](README.md)）配置。
+Cherry Studio 内置 **60+ 家 Provider**，本页提供总览表，找到目标 Provider 后**按指引填写密钥即可使用**。已有专题文档的 Provider 提供跳转链接，其余按通用步骤（[Provider 总览](README.md)）配置。
 
 ## 使用步骤
 

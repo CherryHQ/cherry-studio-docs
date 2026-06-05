@@ -5,7 +5,7 @@ icon: head-side-gear
 # 助手库
 
 {% hint style="warning" %}
-**v1.9.x 命名说明**：v1.9.x 中有两个相关但不同的概念，请注意区分：
+**命名说明**：Cherry Studio 中有两个相关但不同的概念，请注意区分：
 
 * **本页（助手库）**：一个**助手预设市场**，提供大量"角色 + 提示词 + 参数"模板，添加后会出现在对话页的助手列表中。本质上是 [对话助手](chat.md#zhu-shou-he-hua-ti) 的来源。入口：顶部 Tab `+` → 启动台 → `助手库`。
 * **Cherry Agent（智能体）**：一个能自主调用工具、访问文件、执行多步任务的智能体系统，依赖本地 [API 服务器](../../advanced-basic/api-server.md)。入口：顶部 Tab `智能体`。详见 [Cherry Agent](../../advanced-basic/agent.md)。

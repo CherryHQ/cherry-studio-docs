@@ -4,7 +4,7 @@ icon: cloud-plus
 
 # 模型服务配置
 
-Cherry Studio v1.9.x 内置 60+ 家 Provider（模型服务商）的连接模板，覆盖国内外大部分主流模型与本地推理框架。本节为每家 Provider 提供独立配置指南。
+Cherry Studio 内置 60+ 家 Provider（模型服务商）的连接模板，覆盖国内外大部分主流模型与本地推理框架。本节为每家 Provider 提供独立配置指南。
 
 ### Provider 类型
 

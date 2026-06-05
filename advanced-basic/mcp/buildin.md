@@ -1,6 +1,6 @@
 # 内置 MCP 配置
 
-Cherry Studio **预装了若干常用 MCP**，无需手动安装即可在 `设置 → MCP 服务器` 中启用。下面是 v1.9.x 时的清单，**新版本可能调整**，请以应用内实际显示为准。
+Cherry Studio **预装了若干常用 MCP**，无需手动安装即可在 `设置 → MCP 服务器` 中启用。下面是当前内置清单，**新版本可能调整**，请以应用内实际显示为准。
 
 > 想自己装其他 MCP？看 [配置和使用 MCP](config.md)。
 
@@ -46,7 +46,7 @@ BRAVE_API_KEY=你的_brave_api_key
 MEMORY_FILE_PATH=/path/to/memory.json
 ```
 
-> 注：这是 MCP 形式的记忆。**Cherry Studio v1.9 起的[全局记忆](../memory.md)** 是更上层的功能，二者可叠加，但通常用其中之一即可。
+> 注：这是 MCP 形式的记忆。**Cherry Studio 的 [全局记忆](../memory.md)** 是更上层的功能，二者可叠加，但通常用其中之一即可。
 
 #### `@cherry/nowledge_mem`
 

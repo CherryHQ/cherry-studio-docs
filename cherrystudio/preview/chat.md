@@ -39,7 +39,7 @@ icon: message
 
 ## 对话框内按钮
 
-<figure><img src="../../.gitbook/assets/cherry-chat-input-toolbar.png" alt=""><figcaption><p>v1.9.9 对话框工具栏</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/cherry-chat-input-toolbar.png" alt=""><figcaption><p>Cherry Studio 对话框工具栏</p></figcaption></figure>
 
 Cherry Studio 的对话框工具栏从左到右默认按"输入辅助 → 历史管理"排列。具体顺序可由你长按拖拽自行调整。
 
