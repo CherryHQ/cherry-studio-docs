@@ -14,27 +14,39 @@ icon: image
 
 页面分为三栏：
 
-* **左栏**：选择服务商，下方提示当前服务商有没有可用的图像生成模型
+* **左栏**：选择服务商，下方提示当前服务商有没有可用的图像生成模型；没有时会显示绿色 `去设置` 按钮直接跳到该服务商配置页
 * **中栏顶部**：`绘图` / `编辑` 切换 —— 绘图是文生图，编辑是基于已有图像做图生图 / 修改
 * **中栏底部**：提示词输入框，右下角为目标语言（如英文）翻译与发送
-* **右栏**：当前会话已生成的图片列表，`+` 可新建画板
+* **右栏**：当前会话已生成的图片列表，顶部 `+` 可新建画板
+
+切到 `编辑` Tab 后画布说明会变为「上传图像 + 描述改动」的模式：
+
+<figure><img src="../../.gitbook/assets/cherry-drawing-edit-tab.png" alt=""><figcaption><p>切到「编辑」Tab —— 同样的输入框，但需要先上传一张参考图，再描述如何修改</p></figcaption></figure>
 
 ## 当前支持的服务商
 
-Cherry Studio 的绘画功能依赖各家服务商提供的**文生图模型**。以下 8 家可选，按需要在 `设置 → 模型服务` 中配置：
+Cherry Studio 的绘画功能依赖各家服务商提供的**文生图模型**。在左栏服务商下拉中可以看到当前实际可选的全部条目：
 
-| 服务商 | 特点 |
-|---|---|
-| **[硅基流动](../../pre-basic/providers/siliconcloud.md)** | 国内访问最方便，价格便宜，模型选择多 |
-| **[DMXAPI](../../pre-basic/providers/)** | 聚合多家厂商的网关 |
-| **[AiHubMix](../../pre-basic/providers/)** | 聚合多家厂商的网关 |
-| **TokenFlux** | 海外网关 |
-| **[PPIO 派欧云](../../pre-basic/providers/ppio.md)** | 国内云算力服务 |
-| **智谱（ZhiPu）** | 国产模型 CogView |
-| **NewApi** | 自建网关方案 |
-| **OVMS** | OpenVINO Model Server，本地推理 |
+<figure><img src="../../.gitbook/assets/cherry-drawing-provider-dropdown.png" alt=""><figcaption><p>服务商下拉 —— 选中项显示为绿色高亮，可滚动查看更多</p></figcaption></figure>
 
-后续会陆续接入更多。
+按类型大致分为三类：
+
+| 类型 | 服务商 | 说明 |
+|---|---|---|
+| 国内云服务 | **[硅基流动](../../pre-basic/providers/siliconcloud.md)** | 国内访问最方便，价格便宜，模型选择多 |
+| | **[PPIO 派欧云](../../pre-basic/providers/ppio.md)** | 国内云算力服务 |
+| | **智谱开放平台** | 国产模型 CogView |
+| 聚合网关 | **[AiHubMix](../../pre-basic/providers/)** | 聚合多家厂商的网关 |
+| | **[DMXAPI](../../pre-basic/providers/)** | 聚合多家厂商的网关 |
+| | **TokenFlux** | 海外网关 |
+| | **CherryIN** | Cherry 官方网关，统一计费 |
+| | **唯一 AI（AiOnly）** | 第三方网关 |
+| 自建 / 本地 | **New API** | 自建网关方案，添加后会出现在此列表 |
+| | **OVMS** | OpenVINO Model Server，本地推理（仅在 OVMS 已运行时显示） |
+
+{% hint style="info" %}
+任何**端点类型设为 `图像生成 (OpenAI)`** 的自定义服务商，都会动态出现在这里。后续会陆续接入更多。
+{% endhint %}
 
 ## 开始画
 
