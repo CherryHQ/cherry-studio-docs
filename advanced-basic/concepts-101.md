@@ -95,7 +95,7 @@ icon: graduation-cap
 
 智能体配置完成后，若每次对话都需打开 Cherry Studio 会比较不便。**频道**让你的智能体可以**驻留在飞书群中**，群成员 @ 它即可触发响应。
 
-**频道（Cherry Claw）** 将 Cherry Agent **接入 IM 平台**作为机器人。当前支持飞书 / Telegram / QQ / 企业微信 / Discord / Slack。
+**频道（Cherry Claw）** 将 Cherry Agent **接入 IM 平台**作为机器人。当前支持飞书 / Telegram / QQ / 微信 / Discord / Slack。
 
 * **使用方式**：先创建 Agent → `设置 → 频道` → 选择平台 → 填入该平台的机器人凭据
 * **详细文档**：[频道（Cherry Claw）](agent-channels.md)
