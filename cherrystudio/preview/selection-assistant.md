@@ -26,7 +26,11 @@ icon: highlighter
 <figure><img src="../../.gitbook/assets/cherry-selection-assistant.png" alt=""><figcaption><p>划词助手设置面板</p></figcaption></figure>
 
 1. 打开 **启用** 开关
-2. **macOS** 用户首次启用会弹窗请求 **辅助功能权限**：点击「去设置」→ 在系统设置「隐私与安全性 → 辅助功能」中找到 Cherry Studio 并打开开关 → 回到 Cherry Studio 再次启用
+2. **macOS** 用户首次启用会弹窗请求 **辅助功能权限**：
+
+   <figure><img src="../../.gitbook/assets/cherry-selection-accessibility-dialog.png" alt=""><figcaption><p>首次启用时的辅助功能权限提示</p></figcaption></figure>
+
+   点击 **去设置** → 在弹出的系统设置「隐私与安全性 → 辅助功能」中找到 Cherry Studio 并打开开关 → 回到 Cherry Studio 再次启用。
 3. （可选）在 **工具栏** 节配置触发方式：
    * **划词**：选中文字后立即弹出工具栏（默认）
    * **Ctrl 键**：选中文字后**再长按 Ctrl 键**才弹（避免误触）

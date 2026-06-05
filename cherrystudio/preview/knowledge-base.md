@@ -6,6 +6,8 @@ icon: books
 
 知识库就像给 AI 配一本**专属参考书**：你把自己的文档、笔记、网址塞进去，之后聊天时让 AI 翻这本书来回答你的问题。
 
+<figure><img src="../../.gitbook/assets/cherry-knowledge-empty.png" alt=""><figcaption><p>知识库入口：左上 <code>+ 添加</code> 创建第一个知识库</p></figcaption></figure>
+
 ## 用知识库能干什么？
 
 举几个真实场景：

@@ -9,7 +9,7 @@ icon: browsers
 ### 启用快捷助手
 
 1. **打开设置：** 导航至 `设置` → `快捷助手`（在左侧菜单中）。
-2. **启用开关：** 找到并打开 `快捷助手` 对应按钮。
+2. **启用开关：** 打开 `启用快捷助手`。开启后页面会展开更多选项。
 
 {% hint style="info" %}
 **快捷助手 vs 划词助手**：两者是不同的功能。
@@ -18,12 +18,19 @@ icon: browsers
 * 配置入口分别在 `设置 → 快捷助手` 与 `设置 → 划词助手`。
 {% endhint %}
 
-<figure><img src="../../.gitbook/assets/快捷助手-0 (1).png" alt=""><figcaption><p>启用快捷助手示意图</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/cherry-quick-assistant-enabled.png" alt=""><figcaption><p>启用后的快捷助手设置（实拍）</p></figcaption></figure>
 
-3. **设置快捷键（可选）：**
-   * Windows 默认快捷键为 <kbd>Ctrl</kbd> + <kbd>E</kbd>。
-   * macOS 默认快捷键为 <kbd>⌘</kbd> + <kbd>E</kbd>。
-   * 您可以在此处自定义快捷键以避免冲突或使其更符合您的使用习惯。
+启用后可见的开关：
+
+* **启用快捷助手**：主开关
+* **点击托盘图标启动**：左键点击系统托盘 Cherry Studio 图标时直接唤起快捷助手（默认开启）
+* **启动时读取剪贴板**：每次唤起快捷助手时自动把剪贴板内容作为输入
+* **快捷助手模型**：`使用助手` 跟随当前对话助手所选模型；`默认模型` 使用 [全局默认快速模型](../../pre-basic/settings/default-models.md)
+
+3. **设置快捷键（在另一个页面）：**
+   * 快捷键不在本页配置，需到 `设置 → 快捷键` 中调整。
+   * Windows 默认 <kbd>Ctrl</kbd> + <kbd>E</kbd>，macOS 默认 <kbd>⌘</kbd> + <kbd>E</kbd>。
+   * 可自定义快捷键以避免冲突或更符合个人习惯。
 
 ### 使用快捷助手
 
@@ -38,7 +45,7 @@ icon: browsers
 3. **关闭：** 按下 <kbd>ESC</kbd> 键或点击快捷助手窗口外部的任意位置即可关闭。
 
 {% hint style="info" %}
-快捷助手使用的模型为 [全局默认对话模型](../../pre-basic/settings/default-models.md#mo-ren-zhu-shou-mo-xing)。
+当 `快捷助手模型` 选 **默认模型** 时使用 [全局默认快速模型](../../pre-basic/settings/default-models.md)；选 **使用助手** 时跟随当前对话助手所选模型。
 {% endhint %}
 
 ### 提示与技巧
