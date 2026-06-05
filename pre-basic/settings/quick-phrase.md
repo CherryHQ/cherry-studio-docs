@@ -17,7 +17,7 @@ icon: zap
 
 <figure><img src="../../.gitbook/assets/cherry-quickphrase.png" alt=""><figcaption><p>快捷短语管理面板</p></figcaption></figure>
 
-1. 点击 **添加短语**
+1. 点击页面右上角的 **+** 按钮（鼠标悬停显示"添加短语"提示）
 2. 填写：
    * **标题**：在调用菜单中显示的名字（如"翻译成英文"、"代码 review"）
    * **内容**：实际插入对话框的文本，**支持变量**（见下）
