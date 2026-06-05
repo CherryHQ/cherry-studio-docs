@@ -21,7 +21,7 @@ icon: calendar-clock
 Agent 会自动判断需要创建一个怎样的定时任务，并按你描述的内容补齐字段（调度类型、时间、提示词等），中途仅在需要更多信息时向你确认。
 
 {% hint style="info" %}
-**前提**：Agent 在编辑面板中已开启 **自主模式**（基础设置 Tab），并把 **权限模式** 设为 **全自动模式**。详见 [Cherry Agent](agent.md)。
+**前提**：Agent 在编辑面板中已开启 **自主模式**（基础设置 Tab）。详见 [Cherry Agent](agent.md)。
 
 如果你用的是 Cherry Studio 内置的 **Cherry Claw**，**默认就处于全自动模式 + 自主模式**，可直接交付任务，无需任何前置配置。
 {% endhint %}
