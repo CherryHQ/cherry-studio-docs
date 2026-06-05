@@ -54,7 +54,7 @@
 
 ### 效果展示
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 不用 MCP 时，AI 只能凭"训练时见过的资料"回答；接上 fetch 后，AI 可以"现去网上看"，回答就准确得多。
 

@@ -10,7 +10,7 @@ icon: database
 
 加入知识库的文档会被**切分为小片段 → 由嵌入模型转换为数字向量 → 存入本地数据库**。提问时，知识库会将问题转换为同类向量，检索最相似的片段，并将这些片段提供给对话模型作为上下文。
 
-<figure><img src="../.gitbook/assets/mermaid-diagram-1739241680067 (1).png" alt=""><figcaption><p>知识库处理流程图</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/mermaid-diagram-1739241680067.png" alt=""><figcaption><p>知识库处理流程图</p></figcaption></figure>
 
 ## 详细一点
 

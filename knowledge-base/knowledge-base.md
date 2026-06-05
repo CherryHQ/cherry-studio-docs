@@ -22,7 +22,7 @@ icon: book-open-cover
 2. 点击 **获取模型列表**，在顶部 Tab 切到 **嵌入** 分类；
 3. 选择需要的嵌入模型添加到我的模型列表（推荐 `bge-m3` 或 `text-embedding-3-small`）。
 
-<figure><img src="../.gitbook/assets/image (1).webp" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image.webp" alt=""><figcaption></figcaption></figure>
 
 ## 创建知识库
 
@@ -30,9 +30,9 @@ icon: book-open-cover
 2. **添加**：点击 **+ 添加**，开始创建知识库；
 3. **命名 + 选模型**：输入名称并选择嵌入模型（以 `bge-m3` 为例），即可完成创建。
 
-<figure><img src="../.gitbook/assets/image-1 (1).webp" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image-1.webp" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/image-2 (1).webp" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image-2.webp" alt=""><figcaption></figcaption></figure>
 
 ## 添加文件并向量化
 
@@ -40,11 +40,11 @@ icon: book-open-cover
 2. 选择文件：选择支持的文件格式，如 pdf，docx，pptx，xlsx，txt，md，mdx 等，并打开；
 3. 向量化：系统会自动进行向量化处理，当显示完成时（绿色 ✓），代表向量化已完成。
 
-<figure><img src="../.gitbook/assets/image-3 (1).webp" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image-3.webp" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/image-4 (1).webp" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image-4.webp" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/image-5 (1).webp" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image-5.webp" alt=""><figcaption></figcaption></figure>
 
 ## 添加多种来源的数据
 
@@ -76,9 +76,9 @@ CherryStudio 支持多种添加数据的方式：
 3. 呈现搜索的结果；
 4. 并显示该条结果的匹配分数。
 
-<figure><img src="../.gitbook/assets/image-7 (1).webp" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image-7.webp" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/image-8 (1).webp" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image-8.webp" alt=""><figcaption></figcaption></figure>
 
 ## 对话中引用知识库生成回复
 
@@ -86,6 +86,6 @@ CherryStudio 支持多种添加数据的方式：
 2. 输入并发送问题，模型即返回通过检索结果生成的答案 ；
 3. 同时，引用的数据来源会附在答案下方，可快捷查看源文件。
 
-<figure><img src="../.gitbook/assets/image-9 (1).webp" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image-9.webp" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/image-10 (1).webp" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image-10.webp" alt=""><figcaption></figcaption></figure>

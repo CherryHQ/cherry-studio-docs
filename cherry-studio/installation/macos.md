@@ -25,12 +25,12 @@ icon: apple
 
 2. 下载完成后点击这里
 
-<figure><img src="../../.gitbook/assets/Mac下载 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Mac下载.png" alt=""><figcaption></figcaption></figure>
 
 3. 拖拽图标安装
 
-<figure><img src="../../.gitbook/assets/Mac拖拽安装 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Mac拖拽安装.png" alt=""><figcaption></figcaption></figure>
 
 到启动台中寻找 Cherry Studio 图标并点击，能打开 Cherry Studio 主界面则安装成功。
 
-<figure><img src="../../.gitbook/assets/Mac安装成功 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Mac安装成功.png" alt=""><figcaption></figcaption></figure>

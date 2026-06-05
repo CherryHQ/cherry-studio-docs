@@ -2,7 +2,7 @@
 icon: file-signature
 ---
 
-# 反馈&建议
+# 反馈 & 建议
 
 ## Telegram 讨论组
 
@@ -18,7 +18,7 @@ icon: file-signature
 QQ 群成员可以互帮互助，分享下载链接
 {% endhint %}
 
-[QQ群(1025067911)](https://qm.qq.com/q/hlHOddwAS)
+[QQ群(1075687444)](https://qm.qq.com/q/eHZdjcdkQw)
 
 ## Github Issues
 
