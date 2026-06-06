@@ -27,7 +27,6 @@ icon: grid
 启动台底部可以看到你已经使用过的[小程序](app.md)（如 ChatGPT 网页、Claude 网页等）。常用小程序可以**添加到启动台**：
 
 * 对小程序图标右键，选择 **添加到启动台**
-* 也可以在 `设置 → 小程序` 中管理已经添加到启动台的小程序
 * 当导航布局切到 **左侧栏** 时（见下方"切换默认导航布局"），已添加的小程序会显示在左侧栏底部，便于一键访问
 
 <figure><img src="../../.gitbook/assets/cherry-launchpad-add-app-menu.jpg" alt=""><figcaption><p>右键小程序，可添加到启动台或隐藏</p></figcaption></figure>
