@@ -68,9 +68,7 @@
   * [快捷键设置](pre-basic/settings/key-shortcut.md)
   * [语音功能](pre-basic/settings/yu-yin-gong-neng.md)
   * [显示设置](pre-basic/settings/display.md)
-  * [技能](pre-basic/settings/skills.md)
   * [文档处理](pre-basic/settings/doc-process.md)
-  * [快捷短语](pre-basic/settings/quick-phrase.md)
 * [数据设置](pre-basic/data-settings/README.md)
   * [WebDAV 备份](pre-basic/data-settings/webdav.md)
   * [S3 兼容存储备份](pre-basic/data-settings/s3-compatible.md)
@@ -94,6 +92,8 @@
 ## 进阶教程 <a href="#advanced-basic" id="advanced-basic"></a>
 
 * [概念入门：助手 / 智能体 / 技能 / MCP / 频道](advanced-basic/concepts-101.md)
+* [技能](pre-basic/settings/skills.md)
+* [快捷短语](pre-basic/settings/quick-phrase.md)
 * [MCP 使用教程](advanced-basic/mcp/README.md)
   * [MCP 环境安装](advanced-basic/mcp/install.md)
   * [配置和使用 MCP](advanced-basic/mcp/config.md)
