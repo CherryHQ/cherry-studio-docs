@@ -1,5 +1,5 @@
 ---
-icon: zap
+icon: message
 ---
 
 # 快捷短语

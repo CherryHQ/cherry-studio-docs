@@ -92,8 +92,6 @@
 ## 进阶教程 <a href="#advanced-basic" id="advanced-basic"></a>
 
 * [概念入门：助手 / 智能体 / 技能 / MCP / 频道](advanced-basic/concepts-101.md)
-* [技能](pre-basic/settings/skills.md)
-* [快捷短语](pre-basic/settings/quick-phrase.md)
 * [MCP 使用教程](advanced-basic/mcp/README.md)
   * [MCP 环境安装](advanced-basic/mcp/install.md)
   * [配置和使用 MCP](advanced-basic/mcp/config.md)
@@ -105,10 +103,12 @@
 * [Code Tools 使用教程](advanced-basic/code-tools-shi-yong-jiao-cheng.md)
 * [API 服务器](advanced-basic/api-server.md)
 * [智能体](advanced-basic/agent.md)
+* [技能](pre-basic/settings/skills.md)
 * [频道](advanced-basic/agent-channels.md)
 * [定时任务](advanced-basic/scheduled-tasks.md)
 * [全局记忆](advanced-basic/memory.md)
 * [OpenClaw](advanced-basic/openclaw.md)
+* [快捷短语](pre-basic/settings/quick-phrase.md)
 * [Agent 案例](advanced-basic/agent-an-li/README.md)
   * [金价暴跌看懵了？我用 Kimi K2.5 + Cherry Studio 做了个“复盘神器”（附 Agent 设计+完整教程）](advanced-basic/agent-an-li/jin-jia-bao-die-kan-meng-le-wo-yong-kimi-k2.5-+-cherry-studio-zuo-le-ge-fu-pan-shen-qi-fu-agent-she.md)
 
