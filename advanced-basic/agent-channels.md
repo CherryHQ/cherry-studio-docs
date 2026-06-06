@@ -36,7 +36,7 @@ icon: radio
 Cherry Claw 会自动判断需要做哪些事，向你索取必要的凭据（飞书 App ID 等），然后帮你完成频道创建与 [定时任务](scheduled-tasks.md) 配置。
 
 {% hint style="info" %}
-**Cherry Studio 内置的 Cherry Claw 默认就是「全自动模式 + 自主模式」**，无需任何前置配置即可直接接受任务。
+**Cherry Studio 内置的 Cherry Claw 默认就是「自主模式 + 全自动模式」**，无需任何前置配置即可直接接受任务。
 
 如果你想换成自己创建的 Agent，需要在它的编辑面板中开启 **自主模式**（基础设置 Tab）并把 **权限模式** 设为 **全自动模式**。详见 [Cherry Agent](agent.md)。
 {% endhint %}
