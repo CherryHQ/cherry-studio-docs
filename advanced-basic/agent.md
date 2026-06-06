@@ -123,13 +123,9 @@ Cherry Studio 需要在本地运行一个内部服务以承载 Agent。操作上
 
 返回智能体页面，点击智能体卡片进入会话：
 
-<figure><img src="../.gitbook/assets/CleanShot 2025-10-12 at 20.26.35@2x.png" alt=""><figcaption><p>智能体会话入口</p></figcaption></figure>
-
 * 在底部输入框输入任务，例如"请帮我把 `~/Downloads/report.md` 转成 PPT 大纲"
 * Agent 会自动判断调用哪些工具、是否需要多轮推理
 * 工具调用与决策过程以可折叠卡片形式逐步展示
-
-<figure><img src="../.gitbook/assets/CleanShot 2025-10-12 at 19.56.22@2x.png" alt=""><figcaption><p>与 Agent 对话并查看工具调用过程</p></figcaption></figure>
 
 ### 常见问题
 
@@ -137,14 +133,10 @@ Cherry Studio 需要在本地运行一个内部服务以承载 Agent。操作上
 
 回 `设置 → API 服务器`，点击绿色 ▶ 启动按钮。详情见 [API 服务器](api-server.md)。
 
-<figure><img src="../.gitbook/assets/CleanShot 2025-10-12 at 20.24.43@2x.png" alt=""><figcaption><p>未启用 API 服务器时的提示</p></figcaption></figure>
-
 #### 创建 Agent 时下拉里没有模型
 
 * 确认所选 Provider 至少添加了一个对话模型
 * 确认该 Provider 类型为 **Anthropic** 或 **CherryIN**（OpenAI-only 的 Provider 不会出现在 Agent 模型选择里）
-
-<figure><img src="../.gitbook/assets/CleanShot 2025-10-12 at 20.25.10@2x.png" alt=""><figcaption><p>模型选择下拉</p></figcaption></figure>
 
 #### Agent 输出突然停止
 
