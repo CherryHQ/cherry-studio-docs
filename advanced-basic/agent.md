@@ -127,6 +127,10 @@ Cherry Studio 需要在本地运行一个内部服务以承载 Agent。操作上
 * Agent 会自动判断调用哪些工具、是否需要多轮推理
 * 工具调用与决策过程以可折叠卡片形式逐步展示
 
+#### 结果展示
+
+<figure><img src="../.gitbook/assets/CleanShot 2025-10-12 at 20.30.26@2x.png" alt=""><figcaption><p>智能体调用工具并返回结果示例</p></figcaption></figure>
+
 ### 常见问题
 
 #### 智能体页面提示"请启用 API 服务器以使用智能体功能"
