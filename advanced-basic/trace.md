@@ -6,68 +6,80 @@ icon: route
 
 ## 功能介绍
 
-调用链（又称“trace”）为用户提供对话的洞察能力，帮助用户觉察模型、知识库、MCP、网络搜索等在对话过程中的具体表现。它是一个基于 [OpenTelemetry](https://opentelemetry.io/docs/languages/js/) 实现的可观测工具，通过端侧采集、存储、处理数据实现可视化，为定位问题、优化效果提供量化评估依据。
+调用链（Trace）用于查看一次对话背后的完整执行过程，帮助你定位模型、知识库、MCP、网络搜索等环节的耗时、输入输出和 token 使用情况。
 
-每次对话对应一条 trace 数据，一条 trace 由多个 span 组成，每个 span 对应 Cherry Studio 的一个程序处理逻辑如调用模型会话、调用 MCP 、调用知识库、调用网络搜索等。trace 以树结构展示，span 为树节点，主要数据包括耗时、token 使用量，当然在 span 详情还可以查看其具体的输入输出。
+每次新对话请求会生成一条 trace 数据。一条 trace 由多个 span 组成，每个 span 对应 Cherry Studio 的一个处理环节，例如模型调用、知识库检索、MCP 工具调用或网络搜索。Trace 窗口会以树结构展示这些 span，你可以逐层展开查看详情。
 
-<figure><img src="../.gitbook/assets/trace2.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/trace2.gif" alt=""><figcaption><p>调用链整体效果</p></figcaption></figure>
 
 ## 开启 Trace
 
-默认情况下，Cherry Studio 安装之后，Trace 是隐藏的状态。需要在 "设置"-"常规设置" - "开发者模式" 中开启，如下图：
+Trace 默认隐藏，需要先开启开发者模式：
 
-<figure><img src="../.gitbook/assets/image (84).png" alt=""><figcaption></figcaption></figure>
+1. 打开 `设置 → 常规设置`
+2. 找到 **开发者模式**
+3. 开启 **启用开发者模式**
 
-且对于之前的会话不会产生 Trace 记录，只会在新的问答产生之后才会产生 Trace 记录。所产生的记录存储在本地，如需要彻底清除 Trace ，可以通过 "设置" - "数据设置" - "数据目录" - "清除缓存" 进行清除，也可通过手动 删除 \~/.cherrystudio/trace 下的文件进行清除，如下图：
+<figure><img src="../.gitbook/assets/cherry-trace-enable-developer-mode.jpg" alt=""><figcaption><p>在常规设置中开启开发者模式</p></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/image (85).png" alt=""><figcaption></figcaption></figure>
+{% hint style="info" %}
+开启后，之前已经产生的会话不会补生成 Trace；只有后续新的问答才会记录调用链。
+{% endhint %}
+
+Trace 数据存储在本地应用数据目录中。通常不需要手动处理，如需彻底清理，可进入 `设置 → 数据设置 → 数据目录`，使用 **清除缓存**，或打开数据目录后删除 trace 相关缓存。
+
+常见数据目录：
+
+* **macOS**：`~/Library/Application Support/CherryStudio`
+* **Windows**：`%APPDATA%\CherryStudio`
+* **Linux**：`~/.config/CherryStudio`
+
+<figure><img src="../.gitbook/assets/cherry-trace-data-settings.jpg" alt=""><figcaption><p>数据目录与缓存清理入口</p></figcaption></figure>
 
 ## 场景介绍
 
 ### 全链路查看
 
-在 Cherry Studio 对话框中点击调用链查看调用链的全链路数据。无论在对话过程中调用了模型，还是网络搜索、知识库、MCP，都可以在调用链窗口中查看到全链路调用数据。
+在 Cherry Studio 对话框中点击调用链按钮，即可打开本次对话的完整链路。无论对话过程中调用了模型、网络搜索、知识库还是 MCP，都可以在调用链窗口中查看到对应节点。
 
-<figure><img src="../.gitbook/assets/image (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/cherry-trace-button.jpg" alt=""><figcaption><p>对话消息旁的调用链入口</p></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/image (86).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/cherry-trace-overview.jpg" alt=""><figcaption><p>调用链树形视图</p></figcaption></figure>
 
-### 查看链路中模型
+### 查看模型调用
 
-若想要查看调用链中模型的详情，可以点击模型调用节点，查看其输入、输出详情。
+点击模型调用节点，可以查看该次模型请求的耗时、token 使用量、输入和输出。
 
-<figure><img src="../.gitbook/assets/image (87).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/cherry-trace-model-node.jpg" alt=""><figcaption><p>选择模型调用节点</p></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/image (88).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/cherry-trace-model-input.jpg" alt=""><figcaption><p>模型调用输入</p></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/image (89).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/cherry-trace-model-output.jpg" alt=""><figcaption><p>模型调用输出</p></figcaption></figure>
 
-### 查看链路中网络搜索
+### 查看网络搜索
 
-若想要查看调用链中网络搜索的详情，可以点击网络搜索调用节点，查看其输入、输出详情。在详情中，可以查看到调用网络搜索查询的问题和其返回的结果。
+点击网络搜索节点，可以查看搜索请求的问题、返回结果，以及后续传给模型的上下文。
 
-<figure><img src="../.gitbook/assets/image (2) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/cherry-trace-websearch-node.jpg" alt=""><figcaption><p>选择网络搜索节点</p></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/image (150).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/cherry-trace-websearch-input.jpg" alt=""><figcaption><p>网络搜索输入</p></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/image (151).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/cherry-trace-websearch-output.jpg" alt=""><figcaption><p>网络搜索返回结果</p></figcaption></figure>
 
-### 查看链路中知识库
+### 查看知识库检索
 
-若想要查看调用链中知识库的详情，可以点击知识库调用节点，查看其输入、输出详情。在详情中，可以查看到调用知识库查询的问题和其返回的答案。
+点击知识库节点，可以查看检索问题、命中的内容，以及知识库返回给模型的上下文。
 
-<figure><img src="../.gitbook/assets/image (152).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/cherry-trace-knowledge-detail.jpg" alt=""><figcaption><p>知识库节点详情</p></figcaption></figure>
 
-### 查看链路中 MCP 调用情况
+### 查看 MCP 调用
 
-若想要查看调用链中 MCP 的详情，可以点击 MCP 调用节点，查看其输入、输出详情。在详情中，可以查看到调用此 MCP Server tool 的入参和 tool 的返回。
+点击 MCP 节点，可以查看 MCP Server tool 的入参、返回值和耗时，便于排查工具调用是否符合预期。
 
-<figure><img src="../.gitbook/assets/image (153).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/cherry-trace-mcp-detail.jpg" alt=""><figcaption><p>MCP 调用详情</p></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/image (154).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/cherry-trace-mcp-output.jpg" alt=""><figcaption><p>MCP 返回结果</p></figcaption></figure>
 
 ## 问题和建议
 
-当前功能由阿里云 [EDAS](https://www.aliyun.com/product/edas) 团队提供，如有问题或建议，请进入钉钉群 （ 群号： 21958624 ） 与开发者进行深度沟通。
-
-\\
+如果调用链数据显示异常，或你希望补充更多可观测能力，请通过 [反馈与建议](../question-contact/suggestions.md) 提交问题。反馈时建议附上 Trace 截图、所用模型、是否启用了知识库 / MCP / 网络搜索，以及能够复现的提问内容。
