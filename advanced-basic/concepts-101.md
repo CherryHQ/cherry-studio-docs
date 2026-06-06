@@ -45,7 +45,7 @@ icon: graduation-cap
 * **可以叠加**：助手可以挂载知识库、技能、工具
 * **细节文档**：[助手库](../cherrystudio/preview/agents.md)
 
-### 2. 智能体 / Cherry Agent —— 让 AI 具备执行能力
+### 2. 智能体 —— 让 AI 具备执行能力
 
 普通对话中 AI 仅能"提供建议"，无法真正读取文件、运行命令、完成具体任务。
 
@@ -53,7 +53,7 @@ icon: graduation-cap
 
 * **使用方式**：顶部 Tab `智能体` → 创建一个 Agent
 * **前置条件**：启用 [API 服务器](api-server.md) + 配置一家支持 Anthropic 协议的 [Provider](../pre-basic/providers/)（如 [CherryIN](../pre-basic/providers/cherryin-1.md) / [Anthropic](../pre-basic/providers/anthropic.md)）
-* **详细文档**：[Cherry Agent](agent.md)
+* **详细文档**：[智能体](agent.md)
 
 {% hint style="info" %}
 **助手与 Cherry Agent 的核心差异**：
@@ -91,14 +91,14 @@ icon: graduation-cap
 类比：技能相当于**学历背景**（决定思维方式），MCP 相当于**工具箱**（决定可用资源）。
 {% endhint %}
 
-### 5. 频道 / Cherry Claw —— 将 AI 接入 IM 群
+### 5. 频道 —— 将 AI 接入 IM 群
 
 智能体配置完成后，若每次对话都需打开 Cherry Studio 会比较不便。**频道**让你的智能体可以**驻留在飞书群中**，群成员 @ 它即可触发响应。
 
 **频道（Cherry Claw）** 将 Cherry Agent **接入 IM 平台**作为机器人。当前支持飞书 / Telegram / QQ / 微信 / Discord / Slack。
 
 * **使用方式**：先创建 Agent → `设置 → 频道` → 选择平台 → 填入该平台的机器人凭据
-* **详细文档**：[频道（Cherry Claw）](agent-channels.md)
+* **详细文档**：[频道](agent-channels.md)
 
 ### 6. 定时任务 —— AI 的"值班计划"
 
@@ -127,7 +127,7 @@ icon: graduation-cap
 1. **第一步**：在 `设置 → 模型服务` 配置一家 [Provider](../pre-basic/providers/)，完成基本对话能力
 2. **第二步**：进入 `助手库` 添加常用场景的助手（如"翻译助手"），开始日常使用
 3. **第三步**：启用 [知识库](../knowledge-base/knowledge-base.md)，让 AI 可检索个人资料
-4. **第四步**：实现自动化 → 开启 [API 服务器](api-server.md) → 配置 [Cherry Agent](agent.md)
+4. **第四步**：实现自动化 → 开启 [API 服务器](api-server.md) → 配置 [智能体](agent.md)
 5. **第五步**：进阶能力 → [MCP](mcp/) 接入工具 / [频道](agent-channels.md) 接入 IM / [定时任务](scheduled-tasks.md) 周期运行
 
 无需一次掌握全部，按实际需求逐步启用即可。

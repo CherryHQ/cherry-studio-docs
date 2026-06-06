@@ -2,14 +2,14 @@
 icon: robot
 ---
 
-# Cherry Agent
+# 智能体
 
-Cherry Agent 让 AI 不仅能对话，更能**自主完成任务**。
+智能体让 AI 不仅能对话，更能**自主完成任务**。
 
 类比：
 
 * 普通对话中的 AI 类似 **仅能给建议的同事** —— 你询问方法，它告诉你步骤
-* Cherry Agent 类似 **具备执行能力的同事** —— 你给定目标，它自主读取文件、查询资料、调用工具，逐步完成
+* 智能体类似 **具备执行能力的同事** —— 你给定目标，它自主读取文件、查询资料、调用工具，逐步完成
 
 适用场景示例：
 
@@ -24,9 +24,9 @@ Cherry Agent 让 AI 不仅能对话，更能**自主完成任务**。
 
 #### 1. 一家支持 Anthropic 协议的 Provider
 
-Cherry Agent 依赖"工具调用"格式的对话方式，目前最成熟的实现是 Anthropic Claude 系列模型。因此需要一家提供该协议的模型服务商，推荐选项：
+智能体依赖"工具调用"格式的对话方式，目前最成熟的实现是 Anthropic Claude 系列模型。因此需要一家提供该协议的模型服务商，推荐选项：
 
-* **[CherryIN](../pre-basic/providers/cherryin-1.md)**（最便捷）：单一账号即可同时支持普通对话与 Cherry Agent
+* **[CherryIN](../pre-basic/providers/cherryin-1.md)**（最便捷）：单一账号即可同时支持普通对话与智能体
 * **[Anthropic 官方](../pre-basic/providers/anthropic.md)**：直接使用 Claude 账号
 * 其他主流 AI 网关（如 [OpenRouter](../pre-basic/providers/openrouter.md)）
 
@@ -152,6 +152,6 @@ Cherry Studio 需要在本地运行一个内部服务以承载 Agent。操作上
 
 ### 下一步
 
-* 把 Agent 接到 IM 平台（飞书 / Telegram / QQ / 微信 / Discord / Slack）→ [频道（Cherry Claw）](agent-channels.md)
+* 把 Agent 接到 IM 平台（飞书 / Telegram / QQ / 微信 / Discord / Slack）→ [频道](agent-channels.md)
 * 让 Agent 定时自动执行任务 → [定时任务](scheduled-tasks.md)
 * 拓展工具能力 → [MCP 使用教程](mcp/)

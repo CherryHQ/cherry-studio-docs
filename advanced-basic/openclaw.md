@@ -11,7 +11,7 @@ icon: spider
 {% hint style="info" %}
 **是否需要 OpenClaw**：
 
-* 仅在 Cherry Studio 图形界面中使用智能体 → **不需要**，直接参考 [Cherry Agent](agent.md) 即可
+* 仅在 Cherry Studio 图形界面中使用智能体 → **不需要**，直接参考 [智能体](agent.md) 即可
 * 需要在终端运行 Agent、集成到自动化脚本或 CI 流程 → 适合使用 OpenClaw
 
 如不确定，建议先使用 Cherry Agent，后续按需启用 OpenClaw。
@@ -41,7 +41,7 @@ icon: spider
 * 详细 CLI 用法请见官方文档：[https://docs.openclaw.ai/](https://docs.openclaw.ai/)
 * 点击 OpenClaw 页面右上角 **查看文档** 直达
 
-### 与 [Cherry Agent](agent.md) 的区别
+### 与 [智能体](agent.md) 的区别
 
 | 维度 | Cherry Agent | OpenClaw |
 |---|---|---|
