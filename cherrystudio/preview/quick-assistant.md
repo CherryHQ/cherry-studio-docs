@@ -45,7 +45,7 @@ icon: browsers
 3. **关闭：** 按下 <kbd>ESC</kbd> 键或点击快捷助手窗口外部的任意位置即可关闭。
 
 {% hint style="info" %}
-当 `快捷助手模型` 选 **默认模型** 时使用 [全局默认快速模型](../../pre-basic/settings/default-models.md)；选 **使用助手** 时跟随当前对话助手所选模型。
+当 `快捷助手模型` 选 **默认模型** 时使用 [全局默认快速模型](../../pre-basic/settings/default-models.md)；选 **使用助手** 后可以选择一个已有助手作为响应的模型。
 {% endhint %}
 
 ### 提示与技巧
