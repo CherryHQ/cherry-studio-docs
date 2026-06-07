@@ -41,53 +41,46 @@ icon: message
 
 <figure><img src="../../.gitbook/assets/cherry-chat-input-toolbar-v199.png" alt=""><figcaption><p>Cherry Studio 对话框工具栏（v1.9.9 实拍）</p></figcaption></figure>
 
-Cherry Studio 的对话框工具栏从左到右分为：**左侧工具 → `⊙` 折叠按钮 → 右侧工具**，外加右下角的翻译/发送。具体顺序可由你长按拖拽自行调整，也可在可见区与隐藏区之间互换。
+Cherry Studio 的对话框工具栏中的工具具体顺序可由你长按拖拽自行调整。
 
-### 默认显示的工具（左侧栏）
-
-| 图标 | 名称 | 作用 |
-|---|---|---|
-| 📝+ | **新话题** | 在当前助手内创建一个新话题 |
-| 📎 | **上传附件** | 上传图片或文档；图片需模型支持视觉能力；文档会被自动解析为上下文 |
-| 🌍 | **网络搜索** | 把网页搜索结果作为上下文返回给模型，需先在 [联网模式](../../pre-basic/websearch/) 中配置 |
-| 📄🔍 | **知识库** | 把一个已建好的 [知识库](../../knowledge-base/knowledge-base.md) 作为上下文 |
-| 🔨 | **MCP 服务器** | 启用 [MCP](../../advanced-basic/mcp/) 工具供模型调用 |
-| @ | **提及模型** | 临时切换接下来的回复模型，保留上下文 |
-
-### 分隔线右侧工具
-
-{% hint style="info" %}
-右侧 4 个工具默认是**收起**的（如上图所示，只看到一个 `⊙` 圆形折叠按钮）。点击 `⊙` 即可就地展开它们；再点一次收起。
-{% endhint %}
+### 左侧工具
 
 | 图标 | 名称 | 作用 |
 |---|---|---|
-| ⚡ | **快捷短语** | 调用预设模板，详见 [快捷短语](../../pre-basic/settings/quick-phrase.md) |
-| 🖌️ | **清空消息** | **删除**该话题下所有消息（不可恢复） |
-| ⛶ | **展开 / 收起** | 让输入框变得更大或恢复，便于输入长文 |
-| 🧽 | **清除上下文** | **保留消息**但让模型"忘掉"之前的对话（截断 token 上下文） |
+| <img src="../../.gitbook/assets/chat-tool-bar/new.png" alt=""> | **新话题** | 在当前助手内创建一个新话题 |
+| <img src="../../.gitbook/assets/chat-tool-bar/upload.png" alt=""> | **上传附件** | 上传图片或文档；图片需模型支持视觉能力；文档会被自动解析为上下文 |
+| <img src="../../.gitbook/assets/chat-tool-bar/search.png" alt=""> | **网络搜索** | 把网页搜索结果作为上下文返回给模型，需先在 [联网模式](../../pre-basic/websearch/) 中配置 |
+| <img src="../../.gitbook/assets/chat-tool-bar/knowledge-base.png" alt=""> | **知识库** | 把一个已建好的 [知识库](../../knowledge-base/knowledge-base.md) 作为上下文 |
+| <img src="../../.gitbook/assets/chat-tool-bar/mcp.png" alt=""> | **MCP 服务器** | 启用 [MCP](../../advanced-basic/mcp/) 工具供模型调用 |
+| <img src="../../.gitbook/assets/chat-tool-bar/@.png" alt=""> | **提及模型** | 临时切换接下来的回复模型，保留上下文 |
+| <img src="../../.gitbook/assets/chat-tool-bar/quick-phrases.png" alt=""> | **快捷短语** | 调用预设模板，详见 [快捷短语](../../pre-basic/settings/quick-phrase.md) |
+| <img src="../../.gitbook/assets/chat-tool-bar/clear-messages.png" alt=""> | **清空消息** | **删除**该话题下所有消息（不可恢复） |
+| <img src="../../.gitbook/assets/chat-tool-bar/expand.png" alt=""> | **展开 / 收起** | 让输入框变得更大或恢复，便于输入长文 |
+| <img src="../../.gitbook/assets/chat-tool-bar/clear-context.png" alt=""> | **清除上下文** | **保留消息**但让模型"忘掉"之前的对话（截断 token 上下文） |
 
-{% hint style="info" %}
+{% hint style="warning" %}
 **"清空消息" vs "清除上下文"** 是两件不同的事：
 * **清空消息**：物理删除全部消息内容，不可恢复
-* **清除上下文**：消息仍在，只是让模型从此刻开始重新认识你
+* **清除上下文**：消息仍在，只是让模型从此刻开始重新认识你，它不再会记得此前的对话
 {% endhint %}
 
-### 右下角的常用辅助
+### 右下角工具
 
 | 图标 | 名称 | 作用 |
 |---|---|---|
-| 🅰️文 | **翻译** | 将输入框内容直接翻译为目标语言（在 `设置 → 默认模型` 中配置默认翻译模型） |
-| ⬆️ | **发送** | 发送消息（默认 Enter；可在 [快捷键](../../pre-basic/settings/key-shortcut.md) 中改）|
+| <img src="../../.gitbook/assets/chat-tool-bar/translate.png" alt=""> | **翻译** | 将输入框内容直接翻译为目标语言（在 `设置 → 默认模型` 中配置默认翻译模型） |
+| <img src="../../.gitbook/assets/chat-tool-bar/send.png" alt=""> | **发送** | 发送消息（默认 Enter；可在 [快捷键](../../pre-basic/settings/key-shortcut.md) 中改）|
 
 ### 仅在符合条件时显示的工具
 
 下列工具不在默认工具栏中，**仅当所选模型 / 助手支持时才出现**：
 
-* **生成图片** 🖌️🎨：所选对话模型支持生图时出现。专门的生图模型请去 [绘画](drawing.md)
-* **思考模式** 💡：所选模型支持深度推理时出现（如 GPT-o 系列、Claude with extended thinking、Qwen 思考版等）
-* **网页上下文** 🔗：所选模型支持原生 URL 输入时出现
-* **斜杠命令** `/`：在 Cherry Agent 会话中出现，提供 `/clear`、`/exit` 等内置命令
+| 图标 | 名称 | 作用 |
+|---|---|---|
+| <img src="../../.gitbook/assets/chat-tool-bar/image.png" alt=""> | **生成图片** | 所选对话模型支持生图时出现。专门的生图模型请去 [绘画](drawing.md) |
+| <img src="../../.gitbook/assets/chat-tool-bar/think.png" alt=""> | **思考模式** | 所选模型支持深度推理时出现（如 GPT-5 系列、Claude Opus4.8、Qwen-3.7-plus等）|
+| <img src="../../.gitbook/assets/chat-tool-bar/url-context.png" alt=""> | **网页上下文** | 所选模型支持原生 URL 输入时出现 |
+| <img src="../../.gitbook/assets/chat-tool-bar/slash.png" alt=""> | **斜杠命令** | 在 Cherry Agent 会话中出现，提供 `/clear`、`/exit` 等内置命令|
 
 ### 通过键盘触发的能力
 
@@ -98,7 +91,9 @@ Cherry Studio 的对话框工具栏从左到右分为：**左侧工具 → `⊙`
 
 ### 对话框右下角：Token 计数
 
-输入框右下角还显示 **预估 Token 数**，包含四个数值：`当前上下文数` / `最大上下文数`（∞ 表示无限）/ `当前输入框内消息字数` / `预估 Token 数`。
+<img src="../../.gitbook/assets/chat-tool-bar/estimate-tokens.png" alt="">
+
+输入框右下角还显示 **预估 Token 数**，包含四个数值：`当前上下文数` / `最大上下文数`（∞ 表示无限）/ `当前上下文 Token 数` / `预估 Token 数`。
 
 {% hint style="info" %}
 此处仅为预估值，不同模型的 Tokenizer 不同，实际计费以模型提供商为准。
