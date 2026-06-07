@@ -38,3 +38,9 @@ description: 暂时不支持Claude模型
 <figure><img src="../../.gitbook/assets/image (81).png" alt=""><figcaption></figcaption></figure>
 
 点击添加 [模型](https://console.cloud.google.com/vertex-ai/model-garden)，就可以愉快地开始使用了！
+
+***
+
+### 💡 获取帮助与提交反馈
+
+如果您在配置或使用过程中遇到任何疑问、Bug 或有功能改进建议，请参考 [反馈与建议](../../question-contact/suggestions.md) 中提供的官方渠道。

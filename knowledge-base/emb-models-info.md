@@ -163,3 +163,8 @@ icon: square-info
 | embed-english-light-v2.0      | 512       |
 | embed-multilingual-v2.0       | 256       |
 
+***
+
+### 💡 获取帮助与提交反馈
+
+如果您在配置或使用过程中遇到任何疑问、Bug 或有功能改进建议，请参考 [反馈与建议](../question-contact/suggestions.md) 中提供的官方渠道。

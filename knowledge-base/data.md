@@ -47,3 +47,9 @@ icon: database
 
 * 向量数据库（libSQL / Turso）：[https://turso.tech/libsql](https://turso.tech/libsql)
 * 嵌入与检索增强生成：可查阅"vector embedding"、"RAG"相关资料
+
+***
+
+### 💡 获取帮助与提交反馈
+
+如果您在配置或使用过程中遇到任何疑问、Bug 或有功能改进建议，请参考 [反馈与建议](../question-contact/suggestions.md) 中提供的官方渠道。

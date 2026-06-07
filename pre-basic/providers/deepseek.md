@@ -33,3 +33,9 @@ DeepSeek 自家没有嵌入模型。如果你要用 [全局记忆](../../advance
 * DeepSeek 价格按 token 计费，缓存命中可大幅降价（参考其官方文档）
 * `deepseek-reasoner` 的思考内容默认会渲染在对话中，可在 [对话设置](../../cherrystudio/preview/chat.md#dui-hua-she-zhi) 中切换"思考内容自动折叠"
 {% endhint %}
+
+***
+
+### 💡 获取帮助与提交反馈
+
+如果您在配置或使用过程中遇到任何疑问、Bug 或有功能改进建议，请参考 [反馈与建议](../../question-contact/suggestions.md) 中提供的官方渠道。

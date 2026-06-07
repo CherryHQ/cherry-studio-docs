@@ -51,3 +51,9 @@ API地址有两种写法
 {% endhint %}
 
 <figure><img src="../../.gitbook/assets/image (3) (2).png" alt=""><figcaption><p>官方文档cURL示例</p></figcaption></figure>
+
+***
+
+### 💡 获取帮助与提交反馈
+
+如果您在配置或使用过程中遇到任何疑问、Bug 或有功能改进建议，请参考 [反馈与建议](../../question-contact/suggestions.md) 中提供的官方渠道。

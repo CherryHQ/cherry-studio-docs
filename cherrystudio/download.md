@@ -24,7 +24,7 @@ icon: download
 
 主线路：
 
-【[Cherry Studio 官网](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.9.9/Cherry-Studio-1.9.9-x64-setup.exe)】
+【[Cherry Studio 官网](https://cherryai.com.cn/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.9.9/Cherry-Studio-1.9.9-x64-setup.exe)】
 
 备用线路：
 
@@ -38,7 +38,7 @@ icon: download
 
 主线路：
 
-【[Cherry Studio 官网](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.9.9/Cherry-Studio-1.9.9-arm64-setup.exe)】
+【[Cherry Studio 官网](https://cherryai.com.cn/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.9.9/Cherry-Studio-1.9.9-arm64-setup.exe)】
 
 备用线路：
 
@@ -54,7 +54,7 @@ icon: download
 
 主线路：
 
-【[Cherry Studio 官网](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.9.9/Cherry-Studio-1.9.9-x64-portable.exe)】
+【[Cherry Studio 官网](https://cherryai.com.cn/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.9.9/Cherry-Studio-1.9.9-x64-portable.exe)】
 
 备用线路：
 
@@ -68,7 +68,7 @@ icon: download
 
 主线路：
 
-【[Cherry Studio 官网](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.9.9/Cherry-Studio-1.9.9-arm64-portable.exe)】
+【[Cherry Studio 官网](https://cherryai.com.cn/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.9.9/Cherry-Studio-1.9.9-arm64-portable.exe)】
 
 备用线路：
 
@@ -86,7 +86,7 @@ icon: download
 
 主线路：
 
-【[Cherry Studio 官网](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.9.9/Cherry-Studio-1.9.9-x64.dmg)】
+【[Cherry Studio 官网](https://cherryai.com.cn/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.9.9/Cherry-Studio-1.9.9-x64.dmg)】
 
 备用线路：
 
@@ -100,7 +100,7 @@ icon: download
 
 主线路：
 
-【[Cherry Studio 官网](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.9.9/Cherry-Studio-1.9.9-arm64.dmg)】
+【[Cherry Studio 官网](https://cherryai.com.cn/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.9.9/Cherry-Studio-1.9.9-arm64.dmg)】
 
 备用线路：
 
@@ -118,7 +118,7 @@ icon: download
 
 主线路：
 
-【[Cherry Studio 官网](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.9.9/Cherry-Studio-1.9.9-x86_64.AppImage)】
+【[Cherry Studio 官网](https://cherryai.com.cn/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.9.9/Cherry-Studio-1.9.9-x86_64.AppImage)】
 
 备用线路：
 
@@ -132,7 +132,7 @@ icon: download
 
 主线路：
 
-【[Cherry Studio 官网](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.9.9/Cherry-Studio-1.9.9-arm64.AppImage)】
+【[Cherry Studio 官网](https://cherryai.com.cn/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.9.9/Cherry-Studio-1.9.9-arm64.AppImage)】
 
 备用线路：
 
@@ -145,3 +145,9 @@ icon: download
 ## 网盘下载
 
 [夸克](https://pan.quark.cn/s/4044324d0ecd#/list/share)
+
+***
+
+### 💡 获取帮助与提交反馈
+
+如果您在配置或使用过程中遇到任何疑问、Bug 或有功能改进建议，请参考 [反馈与建议](../question-contact/suggestions.md) 中提供的官方渠道。

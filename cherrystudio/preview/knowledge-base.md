@@ -41,3 +41,9 @@ icon: books
 * **知识库 + [频道（Cherry Claw）](../../advanced-basic/agent-channels.md)**：把"会查公司文档"的 Agent 派到飞书群里值班
 
 > 推荐先阅读 [概念入门](../../advanced-basic/concepts-101.md) 了解知识库与 Agent / MCP 等功能的关系。
+
+***
+
+### 💡 获取帮助与提交反馈
+
+如果您在配置或使用过程中遇到任何疑问、Bug 或有功能改进建议，请参考 [反馈与建议](../../question-contact/suggestions.md) 中提供的官方渠道。

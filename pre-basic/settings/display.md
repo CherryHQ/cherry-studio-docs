@@ -6,7 +6,7 @@ icon: table-columns
 
 外观和布局相关的所有偏好都在这里：浅色/深色主题、对话区的话题位置、字体等。
 
-> 不喜欢默认外观？除了这里的设置，还可以走 [自定义 CSS](../personalization-settings/css.md) 路线深度定制。
+> 不喜欢默认外观？除了这里的设置，还可以走 [自定义 CSS](../personalization-settings/custom-css.md) 路线深度定制。
 
 ### 主题选择
 
@@ -58,4 +58,10 @@ icon: table-columns
 
 ### 自定义 CSS
 
-通过此设置可灵活的对界面做一些个性化的更改和设置。具体方法参考进阶教程中的 [自定义 CSS](../personalization-settings/css.md)。
+通过此设置可灵活的对界面做一些个性化的更改和设置。具体方法参考进阶教程中的 [自定义 CSS](../personalization-settings/custom-css.md)。
+
+***
+
+### 💡 获取帮助与提交反馈
+
+如果您在配置或使用过程中遇到任何疑问、Bug 或有功能改进建议，请参考 [反馈与建议](../../question-contact/suggestions.md) 中提供的官方渠道。

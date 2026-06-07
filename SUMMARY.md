@@ -10,14 +10,14 @@
 * [功能介绍](cherrystudio/preview/README.md)
   * [启动台](cherrystudio/preview/launchpad.md)
   * [对话界面](cherrystudio/preview/chat.md)
-  * [助手库](cherrystudio/preview/agents.md)
+  * [助手库](cherrystudio/preview/assistants.md)
   * [绘画](cherrystudio/preview/drawing.md)
   * [翻译](cherrystudio/preview/translation.md)
   * [小程序](cherrystudio/preview/app.md)
   * [知识库](cherrystudio/preview/knowledge-base.md)
   * [文件](cherrystudio/preview/files.md)
   * [笔记](cherrystudio/preview/notes.md)
-  * [快捷助手](cherrystudio/preview/kuai-jie-zhu-shou.md)
+  * [快捷助手](cherrystudio/preview/quick-assistant.md)
   * [划词助手](cherrystudio/preview/selection-assistant.md)
 
 ## 基础教程 <a href="#pre-basic" id="pre-basic"></a>
@@ -25,10 +25,10 @@
 * [模型服务](pre-basic/providers/README.md)
   * [全部 Provider 快速参考](pre-basic/providers/quick-reference.md)
   * [CherryAI (免费)](pre-basic/providers/cherryai/README.md)
-    * [DeepSeek V3.2](pre-basic/providers/cherryai/mian-fei-ti-yan-deepseek-v3.2-qi-jian-xi-shu-zhu-yi-li-moe.md)
-    * [智谱 GLM-4.6V](pre-basic/providers/cherryai/mian-fei-ti-yan-zhi-pu-glm-4.6v-shi-jue-qi-jian-duo-mo-tai-moe.md)
-    * [智谱 GLM-4.5-Air](pre-basic/providers/cherryai/mian-fei-ti-yan-zhi-pu-glm4.5air-qing-liang-gao-xiao-xin-xuan-ze.md)
-    * [Qwen3-8B](pre-basic/providers/cherryai/mian-fei-ti-yan-qwen38b-you-gui-ji-liu-dong-ti-gong.md)
+    * [DeepSeek V3.2](pre-basic/providers/cherryai/free-deepseek.md)
+    * [智谱 GLM-4.6V](pre-basic/providers/cherryai/free-glm46v.md)
+    * [智谱 GLM-4.5-Air](pre-basic/providers/cherryai/free-glm45air.md)
+    * [Qwen3-8B](pre-basic/providers/cherryai/free-qwen.md)
   * [CherryIN](pre-basic/providers/cherryin-1.md)
   * [OpenAI](pre-basic/providers/openai.md)
   * [Anthropic](pre-basic/providers/anthropic.md)
@@ -56,7 +56,7 @@
   * [无问芯穹](pre-basic/providers/wu-wen-xin-qiong.md)
   * [自定义服务商](pre-basic/providers/zi-ding-yi-fu-wu-shang.md)
 * [联网模式](pre-basic/websearch/README.md)
-  * [免费联网模式](pre-basic/websearch/mian-fei-lian-wang-mo-shi.md)
+  * [免费联网模式](pre-basic/websearch/free-search.md)
   * [网络搜索黑名单配置](pre-basic/websearch/blacklist.md)
   * [火山引擎接入联网](pre-basic/websearch/volcengine.md)
   * [Tavily 联网登录注册教程](pre-basic/websearch/tavily.md)
@@ -77,7 +77,7 @@
   * [思源笔记配置教程](pre-basic/data-settings/siyuan.md)
   * [助手订阅配置](pre-basic/data-settings/assistants-subscribe.md)
 * [个性化设置](pre-basic/personalization-settings/README.md)
-  * [自定义 CSS](pre-basic/personalization-settings/css.md)
+  * [自定义 CSS](pre-basic/personalization-settings/custom-css.md)
   * [字体推荐](pre-basic/personalization-settings/font.md)
   * [修改存储位置](pre-basic/personalization-settings/storage.md)
   * [清除 CSS 设置](pre-basic/personalization-settings/clear-css.md)
@@ -96,11 +96,11 @@
   * [MCP 环境安装](advanced-basic/mcp/install.md)
   * [配置和使用 MCP](advanced-basic/mcp/config.md)
   * [自动安装 MCP](advanced-basic/mcp/auto-install.md)
-  * [内置 MCP 配置](advanced-basic/mcp/buildin.md)
+  * [内置 MCP 配置](advanced-basic/mcp/builtin.md)
   * [配置 Dify 知识库](advanced-basic/mcp/dify.md)
-  * [常见问题](advanced-basic/mcp/chang-jian-wen-ti.md)
+  * [常见问题](advanced-basic/mcp/faq.md)
 * [调用链使用教程](advanced-basic/trace.md)
-* [Code Tools 使用教程](advanced-basic/code-tools-shi-yong-jiao-cheng.md)
+* [Code Tools 使用教程](advanced-basic/code-tools.md)
 * [API 服务器](advanced-basic/api-server.md)
 * [智能体](advanced-basic/agent.md)
 * [技能](pre-basic/settings/skills.md)
@@ -110,7 +110,7 @@
 * [OpenClaw](advanced-basic/openclaw.md)
 * [快捷短语](pre-basic/settings/quick-phrase.md)
 * [Agent 案例](advanced-basic/agent-an-li/README.md)
-  * [金价暴跌看懵了？我用 Kimi K2.5 + Cherry Studio 做了个“复盘神器”（附 Agent 设计+完整教程）](advanced-basic/agent-an-li/jin-jia-bao-die-kan-meng-le-wo-yong-kimi-k2.5-+-cherry-studio-zuo-le-ge-fu-pan-shen-qi-fu-agent-she.md)
+  * [金价暴跌看懵了？我用 Kimi K2.5 + Cherry Studio 做了个“复盘神器”（附 Agent 设计+完整教程）](advanced-basic/agent-an-li/gold-price-case.md)
 
 ## 项目贡献 <a href="#contribution" id="contribution"></a>
 
@@ -127,7 +127,7 @@
 ## 联系我们 <a href="#contact-us" id="contact-us"></a>
 
 * [商务合作](contact-us/questions.md)
-  * [Cherry Studio 开源许可协议](contact-us/questions/cherrystudio-xu-ke-xie-yi.md)
+  * [Cherry Studio 开源许可协议](contact-us/questions/license.md)
 
 ## 关于 <a href="#about" id="about"></a>
 

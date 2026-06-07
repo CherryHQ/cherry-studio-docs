@@ -70,3 +70,9 @@ https://www.notion.so/\<long\_hash\_1>?v=\<long\_hash\_2>
 <figure><img src="../../.gitbook/assets/导出.png" alt=""><figcaption><p>导出到 Notion</p></figcaption></figure>
 
 <figure><img src="../../.gitbook/assets/查看结果.png" alt=""><figcaption><p>查看导出结果</p></figcaption></figure>
+
+***
+
+### 💡 获取帮助与提交反馈
+
+如果您在配置或使用过程中遇到任何疑问、Bug 或有功能改进建议，请参考 [反馈与建议](../../question-contact/suggestions.md) 中提供的官方渠道。

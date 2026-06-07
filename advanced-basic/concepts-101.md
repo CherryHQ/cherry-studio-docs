@@ -41,9 +41,10 @@ icon: graduation-cap
 
 **助手** 将这套「角色设定」**永久保存**，再次打开即可直接使用，避免重复配置。一个助手 = 一份「系统提示词 + 模型参数预设」。
 
-* **怎么用**：顶部 Tab `+` → 启动台 → `助手库` 浏览、添加或自建
-* **可以叠加**：助手可以挂载知识库、技能、工具
-* **细节文档**：[助手库](../cherrystudio/preview/agents.md)
+* **怎么创建**：在 `+` 启动台的 `助手库` 中点击 `+ 创建助手` （填写名字、提示词并选择 Emoji），详见 [助手库](../cherrystudio/preview/assistants.md)。
+* **怎么使用**：在主对话页面左侧的助手列表最上方，点击`+ 添加助手`，选择后即可开始对话，详见 [对话](../cherrystudio/preview/chat.md)。
+* **功能叠加**：助手可以挂载知识库、技能或 MCP 外部工具。
+* **细节文档**：[助手库](../cherrystudio/preview/assistants.md)
 
 ### 2. 智能体 —— 让 AI 具备执行能力
 
@@ -132,4 +133,8 @@ icon: graduation-cap
 
 无需一次掌握全部，按实际需求逐步启用即可。
 
-如有疑问或建议，请通过 [反馈与建议](../question-contact/suggestions.md) 提交。
+***
+
+### 💡 获取帮助与提交反馈
+
+如果您在配置或使用过程中遇到任何疑问、Bug 或有功能改进建议，请参考 [反馈与建议](../question-contact/suggestions.md) 中提供的官方渠道。

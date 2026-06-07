@@ -89,3 +89,9 @@ MEMORY_FILE_PATH=/path/to/memory.json
 | 让 AI 帮你安装其他 MCP | `@cherry/mcp-auto-install` |
 
 启用方法都一样：在 `设置 → MCP 服务器` 中找到对应条目，按提示填入环境变量，点击启用即可。
+
+***
+
+### 💡 获取帮助与提交反馈
+
+如果您在配置或使用过程中遇到任何疑问、Bug 或有功能改进建议，请参考 [反馈与建议](../../question-contact/suggestions.md) 中提供的官方渠道。

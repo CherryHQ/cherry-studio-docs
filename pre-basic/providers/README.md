@@ -66,3 +66,9 @@ Cherry Studio 内置 60+ Provider 模板，但**远多于本节文档已收录**
 ### API 密钥与 API 地址
 
 详见 [模型服务设置](../settings/providers.md)（含 多 Key 轮询、`#` 结尾固定路径等高级用法）。
+
+***
+
+### 💡 获取帮助与提交反馈
+
+如果您在配置或使用过程中遇到任何疑问、Bug 或有功能改进建议，请参考 [反馈与建议](../../question-contact/suggestions.md) 中提供的官方渠道。

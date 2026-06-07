@@ -95,7 +95,7 @@ Cherry Studio 需要在本地运行一个内部服务以承载 Agent。操作上
 * **权限模式**：在 4 种权限策略之间切换（见下方表格）
 * **工具**：勾选 Agent 可使用的内置工具，及挂载来自 [MCP 服务器](mcp/) 的外部工具
 * **技能**：挂载预先安装的 [技能](../pre-basic/settings/skills.md)
-* **高级设置**：上下文长度、温度、最大轮数等参数
+* **高级设置**：最大会话轮次数上限与环境变量两个配置
 
 #### 权限模式的 4 种选择
 
@@ -151,3 +151,9 @@ Cherry Studio 需要在本地运行一个内部服务以承载 Agent。操作上
 * 把 Agent 接到 IM 平台（飞书 / Telegram / QQ / 微信 / Discord / Slack）→ [频道](agent-channels.md)
 * 让 Agent 定时自动执行任务 → [定时任务](scheduled-tasks.md)
 * 拓展工具能力 → [MCP 使用教程](mcp/)
+
+***
+
+### 💡 获取帮助与提交反馈
+
+如果您在配置或使用过程中遇到任何疑问、Bug 或有功能改进建议，请参考 [反馈与建议](../question-contact/suggestions.md) 中提供的官方渠道。

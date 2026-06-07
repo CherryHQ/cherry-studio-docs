@@ -26,3 +26,9 @@
 ### 使用Dify知识库mcp
 
 <figure><img src="../../.gitbook/assets/CleanShot 2025-04-27 at 10.26.24@2x.jpg" alt=""><figcaption></figcaption></figure>
+
+***
+
+### 💡 获取帮助与提交反馈
+
+如果您在配置或使用过程中遇到任何疑问、Bug 或有功能改进建议，请参考 [反馈与建议](../../question-contact/suggestions.md) 中提供的官方渠道。

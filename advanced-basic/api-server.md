@@ -4,7 +4,7 @@ icon: server
 
 # API 服务器
 
-API 服务器的核心作用：**将 Cherry Studio 中已配置的 AI 能力，通过本地接口对外开放**，供其他程序调用。
+API 服务器的核心作用：**将 Cherry Studio 中已配置的 AI 能力，通过本地接口对外开放**（同时也是智能体功能的底层依赖），供其他程序调用。
 
 使用场景：你已在 Cherry Studio 中配置了 OpenAI、Anthropic、DeepSeek 等服务商。若你的其他工具（例如某个编程插件或自定义脚本）希望调用相同的 AI 能力，**API 服务器**会在本机开放一个标准接口，使这些工具可直接复用 Cherry Studio 已有配置，无需重复注册各家账号。
 
@@ -73,3 +73,9 @@ API 服务器仅监听 `127.0.0.1`，**不会**暴露到局域网或公网。若
 
 * 启用后即可继续配置 [智能体](agent.md)
 * 想把 Agent 接入飞书 / Telegram / Discord 等 IM 平台，请阅读 [频道](agent-channels.md)
+
+***
+
+### 💡 获取帮助与提交反馈
+
+如果您在配置或使用过程中遇到任何疑问、Bug 或有功能改进建议，请参考 [反馈与建议](../question-contact/suggestions.md) 中提供的官方渠道。

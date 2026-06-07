@@ -151,3 +151,9 @@ Cherry Studio 内置 **60+ 家 Provider**，本页提供总览表，找到目标
 ## 还是不知道选哪个？
 
 直接走 [**CherryIN**](cherryin-1.md) 或 [**CherryAI**](cherryai/) —— 最适合新手快速上手。需要进阶时再换。
+
+***
+
+### 💡 获取帮助与提交反馈
+
+如果您在配置或使用过程中遇到任何疑问、Bug 或有功能改进建议，请参考 [反馈与建议](../../question-contact/suggestions.md) 中提供的官方渠道。

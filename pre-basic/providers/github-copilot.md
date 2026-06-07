@@ -31,3 +31,9 @@
 <figure><img src="../../.gitbook/assets/获取DeviceCode失败.png" alt="获取 Device Code 失败示例图片"><figcaption><p>获取 Device Code 失败</p></figcaption></figure>
 
 目前使用 Axios 构建请求，Axios 不支持 socks 代理，请使用系统代理或 HTTP 代理，或者直接不在 CherryStudio 中设置代理，使用全局代理。首先请确保您的网络连接正常，以避免获取 Device Code 失败的情况。
+
+***
+
+### 💡 获取帮助与提交反馈
+
+如果您在配置或使用过程中遇到任何疑问、Bug 或有功能改进建议，请参考 [反馈与建议](../../question-contact/suggestions.md) 中提供的官方渠道。

@@ -129,3 +129,9 @@ body[theme-mode="light"] {
 Cherry Studio 主题库: [https://github.com/boilcy/cherrycss](https://github.com/boilcy/cherrycss)
 
 分享一些中国风 Cherry Studio 主题皮肤: [https://linux.do/t/topic/325119/129](https://linux.do/t/topic/325119/129)
+
+***
+
+### 💡 获取帮助与提交反馈
+
+如果您在配置或使用过程中遇到任何疑问、Bug 或有功能改进建议，请参考 [反馈与建议](../../question-contact/suggestions.md) 中提供的官方渠道。

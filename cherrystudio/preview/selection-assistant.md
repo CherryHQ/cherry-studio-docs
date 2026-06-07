@@ -98,3 +98,9 @@ icon: highlighter
 * 想做"翻译完直接朗读"等链式操作？把"翻译"结果复制后调用 [快捷助手](kuai-jie-zhu-shou.md) 继续处理
 
 如遇问题，请在 [反馈与建议](../../question-contact/suggestions.md) 中提交反馈。
+
+***
+
+### 💡 获取帮助与提交反馈
+
+如果您在配置或使用过程中遇到任何疑问、Bug 或有功能改进建议，请参考 [反馈与建议](../../question-contact/suggestions.md) 中提供的官方渠道。

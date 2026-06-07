@@ -23,3 +23,9 @@ Cherry Studio 数据备份支持通过 S3 兼容存储(对象存储)的方式进
      - 阿里云 OSS：[获取 Access Key ID 和 Access Key Secret](https://help.aliyun.com/zh/oss/developer-reference/use-amazon-s3-sdks-to-access-oss#306596478ed3r)
      - 腾讯云 COS：[获取 SecretId 和 SecretKey](https://cloud.tencent.com/document/product/436/37421)
 3. 在 S3 备份设置中填写上述信息，点击备份按钮即可进行备份，点击管理按钮可以查看和管理备份文件列表。
+
+***
+
+### 💡 获取帮助与提交反馈
+
+如果您在配置或使用过程中遇到任何疑问、Bug 或有功能改进建议，请参考 [反馈与建议](../../question-contact/suggestions.md) 中提供的官方渠道。
