@@ -44,8 +44,6 @@ icon: floppy-disk
 
 如果想换硬盘位置，看 [修改存储位置](../personalization-settings/storage.md)。
 
-如遇问题，请在 [反馈与建议](../../question-contact/suggestions.md) 中提交反馈。
-
 ***
 
 ### 💡 获取帮助与提交反馈
