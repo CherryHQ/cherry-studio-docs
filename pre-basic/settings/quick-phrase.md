@@ -67,8 +67,6 @@ icon: message
 * 与 [划词助手](../../cherrystudio/preview/selection-assistant.md) 互补：划词助手处理"已选中的内容"，快捷短语提供"通用模板"
 * 多个短语可形成你的"提示词工程库"，建议按场景分类命名
 
-如遇问题，请在 [反馈与建议](../../question-contact/suggestions.md) 中提交反馈。
-
 ***
 
 ### 💡 获取帮助与提交反馈
