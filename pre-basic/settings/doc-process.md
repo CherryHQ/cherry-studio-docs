@@ -57,7 +57,7 @@ Cherry Studio 把 OCR 配置统一放在**一个设置页**：你在这里配一
 
 ### 配置 MinerU（默认方案）
 
-1. 在 **API Key** 字段填入 MinerU 申请到的 key（点击 **Get API Key** 直达申请页）
+1. 在 **API Key** 字段填入 MinerU 申请到的 key
 2. **API Host** 保持默认 `https://mineru.net`
 3. 切换到知识库或 Agent 时无需额外配置，会自动使用此处的设置
 
@@ -76,9 +76,7 @@ Cherry Studio 把 OCR 配置统一放在**一个设置页**：你在这里配一
 
 * MinerU 对带表格 / 多栏排版的 PDF 效果显著优于 Tesseract，遇到学术论文等首选
 * 离线场景请用 Paddle OCR 或 Tesseract（无网络也能跑）
-* 切换处理器后，之前已向量化的资料**不会自动重做** —— 需手动重新导入
-
-如遇问题，请在 [反馈与建议](../../question-contact/suggestions.md) 中提交反馈。
+* 切换处理器后，之前已向量化的资料 **不会自动重做** —— 需手动重新导入
 
 ***
 
