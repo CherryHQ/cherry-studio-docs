@@ -37,7 +37,7 @@ icon: head-side-gear
 2. 在弹出的表单中填写：
    * **Emoji**：点击 `选择` 给助手挑一个图标
    * **名称**：在对话页助手列表中显示的名字
-   * **提示词**：决定该助手的角色与行为，右上角铅笔图标可用 [全局默认助手模型](../../pre-basic/settings/default-models.md) 帮你改写
+   * **提示词**：决定该助手的角色与行为，右上角闪电图标可用 [全局默认助手模型](../../pre-basic/settings/default-models.md) 帮你改写
    * **知识库**（可选）：关联一个已有的知识库，对话时自动检索
 
 {% hint style="info" %}
@@ -47,7 +47,7 @@ icon: head-side-gear
 <figure><img src="../../.gitbook/assets/cherry-agents-create-form.png" alt=""><figcaption><p>创建助手表单 —— Emoji / 名称 / 提示词（含 AI 优化按钮）/ 知识库</p></figcaption></figure>
 
 {% hint style="info" %}
-**提示词改写**：提示词输入框右上角的小铅笔按钮即「AI 优化提示词」，点击后会用全局默认助手模型把当前内容改写得更结构化。
+**提示词改写**：提示词输入框右上角的闪电按钮即「AI 优化提示词」，点击后会用全局默认助手模型把当前内容改写得更结构化。
 {% endhint %}
 
 ### 导入 / 管理
