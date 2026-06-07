@@ -2,7 +2,7 @@
 
 这是一个基于 Chatbot Arena (lmarena.ai) 数据的排行榜，通过自动化流程生成。
 
-> **数据更新时间**: 2026-06-06 08:57:12 UTC / 2026-06-06 16:57:12 CST (北京时间)
+> **数据更新时间**: 2026-06-07 09:07:21 UTC / 2026-06-07 17:07:21 CST (北京时间)
 
 ## 排行榜
 
@@ -15,10 +15,10 @@
 |      5 |           313 | Metamuse-sparkMeta · Proprietary                                        | 1489±6Preliminary  |  13,026 | N/A          | N/A       |
 |      6 |           410 | gemini-3.1-pro-previewGoogle · Proprietary                              | 1488±4             |  50,137 | $2/$12       | 1M        |
 |      7 |           413 | gemini-3-proGoogle · Proprietary                                        | 1486±4             |  41,317 | $2/$12       | 1M        |
-|      8 |           424 | Anthropicclaude-opus-4-8-thinkingAnthropic · Proprietary                | 1482±8             |   5,911 | N/A          | N/A       |
+|      8 |           424 | Anthropicclaude-opus-4-8-thinkingAnthropic · Proprietary                | 1482±8             |   5,911 | $5/$25       | 1M        |
 |      9 |           522 | gpt-5.5-highOpenAI · Proprietary                                        | 1482±5             |  20,950 | $5/$30       | 1.1M      |
 |     10 |           624 | gpt-5.4-highOpenAI · Proprietary                                        | 1479±4             |  33,154 | $2.50/$15    | 1.1M      |
-|     11 |           525 | Anthropicclaude-opus-4-8Anthropic · Proprietary                         | 1479±8             |   6,165 | N/A          | N/A       |
+|     11 |           525 | Anthropicclaude-opus-4-8Anthropic · Proprietary                         | 1479±8             |   6,165 | $5/$25       | 1M        |
 |     12 |           627 | gemini-3.5-flashGoogle · Proprietary                                    | 1477±7Preliminary  |   9,715 | $1.50/$9     | 1M        |
 |     13 |           825 | gpt-5.2-chat-latest-20260210OpenAI · Proprietary                        | 1476±4             |  33,598 | $1.75/$14    | 128K      |
 |     14 |           829 | glm-5.1Z.ai · MIT                                                       | 1475±6             |  15,179 | $1.40/$4.40  | 202.8K    |
@@ -292,7 +292,7 @@
 |    282 |        275290 | Coherecommand-rCohere · CC-BY-NC-4.0                                    | 1226±5             |  54,036 | $0.15/$0.60  | 128K      |
 |    283 |        275290 | reka-flash-21b-20240226Reka AI · Proprietary                            | 1226±6             |  24,806 | N/A          | N/A       |
 |    284 |        275290 | gpt-3.5-turbo-0125OpenAI · Proprietary                                  | 1224±5             |  66,207 | $0.50/$1.50  | 16.4K     |
-|    285 |        279290 | Metallama-3-8b-instructMeta · Llama 3 Community                         | 1223±4             | 104,642 | $0.04/$0.04  | 8.2K      |
+|    285 |        279290 | Metallama-3-8b-instructMeta · Llama 3 Community                         | 1223±4             | 104,642 | $0.14/$0.14  | 8.2K      |
 |    286 |        275292 | Coherec4ai-aya-expanse-8bCohere · CC-BY-NC-4.0                          | 1223±7             |   9,818 | N/A          | N/A       |
 |    287 |        274294 | gemini-proGoogle · Proprietary                                          | 1222±12            |   6,390 | $0.35/$1.05  | 32.8K     |
 |    288 |        278292 | mistral-mediumMistral · Proprietary                                     | 1222±5             |  34,550 | $2.70/$8.10  | 32K       |
