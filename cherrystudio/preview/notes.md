@@ -15,8 +15,8 @@ icon: note-sticky
 ### 创建第一篇笔记
 
 1. 点击左上角第一个 **新建笔记** 图标
-2. 输入笔记标题，按 <kbd>Enter</kbd> 确认
-3. 在右侧编辑器中输入正文，支持 Markdown 语法与富文本快捷工具栏
+2. 在右侧编辑器中输入正文，支持 Markdown 语法与富文本快捷工具栏
+3. 右键笔记列表中的笔记，为其命名
 
 <figure><img src="../../.gitbook/assets/cherry-notes-populated.png" alt=""><figcaption><p>已包含若干笔记的工作区</p></figcaption></figure>
 
@@ -35,7 +35,7 @@ icon: note-sticky
 
 <figure><img src="../../.gitbook/assets/cherry-notes-with-sample.png" alt=""><figcaption><p>新建笔记并写入正文后的编辑器</p></figcaption></figure>
 
-底部状态栏显示当前 **字符数**，左下角的 **A✓** 图标可开关拼写检查，右下角下拉切换 **实时预览**、**仅编辑** 或 **仅预览** 模式。
+底部状态栏显示当前 **字符数**，左下角的 **A✓** 图标可开关拼写检查，右下角下拉切换 **实时预览**、**源码模式** 或 **阅读模式**。
 
 ### 目录管理
 
