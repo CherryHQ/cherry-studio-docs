@@ -18,7 +18,8 @@ Cherry Studio 是一款桌面级 AI 客户端，集成了**对话、智能体、
 | [知识库](knowledge-base.md) | 文档/网址/笔记向量化检索 | 启动台 → `知识库` |
 | [文件](files.md) | 集中查看对话、绘画、知识库等附件 | 启动台 → `文件` |
 | [笔记](notes.md) | 内置 Markdown 编辑器 | 顶部 Tab `笔记` |
-| [快捷助手](kuai-jie-zhu-shou.md) | 全局快捷键唤起的迷你提问窗口 | 全局快捷键 |
+| [快捷助手](quick-assistant.md) | 全局快捷键唤起的迷你提问窗口 | 全局快捷键 |
+| [快捷助手](selection-assistant.md) | 在任意应用划词后通过浮动工具栏调用 AI | 全局快捷键 |
 
 更高阶能力请参考 [进阶教程](../../advanced-basic/) 一节。
 
