@@ -4,17 +4,34 @@ icon: message
 
 # 对话界面
 
-## 助手和话题
+对话界面是 Cherry Studio 最常用的页面，但其结构包含**两个层次**：助手 → 话题。理解这一结构有助于更高效地使用各类对话功能。
+
+> 推荐先阅读 [概念入门](../../advanced-basic/concepts-101.md) 了解助手 / 智能体 / 技能等相关概念。
+
+## 助手与话题的关系
+
+简单类比：
+
+* **助手 = 一个角色**（如"产品文档助理"、"代码 reviewer"）
+* **话题 = 与该角色的一段对话**（如周一讨论"重构方案"、周二讨论"bug 报告"）
+
+也就是说：**一个助手下可创建多个话题**，所有话题共用该助手的人设与参数（提示词、模型、温度等），无需每次重新设定 AI 的角色与风格。
 
 ### 助手
 
-`助手` 是对所选模型做一些个性化的设置来使用模型，如提示词预设和参数预设等，通过这些设置让所选模型能更加符合你预期的工作。
+助手为 AI 设定固定角色 —— 由系统提示词 + 模型参数预设组成。
 
-`系统默认助手` 预设了一个比较通用的参数（无提示词），您可以直接使用或者到 [智能体页面](agents.md) 寻找你需要的预设来使用。
+* **系统默认助手**：通用助手，未设特殊提示词，可直接使用
+* **更专项的助手**：在 [助手广场](agents.md) 浏览现成预设，或自行创建
 
 ### 话题
 
-`助手` 是 `话题` 的父集，单个助手下可以创建多个话题（即对话），所有 `话题` 共用 `助手` 的参数设置和预设词（prompt）等模型设置。
+每个助手下可创建多个话题（即多段独立对话）。话题之间相互独立，但共享所属助手的设置。
+
+适用场景示例：
+
+* 同一个"代码助手"下分别开"项目 A 重构"、"项目 B bug"两个话题，独立管理
+* 同一个"翻译助手"下开多个话题，分别处理不同文章
 
 <figure><img src="../../.gitbook/assets/image (4) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
@@ -22,37 +39,65 @@ icon: message
 
 ## 对话框内按钮
 
-<figure><img src="../../.gitbook/assets/对话框.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/cherry-chat-input-toolbar-v199.png" alt=""><figcaption><p>Cherry Studio 对话框工具栏（v1.9.9 实拍）</p></figcaption></figure>
 
-![](../../.gitbook/assets/新话题.png) `新话题` 在当前助手内创建一个新话题。
+Cherry Studio 的对话框工具栏中的工具具体顺序可由你长按拖拽自行调整。
 
-![](../../.gitbook/assets/上传图片或文档.png) `上传图片或文档` 上传图片需要模型支持，上传文档会自动解析为文字作为上下文提供给模型。
+### 左侧工具
 
-![](../../.gitbook/assets/网络搜索.png) `网络搜索` 须在设置中配置网络搜索相关信息，搜索结果作为上下文返回给大模型，详见 [联网模式](../../pre-basic/websearch/)。
+| 图标 | 名称 | 作用 |
+|---|---|---|
+| <img src="../../.gitbook/assets/chat-tool-bar/new.png" alt=""> | **新话题** | 在当前助手内创建一个新话题 |
+| <img src="../../.gitbook/assets/chat-tool-bar/upload.png" alt=""> | **上传附件** | 上传图片或文档；图片需模型支持视觉能力；文档会被自动解析为上下文 |
+| <img src="../../.gitbook/assets/chat-tool-bar/search.png" alt=""> | **网络搜索** | 把网页搜索结果作为上下文返回给模型，需先在 [联网模式](../../pre-basic/websearch/) 中配置 |
+| <img src="../../.gitbook/assets/chat-tool-bar/knowledge-base.png" alt=""> | **知识库** | 把一个已建好的 [知识库](../../knowledge-base/knowledge-base.md) 作为上下文 |
+| <img src="../../.gitbook/assets/chat-tool-bar/mcp.png" alt=""> | **MCP 服务器** | 启用 [MCP](../../advanced-basic/mcp/) 工具供模型调用 |
+| <img src="../../.gitbook/assets/chat-tool-bar/@.png" alt=""> | **提及模型** | 临时切换接下来的回复模型，保留上下文 |
+| <img src="../../.gitbook/assets/chat-tool-bar/quick-phrases.png" alt=""> | **快捷短语** | 调用预设模板，详见 [快捷短语](../../pre-basic/settings/quick-phrase.md) |
+| <img src="../../.gitbook/assets/chat-tool-bar/clear-messages.png" alt=""> | **清空消息** | **删除**该话题下所有消息（不可恢复） |
+| <img src="../../.gitbook/assets/chat-tool-bar/expand.png" alt=""> | **展开 / 收起** | 让输入框变得更大或恢复，便于输入长文 |
+| <img src="../../.gitbook/assets/chat-tool-bar/clear-context.png" alt=""> | **清除上下文** | **保留消息**但让模型"忘掉"之前的对话（截断 token 上下文） |
 
-![](../../.gitbook/assets/知识库.png) `知识库` 开启知识库，详见 [知识库教程](../../knowledge-base/knowledge-base.md)。
-
-![](<../../.gitbook/assets/MCP 服务器.png>) `MCP 服务器` 开启 MCP 服务器功能，详见 [MCP 使用教程](../../advanced-basic/mcp/)。
-
-![](../../.gitbook/assets/生成图片.png) `生成图片` 只有选择的 **对话模型** 支持生图时才会显示。（非对话生图模型请前往 [绘图](drawing.md)）
-
-![](../../.gitbook/assets/选择模型.png) `选择模型` 对于接下来的对话，切换成指定的模型，保留上下文。
-
-![](../../.gitbook/assets/快捷短语.png) `快捷短语` 需要先在设置中预设常用短语，在此处调用，直接输入，支持变量。
-
-![](../../.gitbook/assets/清空消息.png) `清空消息` 删除该话题下所有内容。
-
-![](../../.gitbook/assets/展开.png) `展开` 让对话框变得更大，以便输入长文。
-
-![](../../.gitbook/assets/清除上下文.png) `清除上下文` 在不删除内容的情况下，截断模型能获得的上下文，也就是说模型将“忘记”之前的对话内容。
-
-![](<../../.gitbook/assets/预估 Token 数.png>) `预估 Token 数` 展示预估 Token 数，四个数据分别为 `当前上下文数` 、 `最大上下文数` （ ∞ 表示无限上下文）、 `当前输入框内消息字数` 、 `预估 Token 数` 。
-
-{% hint style="info" %}
-此功能仅用于预估 Token 数，实际 Token 数每个模型都是不一样的，请以模型提供商的数据为准。
+{% hint style="warning" %}
+**"清空消息" vs "清除上下文"** 是两件不同的事：
+* **清空消息**：物理删除全部消息内容，不可恢复
+* **清除上下文**：消息仍在，只是让模型从此刻开始重新认识你，它不再会记得此前的对话
 {% endhint %}
 
-![](../../.gitbook/assets/翻译.png) `翻译` 将当前输入框内内容翻译成英文。
+### 右下角工具
+
+| 图标 | 名称 | 作用 |
+|---|---|---|
+| <img src="../../.gitbook/assets/chat-tool-bar/translate.png" alt=""> | **翻译** | 将输入框内容直接翻译为目标语言（在 `设置 → 默认模型` 中配置默认翻译模型） |
+| <img src="../../.gitbook/assets/chat-tool-bar/send.png" alt=""> | **发送** | 发送消息（默认 Enter；可在 [快捷键](../../pre-basic/settings/key-shortcut.md) 中改）|
+
+### 仅在符合条件时显示的工具
+
+下列工具不在默认工具栏中，**仅当所选模型 / 助手支持时才出现**：
+
+| 图标 | 名称 | 作用 |
+|---|---|---|
+| <img src="../../.gitbook/assets/chat-tool-bar/image.png" alt=""> | **生成图片** | 所选对话模型支持生图时出现。专门的生图模型请去 [绘画](drawing.md) |
+| <img src="../../.gitbook/assets/chat-tool-bar/think.png" alt=""> | **思考模式** | 所选模型支持深度推理时出现（如 GPT-5 系列、Claude Opus4.8、Qwen-3.7-plus等）|
+| <img src="../../.gitbook/assets/chat-tool-bar/url-context.png" alt=""> | **网页上下文** | 所选模型支持原生 URL 输入时出现 |
+| <img src="../../.gitbook/assets/chat-tool-bar/slash.png" alt=""> | **斜杠命令** | 在 Cherry Agent 会话中出现，提供 `/clear`、`/exit` 等内置命令|
+
+### 通过键盘触发的能力
+
+除了点击按钮，还可以直接在输入框中按特定键唤起对应面板：
+
+* **`@`**：唤起模型选择器（与上面"提及模型"按钮等价）
+* **`/`**：唤起斜杠命令面板，可快速插入快捷短语、翻译、工具调用等
+
+### 对话框右下角：Token 计数
+
+<img src="../../.gitbook/assets/chat-tool-bar/estimate-tokens.png" alt="">
+
+输入框右下角还显示 **预估 Token 数**，包含四个数值：`当前上下文数` / `最大上下文数`（∞ 表示无限）/ `当前上下文 Token 数` / `预估 Token 数`。
+
+{% hint style="info" %}
+此处仅为预估值，不同模型的 Tokenizer 不同，实际计费以模型提供商为准。
+{% endhint %}
 
 ## 对话设置
 
@@ -313,3 +358,9 @@ icon: message
 
 * 使用 <kbd>参数名称:undefined</kbd> 的设置可排除参数。
 {% endhint %}
+
+***
+
+### 💡 获取帮助与提交反馈
+
+如果您在配置或使用过程中遇到任何疑问、Bug 或有功能改进建议，请参考 [反馈与建议](../../question-contact/suggestions.md) 中提供的官方渠道。

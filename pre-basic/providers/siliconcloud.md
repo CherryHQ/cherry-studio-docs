@@ -24,3 +24,9 @@
 3. 可以选择顶部菜单中的模型名字切换模型
 
 <figure><img src="https://raw.githubusercontent.com/siliconflow/doc-images/refs/heads/main/4-chat.webp" alt=""><figcaption></figcaption></figure>
+
+***
+
+### 💡 获取帮助与提交反馈
+
+如果您在配置或使用过程中遇到任何疑问、Bug 或有功能改进建议，请参考 [反馈与建议](../../question-contact/suggestions.md) 中提供的官方渠道。

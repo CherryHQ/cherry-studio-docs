@@ -13,7 +13,7 @@ icon: windows
 
 ## 下载
 
-{% embed url="https://cherry-ai.com/download" %}
+{% embed url="https://cherryai.com.cn/download" %}
 
 <figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>打开官方网站</p></figcaption></figure>
 
@@ -28,3 +28,9 @@ icon: windows
 或者手动下载安装：[https://aka.ms/vs/17/release/vc\_redist.x64.exe](https://aka.ms/vs/17/release/vc_redist.x64.exe)
 
 <div data-full-width="true"><figure><img src="../../.gitbook/assets/image (155).png" alt=""><figcaption></figcaption></figure></div>
+
+***
+
+### 💡 获取帮助与提交反馈
+
+如果您在配置或使用过程中遇到任何疑问、Bug 或有功能改进建议，请参考 [反馈与建议](../../question-contact/suggestions.md) 中提供的官方渠道。

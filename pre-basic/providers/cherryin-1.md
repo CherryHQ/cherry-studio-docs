@@ -25,3 +25,9 @@
 6. 在 Cherry Studio 中选择对应模型，即可对话
 
 <figure><img src="../../.gitbook/assets/image (164).png" alt=""><figcaption></figcaption></figure>
+
+***
+
+### 💡 获取帮助与提交反馈
+
+如果您在配置或使用过程中遇到任何疑问、Bug 或有功能改进建议，请参考 [反馈与建议](../../question-contact/suggestions.md) 中提供的官方渠道。

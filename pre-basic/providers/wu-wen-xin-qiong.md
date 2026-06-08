@@ -19,7 +19,7 @@ Cherry Studio是一款易于使用的AI工具，相较于 RAG 知识库开发需
 
 #### Step 1：基础准备
 
-1. 访问 Cherry Studio 官网下载适配版本（https://cherry-ai.com/）
+1. 访问 Cherry Studio 官网下载适配版本（https://cherryai.com.cn/）
 2. 注册账号：登录无问芯穹大模型服务平台 (https://cloud.infini-ai.com/genstudio/model?cherrystudio)
 
 <figure><img src="../../.gitbook/assets/image (90).png" alt=""><figcaption></figcaption></figure>
@@ -55,3 +55,9 @@ Step 3：添加知识库
 **附生成结果图**
 
 <figure><img src="../../.gitbook/assets/3.gif" alt=""><figcaption></figcaption></figure>
+
+***
+
+### 💡 获取帮助与提交反馈
+
+如果您在配置或使用过程中遇到任何疑问、Bug 或有功能改进建议，请参考 [反馈与建议](../../question-contact/suggestions.md) 中提供的官方渠道。

@@ -4,4 +4,46 @@ icon: books
 
 # 知识库
 
-知识库使用可参考进阶教程中的 [知识库教程](../../knowledge-base/knowledge-base.md)。
+知识库就像给 AI 配一本**专属参考书**：你把自己的文档、笔记、网址塞进去，之后聊天时让 AI 翻这本书来回答你的问题。
+
+<figure><img src="../../.gitbook/assets/cherry-knowledge-empty.png" alt=""><figcaption><p>知识库入口：左上 <code>+ 添加</code> 创建第一个知识库</p></figcaption></figure>
+
+## 用知识库能干什么？
+
+举几个真实场景：
+
+* **公司知识助手**：把产品手册、API 文档、内部规范全塞进去，员工问问题时 AI 自动答
+* **个人资料管家**：把你历年的工作笔记、读书摘录、邮件存档放进去，问 AI"我去年在哪个 PPT 里提过那个分析框架"
+* **学习陪练**：把课件、论文塞进去，让 AI 帮你按章节出题、解答疑惑
+* **合同/法规速查**：把法条、合同模板放进去，问 AI 具体条款的应用
+
+## 为什么用知识库，不直接把文件丢给 AI？
+
+直接丢文件的限制：
+
+* 每次提问都要重新上传，麻烦
+* 单次对话有长度限制，长文档塞不下
+* 跨对话不能复用
+
+**知识库解决了上面所有问题**：上传一次，之后任何对话都可调用，且能从大量资料里"精准抓取相关段落"喂给 AI。
+
+## 怎么用？
+
+* 第一次用：看 [完整知识库教程](../../knowledge-base/knowledge-base.md)
+* 想加图片 / 扫描 PDF：先看 [文档预处理](../../knowledge-base/document-preprocessing.md)，让 AI 能"读懂"图片里的文字
+* 想了解嵌入模型怎么选：看 [嵌入模型参考](../../knowledge-base/emb-models-info.md)
+* 想了解数据存哪：看 [知识库数据](../../knowledge-base/data.md)
+
+## 与其他能力的组合
+
+* **知识库 + 助手**：给某个助手"挂载"知识库，它就专精这个领域
+* **知识库 + [Cherry Agent](../../advanced-basic/agent.md)**：让 Agent 在任务过程中自己查知识库
+* **知识库 + [频道（Cherry Claw）](../../advanced-basic/agent-channels.md)**：把"会查公司文档"的 Agent 派到飞书群里值班
+
+> 推荐先阅读 [概念入门](../../advanced-basic/concepts-101.md) 了解知识库与 Agent / MCP 等功能的关系。
+
+***
+
+### 💡 获取帮助与提交反馈
+
+如果您在配置或使用过程中遇到任何疑问、Bug 或有功能改进建议，请参考 [反馈与建议](../../question-contact/suggestions.md) 中提供的官方渠道。

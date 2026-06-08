@@ -68,7 +68,7 @@ icon: download
 
 主线路：
 
-【[Cherry Studio 官网](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v{version}/Cherry-Studio-{version}-x64-setup.exe)】
+【[Cherry Studio 官网](https://cherryai.com.cn/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v{version}/Cherry-Studio-{version}-x64-setup.exe)】
 
 备用线路：
 
@@ -82,7 +82,7 @@ icon: download
 
 主线路：
 
-【[Cherry Studio 官网](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v{version}/Cherry-Studio-{version}-arm64-setup.exe)】
+【[Cherry Studio 官网](https://cherryai.com.cn/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v{version}/Cherry-Studio-{version}-arm64-setup.exe)】
 
 备用线路：
 
@@ -98,7 +98,7 @@ icon: download
 
 主线路：
 
-【[Cherry Studio 官网](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v{version}/Cherry-Studio-{version}-x64-portable.exe)】
+【[Cherry Studio 官网](https://cherryai.com.cn/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v{version}/Cherry-Studio-{version}-x64-portable.exe)】
 
 备用线路：
 
@@ -112,7 +112,7 @@ icon: download
 
 主线路：
 
-【[Cherry Studio 官网](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v{version}/Cherry-Studio-{version}-arm64-portable.exe)】
+【[Cherry Studio 官网](https://cherryai.com.cn/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v{version}/Cherry-Studio-{version}-arm64-portable.exe)】
 
 备用线路：
 
@@ -130,7 +130,7 @@ icon: download
 
 主线路：
 
-【[Cherry Studio 官网](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v{version}/Cherry-Studio-{version}-x64.dmg)】
+【[Cherry Studio 官网](https://cherryai.com.cn/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v{version}/Cherry-Studio-{version}-x64.dmg)】
 
 备用线路：
 
@@ -144,7 +144,7 @@ icon: download
 
 主线路：
 
-【[Cherry Studio 官网](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v{version}/Cherry-Studio-{version}-arm64.dmg)】
+【[Cherry Studio 官网](https://cherryai.com.cn/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v{version}/Cherry-Studio-{version}-arm64.dmg)】
 
 备用线路：
 
@@ -162,7 +162,7 @@ icon: download
 
 主线路：
 
-【[Cherry Studio 官网](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v{version}/Cherry-Studio-{version}-x86_64.AppImage)】
+【[Cherry Studio 官网](https://cherryai.com.cn/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v{version}/Cherry-Studio-{version}-x86_64.AppImage)】
 
 备用线路：
 
@@ -176,7 +176,7 @@ icon: download
 
 主线路：
 
-【[Cherry Studio 官网](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v{version}/Cherry-Studio-{version}-arm64.AppImage)】
+【[Cherry Studio 官网](https://cherryai.com.cn/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v{version}/Cherry-Studio-{version}-arm64.AppImage)】
 
 备用线路：
 

@@ -21,7 +21,7 @@ icon: apple
 如果为 Apple M\* 芯片则下载 Apple 芯片安装包
 {% endhint %}
 
-{% embed url="https://cherry-ai.com/download" %}
+{% embed url="https://cherryai.com.cn/download" %}
 
 2. 下载完成后点击这里
 
@@ -34,3 +34,9 @@ icon: apple
 到启动台中寻找 Cherry Studio 图标并点击，能打开 Cherry Studio 主界面则安装成功。
 
 <figure><img src="../../.gitbook/assets/Mac安装成功.png" alt=""><figcaption></figcaption></figure>
+
+***
+
+### 💡 获取帮助与提交反馈
+
+如果您在配置或使用过程中遇到任何疑问、Bug 或有功能改进建议，请参考 [反馈与建议](../../question-contact/suggestions.md) 中提供的官方渠道。

@@ -15,3 +15,9 @@ icon: trash-xmark
 
 * 然后手动输入`document.getElementById('user-defined-custom-css').remove()` ，复制粘贴大概率不会执行。
 * 输入完成后回车确认即可清除css设置，然后再次进入CherryStudio的显示设置当中，删除有问题的css代码。
+
+***
+
+### 💡 获取帮助与提交反馈
+
+如果您在配置或使用过程中遇到任何疑问、Bug 或有功能改进建议，请参考 [反馈与建议](../../question-contact/suggestions.md) 中提供的官方渠道。

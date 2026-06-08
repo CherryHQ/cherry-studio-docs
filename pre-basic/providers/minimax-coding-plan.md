@@ -97,3 +97,9 @@ Coding Plan 与普通 API 的计费模式完全不同，请务必理解以下机
 * 检查 API Key 是否有多余空格。
 * 登录 MiniMax 官网确认你的 Coding Plan 订阅是否已过期。
 {% endhint %}
+
+***
+
+### 💡 获取帮助与提交反馈
+
+如果您在配置或使用过程中遇到任何疑问、Bug 或有功能改进建议，请参考 [反馈与建议](../../question-contact/suggestions.md) 中提供的官方渠道。

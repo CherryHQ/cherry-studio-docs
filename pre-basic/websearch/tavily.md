@@ -53,3 +53,9 @@ icon: binary-lock
 上面的步骤做完，就会进入下面的界面，说明你注册成功了，复制key到cherry studio就可以开始愉快的使用了。
 
 <figure><img src="../../.gitbook/assets/image (113).png" alt=""><figcaption></figcaption></figure>
+
+***
+
+### 💡 获取帮助与提交反馈
+
+如果您在配置或使用过程中遇到任何疑问、Bug 或有功能改进建议，请参考 [反馈与建议](../../question-contact/suggestions.md) 中提供的官方渠道。

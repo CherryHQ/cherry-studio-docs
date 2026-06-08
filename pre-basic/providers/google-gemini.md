@@ -21,3 +21,9 @@
 {% hint style="info" %}
 - 中国除台湾之外其他地区无法直接使用 Google Gemini 服务，需自行解决代理问题；
 {% endhint %}
+
+***
+
+### 💡 获取帮助与提交反馈
+
+如果您在配置或使用过程中遇到任何疑问、Bug 或有功能改进建议，请参考 [反馈与建议](../../question-contact/suggestions.md) 中提供的官方渠道。
