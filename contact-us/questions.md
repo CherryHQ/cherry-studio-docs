@@ -20,4 +20,4 @@ icon: address-card
 如果您需要更多指导，可以加入我们的[知识星球](https://wx.zsxq.com/group/48888118185118?group_id=48888118185118\&secret=797qkk5sx94p84zr7fxp8h27rn6c35j7\&inviter_id=414151881428448\&inviter_sid=91n362kab4\&share_from=InviteUrl\&keyword=sJyfK\&type=group)
 {% endhint %}
 
-> 商用授权详情：[https://docs.cherry-ai.com/contact-us/questions/cherrystudio-xu-ke-xie-yi](https://docs.cherry-ai.com/contact-us/questions/license)
+> 商用授权详情：[https://docs.cherry-ai.com/contact-us/questions/license](https://docs.cherry-ai.com/contact-us/questions/license)
