@@ -39,7 +39,7 @@ icon: grid
 
 <figure><img src="../../.gitbook/assets/cherry-display-navbar-position.png" alt=""><figcaption><p>设置 → 显示设置 → 导航栏设置 → 导航栏位置</p></figcaption></figure>
 
-切换后，顶部 Tab 栏会被替换为左侧的纵向图标栏，启动台依然存在，但访问入口变成从左侧栏底部的"+"或对应应用图标进入：
+切换后，顶部 Tab 栏会被替换为左侧的纵向图标栏，可以直接点击对应图标进入相应界面：
 
 <figure><img src="../../.gitbook/assets/cherry-home-left-sidebar.png" alt=""><figcaption><p>切换到左侧栏后的首页效果</p></figcaption></figure>
 
