@@ -37,7 +37,7 @@ icon: spider
 一键启动后，在你的终端里直接运行 `openclaw` 即可调用你在 Cherry Studio 托管启动的算力和模型。
 
 * 详细 CLI 使用手册请阅读官方文档：[https://docs.openclaw.ai/](https://docs.openclaw.ai/)
-* 亦可直接点击 OpenClaw 配置页面右上角的 **查看文档** 直达。
+* 亦可直接点击 OpenClaw 控制面板左下角的 **文档** 直达。
 
 ### 与 [智能体](agent.md) 的根本定位区别
 
