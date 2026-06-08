@@ -18,6 +18,8 @@ icon: grid-2
 
 ### 设置
 
+<figure><img src="../../.gitbook/assets/cherry-apps-settings.png" alt=""><figcaption><p>小程序设置</p></figcaption></figure>
+
 Cherry Studio 小程序的设置支持以下操作：
 
 * **显示 / 隐藏小程序**：可以左右拖动小程序到两个区域，控制显隐
