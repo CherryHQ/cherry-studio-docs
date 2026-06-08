@@ -40,8 +40,6 @@ Cherry Studio 把所有附件存在本地的应用数据目录中。具体路径
 * 重要文件建议同时备份到云盘（WebDAV / S3 等），见 [数据设置](../../pre-basic/data-settings/)
 * 文件名乱码？通常是从外部拖入时编码问题，建议先重命名再用
 
-如遇问题，请在 [反馈与建议](../../question-contact/suggestions.md) 中提交反馈。
-
 ***
 
 ### 💡 获取帮助与提交反馈
