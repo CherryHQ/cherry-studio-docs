@@ -2,7 +2,7 @@
 
 这是一个基于 Chatbot Arena (lmarena.ai) 数据的排行榜，通过自动化流程生成。
 
-> **数据更新时间**: 2026-06-07 09:07:21 UTC / 2026-06-07 17:07:21 CST (北京时间)
+> **数据更新时间**: 2026-06-08 09:41:05 UTC / 2026-06-08 17:41:05 CST (北京时间)
 
 ## 排行榜
 
@@ -192,7 +192,7 @@
 |    182 |        162201 | nvidia-llama-3.3-nemotron-super-49b-v1.5Nvidia · Nvidia Open            | 1343±10            |   3,345 | $0.10/$0.40  | 131.1K    |
 |    183 |        164200 | glm-4-plus-0111Z.ai · Proprietary                                       | 1343±8             |   5,760 | N/A          | N/A       |
 |    184 |        169196 | Anthropicclaude-3-5-sonnet-20240620Anthropic · Proprietary              | 1342±3             |  82,419 | $3/$15       | 200K      |
-|    185 |        164201 | gemma-3-12b-itGoogle · Gemma                                            | 1342±10            |   3,829 | $0.04/$0.13  | 131.1K    |
+|    185 |        164201 | gemma-3-12b-itGoogle · Gemma                                            | 1342±10            |   3,829 | $0.05/$0.15  | 131.1K    |
 |    186 |        163205 | Tencenthunyuan-turbo-0110Tencent · Proprietary                          | 1341±12            |   2,290 | N/A          | N/A       |
 |    187 |        171204 | gpt-5-nano-highOpenAI · Proprietary                                     | 1337±7             |   8,269 | $0.05/$0.40  | 400K      |
 |    188 |        172204 | nova-2-liteAmazon · Proprietary                                         | 1337±6             |  12,237 | $0.30/$2.50  | 1M        |
@@ -208,7 +208,7 @@
 |    198 |        165236 | molmo-2-8bAi2 · Apache 2.0                                              | 1329±21            |     803 | $0.20/$0.20  | 36.9K     |
 |    199 |        185216 | 01.AIyi-lightning01 AI · Proprietary                                    | 1328±5             |  27,332 | N/A          | N/A       |
 |    200 |        174227 | llama-3.3-nemotron-49b-super-v1Nvidia · Nvidia                          | 1328±12            |   2,218 | N/A          | N/A       |
-|    201 |        187216 | qwen3-30b-a3bAlibaba · Apache 2.0                                       | 1327±5             |  26,491 | $0.09/$0.45  | 131.1K    |
+|    201 |        187216 | qwen3-30b-a3bAlibaba · Apache 2.0                                       | 1327±5             |  26,491 | $0.12/$0.50  | 131.1K    |
 |    202 |        189216 | Metallama-4-maverick-17b-128e-instructMeta · Llama 4                    | 1327±4             |  39,993 | $0.63/$1.80  | 131.1K    |
 |    203 |        182226 | Tencenthunyuan-large-2025-02-10Tencent · Proprietary                    | 1326±10            |   3,738 | N/A          | N/A       |
 |    204 |        196222 | gpt-4-turbo-2024-04-09OpenAI · Proprietary                              | 1324±4             |  98,114 | $10/$30      | 128K      |
@@ -243,7 +243,7 @@
 |    233 |        221239 | mistral-large-2411Mistral · MRL                                         | 1305±4             |  28,073 | $2/$6        | 128K      |
 |    234 |        219239 | magistral-medium-2506Mistral · Proprietary                              | 1304±6             |  11,637 | $2/$5        | 40K       |
 |    235 |        224239 | mistral-small-3.1-24b-instruct-2503Mistral · Apache 2.0                 | 1303±5             |  33,220 | $0.10/$0.30  | 32K       |
-|    236 |        216246 | gemma-3-4b-itGoogle · Gemma                                             | 1303±9             |   4,171 | $0.04/$0.08  | 131.1K    |
+|    236 |        216246 | gemma-3-4b-itGoogle · Gemma                                             | 1303±9             |   4,171 | $0.05/$0.10  | 131.1K    |
 |    237 |        225239 | qwen2.5-72b-instructAlibaba · Qwen                                      | 1303±4             |  39,406 | $1.20/$1.20  | N/A       |
 |    238 |        225248 | llama-3.1-nemotron-70b-instructNvidia · Llama 3.1                       | 1299±8             |   7,140 | $1.20/$1.20  | 131.1K    |
 |    239 |        227251 | Tencenthunyuan-large-visionTencent · Proprietary                        | 1294±9             |   5,375 | N/A          | N/A       |
@@ -391,9 +391,3 @@
 ## 免责声明
 
 本报告仅供参考。排行榜数据是动态变化的，并基于特定时间段内用户在 Chatbot Arena 上的偏好投票。数据的完整性和准确性取决于上游数据源。不同模型可能采用不同的许可协议，使用时请务必参考模型提供商的官方说明。
-
-***
-
-### 💡 获取帮助与提交反馈
-
-如果您在配置或使用过程中遇到任何疑问、Bug 或有功能改进建议，请参考 [反馈与建议](../../question-contact/suggestions.md) 中提供的官方渠道。
