@@ -10,7 +10,7 @@ icon: address-card
 
 📱：+86 13681876646 (非客服电话)
 
-<figure><img src="../.gitbook/assets/img_v3_0212a_5333748a-c886-4463-9c36-153fa14b47dg (1).jpg" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/img_v3_0212a_5333748a-c886-4463-9c36-153fa14b47dg (1).jpg" alt="" width="188"><figcaption></figcaption></figure>
 
 {% hint style="warning" %}
 使用问题咨询，可以在官网首页底部加入我们的用户交流群，也可邮件 support@cherry-ai.com
