@@ -4,6 +4,10 @@ icon: download
 
 # 客户端下载
 
+{% hint style="info" %}
+当前最新正式版：v1.9.18
+{% endhint %}
+
 ## 官网下载
 
 请前往 Cherry Studio 官网下载最新版本客户端：
