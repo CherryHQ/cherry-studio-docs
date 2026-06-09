@@ -15,10 +15,10 @@ icon: grid
 | [小程序](app.md) | 客户端内运行 AI 厂商网页版 |
 | [知识库](knowledge-base.md) | 文档/网址/笔记向量化检索 |
 | [绘画](drawing.md) | 文生图模型 |
-| [助手库](agents.md) | 浏览/创建对话助手 |
+| [助手库](assistants.md) | 浏览/创建对话助手 |
 | [翻译](translation.md) | 双栏快速翻译 |
 | [文件](files.md) | 集中管理对话/绘画/知识库附件 |
-| Code | Code Tools / CLI（详见 [Code Tools 使用教程](../../advanced-basic/code-tools-shi-yong-jiao-cheng.md)） |
+| Code | Code Tools / CLI（详见 [Code Tools 使用教程](../../advanced-basic/code-tools.md)） |
 | [OpenClaw](../../advanced-basic/openclaw.md) | 外部 Agent CLI 集成 |
 | [笔记](notes.md) | 内置 Markdown 编辑器 |
 
