@@ -5,7 +5,7 @@ icon: download
 # 客户端下载
 
 {% hint style="info" %}
-当前最新正式版：v1.9.18
+当前最新正式版：v1.9.9
 {% endhint %}
 
 ## 官网下载
