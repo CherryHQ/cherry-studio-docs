@@ -2,7 +2,7 @@
 
 这是一个基于 Chatbot Arena (lmarena.ai) 数据的排行榜，通过自动化流程生成。
 
-> **数据更新时间**: 2026-06-09 09:13:56 UTC / 2026-06-09 17:13:56 CST (北京时间)
+> **数据更新时间**: 2026-06-10 09:19:27 UTC / 2026-06-10 17:19:27 CST (北京时间)
 
 ## 排行榜
 
@@ -76,7 +76,7 @@
 |     66 |          5781 | gpt-5-highOpenAI · Proprietary                                          | 1434±5             |  31,940 | $1.25/$10    | 400K      |
 |     67 |          5781 | gemini-3.1-flash-lite-previewGoogle · Proprietary                       | 1433±4             |  40,508 | $0.25/$1.50  | 1M        |
 |     68 |          5787 | mimo-v2.5Xiaomi · MIT                                                   | 1432±5             |  20,289 | $0.14/$0.28  | 1M        |
-|     69 |          5791 | kimi-k2.5-instantMoonshot · Modified MIT                                | 1432±7             |   8,185 | $0.40/$1.90  | 262.1K    |
+|     69 |          5791 | kimi-k2.5-instantMoonshot · Modified MIT                                | 1432±7             |   8,185 | $0.35/$1.89  | 262.1K    |
 |     70 |          5987 | o3-2025-04-16OpenAI · Proprietary                                       | 1431±4             |  59,758 | $2/$8        | 200K      |
 |     71 |          5987 | grok-4-1-fast-reasoningxAI · Proprietary                                | 1431±3             |  55,912 | $0.20/$0.50  | 2M        |
 |     72 |          6087 | kimi-k2-thinking-turboMoonshot · Modified MIT                           | 1430±3             |  61,289 | $1.15/$8     | 262.1K    |
@@ -106,7 +106,7 @@
 |     96 |         72115 | deepseek-v3.1-terminusDeepSeek · MIT                                    | 1416±10            |   3,705 | $0.27/$0.95  | 163.8K    |
 |     97 |         74110 | qwen3-vl-235b-a22b-instructAlibaba · Apache 2.0                         | 1415±6             |  11,505 | $0.20/$0.88  | 262.1K    |
 |     98 |         80109 | mistral-large-3Mistral · Apache 2.0                                     | 1415±4             |  43,114 | $0.50/$1.50  | N/A       |
-|     99 |         78109 | minimax-m2.7MiniMax · Modified MIT                                      | 1415±5             |  27,738 | $0.28/$1.20  | 204.8K    |
+|     99 |         78109 | minimax-m2.7MiniMax · Modified MIT                                      | 1415±5             |  27,738 | $0.27/$1.08  | 204.8K    |
 |    100 |         73114 | Tencenthunyuan-hy3-previewTencent · tencent-hunyuan-community           | 1415±8             |   6,289 | $0.29/$1.17  | 262.1K    |
 |    101 |         84109 | gpt-4.1-2025-04-14OpenAI · Proprietary                                  | 1414±4             |  50,995 | $2/$8        | 1M        |
 |    102 |         86112 | Anthropicclaude-opus-4-20250514Anthropic · Proprietary                  | 1412±4             |  44,209 | $15/$75      | 200K      |
@@ -135,7 +135,7 @@
 |    125 |        111136 | Stepfunstep-3.5-flashStepFun · Apache 2.0                               | 1395±4             |  38,540 | $0.09/$0.30  | 262.1K    |
 |    126 |        110142 | amazon-nova-experimental-chat-12-10Amazon · Proprietary                 | 1395±10            |   3,677 | N/A          | N/A       |
 |    127 |        116138 | mimo-v2-flash (non-thinking)Xiaomi · MIT                                | 1393±4             |  45,795 | $0.10/$0.30  | 262.1K    |
-|    128 |        118142 | minimax-m2.5MiniMax · Modified MIT                                      | 1390±4             |  40,463 | $0.15/$1.15  | 204.8K    |
+|    128 |        118142 | minimax-m2.5MiniMax · Modified MIT                                      | 1390±4             |  40,463 | $0.15/$0.90  | 204.8K    |
 |    129 |        118142 | gpt-5-mini-highOpenAI · Proprietary                                     | 1390±5             |  27,036 | $0.25/$2     | 400K      |
 |    130 |        118142 | o4-mini-2025-04-16OpenAI · Proprietary                                  | 1390±4             |  45,446 | $1.10/$4.40  | 200K      |
 |    131 |        118142 | Anthropicclaude-sonnet-4-20250514Anthropic · Proprietary                | 1389±4             |  40,322 | $3/$15       | 1M        |
