@@ -2,7 +2,7 @@
 
 这是一个基于 Chatbot Arena (lmarena.ai) 数据的排行榜，通过自动化流程生成。
 
-> **数据更新时间**: 2026-06-11 09:34:53 UTC / 2026-06-11 17:34:53 CST (北京时间)
+> **数据更新时间**: 2026-06-12 09:29:17 UTC / 2026-06-12 17:29:17 CST (北京时间)
 
 ## 排行榜
 
@@ -103,7 +103,7 @@
 |     93 |         76109 | kimi-k2-0711-previewMoonshot · Modified MIT                             | 1417±5             |  27,639 | $0.60/$2.50  | 131.1K    |
 |     94 |         77108 | qwen3.5-122b-a10bAlibaba · Apache 2.0                                   | 1417±4             |  28,441 | $0.26/$2.08  | 262.1K    |
 |     95 |         74110 | deepseek-v3.1-thinkingDeepSeek · MIT                                    | 1417±7             |  11,736 | $1.23/$4.94  | N/A       |
-|     96 |         79110 | minimax-m2.7MiniMax · Modified MIT                                      | 1416±5             |  31,351 | $0.27/$1.08  | 204.8K    |
+|     96 |         79110 | minimax-m2.7MiniMax · Modified MIT                                      | 1416±5             |  31,351 | $0.25/$1     | 204.8K    |
 |     97 |         73116 | deepseek-v3.1-terminusDeepSeek · MIT                                    | 1416±10            |   3,705 | $0.27/$0.95  | 163.8K    |
 |     98 |         73118 | amazon-nova-experimental-chat-26-01-10Amazon · Proprietary              | 1416±10            |   3,408 | N/A          | N/A       |
 |     99 |         82110 | mistral-large-3Mistral · Apache 2.0                                     | 1416±4             |  43,471 | $0.50/$1.50  | N/A       |
