@@ -2,7 +2,7 @@
 
 这是一个基于 Chatbot Arena (lmarena.ai) 数据的排行榜，通过自动化流程生成。
 
-> **数据更新时间**: 2026-06-13 09:08:35 UTC / 2026-06-13 17:08:35 CST (北京时间)
+> **数据更新时间**: 2026-06-14 09:10:10 UTC / 2026-06-14 17:10:10 CST (北京时间)
 
 ## 排行榜
 
@@ -69,11 +69,11 @@
 |     59 |          5373 | gpt-5.1OpenAI · Proprietary                                             | 1439±4             |  43,470 | $1.25/$10    | 400K      |
 |     60 |          4378 | gemma-4-26b-a4bGoogle · Apache 2.0                                      | 1438±8             |   5,802 | N/A          | N/A       |
 |     61 |          5375 | gpt-5.2-highOpenAI · Proprietary                                        | 1438±4             |  47,930 | $1.75/$14    | 400K      |
-|     62 |          5377 | deepseek-v4-flash-thinkingDeepSeek · MIT                                | 1436±5             |  24,641 | $0.10/$0.20  | 1M        |
+|     62 |          5377 | deepseek-v4-flash-thinkingDeepSeek · MIT                                | 1436±5             |  24,641 | $0.09/$0.18  | 1M        |
 |     63 |          5578 | longcat-flash-chat-2602-expMeituan · Proprietary                        | 1435±5             |  28,117 | N/A          | N/A       |
 |     64 |          5579 | qwen3-max-previewAlibaba · Proprietary                                  | 1435±5             |  27,716 | $0.78/$3.90  | 262.1K    |
 |     65 |          5877 | gpt-5.2OpenAI · Proprietary                                             | 1435±4             |  55,819 | $1.75/$14    | 400K      |
-|     66 |          5581 | deepseek-v4-flashDeepSeek · MIT                                         | 1434±5             |  24,760 | $0.10/$0.20  | 1M        |
+|     66 |          5581 | deepseek-v4-flashDeepSeek · MIT                                         | 1434±5             |  24,760 | $0.09/$0.18  | 1M        |
 |     67 |          5881 | gpt-5-highOpenAI · Proprietary                                          | 1434±5             |  31,932 | $1.25/$10    | 400K      |
 |     68 |          5888 | mimo-v2.5Xiaomi · MIT                                                   | 1433±5             |  23,774 | $0.14/$0.28  | 1M        |
 |     69 |          5883 | gemini-3.1-flash-lite-previewGoogle · Proprietary                       | 1433±4             |  44,683 | $0.25/$1.50  | 1M        |
