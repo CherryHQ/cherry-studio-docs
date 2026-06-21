@@ -2,7 +2,7 @@
 
 这是一个基于 Chatbot Arena (lmarena.ai) 数据的排行榜，通过自动化流程生成。
 
-> **数据更新时间**: 2026-06-20 09:08:27 UTC / 2026-06-20 17:08:27 CST (北京时间)
+> **数据更新时间**: 2026-06-21 09:19:39 UTC / 2026-06-21 17:19:39 CST (北京时间)
 
 ## 排行榜
 
@@ -70,7 +70,7 @@
 |     60 |          5373 | gpt-5.1OpenAI · Proprietary                                             | 1439±4             |  43,457 | $1.25/$10    | 400K      |
 |     61 |          4480 | gemma-4-26b-a4bGoogle · Apache 2.0                                      | 1438±8             |   5,813 | N/A          | N/A       |
 |     62 |          5475 | gpt-5.2-highOpenAI · Proprietary                                        | 1438±4             |  48,063 | $1.75/$14    | 400K      |
-|     63 |          5477 | deepseek-v4-flash-thinkingDeepSeek · MIT                                | 1436±5             |  28,215 | $0.09/$0.18  | 1M        |
+|     63 |          5477 | deepseek-v4-flash-thinkingDeepSeek · MIT                                | 1436±5             |  28,215 | $0.25/$1.75  | 200K      |
 |     64 |          5578 | longcat-flash-chat-2602-expMeituan · Proprietary                        | 1436±5             |  28,187 | N/A          | N/A       |
 |     65 |          5780 | qwen3-max-previewAlibaba · Proprietary                                  | 1435±5             |  27,716 | $0.78/$3.90  | 262.1K    |
 |     66 |          5978 | gpt-5.2OpenAI · Proprietary                                             | 1435±3             |  59,625 | $1.75/$14    | 400K      |
@@ -161,7 +161,7 @@
 |    151 |        145156 | Anthropicclaude-3-5-sonnet-20241022Anthropic · Proprietary              | 1373±3             |  88,337 | $3/$15       | 200K      |
 |    152 |        145161 | Anthropicclaude-3-7-sonnet-20250219Anthropic · Proprietary              | 1371±4             |  43,185 | $3/$15       | 200K      |
 |    153 |        145163 | qwen3-next-80b-a3b-thinkingAlibaba · Apache 2.0                         | 1370±6             |  13,693 | $0.10/$0.78  | 262.1K    |
-|    154 |        146162 | trinity-large-thinkingArcee AI · Apache 2.0                             | 1369±5             |  29,305 | $0.22/$0.85  | 262.1K    |
+|    154 |        146162 | trinity-large-thinkingArcee AI · Apache 2.0                             | 1369±5             |  29,305 | $0.25/$0.80  | 262.1K    |
 |    155 |        146165 | glm-4.7-flashZ.ai · MIT                                                 | 1368±6             |  11,731 | $0.06/$0.40  | 202.8K    |
 |    156 |        146165 | amazon-nova-experimental-chat-11-10Amazon · Proprietary                 | 1367±4             |  25,383 | N/A          | N/A       |
 |    157 |        150165 | gemma-3-27b-itGoogle · Gemma                                            | 1366±4             |  47,529 | $0.08/$0.16  | 131.1K    |
