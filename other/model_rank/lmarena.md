@@ -2,7 +2,7 @@
 
 这是一个基于 Chatbot Arena (lmarena.ai) 数据的排行榜，通过自动化流程生成。
 
-> **数据更新时间**: 2026-06-21 09:19:39 UTC / 2026-06-21 17:19:39 CST (北京时间)
+> **数据更新时间**: 2026-06-22 10:05:46 UTC / 2026-06-22 18:05:46 CST (北京时间)
 
 ## 排行榜
 
@@ -214,7 +214,7 @@
 |    204 |        191218 | Metallama-4-maverick-17b-128e-instructMeta · Llama 4                    | 1327±4             |  39,982 | $0.63/$1.80  | 131.1K    |
 |    205 |        183228 | Tencenthunyuan-large-2025-02-10Tencent · Proprietary                    | 1326±10            |   3,738 | N/A          | N/A       |
 |    206 |        198224 | gpt-4-turbo-2024-04-09OpenAI · Proprietary                              | 1324±4             |  98,114 | $10/$30      | 128K      |
-|    207 |        198223 | Anthropicclaude-3-5-haiku-20241022Anthropic · Proprietary               | 1324±3             |  69,979 | $0.80/$4     | 200K      |
+|    207 |        198223 | Anthropicclaude-3-5-haiku-20241022Anthropic · Proprietary               | 1324±3             |  69,979 | $1/$5        | 200K      |
 |    208 |        198224 | gemini-1.5-pro-001Google · Proprietary                                  | 1323±4             |  79,138 | $3.50/$10.50 | 2.1M      |
 |    209 |        191229 | deepseek-v2.5-1210DeepSeek · DeepSeek                                   | 1323±8             |   6,795 | N/A          | N/A       |
 |    210 |        198225 | Metallama-4-scout-17b-16e-instructMeta · Llama                          | 1323±5             |  30,286 | $0.40/$0.70  | 8.2K      |
