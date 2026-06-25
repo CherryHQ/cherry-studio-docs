@@ -2,7 +2,7 @@
 
 这是一个基于 Chatbot Arena (lmarena.ai) 数据的排行榜，通过自动化流程生成。
 
-> **数据更新时间**: 2026-06-24 09:11:45 UTC / 2026-06-24 17:11:45 CST (北京时间)
+> **数据更新时间**: 2026-06-25 09:11:21 UTC / 2026-06-25 17:11:21 CST (北京时间)
 
 ## 排行榜
 
@@ -74,9 +74,9 @@
 |     64 |          5578 | longcat-flash-chat-2602-expMeituan · Proprietary                        | 1436±5             |  28,187 | N/A          | N/A       |
 |     65 |          5780 | qwen3-max-previewAlibaba · Proprietary                                  | 1435±5             |  27,716 | $0.78/$3.90  | 262.1K    |
 |     66 |          5978 | gpt-5.2OpenAI · Proprietary                                             | 1435±3             |  59,625 | $1.75/$14    | 400K      |
-|     67 |          5982 | deepseek-v4-flashDeepSeek · MIT                                         | 1434±5             |  28,291 | $0.09/$0.18  | 1M        |
+|     67 |          5982 | deepseek-v4-flashDeepSeek · MIT                                         | 1434±5             |  28,291 | $0.09/$0.22  | 1M        |
 |     68 |          5982 | gpt-5-highOpenAI · Proprietary                                          | 1434±5             |  31,928 | $1.25/$10    | 400K      |
-|     69 |          5985 | mimo-v2.5Xiaomi · MIT                                                   | 1433±5             |  27,111 | $0.14/$0.28  | 1M        |
+|     69 |          5985 | mimo-v2.5Xiaomi · MIT                                                   | 1433±5             |  27,111 | $0.10/$0.28  | 1M        |
 |     70 |          6085 | gemini-3.1-flash-lite-previewGoogle · Proprietary                       | 1432±4             |  48,525 | $0.25/$1.50  | 1M        |
 |     71 |          5992 | mimo-v2-omniXiaomi · Proprietary                                        | 1432±6             |  12,528 | $0.40/$2     | 262.1K    |
 |     72 |          5992 | kimi-k2.5-instantMoonshot · Modified MIT                                | 1431±7             |   8,177 | $0.38/$2.02  | 262.1K    |
@@ -103,7 +103,7 @@
 |     93 |         76111 | deepseek-v3.1DeepSeek · MIT                                             | 1417±6             |  14,958 | $1.23/$4.94  | N/A       |
 |     94 |         77110 | qwen3.5-122b-a10bAlibaba · Apache 2.0                                   | 1417±4             |  28,575 | $0.26/$2.08  | 262.1K    |
 |     95 |         76111 | deepseek-v3.1-thinkingDeepSeek · MIT                                    | 1417±7             |  11,737 | $1.23/$4.94  | N/A       |
-|     96 |         79111 | minimax-m2.7MiniMax · Modified MIT                                      | 1417±4             |  34,620 | $0.25/$1     | 204.8K    |
+|     96 |         79111 | minimax-m2.7MiniMax · Modified MIT                                      | 1417±4             |  34,620 | $0.24/$0.96  | 204.8K    |
 |     97 |         76114 | nvidia-nemotron-3-ultra-550b-a55b-nvfp4Nvidia · OpenMDW-1.1             | 1416±8             |   6,153 | N/A          | N/A       |
 |     98 |         74118 | deepseek-v3.1-terminusDeepSeek · MIT                                    | 1416±10            |   3,702 | $0.27/$0.95  | 163.8K    |
 |     99 |         74119 | amazon-nova-experimental-chat-26-01-10Amazon · Proprietary              | 1416±10            |   3,406 | N/A          | N/A       |
