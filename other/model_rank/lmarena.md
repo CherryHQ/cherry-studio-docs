@@ -2,7 +2,7 @@
 
 这是一个基于 Chatbot Arena (lmarena.ai) 数据的排行榜，通过自动化流程生成。
 
-> **数据更新时间**: 2026-06-30 09:12:02 UTC / 2026-06-30 17:12:02 CST (北京时间)
+> **数据更新时间**: 2026-07-01 09:14:24 UTC / 2026-07-01 17:14:24 CST (北京时间)
 
 ## 排行榜
 
@@ -73,7 +73,7 @@
 |     63 |          5576 | gpt-5.2-highOpenAI · Proprietary                                        | 1437±4             |  48,051 | $1.75/$14    | 400K      |
 |     64 |          5478 | deepseek-v4-flash-thinkingDeepSeek · MIT                                | 1437±5             |  33,381 | $0.25/$1.75  | 200K      |
 |     65 |          5679 | longcat-flash-chat-2602-expMeituan · Proprietary                        | 1436±5             |  28,173 | N/A          | N/A       |
-|     66 |          5681 | deepseek-v4-flashDeepSeek · MIT                                         | 1435±5             |  33,456 | $0.09/$0.18  | 1M        |
+|     66 |          5681 | deepseek-v4-flashDeepSeek · MIT                                         | 1435±5             |  33,456 | $0.10/$0.20  | 1M        |
 |     67 |          5978 | gpt-5.2OpenAI · Proprietary                                             | 1435±3             |  65,237 | $1.75/$14    | 400K      |
 |     68 |          5781 | qwen3-max-previewAlibaba · Proprietary                                  | 1435±4             |  27,708 | $0.78/$3.90  | 262.1K    |
 |     69 |          6083 | gpt-5-highOpenAI · Proprietary                                          | 1434±5             |  31,926 | $1.25/$10    | 400K      |
@@ -127,7 +127,7 @@
 |    117 |        108129 | o1-2024-12-17OpenAI · Proprietary                                       | 1402±4             |  27,807 | $15/$60      | 200K      |
 |    118 |        108129 | qwen3-next-80b-a3b-instructAlibaba · Apache 2.0                         | 1401±5             |  22,875 | $0.09/$1.10  | 262.1K    |
 |    119 |        105132 | longcat-flash-chatMeituan · MIT                                         | 1401±6             |  11,392 | $0.20/$0.80  | 131.1K    |
-|    120 |        110137 | qwen3-235b-a22b-thinking-2507Alibaba · Apache 2.0                       | 1399±7             |   8,991 | $0.10/$0.10  | 262.1K    |
+|    120 |        110137 | qwen3-235b-a22b-thinking-2507Alibaba · Apache 2.0                       | 1399±7             |   8,991 | $0.15/$1.50  | 262.1K    |
 |    121 |        113131 | Anthropicclaude-sonnet-4-20250514-thinking-32kAnthropic · Proprietary   | 1399±4             |  35,101 | $3/$15       | 1M        |
 |    122 |        113137 | deepseek-r1DeepSeek · MIT                                               | 1398±5             |  18,524 | $0.70/$2.50  | 163.8K    |
 |    123 |        113137 | qwen3.5-flashAlibaba · Proprietary                                      | 1397±4             |  45,836 | N/A          | N/A       |
