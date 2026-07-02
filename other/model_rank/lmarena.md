@@ -2,7 +2,7 @@
 
 这是一个基于 Chatbot Arena (lmarena.ai) 数据的排行榜，通过自动化流程生成。
 
-> **数据更新时间**: 2026-07-01 09:14:24 UTC / 2026-07-01 17:14:24 CST (北京时间)
+> **数据更新时间**: 2026-07-02 09:07:56 UTC / 2026-07-02 17:07:56 CST (北京时间)
 
 ## 排行榜
 
@@ -73,7 +73,7 @@
 |     63 |          5576 | gpt-5.2-highOpenAI · Proprietary                                        | 1437±4             |  48,051 | $1.75/$14    | 400K      |
 |     64 |          5478 | deepseek-v4-flash-thinkingDeepSeek · MIT                                | 1437±5             |  33,381 | $0.25/$1.75  | 200K      |
 |     65 |          5679 | longcat-flash-chat-2602-expMeituan · Proprietary                        | 1436±5             |  28,173 | N/A          | N/A       |
-|     66 |          5681 | deepseek-v4-flashDeepSeek · MIT                                         | 1435±5             |  33,456 | $0.10/$0.20  | 1M        |
+|     66 |          5681 | deepseek-v4-flashDeepSeek · MIT                                         | 1435±5             |  33,456 | $0.09/$0.18  | 1M        |
 |     67 |          5978 | gpt-5.2OpenAI · Proprietary                                             | 1435±3             |  65,237 | $1.75/$14    | 400K      |
 |     68 |          5781 | qwen3-max-previewAlibaba · Proprietary                                  | 1435±4             |  27,708 | $0.78/$3.90  | 262.1K    |
 |     69 |          6083 | gpt-5-highOpenAI · Proprietary                                          | 1434±5             |  31,926 | $1.25/$10    | 400K      |
@@ -148,7 +148,7 @@
 |    138 |        127146 | Anthropicclaude-3-7-sonnet-20250219-thinking-32kAnthropic · Proprietary | 1387±4             |  38,820 | $3/$15       | 200K      |
 |    139 |        119149 | Tencenthunyuan-t1-20250711Tencent · Proprietary                         | 1387±9             |   4,704 | N/A          | N/A       |
 |    140 |        126147 | mistral-medium-2505Mistral · Proprietary                                | 1387±5             |  33,219 | $0.40/$2     | 131.1K    |
-|    141 |        127148 | minimax-m2.1-previewMiniMax · MIT                                       | 1385±5             |  17,113 | $0.29/$0.95  | 204.8K    |
+|    141 |        127148 | minimax-m2.1-previewMiniMax · MIT                                       | 1385±5             |  17,113 | $0.30/$1.20  | 204.8K    |
 |    142 |        129149 | qwen3-30b-a3b-instruct-2507Alibaba · Apache 2.0                         | 1383±5             |  23,720 | $0.05/$0.19  | 131.1K    |
 |    143 |        129149 | gpt-4.1-mini-2025-04-14OpenAI · Proprietary                             | 1383±4             |  39,317 | $0.40/$1.60  | 1M        |
 |    144 |        129151 | Tencenthunyuan-turbos-20250416Tencent · Proprietary                     | 1382±6             |  10,724 | N/A          | N/A       |
@@ -190,7 +190,7 @@
 |    180 |        161201 | mercury-2Inception AI · Proprietary                                     | 1347±11            |   3,124 | $0.25/$0.75  | 128K      |
 |    181 |        165199 | ling-flash-2.0Ant Group · MIT                                           | 1346±7             |   6,999 | N/A          | N/A       |
 |    182 |        163200 | qwen-plus-0125Alibaba · Proprietary                                     | 1346±8             |   5,819 | $0.40/$1.20  | 131.1K    |
-|    183 |        165200 | minimax-m2MiniMax · Apache 2.0                                          | 1346±8             |   6,866 | $0.26/$1     | 204.8K    |
+|    183 |        165200 | minimax-m2MiniMax · Apache 2.0                                          | 1346±8             |   6,866 | $0.26/$1.02  | 204.8K    |
 |    184 |        168193 | gpt-4o-2024-05-13OpenAI · Proprietary                                   | 1346±3             | 112,881 | $5/$15       | 128K      |
 |    185 |        165204 | nvidia-llama-3.3-nemotron-super-49b-v1.5Nvidia · Nvidia Open            | 1343±10            |   3,346 | $0.10/$0.40  | 131.1K    |
 |    186 |        167203 | glm-4-plus-0111Z.ai · Proprietary                                       | 1343±8             |   5,760 | N/A          | N/A       |
