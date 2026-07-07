@@ -2,7 +2,7 @@
 
 这是一个基于 Chatbot Arena (lmarena.ai) 数据的排行榜，通过自动化流程生成。
 
-> **数据更新时间**: 2026-07-06 12:04:24 UTC / 2026-07-06 20:04:24 CST (北京时间)
+> **数据更新时间**: 2026-07-07 10:55:36 UTC / 2026-07-07 18:55:36 CST (北京时间)
 
 ## 排行榜
 
@@ -329,7 +329,7 @@
 |    319 |        307327 | phi-3-small-8k-instructMicrosoft · MIT                                  | 1170±6             |  17,766 | $0.15/$0.60  | N/A       |
 |    320 |        307327 | Metallama-2-70b-chatMeta · Llama 2 Community                            | 1170±6             |  38,492 | $0.70/$2.80  | 4.1K      |
 |    321 |        308330 | starling-lm-7b-alphaUC Berkeley · CC-BY-NC-4.0                          | 1167±8             |  10,224 | N/A          | N/A       |
-|    322 |        309330 | Metallama-3.2-3b-instructMeta · Llama 3.2                               | 1166±8             |   7,936 | $0.05/$0.34  | 131.1K    |
+|    322 |        309330 | Metallama-3.2-3b-instructMeta · Llama 3.2                               | 1166±8             |   7,936 | $0.05/$0.33  | 131.1K    |
 |    323 |        307333 | nous-hermes-2-mixtral-8x7b-dpoNousResearch · Apache-2.0                 | 1164±12            |   3,777 | $0.90/$0.90  | N/A       |
 |    324 |        320336 | granite-3.0-2b-instructIBM · Apache 2.0                                 | 1156±8             |   6,837 | N/A          | N/A       |
 |    325 |        316340 | qwq-32b-previewAlibaba · Apache 2.0                                     | 1155±12            |   3,231 | $0.50/$1     | 16.4K     |
