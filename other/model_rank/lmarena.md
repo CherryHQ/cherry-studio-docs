@@ -2,7 +2,7 @@
 
 这是一个基于 Chatbot Arena (lmarena.ai) 数据的排行榜，通过自动化流程生成。
 
-> **数据更新时间**: 2026-07-07 10:55:36 UTC / 2026-07-07 18:55:36 CST (北京时间)
+> **数据更新时间**: 2026-07-08 10:18:13 UTC / 2026-07-08 18:18:13 CST (北京时间)
 
 ## 排行榜
 
@@ -39,7 +39,7 @@
 |     29 |          1539 | mimo-v2.5-proXiaomi · MIT                                               | 1466±5             |  34,468 | $0.43/$0.87  | 1M        |
 |     30 |          1836 | grok-4.1-thinkingxAI · Proprietary                                      | 1466±3             |  65,565 | N/A          | N/A       |
 |     31 |          1640 | qwen3.5-max-previewAlibaba · Proprietary                                | 1465±5             |  21,531 | N/A          | N/A       |
-|     32 |          1346 | Anthropicclaude-sonnet-5-thinkingAnthropic · Proprietary                | 1464±9             |   4,385 | $2/$10       | 1M        |
+|     32 |          1346 | Anthropicclaude-sonnet-5-highAnthropic · Proprietary                    | 1464±9             |   4,385 | $2/$10       | 1M        |
 |     33 |          2045 | qwen3.7-plusAlibaba · Proprietary                                       | 1463±6             |  14,900 | $0.32/$1.28  | 1M        |
 |     34 |          2445 | kimi-k2.6Moonshot · Modified MIT                                        | 1461±5             |  32,657 | $0.95/$4     | 262.1K    |
 |     35 |          2052 | qwen3.6-max-previewAlibaba · Proprietary                                | 1460±8             |   5,215 | $1.04/$6.24  | 262.1K    |
