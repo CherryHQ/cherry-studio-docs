@@ -2,7 +2,7 @@
 
 这是一个基于 Chatbot Arena (lmarena.ai) 数据的排行榜，通过自动化流程生成。
 
-> **数据更新时间**: 2026-07-09 10:54:15 UTC / 2026-07-09 18:54:15 CST (北京时间)
+> **数据更新时间**: 2026-07-10 10:53:14 UTC / 2026-07-10 18:53:14 CST (北京时间)
 
 ## 排行榜
 
@@ -89,12 +89,12 @@
 |     79 |          6898 | gpt-5-chatOpenAI · Proprietary                                          | 1427±4             |  31,551 | $1.25/$10    | 128K      |
 |     80 |         64103 | mistral-medium-3.5Mistral · Modified MIT                                | 1427±7             |  10,782 | $1.50/$7.50  | 262.1K    |
 |     81 |         70101 | glm-4.6Z.ai · MIT                                                       | 1425±4             |  35,637 | $0.43/$1.74  | 202.8K    |
-|     82 |         72100 | deepseek-v3.2DeepSeek · MIT                                             | 1425±4             |  47,254 | $0.23/$0.34  | 131.1K    |
+|     82 |         72100 | deepseek-v3.2DeepSeek · MIT                                             | 1425±4             |  47,254 | $0.21/$0.32  | 131.1K    |
 |     83 |         66104 | deepseek-v3.2-exp-thinkingDeepSeek · MIT                                | 1425±7             |   9,071 | $0.27/$0.41  | 163.8K    |
 |     84 |         72103 | Anthropicclaude-opus-4-20250514-thinking-16kAnthropic · Proprietary     | 1424±4             |  36,870 | $15/$75      | 200K      |
 |     85 |         68104 | qwen3-max-2025-09-23Alibaba · Proprietary                               | 1424±6             |   9,151 | $0.78/$3.90  | 262.1K    |
 |     86 |         76102 | qwen3-235b-a22b-instruct-2507Alibaba · Apache 2.0                       | 1423±3             |  97,195 | $0.26/$1.06  | N/A       |
-|     87 |         75103 | deepseek-v3.2-thinkingDeepSeek · MIT                                    | 1423±4             |  41,062 | $0.23/$0.34  | 131.1K    |
+|     87 |         75103 | deepseek-v3.2-thinkingDeepSeek · MIT                                    | 1423±4             |  41,062 | $0.21/$0.32  | 131.1K    |
 |     88 |         70105 | deepseek-v3.2-expDeepSeek · MIT                                         | 1423±6             |  11,921 | $0.27/$0.41  | 163.8K    |
 |     89 |         73105 | deepseek-r1-0528DeepSeek · MIT                                          | 1422±6             |  18,457 | $0.50/$2.15  | 163.8K    |
 |     90 |         73111 | grok-4-fast-chatSpaceXAI · Proprietary                                  | 1421±8             |   6,808 | $3/$15       | 256K      |
@@ -106,7 +106,7 @@
 |     96 |         78113 | deepseek-v3.1DeepSeek · MIT                                             | 1417±6             |  14,954 | $1.23/$4.94  | N/A       |
 |     97 |         78113 | deepseek-v3.1-thinkingDeepSeek · MIT                                    | 1417±7             |  11,731 | $1.23/$4.94  | N/A       |
 |     98 |         80112 | qwen3.5-122b-a10bAlibaba · Apache 2.0                                   | 1417±4             |  28,563 | $0.26/$2.08  | 262.1K    |
-|     99 |         81112 | minimax-m2.7MiniMax · Modified MIT                                      | 1417±4             |  42,368 | $0.18/$0.72  | 204.8K    |
+|     99 |         81112 | minimax-m2.7MiniMax · Modified MIT                                      | 1417±4             |  42,368 | $0.24/$0.96  | 204.8K    |
 |    100 |         76121 | amazon-nova-experimental-chat-26-01-10Amazon · Proprietary              | 1416±10            |   3,410 | N/A          | N/A       |
 |    101 |         76121 | deepseek-v3.1-terminusDeepSeek · MIT                                    | 1416±10            |   3,691 | $0.27/$0.95  | 163.8K    |
 |    102 |         85113 | mistral-large-3Mistral · Apache 2.0                                     | 1416±4             |  44,086 | $0.50/$1.50  | N/A       |
@@ -139,7 +139,7 @@
 |    129 |        118141 | Stepfunstep-3.5-flashStepFun · Apache 2.0                               | 1395±4             |  52,274 | $0.10/$0.30  | 262.1K    |
 |    130 |        114146 | amazon-nova-experimental-chat-12-10Amazon · Proprietary                 | 1395±10            |   3,676 | N/A          | N/A       |
 |    131 |        120142 | mimo-v2-flash (non-thinking)Xiaomi · MIT                                | 1393±4             |  46,660 | $0.10/$0.30  | 262.1K    |
-|    132 |        122146 | minimax-m2.5MiniMax · Modified MIT                                      | 1391±4             |  41,241 | $0.12/$0.48  | 204.8K    |
+|    132 |        122146 | minimax-m2.5MiniMax · Modified MIT                                      | 1391±4             |  41,241 | $0.15/$0.90  | 204.8K    |
 |    133 |        122146 | gpt-5-mini-highOpenAI · Proprietary                                     | 1390±5             |  27,016 | $0.25/$2     | 400K      |
 |    134 |        123146 | o4-mini-2025-04-16OpenAI · Proprietary                                  | 1390±4             |  45,433 | $1.10/$4.40  | 200K      |
 |    135 |        123146 | Anthropicclaude-sonnet-4-20250514Anthropic · Proprietary                | 1389±4             |  40,294 | $3/$15       | 1M        |
@@ -179,7 +179,7 @@
 |    169 |        162188 | Coherecommand-a-03-2025Cohere · CC-BY-NC-4.0                            | 1354±3             |  56,234 | $2.50/$10    | 256K      |
 |    170 |        160191 | glm-4.5vZ.ai · MIT                                                      | 1354±8             |   4,956 | $0.60/$1.80  | 65.5K     |
 |    171 |        162190 | gemini-2.0-flash-lite-preview-02-05Google · Proprietary                 | 1353±4             |  24,955 | $0.07/$0.30  | 1M        |
-|    172 |        162190 | gpt-oss-120bOpenAI · Apache 2.0                                         | 1353±4             |  30,639 | $0.03/$0.15  | 131.1K    |
+|    172 |        162190 | gpt-oss-120bOpenAI · Apache 2.0                                         | 1353±4             |  30,639 | $0.04/$0.18  | 131.1K    |
 |    173 |        165190 | gemini-1.5-pro-002Google · Proprietary                                  | 1351±3             |  55,606 | $3.50/$10.50 | 2.1M      |
 |    174 |        164192 | amazon-nova-experimental-chat-10-20Amazon · Proprietary                 | 1350±6             |  11,469 | N/A          | N/A       |
 |    175 |        160201 | Tencenthunyuan-turbos-20250226Tencent · Proprietary                     | 1349±12            |   2,220 | N/A          | N/A       |
