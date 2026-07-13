@@ -2,17 +2,17 @@
 
 这是一个基于 Chatbot Arena (lmarena.ai) 数据的排行榜，通过自动化流程生成。
 
-> **数据更新时间**: 2026-07-12 09:50:32 UTC / 2026-07-12 17:50:32 CST (北京时间)
+> **数据更新时间**: 2026-07-13 11:10:34 UTC / 2026-07-13 19:10:34 CST (北京时间)
 
 ## 排行榜
 
 |   Rank |   Rank Spread | 模型                                                                      | 分数                 |      票数 | Price $/M    | Context   |
 |-------:|--------------:|:------------------------------------------------------------------------|:-------------------|--------:|:-------------|:----------|
-|      1 |            16 | Anthropicclaude-fable-5Anthropic · Proprietary                          | 1509±9             |   4,299 | $10/$50      | 1M        |
+|      1 |            17 | Anthropicclaude-fable-5Anthropic · Proprietary                          | 1505±8             |   7,252 | $10/$50      | 1M        |
 |      2 |            15 | Anthropicclaude-opus-4-6-thinkingAnthropic · Proprietary                | 1504±4             |  58,968 | $5/$25       | 1M        |
 |      3 |            17 | Anthropicclaude-opus-4-7-thinkingAnthropic · Proprietary                | 1503±4             |  46,183 | $5/$25       | 1M        |
 |      4 |            17 | Anthropicclaude-opus-4-6Anthropic · Proprietary                         | 1498±4             |  62,650 | $5/$25       | 1M        |
-|      5 |            38 | Anthropicclaude-opus-4-7Anthropic · Proprietary                         | 1494±4             |  47,222 | $5/$25       | 1M        |
+|      5 |            28 | Anthropicclaude-opus-4-7Anthropic · Proprietary                         | 1494±4             |  47,222 | $5/$25       | 1M        |
 |      6 |           218 | Metamuse-spark-1.1Meta · Proprietary                                    | 1490±10Preliminary |   3,750 | $1.25/$4.25  | N/A       |
 |      7 |           515 | Metamuse-sparkMeta · Proprietary                                        | 1488±6Preliminary  |  13,573 | N/A          | N/A       |
 |      8 |           130 | gpt-5.6-sol-xhighOpenAI · Proprietary                                   | 1486±14            |   1,740 | $5/$30       | 1.1M      |
@@ -93,7 +93,7 @@
 |     83 |         68106 | mistral-medium-3.5Mistral · Modified MIT                                | 1427±7             |  11,052 | $1.50/$7.50  | 262.1K    |
 |     84 |         65110 | amazon-nova-experimental-chat-26-02-10Amazon · Proprietary              | 1427±10            |   3,421 | N/A          | N/A       |
 |     85 |         72103 | gpt-5-chatOpenAI · Proprietary                                          | 1427±4             |  31,539 | $1.25/$10    | 128K      |
-|     86 |         76106 | glm-4.6Z.ai · MIT                                                       | 1425±4             |  35,625 | $0.43/$1.74  | 202.8K    |
+|     86 |         76106 | glm-4.6Z.ai · MIT                                                       | 1425±4             |  35,625 | $0.43/$1.75  | 200K      |
 |     87 |         77106 | deepseek-v3.2DeepSeek · MIT                                             | 1425±4             |  47,243 | $0.21/$0.32  | 131.1K    |
 |     88 |         71109 | deepseek-v3.2-exp-thinkingDeepSeek · MIT                                | 1425±7             |   9,066 | $0.27/$0.41  | 163.8K    |
 |     89 |         77108 | Anthropicclaude-opus-4-20250514-thinking-16kAnthropic · Proprietary     | 1424±4             |  36,864 | $15/$75      | 200K      |
