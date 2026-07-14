@@ -2,7 +2,7 @@
 
 这是一个基于 Chatbot Arena (lmarena.ai) 数据的排行榜，通过自动化流程生成。
 
-> **数据更新时间**: 2026-07-13 11:10:34 UTC / 2026-07-13 19:10:34 CST (北京时间)
+> **数据更新时间**: 2026-07-14 09:57:54 UTC / 2026-07-14 17:57:54 CST (北京时间)
 
 ## 排行榜
 
@@ -77,7 +77,7 @@
 |     67 |          5980 | gpt-5.1OpenAI · Proprietary                                             | 1439±4             |  43,434 | $1.25/$10    | 400K      |
 |     68 |          5882 | deepseek-v4-flash-thinkingDeepSeek · MIT                                | 1439±5             |  40,631 | $0.25/$1.75  | 200K      |
 |     69 |          4987 | gemma-4-26b-a4bGoogle · Apache 2.0                                      | 1438±8             |   5,806 | N/A          | N/A       |
-|     70 |          5984 | deepseek-v4-flashDeepSeek · MIT                                         | 1437±4             |  40,831 | $0.08/$0.15  | 1M        |
+|     70 |          5984 | deepseek-v4-flashDeepSeek · MIT                                         | 1437±4             |  40,831 | $0.09/$0.18  | 1M        |
 |     71 |          5983 | gpt-5.2-highOpenAI · Proprietary                                        | 1437±4             |  48,012 | $1.75/$14    | 400K      |
 |     72 |          5985 | longcat-flash-chat-2602-expMeituan · Proprietary                        | 1436±5             |  28,117 | N/A          | N/A       |
 |     73 |          6284 | gpt-5.2OpenAI · Proprietary                                             | 1435±3             |  73,109 | $1.75/$14    | 400K      |
@@ -184,7 +184,7 @@
 |    174 |        167193 | Coherecommand-a-03-2025Cohere · CC-BY-NC-4.0                            | 1354±3             |  56,224 | $2.50/$10    | 256K      |
 |    175 |        165196 | glm-4.5vZ.ai · MIT                                                      | 1354±8             |   4,955 | $0.60/$1.80  | 65.5K     |
 |    176 |        167195 | gemini-2.0-flash-lite-preview-02-05Google · Proprietary                 | 1354±4             |  24,955 | $0.07/$0.30  | 1M        |
-|    177 |        167195 | gpt-oss-120bOpenAI · Apache 2.0                                         | 1353±4             |  30,628 | $0.04/$0.18  | 131.1K    |
+|    177 |        167195 | gpt-oss-120bOpenAI · Apache 2.0                                         | 1353±4             |  30,628 | $0.03/$0.15  | 131.1K    |
 |    178 |        169195 | gemini-1.5-pro-002Google · Proprietary                                  | 1351±3             |  55,606 | $3.50/$10.50 | 2.1M      |
 |    179 |        169197 | amazon-nova-experimental-chat-10-20Amazon · Proprietary                 | 1350±6             |  11,467 | N/A          | N/A       |
 |    180 |        165206 | Tencenthunyuan-turbos-20250226Tencent · Proprietary                     | 1349±12            |   2,220 | N/A          | N/A       |
