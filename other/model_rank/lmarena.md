@@ -2,7 +2,7 @@
 
 这是一个基于 Chatbot Arena (lmarena.ai) 数据的排行榜，通过自动化流程生成。
 
-> **数据更新时间**: 2026-07-15 10:02:23 UTC / 2026-07-15 18:02:23 CST (北京时间)
+> **数据更新时间**: 2026-07-16 10:08:08 UTC / 2026-07-16 18:08:08 CST (北京时间)
 
 ## 排行榜
 
@@ -23,7 +23,7 @@
 |     13 |          1029 | gpt-5.4-highOpenAI · Proprietary                                        | 1477±4             |  55,516 | $2.50/$15    | 1.1M      |
 |     14 |           634 | gemini-3.5-flash-highGoogle · Proprietary                               | 1476±7             |  10,114 | $1.50/$9     | 1M        |
 |     15 |          1030 | gpt-5.2-chat-latest-20260210OpenAI · Proprietary                        | 1476±4             |  34,452 | $1.75/$14    | 128K      |
-|     16 |           639 | qwen3.7-max-previewAlibaba · Proprietary                                | 1475±10Preliminary |   3,716 | $1.25/$3.75  | 1M        |
+|     16 |           639 | qwen3.7-max-previewAlibaba · Proprietary                                | 1475±10Preliminary |   3,716 | $1.48/$4.42  | 1M        |
 |     17 |           937 | gemini-3.5-flash-mediumGoogle · Proprietary                             | 1475±7             |  10,472 | $1.50/$9     | 1M        |
 |     18 |          1035 | Anthropicclaude-opus-4-8Anthropic · Proprietary                         | 1475±5             |  27,972 | $5/$25       | 1M        |
 |     19 |          1035 | grok-4.20-beta1SpaceXAI · Proprietary                                   | 1474±5             |  26,871 | N/A          | N/A       |
@@ -169,7 +169,7 @@
 |    159 |        152168 | Anthropicclaude-3-7-sonnet-20250219Anthropic · Proprietary              | 1371±4             |  43,167 | $3/$15       | 200K      |
 |    160 |        152170 | qwen3-next-80b-a3b-thinkingAlibaba · Apache 2.0                         | 1370±6             |  13,679 | $0.10/$0.78  | 262.1K    |
 |    161 |        153169 | trinity-large-thinkingApache 2.0                                        | 1369±5             |  29,187 | $0.25/$0.80  | 262.1K    |
-|    162 |        153172 | glm-4.7-flashZ.ai · MIT                                                 | 1368±6             |  11,721 | $0.06/$0.40  | 200K      |
+|    162 |        153172 | glm-4.7-flashZ.ai · MIT                                                 | 1368±6             |  11,721 | $0.06/$0.40  | 202.8K    |
 |    163 |        153172 | amazon-nova-experimental-chat-11-10Amazon · Proprietary                 | 1366±4             |  25,357 | N/A          | N/A       |
 |    164 |        157172 | gemma-3-27b-itGoogle · Gemma                                            | 1366±4             |  47,507 | $0.08/$0.45  | 131.1K    |
 |    165 |        158175 | minimax-m1MiniMax · Apache 2.0                                          | 1364±4             |  35,159 | $0.55/$2.20  | 1M        |
@@ -334,7 +334,7 @@
 |    324 |        312332 | phi-3-small-8k-instructMicrosoft · MIT                                  | 1170±6             |  17,766 | $0.15/$0.60  | N/A       |
 |    325 |        312332 | Metallama-2-70b-chatMeta · Llama 2 Community                            | 1170±6             |  38,492 | $0.70/$2.80  | 4.1K      |
 |    326 |        313335 | starling-lm-7b-alphaCC-BY-NC-4.0                                        | 1167±8             |  10,224 | N/A          | N/A       |
-|    327 |        314335 | Metallama-3.2-3b-instructMeta · Llama 3.2                               | 1166±8             |   7,936 | $0.05/$0.34  | 131.1K    |
+|    327 |        314335 | Metallama-3.2-3b-instructMeta · Llama 3.2                               | 1166±8             |   7,936 | $0.05/$0.33  | 131.1K    |
 |    328 |        312338 | nous-hermes-2-mixtral-8x7b-dpoApache-2.0                                | 1164±12            |   3,777 | $0.90/$0.90  | N/A       |
 |    329 |        325341 | granite-3.0-2b-instructIBM · Apache 2.0                                 | 1156±8             |   6,837 | N/A          | N/A       |
 |    330 |        321345 | qwq-32b-previewAlibaba · Apache 2.0                                     | 1155±11            |   3,231 | $0.50/$1     | 16.4K     |
