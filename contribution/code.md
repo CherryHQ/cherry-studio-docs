@@ -22,11 +22,9 @@ icon: square-code
 
 ## 参与方式
 
-发送邮件到 [dev@cherry-ai.com](mailto:dev@cherry-ai.com?subject=申请成为开发者\&body=申请理由)
+回复 issue 中的问题，帮助别人解决遇到的困难
 
-邮件标题：申请成为开发者
-
-邮件内容：申请理由
+提交 pr 方式来新增功能、修复错误、维护文档等
 
 ***
 
