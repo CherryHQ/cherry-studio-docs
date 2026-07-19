@@ -2,7 +2,7 @@
 
 这是一个基于 Chatbot Arena (lmarena.ai) 数据的排行榜，通过自动化流程生成。
 
-> **数据更新时间**: 2026-07-18 09:24:55 UTC / 2026-07-18 17:24:55 CST (北京时间)
+> **数据更新时间**: 2026-07-19 09:51:18 UTC / 2026-07-19 17:51:18 CST (北京时间)
 
 ## 排行榜
 
@@ -198,7 +198,7 @@
 |    188 |        169209 | mercury-2Inception AI · Proprietary                                     | 1347±11            |   3,119 | $0.25/$0.75  | 128K      |
 |    189 |        173207 | ling-flash-2.0Ant Group · MIT                                           | 1346±7             |   7,000 | N/A          | N/A       |
 |    190 |        171208 | qwen-plus-0125Alibaba · Proprietary                                     | 1346±8             |   5,819 | $0.40/$1.20  | 131.1K    |
-|    191 |        173208 | minimax-m2MiniMax · Apache 2.0                                          | 1346±8             |   6,861 | $0.26/$1.02  | 204.8K    |
+|    191 |        173208 | minimax-m2MiniMax · Apache 2.0                                          | 1346±8             |   6,861 | $0.30/$1.20  | 204.8K    |
 |    192 |        176201 | gpt-4o-2024-05-13OpenAI · Proprietary                                   | 1346±3             | 112,881 | $5/$15       | 128K      |
 |    193 |        173212 | nvidia-llama-3.3-nemotron-super-49b-v1.5Nvidia · Nvidia Open            | 1343±10            |   3,345 | $0.10/$0.40  | 131.1K    |
 |    194 |        175211 | glm-4-plus-0111Z.ai · Proprietary                                       | 1343±8             |   5,760 | N/A          | N/A       |
