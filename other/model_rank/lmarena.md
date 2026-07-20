@@ -2,7 +2,7 @@
 
 这是一个基于 Chatbot Arena (lmarena.ai) 数据的排行榜，通过自动化流程生成。
 
-> **数据更新时间**: 2026-07-19 09:51:18 UTC / 2026-07-19 17:51:18 CST (北京时间)
+> **数据更新时间**: 2026-07-20 10:51:36 UTC / 2026-07-20 18:51:36 CST (北京时间)
 
 ## 排行榜
 
@@ -136,7 +136,7 @@
 |    126 |        115137 | qwen3-next-80b-a3b-instructAlibaba · Apache 2.0                         | 1401±5             |  22,855 | $0.10/$1.10  | 262.1K    |
 |    127 |        113139 | longcat-flash-chatMeituan · MIT                                         | 1401±6             |  11,386 | $0.20/$0.80  | 131.1K    |
 |    128 |        121139 | Anthropicclaude-sonnet-4-20250514-thinking-32kAnthropic · Proprietary   | 1399±4             |  35,080 | $3/$15       | 1M        |
-|    129 |        118145 | qwen3-235b-a22b-thinking-2507Alibaba · Apache 2.0                       | 1399±7             |   8,988 | $0.15/$1.50  | 262.1K    |
+|    129 |        118145 | qwen3-235b-a22b-thinking-2507Alibaba · Apache 2.0                       | 1399±7             |   8,988 | $0.30/$3     | 262.1K    |
 |    130 |        121145 | deepseek-r1DeepSeek · MIT                                               | 1398±5             |  18,524 | $0.70/$2.50  | 163.8K    |
 |    131 |        121143 | qwen3.5-flashAlibaba · Proprietary                                      | 1397±4             |  54,595 | N/A          | N/A       |
 |    132 |        123146 | deepseek-v3-0324DeepSeek · MIT                                          | 1396±4             |  45,480 | $3/$4.50     | 32.8K     |
