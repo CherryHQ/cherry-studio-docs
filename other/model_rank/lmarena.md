@@ -2,7 +2,7 @@
 
 这是一个基于 Chatbot Arena (lmarena.ai) 数据的排行榜，通过自动化流程生成。
 
-> **数据更新时间**: 2026-07-22 10:24:38 UTC / 2026-07-22 18:24:38 CST (北京时间)
+> **数据更新时间**: 2026-07-23 10:22:21 UTC / 2026-07-23 18:22:21 CST (北京时间)
 
 ## 排行榜
 
@@ -83,7 +83,7 @@
 |     73 |          6287 | gpt-5.2-highOpenAI · Proprietary                                        | 1437±4             |  47,943 | $1.75/$14    | 400K      |
 |     74 |          5692 | glm-5v-turboZ.ai · Proprietary                                          | 1437±7             |   7,558 | $1.20/$4     | 202.8K    |
 |     75 |          6290 | longcat-flash-chat-2602-expMeituan · Proprietary                        | 1436±5             |  28,070 | N/A          | N/A       |
-|     76 |          6390 | deepseek-v4-flashDeepSeek · MIT                                         | 1436±4             |  45,050 | $0.09/$0.19  | 1M        |
+|     76 |          6390 | deepseek-v4-flashDeepSeek · MIT                                         | 1436±4             |  45,050 | $0.10/$0.20  | 1M        |
 |     77 |          6492 | qwen3-max-previewAlibaba · Proprietary                                  | 1435±4             |  27,702 | $0.78/$3.90  | 262.1K    |
 |     78 |          6790 | gpt-5.2OpenAI · Proprietary                                             | 1434±3             |  77,656 | $1.75/$14    | 400K      |
 |     79 |          6792 | gpt-5-highOpenAI · Proprietary                                          | 1434±5             |  31,898 | $1.25/$10    | 400K      |
@@ -135,7 +135,7 @@
 |    125 |        114137 | gpt-5.4-nano-highOpenAI · Proprietary                                   | 1404±4             |  56,761 | $0.20/$1.25  | 400K      |
 |    126 |        114139 | qwen3-235b-a22b-no-thinkingAlibaba · Apache 2.0                         | 1403±5             |  38,174 | $0.46/$1.82  | 131.1K    |
 |    127 |        117139 | o1-2024-12-17OpenAI · Proprietary                                       | 1402±4             |  27,807 | $15/$60      | 200K      |
-|    128 |        118139 | qwen3-next-80b-a3b-instructAlibaba · Apache 2.0                         | 1401±5             |  22,859 | $0.10/$1.10  | 262.1K    |
+|    128 |        118139 | qwen3-next-80b-a3b-instructAlibaba · Apache 2.0                         | 1401±5             |  22,859 | $0.15/$1.20  | 262.1K    |
 |    129 |        114141 | longcat-flash-chatMeituan · MIT                                         | 1401±6             |  11,387 | $0.20/$0.80  | 131.1K    |
 |    130 |        123141 | Anthropicclaude-sonnet-4-20250514-thinking-32kAnthropic · Proprietary   | 1399±4             |  35,078 | $3/$15       | 1M        |
 |    131 |        118147 | qwen3-235b-a22b-thinking-2507Alibaba · Apache 2.0                       | 1399±7             |   8,985 | $0.30/$3     | 262.1K    |
@@ -338,7 +338,7 @@
 |    328 |        316336 | phi-3-small-8k-instructMicrosoft · MIT                                  | 1170±6             |  17,766 | $0.15/$0.60  | N/A       |
 |    329 |        317336 | Metallama-2-70b-chatMeta · Llama 2 Community                            | 1170±5             |  38,492 | $0.70/$2.80  | 4.1K      |
 |    330 |        317339 | starling-lm-7b-alphaCC-BY-NC-4.0                                        | 1167±8             |  10,224 | N/A          | N/A       |
-|    331 |        318339 | Metallama-3.2-3b-instructMeta · Llama 3.2                               | 1166±8             |   7,936 | $0.05/$0.34  | 131.1K    |
+|    331 |        318339 | Metallama-3.2-3b-instructMeta · Llama 3.2                               | 1166±8             |   7,936 | $0.05/$0.33  | 131.1K    |
 |    332 |        316342 | nous-hermes-2-mixtral-8x7b-dpoApache-2.0                                | 1164±12            |   3,777 | $0.90/$0.90  | N/A       |
 |    333 |        329345 | granite-3.0-2b-instructIBM · Apache 2.0                                 | 1156±8             |   6,837 | N/A          | N/A       |
 |    334 |        325349 | qwq-32b-previewAlibaba · Apache 2.0                                     | 1155±11            |   3,231 | $0.50/$1     | 16.4K     |
