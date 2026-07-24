@@ -4,49 +4,37 @@ icon: grid
 
 # 启动台
 
-启动台（Launchpad）是 Cherry Studio 的**应用抽屉**，集中展示所有功能入口。顶部 Tab 栏的 `+` 按钮即指向启动台。
+启动台集中展示 Cherry Studio 的应用入口。点击顶部标签栏右侧的 `+` 即可打开；关闭所有标签页时，也会自动回到启动台。
 
-<figure><img src="../../.gitbook/assets/cherry-launchpad.png" alt=""><figcaption><p>启动台中的 9 个应用</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/cherry-launchpad-v2-cn.png" alt="Cherry Studio 简体中文启动台，显示对话、工作、绘画、翻译、小程序、知识库、文件、Code Switch 和笔记九个应用"><figcaption><p>简体中文界面的启动台</p></figcaption></figure>
 
-### 默认应用
+## 打开应用
 
 | 应用 | 说明 |
-|---|---|
-| [小程序](app.md) | 客户端内运行 AI 厂商网页版 |
-| [知识库](knowledge-base.md) | 文档/网址/笔记向量化检索 |
-| [绘画](drawing.md) | 文生图模型 |
-| [助手库](assistants.md) | 浏览/创建对话助手 |
-| [翻译](translation.md) | 双栏快速翻译 |
-| [文件](files.md) | 集中管理对话/绘画/知识库附件 |
-| Code | Code Tools / CLI（详见 [Code Tools 使用教程](../../advanced-basic/code-tools.md)） |
-| [OpenClaw](../../advanced-basic/openclaw.md) | 外部 Agent CLI 集成 |
-| [笔记](notes.md) | 内置 Markdown 编辑器 |
+| :--- | :--- |
+| [对话](chat.md) | 开始一次新的 AI 对话 |
+| [工作](../../advanced-basic/agent.md) | 创建并运行 Agent 任务 |
+| [绘画](drawing.md) | 使用图像模型生成图片 |
+| [翻译](translation.md) | 快速翻译文本 |
+| [小程序](app.md) | 在 Cherry Studio 中使用网页应用 |
+| [知识库](knowledge-base.md) | 导入资料并用于检索和问答 |
+| [文件](files.md) | 集中查看和管理文件 |
+| [Code Switch](../../advanced-basic/code-tools.md) | 管理和使用 AI 编程工具 |
+| [笔记](notes.md) | 编写和管理 Markdown 笔记 |
 
-### 小程序添加到启动台
+点击应用卡片后，当前启动台标签页会切换到对应应用。打开“对话”或“工作”时，会新建一个会话或任务。
 
-启动台底部可以看到你已经使用过的[小程序](app.md)（如 ChatGPT 网页、Claude 网页等）。常用小程序可以**添加到启动台**：
+## 调整应用
 
-* 对小程序图标右键，选择 **添加到启动台**
-* 当导航布局切到 **左侧栏** 时（见下方"切换默认导航布局"），已添加的小程序会显示在左侧栏底部，便于一键访问
+* 拖动应用卡片可以调整它们在启动台中的顺序。启动台顺序与侧边栏顺序互不影响。
+* 右键点击应用卡片，可以选择 **添加到侧边栏** 或 **从侧边栏移除**。“对话”是必需入口，不能从侧边栏移除。
 
-<figure><img src="../../.gitbook/assets/cherry-launchpad-add-app-menu.jpg" alt=""><figcaption><p>右键小程序，可添加到启动台或隐藏</p></figcaption></figure>
+## 管理小程序
 
-> 启动台中的 9 个核心应用（笔记、绘画、翻译等）是**固定**的，不支持自定义增删。
-
-### 切换默认导航布局
-
-如果你更习惯传统的左侧栏：打开 `设置 → 显示设置`，在 **导航栏设置** 节中把 **导航栏位置** 由 `顶部` 切到 `左侧`。
-
-<figure><img src="../../.gitbook/assets/cherry-display-navbar-position.png" alt=""><figcaption><p>设置 → 显示设置 → 导航栏设置 → 导航栏位置</p></figcaption></figure>
-
-切换后，顶部 Tab 栏会被替换为左侧的纵向图标栏，可以直接点击对应图标进入相应界面：
-
-<figure><img src="../../.gitbook/assets/cherry-home-left-sidebar.png" alt=""><figcaption><p>切换到左侧栏后的首页效果</p></figcaption></figure>
-
-两种布局功能完全相同，按个人习惯选择即可，**随时可以再切回**。
+添加到启动台的小程序会显示在页面下方的独立区域。你可以拖动小程序调整顺序，也可以右键选择 **从启动台移除**，或将它添加到侧边栏。更多操作请参阅[小程序](app.md)。
 
 ***
 
-### 💡 获取帮助与提交反馈
+## 💡 获取帮助与提交反馈
 
 如果您在配置或使用过程中遇到任何疑问、Bug 或有功能改进建议，请参考 [反馈与建议](../../question-contact/suggestions.md) 中提供的官方渠道。
