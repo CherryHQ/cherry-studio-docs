@@ -16,7 +16,7 @@
 
 <figure><img src="../../.gitbook/assets/image (160).png" alt=""><figcaption></figcaption></figure>
 
-5. 点击管理按钮，并添加模型
+5. 点击 **获取模型列表**，选择并添加需要的模型
 
 <figure><img src="../../.gitbook/assets/image (162).png" alt=""><figcaption></figcaption></figure>
 

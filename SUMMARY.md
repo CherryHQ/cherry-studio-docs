@@ -1,17 +1,22 @@
 # Table of contents
 
-## Cherry Studio
+## 开始使用
 
 * [项目简介](README.md)
+* [5 分钟快速开始](getting-started/quick-start.md)
 * [客户端下载](cherrystudio/download.md)
 * [安装教程](cherry-studio/installation/README.md)
   * [Windows](cherry-studio/installation/windows.md)
   * [macOS](cherry-studio/installation/macos.md)
+  * [Linux](cherry-studio/installation/linux.md)
+* [核心概念：助手 / Agent / Skill / MCP](advanced-basic/concepts-101.md)
+* [第一次对话](cherrystudio/preview/chat.md)
+
+## 常用功能
+
 * [功能介绍](cherrystudio/preview/README.md)
   * [启动台](cherrystudio/preview/launchpad.md)
-  * [对话界面](cherrystudio/preview/chat.md)
-  * [助手库](cherrystudio/preview/assistants.md)
-  * [智能体](advanced-basic/agent.md)
+  * [助手与助手库](cherrystudio/preview/assistants.md)
   * [绘画](cherrystudio/preview/drawing.md)
   * [翻译](cherrystudio/preview/translation.md)
   * [小程序](cherrystudio/preview/app.md)
@@ -21,16 +26,15 @@
   * [快捷助手](cherrystudio/preview/quick-assistant.md)
   * [划词助手](cherrystudio/preview/selection-assistant.md)
 
-## 基础教程 <a href="#pre-basic" id="pre-basic"></a>
+## 模型与基础设置 <a href="#pre-basic" id="pre-basic"></a>
 
 * [模型服务](pre-basic/providers/README.md)
   * [全部 Provider 快速参考](pre-basic/providers/quick-reference.md)
-  * [CherryAI (免费)](pre-basic/providers/cherryai/README.md)
+  * [CherryIN 模型服务](pre-basic/providers/cherryai/README.md)
     * [DeepSeek V3.2](pre-basic/providers/cherryai/free-deepseek.md)
     * [智谱 GLM-4.6V](pre-basic/providers/cherryai/free-glm46v.md)
     * [智谱 GLM-4.5-Air](pre-basic/providers/cherryai/free-glm45air.md)
     * [Qwen3-8B](pre-basic/providers/cherryai/free-qwen.md)
-  * [CherryIN](pre-basic/providers/cherryin-1.md)
   * [OpenAI](pre-basic/providers/openai.md)
   * [Anthropic](pre-basic/providers/anthropic.md)
   * [Azure OpenAI](pre-basic/providers/azure-openai.md)
@@ -56,7 +60,7 @@
   * [华为云](pre-basic/providers/huawei.md)
   * [无问芯穹](pre-basic/providers/wu-wen-xin-qiong.md)
   * [自定义服务商](pre-basic/providers/zi-ding-yi-fu-wu-shang.md)
-* [联网模式](pre-basic/websearch/README.md)
+* [网络搜索](pre-basic/websearch/README.md)
   * [免费联网模式](pre-basic/websearch/free-search.md)
   * [网络搜索黑名单配置](pre-basic/websearch/blacklist.md)
   * [火山引擎接入联网](pre-basic/websearch/volcengine.md)
@@ -65,10 +69,10 @@
 * [软件设置](pre-basic/settings/README.md)
   * [模型服务设置](pre-basic/settings/providers.md)
   * [默认模型设置](pre-basic/settings/default-models.md)
-  * [常规设置](pre-basic/settings/general.md)
+  * [系统与通知](pre-basic/settings/general.md)
   * [快捷键设置](pre-basic/settings/key-shortcut.md)
   * [语音功能](pre-basic/settings/yu-yin-gong-neng.md)
-  * [显示设置](pre-basic/settings/display.md)
+  * [外观设置](pre-basic/settings/display.md)
   * [文档处理](pre-basic/settings/doc-process.md)
 * [数据设置](pre-basic/data-settings/README.md)
   * [WebDAV 备份](pre-basic/data-settings/webdav.md)
@@ -76,7 +80,7 @@
   * [Notion 配置教程](pre-basic/data-settings/notion.md)
   * [Obsidian 配置教程](pre-basic/data-settings/obsidian.md)
   * [思源笔记配置教程](pre-basic/data-settings/siyuan.md)
-  * [助手订阅配置](pre-basic/data-settings/assistants-subscribe.md)
+  * [助手导入（V2）](pre-basic/data-settings/assistants-subscribe.md)
 * [个性化设置](pre-basic/personalization-settings/README.md)
   * [自定义 CSS](pre-basic/personalization-settings/custom-css.md)
   * [字体推荐](pre-basic/personalization-settings/font.md)
@@ -90,9 +94,9 @@
 * [嵌入模型](knowledge-base/emb-models-info.md)
 * [文档预处理](knowledge-base/document-preprocessing.md)
 
-## 进阶教程 <a href="#advanced-basic" id="advanced-basic"></a>
+## Agent 与自动化 <a href="#advanced-basic" id="advanced-basic"></a>
 
-* [概念入门：助手 / 智能体 / 技能 / MCP / 频道](advanced-basic/concepts-101.md)
+* [Cherry Agent（智能体）](advanced-basic/agent.md)
 * [MCP 使用教程](advanced-basic/mcp/README.md)
   * [MCP 环境安装](advanced-basic/mcp/install.md)
   * [配置和使用 MCP](advanced-basic/mcp/config.md)
@@ -101,12 +105,12 @@
   * [配置 Dify 知识库](advanced-basic/mcp/dify.md)
   * [常见问题](advanced-basic/mcp/faq.md)
 * [调用链使用教程](advanced-basic/trace.md)
-* [Code Tools 使用教程](advanced-basic/code-tools.md)
-* [API 服务器](advanced-basic/api-server.md)
+* [Code Switch 使用教程](advanced-basic/code-tools.md)
+* [API 网关](advanced-basic/api-server.md)
 * [技能](pre-basic/settings/skills.md)
 * [频道](advanced-basic/agent-channels.md)
 * [定时任务](advanced-basic/scheduled-tasks.md)
-* [全局记忆](advanced-basic/memory.md)
+* [记忆能力（V2）](advanced-basic/memory.md)
 * [OpenClaw](advanced-basic/openclaw.md)
 * [快捷短语](pre-basic/settings/quick-phrase.md)
 * [Agent 案例](advanced-basic/agent-an-li/README.md)

@@ -30,7 +30,7 @@ Cherry Studio 数据备份支持通过 WebDAV 的方式进行备份。你可以�
 
 <figure><img src="../../.gitbook/assets/image (43).png" alt=""><figcaption></figcaption></figure>
 
-6. 在 Cherry Studio 设置——数据设置中，填写 WebDAV 信息；
+6. 在 Cherry Studio **设置 → 数据 → WebDAV** 中填写服务器地址、账号和应用密码；
 
 <figure><img src="../../.gitbook/assets/image (48).png" alt=""><figcaption></figcaption></figure>
 

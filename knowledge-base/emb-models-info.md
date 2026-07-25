@@ -2,166 +2,81 @@
 icon: square-info
 ---
 
-# 嵌入模型参考信息
+# 嵌入模型选择指南
 
-{% hint style="info" %}
-为了防止出错，在本文档中部分模型的 max input 的值没有写成极限值，如：在官方给出的最大输入值为8k（未明确给出具体数值）时，本文档中给出的参考值为8191或8000等。（看不懂忽视，按照文档中的参考值填写即可）
+嵌入模型会把文本转换为向量，供知识库检索相似内容。它不负责生成最终回答，但会直接影响“能不能找到正确资料”。
+
+## 第一次使用怎么选
+
+| 你的资料 | 建议 |
+| --- | --- |
+| 以中文为主 | 选择明确支持中文或多语言的嵌入模型 |
+| 中英文混合 | 选择多语言嵌入模型 |
+| 主要是代码 | 选择标注支持代码检索的嵌入模型 |
+| 资料包含图片 | 只有确实需要以图搜图或图文检索时，才选择多模态嵌入模型 |
+
+如果没有特殊要求，优先选择 Provider 当前推荐的通用多语言嵌入模型。不要只根据名称中的参数量判断效果。
+
+## 在哪里添加
+
+1. 打开 **设置 → 模型服务**。
+2. 进入已经配置好的 Provider。
+3. 点击 **获取模型列表**。
+4. 添加标记为嵌入（Embedding）的模型。
+5. 新建知识库时，在嵌入模型下拉框中选择它。
+
+{% hint style="warning" %}
+知识库建立索引后，不要直接更换嵌入模型。不同模型生成的向量通常不兼容；确需更换时，请新建知识库并重新导入或重新索引资料。
 {% endhint %}
 
-### 火山-豆包
+## 需要关注的参数
 
-[官方模型信息参考地址](https://console.volcengine.com/ark/region:ark+cn-beijing/model?feature=\&projectName=default\&vendor=Bytedance\&view=LIST_VIEW)
+### 最大输入长度
 
-| 名称                      | max input |
-| ----------------------- | --------- |
-| Doubao-embedding        | 4095      |
-| Doubao-embedding-vision | 8191      |
-| Doubao-embedding-large  | 4095      |
+最大输入长度表示模型一次能处理多少 Token。Cherry Studio 会按分块设置切分文档，因此通常不需要追求最大的上下文。
 
-### 阿里
+如果需要手动填写：
 
-[官方模型信息参考地址](https://help.aliyun.com/zh/model-studio/user-guide/embedding?spm=a2c4g.11186623.0.i1)
+* 以服务商当前官方文档为准；
+* 不要超过模型声明的上限；
+* 官方只写 `8K` 等近似值时，可以填写略小的安全值，例如 `8000`。
 
-| 名称                      | max input |
-| ----------------------- | --------- |
-| text-embedding-v3       | 8192      |
-| text-embedding-v2       | 2048      |
-| text-embedding-v1       | 2048      |
-| text-embedding-async-v2 | 2048      |
-| text-embedding-async-v1 | 2048      |
+### 分块大小
 
-### OpenAI&#x20;
+分块过大可能超过嵌入模型限制，也容易让检索结果混入无关内容；分块过小则可能丢失上下文。第一次使用建议保留 Cherry Studio 默认值，只有检索效果明显不理想时再调整。
 
-[官方模型信息参考地址](https://platform.openai.com/docs/guides/embeddings#embedding-models)
+### 维度
 
-| 名称                     | max input |
-| ---------------------- | --------- |
-| text-embedding-3-small | 8191      |
-| text-embedding-3-large | 8191      |
-| text-embedding-ada-002 | 8191      |
+向量维度由模型决定。除非服务商要求或你明确了解兼容性，不要自行修改。
 
-### 百度
+## 云端与本地模型
 
-[官方模型信息参考地址](https://cloud.baidu.com/doc/WENXINWORKSHOP/s/om6070n97#%E8%AF%B7%E6%B1%82%E5%8F%82%E6%95%B0)
+### 云端嵌入模型
 
-| 名称           | max input |
-| ------------ | --------- |
-| Embedding-V1 | 384       |
-| tao-8k       | 8192      |
+优点是配置简单、通常无需本地算力；需要 API Key，可能产生费用，并会把待嵌入的文本发送给服务商。
 
-### 智谱
+### 本地嵌入模型
 
-[官方模型信息参考地址](https://bigmodel.cn/console/modelcenter/square)
+优点是资料可以留在本机；首次下载模型需要时间，也会占用内存、显存和磁盘空间。
 
-| 名称          | max input |
-| ----------- | --------- |
-| embedding-2 | 1024      |
-| embedding-3 | 2048      |
+选择前请根据资料敏感度、设备性能、成本和网络条件权衡。
 
-### 混元
+## 如何验证效果
 
-[官方模型信息参考地址](https://cloud.tencent.com/document/product/1729/102832)
+先用少量有明确答案的资料建立测试知识库，再提 3～5 个问题：
 
-| 名称                | max input |
-| ----------------- | --------- |
-| hunyuan-embedding | 1024      |
+1. 问题中的关键词与原文一致；
+2. 换一种说法询问同一事实；
+3. 提一个资料中不存在的问题。
 
-### 百川
+理想结果是前两类问题能检索到正确片段，第三类问题不会强行引用无关内容。确认效果后再批量导入资料。
 
-[官方模型信息参考地址](https://platform.baichuan-ai.com/docs/text-Embedding)
+## 常见问题
 
-| 名称                      | max input |
-| ----------------------- | --------- |
-| Baichuan-Text-Embedding | 512       |
-
-### together
-
-[官方模型信息参考地址](https://docs.together.ai/docs/serverless-models#embedding-models)
-
-| 名称                        | max input |
-| ------------------------- | --------- |
-| M2-BERT-80M-2K-Retrieval  | 2048      |
-| M2-BERT-80M-8K-Retrieval  | 8192      |
-| M2-BERT-80M-32K-Retrieval | 32768     |
-| UAE-Large-v1              | 512       |
-| BGE-Large-EN-v1.5         | 512       |
-| BGE-Base-EN-v1.5          | 512       |
-
-### Jina&#x20;
-
-[官方模型信息参考地址](https://jina.ai/models/jina-embedding-b-en-v1)
-
-| 名称                                 | max input |
-| ---------------------------------- | --------- |
-| jina-embedding-b-en-v1             | 512       |
-| jina-embeddings-v2-base-en         | 8191      |
-| jina-embeddings-v2-base-zh         | 8191      |
-| jina-embeddings-v2-base-de         | 8191      |
-| jina-embeddings-v2-base-code       | 8191      |
-| jina-embeddings-v2-base-es         | 8191      |
-| jina-colbert-v1-en                 | 8191      |
-| jina-reranker-v1-base-en           | 8191      |
-| jina-reranker-v1-turbo-en          | 8191      |
-| jina-reranker-v1-tiny-en           | 8191      |
-| jina-clip-v1                       | 8191      |
-| jina-reranker-v2-base-multilingual | 8191      |
-| reader-lm-1.5b                     | 256000    |
-| reader-lm-0.5b                     | 256000    |
-| jina-colbert-v2                    | 8191      |
-| jina-embeddings-v3                 | 8191      |
-
-### 硅基流动
-
-[官方模型信息参考地址](https://siliconflow.cn/zh-cn/models)
-
-| 名称                                    | max input |
-| ------------------------------------- | --------- |
-| BAAI/bge-m3                           | 8191      |
-| netease-youdao/bce-embedding-base\_v1 | 512       |
-| BAAI/bge-large-zh-v1.5                | 512       |
-| BAAI/bge-large-en-v1.5                | 512       |
-| Pro/BAAI/bge-m3                       | 8191      |
-
-### Gemini
-
-[官方模型信息参考地址](https://ai.google.dev/gemini-api/docs/models/gemini?hl=zh-cn#text-embedding)
-
-| 名称                 | max input |
-| ------------------ | --------- |
-| text-embedding-004 | 2048      |
-
-### nomic
-
-[官方模型信息参考地址](https://docs.nomic.ai/atlas/embeddings-and-retrieval/text-embedding)
-
-| 名称                    | max input |
-| --------------------- | --------- |
-| nomic-embed-text-v1   | 8192      |
-| nomic-embed-text-v1.5 | 8192      |
-| gte-multilingual-base | 8192      |
-
-### console
-
-[官方模型信息参考地址](https://console.upstage.ai/docs/capabilities/embeddings)
-
-| 名称                | max input |
-| ----------------- | --------- |
-| embedding-query   | 4000      |
-| embedding-passage | 4000      |
-
-### cohere
-
-[官方模型信息参考地址](https://docs.cohere.com/docs/models#embed)
-
-| 名称                            | max input |
-| ----------------------------- | --------- |
-| embed-english-v3.0            | 512       |
-| embed-english-light-v3.0      | 512       |
-| embed-multilingual-v3.0       | 512       |
-| embed-multilingual-light-v3.0 | 512       |
-| embed-english-v2.0            | 512       |
-| embed-english-light-v2.0      | 512       |
-| embed-multilingual-v2.0       | 256       |
+* **模型列表里没有嵌入模型**：当前 Provider 可能不提供，或需要手动添加模型 ID；请查看服务商官方模型列表。
+* **提示输入过长**：降低知识库分块大小和重叠长度，然后重新索引。
+* **中文检索效果差**：换用明确支持中文或多语言的嵌入模型。
+* **创建后模型无法更换**：这是为了避免新旧向量不兼容；请新建知识库。
 
 ***
 

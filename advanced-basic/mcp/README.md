@@ -54,8 +54,8 @@ MCP 由 Anthropic 公司发起并制定统一规范，全球开发者按此规�
 ## 哪里能找到 MCP？
 
 * **官方仓库**：[github.com/modelcontextprotocol/servers](https://github.com/modelcontextprotocol/servers)（最全）
-* **Cherry Studio 内置市场**：在 `设置 → MCP 服务器 → 发现 → 内置服务器` 中浏览与一键安装社区和官方插件。
-* **Cherry Studio 内置服务提供商**： `设置 → MCP 服务器 → 服务商` 中集成了部分服务商，可以在配置后获取其 MCP使用。
+* **Cherry Studio 内置市场**：在 `设置 → MCP → 发现 → 内置服务器` 中浏览与一键安装社区和官方插件。
+* **Cherry Studio 内置服务提供商**：`设置 → MCP → 服务商` 中集成了部分服务商，可以在配置后获取其 MCP。
 * **第三方分享**：Reddit / Discord / 个人博客都有很多。
 
 ## 常见疑问

@@ -1,68 +1,52 @@
 # 自动安装 MCP
 
-> 自动安装 MCP 需要将 Cherry Studio 升级至 v1.1.18 或更高版本。
+Cherry Studio V2 内置了实验性的 `@cherry/mcp-auto-install` 服务。它可以根据你的自然语言需求搜索并生成 MCP 服务器配置，适合快速试用；涉及生产环境或敏感数据时，仍建议手动核对配置。
 
-## 功能简介
+## 使用前准备
 
-除了手动安装外，Cherry Studio 还内置了 `@mcpmarket/mcp-auto-install` 工具，这是一个更便捷的 MCP 服务器安装方式。你只需要在支持 MCP 服务的大模型对话中输入相应的指令即可。
+开始前请确认：
+
+* 已配置一个支持工具调用的对话模型；
+* 当前网络可以访问 MCP 包的下载源；
+* 你理解目标 MCP 服务器需要的权限和环境变量。
 
 {% hint style="warning" %}
-**测试阶段提醒：**
-
-* `@mcpmarket/mcp-auto-install` 目前仍处于测试阶段
-* 效果依赖大模型的"智商"，有些会自动添加，有些还是**需要在 MCP 设置中再手动更改某些参数**
-* 目前搜索源是从 @modelcontextprotocol 中进行搜索，可以自行配置(下方说明)
+自动安装结果由模型生成，可能出现包名、启动参数或环境变量不完整的情况。保存前请核对项目主页，不要直接运行来源不明的 MCP 包。
 {% endhint %}
 
-## 使用说明
+## 操作步骤
 
-例如，你可以输入：
+1. 打开 **设置 → MCP**。
+2. 找到内置的 `@cherry/mcp-auto-install`，启用并保存。
+3. 回到对话页，在当前助手中启用该 MCP 服务器。
+4. 用一句话说明要安装的能力。例如：
 
 ```
-帮我安装一个 filesystem mcp server
+帮我安装一个只允许访问 D:\Documents 的 filesystem MCP server。
 ```
 
-<figure><img src="../../.gitbook/assets/mcp-auto-install_shot1.png" alt=""><figcaption><p>输入指令安装 MCP 服务器</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/mcp-auto-install_shot1.png" alt="在对话中要求自动安装 MCP 服务器"><figcaption><p>描述需要安装的 MCP 能力</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/mcp-auto-install_shot2.png" alt=""><figcaption><p>MCP 服务器配置界面</p></figcaption></figure>
+5. 查看模型给出的安装结果，进入 MCP 配置页核对命令、参数、环境变量和可访问目录。
+6. 启用新服务器，确认状态正常并成功加载工具后，再回到对话中测试。
 
-系统会自动识别你的需求，并通过 `@mcpmarket/mcp-auto-install` 完成安装。这个工具支持多种类型的 MCP 服务器，包括但不限于：
+<figure><img src="../../.gitbook/assets/mcp-auto-install_shot2.png" alt="自动生成的 MCP 服务器配置"><figcaption><p>保存前核对服务器配置</p></figcaption></figure>
 
-* filesystem（文件系统）
-* fetch（网络请求）
-* sqlite（数据库）
-* 等等...
+## 成功标志
 
-> MCP\_PACKAGE\_SCOPES 变量可以自定义 MCP 服务搜索源，默认值为：`@modelcontextprotocol`，可以自定义配置。
+* 新服务器出现在 MCP 列表中；
+* 服务器状态正常，并显示可用工具；
+* 新建话题后，模型能够按要求调用对应工具。
 
-## `@mcpmarket/mcp-auto-install` 库的介绍
+## 常见问题
 
-{% hint style="info" %}
-**默认配置参考：**
+### 安装后服务器无法启动
 
-```json
-// `axun-uUpaWEdMEMU8C61K` 为服务id,自定义即可
-"axun-uUpaWEdMEMU8C61K": {
-  "name": "mcp-auto-install",
-  "description": "Automatically install MCP services (Beta version)",
-  "isActive": false,
-  "registryUrl": "https://registry.npmmirror.com",
-  "command": "npx",
-  "args": [
-    "-y",
-    "@mcpmarket/mcp-auto-install",
-    "connect",
-    "--json"
-  ],
-  "env": {
-    "MCP_REGISTRY_PATH": "详情见https://www.npmjs.com/package/@mcpmarket/mcp-auto-install"
-  },
-  "disabledTools": []
-}
-```
+优先检查运行器是否存在、包下载是否被网络阻止，以及必填环境变量是否为空。不要反复让模型生成新配置；先对照目标 MCP 项目的官方安装说明逐项核对。
 
-`@mcpmarket/mcp-auto-install` 是一个开源的 npm 包，你可以在 [npm 官方仓库](https://www.npmjs.com/package/@mcpmarket/mcp-auto-install) 查看其详细信息和使用文档。`@mcpmarket` 为 Cherry Studi 官方 MCP 服务集合。
-{% endhint %}
+### 模型没有执行安装
+
+换用支持工具调用的模型，并在当前助手中确认自动安装服务器已经启用。也可以把需求拆小，只说明一种能力、一个目标目录和一个权限范围。
 
 ***
 

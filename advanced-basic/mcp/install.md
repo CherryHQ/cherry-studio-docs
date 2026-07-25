@@ -12,7 +12,7 @@
 Cherry Studio 用的是 **自己内置的** [uv](https://github.com/astral-sh/uv) 和 [bun](https://github.com/oven-sh/bun)，不会复用你电脑里可能已经装过的版本。所以即使你系统里已经有 uv / bun，也仍然需要按下面步骤再装一次给 Cherry Studio 用。
 {% endhint %}
 
-在 `设置 - MCP 服务器` 中，点击 `安装` 按钮，即可自动下载并安装。因为是直接从 GitHub 上下载，速度可能会比较慢，且有较大可能失败。安装成功与否，以下文提到的文件夹内是否有文件为准。
+在 `设置 → MCP` 中点击 `安装` 按钮，即可自动下载并安装。安装过程需要访问 GitHub；若下载失败，请先检查网络连接，再按页面提示重试。最终状态以 MCP 页面显示为准。
 
 <figure><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 

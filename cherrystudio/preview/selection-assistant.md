@@ -23,7 +23,7 @@ icon: highlighter
 
 打开 `设置 → 划词助手`：
 
-<figure><img src="../../.gitbook/assets/cherry-selection-assistant.png" alt=""><figcaption><p>划词助手设置面板</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/cherry-selection-assistant-settings-v2.png" alt="V2 划词助手设置"><figcaption><p>V2 划词助手设置：触发方式、窗口行为、功能排序和应用筛选集中在同一页。</p></figcaption></figure>
 
 1. 打开 **启用** 开关
 2. **macOS** 用户首次启用会弹窗请求 **辅助功能权限**：
@@ -36,7 +36,7 @@ icon: highlighter
    * **Ctrl 键**（仅 Windows）：选中文字后**再长按 Ctrl 键**才弹（避免误触）
    * **快捷键**：选中文字后按快捷键再弹，快捷键在 `设置 → 快捷键` 中改
 
-<figure><img src="../../.gitbook/assets/cherry-selection-toolbar-settings.png" alt=""><figcaption><p>启用后的设置面板：取词方式 / 紧凑模式 / 跟随工具栏…</p></figcaption></figure>
+V2 启用后会在同一页面展开取词方式、窗口行为、透明度、功能列表和应用筛选。
 
 ### 内置操作
 
@@ -51,8 +51,6 @@ icon: highlighter
 | **复制** | ✅ | 复制选中文字 |
 | **优化** | 待启用 | 让 AI 改写得更通顺 / 更专业，需在设置中拖入启用区 |
 | **引用** | 待启用 | 把选中文字以引用形式发送到当前对话，需在设置中拖入启用区 |
-
-<figure><img src="../../.gitbook/assets/cherry-selection-actions-list.png" alt=""><figcaption><p>设置面板的「功能」区：上方为已启用，下方暂存区拖到上方即启用</p></figcaption></figure>
 
 ### 自定义操作
 
@@ -88,7 +86,7 @@ icon: highlighter
 
 ### 使用的模型
 
-划词助手默认使用 [全局默认对话模型](../../pre-basic/settings/default-models.md)，也可针对每个操作单独指定模型。
+划词助手默认使用 [默认助手模型](../../pre-basic/settings/default-models.md)，也可针对每个自定义操作单独指定模型。
 
 ### 提示与技巧
 

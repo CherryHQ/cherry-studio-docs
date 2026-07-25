@@ -16,25 +16,19 @@ icon: route
 
 Trace 默认隐藏，需要先开启开发者模式：
 
-1. 打开 `设置 → 常规设置`
+1. 打开 `设置 → 系统`
 2. 找到 **开发者模式**
 3. 开启 **启用开发者模式**
 
-<figure><img src="../.gitbook/assets/cherry-trace-enable-developer-mode.jpg" alt=""><figcaption><p>在常规设置中开启开发者模式</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/cherry-system-settings-v2.png" alt="V2 系统设置中的开发者模式"><figcaption><p>在 V2 系统设置中开启开发者模式</p></figcaption></figure>
 
 {% hint style="info" %}
 开启后，之前已经产生的会话不会补生成 Trace；只有后续新的问答才会记录调用链。
 {% endhint %}
 
-Trace 数据存储在本地应用数据目录中。通常不需要手动处理，如需彻底清理，可进入 `设置 → 数据设置 → 数据目录`，使用 **清除缓存**，或打开数据目录后删除 trace 相关缓存。
+Trace 数据存储在当前应用数据目录中。通常不需要手动处理；如需清理，可进入 `设置 → 数据 → 数据目录` 使用 **清除缓存**。不要根据固定系统路径直接删除文件。
 
-常见数据目录：
-
-* **macOS**：`~/Library/Application Support/CherryStudio`
-* **Windows**：`%APPDATA%\CherryStudio`
-* **Linux**：`~/.config/CherryStudio`
-
-<figure><img src="../.gitbook/assets/cherry-trace-data-settings.jpg" alt=""><figcaption><p>数据目录与缓存清理入口</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/cherry-data-settings-v2.png" alt="V2 数据目录与缓存清理入口"><figcaption><p>数据目录与缓存清理入口；本机路径已遮罩。</p></figcaption></figure>
 
 ## 场景介绍
 

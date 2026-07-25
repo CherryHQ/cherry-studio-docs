@@ -22,9 +22,9 @@ DeepSeek 是国内主流大模型厂商之一，以 V3 / R1 系列在编程与�
 | `deepseek-chat`| 通用对话，性价比极高 |
 | `deepseek-reasoner`| 数学、代码、复杂推理。注意输出会带 `<thinking>` 思考块 |
 
-## 与全局记忆的搭配
+## 与知识库和记忆能力搭配
 
-DeepSeek 自家没有嵌入模型。如果你要用 [全局记忆](../../advanced-basic/memory.md) 或知识库：
+DeepSeek 自家没有嵌入模型。如果你要建立知识库或使用需要向量化的 MCP 记忆方案：
 
 * 嵌入模型推荐用其他 Provider 的（如 [硅基流动](siliconcloud.md) 的 `bge-m3` 或 [OpenAI](openai.md) 的 `text-embedding-3-small`）
 * 对话模型仍可用 DeepSeek

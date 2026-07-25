@@ -301,8 +301,9 @@ SearXNG 本地或在服务器部署成功后，接下来是 CherryStudio 的相�
 
 <figure><img src="../../.gitbook/assets/searxng_config_img_21.png" alt=""><figcaption></figcaption></figure>
 
-地址既可以填写本地： [http://localhost](http://localhost) : 端口号\
-也可以填写 docker 地址：[http://host.docker.internal](http://host.docker.internal) : 端口号
+本机部署可填写 `http://localhost:<端口号>`。
+
+Docker 容器访问宿主机时，可填写 `http://host.docker.internal:<端口号>`。
 
 如果用户遵循前面的示例在服务器上部署并正确配置了反向代理，已经开启了 json 返回类型。输入地址后进行验证，由于已给反向代理配置了 HTTP 基本认证，此时验证则应返回 401 错误码：
 

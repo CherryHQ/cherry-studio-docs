@@ -8,7 +8,7 @@
 
 <figure><img src="../../.gitbook/assets/image (8) (1) (1).png" alt=""><figcaption><p>MCP 服务器添加界面</p></figcaption></figure>
 
-1. 打开 `设置 → MCP 服务器`
+1. 打开 `设置 → MCP`
 2. 点击 `+ 添加服务器`
 3. 在弹出的表单中填写以下信息：
 
@@ -27,7 +27,7 @@
 * 🟡 黄色 = 下载或启动中
 * 🔴 红色 = 失败，可点击查看错误日志
 
-若长时间显示红色，请参考 [常见问题](chang-jian-wen-ti.md) 或重启 Cherry Studio 后重试。
+若长时间显示红色，请参考 [常见问题](faq.md) 或重启 Cherry Studio 后重试。
 {% endhint %}
 
 ## 这些字段从哪儿找？

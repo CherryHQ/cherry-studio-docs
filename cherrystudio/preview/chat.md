@@ -8,6 +8,23 @@ icon: message
 
 > 推荐先阅读 [概念入门](../../advanced-basic/concepts-101.md) 了解助手 / 智能体 / 技能等相关概念。
 
+## 第一次对话
+
+开始前，请先在 `设置 → 模型服务` 中启用至少一个对话模型。还没有模型时，先完成[5 分钟快速开始](../../getting-started/quick-start.md)。
+
+1. 点击顶部的 **对话**；
+2. 选择系统默认助手；
+3. 在输入区的模型选择器中选择一个已启用的对话模型；
+4. 输入问题并发送。
+
+可以用下面这句话测试：
+
+> 请用三句话说明你能帮助我完成什么。
+
+**成功标志**：消息区开始显示模型回复，并且没有连接、鉴权或余额错误。发送失败时展开错误详情，依次检查模型是否启用、API Key、服务商余额和网络连接。
+
+完成第一次对话后，再按需学习附件、知识库、网络搜索、MCP 和助手参数，不需要在第一次使用时全部配置。
+
 ## 助手与话题的关系
 
 简单类比：
@@ -22,7 +39,7 @@ icon: message
 助手为 AI 设定固定角色 —— 由系统提示词 + 模型参数预设组成。
 
 * **系统默认助手**：通用助手，未设特殊提示词，可直接使用
-* **更专项的助手**：在 [助手广场](assistants.md) 浏览现成预设，或自行创建
+* **更专项的助手**：在对话页内打开 [助手库](assistants.md) 浏览现成预设，或自行创建
 
 ### 话题
 
@@ -33,75 +50,55 @@ icon: message
 * 同一个"代码助手"下分别开"项目 A 重构"、"项目 B bug"两个话题，独立管理
 * 同一个"翻译助手"下开多个话题，分别处理不同文章
 
-<figure><img src="../../.gitbook/assets/image (4) (1) (1).png" alt=""><figcaption></figcaption></figure>
-
-<figure><img src="../../.gitbook/assets/image (5) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/cherry-assistants-v2.png" alt="V2 助手与话题列表"><figcaption><p>V2 对话页：左侧按助手组织话题，右侧进行对话</p></figcaption></figure>
 
 ## 对话框内按钮
 
-<figure><img src="../../.gitbook/assets/cherry-chat-input-toolbar-v199.png" alt=""><figcaption><p>Cherry Studio 对话框工具栏（v1.9.9 实拍）</p></figcaption></figure>
+V2 的输入区把操作分成两类：
 
-Cherry Studio 的对话框工具栏中的工具具体顺序可由你长按拖拽自行调整。
+* **独立控件**：新建话题、模型选择、展开 / 收起输入框和发送按钮。这些控件不参与工具栏固定与排序
+* **可自定义工具**：附件、快捷短语、思考、网络搜索、知识库、生成图片、MCP，以及在对应会话中出现的斜杠命令或权限操作
 
-### 左侧工具
+点击输入框工具区的 `+`，选择 **自定义工具栏**，可以：
 
-| 图标 | 名称 | 作用 |
-|---|---|---|
-| <img src="../../.gitbook/assets/chat-tool-bar/new.png" alt=""> | **新话题** | 在当前助手内创建一个新话题 |
-| <img src="../../.gitbook/assets/chat-tool-bar/upload.png" alt=""> | **上传附件** | 上传图片或文档；图片需模型支持视觉能力；文档会被自动解析为上下文 |
-| <img src="../../.gitbook/assets/chat-tool-bar/search.png" alt=""> | **网络搜索** | 把网页搜索结果作为上下文返回给模型，需先在 [联网模式](../../pre-basic/websearch/) 中配置 |
-| <img src="../../.gitbook/assets/chat-tool-bar/knowledge-base.png" alt=""> | **知识库** | 把一个已建好的 [知识库](../../knowledge-base/knowledge-base.md) 作为上下文 |
-| <img src="../../.gitbook/assets/chat-tool-bar/mcp.png" alt=""> | **MCP 服务器** | 启用 [MCP](../../advanced-basic/mcp/) 工具供模型调用 |
-| <img src="../../.gitbook/assets/chat-tool-bar/@.png" alt=""> | **提及模型** | 临时切换接下来的回复模型，保留上下文 |
-| <img src="../../.gitbook/assets/chat-tool-bar/quick-phrases.png" alt=""> | **快捷短语** | 调用预设模板，详见 [快捷短语](../../pre-basic/settings/quick-phrase.md) |
-| <img src="../../.gitbook/assets/chat-tool-bar/clear-messages.png" alt=""> | **清空消息** | **删除**该话题下所有消息（不可恢复） |
-| <img src="../../.gitbook/assets/chat-tool-bar/expand.png" alt=""> | **展开 / 收起** | 让输入框变得更大或恢复，便于输入长文 |
-| <img src="../../.gitbook/assets/chat-tool-bar/clear-context.png" alt=""> | **清除上下文** | **保留消息**但让模型"忘掉"之前的对话（截断 token 上下文） |
+* 用开关固定或取消固定可自定义工具
+* 拖动调整已固定工具的顺序
+* 点击 **恢复默认** 回到默认布局
+
+已固定的动作不会在 `+` 面板中重复出现；取消固定后仍可从 `+` 面板找到。聊天与智能体各自保存一套工具栏配置。
+
+### 常用工具
+
+| 名称 | 作用 |
+|---|---|
+| **上传附件** | 上传图片或文档；图片需模型支持视觉能力，文档会被解析为上下文 |
+| **快捷短语** | 调用预设模板，详见 [快捷短语](../../pre-basic/settings/quick-phrase.md) |
+| **网络搜索** | 把网页搜索结果作为上下文，需先在 [联网模式](../../pre-basic/websearch/) 中配置 |
+| **知识库** | 将已建立的 [知识库](../../knowledge-base/knowledge-base.md) 用作上下文 |
+| **MCP** | 启用 [MCP](../../advanced-basic/mcp/) 工具供模型调用 |
+| **思考** | 所选模型支持推理时可用 |
+| **生成图片** | 所选对话模型支持生图时可用；专门的生图模型请使用 [绘画](drawing.md) |
+| **斜杠命令** | 仅在支持的 Agent 会话中出现；内置命令包括 `/clear`、`/compact`、`/context`、`/usage` 和 `/exit` |
+
+模型选择器是输入区中的独立控件，也可使用 `chat.model.select` 对应的快捷键打开。V2 不提供通过 `@` 唤起模型选择器的面板；`/` 面板按当前会话提供可用命令。
 
 {% hint style="warning" %}
-**"清空消息" vs "清除上下文"** 是两件不同的事：
-* **清空消息**：物理删除全部消息内容，不可恢复
-* **清除上下文**：消息仍在，只是让模型从此刻开始重新认识你，它不再会记得此前的对话
+V2 已从输入框工具栏移除 **清空当前话题** 与 **清除上下文**。需要干净上下文时，请新建话题；需要管理或删除话题时，请使用话题级菜单。
 {% endhint %}
 
-### 右下角工具
+### Token 信息
 
-| 图标 | 名称 | 作用 |
-|---|---|---|
-| <img src="../../.gitbook/assets/chat-tool-bar/translate.png" alt=""> | **翻译** | 将输入框内容直接翻译为目标语言（在 `设置 → 默认模型` 中配置默认翻译模型） |
-| <img src="../../.gitbook/assets/chat-tool-bar/send.png" alt=""> | **发送** | 发送消息（默认 Enter；可在 [快捷键](../../pre-basic/settings/key-shortcut.md) 中改）|
-
-### 仅在符合条件时显示的工具
-
-下列工具不在默认工具栏中，**仅当所选模型 / 助手支持时才出现**：
-
-| 图标 | 名称 | 作用 |
-|---|---|---|
-| <img src="../../.gitbook/assets/chat-tool-bar/image.png" alt=""> | **生成图片** | 所选对话模型支持生图时出现。专门的生图模型请去 [绘画](drawing.md) |
-| <img src="../../.gitbook/assets/chat-tool-bar/think.png" alt=""> | **思考模式** | 所选模型支持深度推理时出现（如 GPT-5 系列、Claude Opus4.8、Qwen-3.7-plus等）|
-| <img src="../../.gitbook/assets/chat-tool-bar/url-context.png" alt=""> | **网页上下文** | 所选模型支持原生 URL 输入时出现 |
-| <img src="../../.gitbook/assets/chat-tool-bar/slash.png" alt=""> | **斜杠命令** | 在 Cherry Agent 会话中出现，提供 `/clear`、`/exit` 等内置命令|
-
-### 通过键盘触发的能力
-
-除了点击按钮，还可以直接在输入框中按特定键唤起对应面板：
-
-* **`@`**：唤起模型选择器（与上面"提及模型"按钮等价）
-* **`/`**：唤起斜杠命令面板，可快速插入快捷短语、翻译、工具调用等
-
-### 对话框右下角：Token 计数
-
-<img src="../../.gitbook/assets/chat-tool-bar/estimate-tokens.png" alt="">
-
-输入框右下角还显示 **预估 Token 数**，包含四个数值：`当前上下文数` / `最大上下文数`（∞ 表示无限）/ `当前上下文 Token 数` / `预估 Token 数`。
+`显示预估 Token 数` 会影响消息区域中的 Token 估算信息。V2 当前不会在输入框右下角显示“当前上下文数 / 最大上下文数 / 当前上下文 Token 数 / 预估 Token 数”四项计数。
 
 {% hint style="info" %}
-此处仅为预估值，不同模型的 Tokenizer 不同，实际计费以模型提供商为准。
+Token 信息仅为估算，不同模型的 Tokenizer 不同，实际计费以模型服务商为准。
 {% endhint %}
 
 ## 对话设置
 
-<figure><img src="../../.gitbook/assets/image (7) (1) (1).png" alt=""><figcaption></figcaption></figure>
+V2 将输入、消息和代码块的显示选项集中在 `设置 → 外观`。
+
+<figure><img src="../../.gitbook/assets/cherry-chat-appearance-settings-v2.png" alt="V2 外观设置中的对话选项"><figcaption><p>设置 → 外观：输入、消息和代码块设置</p></figcaption></figure>
 
 ### 模型设置
 
@@ -147,11 +144,11 @@ Cherry Studio 的对话框工具栏中的工具具体顺序可由你长按拖拽
 
 #### <mark style="color:blue;">**`代码块可折叠`**</mark>：
 
-打开后，当代码片段中代码较长时，将自动折叠代码块。、
+打开后，当代码片段中的代码较长时，将自动折叠代码块。
 
 #### <mark style="color:blue;">**`代码块可换行`**</mark>：
 
-打开后，当代码片段中但行代码较长时（超出窗口），将自动换行。
+打开后，当代码片段中的单行代码超出窗口时，将自动换行。
 
 #### <mark style="color:blue;">**`思考内容自动折叠`**</mark>：
 
@@ -159,16 +156,11 @@ Cherry Studio 的对话框工具栏中的工具具体顺序可由你长按拖拽
 
 #### <mark style="color:blue;">**`消息样式`**</mark>：
 
-可切对话界面换为气泡样式或列表样式。
+可将对话界面切换为气泡样式或列表样式。
 
 #### <mark style="color:blue;">**`代码风格`**</mark>：
 
 可切换代码片段的显示风格。
-
-#### <mark style="color:blue;">**`数学公式引擎`**</mark>：
-
-* KaTeX 渲染速度更快，因为它是专门为性能优化设计的；
-* MathJax 渲染较慢，但功能更全面，支持更多的数学符号和命令。
 
 #### <mark style="color:blue;">**`消息字体大小`**</mark>：
 
@@ -178,7 +170,7 @@ Cherry Studio 的对话框工具栏中的工具具体顺序可由你长按拖拽
 
 #### <mark style="color:blue;">**`显示预估 Token 数`**</mark>：
 
-在输入框显示输入文本预估消耗的Token数（非实际上下文消耗的Token，仅供参考）。
+在消息区域显示估算的 Token 信息，便于了解上下文消耗。该数值不是服务商的最终计费结果。
 
 #### <mark style="color:blue;">**`长文本粘贴为文件`**</mark>：
 
@@ -198,18 +190,6 @@ Cherry Studio 的对话框工具栏中的工具具体顺序可由你长按拖拽
 {% endtab %}
 {% endtabs %}
 
-#### <mark style="color:blue;">**`快速敲击3次空格翻译`**</mark>：
-
-在对话界面输入框输入消息后，连敲三次空格可翻译输入的内容为英文。
-
-{% hint style="warning" %}
-注意：该操作会覆盖原文。
-{% endhint %}
-
-#### <mark style="color:blue;">**`目标语言`**</mark>：
-
-设置输入框翻译按钮以及快速敲击3次空格翻译的目标语言。
-
 ## 助手设置
 
 在助手界面选择需要设置的<mark style="background-color:yellow;">助手名称</mark>→在<mark style="background-color:yellow;">右键菜单中</mark>选对应设置
@@ -220,7 +200,7 @@ Cherry Studio 的对话框工具栏中的工具具体顺序可由你长按拖拽
 助手设置作用于该助手下的所有话题。
 {% endhint %}
 
-<figure><img src="../../.gitbook/assets/image (6) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/cherry-assistant-edit-v2.png" alt="V2 助手编辑面板"><figcaption><p>V2 助手编辑面板</p></figcaption></figure>
 
 #### 提示词设置
 
@@ -236,25 +216,15 @@ Cherry Studio 的对话框工具栏中的工具具体顺序可由你长按拖拽
 
 #### <mark style="color:blue;">**`默认模型`**</mark>：
 
-可以为该助手固定一个默认模型，从智能体页面添加时或复制助手时初始模型为该模型。不设置该项初始模型则为全局初始模型(即 [默认助手模型](../../pre-basic/settings/default-models.md#mo-ren-zhu-shou-mo-xing) )。
+可以为该助手固定一个默认模型。未单独指定时，使用 [全局默认对话模型](../../pre-basic/settings/default-models.md#mo-ren-zhu-shou-mo-xing)。
 
 {% hint style="info" %}
 助手的默认模型有两种，一为 [全局默认对话模型](../../pre-basic/settings/default-models.md#mo-ren-zhu-shou-mo-xing) ，另一为助手默认模型；助手的默认模型优先级高于全局默认对话模型。当不设置助手默认模型时，助手默认模型=全局默认对话模型。
 {% endhint %}
 
-#### <mark style="color:blue;">**`自动重置模型`**</mark>：
-
-打开时 - 当在该话题下使用过程中切换其他模型使用时，再次新建话题会将新话题的重置为助手的默认模型。当该项关闭时新建话题的模型会跟随上一话题所使用的模型。
-
-> 如助手的默认模型为gpt-3.5-turbo，我在该助手下创建话题1，在话题1的对话过程中切换了gpt-4o使用，此时：
->
-> 如果开启了自动重置：新建话题2时，话题2默认选择的模型为gpt-3.5-turbo;
->
-> 如果未开启自动重置：新建话题2时，话题2默认选择的模型为gpt-4o。
-
 #### <mark style="color:blue;">**`温度 (Temperature)`**</mark> ：
 
-温度参数控制模型生成文本的随机性和创造性程度（默认值为0.7）。具体表现为：
+温度参数控制模型生成文本的随机性和创造性程度。V2 默认不覆盖模型自身的温度；只有启用该参数后，填写的数值才会随请求发送。常见表现为：
 
 * 低温度值(0-0.3)：
   * 输出更确定、更专注
@@ -271,7 +241,7 @@ Cherry Studio 的对话框工具栏中的工具具体顺序可由你长按拖拽
 
 #### <mark style="color:blue;">**`Top P (核采样)`**</mark>：
 
-默认值为 1，值越小，AI 生成的内容越单调，也越容易理解；值越大，AI 回复的词汇范围越大，越多样化。
+V2 默认不覆盖模型自身的 Top P；只有启用该参数后，填写的数值才会随请求发送。界面保存值通常为 1，值越小，AI 生成的内容越集中；值越大，可选词汇范围越广。
 
 核采样通过控制词汇选择的概率阈值来影响输出：
 
@@ -294,21 +264,11 @@ Cherry Studio 的对话框工具栏中的工具具体顺序可由你长按拖拽
 - 以上内容仅供参考和了解概念，所给参数范围不一定适合所有模型，具体可参考模型相关文档给出的参数建议。
 {% endhint %}
 
-#### <mark style="color:blue;">**`上下文数量 (Context Window)`**</mark>
-
-要保留在上下文中的消息数量，数值越大，上下文越长，消耗的 token 越多：
-
-* 5-10：适合普通对话
-* \>10：需要更长记忆的复杂任务（例如：按照写作提纲分步生成长文的任务，需要确保生成的上下文逻辑连贯）
-* > 注意：消息数越多，token 消耗越大
-
 #### <mark style="color:blue;">**`开启消息长度限制 (MaxToken)`**</mark>
 
-单次回答最大 [Token](https://docs.cherry-ai.com/question-contact/knowledge#shen-me-shi-tokens) 数，在大语言模型中，max token（最大令牌数）是一个关键参数，它直接影响模型生成回答的质量和长度。
+用于限制单次回答最多生成多少 [Token](../../question-contact/knowledge.md#shen-me-shi-tokens)。该参数会直接影响回复的最大长度，也可能影响费用与响应时间。
 
-> 如:在CherryStudio当中填写好key后测试模型是否连通时，只需要知道模型是否有正确返回消息而不需特定内容,这种情况下设置MaxToken为1即可。
-
-多数模型的MaxToken上限为32k Tokens，当然也有64k，甚至更多的，具体需要到对应介绍页面查看。
+不同模型和服务商支持的上限差异很大，客户端中的可填写值也不代表服务端一定接受。请以当前模型服务商的官方文档为准。
 
 具体设置多少取决于自己的需要，当然也可以参考以下建议。
 
@@ -329,7 +289,7 @@ Cherry Studio 的对话框工具栏中的工具具体顺序可由你长按拖拽
 
 流式输出是一种数据处理方式，它允许数据以连续的流形式进行传输和处理，而不是一次性发送所有数据。这种方式使得数据可以在生成后立即被处理和输出，极大地提高了实时性和效率。
 
-在 CherryStudio 客户端等类似环境下简单来说就是打字机效果。
+在 Cherry Studio 客户端中，可以把它简单理解为打字机效果。
 
 关闭后(非流)：模型生成完信息后整段一次性输出（想象一下微信收到消息的感觉）；
 
@@ -339,13 +299,17 @@ Cherry Studio 的对话框工具栏中的工具具体顺序可由你长按拖拽
 如果某些特殊模型不支持流式输出需要将该开关关闭，比如**刚开始**只支持非流的o1-mini等。
 {% endhint %}
 
+#### <mark style="color:blue;">**`最大工具调用次数`**</mark>
+
+限制模型在一次回复中连续调用工具的次数。启用 MCP 或其他工具时，可用它避免模型在异常情况下反复调用；设置过低也可能让复杂任务提前停止。
+
 #### <mark style="color:blue;">**`自定义参数`**</mark>
 
-在请求体（body）中加入额外请求参数，如 `presence_penalty` 等字段，一般人一般情况下用不到。
+在请求体（body）中加入额外请求参数，如 `presence_penalty` 等字段。大多数用户不需要修改。
 
 > 上述top-p、maxtokens、stream等参数就是这些参数之一。
 
-填法：参数名称—参数类型（文本、数字等）—值，参考文档：[点击前往](https://openai.apifox.cn/doc-3222739)
+填法：参数名称—参数类型（文本、数字等）—值。可用参数以对应服务商的官方 API 文档为准，例如 [OpenAI Chat Completions API](https://platform.openai.com/docs/api-reference/chat/create)。
 
 {% hint style="info" %}
 各个模型提供商都或多或少有自己独有的参数，需要到提供商的文档中寻找使用方法

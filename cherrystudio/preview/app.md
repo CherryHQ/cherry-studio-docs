@@ -12,13 +12,11 @@ icon: grid-2
 2. 点击 `小程序` 应用图标
 3. 在小程序网格中选择需要打开的服务
 
-<figure><img src="../../.gitbook/assets/cherry-apps-grid.png" alt=""><figcaption><p>小程序网格，内置 40+ 家服务；末尾的 `自定义` 可添加任意网页</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/cherry-mini-apps-v2.png" alt="Cherry Studio V2 小程序网格"><figcaption><p>V2 小程序网格；顶部“自定义”可添加网页，搜索框用于快速筛选。</p></figcaption></figure>
 
-页面顶部有 **搜索框** 与 **设置（⚙️）** 入口，列表末尾 `自定义` 用于添加任意网页。
+页面顶部有 **自定义**、**小程序显示设置** 和搜索框。内置站点会随版本更新，以应用内列表为准。
 
 ### 设置
-
-<figure><img src="../../.gitbook/assets/cherry-apps-settings.png" alt=""><figcaption><p>小程序设置</p></figcaption></figure>
 
 Cherry Studio 小程序的设置支持以下操作：
 
@@ -31,7 +29,7 @@ Cherry Studio 小程序的设置支持以下操作：
 
 Cherry Studio 的小程序支持以下操作：
 
-* **添加到启动台**：把常用的小程序加入启动台，方便从 `+` 入口快速打开。可在 `设置 → 小程序` 中管理，或对小程序图标右键选择 **添加到启动台**
+* **添加到顶部应用栏**：打开小程序后会生成应用标签，便于在多个网页和原生功能之间切换
 * **保活（Keep Alive）**：让小程序窗口在切走时不立即销毁，再次进入无需重新登录或重新加载
 * **添加自定义网页**：点击列表末尾的 `自定义` 图标，填写名称、URL、图标即可加入网格
 * **删除 / 编辑**：对每个小程序图标右键即可
@@ -39,7 +37,7 @@ Cherry Studio 的小程序支持以下操作：
 ### 提示与技巧
 
 * 小程序使用各服务的**网页版**，登录态、Cookie、设置均保存在本地，与系统浏览器隔离
-* 若某个小程序加载失败，可右键 → 重载，或检查代理设置（参考 [常规设置](../../pre-basic/settings/general.md)）
+* 若某个小程序加载失败，可右键 → 重载，或检查代理设置（参考 [系统设置](../../pre-basic/settings/general.md)）
 * 当前小程序与对话面板暂未互通，若需让 AI 读取小程序中的内容，需要手动复制或截图
 
 如遇问题，请在 [反馈与建议](../../question-contact/suggestions.md) 中提交反馈。
