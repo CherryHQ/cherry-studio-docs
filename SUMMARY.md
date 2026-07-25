@@ -83,7 +83,7 @@
   * [助手导入（V2）](pre-basic/data-settings/assistants-subscribe.md)
 * [个性化设置](pre-basic/personalization-settings/README.md)
   * [自定义 CSS](pre-basic/personalization-settings/custom-css.md)
-  * [字体推荐](pre-basic/personalization-settings/font.md)
+  * [字体设置](pre-basic/personalization-settings/font.md)
   * [数据存储位置](pre-basic/personalization-settings/storage.md)
   * [清除 CSS 设置](pre-basic/personalization-settings/clear-css.md)
 

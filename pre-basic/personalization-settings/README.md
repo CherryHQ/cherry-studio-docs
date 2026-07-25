@@ -13,7 +13,7 @@ icon: pen-swirl
 | 想做的事 | 看哪一篇 |
 |---|---|
 | 把界面颜色 / 布局深度自定义 | [自定义 CSS](custom-css.md) |
-| 让 AI 输出的字体换一种 | [字体推荐](font.md) |
+| 调整界面与代码字体 | [字体设置](font.md) |
 | 查看或迁移应用数据目录 | [数据存储位置](storage.md) |
 | CSS 改得太乱想还原 | [清除 CSS 设置](clear-css.md) |
 
