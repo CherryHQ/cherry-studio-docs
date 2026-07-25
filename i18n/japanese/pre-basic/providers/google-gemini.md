@@ -1,31 +1,118 @@
+---
+icon: gem
+---
+
 # Google Gemini
 
-
-{% hint style="warning" %}
-このドキュメントはAIによって中国語から翻訳されており、まだレビューされていません。
-{% endhint %}
-
-
-
-
-## APIキーの取得
-
-* GeminiのAPIキーを取得する前に、Google Cloudプロジェクトが必要です（既にお持ちの場合はこの手順をスキップできます）
-* [Google Cloud](https://console.cloud.google.com/projectcreate) にアクセスし、プロジェクト名を入力して「プロジェクトを作成」をクリック
-
-<figure><img src="../../.gitbook/assets/image (74).png" alt=""><figcaption></figcaption></figure>
-
-* 公式の [API Keyページ](https://aistudio.google.com/app/apikey?hl=zh-cn) で `密钥 创建API密钥` をクリック
-
-<figure><img src="../../.gitbook/assets/image (72).png" alt=""><figcaption></figcaption></figure>
-
-* 生成されたキーをコピーし、CherryStudioの [サービスプロバイダー設定](broken-reference) を開く
-* Geminiプロバイダーを選択し、取得したキーを入力
-
-<figure><img src="../../.gitbook/assets/image (75).png" alt=""><figcaption></figcaption></figure>
-
-* 下部の「管理」または「追加」をクリックし、サポートモデルを追加後、右上のサービスプロバイダートグルを有効化すると利用可能になります
+Cherry Studio V2 の組み込み Gemini テンプレートは、Google の公式 Gemini API への接続に使用し、初期状態ではネイティブの **Google Generate Content** エンドポイントを使用します。API Key を設定すると、現在のアカウントで利用できる Gemini モデルを同期できます。
 
 {% hint style="info" %}
-- 中国本土（台湾を除く）ではGoogle Geminiサービスが直接利用できません。プロキシ設定を自身で解決する必要があります
+Gemini API と Google Cloud Vertex AI は異なる接続方法です。このページでは Google AI Studio で作成した API Key を使用します。Google Cloud のプロジェクト、リージョン、サービスアカウントを使用する場合は、Vertex AI のドキュメントを参照してください。
 {% endhint %}
+
+## 始める前の準備
+
+- Google AI Studio と Gemini API を利用できる Google アカウント
+- 現在地が Google の最新の[利用可能な地域に関する要件](https://ai.google.dev/gemini-api/docs/available-regions)を満たしていること
+- Gemini API に関する規約を確認し、同意していること
+- 利用可能な API Key とモデルのクォータ
+
+Google AI Studio は、新規ユーザー用の既定の Google Cloud プロジェクトと API Key を自動的に作成する場合があります。既存のプロジェクトがある場合は、Cherry Studio のために重複して作成せず、AI Studio でインポートまたは選択できます。
+
+## API Key を作成する
+
+1. [Google AI Studio API Keys](https://aistudio.google.com/app/apikey) を開きます。
+2. ログインして、使用する Google Cloud プロジェクトを選択します。
+3. 新しい Gemini API Key を作成します。
+4. Key をコピーし、すぐに安全な場所へ保存します。
+5. Cherry Studio に戻って設定を完了します。
+
+{% hint style="danger" %}
+API Key をチャットメッセージ、ドキュメント、コードリポジトリ、または問題報告用のスクリーンショットに含めないでください。公開されて漏えいした Key や制限要件を満たさない Key は、Google によってブロックされる場合があります。漏えいした場合は AI Studio で削除し、作り直してください。
+{% endhint %}
+
+## Gemini を設定する
+
+1. `設定 → モデルプロバイダー` を開きます。
+2. 左側のフィルターを**すべてのプロバイダー**に切り替え、**Gemini** を選択します。
+3. Google AI Studio で作成した API Key を入力します。
+4. 既定の Base URL `https://generativelanguage.googleapis.com` を変更せずに使用します。
+5. 画面上部にあるプロバイダーのスイッチをオンにします。
+6. モデルリストで**追加**をクリックし、同期プレビューを確認して変更を適用します。
+7. 使用するモデルを有効にします。
+
+組み込み Gemini テンプレートは Google のネイティブエンドポイントを使用します。Google の公式 Gemini API に OpenAI Chat Completions または OpenAI Responses を設定しないでください。
+
+## モデルを同期して選択する
+
+**追加**をクリックすると、Cherry Studio は Gemini のモデルリスト API を呼び出し、リモートの結果と組み込みのモデル情報を統合して表示します。
+
+- 実際に必要なモデルだけを有効にします。
+- 表示名だけでなく、完全なモデル ID を確認します。
+- Stable、Preview、Latest、Experimental の各バージョンでは、安定性と提供期間が異なります。
+- API から対象モデルが返されない場合は、**カスタム**をクリックし、Google の公式ドキュメントに記載されたモデル ID を入力できます。
+- モデルが一覧に表示されても、現在の Key に呼び出し権限や残りのクォータがあるとは限りません。
+
+Google はモデルのバージョンを継続的に変更します。[Gemini モデルのドキュメント](https://ai.google.dev/gemini-api/docs/models/gemini)と実際の同期結果を確認し、古いスクリーンショットの固定リストに依存しないでください。
+
+## 接続を確認する
+
+1. API Key エリアで接続チェックを実行します。
+2. 同期して有効にしたテキストモデルを 1 つ選択します。
+3. チェックに成功することを確認します。
+4. モデルリストでヘルスチェックを実行します。
+5. チャット画面に戻り、簡単なメッセージを送信します。
+
+画像理解、画像生成、推論、ツール呼び出しを使用する場合は、それぞれの機能を個別にテストしてください。モデル名が似ていても、機能とリクエストパラメーターが同じとは限りません。
+
+## 推論とツール呼び出し
+
+Cherry Studio はモデルの登録情報に応じて推論とツールの機能を表示し、対応する Gemini モデル用に思考パラメーターを変換します。使用するには、次の条件も満たす必要があります。
+
+- 現在のモデルバージョンが対象の機能に対応している
+- API Key に対象モデルの権限とクォータがある
+- モデル機能のタグと実際のエンドポイントが一致している
+- MCP などのツールが有効になっている
+- リクエストパラメーターがモデルの制限を超えていない
+
+モデルをアップグレードした後に推論またはツール呼び出しで問題が発生した場合は、まずモデルを再同期し、簡単なチャットと単一のツールでそれぞれ問題を切り分けてください。
+
+## Gemini 互換ゲートウェイに接続する
+
+Google の公式 Gemini API 以外を使用する場合は、次の手順を行います。
+
+1. [カスタムプロバイダー](zi-ding-yi-fu-wu-shang.md)を新規作成します。
+2. Google Generate Content を主要エンドポイントに設定します。
+3. ゲートウェイから提示された Base URL と API Key を入力します。
+4. ゲートウェイが実際に提供するモデルを同期するか、手動で追加します。
+5. 接続チェックとモデルのヘルスチェックを実行します。
+
+個別のカスタムプロバイダーを使用すると、Gemini の公式テンプレートを維持しながら、ゲートウェイのパスやモデル ID が公式設定に混在するのを防げます。
+
+## よくある質問
+
+### 400 が返される
+
+モデルが現在のパラメーターに対応していないか、リクエストが入力上限を超えています。まず短いテキストメッセージだけでテストし、画像、推論、ツールを段階的に有効にしてください。
+
+### 401 または「API Key が無効」と返される
+
+Key が正しくコピーされていない、削除済み、またはブロックされています。Google AI Studio で状態を確認してください。Key を公開して漏えいさせた場合は、作り直してください。
+
+### 403 が返される
+
+アカウント、プロジェクト、地域、またはモデルの権限が要件を満たしていません。現在の Key が属するプロジェクト、[利用可能な地域](https://ai.google.dev/gemini-api/docs/available-regions)、Google アカウントの状態を確認してください。
+
+### 404 または「モデルが存在しません」と返される
+
+もう一度**追加**をクリックしてモデルを同期し、完全なモデル ID を確認してください。Preview、Latest、Experimental のモデルは、改名または提供終了になっている場合があります。
+
+### 429 が返される
+
+現在のプロジェクトまたはモデルがレート制限かクォータ制限に達しています。Google AI Studio で使用量と課金状態を確認し、後でもう一度試すか、利用可能なクォータがあるモデルへ切り替えてください。
+
+### モデルを同期できない
+
+Google AI Studio で作成した Gemini API Key を使用し、公式 Base URL を維持していることを確認してください。公式の[モデルリスト API](https://ai.google.dev/api/models)を参照して、Key でモデルを一覧取得できるか確認することもできます。
+
+一般的な設定は[モデルプロバイダー](README.md)と[モデルプロバイダー設定](../../cherrystudio/preview/settings/providers.md)を参照してください。フィードバック先は[フィードバックとご提案](../../question-contact/suggestions.md)を参照してください。

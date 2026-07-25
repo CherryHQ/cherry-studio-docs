@@ -1,62 +1,194 @@
 ---
+description: 连接思源笔记 API，并将 Cherry Studio V2 的对话或笔记导出为思源文档。
 icon: map
 ---
 
-# 思源笔记配置教程
+# 思源笔记配置与导出
 
-支持将话题、消息导出到思源笔记。
+Cherry Studio V2 可以把完整话题、单条消息或 Cherry Studio 笔记导出到指定的思源笔记本。导出内容会通过思源 Kernel API 创建为 Markdown 文档。
 
-## 第一步
+配置入口位于 **设置 > 集成 > 思源笔记**。**数据设置 > 导出菜单**只控制“导出到思源笔记”是否显示。
 
-打开思源笔记，创建一个笔记本
+{% hint style="warning" %}
+API Token 可以访问你的思源数据。不要在截图、反馈或共享配置中显示完整 Token；自部署实例不要把未受保护的 API 直接暴露到公网。
+{% endhint %}
 
-<figure><img src="../../.gitbook/assets/siyuan-image-1.png" alt=""><figcaption><p>点击新建笔记本</p></figcaption></figure>
+## 准备思源笔记
 
-## 第二步
+1. 启动思源笔记，确认 Kernel 正常运行。
+2. 创建或选择用于接收导出内容的笔记本。
+3. 取得 API Token。
+4. 复制目标笔记本 ID。
+5. 确认 Cherry Studio 所在设备能访问思源 API 地址。
 
-打开笔记本打开设置，并复制`笔记本ID`
+思源官方 API 的本地默认 Endpoint 为：
 
-<figure><img src="../../.gitbook/assets/siyuan-image-2.png" alt="" width="400"><figcaption><p>打开笔记本设置</p></figcaption></figure>
+```text
+http://127.0.0.1:6806
+```
 
-<figure><img src="../../.gitbook/assets/siyuan-image-3.png" alt=""><figcaption><p>点击复制笔记本ID按钮</p></figcaption></figure>
+API Token 可在 **思源笔记 > 设置 > 关于**中查看。完整接口约定可参阅[思源官方 API 文档](https://github.com/siyuan-note/siyuan/blob/master/API.md)。
 
-## 第三步
+## 获取笔记本 ID
 
-复制笔记本ID填写到 Cherry Studio 设置里
+在思源笔记中打开目标笔记本的设置，使用 **复制笔记本 ID**。ID 通常类似：
 
-<figure><img src="../../.gitbook/assets/siyuan-image-4.png" alt=""><figcaption><p>将笔记本ID填写到数据设置里</p></figcaption></figure>
+```text
+20210817205410-2kvfpfn
+```
 
-## 第四步
+不要填写笔记本名称、工作空间路径或文档 ID。Cherry Studio 会把该值作为 `notebook` 参数传给思源的文档创建接口。
 
-填写思源笔记地址
+## 在 Cherry Studio 中配置
 
-* **本地**\
-  通常为 `http://127.0.0.1:6806`
-* **自部署**\
-  为你的域名 `http://note.domain.com`
+进入 **设置 > 集成 > 思源笔记**，填写：
 
-<figure><img src="../../.gitbook/assets/siyuan-image-5.png" alt=""><figcaption><p>填入你的思源笔记地址</p></figcaption></figure>
+| 字段 | 说明 |
+| --- | --- |
+| API 地址 | 思源 Kernel 的访问地址，例如 `http://127.0.0.1:6806` |
+| API 令牌 | 思源设置中显示的 API Token |
+| 笔记本 ID | 接收导出文档的目标 Notebook ID |
+| 文档根路径 | 可选；所有导出文档在笔记本中的父路径 |
 
-## 第五步
+API 地址末尾建议不加 `/`，避免与 `/api/...` 路径拼接后出现双斜线。
 
-复制思源笔记 `API Token`
+### 本地与自部署地址
 
-<figure><img src="../../.gitbook/assets/siyuan-image-6.png" alt=""><figcaption><p>复制思源笔记令牌</p></figcaption></figure>
+- **思源与 Cherry Studio 在同一台电脑：** 通常使用 `http://127.0.0.1:6806`。
+- **思源在局域网其他设备或 NAS：** 使用 Cherry Studio 所在设备能够访问的 IP 与端口，不能填写对方设备自己的 `127.0.0.1`。
+- **公网自部署：** 使用带 HTTPS 的域名，并在防火墙或反向代理中限制访问来源。
 
-填入 Cherry Studio 设置里并检查
+连接 Docker、NAS 或反向代理后的思源时，还要确认 `/api/` 路径没有被重写或拦截。
 
-<figure><img src="../../.gitbook/assets/siyuan-image-7.png" alt=""><figcaption><p>填写数据库 ID 并点击检查</p></figcaption></figure>
+## 检测连接
 
-## 第六步
+填入 **API 地址**和 **API 令牌**后，点击 **检测**。
 
-恭喜你，思源笔记的配置已经完成了 ✅ 接下来就可以将 Cherry Studio 内容导出到你的思源笔记中了
+Cherry Studio 会调用：
 
-<figure><img src="../../.gitbook/assets/siyuan-image-8.png" alt=""><figcaption><p>导出到思源笔记</p></figcaption></figure>
+```text
+POST /api/notebook/lsNotebooks
+```
 
-<figure><img src="../../.gitbook/assets/siyuan-image-9.png" alt=""><figcaption><p>查看导出结果</p></figcaption></figure>
+检测成功表示地址可访问、Token 可用，并且接口返回 `code: 0`。检测不会验证：
 
-***
+- 填写的笔记本 ID 是否存在；
+- 目标笔记本是否已经打开；
+- 文档根路径是否有效；
+- 当前配置能否成功创建文档。
 
-### 💡 获取帮助与提交反馈
+因此检测成功后仍要执行一次真实导出。
 
-如果您在配置或使用过程中遇到任何疑问、Bug 或有功能改进建议，请参考 [反馈与建议](../../question-contact/suggestions.md) 中提供的官方渠道。
+## 设置文档根路径
+
+留空时，Cherry Studio 使用：
+
+```text
+/CherryStudio
+```
+
+也可以填写其他路径，例如：
+
+```text
+/AI 对话
+```
+
+路径没有以 `/` 开头时，Cherry Studio 会自动补上。
+
+### 使用日期模板
+
+根路径会先通过思源的 `renderSprig` 接口渲染，因此可以使用思源支持的 Sprig 模板按日期归档。例如：
+
+```text
+/CherryStudio/{{now | date "2006/01"}}
+```
+
+渲染后可能得到：
+
+```text
+/CherryStudio/2026/07
+```
+
+模板语法错误会导致导出失败。第一次配置建议先使用固定路径，确认导出成功后再加入模板。
+
+## 启用导出菜单
+
+如果菜单中没有“导出到思源笔记”：
+
+1. 打开 **设置 > 数据设置 > 导出菜单**。
+2. 开启 **导出到思源笔记**。
+3. 返回话题、消息或笔记，重新打开导出菜单。
+
+此开关只控制菜单可见性，不会自动填写集成配置。
+
+## 执行第一次导出
+
+建议先用不含敏感信息的短消息测试：
+
+1. 打开话题、消息或 Cherry Studio 笔记的菜单。
+2. 选择 **导出到思源笔记**。
+3. 等待成功或错误提示。
+4. 回到目标思源笔记本。
+5. 检查根路径下是否出现以话题或消息标题命名的文档。
+6. 打开文档检查标题、段落、列表、代码块和公式。
+
+每次导出前，Cherry Studio 会先再次调用 `lsNotebooks` 检查连接，然后：
+
+1. 渲染文档根路径；
+2. 清理标题中的部分特殊字符；
+3. 拼接根路径和文档标题；
+4. 调用 `POST /api/filetree/createDocWithMd` 创建文档。
+
+思源官方接口不会用相同路径的重复请求覆盖已有文档。需要更新旧内容时，请在思源中处理旧文档，或修改标题 / 根路径后重新导出。
+
+## 导出内容范围
+
+- **完整话题：** 按当前话题的消息顺序转换为 Markdown。
+- **单条消息：** 只导出选中的消息。
+- **Cherry Studio 笔记：** 导出当前笔记的 Markdown 内容。
+
+当前思源导出没有单独的“包含思考内容”开关。需要保留特定内容时，应先在 Cherry Studio 中确认实际导出文本。
+
+## 安全建议
+
+- 本地使用时保持 API 只监听本机或受信网络。
+- 远程使用时启用 HTTPS，并限制反向代理和防火墙访问。
+- Token 泄露后立即在思源中更换，再更新 Cherry Studio。
+- 不把真实 Token 写入文档、截图、聊天或版本库。
+- 为重要笔记本配置可靠备份；导出功能不替代思源数据备份。
+
+## 常见问题
+
+### 检测提示“请填写 API 地址和令牌”
+
+检测只要求 API 地址和 Token。确认两个输入框均非空，地址包含 `http://` 或 `https://`。
+
+### 本地地址无法连接
+
+确认思源正在运行，浏览器可以在同一台电脑访问 `127.0.0.1:6806`，并检查端口是否被修改。若 Cherry Studio 与思源不在同一台设备，不能使用 `127.0.0.1`。
+
+### 检测成功，但导出提示配置不完整
+
+实际导出还要求 **笔记本 ID**。检查填写的是 Notebook ID，而不是笔记本名称或文档 ID。
+
+### 检测成功，但创建文档失败
+
+确认目标笔记本存在且可用，并先把根路径改为简单的 `/CherryStudio`。若这样可以导出，原来的 Sprig 模板或路径可能不合法。
+
+### 自部署实例返回 401 或 403
+
+检查 Token 是否完整，反向代理是否保留 `Authorization: Token ...` 请求头，以及访问策略是否允许 Cherry Studio 所在设备。
+
+### 返回 404 或 HTML 页面
+
+API 地址可能填成了网页子路径，或反向代理没有把 `/api/` 转发给思源 Kernel。API 地址应是实例根地址，不要包含 `/api/notebook/lsNotebooks`。
+
+### 重复导出后没有覆盖旧文档
+
+这是 `createDocWithMd` 的接口行为：相同路径不会覆盖已有文档。修改文档标题或根路径，或者先在思源中处理旧文档。
+
+### 对话菜单中没有思源笔记
+
+进入 **设置 > 数据设置 > 导出菜单**，打开 **导出到思源笔记**。若已开启，重新进入当前对话再打开菜单。
+
+如仍无法解决，请通过[反馈与建议](../../question-contact/suggestions.md)提交 Cherry Studio 与思源版本、部署方式、已脱敏的 API 地址、笔记本 ID、根路径和接口错误信息。

@@ -1,108 +1,122 @@
 ---
 icon: cherries
 ---
-# 專案簡介
 
+# Cherry Studio 社群版
+
+Cherry Studio 是一款開源的桌面 AI 用戶端，可在 Windows、macOS 和 Linux 上統一使用雲端或本機大型模型。它不僅提供多模型對話，還將助手、Agent、知識庫、技能、MCP、翻譯、繪畫、檔案和筆記等功能整合在同一個工作空間中。
+
+社群版適合希望自行選擇模型服務、在本機管理工作資料，並依需求擴充 AI 工作流程的個人使用者和開發者。
+
+## 你可以用它做什麼
+
+| 需求 | Cherry Studio 中的功能 |
+| :--- | :--- |
+| 使用不同廠商或本機部署的模型 | 統一設定模型服務，在對話中切換或同時比較多個模型 |
+| 儲存固定角色和對話設定 | 建立助手，設定提示詞、模型參數、知識庫和 MCP |
+| 讓 AI 讀取工作區並執行任務 | 建立 Agent，控制可存取目錄、工具和核准模式 |
+| 讓 AI 遵循專門的工作流程 | 安裝技能，並依 Agent 啟用 |
+| 連接搜尋、資料庫或第三方服務 | 新增本機或遠端 MCP Server |
+| 建立自己的資料檢索庫 | 匯入文件並設定 Embedding 模型 |
+| 處理圖片、翻譯、筆記和檔案 | 使用繪畫、翻譯、筆記和檔案等獨立工作空間 |
+| 在聊天平台或固定時間執行 Agent | 設定頻道和排程任務 |
+
+## 主要工作空間
+
+Cherry Studio V2 的側邊欄可以依需求顯示以下應用程式：
+
+* **對話**：與助手和模型交流，管理工作階段和訊息。
+* **Agent**：執行需要檔案、指令或多步驟工具呼叫的任務。
+* **資源庫**：集中管理助手、Agent、技能和提示詞。
+* **繪畫**：使用圖像產生模型建立和管理圖片。
+* **翻譯**：進行雙語翻譯和對照閱讀。
+* **小程式**：在應用程式內開啟已新增的 Web 工具。
+* **知識庫**：匯入資料、處理分段並進行檢索。
+* **檔案**：集中查看和管理應用程式中的檔案資源。
+* **Code Tools**：管理開發者使用的程式碼工具。
+* **筆記**：編輯和整理 Markdown 筆記。
+* **OpenClaw**：使用獨立的自主 Agent 工作空間。
+
+側邊欄只會顯示已啟用的入口；隱藏項目不會刪除對應資料。
+
+## 快速開始
+
+### 1. 下載並安裝
+
+前往[用戶端下載](cherrystudio/download.md)，選擇適合系統的版本。首次安裝或遇到系統安全提示時，請參考[安裝教學](pre-basic/installation/)。
+
+Cherry Studio 支援 Windows、macOS 和 Linux。不同系統和晶片架構使用的安裝套件不同，請依下載頁面的說明選擇。
+
+### 2. 設定模型服務
+
+開啟**設定 → 模型服務**：
+
+1. 選擇現有服務提供者，或新增相容的服務提供者。
+2. 填寫 API 位址和 API Key。
+3. 取得模型清單，啟用需要使用的模型。
+4. 返回對話頁面，選擇模型並傳送第一則訊息。
+
+如果使用 Ollama、LM Studio 等本機服務，請先確認對應服務已在本機執行。詳細步驟請參閱[模型服務](pre-basic/providers/)。
+
+### 3. 從一個情境開始
+
+* 日常問答、寫作或翻譯：從[對話介面](cherrystudio/preview/chat.md)開始。
+* 需要固定提示詞和參數：在[資源庫](cherrystudio/preview/library.md)建立助手。
+* 需要操作本機檔案或執行工具：建立 [Agent](advanced-basic/agent.md)。
+* 需要根據個人資料回答：建立[知識庫](knowledge-base/knowledge-base.md)。
+
+不需要一次設定全部功能。請先完成一個可驗證的小型任務，再增加技能、MCP 或自動化，疑難排解會更容易。
+
+## 助手、Agent 與擴充功能
+
+### 助手
+
+助手會儲存可重複使用的對話設定，包括提示詞、模型參數、知識庫和 MCP。它適合以對話為主的穩定情境。
+
+### Agent
+
+Agent 可以存取指定目錄，並呼叫內建工具、MCP 和技能。你可以選擇一般、規劃、自動編輯或全自動權限模式。詳見 [Agent](advanced-basic/agent.md)。
+
+### 技能與 MCP
+
+* [技能](pre-basic/settings/skills.md)告訴 Agent 如何依特定流程完成一類工作。
+* [MCP](advanced-basic/mcp/)為助手或 Agent 連接外部工具、提示和資源。
+
+如果還不確定該如何選擇，請先閱讀[概念入門](advanced-basic/concepts-101.md)。
+
+## 資料與安全
+
+Cherry Studio 的應用程式設定和工作資料主要儲存在本機，但「使用桌面應用程式」不代表「所有處理都在本機完成」：
+
+* 使用雲端模型時，訊息、附件或檢索到的上下文會依請求需要傳送給選定的模型服務提供者。
+* 使用遠端 MCP Server、頻道或其他第三方服務時，相關資料可能會傳送給對應服務。
+* Agent 和本機 MCP Server 可能依已授予的權限讀取檔案或執行指令。
+* 使用本機模型可以減少雲端資料傳輸，但仍需要檢查所連接的模型服務、外掛程式和網路工具。
 
 {% hint style="warning" %}
-此文件由 AI 從中文翻譯而來，尚未經過審閱。
+請勿將 API Key、存取權杖、密碼或私密金鑰寫入提示詞、知識庫、文件和截圖。請限制 Agent 的可存取目錄，為 MCP 和頻道使用最小權限，並在啟用全自動模式前先完成受控測試。
 {% endhint %}
 
+重要資料應定期備份。Cherry Studio 支援本機匯出，以及 WebDAV、S3 相容儲存空間等備份方式；具體選項請參閱[資料設定](data-settings/)。
 
+## 開放原始碼與授權
 
+Cherry Studio 社群版程式碼託管於 [GitHub](https://github.com/CherryHQ/cherry-studio)，並採用 GNU Affero General Public License v3.0（AGPL-3.0）。在使用、修改或散布前，請閱讀[開放原始碼授權協議](contact-us/questions/cherrystudio-xu-ke-xie-yi.md)。
 
-<figure><img src=".gitbook/assets/docs-readme-banner1.png" alt=""><figcaption></figcaption></figure>
+歡迎參與：
 
-關注我們的社交賬號：[推特(X)](https://x.com/CherryStudioHQ)、[小紅書](https://www.xiaohongshu.com/user/profile/662b6853000000000b031d9a)、[微博](https://weibo.com/u/7975656228)、[嗶哩嗶哩](https://space.bilibili.com/3546657515898892)、[抖音](https://www.douyin.com/user/MS4wLjABAAAAmw9A54m5J0hHVMQY5eGrVJ-EHDoOS0hgJ6M1F9MN2Tn2V163A0xrC4_KVzfmQSxC)
+* [貢獻程式碼](contribution/code.md)
+* [貢獻文件](contribution/docs.md)
+* [提交問題](https://github.com/CherryHQ/cherry-studio/issues)
+* [參與討論](https://github.com/CherryHQ/cherry-studio/discussions)
 
-加入我們的社群：[QQ群(575014769)](https://qm.qq.com/q/lo0D4qVZKi)、[Telegram](https://t.me/CherryStudioAI)、[Discord](https://discord.gg/wez8HtpxqQ)、[微信群（點擊查看）](https://www.cherry-ai.com/#Community)
+## 取得協助
 
-***
+遇到問題時，請先查看[常見問題](question-contact/questions.md)和[如何有效提問](question-contact/ask.md)。提交意見反應時，請提供 Cherry Studio 版本、作業系統、重現步驟和必要日誌，並先移除 API Key、檔案內容等敏感資訊。
 
-Cherry Studio 是一款集多模型對話、知識庫管理、AI 繪畫、翻譯等功能於一體的全能 AI 助手平台。  
-Cherry Studio 高度自訂的設計、強大的擴展能力和友好的使用者體驗，使其成為專業使用者和 AI 愛好者的理想選擇。無論是零基礎使用者還是開發者，都能在 Cherry Studio 中找到適合自己的 AI 功能，提升工作效率和創造力。
+社群入口：
 
-<figure><img src=".gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
-
-<figure><img src=".gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
-
-***
-
-### **核心功能與特色**
-
-#### **1. 基礎對話功能**
-
-* **一問多答**：支援同一問題透過多個模型同時生成回覆，方便使用者對比不同模型的表現，詳見 [對話界面](cherrystudio/preview/chat.md)。
-* **自動分組**：每個助手的對話記錄會自動分組管理，便於使用者快速查找歷史對話。
-* **對話匯出**：支援將完整對話或部分對話匯出為多種格式（如 Markdown、Word 等），方便儲存與分享。
-* **高度自訂參數**：除了基礎參數調整外，還支援使用者填寫自訂參數，滿足個性化需求。
-* **助手市場**：內建千餘個行業專用助手，涵蓋翻譯、編程、寫作等領域，同時支援使用者自訂助手。
-* **多種格式渲染**：支援 Markdown 渲染、公式渲染、HTML 即時預覽等功能，提升內容展示效果。
-
-#### **2. 多種特色功能整合**
-
-* **AI 繪畫**：提供專用繪畫面板，使用者可透過自然語言描述生成高品質影像。
-* **AI 小程式**：整合多種免費 Web 端 AI 工具，無需切換瀏覽器即可直接使用。
-* **翻譯功能**：支援專用翻譯面板、對話翻譯、提示詞翻譯等多種翻譯場景。
-* **檔案管理**：對話、繪畫和知識庫中的檔案統一分類管理，避免繁瑣查找。
-* **全域搜尋**：支援快速定位歷史記錄和知識庫內容，提升工作效率。
-
-#### **3. 多服務商統一管理機制**
-
-* **服務商模型聚合**：支援 OpenAI、Gemini、Anthropic、Azure 等主流服務商的模型統一呼叫。
-* **模型自動獲取**：一鍵取得完整模型列表，無需手動配置。
-* **多秘鑰輪詢**：支援多個 API 秘鑰輪換使用，避免速率限制問題。
-* **精準頭像匹配**：為每個模型自動匹配專屬頭像，提升辨識度。
-* **自訂服務商**：支援符合 OpenAI、Gemini、Anthropic 等規範的第三方服務商接入，相容性強。
-
-#### **4. 高度自訂介面和佈局**
-
-* **自訂 CSS**：支援全域樣式自訂，打造專屬介面風格。
-* **自訂對話佈局**：支援列表或氣泡樣式佈局，並可自訂訊息樣式（如程式碼片段樣式）。
-* **自訂頭像**：支援為軟體和助手設定個性化頭像。
-* **自訂側邊欄選單**：使用者可根據需求隱藏或排序側邊欄功能，優化使用體驗。
-
-#### **5. 本機知識庫系統**
-
-* **多種格式支援**：支援 PDF、DOCX、PPTX、XLSX、TXT、MD 等多種檔案格式匯入。
-* **多種資料來源支援**：支援本機檔案、網址、站點地圖甚至手動輸入內容作為知識庫來源。
-* **知識庫匯出**：支援將處理好的知識庫匯出並分享給他人使用。
-* **支援搜尋檢查**：知識庫匯入後，使用者可即時檢索測試，查看處理結果和分段效果。
-
-#### **6. 特色聚焦功能**
-
-* **快捷問答**：在任何場景（如微信、瀏覽器）中呼出快捷助手，快速取得答案。
-* **快捷翻譯**：支援快速翻譯其他場景中的詞彙或文字。
-* **內容總結**：對長文字內容進行快速總結，提升資訊提取效率。
-* **解釋說明**：無需複雜提示詞，一鍵解釋說明不懂的問題。
-
-#### **7. 資料保障**
-
-* **多種備份方案**：支援本機備份、WebDAV 備份和定時備份，確保資料安全。
-* **資料安全**：支援全本機場景使用，結合本機大模型，避免資料洩漏風險。
-
-***
-
-### **專案優勢**
-
-1. **新手友好**：Cherry Studio 致力於降低技術門檻，零基礎使用者也能快速上手，讓使用者專注於工作、學習或創作。
-2. **文件完善**：提供詳細的使用文件和常見問題處理手冊，幫助使用者快速解決問題。
-3. **持續迭代**：專案團隊積極響應使用者回饋，持續最佳化功能，確保專案健康發展。
-4. **開源與擴展性**：支援使用者透過開源程式碼進行客製化和擴展，滿足個性化需求。
-
-***
-
-### **適用場景**
-
-* **知識管理與查詢**：透過本機知識庫功能，快速建置和查詢專屬知識庫，適用於研究、教育等領域。
-* **多模型對話與創作**：支援多模型同時對話，幫助使用者快速取得資訊或生成內容。
-* **翻譯與辦公自動化**：內建翻譯助手和檔案處理功能，適合需要跨語言交流或文件處理的使用者。
-* **AI 繪畫與設計**：透過自然語言描述生成影像，滿足創意設計需求。
-
-### Star History
-
-![Star History](https://urlscan.io/liveshot/?width=1300\&height=620\&url=https://cherrystarhistory.ocool.online/)
-
-## 關注我們的社交賬號
-
-<table data-view="cards"><thead><tr><th></th><th data-hidden data-card-cover data-type="files"></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><a href="https://www.xiaohongshu.com/user/profile/662b6853000000000b031d9a?xsec_token=YB_1nKvlH4r5hPYVVbbsNHF8Y6n6AKlm5-DaggPCtd2DQ%3D&#x26;xsec_source=app_share&#x26;xhsshare=CopyLink&#x26;appuid=662b6853000000000b031d9a&#x26;apptime=1738627324&#x26;share_id=ace5db41b5954fab8d98a2a7865a62bc&#x26;share_channel=copy_link">小紅書</a></td><td><a href=".gitbook/assets/1.png">1.png</a></td><td><a href="https://www.xiaohongshu.com/user/profile/662b6853000000000b031d9a?xsec_token=YB_1nKvlH4r5hPYVVbbsNHF8Y6n6AKlm5-DaggPCtd2DQ%3D&#x26;xsec_source=app_share&#x26;xhsshare=CopyLink&#x26;appuid=662b6853000000000b031d9a&#x26;apptime=1738627324&#x26;share_id=ace5db41b5954fab8d98a2a7865a62bc&#x26;share_channel=copy_link">https://www.xiaohongshu.com/user/profile/662b6853000000000b031d9a?xsec_token=YB_1nKvlH4r5hPYVVbbsNHF8Y6n6AKlm5-DaggPCtd2DQ%3D&#x26;xsec_source=app_share&#x26;xhsshare=CopyLink&#x26;appuid=662b6853000000000b031d9a&#x26;apptime=1738627324&#x26;share_id=ace5db41b5954fab8d98a2a7865a62bc&#x26;share_channel=copy_link</a></td></tr><tr><td><a href="https://b23.tv/hIfGgDW">嗶哩嗶哩</a></td><td><a href=".gitbook/assets/3.png">3.png</a></td><td><a href="https://b23.tv/hIfGgDW">https://b23.tv/hIfGgDW</a></td></tr><tr><td><a href="https://weibo.com/u/7975656228">微博</a></td><td><a href=".gitbook/assets/2.png">2.png</a></td><td><a href="https://weibo.com/u/7975656228">https://weibo.com/u/7975656228</a></td></tr><tr><td><a href="https://v.douyin.com/ifTpX4X7">抖音</a></td><td><a href=".gitbook/assets/4.png">4.png</a></td><td><a href="https://v.douyin.com/ifTpX4X7">https://v.douyin.com/ifTpX4X7</a></td></tr><tr><td><a href="https://x.com/CherryStudioHQ?t=DYR0ulaLur-bO4Us3bG79A&#x26;s=05">推特(X)</a></td><td><a href=".gitbook/assets/5.png">5.png</a></td><td><a href="https://x.com/CherryStudioHQ?t=DYR0ulaLur-bO4Us3bG79A&#x26;s=05">https://x.com/CherryStudioHQ?t=DYR0ulaLur-bO4Us3bG79A&#x26;s=05</a></td></tr></tbody></table>
+* [Telegram](https://t.me/CherryStudioAI)
+* [Discord](https://discord.gg/wez8HtpxqQ)
+* [QQ 群組](https://qm.qq.com/q/lo0D4qVZKi)
+* [意見與建議](question-contact/suggestions.md)

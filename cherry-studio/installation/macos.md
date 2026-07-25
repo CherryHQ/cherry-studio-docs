@@ -1,42 +1,131 @@
 ---
-description: macOS 版本安装教程
+description: 在 macOS 上选择、安装和更新 Cherry Studio
 icon: apple
 ---
 
 # macOS
 
-1. 首先到官网下载页面点击下载 Mac 版本，或点击下方直达
+本页说明如何为 Intel 或 Apple 芯片 Mac 选择安装包、完成安装，并处理首次打开时的 macOS 安全提示。还没有安装包时，请先前往[客户端下载](../../cherrystudio/download.md)。
 
-请注意下载 **自己 Mac 对应的芯片版本**
+## 确认芯片类型
 
-{% hint style="info" %}
-如果不知道自己的 Mac 应当使用什么芯片版本：
+1. 点击屏幕左上角的 Apple 菜单 。
+2. 选择 **关于本机**。
+3. 查看“芯片”或“处理器”。
 
-* 点击 Mac 左上角菜单栏 
-* 在展开菜单中点击关于本机
-* 在弹出窗口中查看处理器信息
+| 本机显示 | 下载架构 |
+| --- | --- |
+| Apple M 系列芯片 | `arm64` |
+| Intel 处理器 | `x64` |
 
-如果为 Intel 芯片则下载 Intel 版本安装包
+Apple 芯片 Mac 应优先使用 arm64 原生包。如果误下 x64 包，系统可能要求安装 Rosetta；重新下载 arm64 包通常更合适。
 
-如果为 Apple M\* 芯片则下载 Apple 芯片安装包
+## 选择 DMG 或 ZIP
+
+macOS Release 通常同时提供 `.dmg` 和 `.zip`：
+
+| 格式 | 使用方式 | 建议 |
+| --- | --- | --- |
+| DMG | 打开磁盘映像，将应用拖入“应用程序” | 适合大多数用户 |
+| ZIP | 解压后，将应用移入“应用程序” | DMG 无法挂载或需要手动分发时使用 |
+
+两种格式包含的是同一个应用，不需要重复安装。
+
+## 校验下载文件
+
+官方 GitHub Release 会为安装包提供 SHA256。打开“终端”并运行：
+
+```bash
+shasum -a 256 ~/Downloads/Cherry-Studio-*.dmg
+```
+
+使用 ZIP 时，把扩展名改为 `*.zip`。输出值应与 Release 页面列出的 SHA256 完全一致。
+
+如果浏览器或 macOS 提示来源未知，先核对下载域名、文件名和 SHA256；来源无法确认时不要继续打开。
+
+## 使用 DMG 安装
+
+1. 双击下载的 `.dmg` 文件。
+2. 在打开的窗口中，将 Cherry Studio 拖到“应用程序”文件夹。
+3. 等待复制完成。
+4. 在 Finder 的侧边栏中推出 Cherry Studio 磁盘映像。
+5. 打开 **Finder → 应用程序 → Cherry Studio**。
+
+不要直接从 DMG 窗口长期运行应用。将应用复制到“应用程序”后再启动，后续更新和权限管理会更稳定。
+
+## 使用 ZIP 安装
+
+1. 双击 `.zip` 文件解压。
+2. 将解压得到的 Cherry Studio 移入“应用程序”文件夹。
+3. 从“应用程序”启动。
+
+如果“应用程序”中已有旧版本，更新前先完全退出 Cherry Studio，并在 **设置 → 数据设置** 创建备份。
+
+## 处理首次打开的安全提示
+
+首次打开从互联网下载的应用时，macOS 会进行 Gatekeeper 检查。
+
+如果系统只询问是否确定打开，请确认应用名称和下载来源后选择打开。如果提示无法验证开发者或无法检查恶意软件：
+
+1. 先确认文件来自 Cherry Studio 官网或官方 GitHub Releases。
+2. 核对 SHA256。
+3. 尝试打开一次应用，让 macOS 记录拦截。
+4. 打开 **系统设置 → 隐私与安全性**。
+5. 在“安全性”区域找到对应提示，选择 **仍要打开**。
+6. 按系统要求验证身份，再确认打开。
+
+{% hint style="warning" %}
+不要关闭 Gatekeeper，也不要对来源不明或 SHA256 不匹配的文件使用“仍要打开”。如果系统明确提示应用会损坏电脑或包含恶意软件，请删除文件并重新从官方渠道下载。
 {% endhint %}
 
-{% embed url="https://cherryai.com.cn/download" %}
+Apple 的最新操作说明见[安全地打开 Mac 上的应用](https://support.apple.com/102445)。
 
-2. 下载完成后点击这里
+## 授予系统权限
 
-<figure><img src="../../.gitbook/assets/Mac下载.png" alt=""><figcaption></figcaption></figure>
+Cherry Studio 只有在相关功能需要时才会请求权限，例如：
 
-3. 拖拽图标安装
+* 使用语音或音频功能时请求麦克风权限。
+* 使用摄像头相关功能时请求摄像头权限。
+* 读取或保存文件时请求“文稿”或“下载”文件夹权限。
 
-<figure><img src="../../.gitbook/assets/Mac拖拽安装.png" alt=""><figcaption></figcaption></figure>
+只授予你正在使用的功能所需权限。需要修改时，前往 **系统设置 → 隐私与安全性**，在对应权限类别中调整 Cherry Studio。
 
-到启动台中寻找 Cherry Studio 图标并点击，能打开 Cherry Studio 主界面则安装成功。
+## 更新 Cherry Studio
 
-<figure><img src="../../.gitbook/assets/Mac安装成功.png" alt=""><figcaption></figcaption></figure>
+更新前：
 
-***
+1. 在 **设置 → 数据设置** 创建备份。
+2. 完全退出 Cherry Studio。
+3. 下载与本机芯片一致的新版本。
 
-### 💡 获取帮助与提交反馈
+然后打开新 DMG 或解压 ZIP，把新的 Cherry Studio 移入“应用程序”，并在系统询问时选择替换旧版本。首次启动新版本后，检查模型服务、对话、知识库和智能体是否正常。
 
-如果您在配置或使用过程中遇到任何疑问、Bug 或有功能改进建议，请参考 [反馈与建议](../../question-contact/suggestions.md) 中提供的官方渠道。
+从新版本降级到旧版本可能遇到数据库或配置不兼容。除非已经备份并明确了解影响，否则不建议降级。
+
+## 常见问题
+
+### 应用无法打开
+
+依次检查：
+
+1. 安装包架构是否与本机芯片一致。
+2. 文件是否完整，SHA256 是否匹配。
+3. 应用是否已经移入“应用程序”。
+4. **系统设置 → 隐私与安全性** 是否有对应的拦截提示。
+5. 是否已有 Cherry Studio 进程正在运行。
+
+### 提示应用已损坏
+
+先删除当前文件，再从官方渠道重新下载并校验 SHA256。不要直接复制网上的命令去移除安全属性；文件确实损坏或被篡改时，这样做会绕过系统保护。
+
+### 应用打开后立即退出
+
+记录 macOS 版本、芯片类型、Cherry Studio 版本和完整错误提示，再通过[反馈与建议](../../question-contact/suggestions.md)提交。若使用了预发布版，请同时说明构建日期或下载来源。
+
+### 安装后如何开始使用
+
+继续阅读：
+
+* [配置模型服务](../../pre-basic/providers/)
+* [对话界面](../../cherrystudio/preview/chat.md)
+* [数据设置](../../pre-basic/data-settings/)

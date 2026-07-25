@@ -1,103 +1,316 @@
 ---
-description: cherry studio使用「火山引擎」接入deepseekR1联网功能，喂饭教程。
-hidden: True
+description: Volcengine Ark モデルで Cherry Studio の Web 検索ツールを使用する方法
 icon: globe-pointer
 ---
 
+# Volcengine Ark モデルの Web 検索
+
+Cherry Studio V2 では、Volcengine Ark のチャットモデルで外部 Web 検索を使用できます。推奨する組み合わせは次のとおりです：
+
+```text
+Volcengine Ark モデル
+    + Cherry Studio デフォルト検索プロバイダー
+    + Cherry Studio デフォルト URL 取得プロバイダー
+```
+
+現在の V2 では、Volcengine Ark Web Search は独立した Web 検索プロバイダーとして登録されていません。また、組み込みの `doubao` プロバイダーへ Ark のクラウド Web Search ツールが自動的に追加されることもありません。
+
 {% hint style="warning" %}
-このドキュメントはAIによって中国語から翻訳されており、まだレビューされていません。
+旧チュートリアルの「ノーコードアプリを作成 → Web 検索プラグインを有効化 → アプリを OpenAI モデルとして接続」という手順は、現在の V2 では推奨されません。画面、プラグイン、API が変更されているため、古いスクリーンショットや API Host の書き方をそのまま使用しないでください。
 {% endhint %}
 
-# 火山エンジンでのネットワーク接続方法
+## 2 種類の Web 検索を区別する
 
-### 1、「火山エンジン」アカウントのログイン/登録 <a href="#rclz7" id="rclz7"></a>
+| 方式 | 検索実行主体 | Cherry Studio V2 の現在のステータス | 推奨される利用シーン |
+| --- | --- | --- | --- |
+| Cherry Studio 外部 Web 検索 | ExaMCP、Tavily、SearXNG、Bocha などの検索プロバイダー | 対応済み | 通常のチャット、検索サービスを一元管理したい場合 |
+| Volcengine Ark クラウド Web Search | Volcengine Ark Responses API またはアプリのプラグイン | 専用アダプターなし | Ark 側でアプリを開発済みで、インターフェースを自分で検証できる場合 |
 
-公式サイトにアクセス：[https://www.volcengine.com/](https://www.volcengine.com/)
+このページでは 1 つ目の方法を説明します。Volcengine Ark で「マイアプリ」を作成する必要はなく、旧版の Web 検索プラグインにも依存しません。
 
-<figure><img src="../.gitbook/assets/image (51).png" alt=""><figcaption><p>火山エンジン公式サイト</p></figcaption></figure>
+### Cherry Studio 外部 Web 検索
 
-### 2、ネットワーク接続可能な「マイアプリ」を作成 <a href="#gvzaa" id="gvzaa"></a>
+現在のモデルがネイティブ Web 検索モデルとして認識されていない場合、Cherry Studio はモデルへ次のツールを提供します：
 
-2.1、 火山エンジンにログインし、「火山方舟」ページへ移動： [https://console.volcengine.com/ark](https://console.volcengine.com/ark)
+- 検索キーワードツール。
+- URL を読み取るツール。
 
-2.2、 **順番にクリック：**<mark style="color:red;">**「マイアプリ」→「アプリ作成」→「ノーコード」→「シングルチャット」**</mark> 
+モデルは Function Calling を通じて、検索するタイミングと読み取る Web ページを判断します。検索結果がモデルへ返され、モデルが引用を含む回答を生成します。
 
-<figure><img src="../.gitbook/assets/image (53).png" alt=""><figcaption></figcaption></figure>
+### Volcengine Ark クラウド Web Search
 
-<figure><img src="../.gitbook/assets/image (54).png" alt=""><figcaption></figcaption></figure>
+Volcengine Ark の公式サイトでは、Responses API、Web Search、Knowledge Search、Remote MCP などのクラウドツールが提供されています。これらは Ark のインターフェースであり、Cherry Studio の Web 検索設定とは別の機能です。
 
-<figure><img src="../.gitbook/assets/image (71).png" alt=""><figcaption></figcaption></figure>
+現在組み込まれている `doubao` プロバイダーはデフォルトで以下を使用します：
 
-### 3、情報入力とアプリ公開 <a href="#zzdfe" id="zzdfe"></a>
+```text
+OpenAI Chat Completions
+```
 
-**アプリ名**：任意の名前を指定（<mark style="color:red;">**\*必須項目**</mark>、他は空欄可）
+デフォルト API Host：
 
-<mark style="color:red;">**重要：ネットワークプラグインを有効化（事前にアクティベートが必要）**</mark>
+```text
+https://ark.cn-beijing.volces.com/api/v3/
+```
 
-<figure><img src="../.gitbook/assets/image (56).png" alt=""><figcaption></figcaption></figure>
+公式サイトが Responses API のツールに対応していても、Cherry Studio がそのリクエストフィールド、イベントストリーム、引用結果へ自動的に対応しているとは限りません。
 
-#### 3.1、 ネットワークプラグイン機能のアクティベート（費用制限と無料枠に注意） <a href="#mwn38" id="mwn38"></a>
+## 使用前の準備
 
-<figure><img src="../.gitbook/assets/image (57).png" alt=""><figcaption><p>「今すぐ購入」をクリックし、以下の画面が表示されるまで手順を進めるとアクティベーション完了</p></figcaption></figure>
+必要なもの：
 
-<figure><img src="../.gitbook/assets/image (58).png" alt=""><figcaption><p>ステータスを確認、これでアクティベーション成功</p></figcaption></figure>
+1. Volcengine アカウント。
+2. Volcengine Ark API Key。
+3. 現在利用可能な Model ID または Endpoint ID。
+4. Function Calling をサポートする対話モデル。
+5. キーワード検索サービスプロバイダー。
+6. URL 取得サービスプロバイダー。
 
-その後、先ほどの「アプリ情報入力」画面に戻って操作を続行
+Volcengine Ark の基本設定については、[Volcengine（Ark / Doubao）](../pre-basic/providers/doubao.md)を参照してください。
 
-<figure><img src="../.gitbook/assets/image (59).png" alt=""><figcaption></figcaption></figure>
+{% hint style="danger" %}
+Volcengine Ark API Key、検索サービス API Key、またはトークンを含むプライベート URL をチャット、スクリーンショット、公開ドキュメントに書き込まないでください。
+{% endhint %}
 
-#### 3.2、ネットワーク検索「詳細設定」説明 <a href="#sp6uz" id="sp6uz"></a>
+## Volcengine Ark モデルの設定
 
-推奨設定：
+### 1. モデル ID を有効化してコピーする
 
-* 入出力を精密制御する場合：「**カスタム呼び出し**」を選択
-* 簡便化したい場合：デフォルトの「**自動呼び出し**」を使用
-* 情報鮮度を最優先する場合：「**強制有効化**」を選択
+Volcengine Ark コンソールで：
 
-<figure><img src="../.gitbook/assets/image (60).png" alt=""><figcaption></figcaption></figure>
+1. API Key を作成します。
+2. 使用するモデルを有効化します。
+3. 現在の Model ID をコピーします。
+4. 専用の推論エンドポイントを使用する場合は、`ep-...` 形式の Endpoint ID をコピーします。
+5. プロジェクト、リージョン、残高、およびレート制限を確認します。
 
-#### 3.3、アプリ公開 <a href="#fe1gf" id="fe1gf"></a>
+以下のものはコピーしないでください：
 
-右上の「公開」ボタンをクリックしアプリ作成完了
+- モデル表示名。
+- コンソールページの URL。
+- 旧アプリケーションの Bot ID。
+- 他のプロジェクトの Endpoint ID。
 
-<figure><img src="../.gitbook/assets/image (61).png" alt=""><figcaption></figcaption></figure>
+### 2. Cherry Studio でプロバイダーを有効化する
 
-### 4、API Keyの取得 <a href="#jtqlu" id="jtqlu"></a>
+1. `設定 → モデルサービス` を開きます。
+2. フィルターを**すべてのプロバイダー**に切り替えます。
+3. **Doubao / 豆包 / Volcengine** を選択します。
+4. Ark API Key を入力します。
+5. デフォルトの API Host を維持します。
+6. プロバイダーのスイッチをオンにします。
+7. 現在の Model ID または Endpoint ID を手動で追加します。
+8. モデルのヘルスチェックを実行します。
 
-**「API呼び出しガイド」→「API Key選択＆コピー」→「表示して選択」**
+まず通常のテキストメッセージを送り、チャットが利用できることを確認してから Web 検索を設定してください。
 
-API Keyをコピーし、cherry studioに貼り付け（詳細は以下画面参照）
+## Web 検索に適したモデルを選ぶ
 
-<figure><img src="../.gitbook/assets/image (62).png" alt=""><figcaption></figcaption></figure>
+Cherry Studio の外部 Web 検索では、構造化 Function Calling をサポートするモデルを優先して使用してください。
 
-注意：API Keyがない場合、ポップアップ右上の「**API Key作成**」から生成後コピー
+現在の V2 では、以下のような命名規則に沿った複数の新しい Doubao Seed モデルを認識できます。
 
-<figure><img src="../.gitbook/assets/image (63).png" alt=""><figcaption></figcaption></figure>
+```text
+doubao-seed-1.6...
+doubao-seed-1.8...
+doubao-seed-2.0...
+doubao-seed-code...
+```
 
-### 5、cherry studioでAPI Keyを使用したdeepseek-R1ネットワークアクセス <a href="#lrefj" id="lrefj"></a>
+具体的な Model ID は更新されるため、上記のシリーズ名を完全な ID としてそのままコピーするのではなく、Volcengine Ark の現在のモデルページからコピーしてください。
 
-#### 5.1、cherry studio起動 → 「設定」→「任意名称入力」→「タイプ：openAI」 <a href="#dvrbv" id="dvrbv"></a>
+{% hint style="warning" %}
+古いチュートリアルで使用されていた DeepSeek R1 は、現在の V2 では構造化 Function Calling モデルの対象外となっており、Cherry Studio の外部 Web 検索の第一候補としては適していません。通常の対話は可能であっても、検索ツールが呼び出されない場合があります。
+{% endhint %}
 
-<figure><img src="../.gitbook/assets/image (64).png" alt="" width="375"><figcaption></figcaption></figure>
+モデル管理では能力タグを確認したり調整したりできますが、能力タグはクライアント側の判断にのみ影響し、モデルがサーバー側で元々サポートしていない Function Calling を獲得することはありません。
 
-<figure><img src="../.gitbook/assets/image (65).png" alt="" width="375"><figcaption></figcaption></figure>
+## Web 検索の設定
 
-#### 5.2、URLとキーの設定 <a href="#mt8y0" id="mt8y0"></a>
+開く：
 
-<figure><img src="../.gitbook/assets/image (66).png" alt=""><figcaption></figcaption></figure>
+```text
+設定 → Web 検索
+```
 
-<mark style="color:purple;">注意：URLが見つからない/北京ノードでない場合、こちらで確認（末尾の「/」忘れずに）：</mark>
+同時に設定する項目：
 
-<figure><img src="../.gitbook/assets/image (67).png" alt=""><figcaption></figcaption></figure>
+| 設定 | 役割 | 選択可能な例 |
+| --- | --- | --- |
+| デフォルト検索プロバイダー | キーワードから Web ページを検索 | ExaMCP、Tavily、SearXNG、Bocha |
+| デフォルト URL 取得プロバイダー | 特定の Web ページの本文を読み取る | Fetch、Jina |
 
-#### 5.3、モデル名の追加 <a href="#qmh3i" id="qmh3i"></a>
+この 2 項目は両方とも必要です。
 
-注：小文字表記のモデル名をコピー（誤るとエラー発生）
+検索 API Key を別途申請したくない場合は、まず次の組み合わせを使用できます：
 
-<figure><img src="../.gitbook/assets/image (68).png" alt=""><figcaption></figcaption></figure>
+```text
+デフォルト検索プロバイダー：ExaMCP
+デフォルト URL 取得プロバイダー：Fetch
+```
 
-<figure><img src="../.gitbook/assets/image (69).png" alt=""><figcaption></figcaption></figure>
+詳細説明：
 
-### 6、 動作プレビュー <a href="#peb2p" id="peb2p"></a>
+- [Web 検索モード](README.md)
+- [無料 Web 検索モード](mian-fei-lian-wang-mo-shi.md)
+- [SearXNG の設定](searxng.md)
 
-<figure><img src="../.gitbook/assets/image (70).png" alt=""><figcaption></figcaption></figure>
+## 会話で有効化する
+
+1. 対話ページに戻ります。
+2. ヘルスチェックに合格した Volcengine Ark モデルを選択します。
+3. 入力ボックスの下にある**地球アイコン**をクリックします。
+4. アイコンがハイライトされていることを確認します。
+5. リアルタイムの情報が必要な質問を送信します。
+
+テスト問題：
+
+```text
+まず Cherry Studio の直近の正式リリースを Web 検索し、
+公式 GitHub Release だけを引用して、バージョン番号、リリース日、主な変更点を挙げてください。
+```
+
+回答が以下の点を確認しているか：
+
+- 実際に検索ツールが呼び出されていること。
+- 開ける引用が表示されていること。
+- 引用が要求されたウェブサイトから来ていること。
+- 日付とバージョン番号が原文と一致していること。
+- 古い知識をリアルタイムの結果として扱っていないこと。
+
+## Web 検索時の処理
+
+現在の V2 でネイティブ Web 検索アダプターを持たない Volcengine Ark モデルでは、通常は次の流れになります。
+
+1. ユーザーが Web 検索を有効にして質問を送信します。
+2. Cherry Studio が外部検索ツールをモデルに提供します。
+3. モデルが構造化されたツール呼び出しを生成します。
+4. Cherry Studio がデフォルト検索プロバイダーを呼び出します。
+5. モデルが必要に応じてデフォルト URL 取得プロバイダーを呼び出します。
+6. 検索結果と Web ページの本文がモデルへ返されます。
+7. モデルが最終的な回答と引用を生成します。
+
+検索サービスの API Key は Volcengine Ark モデルには送信されませんが、検索結果の本文は会話コンテキストとして Volcengine Ark に送信されます。
+
+## 旧バージョンとの違い
+
+| 旧バージョンの方法 | 現在の V2 の推奨事項 |
+| --- | --- |
+| ノーコードの「マイアプリ」を作成する | Ark Model ID または Endpoint ID を直接使用する |
+| Ark アプリで旧 Web 検索プラグインを購入または有効化する | Cherry Studio で外部検索プロバイダーを設定する |
+| カスタム OpenAI プロバイダーを追加する | 内蔵されている Doubao プロバイダーを優先的に使用する |
+| 完全な `/chat/completions` を URL に書き込む | Base URL を入力し、V2 がリクエストパスを結合する |
+| API Host の末尾に `#` を追加する | 不要 |
+| アプリの小さな ID をモデル名として扱う | 現在の Model ID または Endpoint ID を使用する |
+| 古い DeepSeek R1 の Web 検索例を使用する | Function Calling に対応する現在のモデルを選択する |
+
+旧設定から移行する場合、古いアドレスに互換性パラメータを重ねて適用せず、新しいクリーンな Doubao プロバイダーインスタンスを作成するか、内蔵プロバイダーのデフォルト値を復元することをお勧めします。
+
+## 「ネイティブ Web 検索」を手動でマークしない
+
+モデル詳細の Web 検索機能マークは、Cherry Studio がネイティブ Web 検索と外部 Web 検索のどちらを選ぶかに影響します。
+
+地球アイコンを表示するためだけに、通常の Volcengine Ark モデルをネイティブ Web 検索モデルとしてマークしないでください。現在の V2 には対応する Ark Web Search プラグインのアダプターがないため、誤ってマークすると次の問題が発生する場合があります。
+
+- Cherry Studio が外部検索ツールを注入しなくなります。
+- Ark 側が正しいクラウド Web Search ツールを受け取れません。
+- Web 検索スイッチがハイライトされても、実際には検索されません。
+
+誤って変更した場合はモデルの自動認識へ戻し、このページの外部 Web 検索設定を使用してください。
+
+## Ark クラウド Web Search を使用する必要がある場合
+
+Volcengine Ark のクラウド Web Search は、主に Responses API または Ark アプリの設定を通じて利用します。現在の Cherry Studio V2 に組み込まれている `doubao` 接続には、これらのツールを設定する専用ページがありません。
+
+次の条件をすべて確認するまでは、Ark のクラウドアプリを通常のモデルとして接続しないことをおすすめします。
+
+1. Volcengine Ark の最新の公式ドキュメントに基づき Web Search を有効化していること。
+2. 呼び出すのが Chat API、Responses API、またはアプリケーション Bot API であることを確認していること。
+3. 対応する Model ID、Endpoint ID、または Bot ID を取得していること。
+4. リクエストアドレスと認証方式を確認していること。
+5. 返されるイベントが Cherry Studio の現在のエンドポイントで解析可能であることを確認していること。
+6. 引用、ストリーミング出力、およびツール結果の形式を確認していること。
+7. モデルと検索プラグインの費用を理解していること。
+
+{% hint style="info" %}
+これは高度な互換性シナリオであり、現在の V2 に組み込まれた Web 検索フローには含まれません。Ark のインターフェースが更新されると、以前のアプリ URL やパラメーターが無効になる場合があります。
+{% endhint %}
+
+Volcengine Ark の現在のツールについては、[Volcengine Ark 製品ドキュメント](https://www.volcengine.com/docs/82379/)と[ツール呼び出し](https://www.volcengine.com/docs/82379/1958524)を参照してください。
+
+## プライバシーと費用
+
+Cherry Studio の外部 Web 検索では、データが次の送信先へ分かれて送られる場合があります。
+
+- Volcengine Ark：ユーザーの質問、検索結果、読み取った Web ページの本文。
+- 検索サービスプロバイダー：検索キーワード。
+- 対象サイト：Web ページのリクエスト。
+- URL 取得プロバイダー：選択したサービスに応じて対象 URL。
+
+費用には以下が含まれる場合があります。
+
+- Ark モデルの入力および出力 Token。
+- 検索サービスの呼び出し。
+- Ark の推論エンドポイントまたはモデルユニット。
+- 追加のネットワークトラフィック。
+- Ark Web Search を別途使用する場合のプラグイン費用。
+
+古いスクリーンショットに記載された無料回数や料金を予算の根拠にしないでください。各サービスの現在のコンソールを基準にしてください。
+
+## よくある質問
+
+### 地球アイコンをクリックすると Web 検索設定へ移動する
+
+現在のモデルにはネイティブ Web 検索アダプターがなく、**デフォルト検索プロバイダー**または**デフォルト URL 取得プロバイダー**が設定されていません。両方を設定してから再試行してください。
+
+### 通常の会話は可能ですが、検索ツールの呼び出しが行われません
+
+以下の項目を順に確認してください：
+
+1. 地球アイコンがハイライトされているか。
+2. 現在のモデルが Function Calling に対応しているか。
+3. Model ID が誤ってツール非対応とマークされていないか。
+4. 古い DeepSeek R1 を使用していないか。
+5. 問題が検索と引用を明確に求めているか。
+6. 検索プロバイダーの検出が成功しているか。
+
+現在の Doubao Seed ツール対応モデルへ切り替え、新しい会話で再試行できます。
+
+### モデルが「検索します」と言うだけで結果がない場合
+
+これは成功したツール呼び出しではありません。メッセージの詳細に構造化されたツールプロセスが表示されているか確認してください。表示されていない場合は、より安定したツール呼び出し能力を持つモデルに交換してください。
+
+### 検索結果はあるが、引用が開けない場合
+
+Web ページの失効、ログイン制限、ボット対策、地域制限、Fetch の読み取り失敗などが考えられます。モデルへ別の情報源を使用するよう指示し、重要な結論は手動で確認してください。
+
+### 有効にした後もモデルが古い知識を使用する場合
+
+明確な指示：
+
+```text
+必ず先に Web 検索を行うこと。検索に失敗した場合はその旨を説明し、既存の知識だけで回答しないこと。
+```
+
+それでも無効な場合は、新しい会話を開始するか、モデルを変更するか、検索プロバイダーを確認してください。
+
+### Volcengine Ark 独自の Web Search を使用したい
+
+現在の Cherry Studio には対応する組み込み設定がありません。モデルの機能スイッチをアダプターとして扱わないでください。Ark の最新の Responses API またはアプリ API ドキュメントに従って自分で検証するか、当面は Cherry Studio の外部 Web 検索を使用してください。
+
+### 401、403、404、429 が返される
+
+通常は Web 検索設定ではなく、Ark モデルの接続に関する問題です：
+
+- `401`：API Key が無効です。
+- `403`：プロジェクト、モデル、または Endpoint の権限がありません。
+- `404`：API Host、Model ID、または Endpoint ID が誤っています。
+- `429`：レート制限、並行処理、またはクォータの制限に達しました。
+
+まず Web 検索を無効にして通常のチャットが利用できることを確認し、モデル接続と検索サービスを個別に切り分けてください。
+
+***
+
+### 💡 ヘルプの取得とフィードバックの送信
+
+設定または使用中に疑問点、バグ、または機能提案に遭遇した場合は、[フィードバックと提案](../../question-contact/suggestions.md)の公式チャネルを参照してください。

@@ -2,90 +2,161 @@
 icon: route
 ---
 
-# 调用链使用教程
+# 调用链（Trace）
 
-## 功能介绍
+调用链（Trace）用于查看一次对话在 Cherry Studio 内部经历了哪些步骤。它以 OpenTelemetry Trace 和 Span 为基础，把模型请求、工具调用、知识库检索等处理过程组织成树状结构，并展示各节点的耗时、状态、输入输出和 Token 用量。
 
-调用链（Trace）是一个基于 [OpenTelemetry](https://opentelemetry.io/docs/languages/js/) 实现的可观测工具。它通过在端侧自动采集、存储和处理数据，将一次对话背后的完整执行过程实现可视化，用于查看每个处理环节（例如模型调用、知识库检索、MCP 工具调用或网络搜索）的耗时、输入输出和 token 使用情况，为定位问题、优化效果提供量化评估依据。
+当回答不符合预期、工具调用失败或响应变慢时，调用链可以帮助你判断问题发生在哪一层：
 
-每次新对话请求会生成一条 trace 数据。一条 trace 由多个 span 组成，每个 span 对应 Cherry Studio 的一个处理环节，例如模型调用、知识库检索、MCP 工具调用或网络搜索。Trace 窗口会以树结构展示这些 span，你可以逐层展开查看详情。
+* 模型是否收到了正确的上下文；
+* 网络搜索或知识库检索返回了什么；
+* MCP 工具使用了哪些参数；
+* 哪个步骤耗时最长或返回错误；
+* 多模型回答分别产生了多少 Token。
 
-<figure><img src="../.gitbook/assets/trace2.gif" alt=""><figcaption><p>调用链整体效果</p></figcaption></figure>
-
-## 开启 Trace
-
-Trace 默认隐藏，需要先开启开发者模式：
-
-1. 打开 `设置 → 常规设置`
-2. 找到 **开发者模式**
-3. 开启 **启用开发者模式**
-
-<figure><img src="../.gitbook/assets/cherry-trace-enable-developer-mode.jpg" alt=""><figcaption><p>在常规设置中开启开发者模式</p></figcaption></figure>
-
-{% hint style="info" %}
-开启后，之前已经产生的会话不会补生成 Trace；只有后续新的问答才会记录调用链。
+{% hint style="warning" %}
+调用链属于开发者诊断功能，可能保存提示词、模型输出、工具参数和检索内容。不要在包含敏感信息的生产会话中长期启用，也不要未经检查直接分享完整 Trace。
 {% endhint %}
 
-Trace 数据存储在本地应用数据目录中。通常不需要手动处理，如需彻底清理，可进入 `设置 → 数据设置 → 数据目录`，使用 **清除缓存**，或打开数据目录后删除 trace 相关缓存。
+## 启用调用链
 
-常见数据目录：
+1. 打开 `设置 → 常规设置`。
+2. 找到 **开发者模式**。
+3. 开启 **启用开发者模式**。
+4. 完全退出并重新打开 Cherry Studio。
+5. 新建一次对话并发送消息。
 
-* **macOS**：`~/Library/Application Support/CherryStudio`
-* **Windows**：`%APPDATA%\CherryStudio`
-* **Linux**：`~/.config/CherryStudio`
+{% hint style="info" %}
+必须重启应用。Trace 的窗口和缓存服务只会在 Cherry Studio 启动时根据开发者模式状态激活；只切换开关但不重启，可能看不到入口或无法读取数据。
+{% endhint %}
 
-<figure><img src="../.gitbook/assets/cherry-trace-data-settings.jpg" alt=""><figcaption><p>数据目录与缓存清理入口</p></figcaption></figure>
+启用前已经生成的消息不会补建调用链。只有重启后新执行、且成功写入 Trace ID 的消息才会显示入口。
 
-## 场景介绍
+## 打开一次调用链
 
-### 全链路查看
+在普通对话页面找到需要检查的消息，将鼠标移到消息操作栏，然后点击 **调用链** 图标。
 
-在 Cherry Studio 对话框中点击调用链按钮，即可打开本次对话的完整链路。无论对话过程中调用了模型、网络搜索、知识库还是 MCP，都可以在调用链窗口中查看到对应节点。
+当前入口只提供给普通对话消息；Agent Session 的消息操作栏不显示调用链按钮。
 
-<figure><img src="../.gitbook/assets/cherry-trace-button.jpg" alt=""><figcaption><p>对话消息旁的调用链入口</p></figcaption></figure>
+该按钮只在以下条件同时成立时出现：
 
-<figure><img src="../.gitbook/assets/cherry-trace-overview.jpg" alt=""><figcaption><p>调用链树形视图</p></figcaption></figure>
+* 开发者模式已启用；
+* 当前消息包含 Trace ID；
+* Trace 服务已在本次应用启动时激活。
 
-### 查看模型调用
+Cherry Studio 会打开独立的调用链窗口。再次点击另一条消息的调用链按钮时，现有窗口会切换到对应 Trace。
 
-点击模型调用节点，可以查看该次模型请求的耗时、token 使用量、输入和输出。
+如果同一问题生成了多个模型回答，请在对应模型的回答消息上分别点击调用链；窗口会按该消息的模型过滤 Trace 数据。
 
-<figure><img src="../.gitbook/assets/cherry-trace-model-node.jpg" alt=""><figcaption><p>选择模型调用节点</p></figcaption></figure>
+## 读懂 Trace 树
 
-<figure><img src="../.gitbook/assets/cherry-trace-model-input.jpg" alt=""><figcaption><p>模型调用输入</p></figcaption></figure>
+一次完整请求对应一个 Trace，其中的每个处理步骤对应一个 Span。子节点表示它是在父节点的上下文中发生的。
 
-<figure><img src="../.gitbook/assets/cherry-trace-model-output.jpg" alt=""><figcaption><p>模型调用输出</p></figcaption></figure>
+选择节点后，详情区可能显示：
 
-### 查看网络搜索
+| 信息 | 用途 |
+|---|---|
+| 开始与结束时间 | 判断步骤发生顺序 |
+| Duration | 定位耗时较长的环节 |
+| 错误高亮 | 节点名称变红时，检查该步骤的异常输出 |
+| Input / Attributes | 检查输入、参数和上下文 |
+| Outputs | 查看返回内容；异常信息也会在这里展示 |
+| Token Usage | 比较 Prompt Token 和 Completion Token |
 
-点击网络搜索节点，可以查看搜索请求的问题、返回结果，以及后续传给模型的上下文。
+并不是每次请求都会出现相同节点。实际结构取决于所用模型、是否联网、是否关联知识库，以及模型是否调用 MCP 工具。
 
-<figure><img src="../.gitbook/assets/cherry-trace-websearch-node.jpg" alt=""><figcaption><p>选择网络搜索节点</p></figcaption></figure>
+### 模型调用
 
-<figure><img src="../.gitbook/assets/cherry-trace-websearch-input.jpg" alt=""><figcaption><p>网络搜索输入</p></figcaption></figure>
+模型节点可用于检查：
 
-<figure><img src="../.gitbook/assets/cherry-trace-websearch-output.jpg" alt=""><figcaption><p>网络搜索返回结果</p></figcaption></figure>
+* 实际调用的模型；
+* 发送给模型的输入；
+* 模型返回的文本或流式结果；
+* Prompt Token 和 Completion Token；
+* 请求耗时与错误状态。
 
-### 查看知识库检索
+如果回答内容明显遗漏信息，先确认模型输入中是否已经包含相关上下文。
 
-点击知识库节点，可以查看检索问题、命中的内容，以及知识库返回给模型的上下文。
+### 网络搜索
 
-<figure><img src="../.gitbook/assets/cherry-trace-knowledge-detail.jpg" alt=""><figcaption><p>知识库节点详情</p></figcaption></figure>
+使用联网搜索时，Trace 可能包含搜索请求、结果整理和模型调用等节点。重点检查：
 
-### 查看 MCP 调用
+* 搜索词是否准确；
+* 搜索是否成功返回；
+* 结果是否经过筛选后传给模型；
+* 搜索耗时是否成为主要瓶颈。
 
-点击 MCP 节点，可以查看 MCP Server tool 的入参、返回值和耗时，便于排查工具调用是否符合预期。
+### 知识库检索
 
-<figure><img src="../.gitbook/assets/cherry-trace-mcp-detail.jpg" alt=""><figcaption><p>MCP 调用详情</p></figcaption></figure>
+关联 [知识库](../knowledge-base/knowledge-base.md) 后，可以用调用链确认检索是否命中预期内容。重点查看检索问题、返回片段、相似度信息和最终送入模型的上下文。
 
-<figure><img src="../.gitbook/assets/cherry-trace-mcp-output.jpg" alt=""><figcaption><p>MCP 返回结果</p></figcaption></figure>
+如果知识库节点没有结果，应继续检查嵌入模型、文档处理状态、检索阈值和用户问题的表达。
 
-## 问题和建议
+### MCP 工具调用
 
-如果调用链数据显示异常，或你希望补充更多可观测能力，参考 [反馈与建议](../question-contact/suggestions.md) 中提供的官方渠道。反馈时建议附上 Trace 截图、所用模型、是否启用了知识库 / MCP / 网络搜索，以及能够复现的提问内容。
+使用 [MCP](mcp/README.md) 时，Trace 可帮助核对工具名称、调用参数、返回值、耗时和错误。
+
+工具执行失败时，区分以下情况：
+
+* 模型选择了错误工具；
+* 工具参数不完整或格式错误；
+* MCP Server 未运行或连接失败；
+* 工具已经执行，但返回内容未被模型正确使用。
+
+{% hint style="info" %}
+Trace 展示的是诊断数据，不会自动重试或修复失败步骤。确认原因后，需要回到对话、模型、知识库或 MCP 设置中修改配置。
+{% endhint %}
+
+## 数据保存与清理
+
+Trace 数据保存在当前用户主目录：
+
+```
+~/.cherrystudio/trace
+```
+
+其下会按话题 ID 和 Trace ID 组织数据。Windows 中的 `~` 表示当前用户目录，例如 `C:\Users\<用户名>`。
+
+删除一条消息或话题时，Cherry Studio 会清理对应的部分 Trace 数据。要清除全部本地 Trace：
+
+1. 打开 `设置 → 数据设置`。
+2. 找到缓存信息。
+3. 点击 **清除缓存** 并确认。
+
+清除缓存会同时删除其他应用缓存。执行前确认没有需要保留的诊断数据。
+
+{% hint style="danger" %}
+不要在 Cherry Studio 运行时手动编辑 Trace 文件。需要分享时，优先截取必要节点，并先遮盖 API 密钥、个人数据、文件路径和业务内容。
+{% endhint %}
+
+## 常见问题
+
+### 已开启开发者模式，但没有调用链按钮
+
+依次检查：
+
+1. 开启后是否完全重启过 Cherry Studio。
+2. 当前消息是否在重启后新生成。
+3. 是否查看的是普通对话消息；没有 Trace ID 的历史消息不会显示入口。
+4. 新建话题后再发送一条简单消息进行测试。
+
+### 调用链窗口为空
+
+* 等待当前模型输出和工具调用完成后重新打开。
+* 确认对应消息没有被删除，Trace 缓存也没有被清理。
+* 如果刚开启开发者模式，重启应用后创建新对话再试。
+* 多模型回答请在对应模型的回答消息上分别打开调用链。
+
+### 看不到知识库、搜索或 MCP 节点
+
+只有本次请求实际执行了对应能力，才会出现相关 Span。先从对话结果和模型工具调用记录确认该步骤是否真的发生。
+
+### Trace 数据太多
+
+完成排查后关闭开发者模式，并重启 Cherry Studio。需要立即释放本地空间时，可在数据设置中清除缓存。
 
 ***
 
 ### 💡 获取帮助与提交反馈
 
-如果您在配置或使用过程中遇到任何疑问、Bug 或有功能改进建议，请参考 [反馈与建议](../question-contact/suggestions.md) 中提供的官方渠道。
+如果调用链数据异常，提交反馈时建议附上必要的 Trace 截图、Cherry Studio 版本、所用模型，以及是否启用了知识库、网络搜索或 MCP。官方渠道见 [反馈与建议](../question-contact/suggestions.md)。

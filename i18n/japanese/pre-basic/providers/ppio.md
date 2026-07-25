@@ -1,63 +1,257 @@
-# PPIO パイオウクラウド
+# PPIO
 
+PPIO は大規模言語モデル、ビジョンモデル、Embedding、Rerank、画像生成 API を提供します。Cherry Studio V2 には PPIO プロバイダーが組み込まれており、カスタムプロバイダーを新規作成せずに、プラットフォームで現在利用できるモデルを直接同期できます。
 
-{% hint style="warning" %}
-このドキュメントはAIによって中国語から翻訳されており、まだレビューされていません。
+V2 に組み込まれたチャットと Embedding の Base URL：
+
+```text
+https://api.ppinfra.com/v3/openai/
+```
+
+{% hint style="info" %}
+PPIO 公式 API マニュアルの一部の例では `api.ppio.com/openai/v1` が使用されていますが、現在の Cherry Studio V2 の組み込みプロバイダーは上記の互換アドレスを使用します。初回設定ではアプリのプリセットを維持し、PPIO または Cherry Studio が移行を明示的に求めた場合にだけ変更してください。
 {% endhint %}
 
+## 使用前の準備
 
+PPIO モデル API を初めて使用する場合、通常は次の準備が必要です。
 
+1. PPIO へ登録してログインする。
+2. 個人または企業の実名認証を完了する。
+3. アカウントへ入金するか、利用可能な残高を確認する。
+4. API Key を作成する。
+5. 使用予定のモデルがまだ提供中であることを確認する。
 
-## Cherry Studio の PPIO LLM API 接続方法
+PPIO のモデル、価格、公開・廃止状況は変更されます。このページでは価格や付与割り当てを固定して記載しません。コンソールと[モデルサービスページ](https://ppio.com/model-api/product/llm-api)を基準にしてください。
 
-### [​](https://ppinfra.com/docs/third-party/cherry-studio-use#%E6%95%99%E7%A8%8B%E6%A6%82%E8%BF%B0)チュートリアル概要 <a href="#e6-95-99-e7-a8-8b-e6-a6-82-e8-bf-b0" id="e6-95-99-e7-a8-8b-e6-a6-82-e8-bf-b0"></a>
+## API Key を取得する
 
-Cherry Studio はマルチモデルデスクトップクライアントで、現在 Windows、Linux、MacOS システム向けインストーラーをサポートしています。主要な LLM モデルを統合し、多様なシナリオを支援します。ユーザーはインインテリジェントな会話管理、オープンソースカスタマイズ、マルチテーマインターーフェースを通じて作業効率を向上できます。
+1. [PPIO コンソール](https://ppio.com/)へログインします。
+2. [API Key 管理](https://ppio.com/settings/key-management)を開きます。
+3. **作成**をクリックします。
+4. 識別しやすい Key 名を入力します。
+5. 作成後すぐにコピーし、安全に保管します。
 
-Cherry Studio は **PPIO 高性能 API ゲートウェイ** と完全互換となりました——エンタープライズレベルのコンピューーティングリソースにより、**DeepSeek-R1/V3 の高速応答** と **99.9% のサービス可用性** を実現し、スムーズな体験を提供します。
+PPIO は Bearer 方式で API Key を検証します。現在、1 アカウントにつき最大 10 個の Key を作成でき、作成後に Key を再表示することはできません。
 
-以下のチュートリアルには完全な接続ソリューション（APIキー設定含む）が含まれており、3分で「Cherry Studio インテリジェントスケジューリング + PPIO 高性能API」のアドバンストモードを開始できます。
+{% hint style="danger" %}
+API Key はアカウントの認証情報に相当します。チャット、ドキュメント、コードリポジトリ、問題報告のスクリーンショットに書き込まないでください。紛失または漏えいした場合は、PPIO ですぐに削除して再作成してください。
+{% endhint %}
 
-### [​](https://ppinfra.com/docs/third-party/cherry-studio-use#1-%E8%BF%9B%E5%85%A5-cherrystudio%EF%BC%8C%E6%B7%BB%E5%8A%A0-%E2%80%9Cppio%E2%80%9D-%E4%BD%9C%E4%B8%BA%E6%A8%A1%E5%9E%8B%E6%8F%90%E4%BE%9B%E5%95%86)1. CherryStudio で「PPIO」をモデルプロバイダーとして追加 <a href="#id-1-e8-bf-9b-e5-85-a5-cherrystudio-ef-bc-8c-e6-b7-bb-e5-8a-a0-e2-80-9cppio-e2-80-9d-e4-bd-9c-e4-b8-ba" id="id-1-e8-bf-9b-e5-85-a5-cherrystudio-ef-bc-8c-e6-b7-bb-e5-8a-a0-e2-80-9cppio-e2-80-9d-e4-bd-9c-e4-b8-ba"></a>
+## Cherry Studio で設定する
 
-まず公式サイトから Cherry Studio をダウンロード：[https://cherry-ai.com/download](https://cherry-ai.com/download) （アクセスできない場合は以下の Quark クラウドリンクから必要なバージョンをダウンロード：[https://pan.quark.cn/s/c8533a1ec63e#/list/share](https://pan.quark.cn/s/c8533a1ec63e#/list/share))
+1. `設定 → モデルプロバイダー`を開きます。
+2. 左側のフィルターを**すべてのプロバイダー**に切り替えます。
+3. **PPIO** を選択します。
+4. API Key に PPIO の Key を貼り付けます。
+5. プリセットの Base URL `https://api.ppinfra.com/v3/openai/` を維持します。
+6. ページ上部のプロバイダースイッチをオンにします。
+7. **追加**またはモデル同期をクリックします。
+8. 同期プレビューを確認して変更を適用します。
+9. 使用するモデルだけを有効にします。
+10. モデルのヘルスチェックを実行します。
 
-（1）左下の設定をクリックし、プロバイダー名を「`PPIO`」に変更し、「確定」をクリック
+接続チェックは、認証情報と基本リクエストが利用できることだけを示します。リストのすべてのモデルをアカウントから呼び出せることを意味しません。モデル権限、残高、地域制限、公開・廃止状況は引き続き PPIO が判断します。
 
-<figure><img src="https://static.ppinfra.com/docs/image/llm/cherry-studio-setting.png" alt=""><figcaption></figcaption></figure>
+## モデルを同期する
 
-（2）[パイオウコンピューーティングクラウド API キー管理](https://ppinfra.com/user/register?invited_by=JYT9GD\&utm_source=github_cherry-studio) にアクセスし、【ユーザーアイコン】→【APIキー管理】でコンソールに入る
+Cherry Studio V2 は 3 種類のモデルリストを並列で取得します。
 
-<figure><img src="https://static.ppinfra.com/docs/image/llm/ppinfra-create-api-key-01.png" alt=""><figcaption></figcaption></figure>
+```text
+/models
+/models?model_type=embedding
+/models?model_type=reranker
+```
 
-【+ 作成】ボタンをクリックして新しいAPIキーを作成。キー名をカスタマイズし、**生成されたキーは生成時のみ表示されるため、必ずコピーして保存し、今後の使用に影響しないようにしてください**
+結果は統合され、Model ID で重複が除去されるため、1 回の同期でチャット、Embedding、Rerank モデルを同時に検出できます。
 
-<figure><img src="https://static.ppinfra.com/docs/image/llm/ppinfra-create-api-key-02.png" alt=""><figcaption></figcaption></figure>
+同期後の推奨手順：
 
-（3）CherryStudio でキーを入力：設定を選択し、【PPIO パイオウクラウド】を選び、公式サイトで生成したAPIキーを入力し、【チェック】をクリック
+1. 追加、更新、削除項目を確認します。
+2. 各モデルの種類を確認します。
+3. 同期結果を適用します。
+4. 手動で残していた期限切れモデルを削除します。
+5. 個別にヘルスチェックを実行します。
 
-<figure><img src="https://static.ppinfra.com/docs/image/llm/cherry-studio-3601.PNG" alt=""><figcaption></figcaption></figure>
+{% hint style="warning" %}
+V2 の組み込みプリセットは初回表示用であり、PPIO によるモデルの廃止や名称変更より古い場合があります。プラットフォームがリアルタイムで返すモデルリストと公式発表を優先し、旧 Model ID がローカルに表示されるだけで使用を続けないでください。
+{% endhint %}
 
-（4）モデル選択：例として deepseek/deepseek-r1/community を選択。他のモデルに変更する場合は直接切り替え可能
+## チャットモデルを選択する
 
-<figure><img src="https://static.ppinfra.com/docs/image/llm/cherry-studio-3602.PNG" alt=""><figcaption></figcaption></figure>
+PPIO のチャットモデルは OpenAI 互換 Chat Completions を通じて接続します。長いコンテキスト、ビジョン、ツール呼び出し、思考パラメーターへの対応はモデルごとに異なります。
 
-DeepSeek R1 と V3 community 版は体験用で、全パラメータ完全版モデルです。安定性と効果に違いはありませんが、大量に呼び出す場合は **チャージして非community版に切り替える** 必要があります。
+次の順序でテストすることを推奨します。
 
-### [​](https://ppinfra.com/docs/third-party/cherry-studio-use#2-%E6%A8%A1%E5%9E%8B%E4%BD%BF%E7%94%A8%E9%85%8D%E7%BD%AE)2. モデル使用設定 <a href="#id-2-e6-a8-a1-e5-9e-8b-e4-bd-bf-e7-94-a8-e9-85-8d-e7-bd-ae" id="id-2-e6-a8-a1-e5-9e-8b-e4-bd-bf-e7-94-a8-e9-85-8d-e7-bd-ae"></a>
+1. 短いテキストメッセージを送信します。
+2. ストリーミング出力を確認します。
+3. システムプロンプトを追加します。
+4. より長いコンテキストをテストします。
+5. 最後に画像、思考、ツール呼び出しをテストします。
 
-（1）【チェック】をクリックして接続成功が表示されれば正常に使用可能
+Model ID は、組織プレフィックス、大文字と小文字、スラッシュ、バージョンサフィックスを含め、PPIO の現在のリストと完全に一致させる必要があります。モデルの表示名や製品ページ URL を Model ID として使用しないでください。
 
-<figure><img src="https://static.ppinfra.com/docs/image/llm/cherry-studio-3603.png" alt=""><figcaption></figcaption></figure>
+## ビジョンモデル
 
-（2）最後に【@】をクリックし、PPIOプロバイダー下で追加したDeepSeek R1モデルを選択すればチャット開始～
+PPIO がビジョン言語モデルとして明示的にマークした Model ID だけが画像を受け取れます。
 
-<figure><img src="https://static.ppinfra.com/docs/image/llm/cherry-studio-ppio-config-02.png" alt=""><figcaption></figcaption></figure>
+Cherry Studio では：
 
-【一部素材出典：[陈恩](https://www.kdocs.cn/l/ctGiF5K6PQoO)】
+1. 最新モデルを同期します。
+2. 画像機能が表示されるモデルを選択します。
+3. まず小さな画像を 1 枚アップロードします。
+4. モデルが画像内容を実際に理解しているか確認します。
+5. その後、複数画像または高解像度画像を試します。
 
-### [​](https://ppinfra.com/docs/third-party/cherry-studio-use#3-ppio%C3%97cherry-studio-%E8%A7%86%E9%A2%91%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B)3. PPIO×Cherry Studio 動画チュートリアル <a href="#id-3-ppio-c3-97cherry-studio-e8-a7-86-e9-a2-91-e4-bd-bf-e7-94-a8-e6-95-99-e7-a8-8b" id="id-3-ppio-c3-97cherry-studio-e8-a7-86-e9-a2-91-e4-bd-bf-e7-94-a8-e6-95-99-e7-a8-8b"></a>
+同じモデルシリーズでも、テキスト版とビジョン版で異なる ID を使用する場合があります。画像はリクエストボディ、コンテキスト消費、料金も増やします。
 
-より直感的な学習を希望される場合、Bilibiliに動画チュートリアルを用意しました。「PPIO API+Cherry Studio」の設定方法を手順ごとに説明し、スムーズな開発体験を開始できます → [《【DeepSeekの回転待ちにまだイライラ？】パイオウクラウド+DeepSeek完全版=？渋滞解消、即時起動》](https://www.bilibili.com/video/BV1BZNmeTEwg/?buvid=XX82F37818653072D274A6BB8A4FE7938A30C\&from_spmid=search.search-result.0.0\&is_story_h5=false\&mid=3CpKQv%2Bjnb8k6iTGlUl1eH8FTQ%2FSZMtL1rElX6M3iMo%3D\&plat_id=116\&share_from=ugc\&share_medium=android\&share_plat=android\&share_session_id=b892268f-5751-4f6e-9690-50b37855d346\&share_source=WEIXIN\&share_source=weixin\&share_tag=s_i\&spmid=united.player-video-detail.0.0\&timestamp=1739160448\&unique_k=eKDZuRP\&up_id=3546757841554023\&vd_source=50fea165795ccc47455a165f5bcaeed2)
+## 思考モード
 
-【動画出典：sola】
+Cherry Studio はモデルシリーズに応じた思考パラメーターを生成します。PPIO 上の DeepSeek ハイブリッド推論モデルでは、V2 はプラットフォーム互換の `thinking` コントロールを使用します。
+
+思考を有効にした後にパラメーターエラーが発生した場合：
+
+1. 思考オプションを**デフォルト**へ戻します。
+2. モデルのカスタムパラメーターを削除します。
+3. Model ID が旧バージョンを指していないことを確認します。
+4. モデルを再同期します。
+5. PPIO の現在のモデル説明と比較してテストします。
+
+あるモデルが受け付ける思考パラメーターを別のシリーズへコピーしないでください。PPIO はプラットフォームで対応するパラメーターを転送するだけであり、最終的な動作は具体的なモデルによって決まります。
+
+## MCP とツール呼び出し
+
+Cherry Studio MCP を使用するには、モデルが構造化 Tool Calling に対応する必要があります。
+
+1. 先に通常のチャットが動作することを確認します。
+2. 単純な MCP ツールを 1 つだけ有効にします。
+3. そのツールを呼び出すようモデルへ明示します。
+4. 構造化された呼び出しが生成されるか確認します。
+5. ツール結果がモデルへ返されることを確認します。
+6. その後、ツールを段階的に増やします。
+
+モデルが「ツールを呼び出す」とテキストで説明するだけで実際には呼び出さない場合、通常はモデル機能、モデル認識、パラメーター互換性の問題であり、MCP サーバーが正常に動作したことを意味しません。
+
+## Embedding、Rerank、ナレッジベース
+
+PPIO は OpenAI 互換の Embedding と Rerank API も提供しています。V2 は同期時にこの 2 種類のモデルを個別に取得します。
+
+現在の公式 API マニュアルに記載された例：
+
+- Embedding：`baai/bge-m3`。
+- Rerank：`baai/bge-reranker-v2-m3`。
+
+これらの名前もプラットフォームによって変更される場合があります。実際の使用時は、同期結果と PPIO のモデルページを基準にしてください。
+
+ナレッジベースを作成する場合：
+
+1. 先に PPIO モデルを同期します。
+2. Embedding と明確に認識されたモデルを選択します。
+3. ベクトル次元を検出します。
+4. ヘルスチェックを実行します。
+5. 現在利用できる Rerank モデルを選択します。
+6. 少数のドキュメントをインポートして試します。
+7. 検索とリランキングの結果を確認してから一括インポートします。
+
+Embedding モデルまたはベクトル次元を既存のナレッジベースで使用した後は、直接変更しないでください。通常、ベクトルインデックスの再構築が必要になります。
+
+## 画像の生成と編集
+
+Cherry Studio V2 は PPIO 専用の画像転送経路を実装しています。チャット API とは異なるホストを使用します。
+
+| 用途 | V2 が使用するアドレス |
+| --- | --- |
+| チャットと Embedding | `https://api.ppinfra.com/v3/openai/` |
+| 画像生成とタスク照会 | `https://api.ppio.com` |
+
+画像ページはモデルの登録情報に応じて同期または非同期 API を選択し、そのモデルが対応を宣言したモードとパラメーターだけを表示します。例：
+
+- テキストから画像。
+- 画像編集。
+- 画像サイズ。
+- Seed。
+- ウォーターマーク。
+- 一部のモデルの LoRA または参照画像。
+
+PPIO 公式サイトに掲載されるすべての画像モデルが、現在の V2 ですでに対応済みとは限りません。Cherry Studio の描画ページで選択できる PPIO モデルからテストしてください。
+
+PPIO は 2026 年 1 月 31 日に、旧版の `txt2img`、`img2img`、背景削除、背景置換、インペイント、テキスト消去、オブジェクト消去、顔合成 API を含む一連の旧 Image API を廃止しました。これらの旧 API を使用するチュートリアルやスクリーンショットをそのまま使用しないでください。
+
+{% hint style="warning" %}
+画像生成には明確な料金が発生する場合があります。まず小さなサイズと 1 枚の出力でテストしてください。非同期タスクの待機中に連続で再送信すると、複数の課金対象タスクが作成される可能性があります。
+{% endhint %}
+
+## PDF と添付ファイル
+
+現在の V2 は先にローカルで PDF のテキストを抽出し、PPIO のチャットモデルへ送信します。
+
+- テキスト形式の PDF は通常処理できます。
+- スキャンされた文書は、先に OCR が必要です。
+- 表、複雑なレイアウト、画像の情報は失われる場合があります。
+- 抽出したテキストはモデルコンテキストと料金を消費します。
+- PDF 内の画像はビジョンモデルへ個別に送信する必要があります。
+
+PPIO はクラウドサービスです。ドキュメント、画像、ナレッジベースの内容をアップロードする前に、プライバシー、著作権、組織のセキュリティ要件を満たすことを確認してください。
+
+## 残高、レート制限、モデルの廃止
+
+PPIO はモデルと使用量に応じて課金し、具体的な価格、レート、同時実行制限は変更される場合があります。
+
+推奨事項：
+
+1. コンソールで予算または残高アラートを設定します。
+2. 新しいモデルは短いリクエストで検証します。
+3. 複数の自動タスクが同じ Key を共有して無制限に再試行しないようにします。
+4. 429 が発生した場合は、同時実行数を下げて待ちます。
+5. [公式発表](https://ppio.com/docs/announcement/announcement)でモデルと API の廃止情報を確認します。
+6. 定期的にモデルを同期して旧 ID を削除します。
+
+コミュニティ版ドキュメントでは、期間限定価格、招待コード、ボーナス、「永久無料」などの情報を固定して記載しません。キャンペーン終了後の誤解を防ぐためです。
+
+## よくある問題
+
+### 401 が返る
+
+API Key が誤っている、削除済み、コピー時に空白が含まれた、または Bearer 認証が正しく使用されていません。Key 管理ページでもう一度作成してコピーしてください。
+
+### 402 または残高不足が返る
+
+アカウント残高が不足しているか、現在のモデルが利用可能な権利に含まれていません。PPIO の請求、残高、モデル価格を確認してください。
+
+### 403 が返る
+
+アカウントの実名認証が完了していない、モデル権限がない、またはリクエスト内容がプラットフォームポリシーに抵触した可能性があります。まず PPIO コンソールでアカウント状態を確認してください。
+
+### 404 が返る
+
+Base URL、Model ID、または画像 API の有効期限が切れています。先に V2 のプリセットアドレスへ戻し、モデルを同期して公式の廃止情報を確認してください。
+
+### 429 が返る
+
+モデルのレート、同時実行、またはアカウント制限に達しています。同時実行数を下げ、リクエストを短くして、回復を待ってください。すぐにループして再試行しないでください。
+
+### モデルリストが空
+
+API Key、Base URL、ネットワークプロキシを確認します。プリセット Base URL へ戻して再同期してください。必要に応じて PPIO の現在のモデルページから完全な Model ID をコピーして手動で追加します。
+
+### プリセットモデルを使用できない
+
+プリセットが、プラットフォームによる廃止、名称変更、権限変更より古い可能性があります。リアルタイムの同期結果を基準に、無効なモデルを削除して現在利用できるバージョンを選択してください。
+
+### Embedding は使用できるが Rerank は使用できない
+
+それぞれ異なるモデルと API を使用します。個別に同期してヘルスチェックを実行し、Rerank モデルが廃止されておらず、ナレッジベースで Embedding モデルではなくリランキングモデルを選択していることを確認してください。
+
+### 画像タスクが待機し続ける
+
+タスクがまだキュー内にある、プラットフォームが混雑している、ネットワークポーリングに失敗した、または残高が不足している可能性があります。まず待機してエラー情報を確認し、同じタスクを連続で再送信しないでください。
+
+### 旧チュートリアルの画像モデルが見つからない
+
+PPIO は一部の旧 Image API を廃止し、V2 も現在対応済みの画像モデルだけを表示します。最新モデルを同期し、描画ページで実際に選択できる項目を使用してください。
+
+### Base URL の変更後にチャットと描画がどちらも失敗する
+
+PPIO のチャットと画像経路は異なるホストを使用します。API 例に合わせるために V2 内部の画像アドレスを上書きしないでください。組み込みプロバイダーのデフォルト設定へ戻して再試行します。
+
+一般的な設定については、[モデルプロバイダー](README.md)と[モデルプロバイダー設定](../../cherrystudio/preview/settings/providers.md)を参照してください。PPIO の現在のアカウント要件、Key、API については[クイックスタート](https://ppio.com/docs/model/get-start)、[API Key の管理](https://ppio.com/docs/support/api-key)、[Embedding](https://ppio.com/docs/models/reference-llm-create-embeddings)、[Rerank](https://ppio.com/docs/models/reference-llm-create-rerank)、フィードバック窓口については[フィードバックと提案](../../question-contact/suggestions.md)を参照してください。

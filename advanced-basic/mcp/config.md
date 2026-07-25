@@ -1,81 +1,192 @@
 # 配置和使用 MCP
 
-本页用一个最常见的例子 —— **让 AI 能上网取页面内容**（叫 `fetch`，由 MCP 官方提供）—— 带你走完一次完整的 MCP 配置。后续装其他 MCP，流程基本相同。
+在 Cherry Studio 中使用 MCP 分为两件事：
 
-> 不知道 MCP 是什么？先看 [MCP 使用教程总览](README.md)。
+1. 把 MCP 服务器添加到 **设置 → MCP 服务器**，完成连接和权限配置；
+2. 把已启用的服务器添加到需要使用它的助手或 Agent。
 
-## 添加一个 MCP（以 fetch 为例）
+如果还不了解 MCP 的作用，请先阅读 [MCP 使用教程](README.md)。如果系统缺少 NPX、Bun 或 UV，请先完成 [MCP 环境安装](install.md)。
 
-<figure><img src="../../.gitbook/assets/image (8) (1) (1).png" alt=""><figcaption><p>MCP 服务器添加界面</p></figcaption></figure>
+## 选择添加方式
 
-1. 打开 `设置 → MCP 服务器`
-2. 点击 `+ 添加服务器`
-3. 在弹出的表单中填写以下信息：
+打开 **设置 → MCP 服务器**，点击 **添加**，可以选择：
 
-| 字段 | 填什么 | 说明 |
-|---|---|---|
-| **名称** | `fetch-server` | 自己取一个好认的名字，影响不到功能 |
-| **类型** | `STDIO` | 这是常见的"本地命令行"类型 |
-| **命令** | `uvx` | Cherry Studio 内置的 Python 工具，会自动下载所需脚本 |
-| **参数** | `mcp-server-fetch` | 告诉 uvx 要装哪个 MCP |
+| 方式 | 适用场景 |
+| --- | --- |
+| 新建 | 手动填写 STDIO、SSE 或 Streamable HTTP 配置 |
+| 从 JSON 导入 | 开发者已经提供 `mcpServers` JSON |
+| 从 DXT 导入 | 已获得 `.dxt` 扩展包 |
+| 内置服务器 | 使用 Cherry Studio 已适配的常用工具 |
 
-4. 点击 `保存`，Cherry Studio 会自动下载 `fetch` 这个 MCP（首次需要联网）
+常见需求优先检查[内置 MCP 服务器](builtin.md)。内置版本无需手动查找命令，也更容易控制权限。
 
-{% hint style="success" %}
-**保存后无明显反馈？** 部分 MCP 首次下载耗时较长（需从 GitHub 获取代码）。可点击服务器条目查看状态：
-* 🟢 绿色 = 已就绪
-* 🟡 黄色 = 下载或启动中
-* 🔴 红色 = 失败，可点击查看错误日志
+## 连接类型
 
-若长时间显示红色，请参考 [常见问题](chang-jian-wen-ti.md) 或重启 Cherry Studio 后重试。
+### STDIO
+
+STDIO 服务器由 Cherry Studio 在本机启动，通常需要填写：
+
+| 字段 | 说明 |
+| --- | --- |
+| 名称 | 用于识别服务器，可以自定义 |
+| 类型 | `STDIO` |
+| 命令 | 可执行程序，例如 `npx`、`uvx`、`node` |
+| 参数 | 每行一个参数，顺序必须与开发者文档一致 |
+| 环境变量 | 每行一个 `KEY=value` |
+
+当命令包含 NPX、Bun、UV 或 UVX 时，页面会显示可选的软件包镜像设置。除非默认源不可用，否则不需要修改。
+
+下面使用官方 Time Server 演示最小配置：
+
+| 字段 | 值 |
+| --- | --- |
+| 名称 | `time` |
+| 类型 | `STDIO` |
+| 命令 | `uvx` |
+| 参数 | 第一行 `mcp-server-time`，第二行 `--local-timezone=Asia/Shanghai` |
+
+也可以省略时区参数，让模型在调用工具时显式传入时区。
+
+### SSE
+
+用于连接使用 Server-Sent Events 的远程 MCP 服务器。选择 `SSE` 后填写服务器 URL，例如：
+
+```text
+https://example.com/sse
+```
+
+如果服务需要认证，在 **Headers** 中每行填写一个 `KEY=value`：
+
+```text
+Authorization=Bearer your-token
+```
+
+### Streamable HTTP
+
+用于连接较新的 Streamable HTTP MCP 服务器。配置方式和 SSE 相似，但 URL 通常以 `/mcp` 结尾：
+
+```text
+https://example.com/mcp
+```
+
+协议类型必须与服务端一致。不能因为某个 URL 可以在浏览器打开，就假设它同时支持 SSE 和 Streamable HTTP。
+
+{% hint style="warning" %}
+远程服务器的 Header 可能包含账号令牌。只把密钥填写在服务器设置中，不要放进提示词、截图或共享配置。
 {% endhint %}
 
-## 这些字段从哪儿找？
+## 从 JSON 导入
 
-不同 MCP 要填的"命令"和"参数"不一样。看 MCP 自己的说明页：
+Cherry Studio 每次只导入一个服务器。常见格式如下：
 
-* **官方 MCP**：去 [github.com/modelcontextprotocol/servers](https://github.com/modelcontextprotocol/servers/tree/main/src/fetch) 找对应仓库，README 顶部会给一段配置示例
-* **第三方 MCP**：开发者的 GitHub README 里也会给
+```json
+{
+  "mcpServers": {
+    "example-server": {
+      "command": "npx",
+      "args": ["-y", "@example/mcp-server"],
+      "env": {
+        "EXAMPLE_API_KEY": "在导入后替换"
+      }
+    }
+  }
+}
+```
 
-不会读？让 Cherry Studio 帮你：参考 [自动安装 MCP](auto-install.md)，直接对 AI 说"帮我装一个 fetch MCP"就行。
+远程服务器可以使用 `type`、`url` 和 `headers`：
 
-## 让 AI 用上 MCP
+```json
+{
+  "mcpServers": {
+    "remote-example": {
+      "type": "streamableHttp",
+      "url": "https://example.com/mcp",
+      "headers": {
+        "Authorization": "Bearer your-token"
+      }
+    }
+  }
+}
+```
 
-添加完只是"装好了"，还需要在**对话里告诉 AI 它可以用**：
+导入后服务器默认不启用。请先打开详情页检查命令、参数、URL、Header 和环境变量，再尝试连接。
 
-1. 在 [对话界面](../../cherrystudio/preview/chat.md) 的输入框下方找到 **MCP 工具** 图标
-2. 点开，勾选你刚才添加的服务器
-3. 正常提问，比如：**帮我抓一下 `https://docs.cherry-ai.com` 这个页面的标题和大纲**
-4. AI 会自动调用 fetch MCP 去拿网页，然后回答你
+## 从 DXT 导入
 
-<figure><img src="../../.gitbook/assets/MCP-输入框按钮示例 (1).png" alt=""><figcaption><p>对话框里的 MCP 工具选择</p></figcaption></figure>
+DXT 是包含服务器清单与资源的扩展包。选择 `.dxt` 文件后，Cherry Studio 会读取其中的启动配置并创建服务器。
 
-<figure><img src="../../.gitbook/assets/MCP服务器示例 (1).png" alt=""><figcaption><p>选择已启用的 MCP 服务器</p></figcaption></figure>
+DXT 仍然属于可执行扩展。只安装可信来源的文件，并在导入后检查提供者、命令、参数和需要的权限。
 
-### 效果展示
+## 检查服务器详情
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+点击已安装服务器进入详情页。保存配置并启用后，可以查看：
 
-不用 MCP 时，AI 只能凭"训练时见过的资料"回答；接上 fetch 后，AI 可以"现去网上看"，回答就准确得多。
+- **设置**：连接类型、命令、参数、环境变量、Header、超时和高级信息；
+- **工具**：服务器提供的工具、参数结构、启用状态和自动批准；
+- **提示词**：服务器提供的 MCP Prompts；
+- **资源**：服务器提供的 MCP Resources；
+- **日志**：连接过程和 STDIO 错误输出。
 
-## 给 [Cherry Agent](../agent.md) 装 MCP
+并非所有服务器都会提供提示词或资源；这些页签只在服务器启用后出现。
 
-如果你在用 Cherry Agent，MCP 的接入位置不同：
+### 超时与长任务
 
-1. 进入 Agent 编辑界面 → `工具` 选项卡
-2. 在 "MCP" 分组下勾选你要让该 Agent 使用的服务器
-3. Agent 会自主决定何时调用
+普通工具调用默认超时为 60 秒。只有服务器确实需要长时间运行时，才开启 **Long Running** 或提高超时时间。超时设置不能修复错误的命令、无效密钥或无法访问的 URL。
 
-## 想再装一个不一样的？
+### 工具权限
 
-* 想让 AI 操作你的本地文件 → 装 **filesystem** MCP
-* 想让 AI 操作浏览器 → 装 **playwright** MCP
-* 想让 AI 查 Notion → 装 **notion** MCP
+在 **工具**页可以单独停用某个工具，也可以控制是否自动批准。建议：
 
-所有这些都在 [官方仓库](https://github.com/modelcontextprotocol/servers) 里有现成配置示例，复制粘贴即可。
+- 查询和只读工具按需启用；
+- 写文件、删除数据、发送消息、创建订单等操作保留人工确认；
+- 不使用的工具直接关闭，减少模型误调用的范围。
 
-***
+## 在普通助手中使用
 
-### 💡 获取帮助与提交反馈
+打开助手设置的 **MCP** 页面，或使用输入框中的 MCP 快捷面板，可以选择三种模式：
 
-如果您在配置或使用过程中遇到任何疑问、Bug 或有功能改进建议，请参考 [反馈与建议](../../question-contact/suggestions.md) 中提供的官方渠道。
+| 模式 | 行为 |
+| --- | --- |
+| 禁用 | 当前助手不使用 MCP |
+| 自动 | 通过内置 Hub 发现并调用所有已启用 MCP 服务器中的工具 |
+| 手动 | 只使用你为当前助手选中的已启用服务器 |
+
+对权限敏感的工作建议使用 **手动** 模式。自动模式适合工具较多、需要模型自行发现能力的场景，但仍应在每个服务器的 **工具**页限制高风险操作。
+
+选择模式后，使用支持工具调用的模型并提出明确任务。例如：
+
+```text
+请使用 time 工具查询东京当前时间，并同时给出与上海的时差。
+```
+
+模型是否调用工具取决于模型能力、问题和提示词。需要强制检索时，可以明确写出服务器或工具的用途。
+
+## 在 Agent 中使用
+
+1. 打开目标 Agent 的编辑或设置页面。
+2. 进入 **工具 → MCP**。
+3. 添加需要的服务器。
+4. 保存 Agent。
+
+只有已启用的 MCP 服务器可以被选择。服务器被停用后，即使仍保留在 Agent 配置中，也不会提供工具。
+
+## 验证是否连接成功
+
+建议按以下顺序检查：
+
+1. 服务器列表中状态为启用；
+2. 详情页的 **工具**页能列出工具；
+3. 目标助手或 Agent 已添加该服务器；
+4. 所选模型支持工具调用；
+5. 发送一个范围明确、结果容易验证的测试问题；
+6. 在回答中展开工具调用记录，确认参数和结果正确。
+
+如果服务器无法启动、连接后没有工具或调用超时，请查看 [MCP 服务器常见问题](faq.md)。
+
+## 相关文档
+
+- [MCP 使用教程](README.md)
+- [MCP 环境安装](install.md)
+- [内置 MCP 服务器](builtin.md)
+- [自动安装 MCP](auto-install.md)
+- [反馈与建议](../../question-contact/suggestions.md)

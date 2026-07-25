@@ -1,368 +1,316 @@
 ---
+description: Развертывание экземпляра SearXNG для использования в Cherry Studio V2 и настройка конфигурации JSON, поисковых систем и базовой аутентификации.
 icon: searchengin
 ---
 
-{% hint style="warning" %}
-Этот документ переведен с китайского языка с помощью ИИ и еще не был проверен.
+# Локальное развёртывание и настройка SearXNG
+
+SearXNG — это открытый метапоисковик, который агрегирует результаты из нескольких поисковых систем в свой собственный экземпляр. Cherry Studio V2 может использовать размещённый самостоятельно SearXNG в качестве сервиса поиска по ключевым словам, что подходит для пользователей, которые придают большое значение контролируемости и конфиденциальности, а также обладают базовыми навыками эксплуатации контейнеров.
+
+{% hint style="info" %}
+Сам программный код SearXNG является открытым, но запуск экземпляра всё равно потребляет ресурсы локальной машины или сервера; поисковые системы, которые он вызывает в качестве источника, могут иметь собственные ограничения доступа. Самостоятельное размещение не гарантирует автоматически качество поиска, доступность или анонимность.
 {% endhint %}
 
-# Развертывание и настройка SearXNG
+## Перед выбором SearXNG, ознакомьтесь с этим
 
-CherryStudio поддерживает веб-поиск через SearXNG — проект с открытым исходным кодом, который можно развернуть локально или на сервере, что отличается от других конфигураций, требующих API-провайдеров.
+В отличие от поисковых сервисов, где достаточно просто ввести API Key, использование SearXNG требует предварительной подготовки доступного экземпляра.
 
-**Ссылка на проект SearXNG:** [SearXNG](https://github.com/searxng/searxng)
+| Сценарий | Применение | Примечания |
+| --- | --- | --- |
+| Локальный хостинг | Личное использование, быстрая проверка | Доступен только с вашей машины; сервис останавливается при выключении компьютера |
+| Сетевой локальный хостинг (LAN) | Использование несколькими доверенными устройствами | Требуется правильная настройка адреса прослушивания и брандмауэра |
+| Самостоятельный хостинг в публичном интернете | Использование через разные сети или командами | Необходимо учитывать HTTPS, аутентификацию, ограничение частоты запросов, обновления и логирование |
+| Публичный экземпляр | Временное тестирование | JSON API может быть отключен, могут быть ограничения по частоте запросов или он может стать недоступным в любой момент |
 
-## Преимущества SearXNG
+Не рекомендуется использовать незнакомые публичные экземпляры в качестве долгосрочного основного поставщика услуг. Администраторы экземпляров могут видеть информацию о запросах и соединениях, а публичные экземпляры обычно не могут гарантировать стабильность.
 
-* Открытый исходный код, бесплатный, не требует API
-* Относительно высокая конфиденциальность
-* Высокая степень кастомизации
+## Требования к экземпляру SearXNG для Cherry Studio
 
-## Локальное развертывание
+Рабочий экземпляр SearXNG должен соответствовать следующим требованиям:
 
-### I. Прямое развертывание через Docker
+- Устройство, на котором запущен Cherry Studio, должно иметь доступ к адресу экземпляра;
+- `/config` должен возвращать конфигурацию экземпляра;
+- `/search` должен поддерживать `format=json`;
+- По крайней мере один включенный поисковик должен относиться одновременно к категориям `general` и `web`;
+- Веб-страницы в результатах поиска должны быть доступны из сети, где запущен Cherry Studio;
+- Если обратный прокси использует HTTP Basic Auth, учетные данные должны быть введены в Cherry Studio.
 
-Поскольку SearXNG не требует сложной настройки окружения, можно обойтись без docker compose. Достаточно просто предоставить свободный порт. Самый быстрый способ — использовать Docker для загрузки и развертывания образа.
+По умолчанию Cherry Studio использует:
 
-#### 1. Установка и настройка [docker](https://www.docker.com/)
+```text
+http://localhost:8080
+```
 
-<figure><img src="../../.gitbook/assets/searxng_config_img_01.png" alt=""><figcaption></figcaption></figure>
+Это только адрес по умолчанию. Фактовый порт и доменное имя должны совпадать с вашей развертыванием.
 
-После установки выберите путь для хранения образов:
+## Развертывание с использованием официальных контейнерных шаблонов
 
-<figure><img src="../../.gitbook/assets/searxng_config_img_02.png" alt=""><figcaption></figcaption></figure>
+SearXNG официально рекомендует использовать шаблоны Compose для Docker или Podman. Следующие шаги подходят для пользователей, у которых уже установлены Docker и Docker Compose; для продакшн-среды необходимо самостоятельно выполнить резервное копирование, обновление и контроль доступа.
 
-#### 2. Поиск и загрузка образа SearXNG
-
-Введите в поиск **searxng**:
-
-<figure><img src="../../.gitbook/assets/searxng_config_img_03.png" alt=""><figcaption></figcaption></figure>
-
-Загрузите образ:
-
-<figure><img src="../../.gitbook/assets/searxng_config_img_04.png" alt=""><figcaption></figcaption></figure>
-
-<figure><img src="../../.gitbook/assets/searxng_config_img_05.png" alt=""><figcaption></figcaption></figure>
-
-#### 3. Запуск образа
-
-После успешной загрузки перейдите на вкладку **Images**:
-
-<figure><img src="../../.gitbook/assets/searxng_config_img_06.png" alt=""><figcaption></figcaption></figure>
-
-Выберите загруженный образ и нажмите "Run":
-
-<figure><img src="../../.gitbook/assets/searxng_config_img_07.png" alt=""><figcaption></figcaption></figure>
-
-Откройте настройки для конфигурации:
-
-<figure><img src="../../.gitbook/assets/searxng_config_img_08.png" alt=""><figcaption></figcaption></figure>
-
-В качестве примера используем порт `8085`:
-
-<figure><img src="../../.gitbook/assets/searxng_config_img_09.png" alt=""><figcaption></figcaption></figure>
-
-После успешного запуска нажмите на ссылку для открытия интерфейса SearXNG:
-
-<figure><img src="../../.gitbook/assets/searxng_config_img_10.png" alt=""><figcaption></figcaption></figure>
-
-Появление этой страницы означает успешное развертывание:
-
-<figure><img src="../../.gitbook/assets/searxng_config_img_11.png" alt=""><figcaption></figcaption></figure>
-
-## Развертывание на сервере
-
-Учитывая, что установка Docker в Windows — довольно сложный процесс, пользователи могут развернуть SearXNG на сервере, чтобы предоставить к нему доступ другим. К сожалению, SearXNG пока не поддерживает аутентификацию, из-за чего злоумышленники могут сканировать и злоупотреблять вашим экземпляром.
-
-Поэтому Cherry Studio теперь поддерживает [HTTP Basic Authentication (RFC7617)](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Guides/Authentication). Если вы развертываете SearXNG в публичной сети, **обязательно** настройте HTTP Basic Auth через обратный прокси (например, Nginx). Далее приведен краткий гайд, требующий базовых знаний администрирования Linux.
-
-### Развертывание SearXNG
-
-Аналогично используем Docker для развертывания. Предположим, что вы установили последнюю версию Docker CE по [официальной инструкции](https://docs.docker.com/engine/install). Команды ниже подходят для свежей установки на Debian:
+### 1. Подготовка каталогов и шаблонов
 
 ```bash
-sudo apt update
-sudo apt install git -y
+mkdir -p ./searxng/core-config
+cd ./searxng
+curl -fsSLO https://raw.githubusercontent.com/searxng/searxng/master/container/docker-compose.yml
+curl -fsSLO https://raw.githubusercontent.com/searxng/searxng/master/container/.env.example
+cp .env.example .env
+```
 
-# Клонируем официальный репозиторий
-cd /opt
-git clone https://github.com/searxng/searxng-docker.git
-cd /opt/searxng-docker
+Откройте `.env` и проверьте настройки, такие как порты, адрес экземпляра и ключи, согласно инструкциям шаблона. Шаблон может обновляться вместе с SearXNG; перед первым развертыванием или обновлением следует прочитать [официальную документацию по установке в контейнерах](https://docs.searxng.org/admin/installation-docker.html).
 
-# Установите false, если у сервера низкая пропускная способность
-export IMAGE_PROXY=true
+### 2. Включение JSON вывода
 
-# Редактируем конфиг
-cat <<EOF > /opt/searxng-docker/searxng/settings.yml
-# see https://docs.searxng.org/admin/settings/settings.html#settings-use-default-settings
+В `core-config/settings.yml` добавьте как минимум:
+
+```yaml
 use_default_settings: true
-server:
-  # base_url is defined in the SEARXNG_BASE_URL environment variable, see .env and docker-compose.yml
-  secret_key: $(openssl rand -hex 32)
-  limiter: false  # can be disabled for a private instance
-  image_proxy: $IMAGE_PROXY
-ui:
-  static_use_hash: true
-redis:
-  url: redis://redis:6379/0
+
 search:
   formats:
     - html
     - json
-EOF
 ```
 
-Если нужно изменить порт или использовать локальный nginx, отредактируйте `docker-compose.yaml`:
+{% hint style="warning" %}
+Cherry Studio запрашивает `format=json`. Если в `search.formats` SearXNG отсутствует `json`, поисковый интерфейс обычно возвращает `403 Forbidden`.
+{% endhint %}
 
-```yaml
-version: "3.7"
+Если у вас уже есть `settings.yml`, объедините элемент `json`, не перезаписывая существующие настройки движков, прокси, языков или безопасности с помощью приведенного выше минимального примера.
 
-services:
-# Удалите блок ниже, если используете локальный Nginx вместо Caddy
-  caddy:
-    container_name: caddy
-    image: docker.io/library/caddy:2-alpine
-    network_mode: host
-    restart: unless-stopped
-    volumes:
-      - ./Caddyfile:/etc/caddy/Caddyfile:ro
-      - caddy-data:/data:rw
-      - caddy-config:/config:rw
-    environment:
-      - SEARXNG_HOSTNAME=${SEARXNG_HOSTNAME:-http://localhost}
-      - SEARXNG_TLS=${LETSENCRYPT_EMAIL:-internal}
-    cap_drop:
-      - ALL
-    cap_add:
-      - NET_BIND_SERVICE
-    logging:
-      driver: "json-file"
-      options:
-        max-size: "1m"
-        max-file: "1"
-# Удалите блок выше, если используете локальный Nginx вместо Caddy
-  redis:
-    container_name: redis
-    image: docker.io/valkey/valkey:8-alpine
-    command: valkey-server --save 30 1 --loglevel warning
-    restart: unless-stopped
-    networks:
-      - searxng
-    volumes:
-      - valkey-data2:/data
-    cap_drop:
-      - ALL
-    cap_add:
-      - SETGID
-      - SETUID
-      - DAC_OVERRIDE
-    logging:
-      driver: "json-file"
-      options:
-        max-size: "1m"
-        max-file: "1"
-
-  searxng:
-    container_name: searxng
-    image: docker.io/searxng/searxng:latest
-    restart: unless-stopped
-    networks:
-      - searxng
-    # По умолчанию пробрасывается на порт 8080 хоста. Для порта 8000 измените на "127.0.0.1:8000:8080"
-    ports:
-      - "127.0.0.1:8080:8080"
-    volumes:
-      - ./searxng:/etc/searxng:rw
-    environment:
-      - SEARXNG_BASE_URL=https://${SEARXNG_HOSTNAME:-localhost}/
-      - UWSGI_WORKERS=${SEARXNG_UWSGI_WORKERS:-4}
-      - UWSGI_THREADS=${SEARXNG_UWSGI_THREADS:-4}
-    cap_drop:
-      - ALL
-    cap_add:
-      - CHOWN
-      - SETGID
-      - SETUID
-    logging:
-      driver: "json-file"
-      options:
-        max-size: "1m"
-        max-file: "1"
-
-networks:
-  searxng:
-
-volumes:
-# Удалите блок ниже, если используете локальный Nginx
-  caddy-data:
-  caddy-config:
-# Удалите блок выше, если используете локальный Nginx
-  valkey-data2:
-```
-
-Запустите через `docker compose up -d`. Логи можно посмотреть командой `docker compose logs -f searxng`.
-
-### Настройка Nginx обратного прокси и HTTP Basic Auth
-
-При использовании панелей управления (например, Baota или 1Panel) обратитесь к их документации по добавлению сайта и настройке Nginx. Затем найдите раздел конфигурации и внесите изменения:
-
-```conf
-server
-{
-    listen 443 ssl;
-
-    # Укажите ваше доменное имя
-    server_name search.example.com;
-
-    # index index.html;
-    # root /data/www/default;
-
-    # Для SSL необходимы эти строки
-    ssl_certificate    /path/to/your/cert/fullchain.pem;
-    ssl_certificate_key    /path/to/your/cert/privkey.pem;
-
-    # HSTS
-    # add_header Strict-Transport-Security "max-age=31536000; includeSubDomains; preload";
-
-    # Обратный прокси
-    location / {
-        # Добавьте эти две строки
-        auth_basic "Please enter your username and password";
-        auth_basic_user_file /etc/nginx/conf.d/search.htpasswd;
-
-        proxy_http_version 1.1;
-        proxy_set_header Connection "";
-        proxy_redirect off;
-        proxy_set_header Host $host;
-        proxy_set_header X-Forwarded-For $proxy_protocol_addr;
-        proxy_pass http://127.0.0.1:8000;
-        client_max_body_size 0;
-    }
-
-    # access_log  ...;
-    # error_log  ...;
-}
-```
-
-Предположим, конфиги Nginx хранятся в `/etc/nginx/conf.d`. Сохраните там же файл паролей.
-
-Выполните команду (замените `example_name` и `example_password`):
+### 3. Запуск экземпляра
 
 ```bash
-echo "example_name:$(openssl passwd -5 'example_password')" > /etc/nginx/conf.d/search.htpasswd
+docker compose up -d
+docker compose ps
 ```
 
-Перезагрузите Nginx (или перечитайте конфиги).
+Чтобы просмотреть логи:
 
-Откройте страницу — должна появиться запрос на аутентификацию. Введите указанные учетные данные для проверки.
+```bash
+docker compose logs -f core
+```
 
-<figure><img src="../../.gitbook/assets/searxng-basic-auth-example.png" alt=""><figcaption></figcaption></figure>
+Имя сервиса может измениться в зависимости от официального шаблона. Если команда логов сообщает об отсутствии `core`, сначала выполните `docker compose ps`, а затем используйте фактическое имя сервиса.
+
+### 4. Проверка экземпляра
+
+Сначала откройте главную страницу экземпляра в браузере, а затем проверьте JSON API через терминал. Предположим, адрес: `http://127.0.0.1:8080`:
+
+```bash
+curl "http://127.0.0.1:8080/config"
+curl "http://127.0.0.1:8080/search?q=Cherry+Studio&format=json"
+```
+
+Оба запроса должны вернуть JSON. Второй ответ также должен содержать доступные результаты поиска.
+
+Справка по API и параметрам SearXNG доступна в [Search API](https://docs.searxng.org/dev/search_api.html).
 
 ## Настройка в Cherry Studio
 
-После успешного развертывания SearXNG перейдите к настройкам CherryStudio.
+### 1. Открыть настройки SearXNG
 
-В разделе настроек веб-поиска выберите Searxng:
+Перейдите по пути:
 
-<figure><img src="../../.gitbook/assets/searxng_config_img_12.png" alt=""><figcaption></figcaption></figure>
+> **Настройки → Поиск в сети → SearXNG**
 
-При вводе локального адреса может появиться ошибка проверки — это нормально:
+### 2. Указать хост API
 
-<figure><img src="../../.gitbook/assets/searxng_config_img_13.png" alt=""><figcaption></figcaption></figure>
+Укажите корневой адрес экземпляра, не добавляя вручную `/search` или `/config`.
 
-Стандартная конфигурация не поддерживает формат JSON, поэтому данные не могут быть получены. Требуется изменить конфиг.
+Пример для локальной машины:
 
-В Docker перейдите на вкладку Files и найдите папку с тегами:
-
-<figure><img src="../../.gitbook/assets/searxng_config_img_14.png" alt=""><figcaption></figcaption></figure>
-
-Прокрутите вниз до другой папки с тегами:
-
-<figure><img src="../../.gitbook/assets/searxng_config_img_15.png" alt=""><figcaption></figcaption></figure>
-
-Найдите файл конфигурации **settings.yml**:
-
-<figure><img src="../../.gitbook/assets/searxng_config_img_16.png" alt=""><figcaption></figcaption></figure>
-
-Откройте редактор:
-
-<figure><img src="../../.gitbook/assets/searxng_config_img_17.png" alt=""><figcaption></figcaption></figure>
-
-На строке 78 виден только один тип данных html:
-
-<figure><img src="../../.gitbook/assets/searxng_config_img_18.png" alt=""><figcaption></figcaption></figure>
-
-Добавьте тип json, сохраните и перезапустите образ:
-
-<figure><img src="../../.gitbook/assets/searxng_config_img_19.png" alt=""><figcaption></figcaption></figure>
-
-<figure><img src="../../.gitbook/assets/searxng_config_img_20.png" alt=""><figcaption></figcaption></figure>
-
-Повторно проверьте в Cherry Studio — проверка пройдена:
-
-<figure><img src="../../.gitbook/assets/searxng_config_img_21.png" alt=""><figcaption></figcaption></figure>
-
-Адрес можно указать локальный: <http://localhost>:порт\
-Или Docker: <http://host.docker.internal>:порт
-
-Для серверной конфигурации с обратным прокси и включенным форматом json, при проверке с включенной HTTP Basic Auth будет возвращена ошибка 401:
-
-<figure><img src="../../.gitbook/assets/searxng-basic-auth-client-setting-failed.png" alt=""><figcaption></figcaption></figure>
-
-Добавьте HTTP Basic Auth в клиенте, введя ранее установленные учетные данные:
-
-<figure><img src="../../.gitbook/assets/searxng-basic-auth-client-setting.png" alt=""><figcaption></figcaption></figure>
-
-Проверка должна завершиться успешно.
-
-### Дополнительные настройки
-
-Теперь SearXNG может выполнять веб-поиск. Для кастомизации поисковых систем потребуется ручная настройка:
-
-Эти настройки не влияют на интеграцию с крупными языковыми моделями:
-
-<figure><img src="../../.gitbook/assets/searxng_config_img_22.png" alt=""><figcaption></figcaption></figure>
-
-Чтобы настроить интеграцию с языковыми моделями, измените конфигурационный файл:
-
-<figure><img src="../../.gitbook/assets/searxng_config_img_23.png" alt=""><figcaption></figcaption></figure>
-
-<figure><img src="../../.gitbook/assets/searxng_config_img_24.png" alt=""><figcaption></figcaption></figure>
-
-Пример языкового конфига:
-
-<figure><img src="../../.gitbook/assets/searxng_config_img_25.png" alt=""><figcaption></figcaption></figure>
-
-Для редактирования больших блоков скопируйте содержимое в локальный редактор, а затем вставьте обратно.
-
-## Распространенные причины сбоя проверки
-
-### Не добавлен формат JSON
-
-Добавьте json в настройках:
-
-<figure><img src="../../.gitbook/assets/searxng_json_format.png" alt=""><figcaption></figcaption></figure>
-
-### Неправильная настройка поисковой системы
-
-Cherry Studio по умолчанию использует движки, поддерживающие web и general. Google недоступен в некоторых регионах. Чтобы принудительно использовать Baidu, добавьте конфиг:
-
+```text
+http://127.0.0.1:8080
 ```
+
+Пример для публичного доступа:
+
+```text
+https://search.example.com
+```
+
+Cherry Studio самостоятельно добавит `/config` и `/search`.
+
+{% hint style="info" %}
+Настольная версия Cherry Studio работает непосредственно в хост-системе. Когда Docker маппит порты на хост, обычно используется `127.0.0.1:mapped_port`, а не `host.docker.internal`.
+{% endhint %}
+
+### 3. Указать базовую аутентификацию
+
+Если обратный прокси настроен с HTTP Basic Auth:
+
+1. В настройках SearXNG введите имя пользователя;
+2. Введите соответствующий пароль;
+3. Не вписывайте `имя_пользователя:пароль` в поле API Host.
+
+Как только имя пользователя не пустое, Cherry Studio будет отправлять заголовки Basic Auth для `/config`, `/search` и при обнаружении запроса.
+
+HTTP Basic Auth должен использоваться совместно с HTTPS для публичных соединений. Использование только Basic Auth без HTTPS может привести к перехвату учетных данных при передаче.
+
+### 4. Проверить подключение
+
+Нажмите кнопку **Проверить**.
+
+После успешной проверки установите SearXNG в качестве службы поиска по умолчанию. Затем вы сможете использовать его, включив значок глобуса в диалоговом окне.
+
+## Как Cherry Studio выбирает поисковую систему
+
+Если вы не сохраняли отдельный список движков, Cherry Studio считывает:
+
+```text
+GET /config
+```
+
+и выбирает движок, который одновременно удовлетворяет следующим условиям:
+
+- `enabled` равно `true`;
+- `categories` содержит `general`;
+- `categories` содержит `web`.
+
+Затем приложение отправляет запрос, похожий на:
+
+```text
+GET /search?q=запрос&language=auto&format=json&engines=список_движков
+```
+
+Таким образом, изменение предпочтений поиска один раз в веб-интерфейсе SearXNG не обязательно изменит запросы Cherry Studio. Необходимо долгосрочно включить подходящие движки и категории в `settings.yml` экземпляра.
+
+### Сохранить только указанные движки
+
+Если некоторые вышестоящие движки недоступны в текущей сети, вы можете настроить движки в `settings.yml`. Пример конфигурации:
+
+```yaml
 use_default_settings:
   engines:
     keep_only:
-      - baidu
-engines:
-  - name: baidu
-    engine: baidu 
-    categories: 
-      - web
-      - general
-    disabled: false
+      - duckduckgo
+      - wikipedia
 ```
 
-### Слишком высокая частота запросов
+Названия движков, их доступность и параметры конфигурации могут меняться с обновлениями SearXNG. Пожалуйста, сначала подтвердите точные названия в `/config` или настройках экземпляра и обратитесь к [документации по настройке движков](https://docs.searxng.org/admin/settings/settings_engines.html).
 
-Ограничитель в SearXNG блокирует API. Установите limiter в false:
+{% hint style="warning" %}
+Не копируйте слепо список фиксированных движков, не подходящий для вашей сети. Поисковые системы могут ограничивать доступ по регионам, вызывать капчу или изменять интерфейсы; окончательный результат следует принимать на основе логов экземпляра и фактического поиска.
+{% endhint %}
 
-<figure><img src="../../.gitbook/assets/searxng_limiter.png" alt=""><figcaption></figcaption></figure>
+## Поиск и чтение веб-страниц
+
+После того как SearXNG возвращает заголовок, краткое описание и URL, Cherry Studio попытается прочитать основной текст страницы результата и сохранит только успешно прочитанный контент.
+
+Это означает:
+
+- Максимальное количество результатов ограничивает количество кандидатных URL, которые может обработать приложение;
+- Чтение может завершиться неудачей для некоторых веб-страниц, требующих входа в систему, блокирующих автоматический доступ или недоступных в текущей сети;
+- Если чтение всех кандидатных страниц не удается, поиск может выдать ошибку или не предоставить доступных результатов;
+- Настройки SearXNG по-прежнему относятся к поисковой службе по ключевым словам; для случая прямого вставки URL служба чтения по умолчанию все еще должна быть выбрана отдельно в настройках веб-поиска.
+
+## Рекомендации по безопасности при развертывании в публичный доступ
+
+Не выставляйте напрямую на публичный доступ незащищенные интерфейсы управления и поиска SearXNG.
+
+По крайней мере, следует рассмотреть:
+
+- Использование HTTPS с доверенным сертификатом;
+- Настройку аутентификации доступа на уровне обратного прокси;
+- Обеспечение разумного ограничения скорости и защиты от ботов;
+- Ограничение портов управления и ненужных сетевых входов;
+- Регулярное обновление SearXNG, образов контейнеров и обратного прокси;
+- Избегание долгосрочного хранения конфиденциальных запросов в журналах доступа;
+- Предоставление учетных данных только доверенным пользователям с регулярной ротацией.
+
+Cherry Studio в настоящее время поддерживает HTTP Basic Auth, но не выполняет за вас настройку TLS на стороне сервера, управление правами и ограничение скорости.
+
+## Часто задаваемые вопросы
+
+### Проверка ошибки 403
+
+Самая частая причина — отключен вывод в формате JSON. Убедитесь, что в `settings.yml` указано:
+
+```yaml
+search:
+  formats:
+    - html
+    - json
+```
+
+Сохраните и перезапустите экземпляр, затем проверьте по адресу `/search?q=test&format=json`.
+
+Публичные экземпляры также могут выборочно отключать JSON API; в этом случае вам придется сменить экземпляр или развернуть его самостоятельно.
+
+### Проверка ошибки 401
+
+Экземпляр или обратный прокси требуют аутентификации:
+
+- Укажите правильное имя пользователя и пароль Basic Auth в Cherry Studio;
+- Убедитесь, что при защите `/config` и `/search` обратным прокси используется одна и та же пара учетных данных;
+- Проверьте, не содержат ли имя пользователя или пароль случайно скопированные пробелы;
+- Не вставляйте учетные данные прямо в URL.
+
+### Уведомление об отсутствии доступного движка general/web
+
+В `/config` Cherry Studio не нашел включенного движка, который одновременно относится к `general` и `web`.
+
+Проверьте:
+
+1. Корректно ли `/config` возвращает `engines`;
+2. Является ли целевой движок `enabled: true`;
+3. Содержат ли `categories` одновременно `general` и `web`;
+4. Перезапустили или перезагрузили экземпляр после изменения конфигурации.
+
+### Таймаут поиска или нестабильные результаты
+
+Проверьте логи SearXNG, уделяя особое внимание:
+
+- Возвращает ли поисковая система верхнего уровня 403, 429 или капчу;
+- Работают ли DNS, прокси и исходящая сеть сервера корректно;
+- Не слишком ли коротким установлен таймаут запроса экземпляра;
+- Подходит ли выбранный движок для текущего региона;
+- Может ли устройство с Cherry Studio открыть веб-страницу с результатами поиска.
+
+Не отключайте сразу все ограничения и меры безопасности. Сначала определите, где происходит ограничение: в SearXNG, обратном прокси, вышестоящем движке или в локальной сети.
+
+### В браузере поиск работает, а в Cherry Studio — нет
+
+Страница браузера по умолчанию использует HTML, а Cherry Studio требует JSON. Протестируйте отдельно:
+
+```text
+/config
+/search?q=test&format=json
+```
+
+Также необходимо убедиться, что в API Host указан только корневой адрес, Basic Auth настроен верно, и обратный прокси не перехватывает эти два пути отдельно.
+
+### Возвращены результаты, но нет цитат (ссылок)
+
+Возможно, произошла ошибка при чтении основного текста страницы результатов или модель некорректно использовала поисковые данные. Можно:
+
+- Уменьшить количество недоступных или требующих входа поисковых систем;
+- Повторить попытку после увеличения максимального количества результатов;
+- Сменить движок, более подходящий для текущей сети;
+- Явно потребовать указания источников в запросе;
+- Проверить, поддерживает ли модель вызов инструментов.
+
+## Обновление и обслуживание
+
+Перед обновлением сервиса прочтите руководство по миграции SearXNG и сделайте резервные копии `.env` и `core-config`. При развертывании в контейнерах обычно требуется обновить официальный шаблон и скачать новый образ; не предполагайте, что старые файлы Compose всегда будут совместимы.
+
+Официальная документация:
+
+- [Установка SearXNG с использованием Docker](https://docs.searxng.org/admin/installation-docker.html)
+- [Настройки SearXNG `settings.yml`](https://docs.searxng.org/admin/settings/settings.html)
+- [Формат вывода поиска](https://docs.searxng.org/admin/settings/settings_search.html)
+- [Управление API `/config`](https://docs.searxng.org/admin/api.html)
+- [SearXNG GitHub](https://github.com/searxng/searxng)
+
+## Связанная документация
+
+- [Поиск в сети](README.md)
+- [Режим бесплатного подключения к интернету](./mian-fei-lian-wang-mo-shi.md)
+- [Черный список поиска в сети](blacklist.md)
+
+***
+
+### Получение помощи и отправка отзывов
+
+Если у вас возникли проблемы с настройкой или использованием, пожалуйста, отправьте отзыв через официальные каналы, указанные в [Отзывы и предложения](../../question-contact/suggestions.md). Пожалуйста, приложите версию Cherry Studio, версию SearXNG, код ошибки и обезличенные логи, но не отправляйте реальные учетные данные доменов или пароли аутентификации.

@@ -1,40 +1,192 @@
-# MCPの設定と使用
+# MCP の設定と使用
 
+Cherry Studio で MCP を使用するには、次の 2 つの設定が必要です。
+
+1. **設定 → MCP Server** で MCP Server を追加し、接続と権限を設定する。
+2. 有効にした Server を、使用するアシスタントまたは Agent に追加する。
+
+MCP の役割が分からない場合は、先に [MCP 使用ガイド](README.md) を参照してください。システムに NPX、Bun、UV がない場合は、まず [MCP 環境のインストール](install.md) を完了してください。
+
+## 追加方法を選択する
+
+**設定 → MCP Server** を開いて **追加** をクリックすると、次の方法を選択できます。
+
+| 方法 | 適した用途 |
+| --- | --- |
+| 新規作成 | STDIO、SSE、Streamable HTTP の設定を手動で入力する |
+| JSON からインポート | 開発者から `mcpServers` JSON が提供されている |
+| DXT からインポート | `.dxt` 拡張パッケージを入手している |
+| 内蔵 Server | Cherry Studio が対応済みの一般的なツールを使用する |
+
+一般的な用途では、最初に [内蔵 MCP Server](in-memory.md) を確認してください。内蔵版ではコマンドを手動で探す必要がなく、権限も管理しやすくなります。
+
+## 接続タイプ
+
+### STDIO
+
+STDIO Server は Cherry Studio がローカルで起動します。通常は次の項目を入力します。
+
+| フィールド | 説明 |
+| --- | --- |
+| 名前 | Server を識別する名前。任意に設定可能 |
+| タイプ | `STDIO` |
+| コマンド | `npx`、`uvx`、`node` などの実行可能プログラム |
+| 引数 | 1 行に 1 つ。順序は開発者ドキュメントに合わせる |
+| 環境変数 | 1 行に 1 つの `KEY=value` |
+
+コマンドに NPX、Bun、UV、UVX が含まれる場合、ページに任意のパッケージミラー設定が表示されます。デフォルトの配布元を利用できない場合を除き、変更する必要はありません。
+
+次は、公式 Time Server を使った最小設定の例です。
+
+| フィールド | 値 |
+| --- | --- |
+| 名前 | `time` |
+| タイプ | `STDIO` |
+| コマンド | `uvx` |
+| 引数 | 1 行目に `mcp-server-time`、2 行目に `--local-timezone=Asia/Shanghai` |
+
+タイムゾーンの引数を省略し、ツールを呼び出すときにモデルから明示的にタイムゾーンを渡すこともできます。
+
+### SSE
+
+Server-Sent Events を使用するリモート MCP Server への接続に使います。`SSE` を選択して Server URL を入力します。例：
+
+```text
+https://example.com/sse
+```
+
+サービスに認証が必要な場合は、**Headers** に 1 行につき 1 つの `KEY=value` を入力します。
+
+```text
+Authorization=Bearer your-token
+```
+
+### Streamable HTTP
+
+比較的新しい Streamable HTTP MCP Server への接続に使います。設定方法は SSE と似ていますが、URL は通常 `/mcp` で終わります。
+
+```text
+https://example.com/mcp
+```
+
+プロトコルタイプは Server 側と一致させる必要があります。URL をブラウザーで開けるという理由だけで、SSE と Streamable HTTP の両方に対応しているとは判断できません。
 
 {% hint style="warning" %}
-このドキュメントはAIによって中国語から翻訳されており、まだレビューされていません。
+リモート Server の Header にはアカウントの Token が含まれる場合があります。キーは Server 設定にだけ入力し、プロンプト、スクリーンショット、共有設定には含めないでください。
 {% endhint %}
 
+## JSON からインポートする
 
+Cherry Studio では、一度に 1 つの Server だけをインポートできます。一般的な形式：
 
+```json
+{
+  "mcpServers": {
+    "example-server": {
+      "command": "npx",
+      "args": ["-y", "@example/mcp-server"],
+      "env": {
+        "EXAMPLE_API_KEY": "在导入后替换"
+      }
+    }
+  }
+}
+```
 
-<figure><img src="../../.gitbook/assets/image (8) (1).png" alt=""><figcaption></figcaption></figure>
+リモート Server では、`type`、`url`、`headers` を使用できます。
 
-1. Cherry Studioの設定を開きます。
-2. `MCP サーサーバー`オプションを探します。
-3. `サーサーバーを追加`をクリックします。
-4. MCP Serverの関連パラメータを入力します（[参考リンク](https://github.com/modelcontextprotocol/servers/tree/main/src/fetch)）。入力が必要な内容には以下が含まれます：
-   * 名称：任意の名前（例：`fetch-server`）
-   * タイプ：`STDIO`を選択
-   * コマンド：`uvx`を入力
-   * 引数：`mcp-server-fetch`を入力
-   * （他に必要なパラメータがある場合、具体的なServerに応じて入力）
-5. `保存`をクリックします。
+```json
+{
+  "mcpServers": {
+    "remote-example": {
+      "type": "streamableHttp",
+      "url": "https://example.com/mcp",
+      "headers": {
+        "Authorization": "Bearer your-token"
+      }
+    }
+  }
+}
+```
 
-{% hint style="success" %}
-上記設定完了後、Cherry Studioは必要なMCP Server（`fetch server`）を自動的にダウンロードします。ダウンロード完了後、すぐに使用を開始できます！注意：mcp-server-fetchの設定が成功しない場合は、コンコンピュータの再起動をお試しください。
-{% endhint %}
+インポートした Server は、デフォルトでは有効になりません。最初に詳細ページでコマンド、引数、URL、Header、環境変数を確認してから、接続を試してください。
 
-### チャットボックスでMCPサービスを有効化
+## DXT からインポートする
 
-<figure><img src="../../.gitbook/assets/MCP-入力框按钮示例.png" alt=""><figcaption></figcaption></figure>
+DXT は Server のマニフェストとリソースを含む拡張パッケージです。`.dxt` ファイルを選択すると、Cherry Studio が起動設定を読み取って Server を作成します。
 
-* `MCP サーサーバー`設定でMCPサーサーバーが正常に追加された状態
+DXT も実行可能な拡張機能です。信頼できる提供元のファイルだけをインストールし、インポート後に提供者、コマンド、引数、必要な権限を確認してください。
 
-<figure><img src="../../.gitbook/assets/MCPサーバー示例.png" alt=""><figcaption></figcaption></figure>
+## Server の詳細を確認する
 
-### **使用効果のデモ**
+インストール済み Server をクリックして詳細ページを開きます。設定を保存して有効にすると、次の項目を確認できます。
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+- **設定**：接続タイプ、コマンド、引数、環境変数、Header、タイムアウト、高度な情報。
+- **ツール**：Server が提供するツール、引数の構造、有効状態、自動承認。
+- **プロンプト**：Server が提供する MCP Prompts。
+- **リソース**：Server が提供する MCP Resources。
+- **ログ**：接続処理と STDIO のエラー出力。
 
-上図が示す通り、MCPの`fetch`機能を統合することで、Cherry Studioはユーザーの検索意図をより正確に理解し、ウェブから関連情報を取得して、より正確で包括的な回答を提供できます。
+すべての Server がプロンプトやリソースを提供するわけではありません。これらのタブは Server を有効にした後にだけ表示されます。
+
+### タイムアウトと長時間タスク
+
+通常のツール呼び出しのデフォルトタイムアウトは 60 秒です。Server が実際に長時間の処理を必要とする場合にだけ、**Long Running** を有効にするか、タイムアウトを増やしてください。タイムアウト設定では、不正なコマンド、無効なキー、アクセスできない URL は解決できません。
+
+### ツールの権限
+
+**ツール** ページでは、ツールを個別に無効化し、自動承認するかどうかも設定できます。推奨事項：
+
+- 照会ツールと読み取り専用ツールは、必要に応じて有効にする。
+- ファイルの書き込み、データの削除、メッセージ送信、注文作成などの操作には、手動確認を残す。
+- 使用しないツールは無効にし、モデルが誤って呼び出せる範囲を減らす。
+
+## 通常のアシスタントで使用する
+
+アシスタント設定の **MCP** ページ、または入力欄の MCP クイックパネルを開くと、次の 3 つのモードを選択できます。
+
+| モード | 動作 |
+| --- | --- |
+| 無効 | 現在のアシスタントでは MCP を使用しない |
+| 自動 | 内蔵 Hub を通じて、有効なすべての MCP Server のツールを検出して呼び出す |
+| 手動 | 現在のアシスタントで選択した有効な Server だけを使用する |
+
+権限に注意が必要な作業では **手動** モードを推奨します。自動モードはツールが多く、モデル自身に機能を検出させたい場合に適していますが、各 Server の **ツール** ページで高リスクな操作を制限する必要があります。
+
+モードを選択したら、ツール呼び出しに対応したモデルを使用し、明確なタスクを入力します。例：
+
+```text
+time ツールを使って東京の現在時刻を調べ、上海との時差も示してください。
+```
+
+モデルがツールを呼び出すかどうかは、モデルの能力、質問、プロンプトによって決まります。検索を必須にしたい場合は、Server またはツールの用途を明示できます。
+
+## Agent で使用する
+
+1. 対象 Agent の編集または設定ページを開きます。
+2. **ツール → MCP** を開きます。
+3. 必要な Server を追加します。
+4. Agent を保存します。
+
+選択できるのは有効な MCP Server だけです。Server を無効にすると、Agent の設定に残っていてもツールは提供されません。
+
+## 接続を確認する
+
+次の順に確認することを推奨します。
+
+1. Server の一覧で状態が有効になっている。
+2. 詳細ページの **ツール** にツールが表示される。
+3. 対象のアシスタントまたは Agent に Server が追加されている。
+4. 選択したモデルがツール呼び出しに対応している。
+5. 範囲が明確で、結果を検証しやすいテスト質問を送信する。
+6. 回答内のツール呼び出し記録を展開し、引数と結果が正しいことを確認する。
+
+Server が起動しない、接続後にツールが表示されない、または呼び出しがタイムアウトする場合は、[MCP Server のよくある質問](chang-jian-wen-ti.md) を参照してください。
+
+## 関連ドキュメント
+
+- [MCP 使用ガイド](README.md)
+- [MCP 環境のインストール](install.md)
+- [内蔵 MCP Server](in-memory.md)
+- [MCP の自動インストール](auto-install.md)
+- [フィードバックと提案](../../question-contact/suggestions.md)

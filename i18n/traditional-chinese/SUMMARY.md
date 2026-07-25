@@ -6,8 +6,10 @@
 * [客戶端下載](cherrystudio/download.md)
 * [項目規劃](cherrystudio/planning.md)
 * [功能介紹](cherrystudio/preview/README.md)
+  * [啟動台](cherrystudio/preview/launchpad.md)
   * [對話界面](cherrystudio/preview/chat.md)
   * [智能體](cherrystudio/preview/agents.md)
+  * [資源庫](cherrystudio/preview/library.md)
   * [繪畫](cherrystudio/preview/drawing.md)
   * [翻譯](cherrystudio/preview/translation.md)
   * [小程序](cherrystudio/preview/app.md)
@@ -88,8 +90,14 @@
   * [添加 ModelScope MCP 伺服器](advanced-basic/mcp/tian-jia-modelscope-mcp-fu-wu-qi.md)
   * [常見問題](advanced-basic/mcp/chang-jian-wen-ti.md)
 * [調用鏈使用說明](advanced-basic/diao-yong-lian-shi-yong-shuo-ming.md)
-* [Code Tools 使用教程](advanced-basic/code-tools-shi-yong-jiao-cheng.md)
+* [程式碼工具](advanced-basic/code-tools-shi-yong-jiao-cheng.md)
 * [Cherry Agent 使用教程](advanced-basic/agent.md)
+* [技能](pre-basic/settings/skills.md)
+* [頻道](advanced-basic/agent-channels.md)
+* [定時任務](advanced-basic/scheduled-tasks.md)
+* [智能體工作區記憶](advanced-basic/memory.md)
+* [OpenClaw](advanced-basic/openclaw.md)
+* [提示詞與快速插入](pre-basic/settings/quick-phrase.md)
 
 ## 項目貢獻 <a href="#contribution" id="contribution"></a>
 

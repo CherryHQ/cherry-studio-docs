@@ -1,365 +1,271 @@
-# 金价暴跌看懵了？我用 Kimi K2.5 + Cherry Studio 做了个“复盘神器”（附 Agent 设计+完整教程）
+---
+icon: chart-line
+---
 
-最近黄金一跳水，很多人第一反应是：要不要跑？要不要抄？\
-但回头看，黄金这种资产最擅长的就是“给市场上强度”。它的剧烈波动，其实经常能看到历史的影子：
+# 用 Kimi K2.5 构建黄金市场复盘 Agent
 
-* **宏观预期突然转向**（利率/通胀/美元走强），黄金容易快速回撤
-* **风险事件升温**（冲突、金融系统压力），避险需求又会推高价格
-* **流动性紧张**时，甚至会出现“先跌后涨”的反直觉走势
+本案例演示如何用 Cherry Studio 智能体完成一次“黄金价格波动复盘”：检索公开资料、对齐价格与事件时间、保存来源，并生成一份便于人工复核的报告。
 
-问题是：刷十条新闻，得到的是情绪；但你需要的是**证据链**。\
-恰好，最近 月之暗面发布并开源了 **Kimi K2.5** 模型。——它是 Kimi 迄今最智能、最全能的开源模型，在 **Agent、代码、图像/视频** 等任务上达到开源 SOTA。
+Kimi K2.5 是本案例的示例模型。只要模型能通过 **Anthropic Messages** 端点在 Cherry Studio 智能体中使用，也可以换成其他模型。不同服务商提供的模型、价格和工具兼容性可能不同，应先用小任务验证。
 
-\
-**于是，我产生了一个大胆的想法：** 既然人脑处理不过来这么多杂乱的信息，**能不能让 Kimi K2.5 住在 Cherry Studio 的 Agent 里，帮我把这次“黄金暴跌”扒个底朝天？**
+{% hint style="warning" %}
+本案例用于演示研究工作流，不提供投资建议。模型可能遗漏资料、误读数据或生成错误代码；不要根据生成结果直接交易。
+{% endhint %}
 
-今天这篇，不是枯燥的说明书，而是带你用最新的模型、最硬核的 Agent 技能，给自己配一个 24 小时待命的金融分析团队。文末会提供这个 Agent 的文件夹 `Kimi Agent`。
+## 最终要得到什么
 
-你下载后，配置 3 分钟，就能跑。下面，我把设计逻辑、文件夹结构、组件拆解、运行流程，全扒给你看，如果你盯着 K 线纠结“要不要抄底”，或者被新闻轰炸却找不到真因，那你需要这个。<br>
+建议把交付物限制为四个文件：
 
-<figure><img src="https://mcnnox2fhjfq.feishu.cn/space/api/box/stream/download/asynccode/?code=YWQxY2VjNGU3NmU5NzY1NWZmNDU3YzdiZGQyN2EwOTFfQ1JFRm52WVhJRGV2aGhQaGJsbDR2clltWkdoUmRHTGRfVG9rZW46WHlURGI3NWk5b1FKaEt4bnZZdGNEUjM1blhjXzE3NzAwMTYyNzc6MTc3MDAxOTg3N19WNA" alt=""><figcaption></figcaption></figure>
-
-## **为什么这样设计？（3 条硬逻辑，不绕弯）**
-
-1. **数据真实第一，零容忍编造**：金融分析最怕“AI 幻觉”。所以强制每步标注来源 + 时间戳，抓不到就报错（不猜）。公开源（如 Kitco、Investing.com）确保零 API Key 门槛。
-2. **任务拆模块化 + 并行**：Kimi K2.5 的亮点是“Agent 集群”（自主分身、并行 1500 步）。我们用 Cherry Studio 的 Skills + Sub-agents 模拟：数据抓取、新闻搜集、报告生成三路并进，效率翻倍。
-3. **输出现代化**：不吐 Markdown（谁还看纯文字？），直接生成 HTML（Chart.js 图表 + 响应式布局），对标 Kimi K2.5 的代码生成能力。
-
-结果：一份报告 = 近一年走势图 + 暴跌时间线 + 三情景预测 + 全来源链接。发给老板/群里，直接可用。<br>
-
-### **📁 文件夹结构：为什么兼容 Claude Code？**
-
-核心是 `.claude/` 目录——Cherry Studio 认这个，能自动加载 Skills 和配置。完整结构来自你的 `06-DIRECTORY_STRUCTURE.md`：
-
-<figure><img src="https://mcnnox2fhjfq.feishu.cn/space/api/box/stream/download/asynccode/?code=MGE5ODBmMWIxYjQ0Yzc2MTU2YzBiMmVkMzFiYzliMWVfelFBa2k5YnV2RXRzQVVGN3A2eW51SlllbU5yN3lZVW9fVG9rZW46S1ZKSWJ6WHFjbzNYZkJ4MnR3QmNiQkNIbjRmXzE3NzAwMTYyNzc6MTc3MDAxOTg3N19WNA" alt=""><figcaption></figcaption></figure>
-
-```python
-Kimi Agent/                           # 项目根目录
-├── .claude/                          # Cherry Studio Agent 核心配置区
-│   ├── prompts/                      # 系统提示词（双语）
-│   │   ├── system_prompt_cn.md       # 中文版：定义 Agent 行为 + 数据真实规则
-│   │   └── system_prompt_en.md       # 英文版
-│   ├── skills/                       # 3 个核心 Skills（自动识别）
-│   │   ├── skill_financial_data_fetcher.md     # 数据抓取 + 验证
-│   │   ├── skill_geopolitical_analyst.md       # 事件分析 + 时间线
-│   │   └── skill_financial_report_generator.md # HTML 报告生成
-│   ├── agents/                       # Sub-agents 配置
-│   │   ├── subagent_financial_intelligence.md  # 量化分析子模块
-│   │   └── subagents_usage_strategy.md         # 协作策略
-│   ├── config/                       # 路径/工具配置
-│   │   └── paths.conf
-│   ├── settings.json                 # 主配置：模型 + 提示词路径 + 工具列表
-│   └── mcp.json                      # MCP（工具服务器）配置
-├── docs/                             # 文档备份（README、数据源、更新日志）
-├── start-gold-agent.sh               # 一键启动脚本（可选）
-├── USER_PROMPT_EXAMPLE.md            # 示例指令
-└── 备份目录（core_config/ skills/ 等）# 原始文件备份，不参与运行
+```text
+gold-review/
+├── sources.md       # 来源、发布时间、抓取时间和用途
+├── market-data.csv  # 本次实际使用的价格数据
+├── analysis.md      # 事件时间线、计算过程和不确定项
+└── report.html      # 最终可阅读报告
 ```
 
-**为什么这样分？**
+这四个文件分别回答“资料从哪里来”“使用了什么数据”“如何得出结论”和“如何展示结果”。不要只要求生成一份漂亮的 HTML；没有前三项时，最终页面很难核验。
 
-* `.claude/` 是 Cherry Studio 的标准识别路径：选中工作目录，它自动加载 Skills（文件名 `skill_*.md` → Skill 名 `financial-data-fetcher`）。
-* 备份区防丢：原始 Skills 在根目录 skills/，运行时用 `.claude/skills/`。
+## 工作流设计
 
-<br>
+把任务拆为三个阶段：
 
-### **🔧 核心组件拆解：3 个 Skills + 插件 + Sub-agents**
+| 阶段 | 主要工作 | 必须留下的证据 |
+| :--- | :--- | :--- |
+| 数据收集 | 获取指定时间范围内的价格与宏观资料 | 来源 URL、发布时间、抓取时间、原始数值 |
+| 事件对齐 | 将显著波动与同一时间窗口内的事件进行比较 | 时区、事件时间、价格区间、支持和反对证据 |
+| 报告生成 | 组织图表、时间线、结论和限制 | 计算口径、引用链接、缺失数据、风险提示 |
 
+可以让智能体使用 `Task` 工具把独立研究步骤交给子任务，但“并行”本身不保证质量。最终仍要由主任务统一时间、单位和来源口径。
 
+## 第一步：准备模型
 
-#### **🧩 三大核心 Skills 设计详情**
+1. 打开 **设置 → 模型服务**。
+2. 配置提供 Kimi K2.5 的服务商，或选择其他适合工具调用的模型。
+3. 确认该模型的端点类型包含 **Anthropic Messages**。
+4. 保存后先完成一次普通对话，再到智能体模型选择器中确认它可见。
 
-我们来看看这三个“分身”具体是如何设计的，以及为什么要这么设计。
+智能体模型选择器会排除 Embedding、Rerank 和图像生成模型。如果模型能用于普通对话、却没有出现在智能体中，优先检查端点类型和模型能力标签。
 
-**Skill A：`financial-data-fetcher` (数据猎手) —— 拒绝幻觉**
+模型服务配置见[模型服务](../../pre-basic/providers/)。需要手动补充模型或修正能力标签时，可参考[自定义服务商](../../pre-basic/providers/zi-ding-yi-fu-wu-shang.md#添加和管理模型)中的模型管理方法。
 
-* **设计痛点**：通用 LLM 最容易“瞎编”价格。你问金价，它可能编个 2023 年的数据给你。
-* **Skill 逻辑**：
-  * **硬约束**：我们在 Prompt 里写死了规则——_“禁止使用训练数据中的价格，必须调用工具”_。
-  * **工具链**：配备了 `WebFetch`。它不是去“搜”百度，而是直接去“爬”指定的数据源网页（如 Kitco, GoldPrice.org, LBMA）。
-  * **数据清洗**：它会将爬下来的乱七八糟的 HTML 清洗为干净的 `JSON` 格式（时间戳、开盘、收盘、涨跌幅）。
-* **Kimi K2.5 的作用**：利用其强大的**长文档抽取能力**，从几万行网页代码中精准定位到那个 `$2,xxx.xx` 的数字。
+## 第二步：准备工作目录
 
+新建一个空目录，例如 `gold-review`，并只放入本次任务需要的资料。不要选择整个用户目录、下载目录或包含密钥的项目目录。
 
+如果你已经有价格数据，可以先放入 `market-data.csv`。建议至少包含：
 
-**Skill B：`geopolitical-analyst` (地缘逻辑库) —— 拒绝噪音**
+```csv
+timestamp,open,high,low,close,unit,timezone,source
+2026-01-01T00:00:00Z,,,,,USD/oz,UTC,
+```
 
-* **设计痛点**：黄金暴跌原因很多（美元涨？打仗？抛售？）。普通搜索会把营销号的假新闻也吸进来。
-* **Skill 逻辑**：
-  * **多源交叉**：不仅搜“金价”，还并行搜索“美元指数(DXY)”、“美联储会议纪要”、“地缘局势”。
-  * **时间对齐**：它会执行一个核心逻辑——**“TimeStamp Matching”**。
-    * _发现：_ 黄金在 UTC 14:30 暴跌。
-    * _搜索：_ UTC 14:30 发生了什么？
-    * _匹配：_ 发现美国在 UTC 14:30 发布了超预期的 CPI 数据。
-    * _结论：_ 暴跌由通胀数据引发。
-* **Kimi K2.5 的作用**：利用其 **Agent 集群（分身）能力**，它能模拟“同时阅读 20 篇新闻”，并过滤掉情绪化噪音，只保留事实。
+字段可以调整，但单位和时区必须明确。来自不同市场或数据源的数据，不应在未转换口径时直接拼接。
 
+## 第三步：创建智能体
 
+1. 打开 **资源库**，新建一个智能体。
+2. 名称填写 `黄金市场复盘`。
+3. 主模型选择前一步验证过的模型。
+4. 在可访问目录中添加刚创建的 `gold-review`。
+5. 权限模式先选择**普通模式**。
+6. 保存智能体。
 
-**Skill C：`financial-report-generator` (前端工程师) —— 拒绝平庸**
+普通模式允许读取文件，但编辑文件或运行命令时会请求确认。首次运行不建议选择“完全自动”；金融数据检索和本地文件写入都需要人工观察。
 
-* **设计痛点**：也是 Cherry Studio 最惊艳的一步。大多数 Agent 只会给你吐一段 Markdown 文字，甚至表格都歪歪扭扭。
-* **Skill 逻辑**：
-  * **代码优先**：这个 Skill 被训练为“只说代码语言”。它不写文章，它写 HTML + CSS + JavaScript。
-  * **动态交互**：即使你没有编程基础，这个组件也会调用 `Chart.js` 库，把组件 A 抓到的数据变成可缩放、可悬停查看的 K 线图。
-  * **视觉集成**：它会将组件 B 的分析结论，以“卡片”或“时间轴”的形式，嵌入到网页布局中。
-* **Kimi K2.5 的作用**：利用其升级的 **Code（编程）** 能力，特别是前端构建能力。Kimi K2.5 生成的代码健壮性极高，几乎不需要人工 Debug 就能在浏览器跑通。
+关于智能体各项设置，参见[智能体](../agent.md)。
 
-\
-<br>
+## 第四步：添加工具
 
-#### **Sub-agent 在这套 Agent 里的定位是什么？🧩**
+在智能体的 **能力扩展 → 内置工具** 中确认以下工具可用：
 
-下面把 **Kimi Agent（黄金市场分析 Agent）** 里“Sub-agent（子代理）”这一层讲清楚：它们是什么、为什么要用、怎么协作、你在文件夹里能看到什么。
+| 工具 | 本案例用途 | 是否必需 |
+| :--- | :--- | :--- |
+| `Read`、`Glob`、`Grep` | 读取已有资料和查找文件 | 是 |
+| `WebSearch` | 搜索公开资料 | 是 |
+| `WebFetch` | 读取指定网页 | 是 |
+| `Write` | 创建 CSV、Markdown 和 HTML | 是 |
+| `Task`、`TodoWrite` | 拆分任务并记录进度 | 建议 |
+| `Bash` | 运行数据处理或本地校验命令 | 可选 |
 
-> _先把话说透：_ _**Skills** 更像“可复用的流程模块”；**Sub-agent** 更像“带独立工作说明书的专职角色”。_
+`WebSearch`、`WebFetch`、`Write` 和 `Bash` 涉及网络访问或修改本地内容。添加工具后，普通模式仍会在需要时请求确认。只批准当前步骤所需的调用。
 
-\
-主 Agent（你在 Cherry Studio 里创建的 `Gold Market Analysis Agent`）负责三件事：
+如果网页需要登录、存在验证码或禁止自动抓取，应改为手动下载资料后放入工作目录，不要要求智能体绕过访问限制。
 
-1. **拆任务**：把“分析黄金走势/复盘暴跌/写报告”分成若干独立子任务
-2. **派任务**：把子任务分发给不同 Sub-agent（每个子代理有明确边界与输出格式）
-3. **验收与汇总**：检查数据是否有来源、时间戳，是否出现缺口；最后交给报告生成模块产出 HTML
+## 第五步：按需安装技能
 
-为什么不让一个 Agent 一把梭？
+本案例可以只用系统提示词完成。需要多次复用时，再把稳定流程整理为技能，例如：
 
-* 因为“搜数据、读新闻、算指标、写前端报告”对上下文和工具调用的要求不同，揉成一个 Prompt，最容易跑偏。
-* 拆开后，每个子代理的规则可以写得更死：**允许用哪些工具、输出什么结构、遇到失败怎么处理**。
+* `market-data-verifier`：规定数据字段、单位、时区和多源核对方法。
+* `event-timeline`：规定事件时间线和因果强度的标注方式。
+* `research-report`：规定报告结构、引用格式和失败说明。
 
-\
-**这套配置里有哪些 Sub-agent？分别干什么？✅**&#x8FD9;个包里 Sub-agent 主要是三类（两类是系统预置，一类是自定义）：
+每个可安装技能都应是包含 `SKILL.md` 的目录或 ZIP 包。操作步骤：
 
-**A. 系统预置：`search-specialist`（搜索与资料整理）**
+1. 打开 **设置 → 技能**。
+2. 从目录或 ZIP 安装技能。
+3. 回到已保存智能体的 **能力扩展 → 技能**。
+4. 为当前智能体启用所需技能。
 
-* **name**: `search-specialist`
-* **职责**：高级搜索、筛选结果、跨来源验证、整理引用
-* **输出特点**：会给出搜索策略、来源 URL、关键引用（适合做“暴跌触发因素时间线”）
+技能先保存在 Cherry Studio 的全局技能库中；为智能体启用后，应用会把它链接到该智能体工作目录的 `.claude/skills/`。不要手工复制不明来源的整套 `.claude` 配置，也不要覆盖应用创建的技能链接。
 
-用在黄金分析里，它通常负责：
+完整说明见[技能](../../pre-basic/settings/skills.md)。
 
-* “暴跌”的相关新闻源头、发布时间、关键句
-* 央行、宏观数据发布（如 CPI、利率决议）对应的官方/权威来源页面
-* 同一指标的多源校验（比如 Kitco vs GoldPrice vs Investing）
+## 第六步：填写系统提示词
 
+将下面模板放入智能体的系统提示词，并按需要修改：
 
+```text
+你是一名市场研究助理。你的任务是整理可核验的黄金市场复盘，
+而不是预测收益或给出买卖建议。
 
-**B. 系统预置：`business-analyst`（指标与相关性分析）**
+工作规则：
+1. 先确认用户要求的品种、市场、币种、单位、时区和日期范围。
+2. 价格、利率、指数和事件必须来自本次读取的文件或工具结果；
+   不得用模型记忆补写当前数值。
+3. 对关键事实记录来源 URL、来源名称、发布时间和本次访问时间。
+4. 至少用两个相互独立的来源核对核心结论；若只有一个来源，明确标注。
+5. 严格区分事实、计算结果、解释和假设，不把时间上的相邻直接写成因果。
+6. 数据缺失、网页不可访问或计算失败时，保留缺口并说明原因。
+7. 写文件前先列出计划；只在当前工作目录中创建或修改文件。
+8. 最终生成 sources.md、market-data.csv、analysis.md 和 report.html。
+9. report.html 必须能在本地打开，不得在页面中嵌入密钥或个人信息。
+10. 报告结尾加入“仅供研究与学习，不构成投资建议”。
+```
 
-它的工具是 `Read, Write, Bash`，很适合做**结构化分析**：
+系统提示词定义长期规则；具体研究日期和事件放在每次发送的任务中，不要写死在系统提示词里。
 
-* 相关性（黄金 vs DXY、黄金 vs 实际利率）
-* ETF 持仓变化（如 SPDR Gold Trust）
-* KPI 计算（年化波动率、回撤等——前提是拿到了真实数据）
+## 第七步：先运行资料清单
 
-它的价值在于：**把“看起来像分析”的描述，变成“可计算、有中间过程”的结论。**
+首次发送的任务不要直接要求完整报告。先让智能体提出资料计划：
 
+```text
+请先为一次黄金现货价格波动复盘制定资料清单，暂时不要写报告。
 
+范围：
+- 品种：请在开始前向我确认
+- 计价单位：美元/盎司
+- 时区：UTC
+- 日期范围：由我确认后再开始检索
 
-**C. 自定义 Sub-agent：`financial-intelligence-agent`（历史数据/技术指标/预测）**
+请输出：
+1. 需要的数据字段；
+2. 计划使用的来源类型；
+3. 将调用的工具和原因；
+4. 将创建的文件；
+5. 需要我确认的权限与潜在费用。
+```
 
-路径：`.claude/agents/subagent_financial_intelligence.md`它覆盖了更偏“量化流水线”的工作：
+检查计划没有扩大目录和数据范围后，再允许它开始收集。
 
-* 拉取历史数据（OHLCV、经济指标、利率、通胀等）
-* 计算 RSI / MACD / 布林带 / 均线 / 波动率
-* 输出一组可追溯的中间文件：CSV、JSON（例如 `gold_technical_indicators.csv`、`correlation_analysis.json`、`gold_price_forecast_12m.csv`）
+## 第八步：执行复盘
 
-> _这一层特别关键：它把“技术分析”从聊天内容里剥离出来，变成可落盘的产物。之后复用、对比、发给别人，都方便。_
+确认范围后，可以发送：
 
-<br>
+```text
+按已确认的范围执行复盘。
 
-#### **Sub-agent 是怎么被“调度”的？（并行策略）⚙️**
+要求：
+- 先收集并保存来源，再进行分析；
+- 标记价格变化最大的时间窗口；
+- 将事件时间统一转换为 UTC；
+- 每个原因都列出证据、反证和可信度；
+- 所有计算写明输入字段和公式；
+- 无法验证的内容放入“待核实”，不要补写；
+- 完成 Markdown 中间产物后，再生成 report.html；
+- 最后汇报创建或修改的文件，以及仍未解决的问题。
+```
 
-这套系统优先走 **并行**，因为黄金复盘天然是多源信息任务。
+运行过程中重点检查三类工具请求：
 
-**Phase 1：并行收集（减少等待）**
+1. **网络请求**：域名是否与计划中的来源一致。
+2. **文件写入**：路径是否位于 `gold-review` 中。
+3. **命令执行**：命令是否只处理本次数据，是否会安装包或访问额外网络。
 
-* `search-specialist`：搜“暴跌当天关键新闻/数据发布时间线”
-* `financial-intelligence-agent`：拉取近一年价格序列 + 计算指标
-* `business-analyst`：计算相关性、整理 ETF/宏观的解释框架
+如果需要临时安装数据处理库，先暂停并自行审查包名、来源和命令。不要把安装依赖默认为“继续任务”的必要授权。
 
+## 第九步：验收中间产物
 
+### 检查 `sources.md`
 
-**Phase 2：串行计算（有依赖的放后面）**
+每条来源至少包含：
 
-* 只有当历史数据落盘后，才计算指标/波动率/支撑阻力等
-* 若发现数据缺口，再回到 `search-specialist` 补来源
+* 来源名称和 URL。
+* 网页或数据的发布时间。
+* 本次访问时间。
+* 它支持哪一条事实或数据。
+* 是否需要登录、订阅或存在二次转载。
 
+无法打开的链接不能作为唯一证据。转载文章应尽量追溯到原始发布者。
 
+### 检查 `market-data.csv`
 
-**Phase 3：汇总交付**
+确认：
 
-* 主 Agent把三路结果“对齐时间戳、对齐口径”
-* 再调用报告生成模块输出 HTML（含图表、时间线、引用清单）
+* 时间格式和时区统一。
+* 价格单位统一。
+* 缺失值没有被静默填补。
+* 数据范围与任务要求一致。
+* `source` 能对应到 `sources.md`。
 
-这就是为什么这套 Agent 在“热点场景”更能打： **黄金暴跌=信息密集+口径混乱**，并行搜证 + 校验 + 汇总，能显著降低“看了很多但更迷糊”的情况。
+随机抽取几个时间点，与原始来源手工比对。
 
-***
+### 检查 `analysis.md`
 
-#### **Sub-agent 和 Skills 的关系：别搞混了🤝**
+“某事件发生后价格下跌”只说明时间关系，不自动证明因果。建议每条解释使用以下结构：
 
-在你的包里，两者是互补的：
+```text
+观察：
+时间窗口：
+支持证据：
+反对或替代解释：
+可信度：高 / 中 / 低
+仍需核实：
+```
 
-* **Sub-agent**：更像“专用工作模式”，解决“谁来做、怎么做、用哪些工具、输出什么格式”的问题
-* **Skills（.claude/skills/）**：更像“可重复调用的流程模块”，解决“这一步怎么稳定执行”的问题 例如：
-  * `financial-data-fetcher`：强调多源校验、禁止编数字、输出结构化数据
-  * `geopolitical-analyst`：强调事件分类、因果机制、时间线格式
-  * `financial-report-generator`：强调 HTML 模板、Chart.js、来源列表、可打印样式
+技术指标也必须保留公式、参数和输入区间。只给出结果数字而没有计算过程，不能视为通过。
 
-简单说： **Sub-agent 负责把工作分出去；Skills 负责让每一步更稳、更可复用。**<br>
+### 检查 `report.html`
 
-#### **你在文件夹里怎么确认 Sub-agent “真的生效了”？🔍**
+本地打开后检查：
 
-看两个地方就够了：
+* 页面没有依赖无法访问的本地绝对路径。
+* 表格和图表中的数字与 CSV 一致。
+* 每项关键结论都能回到来源。
+* 缺失数据和限制没有在最终排版中被隐藏。
+* 页面不包含 API Key、Cookie、用户名或个人目录。
 
-1. **目录是否标准**
-   1. `.claude/agents/` 里有 `subagent_financial_intelligence.md`
-2. **运行日志**（Cherry Studio 内）
-   1. 你会看到工具调用和任务分派痕迹（WebSearch/WebFetch/Bash/Write）
-   2. 最后能落地生成文件：例如 `gold_analysis_report.html`、若配置包含中间产物也会输出 CSV/JSON
+## 常见问题
 
-如果你希望“更显眼”，可以在主 Prompt 里加一句硬约束：
+### Kimi K2.5 没有出现在智能体模型列表
 
-> _“请在报告附录列出本次调用了哪些 sub-agent / skills，以及各自产出的文件名。”_
+确认模型的端点类型包含 **Anthropic Messages**，并检查模型是否被错误标记为 Embedding、Rerank 或图像生成类型。不同服务商即使提供同名模型，也不一定暴露相同端点能力。
 
-这样读者一眼就能看出：这不是聊天，这是流水线。<br>
+### 智能体没有搜索网页
 
-## **🛠️ 实战教程：三步复刻你的专属 Agent**
+检查 `WebSearch` 和 `WebFetch` 是否已经添加到当前智能体，以及工具请求是否被拒绝。模型本身“支持联网”的宣传不代表 Cherry Studio 会自动提供网页工具。
 
-不用写代码，不用配环境。我打包了一&#x4E2A;**“Kimi Agent”文件夹**，你只要会“复制粘贴”就能用。
+### 技能安装了但没有生效
 
-### **Step 1：模型配置（月之暗面 的 `kimi-K2.5` + Anthropic 端点）**
+先保存智能体，确保它有工作目录，再到该智能体的技能列表中启用技能。仅把文件放进工作目录，不等于已经安装并绑定。
 
-这是让 AI 变聪明的核心。
+### 无法创建报告文件
 
-1. 打开 Cherry Studio → **模型服务** → 点击 **月之暗面**
+检查 `Write` 是否可用、当前权限请求是否获批，以及目标路径是否位于可访问目录。不要通过扩大到整个磁盘来解决路径问题。
 
-<figure><img src="https://mcnnox2fhjfq.feishu.cn/space/api/box/stream/download/asynccode/?code=ODM3MTNkZDUzMDVlODQ2MWMyZjc1ODA2YmRjZDYzMjlfN29ERG56cTRYWU44bE14T1NWS1lQMzl4dUo3Uzc1MWFfVG9rZW46SmY1ZmJQS1ZjbzhVY3F4dEZxSmM0V0dRbnZnXzE3NzAwMTYyNzc6MTc3MDAxOTg3N19WNA" alt=""><figcaption></figcaption></figure>
+### 数据看起来很完整，但来源对不上
 
-2. 跳转 月之暗面 开放平台获取 **API Key**（模型调用需要；数据抓取不需要额外 Key）
+停止生成最终报告，要求智能体逐项标出每个数值的来源行。找不到来源的数值应删除或标为待核实，而不是继续润色。
 
-**⚠️ 高能预警（必做）：** 在 Cherry Studio 的配置里，把 **“端点类型 (Endpoint Type)”** 必须改为 `Anthropic`。
+## 可以怎样扩展
 
-<figure><img src="https://mcnnox2fhjfq.feishu.cn/space/api/box/stream/download/asynccode/?code=N2QwZGIwZThhNjg5MDIzNDQ4NTUzNzdlOWU2M2Q0N2VfN1A0UzB0R3QyUTFIRDJGV05FN0UxVkVwa0d3MGM0RHRfVG9rZW46SDc1OGIxZ1N1b1d2TkF4MXZiRWNPcmpnbktoXzE3NzAwMTYyNzc6MTc3MDAxOTg3N19WNA" alt=""><figcaption></figcaption></figure>
+基础流程通过后，可以逐步增加：
 
-* _为什么要改？_ 因为 Cherry Studio 的 Agent 协议需要在 Anthropic 端点模式下运行，这样才能让 Kimi K2.5 完美调度上面提到的那些 Skills。
+* 通过 MCP 连接经过审查的数据服务。
+* 用定时任务定期生成复盘，但仍保留人工审核。
+* 通过频道发送“报告已生成”的通知，而不是直接发送交易结论。
+* 把稳定的核验规则整理为团队技能。
 
-\
-<br>
+每次只增加一种能力，并重新检查权限、费用和输出。进一步配置见[MCP](../mcp/)、[定时任务](../scheduled-tasks.md)和[频道](../agent-channels.md)。
 
-### **Step 2：创建 Agent（直接挂载文件夹 `Kimi Agent`）**
-
-> 文末我为你准备好了名为 `Kimi Agent` 的文件夹，里面预装了所有技能，你不需要手动重复写 Skills/Sub-agent。
-
-<figure><img src="https://mcnnox2fhjfq.feishu.cn/space/api/box/stream/download/asynccode/?code=YWEzYzJlOTBmNzJiNDJiYTBlZmNkNmFjOGE0MDQ1MjdfYkY1SEtLckNTNHQxd1RRQXg5VnBRR2ZaRVM2VFM5MVBfVG9rZW46UzNvQmIxdFpmb3RkQ1J4dlZzT2NLbUZLbmJnXzE3NzAwMTYyNzc6MTc3MDAxOTg3N19WNA" alt=""><figcaption></figcaption></figure>
-
-1. Cherry Studio → 助手列表旁点 **+** → **创建 Agent**
-2. 名称：`Gold Market Analysis Agent`(或者你喜欢的名字)。
-3. 模型：选择刚配置的 **月之暗面 /** `kimi-K2.5`
-4. 工作目录：选择你下载并解压的 `Kimi Agent` 文件夹
-
-<figure><img src="https://mcnnox2fhjfq.feishu.cn/space/api/box/stream/download/asynccode/?code=YTRjNzk5Nzk5Mzc1NzE2MjgwMjYxZDYwNzZjYjQzMzZfbDV2OXhON1lzbEZpNGNKeWtWRDJManJnUkxPbDh6U2lfVG9rZW46RVFZWGJ3VkxJb2lKWkh4TThscmN6b1ZPbm5mXzE3NzAwMTYyNzc6MTc3MDAxOTg3N19WNA" alt=""><figcaption></figcaption></figure>
-
-5. 打开文件夹里的系统提示词（例如 `.claude/prompts/system_prompt_cn.md`），粘贴到 Cherry Studio 的 **系统提示词**框。
-
-<br>
-
-### **Step 3：打开工具权限 + 插件 + Skills（照单全勾）**
-
-<br>
-
-1. **权限开启**：在 Agent 配置里开启权限并授权工具（少一个都可能卡住）：
-
-<figure><img src="https://mcnnox2fhjfq.feishu.cn/space/api/box/stream/download/asynccode/?code=YTU4NGU3MGJjZTA1NzY3YjJmMWE1ODZlM2M1ZTY5NzhfUEVXZW91V0Vta2lBUnNubjNEaU9DanVsVkZNOGEyZ0hfVG9rZW46UnkzVGJrUjFTb21XQUp4NlpwRmM5dkFybmloXzE3NzAwMTYyNzc6MTc3MDAxOTg3N19WNA" alt=""><figcaption></figcaption></figure>
-
-* `bash`
-* `fetch`
-* `edit`
-* `multiedit`
-* `webfetch`
-* `web search`
-* `write`
-
-2. **配置插件：**
-
-添加系统预置 plugin：
-
-<figure><img src="https://mcnnox2fhjfq.feishu.cn/space/api/box/stream/download/asynccode/?code=M2Q4NzhhNmY4MTFjN2Y4MTk3NWFkM2M5OGE3YzExZGNfNm9CRlBrOTdkdkNEUjZxMnJKamFValdheE53NEF5NVhfVG9rZW46T3huTWJGQlo3b3NuNmJ4SnNHQWNIME50bjBmXzE3NzAwMTYyNzc6MTc3MDAxOTg3N19WNA" alt=""><figcaption></figcaption></figure>
-
-* `business-analyst`
-* `search-specialist`
-
-系统 skills：
-
-* `Excel Analysis`
-
-<br>
-
-## **见证“魔法”**
-
-一切就绪。打开文件夹里的 `USER_PROMPT_EXAMPLE.md`，里面有一段写好的**深度指令**，直接复制发送给 Agent。**这段指令会让 Agent 做三件事：**
-
-<figure><img src="https://mcnnox2fhjfq.feishu.cn/space/api/box/stream/download/asynccode/?code=MzQ1NzEwZmMyZDJkMzg5NjgyZjQ5ZmRmN2FkNmZhZDZfUEZzcHpEUzFaZlBja2xWZVpOYjhOM0Q3RVJGbUtpSnpfVG9rZW46WnpyU2JhbDZvbzBmT0F4UGFaUWNSR1RCbmVqXzE3NzAwMTYyNzc6MTc3MDAxOTg3N19WNA" alt=""><figcaption></figcaption></figure>
-
-1. **查**：搜索黄金暴跌的具体跌幅和发生时间。
-2. **找**：利用 Kimi K2.5 的联网能力，寻找月之暗面官方关于新模型的特性介绍（不准瞎编）。
-3. **比**：寻找历史上类似的暴跌形态，分析是否有“影射”关系。
-
-
-
-### **📊 最终效果呈现：它交出了什么？**
-
-点击发送，你会看到 Agent 开始疯狂运转。 日志里会显示：`Thinking...` -> `Searching News...` -> `Calculating...`一段时间后，你不会得到一句废话，而是会收到一份 **HTML 格式的深度研报**：
-
-<figure><img src="https://mcnnox2fhjfq.feishu.cn/space/api/box/stream/download/asynccode/?code=Y2IzNzQyN2E5MDM2MWQ3MjA2YTc0NTE4Mzc1Y2IxZTFfUEJWV0ZtaTBJSGd3cHhsMUZ5YVVDRFhRUlNVYUhXbm1fVG9rZW46TVRFZmJSR2tPb2Z3dE14cUdmZWN4RTJabkRoXzE3NzAwMTYyNzc6MTc3MDAxOTg3N19WNA" alt=""><figcaption></figcaption></figure>
-
-* 📈 **近一年黄金走势可视化**（图表 + 表格）
-* 🧷 **关键暴涨/暴跌区间标注**（尤其是“暴跌”）
-* 🗓️ **事件时间线**（每条事件带来源链接，可复核）
-* 📊 **技术指标/相关性分析**（有数据就计算；缺失就明确说明）
-* 🔮 **三情景预测**（条件、区间、风险提示写清楚）
-* 🧾 **数据来源清单**（URL + 抓取时间戳）
-
-\
-**最终，你会得到一个** `gold_analysis.html` **文件，打开即看：**<br>
-
-<figure><img src="https://mcnnox2fhjfq.feishu.cn/space/api/box/stream/download/asynccode/?code=MDI4NDk2Yzc4N2Q1MTAyMDFlYTkyMmFhNDZiNzUzMTJfVFQ2S1hJdkdjcXNLU2tDUzZzaGpoZ2UzYkpiMFl5ekZfVG9rZW46SzRTbGI5VXRLb0o5d2J4aE9nV2MwMDRsblJlXzE3NzAwMTYyNzc6MTc3MDAxOTg3N19WNA" alt=""><figcaption></figcaption></figure>
-
-***
-
-## **💭 写在最后**
-
-这次体验让我最震惊的，不是 Kimi K2.5 变得多强，也不是 Cherry Studio 有多好用。 而是 **“确定性”**。在金融市场，信息就是金钱。
-
-&#x20;以前我们靠猜，现在我们靠 Agent。通过把 Kimi K2.5 装进 Cherry Studio，我们其实是给自己雇了一&#x4E2A;**“绝对理性、24小时联网、数据可溯源”**&#x7684;超级员工。
-
-**这次黄金暴跌也许你没躲过，但如果学会了这套 Agent 玩法，至少在认知的维度上，你已经赚回来了。**\
-\
-当你掌握&#x4E86;**“把复杂任务拆解为 Skills 组件”**&#x8FD9;一核心逻辑，再加上 **Kimi K2.5** 在任务规划、工具调用上的质变，你会发现，你以前觉得“AI 做不到”的事情，现在都可以交付给 Agent 了：
-
-* **🕵️♂️ 市场侦察兵**： 不想手动刷竞品网页？让 Agent 自动抓取 10 个竞品的最新价格与功能更新，清洗去重，每天早上 9 点把整理好的 Excel 对比表推送到你桌面。
-* **💻 影子程序员**： 代码写不完？不仅是补全代码，你可以让 Agent 读取整个项目文件夹，根据需求自动编写功能模块、运行本地测试、修复 Bug，并顺手生成一份完美的 API 文档。
-* **✈️ 极致旅行家**： 拒绝流水账攻略。让 Agent 根据你的预算实时比价机票酒店，综合天气与当地活动评价，规划一条精确到分钟的行程，甚至生成 PDF 路书。
-
-\
-**Agent 的真正魅力，不在于它能陪你聊多久，而在于它的自主性和交付力**——它能像今天的黄金分析师一样，在你喝咖啡的时候，默默把活儿干完。这&#x79CD;**“任务自动化”**&#x7684;感觉，一旦体验过，就回不去了。
-
-我们诚挚地邀请你跳出框架，去探索更多硬核、有趣、实用的场景。无论是工作流优化，还是生活黑科技，请将你的奇思妙想和 Agent 配置文件分享出来。
-
-📩 **投稿与交流**：[support@cherry-ai.com](mailto:support@cherry-ai.com)\
-**别等未来了。属于你的 AI Agent 时代，从这一刻，已经开始。**
-
-\
-👇 **现在就下载，接入 Kimi K2.5，构建你的第一支数字化团队：**
-
-📥 **附：Kimi Agent 配置文件夹下载链接 ：**&#x68;ttps://pan.quark.cn/s/1ef986d1a9f&#x66;_(请确保已安装 Cherry Studio v1.7.0+ 版本)_<br>
-
-\
-\
-\
-<br>
-
-***
-
-### 💡 获取帮助与提交反馈
-
-如果您在配置或使用过程中遇到任何疑问、Bug 或有功能改进建议，请参考 [反馈与建议](../../question-contact/suggestions.md) 中提供的官方渠道。
+返回[Agent 案例](./)查看其他工作流。

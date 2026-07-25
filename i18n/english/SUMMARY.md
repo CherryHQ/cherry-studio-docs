@@ -6,8 +6,10 @@
 * [Client Download](cherrystudio/download.md)
 * [Project Planning](cherrystudio/planning.md)
 * [Features Overview](cherrystudio/preview/README.md)
+  * [Launchpad](cherrystudio/preview/launchpad.md)
   * [Chat Interface](cherrystudio/preview/chat.md)
   * [Agents](cherrystudio/preview/agents.md)
+  * [Library](cherrystudio/preview/library.md)
   * [Drawing](cherrystudio/preview/drawing.md)
   * [Translation](cherrystudio/preview/translation.md)
   * [Mini-Apps](cherrystudio/preview/app.md)
@@ -88,8 +90,14 @@
   * [Add ModelScope MCP Server](advanced-basic/mcp/tian-jia-modelscope-mcp-fu-wu-qi.md)
   * [Common Issues](advanced-basic/mcp/chang-jian-wen-ti.md)
 * [Call Chain Usage Instructions](advanced-basic/diao-yong-lian-shi-yong-shuo-ming.md)
-* [Code Tools Usage Tutorial](advanced-basic/code-tools-shi-yong-jiao-cheng.md)
+* [Code Tools](advanced-basic/code-tools-shi-yong-jiao-cheng.md)
 * [Cherry Agent Usage Tutorial](advanced-basic/agent.md)
+* [Skills](pre-basic/settings/skills.md)
+* [Channels](advanced-basic/agent-channels.md)
+* [Scheduled Tasks](advanced-basic/scheduled-tasks.md)
+* [Agent Workspace Memory](advanced-basic/memory.md)
+* [OpenClaw](advanced-basic/openclaw.md)
+* [Prompts and Quick Insertion](pre-basic/settings/quick-phrase.md)
 
 ## Project Contribution <a href="#contribution" id="contribution"></a>
 

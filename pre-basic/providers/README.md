@@ -2,73 +2,143 @@
 icon: cloud-plus
 ---
 
-# 模型服务配置
+# 模型服务
 
-Cherry Studio 内置 60+ 家 Provider（模型服务商）的连接模板，覆盖国内外大部分主流模型与本地推理框架。本节为每家 Provider 提供独立配置指南。
-
-### Provider 类型
-
-Cherry Studio 把 Provider 按协议分为以下几类，行为略有差异：
-
-| 类型 | 兼容协议 | 典型代表 |
-|---|---|---|
-| **OpenAI 兼容** | `/v1/chat/completions` | OpenAI、DeepSeek、硅基流动、OpenRouter、绝大多数三方网关 |
-| **Anthropic 兼容** | `/v1/messages` | Anthropic、CherryIN、部分网关。**Cherry Agent 需要此类型** |
-| **Gemini** | Google AI Studio / Vertex | Google Gemini、Vertex AI |
-| **Bedrock** | AWS Bedrock SDK | AWS Bedrock |
-| **Azure OpenAI** | Azure OpenAI Service | Azure OpenAI |
-| **本地推理** | 本地 HTTP 服务 | Ollama、LM Studio、GPUStack、OpenVINO Model Server |
-| **特殊网关** | 厂商私有协议 | NewAPI、OneAPI、AiHubMix、DMXAPI 等 |
-
-### 添加一个 Provider 的通用步骤
-
-1. 打开 `设置 → 模型服务`
-2. 在内置 Provider 列表中找到目标 Provider，点击进入详情页
-3. 填写 **API 密钥**（必填），按需修改 **API 地址**（默认是 Provider 官方地址）
-4. 点击 **获取模型列表**，按需添加你常用的对话/嵌入/视觉模型
-5. （可选）点击 **检测**，用任一对话模型验证连接是否成功
-
-### Provider 配置详解
-
-#### 通用/网关类
-* [CherryAI (免费)](cherryai/)
-* [CherryIN](cherryin-1.md) — 双端点（OpenAI + Anthropic），Cherry Agent 推荐
-* [NewAPI](newapi.md) / [OneAPI](oneapi.md) — 自建/三方网关
-
-#### 海外厂商
-* [OpenAI](openai.md)
-* [Google Gemini](google-gemini.md)
-* [Vertex AI](vertex-ai.md)
-* [GitHub Copilot](github-copilot.md)
-* [MiniMax Coding Plan](minimax-coding-plan.md)
-
-#### 国内厂商
-* [阿里云百炼](a-li-yun-bai-lian.md)
-* [硅基流动](siliconcloud.md)
-* [火山引擎（豆包）](doubao.md)
-* [华为云](huawei.md)
-* [无问芯穹](wu-wen-xin-qiong.md)
-* [PPIO 派欧云](ppio.md)
-* [ModelScope（魔搭）](modelscope.md)
-
-#### 本地推理
-* [Ollama](ollama.md)
-
-#### 自定义服务商
-* [自定义服务商](zi-ding-yi-fu-wu-shang.md) — 任意 OpenAI / Anthropic / Gemini 兼容端点
+模型服务用于把 Cherry Studio 连接到云端模型平台、本地推理服务或自建网关。完成配置后，你还需要在该服务商的模型列表中启用模型，才能在助手、翻译、知识库等功能中选择它们。
 
 {% hint style="info" %}
-**没找到你用的 Provider 怎么办？**
-
-Cherry Studio 内置 60+ Provider 模板，但**远多于本节文档已收录**的数量。如果你用的是 Anthropic（Claude）、Azure OpenAI、DeepSeek 官方、Grok、Groq、LM Studio、OpenRouter、Mistral、Perplexity、Together 等，**它们都在 Provider 列表里**，直接添加密钥即可。本节文档将分批补齐这些 Provider 的专题页。
+如果你已经知道要使用哪家服务商，可以直接进入对应的[服务商配置指南](#服务商配置指南)。如果只想快速比较支持情况，请查看[全部 Provider 快速参考](quick-reference.md)。
 {% endhint %}
 
-### API 密钥与 API 地址
+## 开始前准备
 
-详见 [模型服务设置](../settings/providers.md)（含 多 Key 轮询、`#` 结尾固定路径等高级用法）。
+根据服务商类型，准备以下信息：
 
-***
+- **云端模型平台或聚合网关**：API Key，以及账户中已开通的模型；
+- **自建网关**：API Key、Base URL 和网关支持的接口协议；
+- **本地推理服务**：已经启动的服务地址，以及已下载或已加载的模型；
+- **云平台专用接入**：可能还需要区域、项目、部署名称或云账户凭证。
 
-### 💡 获取帮助与提交反馈
+不同服务商的鉴权和地址结构并不完全相同。优先使用 Cherry Studio 内置的服务商模板；只有列表中没有目标服务商，或需要连接自建兼容接口时，才创建自定义服务商。
 
-如果您在配置或使用过程中遇到任何疑问、Bug 或有功能改进建议，请参考 [反馈与建议](../../question-contact/suggestions.md) 中提供的官方渠道。
+## 配置一个服务商
+
+### 1. 找到或添加服务商
+
+打开 `设置 → 模型服务`。
+
+左侧列表默认显示已启用的服务商。你可以：
+
+- 搜索服务商名称或模型名称；
+- 筛选**已启用**、**未启用**、**全部**或支持 Agent 接口的服务商；
+- 拖动服务商调整顺序；
+- 点击搜索框右侧的 `+` 创建自定义服务商；
+- 通过服务商的右键菜单编辑、复制或删除可管理的条目。
+
+{% hint style="warning" %}
+“Agent”筛选只表示该服务商具有当前 Agent 功能所需的兼容端点，不代表其中每个模型都支持工具调用。实际能力仍取决于所选模型和服务商。
+{% endhint %}
+
+### 2. 填写鉴权与接口地址
+
+选择服务商后，在右侧完成鉴权配置：
+
+1. 输入 API Key，或按页面提示完成 OAuth、AWS、Azure、Google Cloud 等专用鉴权；
+2. 检查 Base URL。使用内置模板时通常保留默认地址即可；
+3. 如服务商同时提供多种协议，可在接口设置中分别配置 OpenAI Chat Completions、Anthropic Messages、Google Generate Content 或 OpenAI Responses 端点；
+4. 打开页面顶部的服务商开关。
+
+自定义服务商默认以 **OpenAI Chat Completions** 作为主要接口，也可以展开“更多端点”补充其他兼容接口。详细规则见[自定义服务商](zi-ding-yi-fu-wu-shang.md)。
+
+{% hint style="danger" %}
+API Key 属于敏感凭证。不要把真实 Key 写入文档、聊天内容或问题截图；排查问题时只保留经过遮挡的前后少量字符。
+{% endhint %}
+
+### 3. 同步并启用模型
+
+在**模型列表**区域：
+
+1. 点击**添加**，从服务商同步当前可用模型；
+2. 在同步预览中确认新增、更新和移除项，再应用变更；
+3. 如果接口不支持返回模型列表，点击**自定义**，手动填写模型 ID；
+4. 打开准备使用的模型开关。
+
+模型列表支持按名称搜索，也可以按视觉、推理、工具调用等能力筛选。能力标签主要来自服务商信息和 Cherry Studio 的模型规则；若自动识别不准确，可以编辑模型并手动调整。
+
+### 4. 检查连接
+
+配置完成后，建议进行两类检查：
+
+- 在鉴权区域发起连接检查，选择一个已配置模型和 API Key 验证请求；
+- 在模型列表中运行健康检查，批量确认已启用模型是否可访问。
+
+检查通过后，新建或打开一个助手，在模型选择器中选择刚启用的模型并发送一条测试消息。
+
+## 如何选择接入方式
+
+| 使用场景 | 建议方式 | 说明 |
+|---|---|---|
+| 使用 OpenAI、Anthropic、DeepSeek 等官方 API | 选择对应内置模板 | 默认地址和接口类型已预设 |
+| 一个 Key 使用多家模型 | 选择聚合服务商或网关模板 | 模型、价格与可用地区由该平台决定 |
+| 连接 NewAPI、OneAPI 等自建网关 | 优先使用对应模板 | 如果部署路径不同，再修改 Base URL |
+| 使用 Ollama、LM Studio 等本地服务 | 选择本地服务模板 | 先确认本地服务已启动且端口可访问 |
+| 接入列表中没有的兼容接口 | 创建自定义服务商 | 需要确认协议、Base URL 和模型 ID |
+
+{% hint style="info" %}
+同一个服务商可以配置多个 API Key，并支持更细的请求地址与参数设置。请参阅[模型服务设置](../settings/providers.md)。
+{% endhint %}
+
+## 常见问题
+
+### 无法同步模型
+
+先确认 API Key、Base URL 和接口协议是否匹配。部分服务商不提供模型列表接口，此时可以根据服务商控制台中的模型 ID 手动添加。
+
+### 模型没有出现在模型选择器中
+
+确认服务商顶部开关和目标模型开关都已打开。模型虽然已同步，但处于停用状态时，不会作为可选模型显示。
+
+### 返回 401 或 403
+
+通常表示 API Key 无效、权限不足、账户未开通目标模型，或服务商限制了访问来源。请到服务商控制台检查凭证状态和模型权限。
+
+### 返回 404 或协议错误
+
+重点检查 Base URL 是否包含了重复或缺失的路径，以及服务商实际支持的接口协议。使用网关时，还要确认网关是否兼容所选模型的端点。
+
+### 本地模型连接超时
+
+确认本地推理服务正在运行，监听地址和端口与 Cherry Studio 中的配置一致。如果服务运行在容器、虚拟机或其他设备上，还需要确认网络和防火墙允许访问。
+
+## 服务商配置指南
+
+### 常用官方服务
+
+- [OpenAI](openai.md)
+- [Anthropic](anthropic.md)
+- [Azure OpenAI](azure-openai.md)
+- [Google Gemini](google-gemini.md)
+- [Vertex AI](vertex-ai.md)
+- [DeepSeek](deepseek.md)
+- [Grok](grok.md)
+- [Groq](groq.md)
+- [Moonshot AI（Kimi）](moonshot.md)
+- [MiniMax](minimax.md)
+
+### 聚合服务与网关
+
+- [CherryAI（免费）](cherryai/)
+- [CherryIN](cherryin-1.md)
+- [OpenRouter](openrouter.md)
+- [NewAPI](newapi.md)
+- [OneAPI](oneapi.md)
+
+### 本地与自定义接入
+
+- [Ollama](ollama.md)
+- [LM Studio](lm-studio.md)
+- [自定义服务商](zi-ding-yi-fu-wu-shang.md)
+
+更多已收录服务商请查看本页左侧目录或[全部 Provider 快速参考](quick-reference.md)。
+
+如果配置仍无法使用，请在提交反馈前记录 Cherry Studio 版本、操作系统、服务商名称、模型 ID 和经过脱敏的错误信息。反馈渠道见[反馈与建议](../../question-contact/suggestions.md)。

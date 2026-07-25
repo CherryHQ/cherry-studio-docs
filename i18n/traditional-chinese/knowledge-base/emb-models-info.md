@@ -2,167 +2,200 @@
 icon: square-info
 ---
 
+# 嵌入模型
+
+嵌入模型會將文字轉換成向量，讓 Cherry Studio 能夠比較「問題」和「資料片段」在語意上是否相關。它只負責檢索，不負責產生最終回答。
+
+因此，聊天模型即使表現很好，也不代表可以作為嵌入模型使用。知識庫需要選擇明確支援 **Embedding** 能力的模型。
+
+## 嵌入模型在知識庫中的位置
+
+建立索引時：
+
+1. Cherry Studio 讀取並切分資料。
+2. 將每個片段傳送給嵌入模型。
+3. 傳回的向量與片段會一起儲存在本機向量資料庫中。
+
+檢索時：
+
+1. 將使用者問題傳送給同一個嵌入模型。
+2. Cherry Studio 在同一個向量空間中尋找相近的片段。
+3. 再將相關片段交給聊天模型產生回答。
+
 {% hint style="warning" %}
-此文件由 AI 從中文翻譯而來，尚未經過審閱。
+建立索引和查詢時，必須使用相容的嵌入模型與維度。不要直接在現有知識庫中換成不相容的模型，否則舊向量無法正確比較。
 {% endhint %}
 
-# 嵌入模型參考資訊
+## 在 Cherry Studio 中新增嵌入模型
+
+1. 開啟 **設定 → 模型服務**。
+2. 選擇並設定一個支援嵌入介面的服務商。
+3. 取得模型列表，找到帶有**嵌入**標籤的模型。
+4. 將模型新增至目前的服務商並保持啟用。
+5. 建立知識庫時，從嵌入模型列表中選擇該模型。
+
+知識庫只會列出同時符合下列條件的模型：
+
+* 模型處於啟用狀態
+* 模型能力包含嵌入
+
+如果服務商傳回的模型能力不準確，可以開啟模型詳細資料，手動檢查或修正能力標籤。嵌入和重新排序是兩種不同的能力，不要將 Rerank 模型標記為 Embedding。
 
 {% hint style="info" %}
-為了防止出錯，在本文檔中部分模型的 max input 的值沒有寫成極限值，例如：在官方給出的最大輸入值為8k（未明確給出具體數值）時，本文檔中給出的參考值為8191或8000等。（看不懂可忽略，按照文檔中的參考值填寫即可）
+DeepSeek、Kimi、GLM、GPT、Claude 等常用對話模型是否會出現在知識庫列表中，取決於特定模型是否提供嵌入能力，而不是品牌名稱。對話時選擇的模型可以不同於知識庫使用的嵌入模型。
 {% endhint %}
 
-### 火山-豆包
+## 如何選擇
 
-[官方模型資訊參考地址](https://console.volcengine.com/ark/region:ark+cn-beijing/model?feature=\&projectName=default\&vendor=Bytedance\&view=LIST_VIEW)
+### 1. 語言涵蓋範圍
 
-| 名稱                      | max input |
-| ----------------------- | --------- |
-| Doubao-embedding        | 4095      |
-| Doubao-embedding-vision | 8191      |
-| Doubao-embedding-large  | 4095      |
+資料和問題可能包含哪些語言，就選擇涵蓋這些語言的模型。
 
-### 阿里
+* 只有中文資料：優先測試針對中文或中英文最佳化的模型
+* 中英文混合資料：選擇明確支援中文和英文的多語言模型
+* 包含日文、俄文等內容：選擇官方說明涵蓋對應語言的多語言模型
+* 程式碼庫：選擇明確支援程式碼檢索的模型
 
-[官方模型資訊參考地址](https://help.aliyun.com/zh/model-studio/user-guide/embedding?spm=a2c4g.11186623.0.i1)
+不要只看模型名稱中的 `multilingual`。應使用自己的真實資料和問題進行召回測試。
 
-| 名稱                      | max input |
-| ----------------------- | --------- |
-| text-embedding-v3       | 8192      |
-| text-embedding-v2       | 2048      |
-| text-embedding-v1       | 2048      |
-| text-embedding-async-v2 | 2048      |
-| text-embedding-async-v1 | 2048      |
+### 2. 輸入長度
 
-### OpenAI&#x20;
+模型的輸入上限必須能容納一個分塊。如果分塊超過上限，要求可能會失敗或遭到截斷。
 
-[官方模型資訊參考地址](https://platform.openai.com/docs/guides/embeddings#embedding-models)
+Cherry Studio 會先切分文件，因此通常不需要追求最大的內容長度。相較於單純提高模型上限，設定合理的分塊大小和重疊更為重要。
 
-| 名稱                     | max input |
-| ---------------------- | --------- |
-| text-embedding-3-small | 8191      |
-| text-embedding-3-large | 8191      |
-| text-embedding-ada-002 | 8191      |
+### 3. 向量維度
 
-### 百度
+維度是每個向量所包含的數值數量。一般而言：
 
-[官方模型資訊參考地址](https://cloud.baidu.com/doc/WENXINWORKSHOP/s/om6070n97#%E8%AF%B7%E6%B1%82%E5%8F%82%E6%95%B0)
+* 更高的維度可能保留更多資訊
+* 更高的維度會占用更多磁碟空間和記憶體
+* 維度必須是模型實際支援的值
+* 同一個知識庫中的文件與問題必須使用相同的維度
 
-| 名稱           | max input |
-| ------------ | --------- |
-| Embedding-V1 | 384       |
-| tao-8k       | 8192      |
+維度並非越高越好。資料規模較小時，模型品質、語言涵蓋範圍和分塊方式通常比一味提高維度更重要。
 
-### 智譜
+### 4. 隱私與部署位置
 
-[官方模型資訊參考地址](https://bigmodel.cn/console/modelcenter/square)
+使用線上嵌入模型時，資料片段和查詢會傳送給服務商。處理敏感資料時可以考慮使用本機模型，但仍要確認文件處理器、重新排序模型和聊天模型是否也在本機。
 
-| 名稱          | max input |
-| ----------- | --------- |
-| embedding-2 | 1024      |
-| embedding-3 | 2048      |
+詳細的資料流向請參閱[知識庫資料](data.md)。
 
-### 混元
+### 5. 成本、速度和穩定性
 
-[官方模型資訊參考地址](https://cloud.tencent.com/document/product/1729/102832)
+建立索引會處理所有片段，重新建立索引也會再次呼叫模型。選擇線上模型時，應同時查看：
 
-| 名稱                | max input |
-| ----------------- | --------- |
-| hunyuan-embedding | 1024      |
+* 輸入計費方式
+* 並行處理和速率限制
+* 服務區域與網路延遲
+* API 穩定性
+* 是否支援批次嵌入
 
-### 百川
+不要只依單次價格判斷。模型經常受到限流或要求失敗，會大幅增加大量資料匯入知識庫所需的時間。
 
-[官方模型資訊參考地址](https://platform.baichuan-ai.com/docs/text-Embedding)
+## 如何填寫向量維度
 
-| 名稱                      | max input |
-| ----------------------- | --------- |
-| Baichuan-Text-Embedding | 512       |
+Cherry Studio 建立新知識庫時會使用預設維度。進入知識庫頂端的 **RAG 設定** 後，可以查看嵌入模型和維度。
 
-### together
+維度旁的重新整理按鈕會：
 
-[官方模型資訊參考地址](https://docs.together.ai/docs/serverless-models#embedding-models)
+1. 使用目前的服務商組態呼叫一次嵌入介面。
+2. 傳送簡短的測試文字。
+3. 讀取傳回向量的實際長度。
+4. 將結果填入維度欄位。
 
-| 名稱                        | max input |
-| ------------------------- | --------- |
-| M2-BERT-80M-2K-Retrieval  | 2048      |
-| M2-BERT-80M-8K-Retrieval  | 8192      |
-| M2-BERT-80M-32K-Retrieval | 32768     |
-| UAE-Large-v1              | 512       |
-| BGE-Large-EN-v1.5         | 512       |
-| BGE-Base-EN-v1.5          | 512       |
+因此，重新整理維度會產生一次真實的模型要求；如果 API 位址、金鑰或模型名稱錯誤，操作會失敗。
 
-### Jina&#x20;
+{% hint style="warning" %}
+更換嵌入模型或維度後，Cherry Studio 會進入重建流程，而不是讓新組態直接重複使用舊向量。大量匯入資料前，應先確認模型和維度。
+{% endhint %}
 
-[官方模型資訊參考地址](https://jina.ai/models/jina-embedding-b-en-v1)
+如果服務商允許自訂輸出維度，應先查閱該模型的官方文件。不要使用其他模型的預設值進行猜測。
 
-| 名稱                                 | max input |
-| ---------------------------------- | --------- |
-| jina-embedding-b-en-v1             | 512       |
-| jina-embeddings-v2-base-en         | 8191      |
-| jina-embeddings-v2-base-zh         | 8191      |
-| jina-embeddings-v2-base-de         | 8191      |
-| jina-embeddings-v2-base-code       | 8191      |
-| jina-embeddings-v2-base-es         | 8191      |
-| jina-colbert-v1-en                 | 8191      |
-| jina-reranker-v1-base-en           | 8191      |
-| jina-reranker-v1-turbo-en          | 8191      |
-| jina-reranker-v1-tiny-en           | 8191      |
-| jina-clip-v1                       | 8191      |
-| jina-reranker-v2-base-multilingual | 8191      |
-| reader-lm-1.5b                     | 256000    |
-| reader-lm-0.5b                     | 256000    |
-| jina-colbert-v2                    | 8191      |
-| jina-embeddings-v3                 | 8191      |
+## 常見選擇範例
 
-### 硅基流動
+下表僅用於協助瞭解類型，並不是完整的模型清單。服務商會更新、替換或下架模型，應以 Cherry Studio 取得的即時列表和服務商官方文件為準。
 
-[官方模型資訊參考地址](https://siliconflow.cn/zh-cn/models)
+| 情境 | 可測試的模型範例 | 說明 |
+| --- | --- | --- |
+| 一般雲端嵌入 | `text-embedding-3-small`、`text-embedding-3-large` | OpenAI 官方支援調整輸出維度 |
+| 中文與多語言資料 | `text-embedding-v4`、`qwen3.7-text-embedding` | Alibaba Cloud 模型能力與可選維度因區域而異 |
+| 本機執行 | `embeddinggemma`、`qwen3-embedding`、`all-minilm` | Ollama 官方列出的嵌入模型範例 |
 
-| 名稱                                    | max input |
-| ------------------------------------- | --------- |
-| BAAI/bge-m3                           | 8191      |
-| netease-youdao/bce-embedding-base\_v1 | 512       |
-| BAAI/bge-large-zh-v1.5                | 512       |
-| BAAI/bge-large-en-v1.5                | 512       |
-| Pro/BAAI/bge-m3                       | 8191      |
+官方資料：
 
-### Gemini
+* [OpenAI Embeddings](https://developers.openai.com/api/docs/guides/embeddings)
+* [Alibaba Cloud Model Studio 文字嵌入](https://help.aliyun.com/zh/model-studio/text-embedding-synchronous-api)
+* [Ollama Embeddings](https://docs.ollama.com/capabilities/embeddings)
 
-[官方模型資訊參考地址](https://ai.google.dev/gemini-api/docs/models/gemini?hl=zh-cn#text-embedding)
+同名模型在不同服務商上的介面、版本、維度和價格可能不同。設定時應確認目前 Provider 的模型 ID，而不只是查看顯示名稱。
 
-| 名稱                 | max input |
-| ------------------ | --------- |
-| text-embedding-004 | 2048      |
+## 使用召回測試選擇模型
 
-### nomic
+模型排行榜無法取代你的業務資料。更可靠的選擇方法是準備一組固定測試。
 
-[官方模型資訊參考地址](https://docs.nomic.ai/atlas/embeddings-and-retrieval/text-embedding)
+### 準備樣本
 
-| 名稱                    | max input |
-| --------------------- | --------- |
-| nomic-embed-text-v1   | 8192      |
-| nomic-embed-text-v1.5 | 8192      |
-| gte-multilingual-base | 8192      |
+選擇 10–30 個真實問題，涵蓋：
 
-### console
+* 可以在文件中直接找到答案的問題
+* 同義改寫和口語表達
+* 產品名稱、縮寫、編號等關鍵字
+* 中英文或多語言混合問題
+* 文件中沒有答案的問題
 
-[官方模型資訊參考地址](https://console.upstage.ai/docs/capabilities/embeddings)
+### 比較方法
 
-| 名稱                | max input |
-| ----------------- | --------- |
-| embedding-query   | 4000      |
-| embedding-passage | 4000      |
+1. 使用少量相同資料建立測試知識庫。
+2. 保持分塊和檢索設定一致。
+3. 分別使用候選嵌入模型建立索引。
+4. 使用同一組問題執行召回測試。
+5. 比較正確片段是否進入前幾筆，以及不相關結果的數量。
 
-### cohere
+同時記錄建立索引所需時間、查詢速度、失敗率和費用。不要只比較最高分，因為不同模型的分數尺度可能不同。
 
-[官方模型資訊參考地址](https://docs.cohere.com/docs/models#embed)
+## 更換現有知識庫的模型
 
-| 名稱                            | max input |
-| ----------------------------- | --------- |
-| embed-english-v3.0            | 512       |
-| embed-english-light-v3.0      | 512       |
-| embed-multilingual-v3.0       | 512       |
-| embed-multilingual-light-v3.0 | 512       |
-| embed-english-v2.0            | 512       |
-| embed-english-light-v2.0      | 512       |
-| embed-multilingual-v2.0       | 256       |
+在知識庫的 **RAG 設定** 中更換模型或維度時，Cherry Studio 會建立新的知識庫索引流程。
+
+操作前建議：
+
+1. 備份知識庫和外部原始檔案。
+2. 確認新模型可以正常呼叫。
+3. 使用維度重新整理按鈕取得實際維度。
+4. 保留原本的知識庫，直到新知識庫完成索引和召回測試。
+5. 使用同一組問題比較結果後，再決定是否刪除舊知識庫。
+
+重建大型知識庫會重新呼叫文件處理和嵌入服務，可能會產生費用並需要較長時間。
+
+## 常見問題
+
+### 模型沒有出現在知識庫列表中
+
+確認模型已啟用，並在模型詳細資料中檢查是否具有嵌入能力。一般聊天模型和重新排序模型不會自動出現在嵌入模型列表中。
+
+### 取得維度失敗
+
+依序檢查服務商是否啟用、API 位址、金鑰、模型 ID、網路和帳戶餘額。重新整理維度會實際呼叫一次嵌入介面。
+
+### 建立索引時發生維度錯誤
+
+不要使用其他模型的維度值。重新取得目前模型的實際維度，並依照重建流程建立相容的索引。
+
+### 中英文混合檢索效果不佳
+
+確認模型官方支援相關語言，然後使用召回測試檢查問題。也可以調整分塊、搜尋模式和重新排序組態，不要只更換聊天模型。
+
+### 本機模型速度很慢
+
+檢查模型大小、可用記憶體、CPU/GPU 使用情況，以及 Ollama 或 LM Studio 的並行處理組態。先使用少量資料驗證，再大量匯入。
+
+### 更換 API 金鑰需要重建索引嗎
+
+如果仍呼叫同一個模型並使用相同維度，通常不需要。如果服務商將要求路由至不同的模型版本，應重新進行召回測試。
+
+***
+
+### 取得協助與提交回饋
+
+如果在模型辨識、維度或建立索引的過程中遇到問題，請透過[回饋與建議](../question-contact/suggestions.md)提供的資訊聯絡社群。

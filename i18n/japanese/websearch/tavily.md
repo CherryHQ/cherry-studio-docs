@@ -1,58 +1,218 @@
 ---
-description: 如何注册tavily？
-icon: binary-lock
+description: Cherry Studio V2 で Tavily を設定し、安定したキーワード Web 検索を利用します。
+icon: magnifying-glass
 ---
 
-{% hint style="warning" %}
-このドキュメントはAIによって中国語から翻訳されており、まだレビューされていません。
-{% endhint %}
+# Tavily Web 検索
 
-# tavilyインターネット接続のログイン・登録チュートリアル
-
-### 一、tavily公式サイト
-
-[https://app.tavily.com/home](https://app.tavily.com/home)
+Tavily は AI アプリケーション向けの Web 検索サービスです。Cherry Studio V2 では、キーワードから Web ページを検索し、タイトル、要約、リンクをモデルへ渡して回答を生成します。
 
 {% hint style="info" %}
-アクセスが遅い場合があります。プロキシをお持ちの方は、プロキシの使用をお試しください。
+現在のバージョンで Tavily は**キーワード検索プロバイダー**として動作し、Web ページ読み取りサービスの代わりにはなりません。モデルに結果ページの全文を続けて読ませるには、Fetch や Jina などのデフォルト URL 読み取りプロバイダーも設定してください。
 {% endhint %}
 
-### 二、tavily登録詳細手順
+## 利用前の準備
 
-上記公式サイトにアクセスするか、cherry studioの［設定］→［ネットワーク検索］→［APIキーを取得］をクリックすると、tavilyのログイン/登録ページに直接ジャンプします。
+Tavily の設定には次が必要です。
 
-{% hint style="warning" %}
-初めてご利用の場合は、まず（Sign up）でアカウントを登録してから、ログイン（Log in）して使用してください。デフォルトではログインページにジャンプします。
-{% endhint %}
+- 利用可能な Tavily アカウント
+- Tavily API Key
+- Cherry Studio でチャットに使用できるモデルが 1 つ以上
+- 特定の Web ページを読む場合は、URL 読み取りプロバイダー
 
-1. ［アカウント登録］をクリックし、以下の画面で普段使っているメールアドレスを入力するか、Google/GitHubアカウントで登録し、次のステップでパスワードを設定します（通常の手順です）。
+Tavily は API Credits に基づいて使用量を計測します。無料枠、有料プラン、呼び出し制限は変更される場合があります。[Tavily Pricing](https://www.tavily.com/pricing)とコンソールの最新情報を確認してください。
 
-<figure><img src="../../.gitbook/assets/image (117).png" alt="" width="375"><figcaption><p>アカウント登録</p></figcaption></figure>
+## API Key の取得
 
-2. 🚨🚨🚨<mark style="color:red;">**【**</mark><mark style="color:green;background-color:red;">**重要ステップ**</mark><mark style="color:red;">**】**</mark> <mark style="color:red;">**登録成功後、**</mark><mark style="color:green;">**動的認証コード**</mark><mark style="color:red;">**のステップが発生します。QRコードをスキャンしてワンタイムコードを生成する必要があります。**</mark>
+1. [Tavily Platform](https://app.tavily.com/home)を開きます。
+2. ページの案内に従って登録またはログインします。
+3. コンソールの API Keys 領域で利用可能な Key を作成または確認します。
+4. Key をコピーし、Cherry Studio に貼り付ける準備をします。
 
-<figure><img src="../../.gitbook/assets/image (118).png" alt="" width="375"><figcaption><p>このステップでつまずく方が多いです。慌てずに...</p></figcaption></figure>
+Tavily の登録と認証フローは今後変更される可能性があるため、本書では確認コード、2 要素認証、サードパーティログインの画面を固定して説明しません。画面が異なる場合は、Tavily の現在の案内に従ってください。
 
 {% hint style="danger" %}
-解決方法は2つあります：
-1. Microsoft製の認証アプリ「Authenticator」をダウンロード【やや面倒】
-2. WeChatミニプログラム「腾讯身份验证器（Tencent認証ツール）」を使用【簡単・おすすめ】
+API Key はアカウントの認証情報に相当します。実際の Key をスクリーンショット、チャット履歴、公開ドキュメント、コードリポジトリに記載しないでください。漏えいが疑われる場合は、Tavily コンソールで古い Key を直ちに取り消し、新しい Key を作成してください。
 {% endhint %}
 
-3. WeChatミニプログラムで「腾讯身份验证器」を検索
+## Cherry Studio での設定
 
-<figure><img src="../../.gitbook/assets/image (119).png" alt="" width="317"><figcaption><p>WeChatミニプログラムで検索→クリックして開く</p></figcaption></figure>
+### 1. Web 検索設定を開く
 
-<figure><img src="../../.gitbook/assets/image (120).png" alt="" width="314"><figcaption><p>開いた後、tavilyページのQRコードをスキャン</p></figcaption></figure>
+次の画面を開きます。
 
-<figure><img src="../../.gitbook/assets/image (123).png" alt="" width="314"><figcaption><p>数字列が表示されます</p></figcaption></figure>
+> **設定 → Web 検索**
 
-<figure><img src="../../.gitbook/assets/image (122).png" alt="" width="375"><figcaption><p>tavilyページにコピー＆ペースト</p></figcaption></figure>
+プロバイダー一覧から **Tavily** を見つけます。
 
-<figure><img src="../../.gitbook/assets/image (124).png" alt="" width="375"><figcaption><p>バックアップコードを安全な場所に保存するよう指示があります（忘れずに保存）</p></figcaption></figure>
+### 2. API Key を入力
 
-### 三、🎉登録成功🎉
+Tavily コンソールの Key を**API Key**入力欄に貼り付けます。
 
-上記手順完了後、以下の画面が表示されれば登録成功です。APIキーをコピーしてcherry studioに貼り付ければ、すぐに使い始められます。
+複数の Key を保存済みの場合は、Key 一覧で切り替えまたは管理できます。複数 Key は認証情報のローテーションに利用できますが、1 つの Tavily アカウントの総クォータが増えるわけではありません。
 
-<figure><img src="../../.gitbook/assets/image (114).png" alt=""><figcaption></figcaption></figure>
+### 3. API Host を確認
+
+デフォルトの API Host：
+
+```text
+https://api.tavily.com
+```
+
+通常はデフォルト値のままで使用します。互換プロキシまたはゲートウェイを使用する場合に限り変更してください。カスタムアドレスは Tavily の `/search` インターフェースと Bearer 認証に対応する必要があります。
+
+{% hint style="warning" %}
+API Host が正しくない、`/search` が重複して追加されている、またはプロキシが `Authorization` リクエストヘッダーを転送しない場合、接続チェックまたは実際の検索が失敗します。
+{% endhint %}
+
+### 4. 設定を確認
+
+Tavily カードの**確認**ボタンをクリックします。
+
+- 確認成功：現在の API Host と Key で基本リクエストが実行できます。
+- 確認失敗：Key、Host、ネットワークプロキシ、Tavily アカウントの状態を確認してから、後述のトラブルシューティングを参照してください。
+
+### 5. デフォルトのキーワード検索プロバイダーに設定
+
+Tavily を**デフォルト検索プロバイダー**に設定します。Cherry Studio は外部キーワード検索が必要なときに Tavily を使用します。
+
+モデルが検索結果の Web ページも開く必要がある場合は、デフォルトの**URL 読み取りプロバイダー**も選択してください。一般的な組み合わせ：
+
+| 用途 | 推奨設定 |
+| --- | --- |
+| キーワード検索 | Tavily |
+| URL 読み取り | Fetch または Jina |
+
+検索プロバイダーと URL 読み取りプロバイダーは独立した設定です。Tavily だけを設定しても、任意の Web ページの全文をアプリが読めるとは限りません。
+
+## 一般検索設定の調整
+
+Cherry Studio の Web 検索設定は、Tavily などの外部プロバイダーに共通して適用されます。
+
+### 最大結果数
+
+検索ごとに返す最大結果数を設定できます。結果が多いほどモデルが参照できる情報は通常増えますが、検索時間、コンテキスト長、API 使用量も増える可能性があります。
+
+まずデフォルト値を使用し、回答の情報源が不足している場合に段階的に増やしてください。
+
+### 検索結果の圧縮
+
+タスクに応じて、検索結果を圧縮しない、または切り詰めることができます。圧縮はコンテキスト使用量を減らしますが、過度な切り詰めによって重要な詳細が失われる場合があります。
+
+### Web 検索ブラックリスト
+
+ブラックリストは、Tavily が結果を返した後に Cherry Studio が不要な URL を除外します。設定方法は[Web 検索ブラックリスト](blacklist.md)を参照してください。
+
+{% hint style="info" %}
+現在の Cherry Studio の Tavily アダプターが Tavily へ送信するのは、クエリと最大結果数だけです。Tavily 公式 API の `search_depth`、`topic`、`include_domains`、`exclude_domains`、`include_answer` などの高度なパラメーターは、まだ V2 の設定画面で個別に公開されていません。
+{% endhint %}
+
+## チャットでの使用
+
+1. アシスタントまたは新しいチャットを開きます。
+2. 使用するモデルを選択します。
+3. 入力欄付近の**地球アイコン**をクリックして Web 検索を有効にします。
+4. 最新情報または外部情報源が必要な質問を入力して送信します。
+5. 回答内の情報源番号とリンクを確認します。
+
+例：
+
+```text
+Cherry Studio の直近の正式リリースの更新内容を検索し、
+機能別に要約して、各結論の後に情報源を示してください。
+```
+
+モデル自体がネイティブ Web 検索に対応している場合、Cherry Studio はそのモデルの機能を優先します。ネイティブ Web 検索を持たず、ツール呼び出しに対応するモデルでは、Tavily を外部キーワード検索プロバイダーとして使用できます。
+
+2 種類の Web 検索方法の違いは、[Web 検索](README.md)を参照してください。
+
+## 現在の統合機能
+
+| 機能 | 現在の V2 の対応状況 |
+| --- | --- |
+| キーワード検索 | 対応 |
+| Web ページのタイトル、要約、URL を返す | 対応 |
+| 最大結果数の設定 | 対応。一般 Web 検索設定を使用 |
+| 複数の API Key | 対応 |
+| カスタム API Host | 対応 |
+| 指定 URL の本文を読み取る | 未対応。Fetch または Jina の設定が必要 |
+| Tavily Search の高度なパラメーター | 設定画面では未公開 |
+| Tavily Extract、Crawl、Map、Research | 現在の Tavily アダプターには未統合 |
+
+現在、Cherry Studio は Tavily の `/search` インターフェースへリクエストを送信し、Bearer API Key で認証します。インターフェースの機能については、[Tavily Search API](https://docs.tavily.com/documentation/api-reference/endpoint/search)を参照してください。
+
+## よくある問題
+
+### 確認ボタンで認証エラーが表示される
+
+通常は API Key に関係します。
+
+1. Tavily コンソールから Key をコピーし直し、余分な空白がないことを確認します。
+2. Key が取り消されていないことを確認します。
+3. 現在のアカウントまたはチームでその Key を使用できることを確認します。
+4. 漏えいが疑われる場合は、古い Key を取り消して新しい Key を作成します。
+
+### クォータ不足またはリクエスト過多と表示される
+
+Tavily コンソールで Credits、請求、レート制限を確認します。クォータの回復を待つ、検索頻度を下げる、または実際の必要性に応じてプランを調整してください。
+
+制限を回避するために繰り返し再試行しないでください。無効なリクエストがさらに増えます。
+
+### 確認は成功するがチャットが Web 検索を使用しない
+
+次の順序で確認します。
+
+- Tavily がデフォルトのキーワード検索プロバイダーに設定されている。
+- 現在のチャットで地球アイコンが有効になっている。
+- 現在のモデルがツール呼び出しまたはネイティブ Web 検索に対応している。
+- 質問に外部検索が実際に必要である。
+- アシスタント設定またはモデル設定でツールが無効になっていない。
+
+### 検索結果はあるがモデルが Web ページの詳細を読めない
+
+現在のバージョンで Tavily はキーワード検索だけを担当します。Fetch または Jina をデフォルト URL 読み取りプロバイダーに設定してから再試行してください。
+
+### 検索結果が空または関連性が低い
+
+次の方法を試せます。
+
+- 質問を明確な検索キーワードに書き換える。
+- 時間、地域、製品名、バージョン番号を追加する。
+- 最大結果数を適度に増やす。
+- ブラックリストが対象サイトを誤って除外していないか確認する。
+- 重要な結論は別の検索語でもう一度確認する。
+
+### カスタム API Host で失敗する
+
+デフォルトアドレスに戻します。
+
+```text
+https://api.tavily.com
+```
+
+プロキシまたはゲートウェイが必須の場合は、次の点を確認します。
+
+- `POST /search` に対応している。
+- Bearer 認証を転送できる。
+- Tavily Search API と互換性のある JSON を返す。
+- パスを追加または削除していない。
+
+## セキュリティ、プライバシー、正確性
+
+- 検索語は Tavily へ送信されます。パスワード、API Key、個人情報、未公開の業務データをクエリに含めないでください。
+- Web 検索結果は、古い、誤っている、または互いに矛盾している場合があります。医療、法律、財務などの高リスクな結論では、元の情報源を開いて人間が確認してください。
+- Tavily のクォータと課金はプロバイダーによって管理されます。大量に使用する前に、コンソールで現在のプランと消費規則を確認してください。
+- 不要になった Key は定期的にローテーションしてください。漏えい時の対応は、[Tavily API Key Management](https://docs.tavily.com/documentation/best-practices/api-key-management)を参照してください。
+
+## 関連ドキュメント
+
+- [Web 検索](README.md)
+- [無料 Web 検索モード](./mian-fei-lian-wang-mo-shi.md)
+- [Web 検索ブラックリスト](blacklist.md)
+- [Tavily Quickstart](https://docs.tavily.com/documentation/quickstart)
+
+***
+
+### ヘルプとフィードバック
+
+設定または使用中に問題が発生した場合は、[フィードバックと提案](../../question-contact/suggestions.md)に記載された公式窓口から報告してください。報告には Cherry Studio のバージョン、モデル名、エラーメッセージ、プロキシ使用の有無を含めることをおすすめしますが、実際の API Key は添付しないでください。

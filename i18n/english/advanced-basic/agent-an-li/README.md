@@ -1,0 +1,86 @@
+---
+icon: blanket
+---
+
+# Agent Case Studies
+
+This section contains complete examples of using Cherry Studio Agents to accomplish real tasks. Each case study presents not only the final result, but also the goal, model, working directory, skills, tool permissions, and acceptance method, so you can adapt the workflow to your own scenario.
+
+If you are not yet familiar with the differences among assistants, Agents, skills, and MCP, start with [Concepts 101](../concepts-101.md) and the [Agent Tutorial](../agent.md).
+
+## Current Case Studies
+
+| Case study | Problems it can solve | What you can learn |
+| :--- | :--- | :--- |
+| [Gold Market Review Agent](gold-price-case.md) | Collect public information, analyze market events, and generate a readable review report | How to define research boundaries, organize skills, restrict file permissions, and verify data sources |
+
+Models, third-party services, and webpages used in a case study can change over time. Treat each case as an adaptable workflow, not a fixed template guaranteed to keep running unchanged.
+
+## What to Look for When Reading a Case Study
+
+A reliable Agent configuration usually contains these parts:
+
+1. **Goal**: Describe the problem to solve and the final deliverable; avoid broad requests such as “help me analyze this.”
+2. **Input**: List the files, webpages, directories, or user-provided data that the Agent may read.
+3. **Capabilities**: Choose an appropriate model, then enable built-in tools, skills, or MCP Servers as needed.
+4. **Permissions**: Allow only the required directories and tools. Keep confirmation steps for writing files, running commands, or accessing external services.
+5. **Output**: Define the file format, save location, citation method, and rules for handling failures.
+6. **Acceptance**: Check factual sources, generated files, critical calculations, and exceptional cases instead of judging only whether the answer “looks real.”
+
+Each case study follows this chain as closely as possible when explaining its configuration decisions. You can replace the model or data sources when reproducing a case, but do not skip permission and acceptance steps.
+
+## Before You Reproduce a Case
+
+### 1. Prepare an Available Model
+
+The Agent model selector shows only models that support the **Anthropic Messages** endpoint and are not Embedding, Rerank, or image generation models. Configure a model under [Model Providers](../../pre-basic/providers/) first and confirm that it can chat normally.
+
+The model name is only one part of the configuration. When tools are involved, first use a small task to confirm that the selected provider, endpoint, and model truly support the current workflow.
+
+### 2. Create an Independent Working Directory
+
+Prepare a separate directory for each case, then add only the paths the Agent needs to access in its settings. This makes it easier to see which files the Agent creates or changes and helps prevent accidental operations in other projects.
+
+If the case provides sample files, copy them before making changes. Do not run a write task against the only copy of an original file.
+
+### 3. Start with Restricted Permissions
+
+For the first run, prefer a tool permission mode that requires confirmation. When a tool request appears, check:
+
+* Whether the requested tool is relevant to the current step.
+* Whether read and write paths are inside authorized directories.
+* Whether commands or network requests can incur charges or modify external data.
+* Whether the output might contain an API Key, personal information, or unpublished files.
+
+Consider reducing confirmation steps only after the same workflow has been reproduced reliably and you understand every side effect.
+
+### 4. Run a Minimal Task First
+
+Do not hand the complete project to the Agent at the beginning. First ask it to:
+
+1. Read the working directory and list the files it will use.
+2. Explain which skills and tools it plans to call.
+3. Generate only a small sample or draft.
+4. Show its cited sources and output file locations.
+
+After the sample passes review, expand the time range, data volume, or deliverable scope. This approach reveals incompatible models, incorrect paths, unavailable webpages, or insufficient permissions sooner.
+
+## Accept the Results
+
+Acceptance criteria differ among cases, but you should check at least:
+
+* **Traceable sources**: Critical facts and data lead back to real sources whose links and publication dates match.
+* **Consistent input and output**: The report uses data retrieved during this run instead of outdated information from the model's memory.
+* **Files open correctly**: Generated Markdown, HTML, CSV, and other files open normally in the corresponding applications.
+* **Visible failures**: Request failures, missing data, or unavailable tools are stated explicitly instead of being filled in with guesses.
+* **Controlled scope**: The Agent did not read or modify content outside authorized directories.
+
+{% hint style="warning" %}
+Analysis generated by a case study is not professional advice. For financial, medical, legal, or other high-risk decisions, verify the original sources and have a suitably qualified person review the result.
+{% endhint %}
+
+## Next Step
+
+Start with the [Gold Market Review Agent](gold-price-case.md) to learn how to break a broad question into a verifiable research workflow. After completing the case, return to [Skills](../../pre-basic/settings/skills.md), [MCP](../mcp/), and [Agents](../agent.md) to replace the capability combination for your own task.
+
+If you encounter problems during configuration or use, or want to submit a new case study, see [Feedback and Suggestions](../../question-contact/suggestions.md).

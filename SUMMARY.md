@@ -11,6 +11,7 @@
   * [启动台](cherrystudio/preview/launchpad.md)
   * [对话界面](cherrystudio/preview/chat.md)
   * [助手库](cherrystudio/preview/assistants.md)
+  * [资源库](cherrystudio/preview/library.md)
   * [智能体](advanced-basic/agent.md)
   * [绘画](cherrystudio/preview/drawing.md)
   * [翻译](cherrystudio/preview/translation.md)
@@ -101,16 +102,16 @@
   * [配置 Dify 知识库](advanced-basic/mcp/dify.md)
   * [常见问题](advanced-basic/mcp/faq.md)
 * [调用链使用教程](advanced-basic/trace.md)
-* [Code Tools 使用教程](advanced-basic/code-tools.md)
+* [代码工具](advanced-basic/code-tools.md)
 * [API 服务器](advanced-basic/api-server.md)
 * [技能](pre-basic/settings/skills.md)
 * [频道](advanced-basic/agent-channels.md)
 * [定时任务](advanced-basic/scheduled-tasks.md)
-* [全局记忆](advanced-basic/memory.md)
+* [智能体工作区记忆](advanced-basic/memory.md)
 * [OpenClaw](advanced-basic/openclaw.md)
-* [快捷短语](pre-basic/settings/quick-phrase.md)
+* [提示词与快速插入](pre-basic/settings/quick-phrase.md)
 * [Agent 案例](advanced-basic/agent-an-li/README.md)
-  * [金价暴跌看懵了？我用 Kimi K2.5 + Cherry Studio 做了个“复盘神器”（附 Agent 设计+完整教程）](advanced-basic/agent-an-li/gold-price-case.md)
+  * [用 Kimi K2.5 构建黄金市场复盘 Agent](advanced-basic/agent-an-li/gold-price-case.md)
 
 ## 项目贡献 <a href="#contribution" id="contribution"></a>
 

@@ -1,322 +1,223 @@
 ---
+description: Use assistants, topics, models, and input tools for multi-model chats
 icon: message
 ---
-# Chat Interface
 
+# Chat interface
+
+Chat is the most frequently used workspace in Cherry Studio. You can create assistants for different purposes, manage multiple independent topics under each assistant, and add files, knowledge bases, web search, MCP tools, or multiple models as needed.
+
+{% hint style="info" %}
+Before your first chat, add a provider, enable a model, and pass the connection check under [Model Services](../../pre-basic/providers/).
+{% endhint %}
+
+## Understand assistants and topics
+
+The Chat page uses a two-level “assistant → topic” structure:
+
+* **Assistant**: Stores the role prompt, current model, model parameters, knowledge bases, MCP, web search, and other settings.
+* **Topic**: Stores an independent chat history.
+
+An assistant can have multiple topics. They share the assistant's settings, but their message histories remain separate. For example, you can create “Project A” and “Project B” topics under the same “Code Review Assistant.”
+
+For tasks that must autonomously access a workspace, read or write files, or run commands, use [Agents](../../advanced-basic/agent.md). Do not treat chat assistants and agents as the same feature. See [Concepts 101](../../advanced-basic/concepts-101.md) for more details.
+
+## Page layout
+
+The Chat page has four main areas:
+
+1. **Assistant and topic list**: Switch assistants, create topics, and search or manage history.
+2. **Top bar**: Shows the current assistant and model, with controls for chat settings, search, and the sidebar.
+3. **Message area**: Shows user messages, model responses, thinking processes, tool calls, and citations.
+4. **Input area**: Enter messages and use attachments, web search, knowledge bases, MCP, multiple models, and other tools.
+
+Depending on your display settings, the topic list can appear on the left or right, and the sidebar can be collapsed. Its position does not change the relationship between assistants and topics.
+
+## Start your first chat
+
+1. Open **Chat** from the sidebar.
+2. Select an assistant, or add one from the [Assistant Library](agents.md).
+3. Click **New Topic**.
+4. Select a model from the top bar.
+5. Enter your question and press the configured send shortcut.
+
+If the model does not respond, check that the model service is enabled, the API Key and endpoint are correct, and the current model is available.
+
+## Select a model
+
+### Current assistant model
+
+The model selector in the top bar determines the assistant's base model. After you switch models, subsequent messages use the new model. You can change the assistant's default model and whether new topics reset the model under Assistant Settings.
+
+Select only models intended for chat. Embedding and reranking models process knowledge bases and do not appear in the standard chat model list.
+
+### Get parallel responses from multiple models
+
+Click the model mention button in the input area, or type `@`, to select one or more models. The selected models appear above the input box:
+
+* When one model is selected, it responds instead of the assistant's base model.
+* When multiple models are selected, Cherry Studio generates their responses in parallel so you can compare the results.
+* Removing the model tags above the input box restores the assistant's base model.
+
+When uploading an image, every mentioned model must support visual input. Otherwise, you may be unable to select the model or send the message.
+
+## Input tools
+
+You can drag input tools to reorder them or use the context menu to show and hide them. Some buttons are collapsed when the window is narrow or many tools are enabled.
+
+| Tool | Purpose | Notes |
+| --- | --- | --- |
+| New Topic | Create an independent topic under the current assistant | Does not delete the original topic |
+| Attachment | Add an image, document, or text | Available types depend on model capabilities |
+| Web Search | Add search results as supporting context | Requires native model search or a configured search service |
+| Knowledge Base | Select one or more knowledge bases for the assistant | The selection remains in the assistant settings until removed |
+| MCP | View or call MCP tools assigned to the assistant | Requires a configured MCP server |
+| Mention Models | Select one or more response models for the input | You can also type `@` to open it |
+| Quick Phrases | Insert frequently used prompt templates | Managed centrally in Settings |
+| Thinking | Adjust the thinking mode or effort for reasoning models | Appears only when supported by the model |
+| Web Context | Allow supported models to read a URL | Appears only for compatible model and provider combinations |
+| Generate Image | Ask a supported image generation model to return an image | For dedicated image creation, you can also use [Painting](drawing.md) |
+| Clear Messages | Delete messages in the current topic | Cannot be undone |
+| New Context | Keep the visible history, but stop sending earlier messages to the model from this point | Useful when the topic continues but the model should not use earlier content |
+| Expand Input | Expand or restore the input area | Useful for long prompts |
+
+Tool availability depends on the current page, model capabilities, assistant settings, and your toolbar configuration. If a button is missing, right-click the input toolbar to see whether it is hidden, then confirm that the model or assistant meets the requirements.
+
+### `@` and `/` quick panels
+
+When input quick panels are enabled:
+
+* Type `@` to open the model selection panel.
+* Type `/` to open a quick panel of available actions and resources.
+
+The current chat context and enabled tools determine what appears in a quick panel. You can turn off character triggers under Input Settings and continue to use the same features through their tool buttons.
+
+## Use attachments
+
+1. Click **Attachment**, or drag a file into the input area.
+2. Confirm that a file preview appears above the input box.
+3. State clearly in your question how the model should process the file.
+4. Send the message.
+
+Available file types depend on model capabilities:
+
+* Images require a vision model or a model that supports image generation or editing.
+* Documents and text are processed as attachments before being added to the message context.
+* When multiple models are mentioned, an attachment must match the capabilities shared by all selected models.
+
+Long text can also be converted to a file automatically according to your input settings, keeping it from filling the input box. Before sending private or confidential information, check the current model provider and its data policy.
+
+## Use a knowledge base
+
+1. First, create a knowledge base and finish processing its content under [Knowledge Base](knowledge-base.md).
+2. Return to the Chat page and click **Knowledge Base**.
+3. Select one or more knowledge bases.
+4. In your question, specify the subject, scope, or time range to retrieve.
+
+Knowledge base tags appear above the input box. In the current version, attachments and knowledge base selections can conflict in some combinations. If the button is unavailable, remove the current attachment before selecting a knowledge base.
+
+Retrieved knowledge base content is reference material for the model's answer and does not guarantee accuracy. Verify citations and original sources for important conclusions.
+
+## Use web search and MCP
+
+### Web search
+
+Web search has two types of sources:
+
+* Native search capabilities provided by the model provider.
+* External search services configured in Cherry Studio.
+
+See [Web Search Mode](../../websearch/) for configuration details. After enabling search, verify that each cited link actually supports the model's conclusion.
+
+### MCP tools
+
+MCP lets chat assistants call external tools or data. Before using it:
+
+1. Install and enable a server under MCP Settings.
+2. Assign the required MCP server to the current assistant.
+3. Select a model that supports tool calls.
+4. Review the enabled tools and permissions before sending your message.
+
+See [MCP](../../advanced-basic/mcp/) for complete instructions.
+
+## Work with messages
+
+Move the pointer near a message to reveal its action bar. Available buttons vary with the message role and your settings.
+
+| Action | Purpose |
+| --- | --- |
+| Copy | Copy the message body |
+| Edit and Resend | Edit a user message and regenerate from that point |
+| Regenerate | Ask the model to answer again |
+| Respond with Another Model | Select another model to generate a response from this point |
+| Translate | Translate the model response into the selected language |
+| Save to Notes | Save the response to Cherry Studio Notes |
+| Delete | Delete one message |
+| New Branch | Create a new chat branch from the current message |
+| Multi-select | Select multiple messages for another action |
+| Save or Export | Save as a file, add to a knowledge base, or export content |
+
+Regenerating, editing a message in the history, or deleting a message can change the subsequent conversation chain. Create a new branch first if you need to keep the original result.
+
+## Manage long chats
+
+| Action | Are messages kept? | Is earlier context sent with later messages? | Best for |
+| --- | --- | --- | --- |
+| New Topic | Kept in the original topic | No | Starting a new task or project |
+| New Context | Kept in the current topic | Restarts from the marker | Moving to a new stage of the same task, or resetting confused context |
+| Clear Messages | Deleted | No | Removing a topic you no longer need |
+| New Branch | Original chat is kept | Continues from the selected message | Comparing different prompts or model approaches |
 
 {% hint style="warning" %}
-This document was translated from Chinese by AI and has not yet been reviewed.
+Clear Messages deletes the current topic's content. New Context only stops earlier history from being sent to the model. These actions are not the same.
 {% endhint %}
 
+The Token count shown in the input area is an estimate that helps you judge whether the context is near the model's limit. Tokenization and billing rules vary by model and provider, so refer to your provider for the final usage.
 
+## Assistant and global settings
 
+### Assistant settings
 
-## Assistants and Topics
+Assistant settings affect every topic under that assistant. They include:
 
-### Assistant
+* Name, avatar, and system prompt.
+* Default model and model parameters.
+* Knowledge bases, web search, and MCP.
+* Context length, maximum output length, streaming, and provider-specific parameters.
 
-An `assistant` allows for personalized settings for a chosen model, such as preset prompts and parameter presets. These settings help the selected model work more in line with your expectations.
+Not every model supports the same parameters. Use the defaults unless you have a specific requirement. Custom parameters can override built-in settings.
 
-The `System Default Assistant` comes with a relatively general set of parameters (no prompt). You can use it directly or find the presets you need on the [Agents page](agents.md).
+### Chat and input settings
 
-### Topic
+Chat Settings also include global display and input preferences, such as:
 
-An `assistant` is a superset of a `topic`. Multiple topics (i.e., conversations) can be created under a single assistant. All `topics` share the assistant's parameter settings and model settings, such as preset words (prompts).
+* Message style, fonts, code blocks, mathematical formulas, and the display of thinking content.
+* Token estimates, pasting long text, input translation, and the send method.
+* Assistant list, topic position, and toolbar display.
 
-<figure><img src="../../.gitbook/assets/image (4) (1) (1).png" alt=""><figcaption></figcaption></figure>
+Related pages:
 
-<figure><img src="../../.gitbook/assets/image (5) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+* [Default Models](settings/default-models.md)
+* [Display Settings](settings/display.md)
+* [Keyboard Shortcuts](settings/key-shortcut.md)
+* [Prompts and Quick Insert](../../pre-basic/settings/quick-phrase.md)
 
-## Buttons in the Chatbox
+## Troubleshooting
 
-<figure><img src="../../.gitbook/assets/对话界面/对话框.png" alt=""><figcaption></figcaption></figure>
+### The Send button is unavailable
 
-![](../../.gitbook/assets/对话界面/新话题.png) `New Topic` creates a new topic within the current assistant.
+Check whether the input is empty, generation is still in progress, the current model supports the attachment type, and the model service is enabled.
 
-![](../../.gitbook/assets/对话界面/上传图片或文档.png) `Upload Image or Document`. Uploading images requires model support. Uploading documents will automatically parse them into text to be provided to the model as context.
+### A knowledge base or MCP is missing
 
-![](../../.gitbook/assets/对话界面/网络搜索.png) `Web Search` requires configuring web search-related information in the settings. Search results are returned to the large model as context. See [Web Search Mode](../../websearch/) for details.
+Confirm that the feature has been created or enabled and that the current assistant supports tool calls. If the Knowledge Base button is unavailable, remove attachments from the input area first.
 
-![](../../.gitbook/assets/对话界面/知识库.png) `Knowledge Base` enables the knowledge base feature. See [Knowledge Base Tutorial](../../knowledge-base/knowledge-base.md) for details.
+### Multiple model responses do not appear
 
-![](<../../.gitbook/assets/对话界面/MCP 服务器.png>) `MCP Server` enables the MCP server feature. See [MCP Usage Tutorial](../../advanced-basic/mcp/) for details.
+Confirm that the mentioned models still appear above the input box and that each model is available. A disabled model, insufficient balance, or incompatible API can cause an individual response to fail.
 
-![](../../.gitbook/assets/对话界面/生成图片.png) `Generate Image` is displayed only when the selected **chat model** supports image generation. (For non-chat image generation models, please go to [Drawing](./drawing.md)).
+### The chat becomes slow or drifts off topic
 
-![](../../.gitbook/assets/对话界面/选择模型.png) `Select Model` switches to the specified model for the subsequent conversation, while retaining the context.
+Check the Token estimate and context length first. Use **New Context** to restart within the current topic, or create a new topic to separate tasks.
 
-![](../../.gitbook/assets/对话界面/快捷短语.png) `Quick Phrases` requires presetting common phrases in the settings. They can be invoked here, directly input, and support variables.
-
-![](../../.gitbook/assets/对话界面/清空消息.png) `Clear Messages` deletes all content in this topic.
-
-![](../../.gitbook/assets/对话界面/展开.png) `Expand` enlarges the chatbox for entering long texts.
-
-![](../../.gitbook/assets/对话界面/清除上下文.png) `Clear Context` truncates the context available to the model without deleting content, meaning the model will "forget" previous conversation content.
-
-![](<../../.gitbook/assets/对话界面/预估 Token 数.png>) `Estimated Token Count` displays the estimated token count. The four values are `Current Context Count`, `Maximum Context Count` (∞ means infinite context), `Current Input Box Message Character Count`, and `Estimated Token Count`.
-
-{% hint style="info" %}
-This feature is only for estimating token count. The actual token count varies for each model, please refer to the data provided by the model provider.
-{% endhint %}
-
-![](../../.gitbook/assets/对话界面/翻译.png) `Translate` translates the content in the current input box into English.
-
-## Chat Settings
-
-<figure><img src="../../.gitbook/assets/image (7) (1) (1).png" alt=""><figcaption></figcaption></figure>
-
-### Model Settings
-
-Model settings are synchronized with the `Model Settings` in the Assistant settings. See [Assistant Settings](chat.md#bian-ji-zhu-shou).
-
-{% hint style="info" %}
-In chat settings, only the model settings apply to the current assistant. Other settings apply globally. For example, if you set the message style to speech bubble, it will be a speech bubble style in any topic of any assistant.
-{% endhint %}
-
-### Message Settings
-
-#### <mark style="color:blue;">**`Message Separator`**</mark>:
-
-Use a separator to distinguish the message body from the action bar.
-
-{% tabs %}
-{% tab title="When On" %}
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
-{% endtab %}
-
-{% tab title="When Off" %}
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
-{% endtab %}
-{% endtabs %}
-
-#### <mark style="color:blue;">**`Use Serif Font`**</mark>:
-
-Font style switching. You can also change the font via [Custom CSS](../../personalization-settings/).
-
-#### <mark style="color:blue;">**`Display Line Numbers for Code`**</mark>:
-
-Displays line numbers for code blocks when the model outputs code snippets.
-
-{% tabs %}
-{% tab title="When Off" %}
-<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
-{% endtab %}
-
-{% tab title="When On" %}
-<figure><img src="../../.gitbook/assets/image (3) (1) (1).png" alt=""><figcaption></figcaption></figure>
-{% endtab %}
-{% endtabs %}
-
-#### <mark style="color:blue;">**`Collapsible Code Blocks`**</mark>:
-
-When enabled, code blocks will automatically collapse if the code snippet is too long.
-
-#### <mark style="color:blue;">**`Code Block Word Wrap`**</mark>:
-
-When enabled, single lines of code within code snippets will automatically wrap if they exceed the window width.
-
-#### <mark style="color:blue;">**`Auto-collapse Thinking Content`**</mark>:
-
-When enabled, models that support "thinking" will automatically collapse the thinking process after completion.
-
-#### <mark style="color:blue;">**`Message Style`**</mark>:
-
-Can switch the chat interface to a bubble style or list style.
-
-#### <mark style="color:blue;">**`Code Style`**</mark>:
-
-Can switch the display style of code snippets.
-
-#### <mark style="color:blue;">**`Math Formula Engine`**</mark>:
-
-*   KaTeX renders faster because it is specifically designed for performance optimization;
-*   MathJax renders slower but is more comprehensive, supporting more mathematical symbols and commands.
-
-#### <mark style="color:blue;">**`Message Font Size`**</mark>:
-
-Adjusts the font size of the chat interface.
-
-### Input Settings
-
-#### <mark style="color:blue;">**`Show Estimated Token Count`**</mark>:
-
-Displays the estimated number of tokens consumed by the input text in the input box (not the actual context consumption, for reference only).
-
-#### <mark style="color:blue;">**`Paste Long Text as File`**</mark>:
-
-When copying and pasting a long passage of text from elsewhere into the input box, it will automatically appear as a file, reducing interference when entering subsequent content.
-
-#### <mark style="color:blue;">**`Markdown Render Input Messages`**</mark>:
-
-When off, only model replies are rendered, not sent messages.
-
-{% tabs %}
-{% tab title="When Off" %}
-<figure><img src="../../.gitbook/assets/image (4) (1).png" alt="" width="563"><figcaption></figcaption></figure>
-{% endtab %}
-
-{% tab title="When On" %}
-<figure><img src="../../.gitbook/assets/image (7) (1).png" alt="" width="563"><figcaption></figcaption></figure>
-{% endtab %}
-{% endtabs %}
-
-#### <mark style="color:blue;">**`Translate by Tapping Space 3 Times`**</mark>:
-
-After entering a message in the chat interface input box, tapping the space bar three times consecutively will translate the input content into English.
-
-{% hint style="warning" %}
-Note: This operation will overwrite the original text.
-{% endhint %}
-
-#### <mark style="color:blue;">**`Target Language`**</mark>:
-
-Sets the target language for the input box translation button and the "Translate by tapping space 3 times" feature.
-
-## Assistant Settings
-
-In the assistant interface, select the <mark style="background-color:yellow;">assistant name</mark> to be set → choose the corresponding setting from the <mark style="background-color:yellow;">right-click menu</mark>.
-
-### Edit Assistant
-
-{% hint style="info" %}
-Assistant settings apply to all topics under that assistant.
-{% endhint %}
-
-<figure><img src="../../.gitbook/assets/image (6) (1) (1).png" alt=""><figcaption></figcaption></figure>
-
-#### Prompt Settings
-
-#### <mark style="color:blue;">**`Name`**</mark>:
-
-Customizable assistant name for easy identification.
-
-#### <mark style="color:blue;">**`Prompt`**</mark>:
-
-This is the prompt. You can refer to the prompt writing style on the Agents page to edit the content.
-
-#### Model Settings
-
-#### <mark style="color:blue;">**`Default Model`**</mark>:
-
-You can fix a default model for this assistant. When adding from the Agents page or copying an assistant, the initial model will be this model. If this item is not set, the initial model will be the global initial model (i.e., [Default Assistant Model](settings/default-models.md#mo-ren-zhu-shou-mo-xing)).
-
-{% hint style="info" %}
-There are two types of default models for assistants: one is the [Global Default Chat Model](settings/default-models.md#mo-ren-zhu-shou-mo-xing), and the other is the assistant's default model. The assistant's default model takes precedence over the global default chat model. If the assistant's default model is not set, then the assistant's default model = the global default chat model.
-{% endhint %}
-
-#### <mark style="color:blue;">**`Auto-reset Model`**</mark>:
-
-When enabled - if another model is switched to during usage within this topic, creating a new topic will reset the new topic's model to the assistant's default model. When this item is disabled, the model for a new topic will follow the model used in the previous topic.
-
-> For example, if the assistant's default model is gpt-3.5-turbo, and I create Topic 1 under this assistant, then switch to gpt-4o during the conversation in Topic 1:
->
-> If auto-reset is enabled: when creating Topic 2, Topic 2 will default to gpt-3.5-turbo.
->
-> If auto-reset is not enabled: when creating Topic 2, Topic 2 will default to gpt-4o.
-
-#### <mark style="color:blue;">**`Temperature`**</mark>:
-
-The temperature parameter controls the degree of randomness and creativity in the text generated by the model (default value is 0.7). Specifically:
-
-*   Low temperature values (0-0.3):
-    *   Output is more deterministic and focused.
-    *   Suitable for tasks requiring accuracy, such as code generation and data analysis.
-    *   Tends to select the most probable words for output.
-*   Medium temperature values (0.4-0.7):
-    *   Balances creativity and coherence.
-    *   Suitable for daily conversations and general writing.
-    *   Recommended for chatbot conversations (around 0.5).
-*   High temperature values (0.8-1.0):
-    *   Produces more creative and diverse outputs.
-    *   Suitable for creative writing, brainstorming, and similar scenarios.
-    *   May reduce the coherence of the text.
-
-#### <mark style="color:blue;">**`Top P (Nucleus Sampling)`**</mark>:
-
-The default value is 1. The smaller the value, the more monotonous and easier to understand the AI-generated content; the larger the value, the wider the range of vocabulary the AI uses, making it more diverse.
-
-Nucleus sampling influences the output by controlling the probability threshold for word selection:
-
-*   Smaller values (0.1-0.3):
-    *   Considers only the highest probability words.
-    *   Output is more conservative and controlled.
-    *   Suitable for code comments, technical documentation, etc.
-*   Medium values (0.4-0.6):
-    *   Balances vocabulary diversity and accuracy.
-    *   Suitable for general conversations and writing tasks.
-*   Larger values (0.7-1.0):
-    *   Considers a wider range of vocabulary choices.
-    *   Produces richer and more diverse content.
-    *   Suitable for creative writing and other scenarios requiring diverse expression.
-
-{% hint style="info" %}
-- These two parameters can be used independently or in combination.
-- Choose appropriate parameter values based on the specific task type.
-- It is recommended to experiment to find the optimal parameter combination for a particular application scenario.
-- The above content is for reference and conceptual understanding only; the given parameter ranges may not be suitable for all models. Please refer to the model's documentation for specific parameter recommendations.
-{% endhint %}
-
-#### <mark style="color:blue;">**`Context Window`**</mark>
-
-The number of messages to retain in context. A larger value means longer context and consumes more tokens:
-
-*   5-10: Suitable for general conversations.
-*   >10: For complex tasks requiring longer memory (e.g., generating long texts step-by-step according to an outline, where logical coherence of generated context is needed).
-*   Note: More messages mean higher token consumption.
-
-#### <mark style="color:blue;">**`Enable Message Length Limit (MaxToken)`**</mark>
-
-The maximum [Token](https://docs.cherry-ai.com/question-contact/knowledge#shen-me-shi-tokens) count for a single response. In large language models, `max_tokens` is a key parameter that directly affects the quality and length of the model's generated response.
-
-> For example: When testing if a model is connected in CherryStudio after entering the key, you only need to know if the model returns a message correctly, not specific content. In this case, setting `MaxToken` to 1 is sufficient.
-
-Most models have a MaxToken limit of 32k Tokens, but some have 64k or even more. You need to check the corresponding introductory page for details.
-
-The specific setting depends on your needs, but you can also refer to the suggestions below.
-
-{% hint style="success" %}
-Suggestions:
-
-*   General chat: 500-800
-*   Short text generation: 800-2000
-*   Code generation: 2000-3600
-*   Long text generation: 4000 and above (requires model support)
-{% endhint %}
-
-{% hint style="warning" %}
-Generally, the model's response will be limited to the `MaxToken` range. However, truncation (e.g., when writing long code) or incomplete expressions may occur. In special cases, flexible adjustments need to be made based on actual circumstances.
-{% endhint %}
-
-#### <mark style="color:blue;">**`Stream Output (Stream)`**</mark>
-
-Stream output is a data processing method that allows data to be transmitted and processed in a continuous stream, rather than sending all data at once. This method allows data to be processed and output immediately after it is generated, greatly improving real-time performance and efficiency.
-
-In environments like the CherryStudio client, it simply means a "typewriter effect".
-
-When off (non-streaming): The model generates the entire piece of information and outputs it all at once (imagine receiving a message on WeChat);
-
-When on: Output character by character. This can be understood as the large model sending you each generated character immediately until all characters are sent.
-
-{% hint style="info" %}
-If certain specific models do not support stream output, this switch needs to be turned off, such as `o1-mini` which **initially** only supported non-streaming.
-{% endhint %}
-
-#### <mark style="color:blue;">**`Custom Parameters`**</mark>
-
-Adds additional request parameters to the request body, such as `presence_penalty`, etc. Most people generally do not need to use this.
-
-> The `top-p`, `maxtokens`, `stream` parameters mentioned above are among these parameters.
-
-Filling method: Parameter Name — Parameter Type (text, number, etc.) — Value. Reference documentation: [Click to go](https://openai.apifox.cn/doc-3222739)
-
-{% hint style="info" %}
-Each model provider has its own unique parameters, more or less. You need to find the usage method in the provider's documentation.
-{% endhint %}
-
-{% hint style="info" %}
-*   Custom parameters take precedence over built-in parameters. That is, if a custom parameter duplicates a built-in parameter, the custom parameter will override the built-in parameter.
-
-> For example: if `model` is set to `gpt-4o` in custom parameters, then `gpt-4o` will be used in the conversation regardless of which model is selected.
-
-*   Setting <kbd>Parameter Name:undefined</kbd> can exclude a parameter.
-{% endhint %}
+If the problem persists, submit your Cherry Studio version, model name, provider, reproduction steps, and error details through [Feedback and suggestions](../../question-contact/suggestions.md).

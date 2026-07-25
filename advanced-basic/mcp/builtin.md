@@ -1,97 +1,158 @@
-# 内置 MCP 配置
+# 内置 MCP 服务器
 
-Cherry Studio **预装了若干常用 MCP**，无需手动安装即可在 `设置 → MCP 服务器` 中启用。下面是当前内置清单，**新版本可能调整**，请以应用内实际显示为准。
+Cherry Studio 提供一组可以直接安装的内置 MCP 服务器。它们由应用内置运行或使用预设连接，无需手动编写 JSON 配置，适合快速为助手和智能体增加网页读取、文件操作、代码执行、记忆和第三方服务等能力。
 
-> 想自己装其他 MCP？看 [配置和使用 MCP](config.md)。
+{% hint style="info" %}
+“内置”不代表全部自动启用。需要先从内置列表安装服务器；带有 **需要配置** 标记的服务器，还必须填写参数或环境变量。
+{% endhint %}
 
-### 通用工具
+## 安装与使用
 
-#### `@cherry/fetch`
+1. 打开 **设置 → MCP 服务器**。
+2. 在 **内置服务器** 区域查找需要的服务器，也可以切换到 **可安装** 筛选。
+3. 点击 **安装**。
+4. 如果服务器显示 **需要配置**，回到已安装服务器列表并点击该服务器，填写本页说明的参数。
+5. 保存并启用服务器。
+6. 在目标助手或智能体的工具设置中添加该 MCP 服务器。
 
-用于获取 URL 网页内容的 MCP 服务器。日常给 AI"看一下某个网页"的首选。
+对话时还需要使用支持工具调用的模型。只安装服务器但未添加到当前助手或智能体，模型无法使用其中的工具。
 
-#### `@cherry/browser`
+## 当前内置服务器
 
-通过 Chrome DevTools 协议控制隐藏的 Electron 窗口，支持打开 URL、执行单行 JS、重置会话。适合需要让 AI 操作真实浏览器、读取动态网页的场景。
+| 服务器 | 主要用途 | 是否需要额外准备 |
+| --- | --- | --- |
+| `@cherry/fetch` | 以 HTML、Markdown、纯文本或 JSON 读取 URL | 否 |
+| `@cherry/browser` | 打开和操作动态网页、管理标签页、截图 | 否 |
+| `@cherry/filesystem` | 在限定目录内查找、读取、编辑和删除文件 | 配置允许访问的目录 |
+| `@cherry/python` | 在 Pyodide 环境中执行 Python 代码 | 否 |
+| `@cherry/brave-search` | Brave 网页搜索与本地地点搜索 | `BRAVE_API_KEY` |
+| `@cherry/memory` | 使用本地知识图谱保存跨对话记忆 | `MEMORY_FILE_PATH` |
+| `@cherry/sequentialthinking` | 为复杂任务提供分步、修订和分支思考工具 | 否 |
+| `@cherry/dify-knowledge` | 查询 Dify 知识库 | API 地址和 `DIFY_KEY` |
+| `@cherry/flomo` | 将笔记和想法写入 flomo | flomo 账号授权 |
+| `@cherry/didi-mcp` | 地点搜索、价格预估和网约车订单操作 | `DIDI_API_KEY`，仅支持中国大陆 |
+| `@cherry/nowledge-mem` | 连接本机运行的 Nowledge Mem | 安装并运行 Nowledge Mem |
+| `@cherry/mcp-auto-install` | 让模型搜索并安装其他 MCP 服务器 | 测试功能，需可用的 NPX 或内置 Bun |
 
-#### `@cherry/filesystem`
+## 网页与代码工具
 
-实现文件系统操作的 Node.js MCP 服务器，让 AI 能读取、创建、修改本地文件。**必须配置允许访问的目录**，否则无法启动：
+### `@cherry/fetch`
+
+适合读取不需要复杂交互的网页或接口。它提供 HTML、Markdown、纯文本和 JSON 四种读取方式，并支持在请求中传入自定义 Header。
+
+如果页面依赖登录状态、JavaScript 渲染或点击操作，请改用 `@cherry/browser`。
+
+### `@cherry/browser`
+
+通过 Cherry Studio 管理的 Electron 浏览器窗口操作网页，支持：
+
+- 打开 URL 和执行页面脚本；
+- 获取页面快照或截图；
+- 列出、切换和关闭标签页；
+- 重置浏览会话。
+
+浏览器会接触页面内容和可能存在的登录状态。使用前检查模型准备访问的站点，不要让不受信任的提示词执行敏感账号操作。
+
+### `@cherry/python`
+
+提供 `python_execute` 工具，在 Pyodide 环境中运行 Python 3.12 代码。适合数据计算、文本处理和格式转换，也可以通过 PEP 723 元数据声明依赖。
+
+每次调用默认超时为 60 秒。它不是本机完整 Python 环境，依赖原生二进制、系统命令或特定硬件的代码可能无法运行。
+
+### `@cherry/sequentialthinking`
+
+为模型提供可修订、可分支的分步思考工具。它适合复杂规划和分析任务，但不会自动提高所有回答的质量；简单问题通常无需启用。
+
+## 本地文件与记忆
+
+### `@cherry/filesystem`
+
+提供 `glob`、`ls`、`grep`、`read`、`edit`、`write` 和 `delete` 工具。服务器只应访问你明确授权的工作目录。
+
+安装后，在服务器详情中使用以下任一方式配置目录：
+
+- **参数**：第一行填写工作目录的绝对路径；
+- **环境变量**：填写 `WORKSPACE_ROOT=绝对路径`。
+
+如果两者同时存在，`WORKSPACE_ROOT` 优先。`~` 可以展开为用户目录，但为了减少歧义，建议填写完整绝对路径。
+
+{% hint style="warning" %}
+默认情况下，`write`、`edit` 和 `delete` 不会自动批准。不要扩大授权目录，也不要为了省略确认而一次性批准不熟悉的写入或删除操作。
+{% endhint %}
+
+### `@cherry/memory`
+
+把实体、关系和观察记录保存在本地 JSON 文件中，供模型跨对话读取和更新。安装后配置：
 
 ```text
-WORKSPACE_ROOT=/Users/yourname/your-project-dir
+MEMORY_FILE_PATH=/绝对路径/memory.json
 ```
 
-如果不配置环境变量，需要在对话中手动指定路径。
+这是 MCP 服务器自己的知识图谱记忆，与 Cherry Studio 的 [全局记忆](../memory.md) 是两套独立功能。一般用户可以先使用全局记忆；只有需要直接控制实体和关系时再启用此服务器。
 
-#### `@cherry/python`
+### `@cherry/nowledge-mem`
 
-在 Pyodide 沙盒中执行 Python 代码，支持多数标准库与科学计算包。让 AI"自己跑一段 Python"做数据分析、画图、转换格式都很合适。
+连接本机 `http://127.0.0.1:14242/mcp`。使用前需要安装并运行 [Nowledge Mem](https://mem.nowledge.co/)；Cherry Studio 中无需填写远程 URL。
 
-#### `@cherry/brave_search`
+## 搜索、知识库与第三方服务
 
-集成 [Brave Search API](https://brave.com/search/api/) 的搜索工具，提供网页与本地搜索双重功能。需要先到 Brave 申请 API Key 并配置环境变量：
+### `@cherry/brave-search`
+
+提供网页搜索和本地地点搜索。先从 [Brave Search API](https://brave.com/search/api/) 获取密钥，然后在服务器详情中填写：
 
 ```text
-BRAVE_API_KEY=你的_brave_api_key
+BRAVE_API_KEY=你的 API Key
 ```
 
-### 记忆类
+### `@cherry/dify-knowledge`
 
-#### `@cherry/memory`
+列出并检索 Dify 知识库。需要在 **参数** 中填写知识库 API 根地址，并在 **环境变量** 中填写 `DIFY_KEY`。完整步骤请参阅 [连接 Dify 知识库](dify.md)。
 
-基于本地知识图谱的持久性记忆基础实现，让模型在不同对话间记住用户的相关信息。需要配置 `MEMORY_FILE_PATH` 环境变量：
+### `@cherry/flomo`
+
+通过 flomo 的远程 MCP 地址连接账号。安装并启用后，如果出现授权页面，请按提示完成 flomo 账号授权。不要在 Cherry Studio 的参数或环境变量中粘贴 flomo 登录密码。
+
+### `@cherry/didi-mcp`
+
+提供地点搜索、价格预估、创建或取消网约车订单、查询订单和司机位置等工具。安装后填写：
 
 ```text
-MEMORY_FILE_PATH=/path/to/memory.json
+DIDI_API_KEY=你的 API Key
 ```
 
-> 注：这是 MCP 形式的记忆。**Cherry Studio 的 [全局记忆](../memory.md)** 是更上层的功能，二者可叠加，但通常用其中之一即可。
+该服务仅支持中国大陆。创建订单和取消订单会产生真实外部操作，建议在 **工具**页关闭这些工具的自动批准。
 
-#### `@cherry/nowledge_mem`
+### `@cherry/mcp-auto-install`
 
-接入 [Nowledge Mem](https://mem.nowledge.co/) 应用，把对话、工具、笔记、智能体和文件都保存在本地的私有记忆系统中。需要先在本机安装 Nowledge Mem。
+允许模型在对话中搜索并安装其他 MCP 服务器，目前属于测试功能。该预设通过 NPX 启动；如果启动失败，请先在 MCP 设置中检查并安装运行依赖。详细说明请参阅 [自动安装 MCP](auto-install.md)。
 
-### 思维 / 框架
+## 权限建议
 
-#### `@cherry/sequentialthinking`
+内置服务器使用统一的 MCP 权限设置。安装后建议逐项检查：
 
-提供"结构化思维过程"工具，让 AI 在解决复杂问题时一步步推理，并在推理过程中可以回溯、反思。适合复杂逻辑任务。
+- 只启用当前任务需要的服务器和工具；
+- 文件、浏览器、记忆和第三方账号工具只授权必要范围；
+- 写文件、删除文件、创建订单、取消订单等操作保留人工确认；
+- 不再使用的服务器及时停用或卸载；
+- API Key 只保存在服务器配置中，不要放入提示词、截图或共享记录。
 
-#### `@cherry/mcp-auto-install`
+## 常见问题
 
-让 AI 在对话中自动搜索并安装其他 MCP（测试版）。详见 [自动安装 MCP](auto-install.md)。
+### 已安装，但对话中找不到工具
 
-### 国内服务集成
+确认服务器已经启用，并已添加到当前助手或智能体。然后检查所选模型是否支持工具调用。
 
-#### `@cherry/dify_knowledge`
+### 显示“需要配置”
 
-通过 Dify 平台访问知识库。详见 [配置 Dify 知识库](dify.md)。
+安装后点击已安装服务器列表中的对应条目，在 **设置**页填写参数或环境变量并保存。参数和环境变量均为一行一项。
 
-#### `@cherry/flomo`
+### 服务器启用失败
 
-连接 flomo 笔记，让 AI 帮你快速记录想法。需要 flomo 账号授权。
+打开服务器详情中的日志，先检查缺少参数、无效 API Key、目录权限或本地依赖。更多排查方法请参阅 [MCP 服务器常见问题](faq.md)。
 
-#### `@cherry/didi_mcp`
+## 相关文档
 
-集成滴滴出行：地图搜索、价格预估、订单管理、司机跟踪等能力。**仅支持中国大陆地区**，需要配置 `DIDI_API_KEY` 环境变量。
-
-### 总结
-
-| 适用场景 | 推荐内置 MCP |
-|---|---|
-| 想让 AI 读网页 | `@cherry/fetch` 或 `@cherry/browser` |
-| 想让 AI 搜网络（结构化结果）| `@cherry/brave_search` |
-| 想让 AI 处理本地文件 | `@cherry/filesystem` |
-| 想让 AI 跑 Python 代码 | `@cherry/python` |
-| 想让 AI 接 Dify 知识库 | `@cherry/dify_knowledge` |
-| 想让 AI 持久记忆 | 优先用上层的 [全局记忆](../memory.md)，需高级控制再用 `@cherry/memory` |
-| 让 AI 帮你安装其他 MCP | `@cherry/mcp-auto-install` |
-
-启用方法都一样：在 `设置 → MCP 服务器` 中找到对应条目，按提示填入环境变量，点击启用即可。
-
-***
-
-### 💡 获取帮助与提交反馈
-
-如果您在配置或使用过程中遇到任何疑问、Bug 或有功能改进建议，请参考 [反馈与建议](../../question-contact/suggestions.md) 中提供的官方渠道。
+- [配置和使用 MCP](config.md)
+- [自动安装 MCP](auto-install.md)
+- [MCP 服务器常见问题](faq.md)
+- [反馈与建议](../../question-contact/suggestions.md)

@@ -1,32 +1,168 @@
 ---
+description: 使用 S3 或 S3 相容物件儲存空間，備份和還原 Cherry Studio V2 資料。
 icon: cloud-binary
 ---
-# S3 相容儲存備份
 
+# S3 相容儲存空間備份
+
+Cherry Studio V2 可以將備份儲存到 AWS S3、Cloudflare R2、Alibaba Cloud OSS、騰訊雲 COS、火山引擎 TOS、MinIO 等提供 S3 相容 API 的物件儲存空間。
+
+S3 在此是遠端備份位置，不是即時同步服務。還原會以選取的備份覆寫目前資料，不會合併不同裝置分別新增的內容。
 
 {% hint style="warning" %}
-此文件由 AI 從中文翻譯而來，尚未經過審閱。
+備份可能包含對話、服務供應商設定和其他敏感資訊。儲存貯體必須保持為私人狀態，並使用僅限目標儲存貯體或目錄的專用憑證。
 {% endhint %}
 
+## 準備儲存貯體和憑證
 
+在物件儲存空間控制台中：
 
+1. 建立或選擇一個私人儲存貯體。
+2. 確認儲存貯體所在的 Region。
+3. 尋找服務供應商提供的 S3 API Endpoint。
+4. 建立專用於 Cherry Studio 的存取憑證。
+5. 如果服務支援，將憑證限制為只能存取該儲存貯體中的 Cherry Studio 目錄。
 
-Cherry Studio 資料備份支援透過 S3 相容儲存（物件儲存）的方式進行備份。常見的 S3 相容儲存服務有：AWS S3、Cloudflare R2、阿里雲 OSS、騰訊雲 COS 以及 MinIO 等。
+Cherry Studio 至少需要列出、上傳和讀取物件的權限。希望自動清理舊備份，或在管理器中刪除檔案時，還需要刪除物件的權限。
 
-基於 S3 相容儲存可以透過 `A電腦` $$\xrightarrow{\text{備份}}$$ `S3儲存` $$\xrightarrow{\text{恢復}}$$ `B電腦` 的方式來實現多端資料同步。
+不同服務使用不同的權限名稱。AWS IAM 中常見的對應動作包括 `s3:ListBucket`、`s3:PutObject`、`s3:GetObject` 和 `s3:DeleteObject`；其他相容服務請使用其對等權限。
 
-### 配置 S3 相容儲存
+## 設定欄位
 
-1.  建立物件儲存桶（Bucket），並記錄下儲存桶名稱。**強烈建議將儲存桶設定為私有讀寫以避免備份資料洩露！！**
-2.  參考文件，前往雲服務控制台取得 S3 相容儲存的 `Access Key ID`、`Secret Access Key`、`Endpoint`、`Bucket`、`Region` 等資訊。
-    - **Endpoint**：S3 相容儲存的存取地址，通常形如 `https://<bucket-name>.<region>.amazonaws.com` 或 `https://<ACCOUNT_ID>.r2.cloudflarestorage.com`。
-    - **Region**：儲存桶所在的區域，例如 `us-west-1`、`ap-southeast-1` 等，cloudflare R2 請填寫 `auto`。
-    - **Bucket**：儲存桶名稱。
-    - **Access Key ID** 和 **Secret Access Key**：用於身份驗證的憑證。
-    - **Root Path**：可選，指定備份到儲存桶時的根路徑，預設為空。
-    - **相關文件**
-        - AWS S3：[取得 Access Key ID 和 Secret Access Key](https://docs.aws.amazon.com/zh_cn/IAM/latest/UserGuide/id_credentials_access-keys.html)
-        - Cloudflare R2：[取得 Access Key ID 和 Secret Access Key](https://developers.cloudflare.com/r2/api/tokens/)
-        - 阿里雲 OSS：[取得 Access Key ID 和 Access Key Secret](https://help.aliyun.com/zh/oss/developer-reference/use-amazon-s3-sdks-to-access-oss#306596478ed3r)
-        - 騰訊雲 COS：[取得 SecretId 和 SecretKey](https://cloud.tencent.com/document/product/436/37421)
-3.  在 S3 備份設定中填寫上述資訊，點擊備份按鈕即可進行備份，點擊管理按鈕可以查看和管理備份檔案列表。
+開啟 **設定 > 資料設定 > S3**，填寫：
+
+| 欄位 | 說明 |
+| --- | --- |
+| API 位址 | 服務供應商提供的 S3 API Endpoint，包含 `http://` 或 `https://` |
+| 區域 | 儲存貯體的 Region；必須使用服務供應商要求的值 |
+| 儲存貯體 | Bucket 名稱，不是控制台顯示名稱或目錄名稱 |
+| Access Key ID | 專用存取憑證的識別碼 |
+| Secret Access Key | 與 Access Key ID 搭配的金鑰 |
+| 備份目錄 | 選填的物件 Key 前置字串，用於隔離 Cherry Studio 備份 |
+
+除了 **備份目錄** 以外，其餘欄位都是執行手動備份和開啟備份管理器的必要條件。
+
+### Endpoint 中請勿重複填寫 Bucket
+
+Endpoint 格式由服務供應商決定，可能是區域層級位址、帳號層級位址或自行架設的服務位址。Cherry Studio 會將 **儲存貯體** 作為獨立參數傳給 S3 用戶端，因此請勿自行將 Bucket 重複加入位址，除非服務供應商的 S3 SDK 文件明確要求如此填寫。
+
+例如，控制台中的網頁管理位址、物件公開存取位址和 S3 API Endpoint 可能完全不同。應複製「相容於 S3 的 Endpoint」，而不是在瀏覽器中開啟某個檔案時的 URL。
+
+Cherry Studio 會依 Endpoint 網域選擇 virtual-host 或 path-style 請求方式：
+
+- Alibaba Cloud、騰訊雲和火山引擎的已辨識官方網域會使用 virtual-host 樣式；
+- `localhost`、IP 位址和大多數其他相容服務會使用 path-style；
+- 無法解析的位址會退回 path-style。
+
+如果服務同時支援多種位址格式，請優先使用其 AWS SDK / S3 SDK 文件提供的 Endpoint。
+
+### 設定備份目錄
+
+**備份目錄**會成為物件 Key 的前置字串。可以填寫 `cherry-studio` 或 `/cherry-studio/`，儲存時會移除開頭和結尾多餘的 `/`。
+
+建議每套 Cherry Studio 資料使用獨立的前置字串，例如：
+
+```text
+cherry-studio/personal
+```
+
+備份管理器只會列出該前置字串下以 `.zip` 結尾的物件。變更目錄後，原目錄中的備份不會自動移動，也不會出現在新目錄的清單中。
+
+## 驗證設定
+
+目前頁面沒有獨立的「測試連線」按鈕。最完整的驗證方式是：
+
+1. 填寫所有必要欄位，並暫時關閉自動備份。
+2. 點擊 **立即備份**。
+3. 保留預設檔案名稱，建立一份小型測試備份。
+4. 點擊 **管理備份**。
+5. 確認清單中可以看到剛上傳的 ZIP、修改時間和大小。
+
+此步驟會同時驗證 Endpoint、Region、Bucket、憑證、備份目錄，以及列出和寫入權限。可以列出儲存貯體但無法上傳，通常是缺少物件寫入權限；可以上傳但無法顯示，通常需要檢查前置字串或列出權限。
+
+## 手動備份
+
+點擊 **立即備份** 後，可以確認或修改檔案名稱。預設名稱包含時間、主機名稱和裝置類型；沒有 `.zip` 副檔名時會自動補上。
+
+開啟 **精簡備份** 後，Cherry Studio 會略過應用程式 `Data` 目錄中的圖片、知識庫等檔案資料，只備份聊天記錄和設定等內容。精簡備份不是增量備份，還原時無法找回略過的檔案。
+
+上傳到 S3 前，會先在本機產生 ZIP，再將檔案讀入記憶體後上傳。大型完整備份可能會明顯增加磁碟和記憶體用量；執行期間請勿退出應用程式、斷線或讓系統休眠。
+
+## 自動備份和保留數量
+
+**自動同步**實際執行的是週期性備份，可以選擇：
+
+- 關閉；
+- 每 1、5、15 或 30 分鐘；
+- 每 1、2、6、12 或 24 小時。
+
+請先成功完成一次手動備份，再開啟自動備份。頻率越高，請求次數、流量和物件儲存空間的操作費用越多。
+
+**最大備份數**可以設為不限、1、3、5、10、20 或 50。達到上限後，Cherry Studio 會依預設檔案名稱中的主機名稱和裝置類型，清理目前裝置較舊的備份。
+
+以下物件通常不會被自動清理：
+
+- 來自其他裝置的備份；
+- 自訂檔案名稱中沒有目前裝置識別資訊的備份；
+- 不在目前備份目錄下的物件；
+- 不是 `.zip` 的物件。
+
+選擇「不限」時，應在物件儲存空間端設定容量警示或生命週期規則，避免長期累積。
+
+## 管理和還原備份
+
+點擊 **管理備份**，可以查看、重新整理、還原和刪除目前目錄下的 ZIP 備份。
+
+還原前：
+
+1. 為目前資料再建立一份備份。
+2. 依檔案名稱、修改時間和大小確認目標版本。
+3. 確認沒有其他裝置正在寫入同一個目錄。
+4. 點擊目標檔案的 **還原**，並確認覆寫。
+
+還原完成後，應用程式可能會自動重新啟動。刪除物件的操作無法復原；如果憑證沒有刪除權限，查看和還原可能正常，但刪除與自動清理會失敗。
+
+{% hint style="warning" %}
+多部電腦可以共用同一個 Bucket 和前置字串，但還原不會合併資料。跨裝置搬遷時，請先備份目標裝置，再還原來源裝置的目標版本。
+{% endhint %}
+
+## 安全與費用建議
+
+- 使用私人 Bucket，請勿為備份目錄開啟公開讀取。
+- 使用獨立且具有最小權限的 Access Key，請勿填寫雲端帳號的根憑證。
+- 請勿在截圖、記錄或意見回饋中顯示完整的 Secret Access Key。
+- 公用網路 Endpoint 請使用 HTTPS；自行架設的 MinIO 也應設定可信任的憑證，或只在受信任的網路中存取。
+- 留意儲存容量、PUT / GET / LIST 請求和輸出流量費用。
+- 金鑰外洩後，請立即在服務供應商控制台撤銷並重新建立，請勿只修改 Cherry Studio 中的值。
+
+## 常見問題
+
+### 立即備份按鈕呈灰色
+
+請確認 API 位址、區域、儲存貯體、Access Key ID 和 Secret Access Key 都已填寫。備份目錄可以留空。
+
+### 傳回 301、PermanentRedirect 或區域不符
+
+Endpoint 或 Region 與 Bucket 所在區域不一致。回到物件儲存空間控制台，複製該 Bucket 對應的 S3 Endpoint 和正確的 Region。
+
+### 傳回 403、AccessDenied 或 SignatureDoesNotMatch
+
+請檢查 Access Key 與 Secret 是否配對、憑證是否有效，以及系統時間是否正確。也要確認 Endpoint 格式、Region 和最小權限原則；簽章錯誤通常是因為位址或區域不符。
+
+### 無法連線至自行架設的 MinIO
+
+請確認 Endpoint 包含連接埠，例如 `https://minio.example.com:9000`，並檢查 Cherry Studio 所在裝置可以存取該位址。使用 IP 或 `localhost` 時會採用 path-style；如果 MinIO 位於反向 Proxy 後方，也要檢查憑證、請求主體和逾時限制。
+
+### 可以上傳，但管理器中看不到檔案
+
+請檢查目前的 **備份目錄** 是否與上傳時一致，並確認憑證具有列出 Bucket 的權限。管理器只會顯示目前前置字串下以 `.zip` 結尾的物件。
+
+### 達到最大備份數後，舊檔案仍然存在
+
+自動清理只會辨識目前裝置且符合預設命名規則的備份。自訂名稱、其他裝置或其他前置字串中的物件，需要手動刪除或透過儲存服務的生命週期規則處理。
+
+### 大型備份導致記憶體用量增加
+
+目前的 S3 上傳會將產生的 ZIP 讀入記憶體。你可以開啟 **精簡備份** 以縮小檔案、減少知識庫與圖片檔案，或選擇資料量較少時執行。
+
+如果仍無法解決，請透過[意見回饋與建議](../question-contact/suggestions.md)提交 Cherry Studio 版本、儲存服務名稱、已移除敏感資訊的 Endpoint / Region / Bucket、HTTP 狀態碼和完整的錯誤資訊。

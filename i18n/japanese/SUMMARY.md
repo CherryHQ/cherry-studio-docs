@@ -6,8 +6,10 @@
 * [クライアントダウンロード](cherrystudio/download.md)
 * [プロジェクト計画](cherrystudio/planning.md)
 * [機能紹介](cherrystudio/preview/README.md)
+  * [ランチパッド](cherrystudio/preview/launchpad.md)
   * [会話インターフェース](cherrystudio/preview/chat.md)
   * [エージェント](cherrystudio/preview/agents.md)
+  * [リソースライブラリ](cherrystudio/preview/library.md)
   * [描画](cherrystudio/preview/drawing.md)
   * [翻訳](cherrystudio/preview/translation.md)
   * [ミニプログラム](cherrystudio/preview/app.md)
@@ -88,8 +90,16 @@
   * [ModelScope MCP サーバーの追加](advanced-basic/mcp/tian-jia-modelscope-mcp-fu-wu-qi.md)
   * [よくある質問](advanced-basic/mcp/chang-jian-wen-ti.md)
 * [呼び出しチェーン使用説明](advanced-basic/diao-yong-lian-shi-yong-shuo-ming.md)
-* [Code Tools 使用チュートリアル](advanced-basic/code-tools-shi-yong-jiao-cheng.md)
+* [コードツール](advanced-basic/code-tools-shi-yong-jiao-cheng.md)
 * [Cherry Agent 使用チュートリアル](advanced-basic/agent.md)
+* [スキル](pre-basic/settings/skills.md)
+* [チャンネル](advanced-basic/agent-channels.md)
+* [スケジュールタスク](advanced-basic/scheduled-tasks.md)
+* [エージェントのワークスペースメモリ](advanced-basic/memory.md)
+* [OpenClaw](advanced-basic/openclaw.md)
+* [プロンプトとクイック挿入](pre-basic/settings/quick-phrase.md)
+* [Agent の事例](advanced-basic/agent-an-li/README.md)
+  * [Kimi K2.5 で金市場レビュー Agent を作る](advanced-basic/agent-an-li/gold-price-case.md)
 
 ## プロジェクトコントリビューション <a href="#contribution" id="contribution"></a>
 

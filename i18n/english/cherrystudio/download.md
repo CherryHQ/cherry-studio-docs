@@ -1,154 +1,125 @@
 ---
 icon: download
 ---
-# Client Download
 
+# Client Downloads
 
-{% hint style="warning" %}
-This document was translated from Chinese by AI and has not yet been reviewed.
-{% endhint %}
+Cherry Studio provides installation packages for Windows, macOS, and Linux. To keep specific version numbers from becoming outdated, this page lists only permanent official entry points. After opening a download page, select the latest stable release and a file that matches your system architecture.
 
+## Official download links
 
-
-
-{% hint style="info" %}
-Current latest official version: v1.6.7
-{% endhint %}
-
-## Direct Download
-
-### Windows Version
+* [Cherry Studio website download page](https://cherry-ai.com/download)
+* [GitHub Releases](https://github.com/CherryHQ/cherry-studio/releases)
+* [Latest stable release on GitHub](https://github.com/CherryHQ/cherry-studio/releases/latest)
 
 {% hint style="warning" %}
-Note: Windows 7 systems do not support installing Cherry Studio.
+Download installation packages only from the Cherry Studio website, the official `CherryHQ/cherry-studio` repository, or a mirror explicitly listed on the download page. Do not run an installer from an unknown source, one that has been repackaged, or one that asks you to disable security software.
 {% endhint %}
 
-#### Installer (Setup)
+## Choose a stable or preview release
 
-<details>
+| Type | How to identify it | Recommended for |
+| :--- | :--- | :--- |
+| Stable release | Marked **Latest** in GitHub Releases; the version number usually does not include `alpha`, `beta`, or `rc` | Everyday use; recommended |
+| Pre-release | Marked **Pre-release**; the version number may include `alpha`, `beta`, or `rc` | Users who want to test new features early |
+| Daily preview build | From the official [V2 Daily Preview Build](https://github.com/CherryHQ/cherry-studio/actions/workflows/v2-daily-preview-build.yml) | Development, testing, and issue reproduction |
 
-<summary>x64 Version</summary>
+A preview release may contain unfinished data migrations, interface changes, or compatibility changes. Back up your data before installation, and prefer a stable release for environments with important data.
 
-Main Line:
+## Windows
 
-【[Cherry Studio Official Website](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.7/Cherry-Studio-1.6.7-x64-setup.exe)】
+### Choose an architecture
 
-Alternative Lines:
+Open **Settings → System → About** and check “System type”:
 
-【[Line 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.7/Cherry-Studio-1.6.7-x64-setup.exe)】 【[Line 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.7/Cherry-Studio-1.6.7-x64-setup.exe)】 【[Line 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.7/Cherry-Studio-1.6.7-x64-setup.exe)】
+* If it shows `x64` or “x64-based processor,” download `x64`.
+* If it shows `ARM64` or “ARM-based processor,” download `arm64`.
 
-</details>
+Most Intel and AMD computers use `x64`. Only Windows on ARM devices use `arm64`.
 
-<details>
+### Choose a package
 
-<summary>ARM64 Version</summary>
+| File type | Description |
+| :--- | :--- |
+| `*-x64-setup.exe` / `*-arm64-setup.exe` | Installer; lets you choose the installation directory and creates shortcuts |
+| `*-x64-portable.exe` / `*-arm64-portable.exe` | Portable version; suitable when you do not want to run an installation process |
 
-Main Line:
+{% hint style="warning" %}
+Cherry Studio does not support Windows 7. Install it on a supported version of Windows.
+{% endhint %}
 
-【[Cherry Studio Official Website](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.7/Cherry-Studio-1.6.7-arm64-setup.exe)】
+See the [Windows Installation Guide](../pre-basic/installation/windows.md) for installation steps and operating system security prompts.
 
-Alternative Lines:
+## macOS
 
-【[Line 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.7/Cherry-Studio-1.6.7-arm64-setup.exe)】 【[Line 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.7/Cherry-Studio-1.6.7-arm64-setup.exe)】 【[Line 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.7/Cherry-Studio-1.6.7-arm64-setup.exe)】
+Open **Apple menu → About This Mac** and check “Chip” or “Processor”:
 
-</details>
+* If it shows an Apple M-series chip, download `arm64`.
+* If it shows an Intel processor, download `x64`.
 
-#### Portable Version
+| File type | Description |
+| :--- | :--- |
+| `*-arm64.dmg` / `*-x64.dmg` | Recommended graphical installer |
+| `*-arm64.zip` / `*-x64.zip` | Compressed archive |
 
-<details>
+Apple Silicon packages support Apple chips such as M1, M2, M3, and M4. If you choose the wrong architecture, the application may not open or may run only through a compatibility layer.
 
-<summary>x64 Version</summary>
+See the [macOS Installation Guide](../pre-basic/installation/macos.md) for installation steps and prompts such as “developer cannot be verified.”
 
-Main Line:
+## Linux
 
-【[Cherry Studio Official Website](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.7/Cherry-Studio-1.6.7-x64-portable.exe)】
+Run the following in a terminal:
 
-Alternative Lines:
+```bash
+uname -m
+```
 
-【[Line 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.7/Cherry-Studio-1.6.7-x64-portable.exe)】 【[Line 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.7/Cherry-Studio-1.6.7-x64-portable.exe)】 【[Line 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.7/Cherry-Studio-1.6.7-x64-portable.exe)】
+* If the output is `x86_64`, select `x86_64` or `amd64`.
+* If the output is `aarch64` / `arm64`, select `arm64` / `aarch64`.
 
-</details>
+Official releases usually provide:
 
-<details>
+| File type | Recommended use |
+| :--- | :--- |
+| `.AppImage` | Run directly across distributions |
+| `.deb` | Debian, Ubuntu, and their derivatives |
+| `.rpm` | Fedora, RHEL, Rocky Linux, and other RPM-based distributions |
 
-<summary>ARM64 Version</summary>
+Architecture labels vary by format. For example, x64 is often written as `amd64` in a `.deb` filename and may appear as `x86_64` in an AppImage filename.
 
-Main Line:
+## Verify the download
 
-【[Cherry Studio Official Website](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.7/Cherry-Studio-1.6.7-arm64-portable.exe)】
+1. Confirm that the file came from an official domain or `github.com/CherryHQ/cherry-studio`.
+2. Recheck the operating system, architecture, and package format.
+3. If the release page provides a SHA-256 digest, compare it with the local file digest before running the file.
+4. Back up Cherry Studio data before updating to or testing a preview release.
 
-Alternative Lines:
+### Calculate SHA-256
 
-【[Line 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.7/Cherry-Studio-1.6.7-arm64-portable.exe)】 【[Line 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.7/Cherry-Studio-1.6.7-arm64-portable.exe)】 【[Line 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.7/Cherry-Studio-1.6.7-arm64-portable.exe)】
+{% tabs %}
+{% tab title="Windows PowerShell" %}
+```powershell
+Get-FileHash .\Cherry-Studio-installer-filename -Algorithm SHA256
+```
+{% endtab %}
 
-</details>
+{% tab title="macOS" %}
+```bash
+shasum -a 256 ~/Downloads/Cherry-Studio-installer-filename
+```
+{% endtab %}
 
-***
+{% tab title="Linux" %}
+```bash
+sha256sum ~/Downloads/Cherry-Studio-installer-filename
+```
+{% endtab %}
+{% endtabs %}
 
-### macOS Version
+The output must exactly match the SHA-256 value for the corresponding file in the official release. If it does not match, do not run the file; download it again from an official source.
 
-<details>
+## Next steps
 
-<summary>Intel Chip Version (x64)</summary>
-
-Main Line:
-
-【[Cherry Studio Official Website](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.7/Cherry-Studio-1.6.7-x64.dmg)】
-
-Alternative Lines:
-
-【[Line 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.7/Cherry-Studio-1.6.7.dmg)】 【[Line 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.7/Cherry-Studio-1.6.7-x64.dmg)】 【[Line 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.7/Cherry-Studio-1.6.7-x64.dmg)】
-
-</details>
-
-<details>
-
-<summary>Apple Silicon Version (ARM64, M-series chips)</summary>
-
-Main Line:
-
-【[Cherry Studio Official Website](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.7/Cherry-Studio-1.6.7-arm64.dmg)】
-
-Alternative Lines:
-
-【[Line 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.7/Cherry-Studio-1.6.7-arm64.dmg)】 【[Line 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.7/Cherry-Studio-1.6.7-arm64.dmg)】 【[Line 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.7/Cherry-Studio-1.6.7-arm64.dmg)】
-
-</details>
-
-***
-
-### Linux Version
-
-<details>
-
-<summary>x86_64 Version</summary>
-
-Main Line:
-
-【[Cherry Studio Official Website](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.7/Cherry-Studio-1.6.7-x86_64.AppImage)】
-
-Alternative Lines:
-
-【[Line 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.7/Cherry-Studio-1.6.7-x86_64.AppImage)】 【[Line 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.7/Cherry-Studio-1.6.7-x86_64.AppImage)】 【[Line 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.7/Cherry-Studio-1.6.7-x86_64.AppImage)】
-
-</details>
-
-<details>
-
-<summary>ARM64 Version</summary>
-
-Main Line:
-
-【[Cherry Studio Official Website](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.7/Cherry-Studio-1.6.7-arm64.AppImage)】
-
-Alternative Lines:
-
-【[Line 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.7/Cherry-Studio-1.6.7-arm64.AppImage)】 【[Line 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.7/Cherry-Studio-1.6.7-arm64.AppImage)】 【[Line 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.7/Cherry-Studio-1.6.7-arm64.AppImage)】
-
-</details>
-
-***
-
-## Cloud Drive Download
-
-[Quark](https://pan.quark.cn/s/4044324d0ecd#/list/share)
+* [Installation Guide](../pre-basic/installation/)
+* [Configure Model Services](../pre-basic/providers/)
+* [Chat](preview/chat.md)

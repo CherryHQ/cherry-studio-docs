@@ -1,78 +1,162 @@
 ---
 icon: route
 ---
-# 調用鏈使用說明
 
+# 呼叫鏈（Trace）
+
+呼叫鏈（Trace）可用來查看一次對話在 Cherry Studio 內部經歷了哪些步驟。它以 OpenTelemetry Trace 和 Span 為基礎，將模型請求、工具呼叫、知識庫檢索等處理流程組織成樹狀結構，並顯示各節點的耗時、狀態、輸入輸出與 Token 使用量。
+
+當回答不符預期、工具呼叫失敗或回應變慢時，呼叫鏈可協助你判斷問題發生在哪個環節：
+
+* 模型是否收到正確的上下文；
+* 網路搜尋或知識庫檢索傳回了什麼；
+* MCP 工具使用了哪些參數；
+* 哪個步驟耗時最久或傳回錯誤；
+* 多模型回答分別產生了多少 Token。
 
 {% hint style="warning" %}
-此文件由 AI 從中文翻譯而來，尚未經過審閱。
+呼叫鏈屬於開發者診斷功能，可能會儲存提示詞、模型輸出、工具參數和檢索內容。請勿在包含敏感資訊的正式工作階段中長期啟用，也不要在未經檢查的情況下直接分享完整 Trace。
 {% endhint %}
 
+## 啟用呼叫鏈
 
+1. 開啟 `設定 → 一般設定`。
+2. 找到 **開發者模式**。
+3. 開啟 **啟用開發者模式**。
+4. 完全結束並重新開啟 Cherry Studio。
+5. 建立新對話並傳送訊息。
 
+{% hint style="info" %}
+必須重新啟動應用程式。Trace 視窗和快取服務只會在 Cherry Studio 啟動時，根據開發者模式的狀態啟用；如果只切換開關而未重新啟動，可能看不到入口或無法讀取資料。
+{% endhint %}
 
-## 功能介紹
+啟用前已產生的訊息不會補建呼叫鏈。只有重新啟動後新執行，且成功寫入 Trace ID 的訊息才會顯示入口。
 
-調用鏈（又稱「trace」）為用戶提供對話的洞察能力，幫助用戶覺察模型、知識庫、MCP、網路搜尋等在對話過程中的具體表現。它是一個基於 [OpenTelemetry](https://opentelemetry.io/docs/languages/js/) 實現的可觀測工具，透過終端側採集、儲存、處理資料實現視覺化，為定位問題、最佳化效果提供量化評估依據。
+## 開啟一次呼叫鏈
 
-每次對話對應一條 trace 資料，一條 trace 由多個 span 組成，每個 span 對應 Cherry Studio 的一個程式處理邏輯如呼叫模型會話、呼叫 MCP、呼叫知識庫、呼叫網路搜尋等。trace 以樹狀結構展示，span 為樹節點，主要資料包括耗時、token 使用量，當然在 span 詳情還可以檢視其具體的輸入輸出。
+在一般對話頁面找到需要檢查的訊息，將滑鼠移到訊息操作列，然後按一下 **呼叫鏈** 圖示。
 
-<figure><img src="../.gitbook/assets/trace2.gif" alt=""><figcaption></figcaption></figure>
+目前只有一般對話訊息提供此入口；Agent Session 的訊息操作列不會顯示呼叫鏈按鈕。
 
-## 開啟 Trace
+此按鈕只會在下列條件同時成立時出現：
 
-預設情況下，Cherry Studio 安裝之後，Trace 是隱藏的狀態。需要在「設定」-「常規設定」-「開發者模式」中開啟，如下圖：
+* 已啟用開發者模式；
+* 目前訊息包含 Trace ID；
+* Trace 服務已在本次應用程式啟動時啟用。
 
-<figure><img src="../.gitbook/assets/image (84).png" alt=""><figcaption></figcaption></figure>
+Cherry Studio 會開啟獨立的呼叫鏈視窗。再次按一下其他訊息的呼叫鏈按鈕時，現有視窗會切換到對應的 Trace。
 
-且對於之前的會話不會產生 Trace 記錄，只會在新的問答產生之後才會產生 Trace 記錄。所產生的記錄儲存在本機，如需要徹底清除 Trace，可以透過「設定」-「資料設定」-「資料目錄」-「清除快取」進行清除，也可透過手動刪除 `~/.cherrystudio/trace` 下的檔案進行清除，如下圖：
+如果同一個問題產生了多個模型回答，請在各模型對應的回答訊息上分別按一下呼叫鏈；視窗會依該訊息的模型篩選 Trace 資料。
 
-<figure><img src="../.gitbook/assets/image (85).png" alt=""><figcaption></figcaption></figure>
+## 讀懂 Trace 樹
 
-## 場景介紹
+一次完整請求會對應一個 Trace，其中每個處理步驟會對應一個 Span。子節點表示該步驟發生於父節點的上下文中。
 
-### 全鏈路檢視
+選取節點後，詳細資料區可能會顯示：
 
-在 Cherry Studio 對話方塊中點選調用鏈檢視調用鏈的全鏈路資料。無論在對話過程中呼叫了模型，還是網路搜尋、知識庫、MCP，都可以在調用鏈視窗中檢視到全鏈路呼叫資料。
+| 資訊 | 用途 |
+|---|---|
+| 開始與結束時間 | 判斷步驟的發生順序 |
+| Duration | 找出耗時較久的環節 |
+| 錯誤醒目提示 | 節點名稱變紅時，檢查該步驟的異常輸出 |
+| Input / Attributes | 檢查輸入、參數和上下文 |
+| Outputs | 查看傳回內容；異常資訊也會顯示於此 |
+| Token Usage | 比較 Prompt Token 和 Completion Token |
 
-<figure><img src="../.gitbook/assets/image (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+並非每次請求都會出現相同的節點。實際結構取決於使用的模型、是否連線到網路、是否關聯知識庫，以及模型是否呼叫 MCP 工具。
 
-<figure><img src="../.gitbook/assets/image (86).png" alt=""><figcaption></figcaption></figure>
+### 模型呼叫
 
-### 檢視鏈路中模型
+模型節點可用來檢查：
 
-若想要檢視調用鏈中模型的詳情，可以點選模型呼叫節點，檢視其輸入、輸出詳情。
+* 實際呼叫的模型；
+* 傳送給模型的輸入；
+* 模型傳回的文字或串流結果；
+* Prompt Token 和 Completion Token；
+* 請求耗時與錯誤狀態。
 
-<figure><img src="../.gitbook/assets/image (87).png" alt=""><figcaption></figcaption></figure>
+如果回答明顯遺漏資訊，請先確認模型輸入中是否已包含相關上下文。
 
-<figure><img src="../.gitbook/assets/image (88).png" alt=""><figcaption></figcaption></figure>
+### 網路搜尋
 
-<figure><img src="../.gitbook/assets/image (89).png" alt=""><figcaption></figcaption></figure>
+使用網路搜尋時，Trace 可能包含搜尋請求、結果整理和模型呼叫等節點。請重點檢查：
 
-### 檢視鏈路中網路搜尋
+* 搜尋詞是否正確；
+* 搜尋是否成功傳回結果；
+* 結果是否經過篩選後傳送給模型；
+* 搜尋耗時是否成為主要瓶頸。
 
-若想要檢視調用鏈中網路搜尋的詳情，可以點選網路搜尋呼叫節點，檢視其輸入、輸出詳情。在詳情中，可以檢視到呼叫網路搜尋查詢的問題和其返回的結果。
+### 知識庫檢索
 
-<figure><img src="../.gitbook/assets/image (2) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+關聯[知識庫](../knowledge-base/knowledge-base.md)後，可透過呼叫鏈確認檢索是否命中預期內容。請重點查看檢索問題、傳回片段、相似度資訊，以及最終傳送給模型的上下文。
 
-<figure><img src="../.gitbook/assets/image (150).png" alt=""><figcaption></figcaption></figure>
+如果知識庫節點沒有結果，請繼續檢查嵌入模型、文件處理狀態、檢索閾值和使用者問題的表述。
 
-<figure><img src="../.gitbook/assets/image (151).png" alt=""><figcaption></figcaption></figure>
+### MCP 工具呼叫
 
-### 檢視鏈路中知識庫
+使用 [MCP](mcp/README.md) 時，Trace 可協助核對工具名稱、呼叫參數、傳回值、耗時和錯誤。
 
-若想要檢視調用鏈中知識庫的詳情，可以點選知識庫呼叫節點，檢視其輸入、輸出詳情。在詳情中，可以檢視到呼叫知識庫查詢的問題和其返回的答案。
+工具執行失敗時，請區分以下情況：
 
-<figure><img src="../.gitbook/assets/image (152).png" alt=""><figcaption></figcaption></figure>
+* 模型選擇了錯誤的工具；
+* 工具參數不完整或格式錯誤；
+* MCP Server 未執行或連線失敗；
+* 工具已經執行，但傳回內容未被模型正確使用。
 
-### 檢視鏈路中 MCP 呼叫情況
+{% hint style="info" %}
+Trace 顯示的是診斷資料，不會自動重試或修復失敗的步驟。確認原因後，需要回到對話、模型、知識庫或 MCP 設定中修改組態。
+{% endhint %}
 
-若想要檢視調用鏈中 MCP 的詳情，可以點選 MCP 呼叫節點，檢視其輸入、輸出詳情。在詳情中，可以檢視到呼叫此 MCP Server tool 的入參和 tool 的返回。
+## 資料儲存與清理
 
-<figure><img src="../.gitbook/assets/image (153).png" alt=""><figcaption></figcaption></figure>
+Trace 資料會儲存在目前使用者的主目錄：
 
-<figure><img src="../.gitbook/assets/image (154).png" alt=""><figcaption></figcaption></figure>
+```
+~/.cherrystudio/trace
+```
 
-## 問題和建議
+其下會依話題 ID 和 Trace ID 組織資料。在 Windows 中，`~` 代表目前的使用者目錄，例如 `C:\Users\<使用者名稱>`。
 
-當前功能由阿里雲 [EDAS](https://www.aliyun.com/product/edas) 團隊提供，如有問題或建議，請進入釘釘群（群號：21958624）與開發者進行深度溝通。
+刪除一則訊息或話題時，Cherry Studio 會清理對應的部分 Trace 資料。若要清除全部本機 Trace：
+
+1. 開啟 `設定 → 資料設定`。
+2. 找到快取資訊。
+3. 按一下 **清除快取** 並確認。
+
+清除快取也會刪除其他應用程式快取。執行前，請確認沒有需要保留的診斷資料。
+
+{% hint style="danger" %}
+請勿在 Cherry Studio 執行時手動編輯 Trace 檔案。需要分享時，請優先截取必要節點，並先遮蔽 API 金鑰、個人資料、檔案路徑和業務內容。
+{% endhint %}
+
+## 常見問題
+
+### 已開啟開發者模式，但沒有呼叫鏈按鈕
+
+請依序檢查：
+
+1. 開啟後是否已完全重新啟動 Cherry Studio。
+2. 目前訊息是否在重新啟動後才產生。
+3. 查看的是不是一般對話訊息；沒有 Trace ID 的歷史訊息不會顯示入口。
+4. 建立新話題後，再傳送一則簡單訊息進行測試。
+
+### 呼叫鏈視窗空白
+
+* 等待目前的模型輸出和工具呼叫完成後，再重新開啟。
+* 確認對應訊息尚未刪除，且 Trace 快取也未被清理。
+* 如果剛開啟開發者模式，請重新啟動應用程式並建立新對話後再試。
+* 多模型回答請在各模型對應的回答訊息上分別開啟呼叫鏈。
+
+### 看不到知識庫、搜尋或 MCP 節點
+
+只有本次請求實際執行了對應功能，才會出現相關 Span。請先從對話結果和模型工具呼叫記錄中，確認該步驟是否確實發生。
+
+### Trace 資料太多
+
+完成疑難排解後，請關閉開發者模式並重新啟動 Cherry Studio。若需要立即釋放本機空間，可在資料設定中清除快取。
+
+***
+
+### 💡 取得協助與提交意見反應
+
+如果呼叫鏈資料異常，提交意見反應時建議附上必要的 Trace 截圖、Cherry Studio 版本、使用的模型，以及是否啟用了知識庫、網路搜尋或 MCP。官方管道請參閱[意見反應與建議](../question-contact/suggestions.md)。

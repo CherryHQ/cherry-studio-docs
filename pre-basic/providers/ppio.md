@@ -1,61 +1,257 @@
 # PPIO 派欧云
 
-## Cherry Studio 接入 PPIO LLM API
+PPIO 派欧云提供大语言模型、视觉模型、Embedding、Rerank 和图片生成 API。Cherry Studio V2 内置 PPIO 服务商，可以直接同步平台当前可用的模型，无需新建自定义服务商。
 
-### [​](https://ppinfra.com/docs/third-party/cherry-studio-use#%E6%95%99%E7%A8%8B%E6%A6%82%E8%BF%B0)教程概述 <a href="#e6-95-99-e7-a8-8b-e6-a6-82-e8-bf-b0" id="e6-95-99-e7-a8-8b-e6-a6-82-e8-bf-b0"></a>
+V2 内置的对话与 Embedding Base URL 为：
 
-Cherry Studio 是一款多模型桌面客户端，目前支持：Windows 、Linux 、MacOS 系电脑安装包。它聚合主流 LLM 模型，提供多场景辅助。用户可通过智能会话管理、开源定制、多主题界面来提升工作效率。
+```text
+https://api.ppinfra.com/v3/openai/
+```
 
-Cherry Studio 现已与 **PPIO 高性能 API 通道** 深度适配——通过企业级算力保障，实现 **DeepSeek-R1/V3 高速响应** 与 **99.9% 服务可用性**，带给您快速流畅的体验。
+{% hint style="info" %}
+PPIO 官方 API 手册中的部分示例使用 `api.ppio.com/openai/v1`，但 Cherry Studio V2 内置服务商目前使用上面的兼容地址。首次配置应保留应用预设；只有 PPIO 或 Cherry Studio 明确要求迁移时才修改。
+{% endhint %}
 
-下方教程包含完整接入方案（含密钥配置），3 分钟开启「Cherry Studio 智能调度 + PPIO 高性能 API」的进阶模式。
+## 使用前准备
 
-### [​](https://ppinfra.com/docs/third-party/cherry-studio-use#1-%E8%BF%9B%E5%85%A5-cherrystudio%EF%BC%8C%E6%B7%BB%E5%8A%A0-%E2%80%9Cppio%E2%80%9D-%E4%BD%9C%E4%B8%BA%E6%A8%A1%E5%9E%8B%E6%8F%90%E4%BE%9B%E5%95%86)1. 进入 CherryStudio，添加 “PPIO” 作为模型提供商 <a href="#id-1-e8-bf-9b-e5-85-a5-cherrystudio-ef-bc-8c-e6-b7-bb-e5-8a-a0-e2-80-9cppio-e2-80-9d-e4-bd-9c-e4-b8-ba" id="id-1-e8-bf-9b-e5-85-a5-cherrystudio-ef-bc-8c-e6-b7-bb-e5-8a-a0-e2-80-9cppio-e2-80-9d-e4-bd-9c-e4-b8-ba"></a>
+首次使用 PPIO 模型 API，通常需要：
 
-首先前往官网下载 Cherry Studio：[ ](https://cherryai.com.cn/download)[https://cherryai.com.cn/download](https://cherryai.com.cn/download) （如果进不去可以打开下面的夸克网盘链接下载自己需要的版本：[https://pan.quark.cn/s/c8533a1ec63e#/list/share](https://pan.quark.cn/s/c8533a1ec63e#/list/share)）
+1. 注册并登录 PPIO；
+2. 完成个人或企业实名认证；
+3. 为账户充值或确认已有可用余额；
+4. 创建 API Key；
+5. 确认准备使用的模型仍在服务中。
 
-（1）先点击左下角设置，自定义提供商名称为：`PPIO`，点击“确定”
+PPIO 的模型、价格和上下线状态会调整。本文不固定列出价格或赠送额度，请以控制台和[模型服务页面](https://ppio.com/model-api/product/llm-api)为准。
 
-<figure><img src="https://static.ppinfra.com/docs/image/llm/cherry-studio-setting.png" alt=""><figcaption></figcaption></figure>
+## 获取 API Key
 
-（2）前往 [派欧算力云 API 密钥管理 ](https://ppinfra.com/user/register?invited_by=JYT9GD\&utm_source=github_cherry-studio)，点击【用户头像】—【API 密钥管理】进入控制台
+1. 登录 [PPIO 控制台](https://ppio.com/)；
+2. 打开 [API 密钥管理](https://ppio.com/settings/key-management)；
+3. 点击**创建**；
+4. 输入便于识别的密钥名称；
+5. 创建后立即复制并安全保存。
 
-<figure><img src="https://static.ppinfra.com/docs/image/llm/ppinfra-create-api-key-01.png" alt=""><figcaption></figcaption></figure>
+PPIO 使用 Bearer 方式验证 API Key。每个账户当前最多可以创建 10 个密钥，且密钥创建后无法再次查看。
 
-点击 【+ 创建】按钮来创建新的 API 密钥。自定义一个密钥名称，**生成的密钥仅在生成时呈现，务必复制并保存到文档中，以免影响后续使用**
+{% hint style="danger" %}
+API Key 相当于账户凭据。不要写入聊天、文档、代码仓库或问题截图；如果遗失或泄露，应立即在 PPIO 删除并重新创建。
+{% endhint %}
 
-<figure><img src="https://static.ppinfra.com/docs/image/llm/ppinfra-create-api-key-02.png" alt=""><figcaption></figcaption></figure>
+## 在 Cherry Studio 配置
 
-（3）在 CherryStudio 填入密钥 点击设置，选择【PPIO 派欧云】，输入官网生成的 API 密钥，最后点击【检查】
+1. 打开 `设置 → 模型服务`；
+2. 将左侧筛选切换为**全部服务商**；
+3. 选择 **PPIO**；
+4. 在 API Key 中粘贴 PPIO 密钥；
+5. 保留预设 Base URL `https://api.ppinfra.com/v3/openai/`；
+6. 打开页面顶部的服务商开关；
+7. 点击**添加**或同步模型；
+8. 检查同步预览并应用变更；
+9. 只启用准备使用的模型；
+10. 运行模型健康检查。
 
-<figure><img src="https://static.ppinfra.com/docs/image/llm/cherry-studio-3601.PNG" alt=""><figcaption></figcaption></figure>
+连接检查只说明凭据和基础请求可用，不代表账户可以调用列表中的每一种模型。模型权限、余额、地区限制和上下线状态仍由 PPIO 判断。
 
-（4）选择模型：deepseek/deepseek-r1/community 为例，如需更换其他模型，可直接更换。
+## 同步模型
 
-<figure><img src="https://static.ppinfra.com/docs/image/llm/cherry-studio-3602.PNG" alt=""><figcaption></figcaption></figure>
+Cherry Studio V2 会并行读取三类模型列表：
 
-DeepSeek R1 和 V3 community 版本仅供大家尝鲜，也是全参数满血版模型，稳定性和效果无差异，如需大量调用则须 **充值并切换到非 community 版本**。
+```text
+/models
+/models?model_type=embedding
+/models?model_type=reranker
+```
 
-### [​](https://ppinfra.com/docs/third-party/cherry-studio-use#2-%E6%A8%A1%E5%9E%8B%E4%BD%BF%E7%94%A8%E9%85%8D%E7%BD%AE)2. 模型使用配置 <a href="#id-2-e6-a8-a1-e5-9e-8b-e4-bd-bf-e7-94-a8-e9-85-8d-e7-bd-ae" id="id-2-e6-a8-a1-e5-9e-8b-e4-bd-bf-e7-94-a8-e9-85-8d-e7-bd-ae"></a>
+结果会合并并按 Model ID 去重，因此一次同步可以同时发现对话、Embedding 和 Rerank 模型。
 
-（1）点击【检查】显示连接成功后即可正常使用
+同步后建议：
 
-<figure><img src="https://static.ppinfra.com/docs/image/llm/cherry-studio-3603.png" alt=""><figcaption></figcaption></figure>
+1. 查看新增、更新和移除项；
+2. 确认每个模型的类型；
+3. 应用同步结果；
+4. 删除自己手动保留的过期模型；
+5. 分别运行健康检查。
 
-（2）最后点击【@】选择 PPIO 供应商下刚刚添加的 DeepSeek R1 模型，即可成功开始聊天\~
+{% hint style="warning" %}
+V2 的内置预设用于首次展示，可能早于 PPIO 的模型下线或改名。平台实时返回的模型列表和官方公告优先，不要因为旧 Model ID 仍显示在本地就继续使用。
+{% endhint %}
 
-<figure><img src="https://static.ppinfra.com/docs/image/llm/cherry-studio-ppio-config-02.png" alt=""><figcaption></figcaption></figure>
+## 选择对话模型
 
-【部分素材来源：[ 陈恩 ](https://www.kdocs.cn/l/ctGiF5K6PQoO)】
+PPIO 对话模型通过 OpenAI 兼容 Chat Completions 接入。不同模型对长上下文、视觉、工具调用和思考参数的支持不同。
 
-### [​](https://ppinfra.com/docs/third-party/cherry-studio-use#3-ppio%C3%97cherry-studio-%E8%A7%86%E9%A2%91%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B)3. PPIO×Cherry Studio 视频使用教程 <a href="#id-3-ppio-c3-97cherry-studio-e8-a7-86-e9-a2-91-e4-bd-bf-e7-94-a8-e6-95-99-e7-a8-8b" id="id-3-ppio-c3-97cherry-studio-e8-a7-86-e9-a2-91-e4-bd-bf-e7-94-a8-e6-95-99-e7-a8-8b"></a>
+建议按以下顺序测试：
 
-若您更倾向直观学习，我们在 B 站准备了视频教程。通过手把手教学，助您快速掌握「PPIO API+Cherry Studio」的配置方法，点击下方链接直达视频，开启流畅开发体验 → [《 【还在为 DeepSeek 疯狂转圈抓狂？】派欧云+DeepSeek 满血版 =？不再拥堵，即刻起飞》](https://www.bilibili.com/video/BV1BZNmeTEwg/?buvid=XX82F37818653072D274A6BB8A4FE7938A30C\&from_spmid=search.search-result.0.0\&is_story_h5=false\&mid=3CpKQv%2Bjnb8k6iTGlUl1eH8FTQ%2FSZMtL1rElX6M3iMo%3D\&plat_id=116\&share_from=ugc\&share_medium=android\&share_plat=android\&share_session_id=b892268f-5751-4f6e-9690-50b37855d346\&share_source=WEIXIN\&share_source=weixin\&share_tag=s_i\&spmid=united.player-video-detail.0.0\&timestamp=1739160448\&unique_k=eKDZuRP\&up_id=3546757841554023\&vd_source=50fea165795ccc47455a165f5bcaeed2)
+1. 发送一条简短的纯文本消息；
+2. 检查流式输出；
+3. 增加系统提示词；
+4. 测试较长上下文；
+5. 最后测试图片、思考和工具调用。
 
-【视频素材来源：sola】
+Model ID 必须与 PPIO 当前列表完全一致，包括组织前缀、大小写、斜杠和版本后缀。不要把模型显示名或产品页 URL 当作 Model ID。
 
-***
+## 视觉模型
 
-### 💡 获取帮助与提交反馈
+只有 PPIO 明确标记为视觉语言模型的 Model ID 才能接收图片。
 
-如果您在配置或使用过程中遇到任何疑问、Bug 或有功能改进建议，请参考 [反馈与建议](../../question-contact/suggestions.md) 中提供的官方渠道。
+在 Cherry Studio 中：
+
+1. 同步最新模型；
+2. 选择显示图片能力的模型；
+3. 先上传一张小图片；
+4. 检查模型是否真正理解图片内容；
+5. 再尝试多图或高分辨率图片。
+
+同一模型系列的文本版和视觉版可能使用不同 ID。图片也会增加请求体大小、上下文消耗和费用。
+
+## 思考模式
+
+Cherry Studio 会按模型系列生成相应的思考参数。对于 PPIO 上的 DeepSeek 混合推理模型，V2 会使用平台兼容的 `thinking` 控制。
+
+如果开启思考后出现参数错误：
+
+1. 将思考选项恢复为**默认**；
+2. 清除模型的自定义参数；
+3. 确认 Model ID 没有指向旧版本；
+4. 重新同步模型；
+5. 对照 PPIO 当前模型说明测试。
+
+不要把一个模型可接受的思考参数复制到其他系列。PPIO 只负责转发平台支持的参数，最终行为仍取决于具体模型。
+
+## MCP 与工具调用
+
+Cherry Studio MCP 要求模型支持结构化 Tool Calling。
+
+1. 先确认普通对话正常；
+2. 只启用一个简单 MCP 工具；
+3. 明确要求模型调用该工具；
+4. 检查是否产生结构化调用；
+5. 确认工具结果能回传给模型；
+6. 再逐步增加工具。
+
+如果模型只用文字描述“将要调用工具”，但没有实际调用，通常是模型能力、模型识别或参数兼容问题，不是 MCP 服务器本身已成功运行。
+
+## Embedding、Rerank 与知识库
+
+PPIO 同时提供 OpenAI 兼容 Embedding 和 Rerank 接口。V2 会在同步时单独查询这两类模型。
+
+当前官方 API 手册列出的示例包括：
+
+- Embedding：`baai/bge-m3`；
+- Rerank：`baai/bge-reranker-v2-m3`。
+
+这些名称仍可能随平台调整，实际使用时以同步结果和 PPIO 模型页为准。
+
+创建知识库时：
+
+1. 先同步 PPIO 模型；
+2. 选择明确识别为 Embedding 的模型；
+3. 检测向量维度；
+4. 运行健康检查；
+5. 再选择当前可用的 Rerank 模型；
+6. 导入少量文档试运行；
+7. 确认检索与重排结果后再批量导入。
+
+Embedding 模型或向量维度一旦用于已有知识库，不应直接更换；否则通常需要重建向量索引。
+
+## 图片生成与编辑
+
+Cherry Studio V2 为 PPIO 实现了专用图片传输链路。它与对话接口使用不同主机：
+
+| 用途 | V2 使用的地址 |
+| --- | --- |
+| 对话与 Embedding | `https://api.ppinfra.com/v3/openai/` |
+| 图片生成与任务查询 | `https://api.ppio.com` |
+
+图片页面会根据模型注册信息选择同步或异步接口，并只显示该模型声明支持的模式与参数，例如：
+
+- 文生图；
+- 图片编辑；
+- 图片尺寸；
+- Seed；
+- 水印；
+- 部分模型的 LoRA 或参考图。
+
+并非 PPIO 官网出现的每个图片模型都已经被当前 V2 适配。应从 Cherry Studio 绘画页面可选的 PPIO 模型开始测试。
+
+PPIO 已于 2026 年 1 月 31 日下线一批旧 Image API，包括旧版 `txt2img`、`img2img`、背景移除、背景替换、局部重绘、文字擦除、对象擦除和脸部融合接口。不要继续照搬使用这些旧接口的教程或截图。
+
+{% hint style="warning" %}
+图片生成可能产生明显费用。先使用较小尺寸和单张输出测试；异步任务等待期间不要连续重复提交，否则可能创建多个计费任务。
+{% endhint %}
+
+## PDF 与附件
+
+当前 V2 会先在本地提取 PDF 文本，再发送给 PPIO 对话模型：
+
+- 文本型 PDF 通常可以处理；
+- 扫描件需要先做 OCR；
+- 表格、复杂排版和图片信息可能丢失；
+- 提取文本会占用模型上下文和费用；
+- PDF 中的图片需要单独发送给视觉模型。
+
+PPIO 是云端服务。上传文档、图片或知识库内容前，应确认符合隐私、版权和组织安全要求。
+
+## 余额、限流与模型下线
+
+PPIO 按模型和用量计费，具体价格、速率和并发限制可能变化。
+
+建议：
+
+1. 在控制台设置预算或余额提醒；
+2. 先用短请求验证新模型；
+3. 避免多个自动任务共用同一密钥无限重试；
+4. 遇到 429 时降低并发并等待；
+5. 关注[官方公告](https://ppio.com/docs/announcement/announcement)中的模型和接口下线信息；
+6. 定期同步模型并移除旧 ID。
+
+社区版文档不会写死限时价格、邀请码、赠金或“永久免费”等信息，以免活动结束后误导使用。
+
+## 常见问题
+
+### 返回 401
+
+API Key 错误、已删除、复制时带入空格，或请求没有正确使用 Bearer 鉴权。重新从密钥管理页创建并复制 Key。
+
+### 返回 402 或余额不足
+
+账户余额不足，或当前模型不包含在可用权益中。检查 PPIO 账单、余额和模型价格。
+
+### 返回 403
+
+账号可能未完成实名认证、没有模型权限，或请求内容触发平台策略。先在 PPIO 控制台确认账户状态。
+
+### 返回 404
+
+Base URL、Model ID 或图片接口已过期。先恢复 V2 预设地址，再同步模型并查看官方下线公告。
+
+### 返回 429
+
+达到模型速率、并发或账户限制。降低并发、缩短请求并等待恢复；不要立即循环重试。
+
+### 模型列表为空
+
+检查 API Key、Base URL 和网络代理。恢复预设 Base URL 后重新同步；必要时从 PPIO 当前模型页复制完整 Model ID 手动添加。
+
+### 预设模型无法使用
+
+预设可能早于平台下线、改名或权限变化。以实时同步结果为准，移除失效模型后选择当前可用版本。
+
+### Embedding 可用，但 Rerank 不可用
+
+两者使用不同模型和接口。分别同步并运行健康检查，确认 Rerank 模型没有下线，且知识库选择的是重排模型而不是 Embedding 模型。
+
+### 图片任务一直等待
+
+任务可能仍在队列、平台繁忙、网络轮询失败或余额不足。先等待并查看错误信息，不要连续重复提交同一任务。
+
+### 旧教程里的图片模型找不到
+
+PPIO 已下线部分旧 Image API，V2 也只展示当前已适配的图片模型。同步最新模型并使用绘画页面实际可选项。
+
+### 修改 Base URL 后对话和绘画同时失败
+
+PPIO 的对话与图片链路使用不同主机。不要为了匹配某篇 API 示例而覆盖 V2 内部的图片地址；恢复内置服务商默认配置后重试。
+
+更多一般设置请参阅[模型服务](README.md)和[模型服务设置](../settings/providers.md)。PPIO 当前账户要求、密钥和接口请参阅[快速上手](https://ppio.com/docs/model/get-start)、[管理 API 密钥](https://ppio.com/docs/support/api-key)、[Embedding](https://ppio.com/docs/models/reference-llm-create-embeddings)和[Rerank](https://ppio.com/docs/models/reference-llm-create-rerank)；意见反馈渠道请参阅[反馈与建议](../../question-contact/suggestions.md)。

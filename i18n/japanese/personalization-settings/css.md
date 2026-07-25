@@ -1,138 +1,182 @@
 ---
 icon: file-code
 ---
-# カスタムCSS
 
+# カスタム CSS
+
+カスタム CSS を使うと Cherry Studio の画面スタイルを上書きし、組み込み設定にはない色、余白、角丸、コンポーネントの外観を調整できます。
 
 {% hint style="warning" %}
-このドキュメントはAIによって中国語から翻訳されており、まだレビューされていません。
+カスタム CSS は上級者向けの機能です。アプリのアップデート後にコンポーネント構造、クラス名、変数が変わる可能性があり、現在有効なスタイルが今後のバージョンでも動作するとは限りません。
 {% endhint %}
 
+## 使用する場面
 
+CSS を書く前に、**設定 > 一般設定 > 表示と言語** を確認してください。V2 には次のオプションが組み込まれています。
 
+- ライト、ダーク、システム連動テーマ。
+- テーマのアクセントカラー。
+- 画面のズーム。
+- グローバルフォントとコードフォント。
+- トピックの位置と表示方法。
 
-カスタム CSS を使用してソフトウェアの外観を変更し、自分の好みに合わせることができます。例：
+組み込みオプションのほうが安定しており、直接リセットすることもできます。組み込み設定で目的を実現できない場合にだけ、カスタム CSS を使用してください。
 
-<figure><img src="../../.gitbook/assets/telegram-cloud-photo-size-5-6311935435315724879-y.jpg" alt=""><figcaption><p>カスタム CSS</p></figcaption></figure>
+## CSS エディターを開く
+
+1. Cherry Studio の左下にある **設定** をクリックします。
+2. **一般設定** を開きます。
+3. 第 2 階層のメニューで **カスタム CSS** を選択します。
+4. エディターに CSS を入力または貼り付けます。
+
+編集内容はローカル設定に保存され、内容が変わると画面へ反映されます。保存ボタンを別途クリックする必要はありません。
+
+先に現在の CSS のコピーを保存し、少しずつ変更することを推奨します。短いルールを追加するたびにチャット、設定、ダイアログ、補助ウィンドウを確認すると、問題発生時に原因を特定しやすくなります。
+
+## 最小限のスタイルから始める
+
+次の例では、ユーザーメッセージの背景と一般的な角丸だけを調整します。
 
 ```css
 :root {
-  --color-background: #1a462788;
-  --color-background-soft: #1a4627aa;
-  --color-background-mute: #1a462766;
-  --navbar-background: #1a4627;
-  --chat-background: #1a4627;
-  --chat-background-user: #28b561;
-  --chat-background-assistant: #1a462722;
-}
-
-#content-container {
-  background-color: #2e5d3a !important;
+  --chat-background-user: rgba(0, 185, 107, 0.08);
+  --list-item-border-radius: 12px;
 }
 ```
 
-### 組み込み変数
+ライトテーマとダークテーマを別々に設定する場合は、ルート要素のテーマクラスを使用できます。
 
 ```css
-:root {
-  font-family: "汉仪唐美人" !important; /* フォント */
+:root:not(.dark) {
+  --chat-background-user: rgba(0, 120, 80, 0.08);
 }
 
-/* 深い思考展開時のフォント色 */
-.ant-collapse-content-box .markdown {
-  color: red;
-}
-
-/* テーマ変数 */
-:root {
-  --color-black-soft: #2a2b2a; /* ダーク背景色 */
-  --color-white-soft: #f8f7f2; /* ライト背景色 */
-}
-
-/* ダークテーマ */
-body[theme-mode="dark"] {
-  /* カラー設定 */
-  --color-background: #2b2b2b; /* ダーク背景色 */
-  --color-background-soft: #303030; /* ソフト背景色 */
-  --color-background-mute: #282c34; /* ミュート背景色 */
-  --navbar-background: var(-–color-black-soft); /* ナビゲーションバーの背景色 */
-  --chat-background: var(–-color-black-soft); /* チャット背景色 */
-  --chat-background-user: #323332; /* ユーザーのチャット背景色 */
-  --chat-background-assistant: #2d2e2d; /* アシスタントのチャット背景色 */
-}
-
-/* ダークテーマ固有のスタイル */
-body[theme-mode="dark"] {
-  #content-container {
-    background-color: var(-–chat-background-assistant) !important; /* コンテンツコンテナの背景色 */
-  }
-
-  #content-container #messages {
-    background-color: var(-–chat-background-assistant); /* メッセージ背景色 */
-  }
-
-  .inputbar-container {
-    background-color: #3d3d3a; /* 入力バーの背景色 */
-    border: 1px solid #5e5d5940; /* 入力バーのボーダー色 */
-    border-radius: 8px; /* 入力バーの角丸 */
-  }
-
-  /* コードスタイル */
-  code {
-    background-color: #e5e5e20d; /* コード背景色 */
-    color: #ea928a; /* コード文字色 */
-  }
-
-  pre code {
-    color: #abb2bf; /* プリフォーマットコード文字色 */
-  }
-}
-
-/* ライトテーマ */
-body[theme-mode="light"] {
-  /* カラー設定 */
-  --color-white: #ffffff; /* 白色 */
-  --color-background: #ebe8e2; /* ライト背景色 */
-  --color-background-soft: #cbc7be; /* ソフト背景色 */
-  --color-background-mute: #e4e1d7; /* ミュート背景色 */
-  --navbar-background: var(-–color-white-soft); /* ナビゲーションバーの背景色 */
-  --chat-background: var(-–color-white-soft); /* チャット背景色 */
-  --chat-background-user: #f8f7f2; /* ユーザーのチャット背景色 */
-  --chat-background-assistant: #f6f4ec; /* アシスタントのチャット背景色 */
-}
-
-/* ライトテーマ固有のスタイル */
-body[theme-mode="light"] {
-  #content-container {
-    background-color: var(-–chat-background-assistant) !important; /* コンコンテンンツコンコンテナの背景色 */
-  }
-
-  #content-container #messages {
-    background-color: var(-–chat-background-assistant); /* メッセージ背景色 */
-  }
-
-  .inputbar-container {
-    background-color: #ffffff; /* 入力バーの背景色 */
-    border: 1px solid #87867f40; /* 入力バーのボーーダー色 */
-    border-radius: 8px; /* 入力バーの角丸（好みのサイズに変更可） */
-  }
-
-  /* コードスタイル */
-  code {
-    background-color: #3d39290d; /* コード背景色 */
-    color: #7c1b13; /* コード文字色 */
-  }
-
-  pre code {
-    color: #000000; /* プリフォーマットコード文字色 */
-  }
+:root.dark {
+  --chat-background-user: rgba(90, 220, 160, 0.12);
 }
 ```
 
-その他のテーマ変数については、ソースコードを参照してください：[https://github.com/CherryHQ/cherry-studio/tree/main/src/renderer/src/assets/styles](https://github.com/CherryHQ/cherry-studio/tree/main/src/renderer/src/assets/styles)
+{% hint style="info" %}
+Cherry Studio V2 は現在のテーマを `.light` / `.dark` クラスで表します。旧テーマで一般的だった `body[theme-mode="dark"]` の書き方を新しいスタイルの土台にしないでください。
+{% endhint %}
 
-### 関連のおすすめ
+## よく使うセマンティック変数
 
-Cherry Studio テーマライブラリ: [https://github.com/boilcy/cherrycss](https://github.com/boilcy/cherrycss)
+内部クラス名を直接指定するよりも、セマンティック変数の上書きを優先すると無効になりにくくなります。
 
-中国風のCherry Studioテーマスキンのいくつかを共有: [https://linux.do/t/topic/325119/129](https://linux.do/t/topic/325119/129)
+| 変数 | 役割 |
+| --- | --- |
+| `--color-primary` | メインのアクセントカラー |
+| `--color-background` | メイン背景色 |
+| `--color-background-subtle` | サブ背景色 |
+| `--color-foreground` | メイン文字色 |
+| `--color-foreground-secondary` | サブ文字色 |
+| `--color-border` | 一般的な枠線の色 |
+| `--color-card` | カード背景色 |
+| `--color-popover` | ポップアップ背景色 |
+| `--chat-background-user` | ユーザーメッセージの背景色 |
+| `--chat-background-assistant` | アシスタントメッセージの背景色 |
+| `--font-family` | グローバルフォントスタック |
+| `--code-font-family` | コードフォントスタック |
+
+たとえば、次のスタイルでは 2 つのテーマそれぞれに背景色と枠線を設定します。
+
+```css
+:root:not(.dark) {
+  --color-background: #f7f8f6;
+  --color-background-subtle: #f0f2ef;
+  --color-border: rgba(20, 35, 28, 0.12);
+}
+
+:root.dark {
+  --color-background: #171a18;
+  --color-background-subtle: #1e221f;
+  --color-border: rgba(235, 255, 244, 0.12);
+}
+```
+
+{% hint style="warning" %}
+テーマカラーとフォントには組み込み設定があります。同じ変数を CSS でも上書きすると、最終的な表示はセレクターの優先順位と読み込み順に左右され、設定画面に表示される値と一致しない場合があります。
+{% endhint %}
+
+## 特定のコンポーネントを変更する
+
+変数だけで目的を実現できない場合は、ブラウザーの開発者ツールで要素を調べてからセレクターを作成できます。
+
+```css
+/* 例：設定画面のカードの枠線を見やすくする */
+[class*="border-border"] {
+  border-color: color-mix(in srgb, var(--color-border) 75%, var(--color-foreground) 25%);
+}
+```
+
+この種のセレクターは、セマンティック変数よりもバージョンアップの影響を受けやすくなります。次の原則に従ってください。
+
+- 適用範囲をできるだけ限定し、すべての `div`、`button`、`input` を直接上書きしない。
+- `:nth-child()` など、階層や順序に依存するセレクターをなるべく使わない。
+- 自動生成されたクラス名が長期間変わらないと想定しない。
+- `!important` を広範囲に使用しない。
+- ルールのグループごとに、目的を説明する短いコメントを付ける。
+- 変更後はライトテーマとダークテーマの両方を確認する。
+
+上記のコンポーネントセレクターは記述方法を説明する例であり、安定した公開インターフェースではありません。
+
+## 現在の変数を確認する
+
+Cherry Studio は新しい V2 デザインシステムへ移行中のため、変数は 2 種類に分かれています。
+
+- [V2 テーマ変数](https://github.com/CherryHQ/cherry-studio/blob/main/packages/ui/src/styles/theme.css)。
+- [旧画面との互換性を保つ変数](https://github.com/CherryHQ/cherry-studio/blob/main/src/renderer/assets/styles/legacy-vars.css)。
+
+互換変数は現在も使われていますが、将来削除される可能性があります。新しいテーマでは V2 のセマンティック変数を優先し、メジャーバージョンのアップデートごとに表示を再確認してください。
+
+エディター上部の **cherrycss.com** リンクからコミュニティテーマサイトを開けます。コミュニティテーマを使用する前に、CSS 全文を読み、信頼できる提供元であることを確認してください。
+
+## セキュリティに関する推奨事項
+
+CSS 自体は JavaScript ではありませんが、`url()`、`@import`、外部フォントを通じてネットワークリソースへリクエストする場合があります。サードパーティ製テーマを使用するときは、次の点を確認してください。
+
+- 不明なドメインを参照していないか確認する。
+- CSS にトークン、Cookie、ユーザー名、ローカルパスを書き込まない。
+- 必要な画像やフォントは信頼できる場所へ保存する。
+- 元のテーマの提供元とバージョン番号を記録する。
+- テーマ作者が別途提供する、用途不明のコンソールスクリプトを実行しない。
+
+## デフォルトスタイルに戻す
+
+通常は次の手順で戻せます。
+
+1. **設定 > 一般設定 > カスタム CSS** を開きます。
+2. 必要な内容をコピーしてバックアップします。
+3. エディター内の CSS をすべて削除します。
+4. 画面が戻ったことを確認し、必要に応じてアプリを再起動します。
+
+誤ったスタイルで設定ボタンが隠れたり、画面を操作できなくなったりした場合は、[CSS 設定を消去する](clear-css.md)を参照してください。
+
+## よくある質問
+
+### CSS を入力しても変化しない
+
+右波括弧の不足などがなく、構文が完全であることを確認してください。その後、セレクターが現在のバージョンの要素に一致しているか、変数名が存在するかを確認します。
+
+### ライトテーマは正常だが、ダークテーマに問題がある
+
+2 つのテーマのルールを分けて `:root:not(.dark)` と `:root.dark` をそれぞれ使用し、文字色と背景色のコントラストを確認してください。
+
+### テーマカラーの変更が反映されない
+
+テーマカラーは組み込み設定により実行時変数へ書き込まれます。まず **表示と言語 > テーマカラー** を使用してください。CSS で上書きする必要がある場合は `--cs-theme-primary` とセレクターの優先順位を確認しますが、2 組の値を同時に管理することは推奨しません。
+
+### アップデート後にレイアウトが崩れた
+
+まずカスタム CSS を一時的にすべて消去し、問題が解消するか確認します。その後少しずつ戻し、古いクラス名、古い DOM 階層、互換変数に依存するルールを削除してください。
+
+### 補助ウィンドウの表示に問題がある
+
+カスタム CSS はクイックアシスタントやテキスト選択ツールなどのウィンドウにも適用される場合があります。広すぎるグローバルセレクターを避け、よく使うウィンドウを 1 つずつ確認してください。
+
+***
+
+### ヘルプとフィードバック
+
+設定または使用中に問題が発生した場合は、[フィードバックと提案](../../question-contact/suggestions.md)に記載された公式窓口からお問い合わせください。

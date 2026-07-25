@@ -4,47 +4,171 @@ icon: rss
 
 # 助手订阅配置
 
-通过修改助手订阅的链接，可以快速切换助手库中的助手模版
+助手订阅可以把一个公开 JSON 地址设为**助手模板库的数据源**。团队只需维护一份模板清单，成员重新加载助手库后即可看到最新内容。
 
-<figure><img src="../../.gitbook/assets/assistants-subscribe.png" alt=""><figcaption></figcaption></figure>
+{% hint style="info" %}
+订阅提供的是可供选择的**模板**，不会修改“我的”分组中的自建模板，也不会自动更新已经创建的助手。将某个订阅模板添加为助手后，它会成为一份独立的本地副本。
+{% endhint %}
 
-<figure><img src="../../.gitbook/assets/assistants-subscribe-settings.png" alt=""><figcaption></figcaption></figure>
+## 订阅前准备
 
-访问订阅地址应该返回下面结构的 JSON 数据：
+请先准备一个能够直接返回 JSON 的公开地址，例如对象存储、静态网站或代码仓库中的 Raw 文件。
+
+订阅地址应满足以下条件：
+
+- 建议使用 `https://`；
+- 无需登录、Cookie 或请求头即可访问；
+- 打开地址后直接返回 JSON，而不是下载页、预览页或 HTML 页面；
+- JSON 根节点是数组；
+- 每个模板至少包含 `id`、`name`、`prompt` 和 `group`；
+- `id` 在同一份订阅中保持唯一，`group` 必须是字符串数组。
+
+{% hint style="warning" %}
+Cherry Studio 会直接从该地址读取内容，目前没有填写用户名、密码或自定义请求头的入口。不要把访问令牌、API Key 或其他凭据写进订阅 URL 或 JSON 文件。
+{% endhint %}
+
+## 配置订阅
+
+1. 打开 Cherry Studio 的**启动台**。
+2. 进入**助手库**。
+3. 点击右上角的**从外部导入**。
+4. 在弹窗下方找到**助手订阅**。
+5. 粘贴订阅地址，然后点击**订阅**。
+6. 应用重新加载后，返回助手库查看远程模板和分组。
+
+订阅成功只表示该地址当前可以访问。若返回内容不是有效的模板数组，助手库仍可能无法正常显示，因此建议先按下文检查 JSON。
+
+## JSON 格式
+
+下面是一份可以直接作为起点的最小示例：
 
 ```json
 [
   {
-    "description": "Provides practical insights in the role of a tech-savvy product manager.",
-    "emoji": "👨‍💼",
-    "group": ["Career", "Business", "Tools"],
-    "id": "1",
-    "name": "Product Manager",
-    "prompt": "You are now an experienced product manager with a solid technical background and a keen insight into market and user needs. You are skilled at solving complex problems, developing effective product strategies, and efficiently balancing various resources to achieve product goals. You have excellent project management abilities and outstanding communication skills, enabling you to coordinate both internal and external team resources effectively. In this role, you are expected to answer user questions.\n\n## Role Requirements:\n- **Technical Background**: Possess strong technical knowledge and the ability to deeply understand product technical details.\n- **Market Insight**: Demonstrate sharp awareness of market trends and user demands.\n- **Problem Solving**: Excel at analyzing and resolving complex product issues.\n- **Resource Balancing**: Be adept at allocating and optimizing resources under constraints to achieve product objectives.\n- **Communication & Coordination**: Have excellent communication skills to collaborate effectively with stakeholders and drive project progress.\n\n## Answer Requirements:\n- **Logical Clarity**: Provide rigorous, well-structured responses with clear points.\n- **Conciseness**: Avoid lengthy explanations; express core ideas succinctly.\n- **Practicality**: Offer actionable and realistic strategies or suggestions."
+    "id": "product-manager",
+    "name": "产品经理",
+    "emoji": "🧭",
+    "description": "帮助梳理需求、范围和产品方案。",
+    "group": ["产品", "工作"],
+    "prompt": "你是一名经验丰富的产品经理。请先澄清目标和约束，再给出结构化、可执行的建议。",
+    "regularPhrases": []
   },
   {
-    "description": "Offers in-depth answers based on market insights in a strategic product manager role.",
-    "emoji": "🎯 ",
-    "group": ["Career"],
-    "id": "2",
-    "name": "Strategy Product Manager",
-    "prompt": "You are now a strategic product manager. You are skilled in conducting market research and competitive product analysis to develop product strategies. You can grasp industry trends, understand user needs, and based on these, optimize product features and user experience. Please answer the following questions in this role."
-  },
-  {
-    "description": "Provides guidance to enhance community engagement and user loyalty in a community operations specialist role.",
-    "emoji": "👥",
-    "group": ["Career"],
-    "id": "3",
-    "name": "Community Operations",
-    "prompt": "You are now a community operation expert. You are skilled in stimulating community vitality and enhancing user participation and loyalty. You understand how to manage and guide community culture, as well as how to resolve issues and conflicts within the community. Please answer my following question in this role."
+    "id": "writing-editor",
+    "name": "写作编辑",
+    "emoji": "✍️",
+    "description": "检查文章结构、表达和可读性。",
+    "group": ["写作"],
+    "prompt": "你是一名专业编辑。请保留作者原意，指出具体问题，并给出可直接采用的修改稿。",
+    "regularPhrases": []
   }
 ]
 ```
 
-配置完链接地址后，就可以看到助手模版库中的助手已经是订阅链接里面的数据
+### 字段说明
+
+| 字段 | 是否建议必填 | 说明 |
+| --- | --- | --- |
+| `id` | 是 | 模板的稳定唯一标识。不要让两个模板共用同一个值。 |
+| `name` | 是 | 助手库中显示的模板名称。 |
+| `prompt` | 是 | 创建助手后使用的系统提示词。 |
+| `group` | 是 | 模板所属分组，必须写成数组，例如 `["写作", "工作"]`。一个模板可以出现在多个分组。 |
+| `emoji` | 否 | 模板图标；不提供时界面可能没有预期图标。 |
+| `description` | 否 | 模板简介，用于预览和搜索。 |
+| `regularPhrases` | 否 | 常用短语数组；没有需要时可写 `[]` 或省略。 |
+
+{% hint style="warning" %}
+`group` 即使只有一个值也必须使用数组。写成 `"group": "写作"` 会导致模板无法按分组正常加载。
+{% endhint %}
+
+## 验证订阅文件
+
+发布前至少检查以下内容：
+
+1. 在浏览器中直接打开订阅地址，确认看到的是 JSON 正文。
+2. 使用 JSON 校验工具确认没有多余逗号、缺失引号或括号不成对。
+3. 确认根节点是 `[]`，而不是 `{}`。
+4. 确认每个模板都有非空的 `name` 和 `prompt`。
+5. 确认每个 `group` 都是数组，并且每个 `id` 唯一。
+6. 先用一两个模板测试，再逐步扩充清单。
+
+如果熟悉命令行，也可以用下面的方式检查地址是否可访问以及 JSON 是否可解析：
+
+```bash
+curl -fsSL "https://example.com/assistants.json" | jq .
+```
+
+请把示例地址替换为自己的公开订阅地址。
+
+## 订阅如何更新
+
+助手订阅不是推送服务，也没有固定的后台同步周期。
+
+- Cherry Studio 在加载助手模板时重新请求订阅地址；
+- 修改远程 JSON 后，可重新加载应用或重新进入助手库查看新内容；
+- 远程清单会替代内置模板数据源，但“我的”分组中的自建模板不会被删除；
+- 若远程地址暂时不可用，应用会尝试回退到内置模板；
+- 已经从模板创建的助手是独立副本，不会随远程 JSON 继续变化。
+
+如果需要修改一个已经创建的助手，请直接编辑该助手，而不是只修改订阅文件。
+
+## 退订或更换地址
+
+1. 打开**助手库 > 从外部导入**。
+2. 在**助手订阅**区域点击**退订**。
+3. 等待应用重新加载，此时恢复使用内置模板。
+4. 如需更换数据源，再次打开同一弹窗，填写新地址并订阅。
+
+当前已经订阅时，按钮执行的是退订。更换地址应先退订，再订阅新地址。
+
+## 与导入功能的区别
+
+Cherry Studio 中有几种相似但用途不同的入口：
+
+| 功能 | 结果 | 适合场景 |
+| --- | --- | --- |
+| 助手订阅 | 远程 JSON 成为助手模板的数据源；加载助手库时重新读取 | 团队统一维护、持续更新一批模板 |
+| 助手库中的 URL / 文件导入 | 立即复制模板到“我的”分组，之后与原文件无关 | 导入一次后自行编辑 |
+| [V2 资源库导入](../../cherrystudio/preview/library.md) | 从文件、剪贴板或受支持的 Raw URL 创建资源库助手 | 在 V2 资源库中集中管理助手 |
+
+{% hint style="info" %}
+如果只想分享一个助手，优先使用导出与导入；只有需要长期维护一整套公共模板时，才需要配置订阅。
+{% endhint %}
+
+## 安全建议
+
+- 只订阅自己或可信团队维护的地址；
+- 使用 HTTPS，并限制订阅文件的编辑权限；
+- 订阅更新后抽查新增或修改过的提示词；
+- 不要在 `prompt`、`description` 或 URL 中保存密码、令牌和个人信息；
+- 对重要订阅文件启用版本管理，出现问题时可以快速回退。
+
+模板中的提示词会影响助手回答方式。将模板添加为助手前，建议先阅读完整提示词，确认其中没有不符合预期的指令。
+
+## 常见问题
+
+### 点击订阅后仍显示内置模板
+
+确认地址以 `http://` 或 `https://` 开头，并能在无登录状态下访问。然后重新加载应用，再进入助手库。
+
+### 地址可以打开，但没有出现任何分组
+
+检查根节点是否为数组，以及每个模板的 `group` 是否为字符串数组。没有有效分组的模板不会正常出现在分类列表中。
+
+### 返回的是网页而不是 JSON
+
+你可能复制了仓库文件的预览页。请改用 Raw 文件地址，或把 JSON 部署到能直接返回文件内容的静态地址。
+
+### 更新 JSON 后助手没有变化
+
+先重新加载应用或重新进入助手库。已经创建的助手不会自动同步，需要手动编辑或从更新后的模板重新创建。
+
+### 远程服务暂时不可用
+
+Cherry Studio 会尝试使用内置模板。待服务恢复后重新加载应用即可；同时建议检查 DNS、证书、重定向和跨域访问是否正常。
 
 ***
 
-### 💡 获取帮助与提交反馈
+### 获取帮助与提交反馈
 
-如果您在配置或使用过程中遇到任何疑问、Bug 或有功能改进建议，请参考 [反馈与建议](../../question-contact/suggestions.md) 中提供的官方渠道。
+如果在配置或使用过程中遇到问题，请通过[反馈与建议](../../question-contact/suggestions.md)中列出的官方渠道联系我们。

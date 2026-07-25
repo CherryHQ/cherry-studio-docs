@@ -2,169 +2,200 @@
 icon: square-info
 ---
 
-# 嵌入模型参考信息
+# 嵌入模型
 
-{% hint style="info" %}
-为了防止出错，在本文档中部分模型的 max input 的值没有写成极限值，如：在官方给出的最大输入值为8k（未明确给出具体数值）时，本文档中给出的参考值为8191或8000等。（看不懂忽视，按照文档中的参考值填写即可）
+嵌入模型把文本转换成向量，让 Cherry Studio 能比较“问题”和“资料片段”在语义上是否相关。它只负责检索，不负责生成最终回答。
+
+因此，一个聊天模型表现很好，不代表它可以作为嵌入模型使用。知识库需要选择明确支持 **Embedding** 能力的模型。
+
+## 嵌入模型在知识库中的位置
+
+创建索引时：
+
+1. Cherry Studio 读取并切分资料。
+2. 每个片段发送给嵌入模型。
+3. 返回的向量与片段一起保存在本地向量库。
+
+检索时：
+
+1. 用户问题发送给同一个嵌入模型。
+2. Cherry Studio 在同一向量空间中查找相近片段。
+3. 相关片段再交给聊天模型生成回答。
+
+{% hint style="warning" %}
+建立索引和查询时必须使用兼容的嵌入模型与维度。不要在已有知识库中直接换成不兼容的模型，否则旧向量无法正确比较。
 {% endhint %}
 
-### 火山-豆包
+## 在 Cherry Studio 中添加嵌入模型
 
-[官方模型信息参考地址](https://console.volcengine.com/ark/region:ark+cn-beijing/model?feature=\&projectName=default\&vendor=Bytedance\&view=LIST_VIEW)
+1. 打开 **设置 → 模型服务**。
+2. 选择并配置一个支持嵌入接口的服务商。
+3. 获取模型列表，找到带有**嵌入**标签的模型。
+4. 将模型添加到当前服务商并保持启用。
+5. 创建知识库时，从嵌入模型列表中选择它。
 
-| 名称                      | max input |
-| ----------------------- | --------- |
-| Doubao-embedding        | 4095      |
-| Doubao-embedding-vision | 8191      |
-| Doubao-embedding-large  | 4095      |
+知识库只会列出同时满足以下条件的模型：
 
-### 阿里
+* 模型处于启用状态
+* 模型能力包含嵌入
 
-[官方模型信息参考地址](https://help.aliyun.com/zh/model-studio/user-guide/embedding?spm=a2c4g.11186623.0.i1)
+如果服务商返回的模型能力不准确，可以打开模型详情，手动检查或修正能力标签。嵌入与重排序是两种不同能力，不要把 Rerank 模型标记成 Embedding。
 
-| 名称                      | max input |
-| ----------------------- | --------- |
-| text-embedding-v3       | 8192      |
-| text-embedding-v2       | 2048      |
-| text-embedding-v1       | 2048      |
-| text-embedding-async-v2 | 2048      |
-| text-embedding-async-v1 | 2048      |
+{% hint style="info" %}
+DeepSeek、Kimi、GLM、GPT、Claude 等常用对话模型是否出现在知识库列表，取决于具体模型是否提供嵌入能力，而不是品牌名称。对话时选择的模型与知识库使用的嵌入模型可以不同。
+{% endhint %}
 
-### OpenAI&#x20;
+## 如何选择
 
-[官方模型信息参考地址](https://platform.openai.com/docs/guides/embeddings#embedding-models)
+### 1. 语言覆盖
 
-| 名称                     | max input |
-| ---------------------- | --------- |
-| text-embedding-3-small | 8191      |
-| text-embedding-3-large | 8191      |
-| text-embedding-ada-002 | 8191      |
+资料和问题可能包含哪些语言，就选择覆盖这些语言的模型。
 
-### 百度
+* 只有中文资料：优先测试中文或中英优化模型
+* 中英混合资料：选择明确支持中文和英文的多语种模型
+* 包含日文、俄文等内容：选择官方说明覆盖对应语言的多语种模型
+* 代码库：选择对代码检索有明确支持的模型
 
-[官方模型信息参考地址](https://cloud.baidu.com/doc/WENXINWORKSHOP/s/om6070n97#%E8%AF%B7%E6%B1%82%E5%8F%82%E6%95%B0)
+不要只看模型名称中的 `multilingual`。应使用自己的真实资料和问题做召回测试。
 
-| 名称           | max input |
-| ------------ | --------- |
-| Embedding-V1 | 384       |
-| tao-8k       | 8192      |
+### 2. 输入长度
 
-### 智谱
+模型输入上限必须能容纳一个分块。若分块超过上限，请求可能失败或被截断。
 
-[官方模型信息参考地址](https://bigmodel.cn/console/modelcenter/square)
+Cherry Studio 会先切分文档，因此通常不需要追求最大的上下文长度。相比单纯提高模型上限，更重要的是设置合理的分块大小和重叠。
 
-| 名称          | max input |
-| ----------- | --------- |
-| embedding-2 | 1024      |
-| embedding-3 | 2048      |
+### 3. 向量维度
 
-### 混元
+维度是每条向量包含的数值数量。一般来说：
 
-[官方模型信息参考地址](https://cloud.tencent.com/document/product/1729/102832)
+* 更高维度可能保留更多信息
+* 更高维度会占用更多磁盘和内存
+* 维度必须是模型实际支持的值
+* 同一知识库中的文档与问题必须使用相同维度
 
-| 名称                | max input |
-| ----------------- | --------- |
-| hunyuan-embedding | 1024      |
+维度不是越高越好。资料规模较小时，模型质量、语言覆盖和分块方式通常比一味增加维度更重要。
 
-### 百川
+### 4. 隐私与部署位置
 
-[官方模型信息参考地址](https://platform.baichuan-ai.com/docs/text-Embedding)
+使用在线嵌入模型时，资料片段和查询会发送给服务商。敏感资料可以考虑本地模型，但仍要确认文档处理器、重排序模型和聊天模型是否也在本地。
 
-| 名称                      | max input |
-| ----------------------- | --------- |
-| Baichuan-Text-Embedding | 512       |
+详细数据流请查看[知识库数据](data.md)。
 
-### together
+### 5. 成本、速度和稳定性
 
-[官方模型信息参考地址](https://docs.together.ai/docs/serverless-models#embedding-models)
+建立索引会处理全部片段，重新索引也会再次调用模型。选择在线模型时，应同时查看：
 
-| 名称                        | max input |
-| ------------------------- | --------- |
-| M2-BERT-80M-2K-Retrieval  | 2048      |
-| M2-BERT-80M-8K-Retrieval  | 8192      |
-| M2-BERT-80M-32K-Retrieval | 32768     |
-| UAE-Large-v1              | 512       |
-| BGE-Large-EN-v1.5         | 512       |
-| BGE-Base-EN-v1.5          | 512       |
+* 输入计费方式
+* 并发和速率限制
+* 服务区域与网络延迟
+* API 的稳定性
+* 是否支持批量嵌入
 
-### Jina&#x20;
+不要只按单次价格判断。模型频繁限流或请求失败，会显著增加大批量入库时间。
 
-[官方模型信息参考地址](https://jina.ai/models/jina-embedding-b-en-v1)
+## 向量维度怎么填
 
-| 名称                                 | max input |
-| ---------------------------------- | --------- |
-| jina-embedding-b-en-v1             | 512       |
-| jina-embeddings-v2-base-en         | 8191      |
-| jina-embeddings-v2-base-zh         | 8191      |
-| jina-embeddings-v2-base-de         | 8191      |
-| jina-embeddings-v2-base-code       | 8191      |
-| jina-embeddings-v2-base-es         | 8191      |
-| jina-colbert-v1-en                 | 8191      |
-| jina-reranker-v1-base-en           | 8191      |
-| jina-reranker-v1-turbo-en          | 8191      |
-| jina-reranker-v1-tiny-en           | 8191      |
-| jina-clip-v1                       | 8191      |
-| jina-reranker-v2-base-multilingual | 8191      |
-| reader-lm-1.5b                     | 256000    |
-| reader-lm-0.5b                     | 256000    |
-| jina-colbert-v2                    | 8191      |
-| jina-embeddings-v3                 | 8191      |
+Cherry Studio 创建新知识库时使用默认维度。进入知识库顶部的 **RAG 设置** 后，可以查看嵌入模型与维度。
 
-### 硅基流动
+维度旁的刷新按钮会：
 
-[官方模型信息参考地址](https://siliconflow.cn/zh-cn/models)
+1. 使用当前服务商配置调用一次嵌入接口。
+2. 发送短测试文本。
+3. 读取返回向量的实际长度。
+4. 把结果填入维度字段。
 
-| 名称                                    | max input |
-| ------------------------------------- | --------- |
-| BAAI/bge-m3                           | 8191      |
-| netease-youdao/bce-embedding-base\_v1 | 512       |
-| BAAI/bge-large-zh-v1.5                | 512       |
-| BAAI/bge-large-en-v1.5                | 512       |
-| Pro/BAAI/bge-m3                       | 8191      |
+因此，刷新维度会产生一次真实的模型请求；API 地址、密钥或模型名称错误时会失败。
 
-### Gemini
+{% hint style="warning" %}
+更换嵌入模型或维度后，Cherry Studio 会进入重建流程，而不是让新配置直接复用旧向量。批量导入资料前应先确认模型和维度。
+{% endhint %}
 
-[官方模型信息参考地址](https://ai.google.dev/gemini-api/docs/models/gemini?hl=zh-cn#text-embedding)
+如果服务商允许自定义输出维度，应先查阅该模型的官方文档。不要凭其他模型的默认值猜测。
 
-| 名称                 | max input |
-| ------------------ | --------- |
-| text-embedding-004 | 2048      |
+## 常见选择示例
 
-### nomic
+下表只用于帮助理解类型，不是完整模型清单。服务商会更新、替换或下线模型，应以 Cherry Studio 获取到的实时列表和服务商官方文档为准。
 
-[官方模型信息参考地址](https://docs.nomic.ai/atlas/embeddings-and-retrieval/text-embedding)
+| 场景 | 可测试的模型示例 | 说明 |
+| --- | --- | --- |
+| 通用云端嵌入 | `text-embedding-3-small`、`text-embedding-3-large` | OpenAI 官方支持可调输出维度 |
+| 中文与多语种资料 | `text-embedding-v4`、`qwen3.7-text-embedding` | 阿里云模型能力与可选维度因区域而异 |
+| 本地运行 | `embeddinggemma`、`qwen3-embedding`、`all-minilm` | Ollama 官方列出的嵌入模型示例 |
 
-| 名称                    | max input |
-| --------------------- | --------- |
-| nomic-embed-text-v1   | 8192      |
-| nomic-embed-text-v1.5 | 8192      |
-| gte-multilingual-base | 8192      |
+官方资料：
 
-### console
+* [OpenAI Embeddings](https://developers.openai.com/api/docs/guides/embeddings)
+* [阿里云 Model Studio 文本嵌入](https://help.aliyun.com/zh/model-studio/text-embedding-synchronous-api)
+* [Ollama Embeddings](https://docs.ollama.com/capabilities/embeddings)
 
-[官方模型信息参考地址](https://console.upstage.ai/docs/capabilities/embeddings)
+同名模型在不同服务商上的接口、版本、维度和价格可能不同。配置时应确认当前 Provider 的模型 ID，而不是只看显示名称。
 
-| 名称                | max input |
-| ----------------- | --------- |
-| embedding-query   | 4000      |
-| embedding-passage | 4000      |
+## 用召回测试选模型
 
-### cohere
+模型排行榜不能代替你的业务数据。更可靠的选择方法是准备一组固定测试。
 
-[官方模型信息参考地址](https://docs.cohere.com/docs/models#embed)
+### 准备样本
 
-| 名称                            | max input |
-| ----------------------------- | --------- |
-| embed-english-v3.0            | 512       |
-| embed-english-light-v3.0      | 512       |
-| embed-multilingual-v3.0       | 512       |
-| embed-multilingual-light-v3.0 | 512       |
-| embed-english-v2.0            | 512       |
-| embed-english-light-v2.0      | 512       |
-| embed-multilingual-v2.0       | 256       |
+选择 10–30 个真实问题，覆盖：
+
+* 文档中可以直接找到答案的问题
+* 同义改写和口语表达
+* 产品名、缩写、编号等关键词
+* 中英文或多语言混合问题
+* 文档中没有答案的问题
+
+### 对比方法
+
+1. 使用少量相同资料创建测试知识库。
+2. 保持分块和检索设置一致。
+3. 分别使用候选嵌入模型建立索引。
+4. 用同一组问题运行召回测试。
+5. 比较正确片段是否进入前几条，以及无关结果数量。
+
+同时记录建立索引耗时、查询速度、失败率和费用。不要只比较最高分，因为不同模型的分数尺度可能不同。
+
+## 更换已有知识库的模型
+
+在知识库的 **RAG 设置** 中更换模型或维度时，Cherry Studio 会创建新的知识库索引流程。
+
+操作前建议：
+
+1. 备份知识库和外部原文件。
+2. 确认新模型可以正常调用。
+3. 使用维度刷新按钮获取实际维度。
+4. 保留原知识库，直到新知识库完成索引与召回测试。
+5. 使用同一组问题对比结果后，再决定是否删除旧知识库。
+
+大知识库重建会重新调用文档处理和嵌入服务，可能产生费用并需要较长时间。
+
+## 常见问题
+
+### 模型没有出现在知识库列表
+
+确认模型已启用，并在模型详情中检查是否带有嵌入能力。普通聊天模型和重排序模型不会自动出现在嵌入模型列表。
+
+### 获取维度失败
+
+依次检查服务商是否启用、API 地址、密钥、模型 ID、网络和账户余额。维度刷新会实际调用一次嵌入接口。
+
+### 建立索引时报维度错误
+
+不要使用其他模型的维度值。重新获取当前模型的实际维度，并按重建流程创建兼容索引。
+
+### 中英文混合检索效果差
+
+确认模型官方支持相关语言，然后用召回测试检查问题。还可以调整分块、搜索模式和重排序配置，不要只更换聊天模型。
+
+### 本地模型速度很慢
+
+检查模型大小、可用内存、CPU/GPU 使用情况和 Ollama 或 LM Studio 的并发配置。先用少量资料验证，再批量导入。
+
+### 更换 API 密钥需要重建索引吗
+
+如果仍然调用同一个模型和相同维度，通常不需要。若服务商路由到了不同模型版本，应重新进行召回测试。
 
 ***
 
-### 💡 获取帮助与提交反馈
+### 获取帮助与提交反馈
 
-如果您在配置或使用过程中遇到任何疑问、Bug 或有功能改进建议，请参考 [反馈与建议](../question-contact/suggestions.md) 中提供的官方渠道。
+如果模型识别、维度或索引过程中遇到问题，请通过[反馈与建议](../question-contact/suggestions.md)提供的信息联系社区。

@@ -2,171 +2,200 @@
 icon: square-info
 ---
 
+# Embedding モデル
+
+Embedding モデルはテキストをベクトルへ変換し、「質問」と「資料の断片」が意味的に関連しているかを Cherry Studio が比較できるようにします。担当するのは検索だけで、最終回答の生成ではありません。
+
+そのため、チャットモデルの性能が高くても、Embedding モデルとして使えるとは限りません。ナレッジベースでは、**Embedding** 能力に明示的に対応するモデルを選ぶ必要があります。
+
+## ナレッジベースにおける Embedding モデルの役割
+
+インデックスの作成時：
+
+1. Cherry Studio が資料を読み取り、分割します。
+2. 各チャンクを Embedding モデルへ送信します。
+3. 返されたベクトルをチャンクとともにローカルのベクトルデータベースへ保存します。
+
+検索時：
+
+1. ユーザーの質問を同じ Embedding モデルへ送信します。
+2. Cherry Studio が同じベクトル空間で近いチャンクを検索します。
+3. 関連するチャンクをチャットモデルへ渡し、回答を生成します。
+
 {% hint style="warning" %}
-このドキュメントはAIによって中国語から翻訳されており、まだレビューされていません。
+インデックス作成時と検索時には、互換性のある Embedding モデルと次元数を使用する必要があります。既存のナレッジベースで互換性のないモデルへ直接変更すると、古いベクトルを正しく比較できません。
 {% endhint %}
 
----
-icon: cherries
----
+## Cherry Studio に Embedding モデルを追加する
 
-# 埋め込みモデル参考情報
+1. **設定 → モデルサービス** を開きます。
+2. Embedding API に対応するプロバイダーを選択して設定します。
+3. モデル一覧を取得し、**Embedding** タグのあるモデルを探します。
+4. そのモデルを現在のプロバイダーへ追加し、有効な状態にします。
+5. ナレッジベースの作成時に、Embedding モデル一覧から選択します。
+
+ナレッジベースに表示されるのは、次の両方を満たすモデルだけです。
+
+* モデルが有効になっている
+* モデルの能力に Embedding が含まれている
+
+プロバイダーが返すモデル能力が正確でない場合は、モデル詳細を開いて能力タグを手動で確認または修正できます。Embedding と Rerank は異なる能力です。Rerank モデルを Embedding としてマークしないでください。
 
 {% hint style="info" %}
-エラーを防ぐため、本文書では一部のモデルについてmax input値を厳密な上限値ではなく参考値として記載しています。例：公式が「8k」と公表している場合（具体的数値未公表時）、本文書では8191や8000などの参考値を設定しています。（理解不能な場合は無視し、ドキュメント記載の参考値を使用してください）
+DeepSeek、Kimi、GLM、GPT、Claude などの一般的なチャットモデルがナレッジベースの一覧に表示されるかどうかは、ブランド名ではなく、具体的なモデルが Embedding 能力を提供しているかによって決まります。チャットで選択するモデルと、ナレッジベースで使う Embedding モデルは別にできます。
 {% endhint %}
 
-### 火山-豆包
+## 選び方
 
-[公式モデル情報](https://console.volcengine.com/ark/region:ark+cn-beijing/model?feature=\&projectName=default\&vendor=Bytedance\&view=LIST_VIEW)
+### 1. 対応言語
 
-| モデル名                  | max input |
-| ----------------------- | --------- |
-| Doubao-embedding        | 4095      |
-| Doubao-embedding-vision | 8191      |
-| Doubao-embedding-large  | 4095      |
+資料と質問に含まれる可能性がある言語をカバーするモデルを選びます。
 
-### 阿里
+* 中国語だけの資料：中国語、または中国語と英語向けに最適化されたモデルを優先してテストする
+* 中国語と英語が混在する資料：中国語と英語への対応が明記された多言語モデルを選ぶ
+* 日本語、ロシア語などを含む資料：公式説明で対象言語への対応が確認できる多言語モデルを選ぶ
+* コードベース：コード検索への明確な対応があるモデルを選ぶ
 
-[公式モデル情報](https://help.aliyun.com/zh/model-studio/user-guide/embedding?spm=a2c4g.11186623.0.i1)
+モデル名に `multilingual` と付いているだけで判断しないでください。実際の資料と質問を使って検索テストを行う必要があります。
 
-| モデル名                      | max input |
-| ------------------------- | --------- |
-| text-embedding-v3         | 8192      |
-| text-embedding-v2         | 2048      |
-| text-embedding-v1         | 2048      |
-| text-embedding-async-v2   | 2048      |
-| text-embedding-async-v1   | 2048      |
+### 2. 入力長
 
-### OpenAI&#x20;
+モデルの入力上限は、1 つのチャンクを収容できる必要があります。チャンクが上限を超えると、リクエストが失敗したり切り捨てられたりする可能性があります。
 
-[公式モデル情報](https://platform.openai.com/docs/guides/embeddings#embedding-models)
+Cherry Studio は先にドキュメントを分割するため、通常は最大のコンテキスト長を求める必要はありません。モデルの上限を単純に増やすより、適切なチャンクサイズとオーバーラップを設定することが重要です。
 
-| モデル名                   | max input |
-| ---------------------- | --------- |
-| text-embedding-3-small | 8191      |
-| text-embedding-3-large | 8191      |
-| text-embedding-ada-002 | 8191      |
+### 3. ベクトル次元
 
-### 百度
+次元数は、各ベクトルに含まれる数値の個数です。一般的には：
 
-[公式モデル情報](https://cloud.baidu.com/doc/WENXINWORKSHOP/s/om6070n97#%E8%AF%B7%E6%B1%82%E5%8F%82%E6%95%B0)
+* 次元数が高いほど、より多くの情報を保持できる可能性がある
+* 次元数が高いほど、ディスクとメモリの使用量が増える
+* 次元数には、モデルが実際に対応している値を指定する必要がある
+* 同じナレッジベース内のドキュメントと質問には、同じ次元数を使用する必要がある
 
-| モデル名         | max input |
-| ------------ | --------- |
-| Embedding-V1 | 384       |
-| tao-8k       | 8192      |
+次元数は高ければよいというものではありません。資料の規模が小さい場合は、次元数を増やすことよりも、モデルの品質、対応言語、分割方法のほうが重要になることが一般的です。
 
-### 智谱
+### 4. プライバシーと配置場所
 
-[公式モデル情報](https://bigmodel.cn/console/modelcenter/square)
+オンラインの Embedding モデルを使用すると、資料のチャンクとクエリがプロバイダーへ送信されます。機密資料にはローカルモデルを検討できますが、ドキュメントプロセッサー、Rerank モデル、チャットモデルもローカルで動作しているか確認してください。
 
-| モデル名        | max input |
-| ----------- | --------- |
-| embedding-2 | 1024      |
-| embedding-3 | 2048      |
+詳細なデータフローは[ナレッジベースのデータ](data.md)を参照してください。
 
-### 混元
+### 5. コスト、速度、安定性
 
-[公式モデル情報](https://cloud.tencent.com/document/product/1729/102832)
+インデックス作成ではすべてのチャンクが処理され、再インデックス時にもモデルが再度呼び出されます。オンラインモデルを選ぶときは、次の項目を併せて確認してください。
 
-| モデル名              | max input |
-| ----------------- | --------- |
-| hunyuan-embedding | 1024      |
+* 入力の課金方式
+* 同時実行数とレート制限
+* サービス提供地域とネットワーク遅延
+* API の安定性
+* バッチ Embedding に対応しているか
 
-### 百川
+1 回あたりの価格だけで判断しないでください。頻繁なレート制限やリクエスト失敗は、大量の資料を登録する時間を大幅に増やします。
 
-[公式モデル情報](https://platform.baichuan-ai.com/docs/text-Embedding)
+## ベクトル次元の入力方法
 
-| モデル名                    | max input |
-| ----------------------- | --------- |
-| Baichuan-Text-Embedding | 512       |
+Cherry Studio は、新しいナレッジベースの作成時にデフォルトの次元数を使用します。ナレッジベース上部の **RAG 設定** を開くと、Embedding モデルと次元数を確認できます。
 
-### together
+次元数の横にある更新ボタンは、次の処理を行います。
 
-[公式モデル情報](https://docs.together.ai/docs/serverless-models#embedding-models)
+1. 現在のプロバイダー設定で Embedding API を 1 回呼び出します。
+2. 短いテストテキストを送信します。
+3. 返されたベクトルの実際の長さを読み取ります。
+4. 結果を次元数フィールドへ入力します。
 
-| モデル名                        | max input |
-| ------------------------- | --------- |
-| M2-BERT-80M-2K-Retrieval  | 2048      |
-| M2-BERT-80M-8K-Retrieval  | 8192      |
-| M2-BERT-80M-32K-Retrieval | 32768     |
-| UAE-Large-v1              | 512       |
-| BGE-Large-EN-v1.5         | 512       |
-| BGE-Base-EN-v1.5          | 512       |
+このため、次元数の更新では実際のモデルリクエストが 1 回発生します。API アドレス、キー、モデル名が間違っている場合は失敗します。
 
-### Jina&#x20;
+{% hint style="warning" %}
+Embedding モデルまたは次元数を変更すると、Cherry Studio は古いベクトルを新しい設定でそのまま再利用せず、再構築フローを開始します。資料を一括インポートする前に、モデルと次元数を確認してください。
+{% endhint %}
 
-[公式モデル情報](https://jina.ai/models/jina-embedding-b-en-v1)
+プロバイダーが出力次元のカスタマイズを許可している場合は、先にそのモデルの公式ドキュメントを確認してください。他のモデルのデフォルト値から推測しないでください。
 
-| モデル名                                 | max input |
-| ---------------------------------- | --------- |
-| jina-embedding-b-en-v1             | 512       |
-| jina-embeddings-v2-base-en         | 8191      |
-| jina-embeddings-v2-base-zh         | 8191      |
-| jina-embeddings-v2-base-de         | 8191      |
-| jina-embeddings-v2-base-code       | 8191      |
-| jina-embeddings-v2-base-es         | 8191      |
-| jina-colbert-v1-en                 | 8191      |
-| jina-reranker-v1-base-en           | 8191      |
-| jina-reranker-v1-turbo-en          | 8191      |
-| jina-reranker-v1-tiny-en           | 8191      |
-| jina-clip-v1                       | 8191      |
-| jina-reranker-v2-base-multilingual | 8191      |
-| reader-lm-1.5b                     | 256000    |
-| reader-lm-0.5b                     | 256000    |
-| jina-colbert-v2                    | 8191      |
-| jina-embeddings-v3                 | 8191      |
+## 一般的な選択例
 
-### 硅基流动
+次の表はタイプの理解を助けるための例であり、完全なモデル一覧ではありません。プロバイダーはモデルを更新、置換、終了することがあります。Cherry Studio が取得した最新一覧とプロバイダーの公式ドキュメントを基準にしてください。
 
-[公式モデル情報](https://siliconflow.cn/zh-cn/models)
+| 用途 | テスト候補のモデル例 | 説明 |
+| --- | --- | --- |
+| 一般的なクラウド Embedding | `text-embedding-3-small`、`text-embedding-3-large` | OpenAI は出力次元の調整を公式にサポート |
+| 中国語と多言語の資料 | `text-embedding-v4`、`qwen3.7-text-embedding` | Alibaba Cloud のモデル能力と選択可能な次元数は地域により異なる |
+| ローカル実行 | `embeddinggemma`、`qwen3-embedding`、`all-minilm` | Ollama 公式が紹介する Embedding モデルの例 |
 
-| モデル名                                    | max input |
-| ------------------------------------- | --------- |
-| BAAI/bge-m3                           | 8191      |
-| netease-youdao/bce-embedding-base\_v1 | 512       |
-| BAAI/bge-large-zh-v1.5                | 512       |
-| BAAI/bge-large-en-v1.5                | 512       |
-| Pro/BAAI/bge-m3                       | 8191      |
+公式資料：
 
-### Gemini
+* [OpenAI Embeddings](https://developers.openai.com/api/docs/guides/embeddings)
+* [Alibaba Cloud Model Studio の Text Embedding](https://help.aliyun.com/zh/model-studio/text-embedding-synchronous-api)
+* [Ollama Embeddings](https://docs.ollama.com/capabilities/embeddings)
 
-[公式モデル情報](https://ai.google.dev/gemini-api/docs/models/gemini?hl=zh-cn#text-embedding)
+同名モデルでも、プロバイダーによって API、バージョン、次元数、価格が異なる場合があります。設定時は表示名だけでなく、現在の Provider のモデル ID を確認してください。
 
-| モデル名                 | max input |
-| ------------------ | --------- |
-| text-embedding-004 | 2048      |
+## 検索テストでモデルを選ぶ
 
-### nomic
+モデルのランキングは、実際の業務データの代わりにはなりません。より確実な方法は、固定されたテストセットを用意することです。
 
-[公式モデル情報](https://docs.nomic.ai/atlas/embeddings-and-retrieval/text-embedding)
+### サンプルを準備する
 
-| モデル名                    | max input |
-| --------------------- | --------- |
-| nomic-embed-text-v1   | 8192      |
-| nomic-embed-text-v1.5 | 8192      |
-| gte-multilingual-base | 8192      |
+10～30 件の実際の質問を選び、次の内容を含めます。
 
-### console
+* ドキュメント内で回答を直接見つけられる質問
+* 同義語による言い換えや口語表現
+* 製品名、略語、番号などのキーワード
+* 中国語と英語、または複数言語が混在する質問
+* ドキュメント内に回答がない質問
 
-[公式モデル情報](https://console.upstage.ai/docs/capabilities/embeddings)
+### 比較方法
 
-| モデル名              | max input |
-| ----------------- | --------- |
-| embedding-query   | 4000      |
-| embedding-passage | 4000      |
+1. 同じ少量の資料でテスト用ナレッジベースを作成します。
+2. 分割と検索設定を同じに保ちます。
+3. 候補の Embedding モデルごとにインデックスを作成します。
+4. 同じ質問セットで検索テストを実行します。
+5. 正しいチャンクが上位に入るか、無関係な結果がいくつあるかを比較します。
 
-### cohere
+インデックス作成時間、検索速度、失敗率、コストも記録してください。モデルによってスコアの尺度が異なる場合があるため、最高スコアだけを比較しないでください。
 
-[公式モデル情報](https://docs.cohere.com/docs/models#embed)
+## 既存ナレッジベースのモデルを変更する
 
-| モデル名                            | max input |
-| ----------------------------- | --------- |
-| embed-english-v3.0            | 512       |
-| embed-english-light-v3.0      | 512       |
-| embed-multilingual-v3.0       | 512       |
-| embed-multilingual-light-v3.0 | 512       |
-| embed-english-v2.0            | 512       |
-| embed-english-light-v2.0      | 512       |
-| embed-multilingual-v2.0       | 256       |
+ナレッジベースの **RAG 設定** でモデルまたは次元数を変更すると、Cherry Studio は新しいナレッジベースのインデックス作成フローを開始します。
+
+操作前の推奨事項：
+
+1. ナレッジベースと外部の原本ファイルをバックアップします。
+2. 新しいモデルを正常に呼び出せることを確認します。
+3. 次元数の更新ボタンで実際の次元数を取得します。
+4. 新しいナレッジベースのインデックス作成と検索テストが完了するまで、元のナレッジベースを残します。
+5. 同じ質問セットで結果を比較してから、古いナレッジベースを削除するか決定します。
+
+大規模なナレッジベースの再構築では、ドキュメント処理サービスと Embedding サービスが再度呼び出されるため、費用が発生し、長い時間を要する場合があります。
+
+## よくある質問
+
+### モデルがナレッジベースの一覧に表示されない
+
+モデルが有効であることを確認し、モデル詳細で Embedding 能力が付いているかを確認してください。通常のチャットモデルと Rerank モデルは、Embedding モデル一覧に自動表示されません。
+
+### 次元数の取得に失敗する
+
+プロバイダーが有効か、API アドレス、キー、モデル ID、ネットワーク、アカウント残高を順に確認してください。次元数の更新では、Embedding API が実際に 1 回呼び出されます。
+
+### インデックス作成時に次元エラーが発生する
+
+他のモデルの次元数を使用しないでください。現在のモデルの実際の次元数を再取得し、再構築フローで互換性のあるインデックスを作成してください。
+
+### 中国語と英語が混在する検索の精度が低い
+
+モデルが対象言語へ公式に対応していることを確認し、検索テストで問題を確認してください。分割、検索モード、Rerank 設定も調整できます。チャットモデルだけを変更しないでください。
+
+### ローカルモデルが非常に遅い
+
+モデルサイズ、利用可能なメモリ、CPU/GPU 使用率、Ollama または LM Studio の同時実行設定を確認してください。まず少量の資料で検証してから、一括インポートします。
+
+### API キーの変更後にインデックスの再構築は必要か
+
+同じモデルと同じ次元数を引き続き呼び出す場合、通常は必要ありません。プロバイダーが別のモデルバージョンへルーティングする場合は、検索テストを再度実行してください。
+
+***
+
+### ヘルプとフィードバック
+
+モデルの認識、次元数、インデックス作成中に問題が発生した場合は、[フィードバックと提案](../question-contact/suggestions.md)の情報を使ってコミュニティへお問い合わせください。

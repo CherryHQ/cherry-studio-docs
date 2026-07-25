@@ -1,61 +1,280 @@
-# バイトダンス（豆包）
+# Volcengine（Ark / Doubao）
 
+Volcengine Ark は Volcengine の大規模言語モデルサービスプラットフォームで、Doubao と複数のサードパーティモデルを提供しています。Cherry Studio V2 に組み込まれているプロバイダー ID は `doubao` で、画面には **Doubao**、**豆包**、**Volcengine**のいずれかとして表示される場合があります。
 
-{% hint style="warning" %}
-このドキュメントはAIによって中国語から翻訳されており、まだレビューされていません。
-{% endhint %}
+V2 のデフォルト API Host：
 
-
-
-
-* [火山引擎](https://console.volcengine.com/)にログイン
-* 直接 [ここからアクセス](https://console.volcengine.com/ark/region:ark+cn-beijing/openManagement?LLM=%7B%7D)
-
-<figure><img src="../../.gitbook/assets/image (1) (1) (2).png" alt=""><figcaption></figcaption></figure>
-
-### APIキーの取得
-
-* サイドバー下部の [API Key管理](https://console.volcengine.com/ark/region:ark+cn-beijing/apiKey)をクリック
-* APIキーを作成
-
-<figure><img src="../../.gitbook/assets/image (6) (2).png" alt=""><figcaption></figcaption></figure>
-
-* 作成後、生成されたAPIキーの「👁️」アイコンをクリックして表示・コピー
-
-<figure><img src="../../.gitbook/assets/image (7) (2).png" alt=""><figcaption></figcaption></figure>
-
-* コピーしたAPIキーをCherryStudioに入力後、プロバイダーのトグルを有効化
-
-<figure><img src="../../.gitbook/assets/image (8) (2).png" alt=""><figcaption></figcaption></figure>
-
-### モデルの有効化と追加
-
-* 方舟コンソールのサイドバー最下部の [开通管理](https://console.volcengine.com/ark/region:ark+cn-beijing/openManagement?LLM=%7B%7D\&OpenTokenDrawer=false) で使用するモデル（豆包シリーズやDeepSeekなど）を有効化
-
-<figure><img src="../../.gitbook/assets/image (1) (1) (2) (1).png" alt=""><figcaption></figcaption></figure>
-
-* [モデルリストドキュメント](https://www.volcengine.com/docs/82379/1330310#%E6%96%87%E6%9C%AC%E7%94%9F%E6%88%90) から対象モデルのモデルIDを確認
-
-<figure><img src="../../.gitbook/assets/火山引擎_模型ID.png" alt="火山エンジンンモデルID一覧"><figcaption></figcaption></figure>
-
-* Cherry Studioの [モデルサービス設定](../../cherrystudio/preview/settings/providers.md) で火山エンジンを選択
-* 「追加」をクリックし、取得したモデルIDを入力
-
-<figure><img src="../../.gitbook/assets/volc_ark_01.png" alt=""><figcaption></figcaption></figure>
-
-* 同様の手順でモデルを追加
-
-### APIエンドポイント
-
-APIエンドポイントは2種類の形式が利用可能:
-
-* クライアントデフォルト: `https://ark.cn-beijing.volces.com/api/v3/`
-* 代替形式: `https://ark.cn-beijing.volces.com/api/v3/chat/completions#`
+```text
+https://ark.cn-beijing.volces.com/api/v3/
+```
 
 {% hint style="info" %}
-両形式に機能差はありません。デフォルト設定のままで変更不要です。
-
-末尾の`/`と`#`の違いについては、プロバイダー設定の[APIエンドポイントセクション](../../cherrystudio/preview/settings/providers.md#api-di-zhi)を参照
+現在、V2 の組み込みプロバイダーはデフォルトで OpenAI 互換の Chat Completions を使用します。Volcengine Ark の公式サイトでは Responses API、Files API、クラウド組み込みツールも提供されていますが、公式サイトで対応しているからといって、それらの機能が Cherry Studio に自動的に統合されているわけではありません。
 {% endhint %}
 
-<figure><img src="../../.gitbook/assets/image (3) (2).png" alt=""><figcaption><p>公式ドキュメントのcURL例</p></figcaption></figure>
+## 利用前の準備
+
+1. Volcengine に登録してログインします。
+2. Volcengine Ark コンソールを開きます。
+3. プロジェクトとリージョンを確認します。
+4. 使用するモデルまたは課金方式を有効にします。
+5. API Key を作成します。
+6. 最新のモデル一覧から Model ID をコピーします。
+7. 残高、クォータ、レート制限を確認します。
+
+Volcengine Ark では、モデル、バージョン、料金、提供状況が変更されることがあります。本書では料金やボーナスクォータを固定情報として掲載しません。[モデル一覧](https://www.volcengine.com/docs/82379/1554711)とコンソールで最新情報を確認してください。
+
+## API Key の取得
+
+1. [Volcengine Ark コンソール](https://console.volcengine.com/ark/)を開きます。
+2. 現在のプロジェクトと中国北部 2（北京）リージョンを確認します。
+3. [API Key 管理](https://console.volcengine.com/ark/region:ark+cn-beijing/apikey)を開きます。
+4. **API Key を作成**をクリックします。
+5. 識別しやすい名前を入力します。
+6. Key をコピーして安全に保存します。
+
+{% hint style="danger" %}
+API Key はアカウントの認証情報に相当します。チャット、ドキュメント、コードリポジトリ、問題報告用のスクリーンショットに記載しないでください。漏えいした場合は、直ちに Ark コンソールで削除またはローテーションしてください。
+{% endhint %}
+
+## Model ID の取得
+
+現在、Volcengine Ark では標準モデルの Model ID を使用できます。また、一部のシナリオではカスタム推論エンドポイント ID も使用できます。
+
+| 識別子 | 一般的な形式 | 用途 |
+| --- | --- | --- |
+| Model ID | `doubao-seed-...` | プラットフォームのプリセットモデル、従量課金で呼び出すモデル |
+| Endpoint ID | `ep-...` | カスタムモデル、専用リソース、作成済みの推論エンドポイント |
+
+現在の Model ID を取得する手順：
+
+1. [モデル一覧](https://www.volcengine.com/docs/82379/1554711)を開きます。
+2. 対象のモデルとバージョンを選択します。
+3. Chat API に対応していることを確認します。
+4. 完全な Model ID をコピーします。
+5. モデルの表示名やコンソール画面の URL をコピーしないでください。
+
+組織でカスタムモデル、モデルユニット、専用推論エンドポイントを使用している場合は、[推論エンドポイント](https://console.volcengine.com/ark/region:ark+cn-beijing/endpoint)から `ep-...` ID をコピーしてください。
+
+## Cherry Studio での設定
+
+1. `設定 → モデルサービス`を開きます。
+2. 左側のフィルターを**すべてのプロバイダー**に切り替えます。
+3. **Doubao / Volcengine**を選択します。
+4. API Key 欄に Ark のキーを貼り付けます。
+5. API Host は `https://ark.cn-beijing.volces.com/api/v3/` のままにします。
+6. ページ上部のプロバイダースイッチをオンにします。
+7. **モデルを追加**をクリックします。
+8. 現在の Model ID または Endpoint ID を貼り付けます。
+9. 使用するモデルだけを有効にします。
+10. モデルのヘルスチェックを実行します。
+
+V2 のプリセットリストには、古い Doubao、DeepSeek、Embedding モデルが含まれていることがあります。プリセットは候補にすぎず、そのモデルが現在も提供されていることを保証するものではありません。
+
+## 同期と手動追加
+
+Volcengine Ark のモデルカタログとカスタム推論エンドポイントは、標準の OpenAI モデル一覧から常に完全に返されるとは限りません。そのため、同期結果が空または不完全な場合があります。
+
+最も安定した方法は次のとおりです。
+
+1. Ark の最新モデルページから Model ID をコピーします。
+2. Cherry Studio で手動追加します。
+3. モデルの機能ラベルを確認します。
+4. ヘルスチェックを実行します。
+5. 呼び出せない古いプリセットを削除します。
+
+{% hint style="warning" %}
+古い Model ID が V2 のプリセットに残っているという理由だけで使用を続けないでください。Ark のモデルバージョンには日付サフィックスが付くことが多く、古いバージョンは提供終了になっている場合があります。
+{% endhint %}
+
+## API Host
+
+デフォルトのまま使用します。
+
+```text
+https://ark.cn-beijing.volces.com/api/v3/
+```
+
+Cherry Studio は、モデルタイプに応じてリクエストパスを追加します。古いチュートリアルにある、完全な `/chat/completions` を API Host に記入して末尾に `#` を付ける方法は、過去の互換設定です。V2 では不要です。
+
+北京以外のリージョン、プロキシ、企業専用ドメインを使用する場合は、API Host を完全に置き換え、次の点を確認してください。
+
+- API Key が同じプロジェクトとリージョンに属している。
+- ドメインが `/api/v3` に対応している。
+- プロキシがストリーミングレスポンスを転送できる。
+- Model ID または Endpoint ID が対象環境で有効である。
+
+## チャットモデル
+
+現在、組み込みプロバイダーのチャットでは主に OpenAI 互換の Chat Completions を使用します。
+
+次の順序でテストすることをおすすめします。
+
+1. 短いテキストメッセージを送信します。
+2. ストリーミング出力を確認します。
+3. システムプロンプトを追加します。
+4. 長めのコンテキストをテストします。
+5. その後、画像、思考、ツール呼び出しをテストします。
+
+Volcengine Ark の公式サイトでは、新しい例として Responses API が優先的に紹介される場合があります。Responses の例が動作するという理由だけで、現在の V2 のチャットが同じ API に切り替わっている、または Responses 固有のすべてのフィールドに対応していると判断しないでください。
+
+## 思考モード
+
+Doubao のバージョンによって使用する思考パラメーターが異なります。Cherry Studio V2 は Model ID に応じて次のように調整します。
+
+- 新しい Doubao Seed モデルでは `reasoningEffort` を使用します。
+- 一部の古い思考モデルでは `thinking: enabled` を使用します。
+- 自動思考に対応する古いモデルでは `thinking: auto` を使用できます。
+- その他の組み合わせでは、思考フィールドを送信しない場合があります。
+
+思考の強度を変更した後にエラーが発生した場合：
+
+1. 思考設定を**デフォルト**に戻します。
+2. モデルのカスタムパラメーターを消去します。
+3. Model ID が公式サイトの現在のバージョンと一致することを確認します。
+4. そのモデルの Chat API の例を確認します。
+5. ヘルスチェックを再実行します。
+
+Responses API の `thinking` の例を、そのまま Chat Completions モデルへコピーしないでください。
+
+## ビジョンとマルチモーダル
+
+画像や動画を受け取れるのは、Ark が明確にビジョンまたはマルチモーダルとして指定しているモデルだけです。
+
+Cherry Studio では、次の手順で確認します。
+
+1. 現在のビジョン Model ID を追加します。
+2. モデルに画像機能が表示されていることを確認します。
+3. まず小さな画像を 1 枚アップロードします。
+4. モデルが実際に内容を理解できているか確認します。
+5. その後、複数画像または大きめの添付ファイルを試します。
+
+Ark の公式サイトでは、ネイティブのファイル入力と動画入力が提供されています。しかし、現在の V2 で直接使用できるかどうかは、クライアントの添付ファイル形式への対応によって決まります。公式サイトが特定の入力に対応していても、Cherry Studio が Files API を使ってアップロードしているとは限りません。
+
+## MCP とツール呼び出し
+
+Cherry Studio の MCP は、モデルの構造化された Function Calling を使用します。
+
+1. まず通常のチャットを動作させます。
+2. 単純な MCP ツールを 1 つだけ有効にします。
+3. ツールを呼び出すよう明示的に指示します。
+4. 構造化された呼び出しが生成されているか確認します。
+5. ツールの結果がモデルに返されることを確認します。
+6. その後、ツールを追加します。
+
+Volcengine Ark の Web Search、Image Process、Knowledge Search、Remote MCP は Ark のクラウドツールであり、主に Responses API で設定します。これらは、Cherry Studio で追加する MCP サーバーとは別の設定です。
+
+モデルが「ツールを呼び出す」とテキストで説明するだけでは、実際の呼び出しではありません。Model ID、インターフェース、ツール定義を確認してください。
+
+## Embedding とナレッジベース
+
+Volcengine Ark は、テキストおよびマルチモーダルのベクトル化 API を提供しています。V2 のプリセットに古い Embedding Model ID が残っている場合がありますが、Ark の最新ドキュメントに掲載されているバージョンを優先してください。
+
+ナレッジベースを作成する場合：
+
+1. Ark の最新のベクトル化モデルページから Model ID をコピーします。
+2. Cherry Studio で手動追加します。
+3. モデルが Embedding として認識されていることを確認します。
+4. ベクトル次元を検出します。
+5. ヘルスチェックを実行します。
+6. 少量のドキュメントをインポートして試します。
+7. その後、一括インポートします。
+
+マルチモーダルベクトル化モデルが受け取る入力形式は、Cherry Studio のナレッジベースで現在使用されているテキストチャンクとは異なる場合があります。ドキュメントのナレッジベースに使用する場合は、まず純粋なテキストの Embedding を検証してください。
+
+既存のナレッジベースで Embedding モデルまたはベクトル次元を使用した後は、直接変更しないでください。変更すると、通常はベクトルインデックスの再構築が必要です。
+
+現在の V2 では、`doubao` 専用の Rerank モデルは組み込み登録されていません。再ランキングが必要な場合は、V2 が対応しており、ヘルスチェックに合格した別のプロバイダーを選択してください。
+
+## 画像生成
+
+Volcengine Ark の公式サイトでは、Model ID または画像推論エンドポイント ID を使用する画像生成 API が提供されています。
+
+ただし、現在の V2 の `main` ブランチでは、組み込みの `doubao` プロバイダーに専用の画像生成モデルと転送経路が登録されていません。そのため、次の点に注意してください。
+
+- 公式サイトが Seedream に対応していても、Cherry Studio の描画ページに自動表示されるとは限りません。
+- 画像の Model ID を通常のチャットモデルとして使用しないでください。
+- 古いスクリーンショットを基に Endpoint Type を推測して手動設定しないでください。
+- 現在の描画ページで実際に選択できるプロバイダーとモデルを基準にしてください。
+
+今後の V2 バージョンで Ark の画像アダプターが追加された場合は、現在の Model ID を再同期または追加し、まず 1 枚の画像と一般的なサイズでテストしてください。
+
+{% hint style="warning" %}
+画像生成は、正常に出力された枚数に応じて課金される場合があります。互換性を確認する目的で、タスクを連続して何度も送信しないでください。
+{% endhint %}
+
+## PDF と添付ファイル
+
+現在の V2 は、まずローカルで PDF のテキストを抽出し、その後 Ark のチャットモデルへ送信します。
+
+- テキスト形式の PDF は通常処理できます。
+- スキャンされた文書には、先に OCR が必要です。
+- 表、複雑なレイアウト、画像の情報は失われる場合があります。
+- 抽出されたテキストはモデルのコンテキストと料金を消費します。
+- PDF 内の画像は、ビジョンモデルへ個別に送信する必要があります。
+
+これは、Ark のネイティブ Files API やドキュメント理解 API とは異なります。Ark がファイルアップロードに対応していても、Cherry Studio が PDF を Ark のファイルオブジェクトとして自動処理するわけではありません。
+
+ドキュメント、画像、ナレッジベースの内容をアップロードする前に、プライバシー、データセキュリティ、組織のコンプライアンス要件を満たしていることを確認してください。
+
+## 課金、レート制限、使用量
+
+Ark では、次の要因によって同時に制限される場合があります。
+
+- アカウント残高
+- プロジェクト予算
+- 従量課金、モデルユニット、パッケージの特典
+- RPM / TPM
+- 推論エンドポイントのレート制限
+- モデルの同時実行数
+- コンテンツセキュリティポリシー
+
+コンソールで使用量統計を確認し、予算アラートを設定することをおすすめします。カスタム Endpoint については、その状態、リソース仕様、レート制限設定も確認してください。
+
+## よくある問題
+
+### 401 が返される
+
+API Key が正しくない、削除済み、コピー時に空白が入った、または Key と API Host が一致していません。Ark の API Key をコピーし直してください。
+
+### 403 が返される
+
+プロジェクト、モデル、Endpoint、コンテンツへの権限がありません。モデルの有効化状態、プロジェクト、IAM、コンテンツセキュリティポリシーを確認してください。
+
+### 404 が返される
+
+API Host、Model ID、Endpoint ID が正しくないか、モデルが提供終了になっています。デフォルトアドレスに戻し、最新のモデルページから ID をコピーし直してください。
+
+### 429 が返される
+
+モデル、プロジェクト、推論エンドポイントの RPM、TPM、同時実行数の上限に達しています。同時実行数を減らして、回復するまで待機してください。
+
+### モデル一覧が空
+
+Ark では、標準のモデル一覧からすべてのモデルとカスタム Endpoint が返されるとは限りません。公式のモデルページまたは推論エンドポイントページから ID をコピーして手動で追加してください。
+
+### プリセットモデルを利用できない
+
+V2 のプリセットには、提供終了になった古い日付バージョンが含まれている場合があります。無効なモデルを削除して、現在の Model ID を追加してください。
+
+### Model ID は利用できるが Endpoint ID は利用できない
+
+Endpoint が起動していない、正しいモデルに紐付いていない、別のプロジェクトに属している、またはリソースが解放されている可能性があります。Ark コンソールで Endpoint の状態を確認してください。
+
+### 思考パラメーターのエラー
+
+思考設定をデフォルトに戻してください。新旧の Doubao モデルでは、`reasoningEffort` と `thinking` パラメーターを混在させることはできません。
+
+### 通常のチャットは動作するが MCP が呼び出されない
+
+モデルが Function Calling に対応していることを確認してください。Ark クラウドの Remote MCP と Cherry Studio MCP は別の機能であるため、Ark コンソールで有効にするだけでは使用できません。
+
+### Embedding モデルを追加できない
+
+ベクトル化用の Model ID を使用していることを確認し、モデル管理で Embedding としてマークしてください。表示名や Endpoint ページの URL をモデル ID として使用しないでください。
+
+### 公式サイトでは Seedream を利用できるが描画ページに表示されない
+
+現在の V2 に組み込まれている `doubao` プロバイダーには、専用の画像生成経路がまだ登録されていません。クライアント側の対応を待つか、描画ページに表示されているプロバイダーを使用してください。
+
+一般的な設定については、[モデルサービス](README.md)と[モデルサービス設定](../../cherrystudio/preview/settings/providers.md)を参照してください。Volcengine Ark の現在の機能については、[製品ドキュメント](https://www.volcengine.com/docs/82379/)、[モデル一覧](https://www.volcengine.com/docs/82379/1554711)、[API リファレンス](https://www.volcengine.com/docs/82379/1523520)、[推論エンドポイントの管理](https://www.volcengine.com/docs/82379/1182403)、[画像生成 API](https://www.volcengine.com/docs/82379/1824137)を参照してください。フィードバック方法については、[フィードバックと提案](../../question-contact/suggestions.md)を参照してください。

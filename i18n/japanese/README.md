@@ -1,108 +1,122 @@
 ---
 icon: cherries
 ---
-# プロジェクト概要
 
+# Cherry Studio コミュニティ版
+
+Cherry Studio は、Windows、macOS、Linux でクラウドまたはローカルの大規模モデルをまとめて利用できる、オープンソースのデスクトップ AI クライアントです。複数モデルとの対話だけでなく、アシスタント、エージェント、ナレッジベース、スキル、MCP、翻訳、画像生成、ファイル、ノートなどの機能を 1 つのワークスペースに統合しています。
+
+コミュニティ版は、モデルサービスを自分で選び、作業資料をローカルで管理しながら、必要に応じて AI ワークフローを拡張したい個人ユーザーや開発者に適しています。
+
+## Cherry Studio でできること
+
+| 目的 | Cherry Studio の機能 |
+| :--- | :--- |
+| 複数のプロバイダーやローカル環境のモデルを使う | モデルサービスを一元設定し、対話中にモデルを切り替える、または複数モデルを同時に比較する |
+| 固定された役割や会話設定を保存する | アシスタントを作成し、プロンプト、モデルパラメータ、ナレッジベース、MCP を設定する |
+| AI にワークスペースを読み取らせてタスクを実行する | エージェントを作成し、アクセス可能なディレクトリ、ツール、承認モードを制御する |
+| AI に特定のワークフローを守らせる | スキルをインストールし、エージェントごとに有効にする |
+| 検索、データベース、サードパーティサービスに接続する | ローカルまたはリモートの MCP Server を追加する |
+| 自分専用の情報検索ライブラリを作る | 文書をインポートし、Embedding モデルを設定する |
+| 画像、翻訳、ノート、ファイルを扱う | 画像生成、翻訳、ノート、ファイルなどの専用ワークスペースを使用する |
+| チャットプラットフォームや決まった時刻にエージェントを実行する | チャンネルとスケジュールタスクを設定する |
+
+## 主なワークスペース
+
+Cherry Studio V2 のサイドバーには、必要に応じて次のアプリを表示できます。
+
+* **会話**：アシスタントやモデルと対話し、セッションとメッセージを管理します。
+* **エージェント**：ファイル、コマンド、複数ステップのツール呼び出しが必要なタスクを実行します。
+* **リソースライブラリ**：アシスタント、エージェント、スキル、プロンプトを一元管理します。
+* **画像生成**：画像生成モデルで画像を作成、管理します。
+* **翻訳**：2 言語間の翻訳と対照表示を行います。
+* **ミニプログラム**：追加済みの Web ツールをアプリ内で開きます。
+* **ナレッジベース**：資料をインポートし、分割処理と検索を行います。
+* **ファイル**：アプリ内のファイルリソースをまとめて表示、管理します。
+* **Code Tools**：開発者向けのコードツールを管理します。
+* **ノート**：Markdown ノートを編集、整理します。
+* **OpenClaw**：独立した自律型エージェントのワークスペースを使用します。
+
+サイドバーには有効にした項目だけが表示されます。項目を非表示にしても、対応するデータは削除されません。
+
+## クイックスタート
+
+### 1. ダウンロードとインストール
+
+[クライアントのダウンロード](cherrystudio/download.md)から、お使いのシステムに適したバージョンを選択してください。初めてインストールする場合や、システムのセキュリティ警告が表示された場合は、[インストールガイド](pre-basic/installation/)を参照してください。
+
+Cherry Studio は Windows、macOS、Linux に対応しています。OS やチップアーキテクチャによってインストールパッケージが異なるため、ダウンロードページの説明に従って選択してください。
+
+### 2. モデルサービスを設定する
+
+**設定 → モデルサービス**を開きます。
+
+1. 登録済みのプロバイダーを選択するか、互換性のあるプロバイダーを追加します。
+2. API アドレスと API Key を入力します。
+3. モデル一覧を取得し、使用するモデルを有効にします。
+4. 会話ページに戻り、モデルを選択して最初のメッセージを送信します。
+
+Ollama、LM Studio などのローカルサービスを使用する場合は、先に対応するサービスがコンピューター上で実行されていることを確認してください。詳しい手順は、[モデルサービス](pre-basic/providers/)を参照してください。
+
+### 3. 1 つの用途から始める
+
+* 日常的な質疑応答、執筆、翻訳：[会話画面](cherrystudio/preview/chat.md)から始めます。
+* 固定プロンプトとパラメータが必要：[リソースライブラリ](cherrystudio/preview/library.md)でアシスタントを作成します。
+* ローカルファイルの操作やツールの実行が必要：[エージェント](advanced-basic/agent.md)を作成します。
+* 個人資料に基づいた回答が必要：[ナレッジベース](knowledge-base/knowledge-base.md)を作成します。
+
+すべての機能を一度に設定する必要はありません。まず検証しやすい小さなタスクを 1 つ完了し、その後でスキル、MCP、自動化を追加すると、問題を切り分けやすくなります。
+
+## アシスタント、エージェント、拡張機能
+
+### アシスタント
+
+アシスタントには、プロンプト、モデルパラメータ、ナレッジベース、MCP などの再利用可能な会話設定が保存されます。会話を中心とする安定した用途に適しています。
+
+### エージェント
+
+エージェントは指定されたディレクトリにアクセスし、組み込みツール、MCP、スキルを呼び出せます。権限モードは、通常、計画、自動編集、フルオートから選択できます。詳しくは、[エージェント](advanced-basic/agent.md)を参照してください。
+
+### スキルと MCP
+
+* [スキル](pre-basic/settings/skills.md)は、特定の手順に従ってタスクを完了する方法をエージェントに伝えます。
+* [MCP](advanced-basic/mcp/) は、アシスタントやエージェントを外部ツール、プロンプト、リソースに接続します。
+
+どれを選ぶべきかわからない場合は、まず[コンセプト入門](advanced-basic/concepts-101.md)をお読みください。
+
+## データとセキュリティ
+
+Cherry Studio のアプリ設定と作業資料は主にローカルに保存されますが、「デスクトップアプリを使う」ことは、「すべての処理がローカルで完結する」ことを意味しません。
+
+* クラウドモデルを使用すると、メッセージ、添付ファイル、検索されたコンテキストが、リクエストに必要な範囲で選択したモデルプロバイダーへ送信されます。
+* リモート MCP Server、チャンネル、その他のサードパーティサービスを使用すると、関連データがそのサービスへ送信される場合があります。
+* エージェントとローカル MCP Server は、許可された権限に基づいてファイルを読み取ったり、コマンドを実行したりする場合があります。
+* ローカルモデルを使用するとクラウドへのデータ送信を減らせますが、接続するモデルサービス、プラグイン、ネットワークツールについては引き続き確認が必要です。
 
 {% hint style="warning" %}
-このドキュメントはAIによって中国語から翻訳されており、まだレビューされていません。
+API Key、アクセストークン、パスワード、秘密鍵をプロンプト、ナレッジベース、文書、スクリーンショットに記載しないでください。エージェントがアクセスできるディレクトリを制限し、MCP とチャンネルには最小限の権限だけを与え、フルオートモードを有効にする前に制御された環境でテストしてください。
 {% endhint %}
 
+重要なデータは定期的にバックアップしてください。Cherry Studio は、ローカルへのエクスポートに加え、WebDAV、S3 互換ストレージなどへのバックアップに対応しています。詳しいオプションは、[データ設定](data-settings/)を参照してください。
 
+## オープンソースとライセンス
 
+Cherry Studio コミュニティ版のコードは [GitHub](https://github.com/CherryHQ/cherry-studio) で公開されており、GNU Affero General Public License v3.0（AGPL-3.0）が適用されます。使用、変更、配布する前に、[オープンソースライセンス](contact-us/questions/cherrystudio-xu-ke-xie-yi.md)をお読みください。
 
-<figure><img src=".gitbook/assets/docs-readme-banner1.png" alt=""><figcaption></figcaption></figure>
+参加方法：
 
-私たちのソーシャルアカウントをフォローしてください：[Twitter(X)](https://x.com/CherryStudioHQ)、[小红书](https://www.xiaohongshu.com/user/profile/662b6853000000000b031d9a)、[微博](https://weibo.com/u/7975656228)、[哔哩哔哩](https://space.bilibili.com/3546657515898892)、[抖音](https://www.douyin.com/user/MS4wLjABAAAAmw9A54m5J0hHVMQY5eGrVJ-EHDoOS0hgJ6M1F9MN2Tn2V163A0xrC4_KVzfmQSxC)
+* [コードを提供する](contribution/code.md)
+* [文書を提供する](contribution/docs.md)
+* [問題を報告する](https://github.com/CherryHQ/cherry-studio/issues)
+* [ディスカッションに参加する](https://github.com/CherryHQ/cherry-studio/discussions)
 
-コミュニティに参加する：[QQグループ(575014769)](https://qm.qq.com/q/lo0D4qVZKi)、[Telegram](https://t.me/CherryStudioAI)、[Discord](https://discord.gg/wez8HtpxqQ)、[微信群（クリックして表示）](https://www.cherry-ai.com/#Community)
+## サポート
 
-***
+問題が発生した場合は、まず[よくある質問](question-contact/questions.md)と[効果的な質問方法](question-contact/ask.md)を確認してください。フィードバックを送る際は、Cherry Studio のバージョン、OS、再現手順、必要なログを記載し、API Key やファイル内容などの機密情報をあらかじめ削除してください。
 
-Cherry Studioは、マルチモデル対話、ナレッジベース管理、AI絵画、翻訳などの機能を統合したオールインワンAIアシスタントプラットフォームです。\
-高度なカスタマイズ設計、強力な拡張性、ユーザーフレンドリーな体験により、プロフェッショナルユーザーやAI愛好家に最適な選択肢となっています。初心者から開発者まで、あらゆるユーザーが自身のニーズに合わせたAI機能を見つけ、作業効率と創造性を向上させることができます。
+コミュニティ：
 
-<figure><img src=".gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
-
-<figure><img src=".gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
-
-***
-
-### **コア機能と特徴**
-
-#### **1. 基本対話機能**
-
-* **一問多答**: 同一質問に対して複数モデルが同時に回答生成し、モデル比較を容易にします（詳細は[対話インターフェース](cherrystudio/preview/chat.md)参照）。
-* **自動グループ化**: 各アシスタントの対話履歴を自動的にグループ管理。
-* **対話エクスポート**: 完全または部分的な対話をMarkdown、Wordなど複数形式でエクスポート可能。
-* **高度なパラメータカスタマイズ**: 基本パラメータ調整に加え、カスタムパラメータ入力が可能。
-* **アシスタントマーケット**: 翻訳、プログラミング、執筆など業界特化型アシスタントを多数内蔵、カスタムアシスタントも作成可能。
-* **多形式レンダリング**: Markdownレンダリング、数式レンダリング、HTMLリアルタイムプレビューなどをサポート。
-
-#### **2. 多彩な機能統合**
-
-* **AI絵画**: 自然言語記述による高品質画像生成パネルを提供。
-* **AIミニアプリ**: Web版AIツールを直接利用可能、ブラウザ切り替え不要。
-* **翻訳機能**: 専用翻訳パネル、対話翻訳、プロンプト翻訳など多様な翻訳シーンを対応。
-* **ファイル管理**: 対話、絵画、ナレッジベースのファイルを統一管理。
-* **グローバル検索**: 履歴とナレッジベースの高速検索を実現。
-
-#### **3. マルチサービスプロバイダ統合管理**
-
-* **サービスプロバイダ統合**: OpenAI、Gemini、Anthropic、Azureなど主要モデルの一元呼び出し。
-* **モデル自動取得**: ワンクリックで完全なモデルリストを取得。
-* **マルチキーーローーテーション**: 複数APIキーのローテーション使用でレート制限回避。
-* **正確なアバター設定**: 各モデルに専用アイコンを自動マッチング。
-* **カスタムプロバイダ**: OpenAI、Gemini、Anthropicなど互換規格のサードパーティプロバイダをサポート。
-
-#### **4. 高度なUIカスタマイズ**
-
-* **カスタムCSS**: グローバルスタイルのカスタマイズ対応。
-* **対話レイアウト**: リスト/バブルレイアウト選択可能、メッセージスタイルもカスタマイズ可（コードスニペットスタイルなど）。
-* **カスタムアバター**: ソフトウェア/アシスタントごとのアイコン設定。
-* **サイドバーメニュー**: 機能の表示/非表示や順序変更が可能。
-
-#### **5. ローカルナレッジベースシステム**
-
-* **多様なフォーマット**: PDF、DOCX、PPTX、XLSX、TXT、MDなど幅広いファイル形式をサポート。
-* **多彩なデータソース**: ローカルファイル、URL、サイトマップ、手動入力コンコンテンンツがソース可能。
-* **ナレッジベースエクスポート**: 処理済みナレッジベースの共有機能。
-* **検証機能**: インインポート後、リアルタイムで処理結果やセグメント効果を確認可能。
-
-#### **6. 特化機能**
-
-* **クイックQ&A**: 任意の場面（WeChat、ブラウザ等）から高速回答取得。
-* **クイック翻訳**: 他アプリケーションのテキストを即時翻訳。
-* **要約機能**: 長文コンコンテンンツを瞬時に要約。
-* **説明機能**: 複雑なプロンプト不要で問題を説明。
-
-#### **7. データ保証**
-
-* **多様なバックアップ**: ローカルバックアップ、WebDAVバックアップ、定期バックアップをサポート。
-* **データセキュリティ**: ローカル環境での完全利用が可能、ローカルLLM連携で情報漏洩リスクを回避。
-
-***
-
-### **プロジェクトの強み**
-
-1. **初心者フレンドリー**: 技術的ハードルを低減し、初心者でも即戦力化。
-2. **充実したドキュメント**: 詳細なマニュアルとFAQを提供。
-3. **継続的イテレーション**: ユーザーフィードバックに基づく機能改善。
-4. **オープンソース＆拡張性**: ソースコードカスタマイズによる個別ニーズ対応。
-
-***
-
-### **適用シーン**
-
-* **ナレッジ管理＆検索**: ローカルナレッジベースで研究/教育向け知識体系を構築。
-* **マルチモデル対話＆創作**: 複数モデル同時対話による情報収集/コンテンツ生成。
-* **翻訳＆業務自動化**: 多言語コミュニケーションや文書処理を支援。
-* **AI絵画＆デザイン**: 自然言語記述による画像生成でクリエイティブワークを支援。
-
-### Star History
-
-![Star History](https://urlscan.io/liveshot/?width=1300\&height=620\&url=https://cherrystarhistory.ocool.online/)
-
-## ソーシャルアカウントをフォロー
-
-<table data-view="cards"><thead><tr><th></th><th data-hidden data-card-cover data-type="files"></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><a href="https://www.xiaohongshu.com/user/profile/662b6853000000000b031d9a?xsec_token=YB_1nKvlH4r5hPYVVbbsNHF8Y6n6AKlm5-DaggPCtd2DQ%3D&#x26;xsec_source=app_share&#x26;xhsshare=CopyLink&#x26;appuid=662b6853000000000b031d9a&#x26;apptime=1738627324&#x26;share_id=ace5db41b5954fab8d98a2a7865a62bc&#x26;share_channel=copy_link">小红书</a></td><td><a href=".gitbook/assets/1.png">1.png</a></td><td><a href="https://www.xiaohongshu.com/user/profile/662b6853000000000b031d9a?xsec_token=YB_1nKvlH4r5hPYVVbbsNHF8Y6n6AKlm5-DaggPCtd2DQ%3D&#x26;xsec_source=app_share&#x26;xhsshare=CopyLink&#x26;appuid=662b6853000000000b031d9a&#x26;apptime=1738627324&#x26;share_id=ace5db41b5954fab8d98a2a7865a62bc&#x26;share_channel=copy_link">https://www.xiaohongshu.com/user/profile/662b6853000000000b031d9a?xsec_token=YB_1nKvlH4r5hPYVVbbsNHF8Y6n6AKlm5-DaggPCtd2DQ%3D&#x26;xsec_source=app_share&#x26;xhsshare=CopyLink&#x26;appuid=662b6853000000000b031d9a&#x26;apptime=1738627324&#x26;share_id=ace5db41b5954fab8d98a2a7865a62bc&#x26;share_channel=copy_link</a></td></tr><tr><td><a href="https://b23.tv/hIfGgDW">哔哩哔哩</a></td><td><a href=".gitbook/assets/3.png">3.png</a></td><td><a href="https://b23.tv/hIfGgDW">https://b23.tv/hIfGgDW</a></td></tr><tr><td><a href="https://weibo.com/u/7975656228">微博</a></td><td><a href=".gitbook/assets/2.png">2.png</a></td><td><a href="https://weibo.com/u/7975656228">https://weibo.com/u/7975656228</a></td></tr><tr><td><a href="https://v.douyin.com/ifTpX4X7">抖音</a></td><td><a href=".gitbook/assets/4.png">4.png</a></td><td><a href="https://v.douyin.com/ifTpX4X7">https://v.douyin.com/ifTpX4X7</a></td></tr><tr><td><a href="https://x.com/CherryStudioHQ?t=DYR0ulaLur-bO4Us3bG79A&#x26;s=05">Twitter(X)</a></td><td><a href=".gitbook/assets/5.png">5.png</a></td><td><a href="https://x.com/CherryStudioHQ?t=DYR0ulaLur-bO4Us3bG79A&#x26;s=05">https://x.com/CherryStudioHQ?t=DYR0ulaLur-bO4Us3bG79A&#x26;s=05</a></td></tr></tbody></table>
+* [Telegram](https://t.me/CherryStudioAI)
+* [Discord](https://discord.gg/wez8HtpxqQ)
+* [QQ グループ](https://qm.qq.com/q/lo0D4qVZKi)
+* [フィードバックと提案](question-contact/suggestions.md)

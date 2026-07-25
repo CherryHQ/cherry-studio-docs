@@ -1,373 +1,316 @@
 ---
+description: Deploy a SearXNG instance for Cherry Studio V2 and configure JSON, search engines, and basic authentication.
 icon: searchengin
 ---
-# SearXNG Local Deployment and Configuration
 
+# Deploy and Configure SearXNG Locally
 
-{% hint style="warning" %}
-This document was translated from Chinese by AI and has not yet been reviewed.
+SearXNG is an open-source metasearch engine that aggregates results from multiple search engines in your own instance. Cherry Studio V2 can use a self-hosted SearXNG instance as its keyword search provider. This option suits users who value control and privacy and have basic container administration skills.
+
+{% hint style="info" %}
+SearXNG itself is open source, but running an instance still uses local or server resources. Its upstream search engines may also impose their own access restrictions. Self-hosting does not automatically guarantee search quality, availability, or anonymity.
 {% endhint %}
 
+## Before Choosing SearXNG
 
+Unlike a search service where you enter an API Key directly, SearXNG requires an accessible instance first.
 
+| Deployment | Best for | Considerations |
+| --- | --- | --- |
+| Local | Personal use and quick testing | Only the local computer can access it directly; the service stops when the computer is shut down |
+| LAN | Sharing among multiple trusted devices | Requires correct listening-address and firewall configuration |
+| Public self-hosting | Cross-network or team use | Requires HTTPS, authentication, rate limiting, updates, and logging considerations |
+| Public instance | Temporary testing | May disable the JSON API, impose rate limits, or become unavailable at any time |
 
-CherryStudio supports network search through SearXNG. SearXNG is an open-source project that can be deployed locally or on a server, so its configuration method is slightly different from others that require API providers.
+Do not use an unfamiliar public instance as a long-term default provider. The instance administrator may see query and connection information, and public instances generally provide no availability guarantee.
 
-**SearXNG Project Link**: [SearXNG](https://github.com/searxng/searxng)
+## Cherry Studio Instance Requirements
 
-## Advantages of SearXNG
+A usable SearXNG instance must meet these requirements:
 
-*   Open source and free, no API required
-*   Relatively high privacy
-*   Highly customizable
+- The device running Cherry Studio can access the instance address;
+- `/config` returns the instance configuration;
+- `/search` allows `format=json`;
+- At least one enabled search engine belongs to both the `general` and `web` categories;
+- Web pages in search results are accessible from the network where Cherry Studio runs;
+- If the reverse proxy enables HTTP Basic Auth, the same credentials are entered in Cherry Studio.
 
-## Local Deployment
+Cherry Studio uses this address by default:
 
-### 1. Direct Deployment with Docker
+```text
+http://localhost:8080
+```
 
-Since SearXNG does not require complex environment configuration and can be deployed by simply providing an available port without docker compose, the quickest way is to directly pull the image with Docker for deployment.
+This is only a preset. The actual port and domain must match your deployment.
 
-#### 1. Download, install, and configure [docker](https://www.docker.com/)
+## Deploy with the Official Container Template
 
-<figure><img src="../.gitbook/assets/searxng_config_img_01.png" alt=""><figcaption></figcaption></figure>
+SearXNG officially recommends a Docker or Podman Compose template. The following steps are for users who already have Docker and Docker Compose installed. A production environment also requires your own backup, update, and access-control plan.
 
-After installation, select an image storage path:
-
-<figure><img src="../.gitbook/assets/searxng_config_img_02.png" alt=""><figcaption></figcaption></figure>
-
-#### 2. Search and pull SearXNG image
-
-Enter **searxng** in the search bar:
-
-<figure><img src="../.gitbook/assets/searxng_config_img_03.png" alt=""><figcaption></figcaption></figure>
-
-Pull image:
-
-<figure><img src="../.gitbook/assets/searxng_config_img_04.png" alt=""><figcaption></figcaption></figure>
-
-<figure><img src="../.gitbook/assets/searxng_config_img_05.png" alt=""><figcaption></figcaption></figure>
-
-#### 3. Run the image
-
-After successfully pulling, go to the **images** page:
-
-<figure><img src="../.gitbook/assets/searxng_config_img_06.png" alt=""><figcaption></figcaption></figure>
-
-Select the pulled image and click run:
-
-<figure><img src="../.gitbook/assets/searxng_config_img_07.png" alt=""><figcaption></figcaption></figure>
-
-Open settings for configuration:
-
-<figure><img src="../.gitbook/assets/searxng_config_img_08.png" alt=""><figcaption></figcaption></figure>
-
-Taking port `8085` as an example:
-
-<figure><img src="../.gitbook/assets/searxng_config_img_09.png" alt=""><figcaption></figcaption></figure>
-
-After successful operation, click the link to open SearXNG's frontend interface:
-
-<figure><img src="../.gitbook/assets/searxng_config_img_10.png" alt=""><figcaption></figcaption></figure>
-
-This page indicates successful deployment:
-
-<figure><img src="../.gitbook/assets/searxng_config_img_11.png" alt=""><figcaption></figcaption></figure>
-
-## Server Deployment
-
-Given that installing Docker on Windows can be quite troublesome, users can deploy SearXNG on a server and share it with others. However, unfortunately, SearXNG itself does not currently support authentication, which could lead to others scanning and misusing your deployed instance through technical means.
-
-To address this, Cherry Studio currently supports configuring [HTTP Basic Authentication (RFC7617)](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Guides/Authentication). If you intend to expose your deployed SearXNG to the public network, it is **essential** to configure HTTP Basic Authentication using reverse proxy software like Nginx. A brief tutorial is provided below, assuming you have basic Linux operation and maintenance knowledge.
-
-### Deploying SearXNG
-
-Similarly, deployment still uses Docker. Assuming you have installed the latest Docker CE on your server according to the [official tutorial](https://docs.docker.com/engine/install), here are one-stop commands suitable for a fresh installation on a Debian system:
+### 1. Prepare the Directory and Template
 
 ```bash
-sudo apt update
-sudo apt install git -y
+mkdir -p ./searxng/core-config
+cd ./searxng
+curl -fsSLO https://raw.githubusercontent.com/searxng/searxng/master/container/docker-compose.yml
+curl -fsSLO https://raw.githubusercontent.com/searxng/searxng/master/container/.env.example
+cp .env.example .env
+```
 
-# Pull the official repository
-cd /opt
-git clone https://github.com/searxng/searxng-docker.git
-cd /opt/searxng-docker
+Open `.env` and follow the template instructions to check the port, instance address, secrets, and other settings. The template may change as SearXNG is updated. Before an initial deployment or upgrade, read the [official container installation documentation](https://docs.searxng.org/admin/installation-docker.html).
 
-# If your server bandwidth is small, you can set this to false
-export IMAGE_PROXY=true
+### 2. Enable JSON Output
 
-# Modify configuration file
-cat <<EOF > /opt/searxng-docker/searxng/settings.yml
-# see https://docs.searxng.org/admin/settings/settings.html#settings-use-default-settings
+Add at least the following to `core-config/settings.yml`:
+
+```yaml
 use_default_settings: true
-server:
-  # base_url is defined in the SEARXNG_BASE_URL environment variable, see .env and docker-compose.yml
-  secret_key: $(openssl rand -hex 32)
-  limiter: false  # can be disabled for a private instance
-  image_proxy: $IMAGE_PROXY
-ui:
-  static_use_hash: true
-redis:
-  url: redis://redis:6379/0
+
 search:
   formats:
     - html
     - json
-EOF
 ```
 
-If you need to modify the local listening port or reuse an existing Nginx instance locally, you can edit the `docker-compose.yaml` file as follows:
+{% hint style="warning" %}
+Cherry Studio requests `format=json`. If `search.formats` in SearXNG does not include `json`, the search endpoint usually returns `403 Forbidden`.
+{% endhint %}
 
-```yaml
-version: "3.7"
+If you already have a `settings.yml`, merge the `json` item into it. Do not overwrite your existing engine, proxy, language, or security configuration with the minimal example above.
 
-services:
-# If you don't need Caddy and want to reuse an existing Nginx locally, remove the following. We don't need Caddy by default.
-  caddy:
-    container_name: caddy
-    image: docker.io/library/caddy:2-alpine
-    network_mode: host
-    restart: unless-stopped
-    volumes:
-      - ./Caddyfile:/etc/caddy/Caddyfile:ro
-      - caddy-data:/data:rw
-      - caddy-config:/config:rw
-    environment:
-      - SEARXNG_HOSTNAME=${SEARXNG_HOSTNAME:-http://localhost}
-      - SEARXNG_TLS=${LETSENCRYPT_EMAIL:-internal}
-    cap_drop:
-      - ALL
-    cap_add:
-      - NET_BIND_SERVICE
-    logging:
-      driver: "json-file"
-      options:
-        max-size: "1m"
-        max-file: "1"
-# If you don't need Caddy and want to reuse an existing Nginx locally, remove the above. We don't need Caddy by default.
-  redis:
-    container_name: redis
-    image: docker.io/valkey/valkey:8-alpine
-    command: valkey-server --save 30 1 --loglevel warning
-    restart: unless-stopped
-    networks:
-      - searxng
-    volumes:
-      - valkey-data2:/data
-    cap_drop:
-      - ALL
-    cap_add:
-      - SETGID
-      - SETUID
-      - DAC_OVERRIDE
-    logging:
-      driver: "json-file"
-      options:
-        max-size: "1m"
-        max-file: "1"
-
-  searxng:
-    container_name: searxng
-    image: docker.io/searxng/searxng:latest
-    restart: unless-stopped
-    networks:
-      - searxng
-    # Default mapping to host port 8080. If you want to listen on 8000, change it to "127.0.0.1:8000:8080"
-    ports:
-      - "127.0.0.1:8080:8080"
-    volumes:
-      - ./searxng:/etc/searxng:rw
-    environment:
-      - SEARXNG_BASE_URL=https://${SEARXNG_HOSTNAME:-localhost}/
-      - UWSGI_WORKERS=${SEARXNG_UWSGI_WORKERS:-4}
-      - UWSGI_THREADS=${SEARXNG_UWSGI_THREADS:-4}
-    cap_drop:
-      - ALL
-    cap_add:
-      - CHOWN
-      - SETGID
-      - SETUID
-    logging:
-      driver: "json-file"
-      options:
-        max-size: "1m"
-        max-file: "1"
-
-networks:
-  searxng:
-
-volumes:
-# If you don't need Caddy and want to reuse an existing Nginx locally, remove the following
-  caddy-data:
-  caddy-config:
-# If you don't need Caddy and want to reuse an existing Nginx locally, remove the above
-  valkey-data2:
-```
-
-Execute `docker compose up -d` to start. Execute `docker compose logs -f searxng` to view logs.
-
-### Deploy Nginx Reverse Proxy and HTTP Basic Authentication
-
-If you use server panel programs, such as Baota Panel or 1Panel, please refer to their documentation to add a website and configure Nginx reverse proxy. Then, locate where to modify the Nginx configuration file, and modify it according to the example below:
-
-```conf
-server
-{
-    listen 443 ssl;
-
-    # This line is your hostname
-    server_name search.example.com;
-
-    # index index.html;
-    # root /data/www/default;
-
-    # If SSL is configured, these two lines should be present
-    ssl_certificate    /path/to/your/cert/fullchain.pem;
-    ssl_certificate_key    /path/to/your/cert/privkey.pem;
-
-    # HSTS
-    # add_header Strict-Transport-Security "max-age=31536000; includeSubDomains; preload";
-
-    # By default, when configuring reverse proxy via the panel, the default location block looks like this
-    location / {
-        # Just add the following two lines to the location block; keep everything else as is.
-        # This example assumes your configuration file is saved in the /etc/nginx/conf.d/ directory.
-        # If using Baota, it should be saved in directories like /www; pay attention to this.
-        auth_basic "Please enter your username and password";
-        auth_basic_user_file /etc/nginx/conf.d/search.htpasswd;
-
-        proxy_http_version 1.1;
-        proxy_set_header Connection "";
-        proxy_redirect off;
-        proxy_set_header Host $host;
-        proxy_set_header X-Forwarded-For $proxy_protocol_addr;
-        proxy_pass http://127.0.0.1:8000;
-        client_max_body_size 0;
-    }
-
-    # access_log  ...;
-    # error_log  ...;
-}
-```
-
-Assuming the Nginx configuration file is saved under `/etc/nginx/conf.d`, we will save the password file in the same directory.
-
-Execute the command (replace `example_name` and `example_password` with the username and password you intend to set):
+### 3. Start the Instance
 
 ```bash
-echo "example_name:$(openssl passwd -5 'example_password')" > /etc/nginx/conf.d/search.htpasswd
+docker compose up -d
+docker compose ps
 ```
 
-Restart Nginx (reloading the configuration also works).
+To view logs:
 
-Now you can open the webpage, and it will prompt you to enter your username and password. Please enter the username and password you set earlier to see if you can successfully access the SearXNG search page, thereby checking if the configuration is correct.
-
-<figure><img src="../.gitbook/assets/searxng-basic-auth-example.png" alt=""><figcaption></figcaption></figure>
-
-## Cherry Studio Related Configuration
-
-After SearXNG is successfully deployed locally or on a server, the next step is CherryStudio's related configuration.
-
-Go to the network search settings page and select Searxng:
-
-<figure><img src="../.gitbook/assets/searxng_config_img_12.png" alt=""><figcaption></figcaption></figure>
-
-If entering the locally deployed link results in verification failure, don't worry:
-
-<figure><img src="../.gitbook/assets/searxng_config_img_13.png" alt=""><figcaption></figcaption></figure>
-
-Because the JSON return type is not configured by default after direct deployment, data cannot be fetched, and the configuration file needs to be modified.
-
-Go back to Docker, navigate to the Files tab, and find the tagged folder within the image:
-
-<figure><img src="../.gitbook/assets/searxng_config_img_14.png" alt=""><figcaption></figcaption></figure>
-
-Expand it and scroll down further; you will find another tagged folder:
-
-<figure><img src="../.gitbook/assets/searxng_config_img_15.png" alt=""><figcaption></figcaption></figure>
-
-Continue expanding and locate the **settings.yml** configuration file:
-
-<figure><img src="../.gitbook/assets/searxng_config_img_16.png" alt=""><figcaption></figcaption></figure>
-
-Click to open the file editor:
-
-<figure><img src="../.gitbook/assets/searxng_config_img_17.png" alt=""><figcaption></figcaption></figure>
-
-Go to line 78; you will see that only `html` is listed as a type
-
-<figure><img src="../.gitbook/assets/searxng_config_img_18.png" alt=""><figcaption></figcaption></figure>
-
-Add the `json` type, save, and restart the image
-
-<figure><img src="../.gitbook/assets/searxng_config_img_19.png" alt=""><figcaption></figcaption></figure>
-
-<figure><img src="../.gitbook/assets/searxng_config_img_20.png" alt=""><figcaption></figcaption></figure>
-
-Return to Cherry Studio to verify; verification successful:
-
-<figure><img src="../.gitbook/assets/searxng_config_img_21.png" alt=""><figcaption></figcaption></figure>
-
-The address can be filled in as local: [http://localhost](http://localhost) : port number\
-or as the Docker address: [http://host.docker.internal](http://host.docker.internal) : port number
-
-If the user followed the previous example for server deployment and correctly configured the reverse proxy, and has enabled the JSON return type. After entering the address and verifying, since HTTP Basic Authentication has been configured for the reverse proxy, verification should now return a 401 error code:
-
-<figure><img src="../.gitbook/assets/searxng-basic-auth-client-setting-failed.png" alt=""><figcaption></figcaption></figure>
-
-Configure HTTP Basic Authentication in the client, enter the username and password set earlier:
-
-<figure><img src="../.gitbook/assets/searxng-basic-auth-client-setting.png" alt=""><figcaption></figcaption></figure>
-
-Proceed with verification; it should be successful.
-
-### Other Configurations
-
-At this point, SearXNG has default internet search capabilities. If you need to customize search engines, you must configure them yourself.
-
-It should be noted that the preferences here do not affect the configuration when large models are invoked.
-
-<figure><img src="../.gitbook/assets/searxng_config_img_22.png" alt=""><figcaption></figcaption></figure>
-
-To configure search engines that require large model invocation, you need to set them in the configuration file:
-
-<figure><img src="../.gitbook/assets/searxng_config_img_23.png" alt=""><figcaption></figcaption></figure>
-
-<figure><img src="../.gitbook/assets/searxng_config_img_24.png" alt=""><figcaption></figcaption></figure>
-
-Configuration language reference:
-
-<figure><img src="../.gitbook/assets/searxng_config_img_25.png" alt=""><figcaption></figcaption></figure>
-
-If the content is too long and inconvenient to modify directly, you can copy it to a local IDE, modify it, and then paste it back into the configuration file.
-
-## Common Reasons for Verification Failure
-
-### Return format not including JSON format
-
-Add `json` to the return format in the configuration file:
-
-<figure><img src="../.gitbook/assets/searxng_json_format.png" alt=""><figcaption></figcaption></figure>
-
-### Search engine not configured correctly
-
-Cherry Studio defaults to selecting engines that include both 'web' and 'general' categories for searching. By default, engines like Google are selected, which leads to failure as Google and similar websites are not directly accessible in mainland China. Adding the following configuration to force SearXNG to use the Baidu engine can resolve this issue:
-
+```bash
+docker compose logs -f core
 ```
+
+Service names may change with the official template. If the log command cannot find `core`, run `docker compose ps` first and use the actual service name.
+
+### 4. Verify the Instance
+
+Open the instance home page in a browser, then verify the JSON API in a terminal. Assuming the address is `http://127.0.0.1:8080`:
+
+```bash
+curl "http://127.0.0.1:8080/config"
+curl "http://127.0.0.1:8080/search?q=Cherry+Studio&format=json"
+```
+
+Both requests should return JSON. The second response should also contain usable search results.
+
+For SearXNG endpoint and parameter details, see the [Search API](https://docs.searxng.org/dev/search_api.html).
+
+## Configure SearXNG in Cherry Studio
+
+### 1. Open SearXNG Settings
+
+Open:
+
+> **Settings → Web Search → SearXNG**
+
+### 2. Enter the API Host
+
+Enter the instance root address. Do not manually append `/search` or `/config`.
+
+Local example:
+
+```text
+http://127.0.0.1:8080
+```
+
+Public example:
+
+```text
+https://search.example.com
+```
+
+Cherry Studio appends `/config` and `/search` automatically.
+
+{% hint style="info" %}
+The Cherry Studio desktop app runs directly on the host system. When Docker maps the port to the host, normally use `127.0.0.1:mapped-port`; you do not need `host.docker.internal`.
+{% endhint %}
+
+### 3. Enter Basic Authentication
+
+If the reverse proxy is configured with HTTP Basic Auth:
+
+1. Enter the username in SearXNG settings;
+2. Enter the corresponding password;
+3. Do not put `username:password` in the API Host.
+
+Whenever the username is nonempty, Cherry Studio sends a Basic Auth request header with `/config`, `/search`, and check requests.
+
+For a public connection, HTTP Basic Auth must be used with HTTPS. Using Basic Auth without HTTPS may expose credentials in transit.
+
+### 4. Check the Connection
+
+Click **Check**.
+
+After the check succeeds, set SearXNG as the default keyword search provider. You can then use it by enabling the Globe icon in a conversation.
+
+## How Cherry Studio Selects Search Engines
+
+If no separate engine list has been saved, Cherry Studio reads:
+
+```text
+GET /config
+```
+
+It selects engines that meet all of these conditions:
+
+- `enabled` is `true`;
+- `categories` contains `general`;
+- `categories` contains `web`.
+
+The app then makes a request similar to:
+
+```text
+GET /search?q=query&language=auto&format=json&engines=engine-list
+```
+
+Changing a one-time search preference in the SearXNG web interface therefore does not necessarily change Cherry Studio's request. Enable appropriate engines and categories persistently in the instance's `settings.yml`.
+
+### Keep Only Specific Engines
+
+If some upstream engines are inaccessible from your current network, adjust the engines in `settings.yml`. Example:
+
+```yaml
 use_default_settings:
   engines:
     keep_only:
-      - baidu
-engines:
-  - name: baidu
-    engine: baidu 
-    categories: 
-      - web
-      - general
-    disabled: false
+      - duckduckgo
+      - wikipedia
 ```
 
-### Access rate too fast
+Engine names, availability, and settings may change with SearXNG updates. Confirm exact names in the instance's `/config` response or preferences first, and see the [engine configuration documentation](https://docs.searxng.org/admin/settings/settings_engines.html).
 
-SearXNG's `limiter` configuration is hindering API access. Please try setting it to `false` in the settings:
+{% hint style="warning" %}
+Do not copy a fixed engine list that does not suit your network. Search engines may restrict access by region, trigger CAPTCHAs, or change their interfaces. Use instance logs and actual searches as the final reference.
+{% endhint %}
 
-<figure><img src="../.gitbook/assets/searxng_limiter.png" alt=""><figcaption></figcaption></figure>
+## Search Results and Web Page Retrieval
+
+After SearXNG returns titles, summaries, and URLs, Cherry Studio attempts to retrieve the main text from the result pages and keeps only content that was retrieved successfully.
+
+This means:
+
+- The maximum result count limits how many candidate URLs the app processes;
+- Retrieval may fail for pages that require sign-in, block automated access, or are inaccessible from the current network;
+- If every candidate page fails to load, the search may return an error or have no usable results;
+- SearXNG remains a keyword search provider. The default URL retrieval provider used when a URL is pasted directly must still be selected separately in Web Search settings.
+
+## Security Recommendations for Public Deployment
+
+Do not expose an unprotected SearXNG administration or search endpoint directly to the public internet.
+
+At minimum, consider:
+
+- Enabling HTTPS with a trusted certificate;
+- Configuring access authentication at the reverse-proxy layer;
+- Keeping reasonable rate limits and bot protection;
+- Restricting administration ports and unnecessary network entry points;
+- Regularly updating SearXNG, container images, and the reverse proxy;
+- Avoiding long-term storage of sensitive queries in access logs;
+- Providing credentials only to trusted users and rotating them regularly.
+
+Cherry Studio currently supports HTTP Basic Auth, but it does not configure server-side TLS, permissions, or rate limits for you.
+
+## Troubleshooting
+
+### Check Returns 403
+
+The most common cause is that JSON output is disabled. Confirm that `settings.yml` includes:
+
+```yaml
+search:
+  formats:
+    - html
+    - json
+```
+
+Save the file, restart the instance, and verify it by directly opening `/search?q=test&format=json`.
+
+A public instance may also disable the JSON API intentionally. In that case, switch instances or deploy your own.
+
+### Check Returns 401
+
+The instance or reverse proxy requires authentication:
+
+- Enter the correct Basic Auth username and password in Cherry Studio;
+- Confirm that the reverse proxy uses the same credentials to protect `/config` and `/search`;
+- Check whether the username or password includes spaces copied by mistake;
+- Do not append credentials to the URL.
+
+### No Usable general/web Engine
+
+Cherry Studio could not find an enabled engine in `/config` that belongs to both `general` and `web`.
+
+Check:
+
+1. Whether `/config` returns `engines` correctly;
+2. Whether the target engine has `enabled: true`;
+3. Whether `categories` contains both `general` and `web`;
+4. Whether the instance was restarted or reloaded after the configuration change.
+
+### Searches Time Out or Results Are Unstable
+
+Review the SearXNG logs and check:
+
+- Whether an upstream search engine returns 403, 429, or a CAPTCHA;
+- Whether DNS, the proxy, and the server's outbound network work correctly;
+- Whether the instance request timeout is too short;
+- Whether the selected engines are suitable for the current region;
+- Whether the device running Cherry Studio can open the result web pages.
+
+Do not simply disable all rate limits and security protections. Determine whether the restriction occurs in SearXNG, the reverse proxy, an upstream engine, or the local network.
+
+### Search Works in a Browser, but Cherry Studio Still Fails
+
+The browser page uses HTML by default, while Cherry Studio requires JSON. Test both:
+
+```text
+/config
+/search?q=test&format=json
+```
+
+Also confirm that API Host contains only the root address, Basic Auth is correct, and the reverse proxy does not block these two paths separately.
+
+### Results Are Returned, but the Answer Has No Citations
+
+The result page text may have failed to load, or the model may not have used the search results correctly. You can:
+
+- Remove search engines that are inaccessible or require sign-in;
+- Increase the maximum result count and try again;
+- Switch to engines better suited to the current network;
+- Explicitly ask for sources in the question;
+- Confirm that the model supports tool calling.
+
+## Updates and Maintenance
+
+Before updating the service, read the SearXNG migration notes and back up `.env` and `core-config`. With a container deployment, you will usually need to update the official template and pull a new image; do not assume an old Compose file will remain compatible forever.
+
+Official resources:
+
+- [SearXNG Container Installation](https://docs.searxng.org/admin/installation-docker.html)
+- [SearXNG `settings.yml`](https://docs.searxng.org/admin/settings/settings.html)
+- [Search Output Formats](https://docs.searxng.org/admin/settings/settings_search.html)
+- [Administration API `/config`](https://docs.searxng.org/admin/api.html)
+- [SearXNG GitHub](https://github.com/searxng/searxng)
+
+## Related Documentation
+
+- [Web Search](README.md)
+- [Free Web Search](mian-fei-lian-wang-mo-shi.md)
+- [Web Search Blacklist](blacklist.md)
+
+***
+
+### Get Help and Submit Feedback
+
+If you encounter a problem during setup or use, submit feedback through the official channels listed in [Feedback and Suggestions](../../question-contact/suggestions.md). Include the Cherry Studio version, SearXNG version, error code, and sanitized logs, but do not submit real domain credentials or authentication passwords.

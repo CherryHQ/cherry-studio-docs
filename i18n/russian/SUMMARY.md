@@ -6,8 +6,10 @@
 * [Скачать клиент](cherrystudio/download.md)
 * [Планы проекта](cherrystudio/planning.md)
 * [Описание функций](cherrystudio/preview/README.md)
+  * [Запуск](cherrystudio/preview/launchpad.md)
   * [Интерфейс диалога](cherrystudio/preview/chat.md)
   * [Агенты ИИ](cherrystudio/preview/agents.md)
+  * [Библиотека ресурсов](cherrystudio/preview/library.md)
   * [Рисование](cherrystudio/preview/drawing.md)
   * [Перевод](cherrystudio/preview/translation.md)
   * [Мини-приложения](cherrystudio/preview/app.md)
@@ -88,8 +90,16 @@
   * [Добавление ModelScope MCP-сервера](advanced-basic/mcp/tian-jia-modelscope-mcp-fu-wu-qi.md)
   * [Часто задаваемые вопросы](advanced-basic/mcp/chang-jian-wen-ti.md)
 * [Инструкция по цепочке вызовов](advanced-basic/diao-yong-lian-shi-yong-shuo-ming.md)
-* [Руководство по Code Tools](advanced-basic/code-tools-shi-yong-jiao-cheng.md)
+* [Инструменты для кода](advanced-basic/code-tools-shi-yong-jiao-cheng.md)
 * [Руководство по Cherry Agent](advanced-basic/agent.md)
+* [Навыки](pre-basic/settings/skills.md)
+* [Каналы](advanced-basic/agent-channels.md)
+* [Задачи по расписанию](advanced-basic/scheduled-tasks.md)
+* [Память рабочего пространства агента](advanced-basic/memory.md)
+* [OpenClaw](advanced-basic/openclaw.md)
+* [Промпты и быстрая вставка](pre-basic/settings/quick-phrase.md)
+* [Примеры Agent](advanced-basic/agent-an-li/README.md)
+  * [Agent для обзора рынка золота на Kimi K2.5](advanced-basic/agent-an-li/gold-price-case.md)
 
 ## Участие в проекте <a href="#contribution" id="contribution"></a>
 

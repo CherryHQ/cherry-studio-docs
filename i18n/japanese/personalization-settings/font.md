@@ -2,10 +2,129 @@
 icon: book-font
 ---
 
-{% hint style="warning" %}
-このドキュメントはAIによって中国語から翻訳されており、まだレビューされていません。
+# フォントの推奨事項
+
+Cherry Studio V2 は、オペレーティングシステムにインストールされているフォントを読み取り、「**グローバルフォント**」と「**コード用フォント**」を個別に設定できます。通常、フォントを変更するためにカスタムCSSは不要です。
+
+## Cherry Studio でフォントを選択する
+
+1. まず、OSにフォントをインストールします。
+2. Cherry Studio を完全に終了し、再度開きます。
+3. **設定 > 一般設定 > 表示と言語** に移動します。
+4. 「**フォント設定**」の下で、以下を選択します。
+   - **グローバルフォント**: インターフェース、メッセージ本文、およびほとんどのテキストに使用されます。
+   - **コード用フォント**: コードブロックやコードエディタに使用されます。
+5. 一般的な言語、数字、句読点、コードが正しく表示されているか確認します。
+
+どちらのフォントオプションにも右側にリセットボタンがあり、いつでもデフォルトに復元できます。
+
+{% hint style="info" %}
+フォントリストはオペレーティングシステムから取得されます。新しくインストールしたフォントが表示されない場合は、まず Cherry Studio を完全に終了してください。それでも表示されない場合は、OSを再起動してフォントキャッシュを更新してください。
 {% endhint %}
 
-# フォントおすすめ
+## 選び方
 
-<table data-column-title-hidden data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-type="content-ref"></th><th data-hidden data-type="content-ref"></th><th data-hidden data-type="files"></th><th data-hidden data-card-target data-type="content-ref"></th><th data-hidden data-card-cover data-type="files"></th><th data-hidden data-type="files"></th><th data-hidden><select></select></th><th data-hidden data-type="rating" data-max="5"></th><th data-hidden data-type="files"></th><th data-hidden data-type="rating" data-max="5"></th><th data-hidden data-type="content-ref"></th><th data-hidden data-type="files"></th><th data-hidden data-type="users" data-multiple></th><th data-hidden><select></select></th><th data-hidden data-type="users" data-multiple></th><th data-hidden data-type="checkbox"></th></tr></thead><tbody><tr><td><p><mark style="color:blue;"><strong>Monaspace</strong></mark></p><p><code>英語フォント</code> <code>商用可能</code></p></td><td>GitHub は Monaspace というオープンソースのフォントファミリーを公開しました。5つのスタイルが選択可能です：Neon（モダンスタイル）、Argon（ヒューマニストスタイル）、Xenon（セリフスタイル）、Radon（ハンドライティングスタイル）、Krypton（メカニカルスタイル）。</td><td></td><td></td><td></td><td></td><td><a href="https://github.com/githubnext/monaspace">https://github.com/githubnext/monaspace</a></td><td><a href="../../.gitbook/assets/5ad38bb33425c9c4992e8a89bb9c45d.png">5ad38bb33425c9c4992e8a89bb9c45d.png</a></td><td></td><td></td><td>null</td><td></td><td>4</td><td></td><td></td><td></td><td></td><td></td><td>false</td></tr><tr><td><p><mark style="color:blue;"><strong>MiSans Global</strong></mark></p><p><code>多言語</code> <code>商用可能</code></p></td><td><p>MiSans Global は小米が主導し、モナタイプや漢儀字庫と共同で開発した多言語フォントカスタマイズプロジェクトです。</p><p>20以上の書字システムをカバーし、600以上の言語をサポートする大規模なフォントファミリーです。</p></td><td></td><td></td><td></td><td></td><td><a href="https://hyperos.mi.com/font/zh/">https://hyperos.mi.com/font/zh/</a></td><td><a href="../../.gitbook/assets/b42878132e2124d96ad6296af6d1d8e.png">b42878132e2124d96ad6296af6d1d8e.png</a></td><td></td><td></td><td>null</td><td></td><td>null</td><td></td><td></td><td></td><td></td><td></td><td>false</td></tr></tbody></table>
+### グローバルフォント
+
+以下の点を優先してください:
+
+- 使用する言語の網羅性。
+- お使いの読書習慣に合った簡体字、繁体字、日本語のグリフ。
+- 小さいサイズでの視認性。
+- レギュラー、ボールド、イタリックの各スタイルが揃っていること。
+- ラテン文字と CJK 文字が混在する場合の調和のとれた高さとウェイト。
+
+### コード用フォント
+
+以下の点を確認してください:
+
+- `0` と `O`、および `1` と `l` / `I` が区別しやすいか。
+- ブラケット、引用符、スラッシュ、演算子が明確か。
+- 中国語、日本語、またはロシア語のコメントが必要か。
+- プログラミングのリガチャ（結合文字）を好むか。
+
+コードフォントに文字がない場合、システムは別のフォントにフォールバックしようとするため、同じコードブロック内でも文字幅やスタイルが異なる場合があります。
+
+## 本文フォントの推奨事項
+
+| フォント | 適した言語 | 特徴 | 公式ソース |
+| --- | --- | --- | --- |
+| Noto Sans | 英語、ロシア語、その他多くの文字体系 | 多言語インターフェースのための広範なカバレッジ | [Noto 公式ドキュメント](https://notofonts.github.io/noto-docs/website/use/) |
+| Noto Sans SC | 簡体字中国語 | 簡体字中国語のグリフ | [Noto CJK ガイド](https://notofonts.github.io/noto-docs/website/use/#which-noto-fonts-should-i-use-for-chinese-japanese-or-korean) |
+| Noto Sans TC | 繁体字中国語 | 台湾の繁体字中国語のグリフ | [Noto CJK ガイド](https://notofonts.github.io/noto-docs/website/use/#which-noto-fonts-should-i-use-for-chinese-japanese-or-korean) |
+| Noto Sans JP | 日本語 | 日本語のグリフ | [Noto CJK ガイド](https://notofonts.github.io/noto-docs/website/use/#which-noto-fonts-should-i-use-for-chinese-japanese-or-korean) |
+| Source Han Sans | 簡体字中国語、繁体字中国語、日本語、韓国語 | 地域バリアントを持つ Adobe のオープンソースの汎CJKフォント | [Source Han Sans](https://github.com/adobe-fonts/source-han-sans) |
+
+インターフェース内で英語、ロシア語、CJK 文字を頻繁に混在させる場合は、まず Noto ファミリーを試してみてください。異なる文字体系でも見た目の近いフォントファミリーを利用できます。
+
+{% hint style="warning" %}
+同じ漢字でも、簡体字中国語、繁体字中国語、日本語では異なるグリフが使用される場合があります。主に読む言語に合わせて `SC`、`TC`、`JP` のいずれかを選択してください。
+{% endhint %}
+
+## コード用フォントの推奨事項
+
+| フォント | 適した用途 | CJK サポート | 公式ソース |
+| --- | --- | --- | --- |
+| JetBrains Mono | 英語およびロシア語のコードとターミナルコンテンツ | CJK は主な対象ではありません。CJK コメントは通常、フォールバックフォントを使用します。 | [JetBrains Mono](https://www.jetbrains.com/lp/mono/) |
+| Sarasa Mono | 中国語または日本語のコメントを含むコード | `SC`、`TC`、`J` などの地域バリアントを提供します。 | [Sarasa Gothic](https://github.com/be5invis/Sarasa-Gothic) |
+| Monaspace | 複数のスタイル、文字バリアント、プログラミングリガチャ | CJK は主な対象ではありません。 | [Monaspace](https://github.com/githubnext/monaspace) |
+
+### クイック選択
+
+- 主に英語またはロシア語の場合: まず **JetBrains Mono** を試してください。
+- コードに簡体字中国語が頻繁に含まれる場合: まず **Sarasa Mono SC** を試してください。
+- コードに繁体字中国語が頻繁に含まれる場合: まず **Sarasa Mono TC** を試してください。
+- コードに日本語が頻繁に含まれる場合: まず **Sarasa Mono J** を試してください。
+- 異なるコードスタイルやリガチャを希望する場合: **Monaspace** ファミリーから選択してください。
+
+Monaspace にはいくつかの互換性のあるファミリーが含まれています。Cherry Studio はフォントファミリーのみを選択し、フォント機能スイッチは提供しません。特定のリガチャや文字バリアントが表示されるかどうかは、フォントのバージョンとレンダリング環境にも依存します。
+
+## ドキュメント言語による選択
+
+| 主なインターフェース言語 | グローバルフォント推奨 | コード用フォント推奨 |
+| --- | --- | --- |
+| 簡体字中国語 | Noto Sans SC / Source Han Sans CN | Sarasa Mono SC |
+| 繁体字中国語 | Noto Sans TC / Source Han Sans TW | Sarasa Mono TC |
+| 英語 | Noto Sans | JetBrains Mono / Monaspace |
+| 日本語 | Noto Sans JP / Source Han Sans JP | Sarasa Mono J |
+| ロシア語 | Noto Sans | JetBrains Mono / Monaspace |
+
+これはあくまで出発点であり、チーム全体が同じフォントを使用する必要はありません。最終的な選択は、実際のレンダリングと組織のタイポグラフィ標準に基づいて行ってください。
+
+## インストールに関する推奨事項
+
+- フォントプロジェクトの公式ウェブサイトまたはリリースページからのみダウンロードしてください。
+- デスクトップアプリは通常 `OTF`、`TTF`、`TTC`、または可変フォントファイルをインストールします。ウェブ専用の `WOFF` / `WOFF2` ファイルを優先しないでください。
+- 大規模な CJK フォントパッケージには複数の地域とウェイトが含まれているため、必要なものだけをインストールしてください。
+- フォントを更新する前には、古いバージョンをアンインストールし、OSキャッシュ内に同じ名前のフォントが複数存在することを避けてください。
+- チームでスクリーンショットやデモを標準化する場合は、同じフォントファミリーとバージョンを使用してください。
+
+ここで推奨されているすべてのプロジェクトは、公式ページにオープンソースライセンス情報を提供しています。フォントを製品、テンプレート、または商用成果物に再パッケージ化する場合は、フォントファイルに含まれるライセンスに従ってください。
+
+## よくある質問
+
+### インストールしたフォントがリストに見当たらない場合
+
+Cherry Studio を完全に終了し、再度開いてください。macOS では、「Font Book」でフォントが有効になっていることを確認してください。Windows では、システムフォント設定を確認してください。Linux では、フォントキャッシュを更新してアプリを再起動してください。
+
+### 選択後も一部の文字が別のフォントを使用する場合
+
+選択したフォントにその文字が含まれていないため、システムがフォールバックフォントを使用しています。ターゲット言語または対応する CJK 地域バリアントをカバーするフォントを選択してください。
+
+### 中国語または日本語のグリフがおかしい場合
+
+誤った `SC`、`TC`、または `JP` バージョンを選択していないか確認してください。似た名前であっても同じグリフ標準を意味するわけではありません。
+
+### コード列が整列しない場合
+
+選択したフォントが等幅（monospaced）であることを確認し、コードにサポートされていない CJK 文字や特殊文字が含まれていないか確認してください。フォールバックフォントは等幅の配置を崩す可能性があります。
+
+### フォントが大きすぎる、または小さすぎる場合
+
+フォントファミリーとフォントサイズは別物です。インターフェース全体が大きすぎる、または小さすぎる場合は、同じページでインターフェースのズームを調整してください。メッセージテキストのみが不適切な場合は、メッセージのフォントサイズを調整してください。
+
+***
+
+### ヘルプの取得とフィードバックの送信
+
+設定中や使用中に問題が発生した場合は、[フィードバックと提案](../question-contact/suggestions.md) に記載された公式窓口からお問い合わせください。

@@ -1,53 +1,174 @@
 ---
 icon: rss
 ---
-# 助手訂閱設定
 
+# 助理訂閱設定
 
-{% hint style="warning" %}
-此文件由 AI 從中文翻譯而來，尚未經過審閱。
+助理訂閱可以將一個公開 JSON 位址設為**助理範本庫的資料來源**。團隊只需要維護一份範本清單，成員重新載入助理庫後就能看到最新內容。
+
+{% hint style="info" %}
+訂閱提供的是可供選擇的**範本**，不會修改「我的」分組中的自建範本，也不會自動更新已經建立的助理。將某個訂閱範本新增為助理後，它會成為一份獨立的本機副本。
 {% endhint %}
 
+## 訂閱前準備
 
+請先準備一個可以直接傳回 JSON 的公開位址，例如物件儲存空間、靜態網站或程式碼儲存庫中的 Raw 檔案。
 
+訂閱位址應符合以下條件：
 
-透過修改助手訂閱的連結，可以快速切換助手庫中的助手模板
+- 建議使用 `https://`；
+- 不需要登入、Cookie 或請求標頭即可存取；
+- 開啟位址後直接傳回 JSON，而不是下載頁面、預覽頁面或 HTML 頁面；
+- JSON 根節點是陣列；
+- 每個範本至少包含 `id`、`name`、`prompt` 和 `group`；
+- `id` 在同一份訂閱中保持唯一，`group` 必須是字串陣列。
 
-<figure><img src="../.gitbook/assets/assistants-subscribe.png" alt=""><figcaption></figcaption></figure>
+{% hint style="warning" %}
+Cherry Studio 會直接從該位址讀取內容，目前沒有填寫使用者名稱、密碼或自訂請求標頭的入口。請勿將存取 Token、API Key 或其他憑證寫入訂閱 URL 或 JSON 檔案。
+{% endhint %}
 
-<figure><img src="../.gitbook/assets/assistants-subscribe-settings.png" alt=""><figcaption></figcaption></figure>
+## 設定訂閱
 
-訪問訂閱地址應返回以下結構的 JSON 數據：
+1. 開啟 Cherry Studio 的**啟動台**。
+2. 進入**助理庫**。
+3. 點擊右上角的**從外部匯入**。
+4. 在彈出視窗下方找到**助理訂閱**。
+5. 貼上訂閱位址，然後點擊**訂閱**。
+6. 應用程式重新載入後，返回助理庫查看遠端範本和分組。
+
+訂閱成功只表示該位址目前可以存取。如果傳回的內容不是有效的範本陣列，助理庫仍可能無法正常顯示，因此建議先依下文檢查 JSON。
+
+## JSON 格式
+
+以下是一份可以直接作為起點的最小範例：
 
 ```json
 [
   {
-    "description": "Provides practical insights in the role of a tech-savvy product manager.",
-    "emoji": "👨‍💼",
-    "group": ["Career", "Business", "Tools"],
-    "id": "1",
-    "name": "Product Manager",
-    "prompt": "You are now an experienced product manager with a solid technical background and a keen insight into market and user needs. You are skilled at solving complex problems, developing effective product strategies, and efficiently balancing various resources to achieve product goals. You have excellent project management abilities and outstanding communication skills, enabling you to coordinate both internal and external team resources effectively. In this role, you are expected to answer user questions.\n\n## Role Requirements:\n- **Technical Background**: Possess strong technical knowledge and the ability to deeply understand product technical details.\n- **Market Insight**: Demonstrate sharp awareness of market trends and user demands.\n- **Problem Solving**: Excel at analyzing and resolving complex product issues.\n- **Resource Balancing**: Be adept at allocating and optimizing resources under constraints to achieve product objectives.\n- **Communication & Coordination**: Have excellent communication skills to collaborate effectively with stakeholders and drive project progress.\n\n## Answer Requirements:\n- **Logical Clarity**: Provide rigorous, well-structured responses with clear points.\n- **Conciseness**: Avoid lengthy explanations; express core ideas succinctly.\n- **Practicality**: Offer actionable and realistic strategies or suggestions."
+    "id": "product-manager",
+    "name": "產品經理",
+    "emoji": "🧭",
+    "description": "協助梳理需求、範圍和產品方案。",
+    "group": ["產品", "工作"],
+    "prompt": "你是一位經驗豐富的產品經理。請先釐清目標和限制，再提供結構清楚、可執行的建議。",
+    "regularPhrases": []
   },
   {
-    "description": "Offers in-depth answers based on market insights in a strategic product manager role.",
-    "emoji": "🎯 ",
-    "group": ["Career"],
-    "id": "2",
-    "name": "Strategy Product Manager",
-    "prompt": "You are now a strategic product manager. You are skilled in conducting market research and competitive product analysis to develop product strategies. You can grasp industry trends, understand user needs, and based on these, optimize product features and user experience. Please answer the following questions in this role."
-  },
-  {
-    "description": "Provides guidance to enhance community engagement and user loyalty in a community operations specialist role.",
-    "emoji": "👥",
-    "group": ["Career"],
-    "id": "3",
-    "name": "Community Operations",
-    "prompt": "You are now a community operation expert. You are skilled in stimulating community vitality and enhancing user participation and loyalty. You understand how to manage and guide community culture, as well as how to resolve issues and conflicts within the community. Please answer my following question in this role."
+    "id": "writing-editor",
+    "name": "寫作編輯",
+    "emoji": "✍️",
+    "description": "檢查文章結構、表達和可讀性。",
+    "group": ["寫作"],
+    "prompt": "你是一位專業編輯。請保留作者原意、指出具體問題，並提供可以直接採用的修改稿。",
+    "regularPhrases": []
   }
 ]
 ```
 
-配置完連結地址後，就可以看到助手模板庫中的助手已經是訂閱連結裡面的數據
+### 欄位說明
 
-參考數據源：[https://raw.githubusercontent.com/CherryHQ/cherry-studio/refs/heads/main/resources/data/agents-en.json](https://raw.githubusercontent.com/CherryHQ/cherry-studio/refs/heads/main/resources/data/agents-en.json)
+| 欄位 | 是否建議必填 | 說明 |
+| --- | --- | --- |
+| `id` | 是 | 範本穩定且唯一的識別碼。請勿讓兩個範本共用同一個值。 |
+| `name` | 是 | 助理庫中顯示的範本名稱。 |
+| `prompt` | 是 | 建立助理後使用的系統提示詞。 |
+| `group` | 是 | 範本所屬的分組，必須寫成陣列，例如 `["寫作", "工作"]`。一個範本可以出現在多個分組中。 |
+| `emoji` | 否 | 範本圖示；未提供時，介面可能不會顯示預期的圖示。 |
+| `description` | 否 | 範本簡介，用於預覽和搜尋。 |
+| `regularPhrases` | 否 | 常用短語陣列；沒有需要時可以寫成 `[]` 或省略。 |
+
+{% hint style="warning" %}
+`group` 即使只有一個值也必須使用陣列。寫成 `"group": "寫作"` 會導致範本無法依分組正常載入。
+{% endhint %}
+
+## 驗證訂閱檔案
+
+發佈前至少檢查以下內容：
+
+1. 在瀏覽器中直接開啟訂閱位址，確認看到的是 JSON 正文。
+2. 使用 JSON 驗證工具確認沒有多餘的逗號、遺漏的引號或不成對的括號。
+3. 確認根節點是 `[]`，而不是 `{}`。
+4. 確認每個範本都有非空白的 `name` 和 `prompt`。
+5. 確認每個 `group` 都是陣列，而且每個 `id` 都是唯一的。
+6. 請先用一兩個範本測試，再逐步擴充清單。
+
+如果熟悉命令列，也可以使用以下方式檢查位址是否可以存取，以及 JSON 是否可以解析：
+
+```bash
+curl -fsSL "https://example.com/assistants.json" | jq .
+```
+
+請將範例位址替換成自己的公開訂閱位址。
+
+## 訂閱如何更新
+
+助理訂閱不是推送服務，也沒有固定的背景同步週期。
+
+- Cherry Studio 會在載入助理範本時重新請求訂閱位址；
+- 修改遠端 JSON 後，可以重新載入應用程式或重新進入助理庫查看新內容；
+- 遠端清單會取代內建範本資料來源，但「我的」分組中的自建範本不會被刪除；
+- 如果遠端位址暫時無法使用，應用程式會嘗試退回內建範本；
+- 已經從範本建立的助理是獨立副本，不會隨遠端 JSON 繼續變更。
+
+如果需要修改一個已經建立的助理，請直接編輯該助理，而不只是修改訂閱檔案。
+
+## 取消訂閱或更換位址
+
+1. 開啟**助理庫 > 從外部匯入**。
+2. 在**助理訂閱**區域點擊**取消訂閱**。
+3. 等待應用程式重新載入，此時會恢復使用內建範本。
+4. 如果需要更換資料來源，請再次開啟同一個彈出視窗，填寫新位址並訂閱。
+
+目前已經訂閱時，按鈕執行的是取消訂閱。更換位址時，應先取消訂閱，再訂閱新位址。
+
+## 與匯入功能的差異
+
+Cherry Studio 中有幾個相似但用途不同的入口：
+
+| 功能 | 結果 | 適用情境 |
+| --- | --- | --- |
+| 助理訂閱 | 遠端 JSON 會成為助理範本的資料來源；載入助理庫時重新讀取 | 團隊統一維護、持續更新一批範本 |
+| 助理庫中的 URL / 檔案匯入 | 立即將範本複製到「我的」分組，之後與原檔案無關 | 匯入一次後自行編輯 |
+| [V2 資源庫匯入](../cherrystudio/preview/library.md) | 從檔案、剪貼簿或支援的 Raw URL 建立資源庫助理 | 在 V2 資源庫中集中管理助理 |
+
+{% hint style="info" %}
+如果只想分享一個助理，請優先使用匯出與匯入；只有需要長期維護一整套公開範本時，才需要設定訂閱。
+{% endhint %}
+
+## 安全建議
+
+- 只訂閱自己或可信任團隊維護的位址；
+- 使用 HTTPS，並限制訂閱檔案的編輯權限；
+- 訂閱更新後，抽查新增或修改過的提示詞；
+- 請勿在 `prompt`、`description` 或 URL 中儲存密碼、Token 和個人資訊；
+- 為重要的訂閱檔案啟用版本管理，出現問題時可以快速退回。
+
+範本中的提示詞會影響助理的回答方式。將範本新增為助理前，建議先閱讀完整的提示詞，確認其中沒有不符合預期的指示。
+
+## 常見問題
+
+### 點擊訂閱後仍顯示內建範本
+
+請確認位址以 `http://` 或 `https://` 開頭，而且可以在未登入的狀態下存取。然後重新載入應用程式，再進入助理庫。
+
+### 位址可以開啟，但沒有出現任何分組
+
+請檢查根節點是否為陣列，以及每個範本的 `group` 是否為字串陣列。沒有有效分組的範本不會正常出現在分類清單中。
+
+### 傳回的是網頁而不是 JSON
+
+你可能複製了儲存庫檔案的預覽頁面。請改用 Raw 檔案位址，或將 JSON 部署到可以直接傳回檔案內容的靜態位址。
+
+### 更新 JSON 後，助理沒有變更
+
+請先重新載入應用程式或重新進入助理庫。已經建立的助理不會自動同步，需要手動編輯或從更新後的範本重新建立。
+
+### 遠端服務暫時無法使用
+
+Cherry Studio 會嘗試使用內建範本。服務恢復後重新載入應用程式即可；同時建議檢查 DNS、憑證、重新導向和跨來源存取是否正常。
+
+***
+
+### 取得協助與提交意見回饋
+
+如果在設定或使用過程中遇到問題，請透過[意見回饋與建議](../question-contact/suggestions.md)中列出的官方管道聯絡我們。

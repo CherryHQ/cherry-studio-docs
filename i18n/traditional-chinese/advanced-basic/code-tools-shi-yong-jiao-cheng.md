@@ -1,112 +1,90 @@
 ---
-description: Tools
+description: 在 Cherry Studio 中設定並啟動 AI 程式設計 CLI
 icon: code
 ---
-# Code Tools 使用教學
 
+# 程式碼工具
+
+程式碼工具用於在 Cherry Studio 中設定並啟動 AI 程式設計 CLI。你可以重複使用已設定的模型服務、指定專案目錄和終端機，再於獨立的終端機視窗中使用 CLI。
+
+## 開始之前
+
+* 程式碼工具需要 **Bun**。如果頁面提示尚未安裝，請點選提示中的 **安裝 Bun**。
+* 使用 Kimi CLI 時還需要 **uv**；可以在 **設定 → MCP 伺服器 → 環境依賴** 中安裝。
+* 除 GitHub Copilot CLI 外，請先在 Cherry Studio 中設定可用的模型服務和 API Key。
 
 {% hint style="warning" %}
-此文件由 AI 從中文翻譯而來，尚未經過審閱。
+AI 程式設計 CLI 可以在所選工作目錄中讀取、修改檔案並執行指令。建議先使用 Git 或其他方式儲存目前版本，且不要選擇包含無關敏感檔案的目錄。
 {% endhint %}
 
+## 開啟程式碼工具
 
+1. 點選頂部分頁列右側的 `+`，開啟啟動台。
+2. 點選 **程式碼**。
+3. 在程式碼工具頁面選擇要使用的 CLI。
 
+![程式碼工具頁面中的 CLI 入口](../.gitbook/assets/cherry-v2-091-code-tools-overview-zh-tw.png)
 
-Cherry Studio v1.5.7 版本引入了操作簡單、強大的 Code Agent 功能，可以直接啟動和管理多種 AI 編程 agent。本教學將引導您完成設定和啟動的完整流程。
+目前支援：
 
-***
+| CLI | 模型來源 |
+| :--- | :--- |
+| Claude Code | Anthropic 相容模型 |
+| Qwen Code | OpenAI 相容模型 |
+| Gemini CLI | Gemini 相容模型 |
+| OpenAI Codex | OpenAI 或 OpenAI Responses 相容模型 |
+| iFlow CLI | OpenAI 相容模型 |
+| GitHub Copilot CLI | 不顯示模型選擇；使用 GitHub Copilot 本身的驗證和模型能力 |
+| Kimi CLI | OpenAI 相容模型 |
+| OpenCode | OpenAI、OpenAI Responses 或 Anthropic 相容模型 |
 
-### 操作步驟
+模型清單會依所選 CLI 支援的 Endpoint 類型自動篩選。如果某個模型未顯示，請先檢查供應商是否已啟用、模型是否已新增，以及 Endpoint 類型是否相容。
 
-#### 1. 升級 Cherry Studio
+## 設定並啟動
 
-首先，請確保您的 Cherry Studio 已升級到 **v1.5.7** 或更高版本。您可以前往 [GitHub Releases](https://github.com/CherryHQ/cherry-studio/releases) 或官方網站下載最新版本。
+選擇 CLI 卡片後，請在設定視窗中完成以下項目：
 
-<figure><img src="../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
+![程式碼工具的啟動設定視窗](../.gitbook/assets/cherry-v2-091-code-tools-config-zh-tw.png)
 
-#### 2. 調整導覽列位置
+1. **模型**：選擇要交由 CLI 使用的模型。GitHub Copilot CLI 沒有此項目。
+2. **工作目錄**：選擇 CLI 啟動時進入的專案目錄。最近使用的目錄會保留在清單中。
+3. **終端機**：在 macOS 或 Windows 上選擇已偵測到的終端機。在 Windows 上使用 WSL、Alacritty 或 WezTerm 時，如果無法自動找到程式，必須設定自訂執行檔路徑。
+4. **環境變數**：依 `KEY=value` 格式填寫，每行一個。Cherry Studio 會依模型產生必要的變數；在此填寫的同名變數會覆蓋自動產生的值。
+5. **檢查更新並安裝最新版本**：視需要啟用。啟用後，啟動前會查詢並更新所選 CLI。
+6. 點選 **啟動**。
 
-為了方便使用頂部標籤頁功能，我們建議將導覽列調整至頂部。
+如果 CLI 尚未安裝，Cherry Studio 會在第一次啟動時下載並安裝，接著在所選終端機和工作目錄中執行。Kimi CLI 由 uv 負責下載和啟動，因此第一次執行同樣需要網路連線。
 
-* 操作路徑：`設定` -> `顯示設定` -> `導覽列設定`
-* 將「導覽列位置」選項設定為 **`頂部`**。
+{% hint style="info" %}
+GitHub Copilot CLI 不使用 Cherry Studio 的模型選擇器。如需額外的驗證資訊，請依該 CLI 的要求在環境變數區域設定，例如使用 `GITHUB_TOKEN`。
+{% endhint %}
 
-<figure><img src="../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+## 環境變數與金鑰
 
-#### 3. 新增標籤頁
+除自訂環境變數外，Cherry Studio 會從所選模型服務讀取 API 位址、模型識別碼和 API Key，並轉換為對應 CLI 所需的變數或啟動參數。
 
-點選介面頂部的「+」號圖示，新增一個空白標籤頁。
+自訂變數適合用於代理位址或 CLI 專用開關。填寫前請先確認變數名稱；同名自訂值的優先順序高於自動產生值，錯誤覆蓋可能造成驗證或連線失敗。
 
-<figure><img src="../.gitbook/assets/image (2) (1) (1).png" alt=""><figcaption></figcaption></figure>
+{% hint style="warning" %}
+請勿在截圖、日誌或公開問題中揭露 API Key、GitHub Token 或其他憑證。程式碼工具會將自訂環境變數儲存在目前的設定中，只應在可信任的裝置上使用。
+{% endhint %}
 
-#### 4. 開啟 Code Agent 功能
+## 常見問題
 
-在新建立的標籤頁中，點選 `Code`（或 `</>`）圖示，進入 Code Agent 設定介面。
+### 啟動按鈕無法使用
 
-<figure><img src="../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+確認已安裝 Bun、已選擇工作目錄，並為 GitHub Copilot CLI 以外的工具選擇模型。
 
-#### 5. 選擇 CLI 工具
+### 模型清單是空的
 
-根據您的需求和所持有的 API Key，選擇一個要使用的 Code Agent 工具。目前支援以下幾種：
+所選 CLI 只會顯示 Endpoint 類型相容的模型。返回模型服務設定，檢查供應商是否已啟用、API Key 是否可用、模型是否已新增，以及模型的 Endpoint 類型。
 
-* **Claude Code**
-* **Gemini CLI**
-* **Qwen Code**
-* **OpenAI Codex**
+### Kimi CLI 提示找不到 uv
 
-<figure><img src="../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+前往 **設定 → MCP 伺服器 → 環境依賴** 安裝 uv。安裝後仍無法識別時，請重新啟動 Cherry Studio。
 
-#### 6. 選擇 Agent 呼叫的模型
+### 終端機未開啟
 
-在模型下拉式選單中，選擇與您所選 CLI 工具相容的模型。_（詳細的模型相容性說明，請參考下方的「重要注意事項」）_
+改用系統預設終端機。在 Windows 上使用其他終端機時，請確認對應的程式已安裝；WSL、Alacritty 或 WezTerm 還可以透過 **設定自訂終端機路徑** 指定執行檔。
 
-<figure><img src="../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
-
-#### 7. 指定工作目錄
-
-點選「選擇目錄」按鈕，為 Agent 指定一個工作目錄。Agent 將擁有存取此目錄下所有檔案和子目錄的權限，以便於它理解專案上下文、讀取檔案和執行程式碼。
-
-<figure><img src="../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
-
-#### 8. 設定環境變數
-
-* **自動設定**：您在第 6 步（模型）和第 7 步（工作目錄）中的選擇，會自動產生相應的環境變數。
-* **自訂新增**：如果您的 Agent 或專案需要其他特定的環境變數（例如 `PROXY_URL` 等），可以在此區域自訂新增。
-
-<figure><img src="../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
-
-#### 9. 更新選項
-
-* **內建可執行檔**：Cherry Studio 已為您整合了上述所有 Code Agent 的可執行檔，在多數情況下，您無需連網即可直接使用。
-* **自動更新**：如果您希望 Agent 始終保持最新版本，可以勾選 **`檢查更新並安裝最新版本`** 的選項。勾選後，每次啟動時程式都會連網檢查並更新 Agent 工具。
-
-<figure><img src="../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
-
-#### 10. 啟動 Agent
-
-所有設定完成後，點選 **`啟動`** 按鈕。 Cherry Studio 會自動呼叫您系統自帶的 Terminal（終端）工具，並在其中載入所有環境變數，然後執行您選擇的 Code Agent。現在您可以在彈出的終端視窗中與 AI Agent 進行互動了。
-
-<figure><img src="../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
-
-***
-
-### 重要注意事項
-
-1. **模型相容性說明**：
-   * **Claude Code**: 需要選擇支援 Anthropic API Endpoint 格式的模型。目前官方支援的模型包括：
-     * Claude 系列模型
-     * DeepSeek V3.1 (官方 API 平台)
-     * Kimi K2 (官方 API 平台)
-     * 智譜 GLM 4.5 (官方 API 平台)
-     * **注意**：目前許多第三方服務商（如 One API, New API 等）針對 DeepSeek, Kimi, GLM 的 API 介面大多只支援 OpenAI Chat Completions 格式，可能無法與 Claude Code 直接相容，需要等待服務商逐步適配。
-   * **Gemini CLI**: 需要選擇 Google 的 Gemini 系列模型。
-   * **Qwen Code**: 支援 OpenAI Chat Completions API 格式的模型，強烈推薦使用 **`Qwen3 Coder`** 系列模型以獲得最佳程式碼生成效果。
-   * **OpenAI Codex**: 支援 GPT 系列模型（如 `gpt-4o`, `gpt-5` 等）。
-2. **依賴與環境衝突**：
-   * Cherry Studio 內部整合了獨立的 Node.js 執行環境、Code Agent 可執行檔及環境變數配置，旨在提供一個開箱即用的純淨環境。
-   * 如果您在啟動 Agent 時遇到依賴衝突或奇怪的錯誤，可以考慮暫時**解除安裝或停用系統內已安裝的相關依賴**（如全域安裝的 Node.js 或特定工具鏈），以排除衝突。
-3. **API Token 消耗警告**：
-   * **Code Agent 對 API Token 的消耗量非常大**。在處理複雜任務時，Agent 爲了思考、規劃和生成程式碼，可能會產生大量請求，導致 Token 快速消耗。
-   * 請務必根據自己的 API 額度和預算，**量力而為**，密切關注 Token 使用情況，以防止預算超支。
-
-希望本教學能幫助您快速上手 Cherry Studio 強大的 Code Agent 功能！
+第一次啟動、安裝 CLI 或檢查更新都需要網路，可能需要稍候。若操作失敗，請先檢查網路、代理和 API 服務設定，再重新啟動。

@@ -1,154 +1,125 @@
 ---
 icon: download
 ---
-# 客戶端下載
 
+# 用戶端下載
 
-{% hint style="warning" %}
-此文件由 AI 從中文翻譯而來，尚未經過審閱。
-{% endhint %}
+Cherry Studio 提供 Windows、macOS 和 Linux 安裝套件。為避免下載頁面的特定版本號過期，本頁只保留長期有效的官方入口；開啟下載頁面後，請選擇最新穩定版和符合系統架構的檔案。
 
+## 官方下載入口
 
-
-
-{% hint style="info" %}
-當前最新正式版：v1.6.7
-{% endhint %}
-
-## 直鏈下載
-
-### Windows 版本
+* [Cherry Studio 官方網站下載頁面](https://cherry-ai.com/download)
+* [GitHub Releases](https://github.com/CherryHQ/cherry-studio/releases)
+* [GitHub 最新穩定版](https://github.com/CherryHQ/cherry-studio/releases/latest)
 
 {% hint style="warning" %}
-注意：Windows 7 系統不支援安裝 Cherry Studio。
+請只從 Cherry Studio 官方網站、`CherryHQ/cherry-studio` 官方儲存庫或下載頁面明確列出的映像站取得安裝套件。請勿執行來源不明、經過重新封裝或要求關閉安全軟體的安裝程式。
 {% endhint %}
 
-#### 安裝版（Setup）
+## 選擇穩定版或預覽版
 
-<details>
+| 類型 | 如何辨識 | 適合對象 |
+| :--- | :--- | :--- |
+| 穩定版 | 在 GitHub Releases 中標記為 **Latest**，版本號通常不含 `alpha`、`beta` 或 `rc` | 日常使用，建議選擇 |
+| 預發行版 | 標記為 **Pre-release**，版本號可能包含 `alpha`、`beta` 或 `rc` | 希望提前測試新功能的使用者 |
+| 每日預覽建置 | 來自官方 [V2 Daily Preview Build](https://github.com/CherryHQ/cherry-studio/actions/workflows/v2-daily-preview-build.yml) | 開發、測試和問題重現 |
 
-<summary>x64 版本</summary>
+預覽版可能包含尚未完成的資料遷移、介面或相容性變更。安裝前請先完成備份；重要資料環境應優先使用穩定版。
 
-主線路：
+## Windows
 
-【[Cherry Studio 官網](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.7/Cherry-Studio-1.6.7-x64-setup.exe)】
+### 選擇架構
 
-備用線路：
+開啟**設定 → 系統 → 系統資訊**，查看「系統類型」：
 
-【[線路1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.7/Cherry-Studio-1.6.7-x64-setup.exe)】 【[線路2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.7/Cherry-Studio-1.6.7-x64-setup.exe)】 【[線路3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.7/Cherry-Studio-1.6.7-x64-setup.exe)】
+* `x64` 或「x64 型處理器」：下載 `x64`。
+* `ARM64` 或「ARM 型處理器」：下載 `arm64`。
 
-</details>
+多數 Intel 和 AMD 電腦使用 `x64`。只有 Windows on ARM 裝置使用 `arm64`。
 
-<details>
+### 選擇安裝套件
 
-<summary>ARM64 版本</summary>
+| 檔案類型 | 說明 |
+| :--- | :--- |
+| `*-x64-setup.exe` / `*-arm64-setup.exe` | 安裝版；支援選擇安裝目錄並建立捷徑 |
+| `*-x64-portable.exe` / `*-arm64-portable.exe` | 可攜版；適合不想執行安裝流程的情境 |
 
-主線路：
+{% hint style="warning" %}
+Cherry Studio 不支援 Windows 7。請在支援的 Windows 版本上安裝。
+{% endhint %}
 
-【[Cherry Studio 官網](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.7/Cherry-Studio-1.6.7-arm64-setup.exe)】
+安裝步驟和系統安全提示請參閱 [Windows 安裝教學](../pre-basic/installation/windows.md)。
 
-備用線路：
+## macOS
 
-【[線路1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.7/Cherry-Studio-1.6.7-arm64-setup.exe)】 【[線路2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.7/Cherry-Studio-1.6.7-arm64-setup.exe)】 【[線路3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.7/Cherry-Studio-1.6.7-arm64-setup.exe)】
+開啟**蘋果選單 → 關於這台 Mac**，查看「晶片」或「處理器」：
 
-</details>
+* 顯示 Apple M 系列晶片：下載 `arm64`。
+* 顯示 Intel 處理器：下載 `x64`。
 
-#### 便攜版（Portable）
+| 檔案類型 | 說明 |
+| :--- | :--- |
+| `*-arm64.dmg` / `*-x64.dmg` | 建議使用的圖形化安裝套件 |
+| `*-arm64.zip` / `*-x64.zip` | 壓縮檔版本 |
 
-<details>
+Apple Silicon 套件適用於 M1、M2、M3、M4 等 Apple 晶片。如果選錯架構，應用程式可能無法開啟，或只能透過相容層執行。
 
-<summary>x64 版本</summary>
+安裝步驟和「無法驗證開發者」等提示請參閱 [macOS 安裝教學](../pre-basic/installation/macos.md)。
 
-主線路：
+## Linux
 
-【[Cherry Studio 官網](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.7/Cherry-Studio-1.6.7-x64-portable.exe)】
+在終端機中執行：
 
-備用線路：
+```bash
+uname -m
+```
 
-【[線路1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.7/Cherry-Studio-1.6.7-x64-portable.exe)】 【[線路2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.7/Cherry-Studio-1.6.7-x64-portable.exe)】 【[線路3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.7/Cherry-Studio-1.6.7-x64-portable.exe)】
+* 輸出 `x86_64`：選擇 `x86_64` 或 `amd64`。
+* 輸出 `aarch64` / `arm64`：選擇 `arm64` / `aarch64`。
 
-</details>
+官方 Release 通常提供：
 
-<details>
+| 檔案類型 | 適用情境 |
+| :--- | :--- |
+| `.AppImage` | 跨發行版直接執行 |
+| `.deb` | Debian、Ubuntu 及其衍生發行版 |
+| `.rpm` | Fedora、RHEL、Rocky Linux 等 RPM 系列發行版 |
 
-<summary>ARM64 版本</summary>
+不同格式的架構命名可能不同，例如 x64 在 `.deb` 檔名中通常寫成 `amd64`，在 AppImage 中可能寫成 `x86_64`。
 
-主線路：
+## 下載後檢查
 
-【[Cherry Studio 官網](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.7/Cherry-Studio-1.6.7-arm64-portable.exe)】
+1. 確認檔案來自官方網域或 `github.com/CherryHQ/cherry-studio`。
+2. 再次核對作業系統、架構和安裝套件格式。
+3. 如果 Release 頁面提供 SHA-256 摘要，請在執行前與本機檔案摘要比對。
+4. 更新或測試預覽版前，先備份 Cherry Studio 資料。
 
-備用線路：
+### 計算 SHA-256
 
-【[線路1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.7/Cherry-Studio-1.6.7-arm64-portable.exe)】 【[線路2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.7/Cherry-Studio-1.6.7-arm64-portable.exe)】 【[線路3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.7/Cherry-Studio-1.6.7-arm64-portable.exe)】
+{% tabs %}
+{% tab title="Windows PowerShell" %}
+```powershell
+Get-FileHash .\Cherry-Studio-安裝套件檔名 -Algorithm SHA256
+```
+{% endtab %}
 
-</details>
+{% tab title="macOS" %}
+```bash
+shasum -a 256 ~/Downloads/Cherry-Studio-安裝套件檔名
+```
+{% endtab %}
 
-***
+{% tab title="Linux" %}
+```bash
+sha256sum ~/Downloads/Cherry-Studio-安裝套件檔名
+```
+{% endtab %}
+{% endtabs %}
 
-### macOS 版本
+輸出必須與官方 Release 中對應檔案的 SHA-256 完全一致。如果不一致，請勿執行該檔案，並從官方入口重新下載。
 
-<details>
+## 下一步
 
-<summary>Intel 晶片版本（x64）</summary>
-
-主線路：
-
-【[Cherry Studio 官網](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.7/Cherry-Studio-1.6.7-x64.dmg)】
-
-備用線路：
-
-【[線路1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.7/Cherry-Studio-1.6.7.dmg)】 【[線路2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.7/Cherry-Studio-1.6.7-x64.dmg)】 【[線路3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.7/Cherry-Studio-1.6.7-x64.dmg)】
-
-</details>
-
-<details>
-
-<summary>Apple Silicon 版本（ARM64，M 系列晶片）</summary>
-
-主線路：
-
-【[Cherry Studio 官網](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.7/Cherry-Studio-1.6.7-arm64.dmg)】
-
-備用線路：
-
-【[線路1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.7/Cherry-Studio-1.6.7-arm64.dmg)】 【[線路2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.7/Cherry-Studio-1.6.7-arm64.dmg)】 【[線路3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.7/Cherry-Studio-1.6.7-arm64.dmg)】
-
-</details>
-
-***
-
-### Linux 版本
-
-<details>
-
-<summary>x86_64 版本</summary>
-
-主線路：
-
-【[Cherry Studio 官網](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.7/Cherry-Studio-1.6.7-x86_64.AppImage)】
-
-備用線路：
-
-【[線路1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.7/Cherry-Studio-1.6.7-x86_64.AppImage)】 【[線路2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.7/Cherry-Studio-1.6.7-x86_64.AppImage)】 【[線路3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.7/Cherry-Studio-1.6.7-x86_64.AppImage)】
-
-</details>
-
-<details>
-
-<summary>ARM64 版本</summary>
-
-主線路：
-
-【[Cherry Studio 官網](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.7/Cherry-Studio-1.6.7-arm64.AppImage)】
-
-備用線路：
-
-【[線路1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.7/Cherry-Studio-1.6.7-arm64.AppImage)】 【[線路2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.7/Cherry-Studio-1.6.7-arm64.AppImage)】 【[線路3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.7/Cherry-Studio-1.6.7-arm64.AppImage)】
-
-</details>
-
-***
-
-## 網盤下載
-
-[夸克](https://pan.quark.cn/s/4044324d0ecd#/list/share)
+* [安裝教學](../pre-basic/installation/)
+* [設定模型服務](../pre-basic/providers/)
+* [對話介面](preview/chat.md)

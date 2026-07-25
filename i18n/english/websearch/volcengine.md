@@ -1,106 +1,316 @@
 ---
-description: cherry studio使用「火山引擎」接入deepseekR1联网功能，喂饭教程。
-hidden: True
+description: Let Volcengine Ark models use Cherry Studio Web Search tools
 icon: globe-pointer
 ---
-# Volcengine Internet Access Integration
 
+# Web Search for Volcengine Models
+
+Cherry Studio V2 can give Volcengine Ark chat models access to external web search. The recommended combination is:
+
+```text
+Volcengine Ark model
+    + Cherry Studio Default Search Provider
+    + Cherry Studio Default URL Retrieval Provider
+```
+
+The current V2 does not register Volcengine Ark Web Search as an independent web search provider, and it does not automatically inject Ark's cloud Web Search tool into the built-in `doubao` provider.
 
 {% hint style="warning" %}
-This document was translated from Chinese by AI and has not yet been reviewed.
+The path in older tutorials—“create a zero-code app → enable the Web Search plugin → connect the app as an OpenAI model”—is not recommended for the current V2. The interface, plugins, and APIs have changed; do not keep copying old screenshots or old API Host formats.
 {% endhint %}
 
+## Understand the Two Web Search Capabilities
 
+| Method | Who performs the search | Current status in Cherry Studio V2 | Recommended use |
+| --- | --- | --- | --- |
+| Cherry Studio external web search | Search providers such as ExaMCP, Tavily, SearXNG, and Bocha | Supported | Regular chat and centralized search service management |
+| Volcengine Ark cloud Web Search | Volcengine Ark Responses API or app plugin | No dedicated adaptation | You already develop an app on Ark and are willing to verify the API yourself |
 
+This page covers the first method. It does not require creating “My App” in Volcengine Ark or depend on the legacy Web Search plugin.
 
-### 1. Log in/Register for a "Volcengine" account <a href="#rclz7" id="rclz7"></a>
+### Cherry Studio External Web Search
 
-Visit official website: [https://www.volcengine.com/](https://www.volcengine.com/)
+When the current model is not recognized as a native web search model, Cherry Studio gives it:
 
-<figure><img src="../.gitbook/assets/image (51).png" alt=""><figcaption><p>Volcengine Official Website</p></figcaption></figure>
+- A keyword search tool;
+- A URL reading tool.
 
-### 2. Create "My Application" with Internet Access <a href="#gvzaa" id="gvzaa"></a>
+The model uses Function Calling to decide when to search and read web pages. Search results are returned to the model, which then generates an answer with citations.
 
-2.1. Log in to Volcengine, go to the "Volcengine Ark" page, portal: [https://console.volcengine.com/ark](https://console.volcengine.com/ark)
+### Volcengine Ark Cloud Web Search
 
-2.2. **Click in order:** <mark style="color:red;">**"My Applications" - "Create Application" - "No-Code" - "Single Chat"**</mark> &#x20;
+The Volcengine Ark website provides cloud tools such as Responses API, Web Search, Knowledge Search, and Remote MCP. These are Ark API capabilities and are not the same as Cherry Studio's Web Search settings.
 
-<figure><img src="../.gitbook/assets/image (53).png" alt=""><figcaption></figcaption></figure>
+The built-in `doubao` provider currently uses the following by default:
 
-<figure><img src="../.gitbook/assets/image (54).png" alt=""><figcaption></figcaption></figure>
+```text
+OpenAI Chat Completions
+```
 
-<figure><img src="../.gitbook/assets/image (71).png" alt=""><figcaption></figcaption></figure>
+Default API Host:
 
-### 3. Fill in Information and Publish Application <a href="#zzdfe" id="zzdfe"></a>
+```text
+https://ark.cn-beijing.volces.com/api/v3/
+```
 
-**Application Name**: You can name it anything according to the requirements. (Fields marked with <mark style="color:red;">**\* are required**</mark>, others can be left blank)
+Support for a Responses API tool on the official website does not mean that Cherry Studio automatically supports its request fields, event stream, or citation results.
 
-<mark style="color:red;">**Key point: The Internet Access Plugin must be enabled (needs to be activated first)**</mark>
+## Before You Begin
 
-<figure><img src="../.gitbook/assets/image (56).png" alt=""><figcaption></figcaption></figure>
+Prepare:
 
-#### 3.1. Enable Internet Access Plugin (Note costs and free usage) <a href="#mwn38" id="mwn38"></a>
+1. A Volcengine account;
+2. A Volcengine Ark API Key;
+3. A currently available Model ID or Endpoint ID;
+4. A chat model that supports Function Calling;
+5. A keyword search provider;
+6. A URL retrieval provider.
 
-<figure><img src="../.gitbook/assets/image (57).png" alt=""><figcaption><p>Click "Buy Now" and follow the steps until the interface below is displayed, indicating successful activation.</p></figcaption></figure>
+For basic Volcengine Ark configuration, see [Volcengine (Ark / Doubao)](../pre-basic/providers/doubao.md).
 
-<figure><img src="../.gitbook/assets/image (58).png" alt=""><figcaption><p>Note the status, activation is successful.</p></figcaption></figure>
+{% hint style="danger" %}
+Do not put a Volcengine Ark API Key, search service API Key, or private URL containing a token in chats, screenshots, or public documentation.
+{% endhint %}
 
-Then return to the "Fill in Application Information" interface and continue.
+## Configure a Volcengine Ark Model
 
-<figure><img src="../.gitbook/assets/image (59).png" alt=""><figcaption></figcaption></figure>
+### 1. Enable a Model and Copy Its Identifier
 
-#### 3.2. Internet Search "Advanced Configuration" Description <a href="#sp6uz" id="sp6uz"></a>
+In the Volcengine Ark console:
 
-Choose according to actual needs, personal suggestions:
+1. Create an API Key;
+2. Enable the model you plan to use;
+3. Copy its current Model ID;
+4. If you use a dedicated inference endpoint, copy the Endpoint ID in `ep-...` format;
+5. Confirm the project, region, balance, and rate limits.
 
-*   If you want precise control over input and output, you can use "**Custom Call**" for internet access;
-*   If you find it troublesome, you can leave it unchanged and use "**Auto Call**" - default value;
-*   If budget is not an issue and real-time information is critical, you can "**Force Enable**".
+Do not copy:
 
-<figure><img src="../.gitbook/assets/image (60).png" alt=""><figcaption></figcaption></figure>
+- The model's display name;
+- The console page URL;
+- A Bot ID from a legacy app;
+- An Endpoint ID from another project.
 
-#### 3.3. Publish Application <a href="#fe1gf" id="fe1gf"></a>
+### 2. Enable the Provider in Cherry Studio
 
-Click the "Publish" button in the upper right corner to successfully create the application.
+1. Open `Settings → Model Providers`;
+2. Switch the filter to **All Providers**;
+3. Select **Doubao / Volcengine**;
+4. Enter the Ark API Key;
+5. Keep the default API Host;
+6. Turn on the provider;
+7. Manually add the current Model ID or Endpoint ID;
+8. Run a model health check.
 
-<figure><img src="../.gitbook/assets/image (61).png" alt=""><figcaption></figcaption></figure>
+Send a regular text message first to confirm that chat works, then configure Web Search.
 
-### 4. Obtain API Key <a href="#jtqlu" id="jtqlu"></a>
+## Choose a Model Suitable for Web Search
 
-Click in order: **"API Calling Guide" - "Select API Key and Copy" - "View and Select"**
+Cherry Studio external web search works best with models that support structured Function Calling.
 
-Copy the API key first, then go to cherry studio and paste it. (For operation details, see the interface below)
+The current V2 recognizes many newer Doubao Seed models, including models whose names match these series:
 
-<figure><img src="../.gitbook/assets/image (62).png" alt=""><figcaption></figcaption></figure>
+```text
+doubao-seed-1.6...
+doubao-seed-1.8...
+doubao-seed-2.0...
+doubao-seed-code...
+```
 
-Note: If there is no API key, click "**Create API Key**" in the upper right corner of the pop-up window, then copy the API key.
+Specific Model IDs change over time. Copy the current ID from the Volcengine Ark model page; do not use the series names above as complete IDs.
 
-<figure><img src="../.gitbook/assets/image (63).png" alt=""><figcaption></figcaption></figure>
+{% hint style="warning" %}
+DeepSeek R1, used in older tutorials, is excluded from structured Function Calling models in the current V2 and is not recommended as the first choice for Cherry Studio external web search. It may work for regular chat but still fail to call search tools.
+{% endhint %}
 
-### 5. Use API Key in cherry studio to enable internet access for deepseek-R1 <a href="#lrefj" id="lrefj"></a>
+You can view or adjust capability labels in model management, but these labels affect only client-side decisions. They cannot give a model Function Calling support that the server does not provide.
 
-#### 5.1. Open cherry studio - "Settings" - "Name it anything" - "Type: openAI" <a href="#dvrbv" id="dvrbv"></a>
+## Configure Web Search
 
-<figure><img src="../.gitbook/assets/image (64).png" alt="" width="375"><figcaption></figcaption></figure>
+Open:
 
-<figure><img src="../.gitbook/assets/image (65).png" alt="" width="375"><figcaption></figcaption></figure>
+```text
+Settings → Web Search
+```
 
-#### 5.2. Configure URL and Key <a href="#mt8y0" id="mt8y0"></a>
+Configure both:
 
-<figure><img src="../.gitbook/assets/image (66).png" alt=""><figcaption></figcaption></figure>
+| Setting | Purpose | Examples |
+| --- | --- | --- |
+| Default Search Provider | Finds web pages from keywords | ExaMCP, Tavily, SearXNG, Bocha |
+| Default URL Retrieval Provider | Reads the main text of a specific web page | Fetch, Jina |
 
-<mark style="color:purple;">Note, if you can't find the address, or if it's not a Beijing node, you can find the specific address here. Don't forget the "/" character:</mark>
+Both are required.
 
-<figure><img src="../.gitbook/assets/image (67).png" alt=""><figcaption></figcaption></figure>
+If you do not want to apply for an additional search API Key, start with:
 
-#### 5.3. Add Model Name <a href="#qmh3i" id="qmh3i"></a>
+```text
+Default Search Provider: ExaMCP
+Default URL Retrieval Provider: Fetch
+```
 
-Note, copy the small text below as the model name, otherwise it will cause an error.
+For details, see:
 
-<figure><img src="../.gitbook/assets/image (68).png" alt=""><figcaption></figcaption></figure>
+- [Web Search](README.md)
+- [Free Web Search](mian-fei-lian-wang-mo-shi.md)
+- [Configure SearXNG](searxng.md)
 
-<figure><img src="../.gitbook/assets/image (69).png" alt=""><figcaption></figcaption></figure>
+## Enable It in a Conversation
 
-### 6. Preview of Effect <a href="#peb2p" id="peb2p"></a>
+1. Return to the conversation page;
+2. Select a Volcengine Ark model that passed its health check;
+3. Click the **Globe** icon below the input;
+4. Confirm that the icon is highlighted;
+5. Send a question that requires current information.
 
-<figure><img src="../.gitbook/assets/image (70).png" alt=""><figcaption></figcaption></figure>
+Test question:
+
+```text
+Search the web for the latest stable release of Cherry Studio.
+Cite only the official GitHub Release, and list the version number, release date, and major changes.
+```
+
+Check whether the answer:
+
+- Actually called the search tool;
+- Includes citations that can be opened;
+- Cites the requested website;
+- Matches the original page's date and version number;
+- Does not present old knowledge as current results.
+
+## What Happens During Web Search
+
+For a Volcengine Ark model without native web search adaptation in the current V2, the typical flow is:
+
+1. The user enables Web Search and sends a question;
+2. Cherry Studio gives external search tools to the model;
+3. The model generates a structured tool call;
+4. Cherry Studio calls the default search provider;
+5. The model calls the default URL retrieval provider as needed;
+6. Search results and web page text are returned to the model;
+7. The model generates the final answer and citations.
+
+The search service API Key is not sent to the Volcengine Ark model, but search result text is sent to Ark as conversation context.
+
+## Differences from Older Tutorials
+
+| Older method | Current V2 recommendation |
+| --- | --- |
+| Create a zero-code “My App” | Use an Ark Model ID or Endpoint ID directly |
+| Purchase or enable a legacy Web Search plugin in an Ark app | Configure an external search provider in Cherry Studio |
+| Add a custom OpenAI provider | Prefer the built-in Doubao provider |
+| Put the complete `/chat/completions` path in the URL | Enter the Base URL and let V2 append the request path |
+| Add `#` to the end of API Host | Not required |
+| Use the small app ID as the model name | Use the current Model ID or Endpoint ID |
+| Use the legacy DeepSeek R1 Web Search example | Choose a current model that supports Function Calling |
+
+When migrating from an old configuration, create a clean Doubao provider instance or restore the built-in provider defaults. Do not keep layering compatibility parameters onto the old address.
+
+## Do Not Manually Mark “Native Web Search”
+
+The Web Search capability label in model details affects whether Cherry Studio selects native or external web search.
+
+Do not mark a regular Volcengine Ark model as a native web search model just to display the Globe icon. The current V2 has no corresponding adaptation for the Ark Web Search plugin. An incorrect label may cause:
+
+- Cherry Studio to stop injecting external search tools;
+- Ark to receive no correctly configured cloud Web Search tool;
+- The Web Search switch to be highlighted even though no search occurs.
+
+If you changed the label accidentally, restore automatic model detection and use the external Web Search configuration on this page.
+
+## If You Must Use Ark Cloud Web Search
+
+Volcengine Ark cloud Web Search is configured mainly through Responses API or an Ark app. The built-in `doubao` connection in the current Cherry Studio V2 has no dedicated settings page for these tools.
+
+Do not connect an Ark cloud app as a regular model until you have confirmed all of the following:
+
+1. Web Search is enabled according to the current official Volcengine Ark documentation;
+2. You have confirmed whether the call uses Chat API, Responses API, or the app Bot API;
+3. You have the corresponding Model ID, Endpoint ID, or Bot ID;
+4. You have confirmed the request address and authentication method;
+5. You have confirmed that the returned events can be parsed by Cherry Studio's current endpoint;
+6. You have confirmed the citation, streaming output, and tool-result formats;
+7. You understand the fees for both the model and search plugin.
+
+{% hint style="info" %}
+This is an advanced compatibility scenario and is not part of the current V2 built-in Web Search flow. Historical app URLs and parameters may stop working after Ark API upgrades.
+{% endhint %}
+
+For current Volcengine Ark tool information, see the [Volcengine Ark Product Documentation](https://www.volcengine.com/docs/82379/) and [Tool Calling](https://www.volcengine.com/docs/82379/1958524).
+
+## Privacy and Costs
+
+When using Cherry Studio external web search, data may be sent separately to:
+
+- Volcengine Ark: the user's question, search results, and retrieved web page text;
+- The search provider: search keywords;
+- The target website: the web request;
+- The URL retrieval provider: the target URL, depending on the selected service.
+
+Costs may include:
+
+- Volcengine Ark model input and output tokens;
+- Search service calls;
+- Ark inference endpoints or model units;
+- Additional network traffic;
+- Related plugin fees if you separately use Ark Web Search.
+
+Do not budget based on free request counts or prices shown in old screenshots. Refer to each service's current console.
+
+## Troubleshooting
+
+### Clicking the Globe Icon Opens Web Search Settings
+
+The current model has no native web search adaptation, and either the **Default Search Provider** or **Default URL Retrieval Provider** is missing. Configure both and try again.
+
+### Regular Chat Works, but the Search Tool Is Not Called
+
+Check the following in order:
+
+1. Whether the Globe icon is highlighted;
+2. Whether the current model supports Function Calling;
+3. Whether the Model ID was incorrectly marked as not supporting tools;
+4. Whether you are using the legacy DeepSeek R1;
+5. Whether the question explicitly requires a search and citations;
+6. Whether the search provider passed its check.
+
+Switch to a current Doubao Seed tool model and try again in a new conversation.
+
+### The Model Says “I Will Search” but Returns No Results
+
+This is not a successful tool call. Check the message details for a structured tool process. If there is none, switch to a model with more reliable tool calling.
+
+### Search Results Appear, but Citations Do Not Open
+
+The page may be unavailable, require sign-in, use anti-bot protections, have regional restrictions, or fail to load through Fetch. Ask the model to use another source and manually verify important conclusions.
+
+### The Model Still Uses Old Knowledge After Web Search Is Enabled
+
+Explicitly prompt:
+
+```text
+You must search the web first. If the search fails, explain the failure instead of answering only from existing knowledge.
+```
+
+If it still does not work, start a new conversation, switch models, or check the search provider.
+
+### Use Volcengine Ark's Own Web Search
+
+Cherry Studio currently has no corresponding built-in configuration. Do not treat a model capability switch as an adapter. Verify the current Ark Responses API or app API yourself, or use Cherry Studio external web search for now.
+
+### Response Is 401, 403, 404, or 429
+
+These are usually Volcengine Ark model connection problems rather than Web Search settings:
+
+- `401`: Invalid API Key;
+- `403`: The project, model, or Endpoint lacks permission;
+- `404`: The API Host, Model ID, or Endpoint ID is incorrect;
+- `429`: A rate, concurrency, or quota limit was reached.
+
+Disable Web Search and confirm that regular chat works again, then troubleshoot the model and search service separately.
+
+***
+
+### 💡 Get Help and Submit Feedback
+
+If you encounter questions, bugs, or feature suggestions during setup or use, see the official channels in [Feedback and Suggestions](../question-contact/suggestions.md).
