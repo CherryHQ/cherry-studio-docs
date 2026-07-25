@@ -2,6 +2,8 @@
 
 Cherry Studio **预装了若干常用 MCP**，无需手动安装即可在 `设置 → MCP` 中启用。下面是当前内置清单，**新版本可能调整**，请以应用内实际显示为准。
 
+<figure><img src="../../.gitbook/assets/cherry-mcp-builtin-v2.png" alt="浅色模式下的 Cherry Studio V2 内置 MCP 服务器页面"><figcaption><p>设置 → MCP → 内置服务器</p></figcaption></figure>
+
 > 想自己装其他 MCP？看 [配置和使用 MCP](config.md)。
 
 ### 通用工具

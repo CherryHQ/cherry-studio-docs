@@ -25,6 +25,8 @@ icon: square-info
 4. 添加标记为嵌入（Embedding）的模型。
 5. 新建知识库时，在嵌入模型下拉框中选择它。
 
+<figure><img src="../.gitbook/assets/cherry-knowledge-base-create-v2.png" alt="浅色模式下的新建知识库窗口，其中可选择嵌入模型"><figcaption><p>创建知识库时选择嵌入模型</p></figcaption></figure>
+
 {% hint style="warning" %}
 知识库建立索引后，不要直接更换嵌入模型。不同模型生成的向量通常不兼容；确需更换时，请新建知识库并重新导入或重新索引资料。
 {% endhint %}

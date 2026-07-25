@@ -4,60 +4,31 @@ icon: cloud-arrow-up
 
 # WebDAV 备份
 
-Cherry Studio 数据备份支持通过 WebDAV 的方式进行备份。你可以选择合适的 WebDAV 服务来进行云端备份。
-
-基于 WebDAV 可以通过 `A电脑` $$\xrightarrow{\text{备份}}$$ `WebDAV` $$\xrightarrow{\text{恢复}}$$ `B电脑` 的方式来实现多端数据同步。
-
-#### 以坚果云为例
-
-1. 登录坚果云，点击右上角用户名，选择“账户信息”：
-
-<figure><img src="../../.gitbook/assets/image (39).png" alt=""><figcaption></figcaption></figure>
-
-2. 选择“安全选项”，点击“添加应用”
-
-<figure><img src="../../.gitbook/assets/image (40).png" alt=""><figcaption></figcaption></figure>
-
-3. 输入应用名称，生成随机密码；
-
-<figure><img src="../../.gitbook/assets/image (41).png" alt=""><figcaption></figcaption></figure>
-
-4. 复制记录密码；
-
-<figure><img src="../../.gitbook/assets/image (42).png" alt=""><figcaption></figcaption></figure>
-
-5. 获取服务器地址，账户和密码；
-
-<figure><img src="../../.gitbook/assets/image (43).png" alt=""><figcaption></figcaption></figure>
-
-6. 在 Cherry Studio **设置 → 数据 → WebDAV** 中填写服务器地址、账号和应用密码；
-
-<figure><img src="../../.gitbook/assets/image (48).png" alt=""><figcaption></figcaption></figure>
-
-7. 选择备份或者恢复数据，并可以设置自动备份的时间周期。
-
-<figure><img src="../../.gitbook/assets/image (47).png" alt=""><figcaption></figcaption></figure>
-
-{% hint style="success" %}
-WebDAV 服务门槛比较低的一般就是网盘：
-
-* [坚果云](https://www.jianguoyun.com/)
-* [123 盘](https://www.123pan.com/)（需要会员）
-* [阿里云盘](https://www.alipan.com/)（需要购买）
-* [Box](https://www.box.com/) (免费空间容量为 10GB，单个文件大小限制为 250MB。)
-* [Dropbox](https://www.dropbox.com/) （Dropbox 免费 2GB，可以邀请好友扩容 16GB 。）
-* [TeraCloud](https://teracloud.jp/en/) （免费空间为 10GB，另外一个通过邀请可以获得 5GB 额外空间。）
-* [Yandex Disk](https://disk.yandex.com/) (免费用户提供 10GB 容量。)
-
-其次是一些需要自己部署服务：
-
-* [Alist](https://alist.nn.ci/zh/)
-* [Cloudreve](https://cloudreve.org/)
-* [sharelist](https://github.com/reruin/sharelist)
+{% hint style="warning" %}
+**Cherry Studio V2 的 WebDAV 备份与恢复目前尚未上线。** 当前页面中的地址、用户名、密码、备份和恢复控件均为不可用状态，请不要按旧版教程填写凭据。
 {% endhint %}
+
+<figure><img src="../../.gitbook/assets/cherry-webdav-v2.png" alt="浅色模式下的 Cherry Studio V2 WebDAV 页面，顶部提示 V2 备份恢复尚未上线"><figcaption><p>设置 → 数据设置 → WebDAV：当前功能状态以页面提示为准</p></figcaption></figure>
+
+## 现在应该怎么做
+
+* 需要保留旧版 WebDAV 备份时，不要删除远端备份文件或撤销应用密码。
+* 准备升级或更换电脑时，先保留原设备和原数据目录，不要把尚未上线的 V2 页面当作迁移工具。
+* 等待页面解除禁用并且官方发布说明确认可用后，再配置地址、账户和应用密码。
+
+## 功能上线后需要准备什么
+
+WebDAV 服务通常会提供：
+
+* WebDAV 地址；
+* 用户名；
+* 独立的应用密码；
+* 可选的远端路径。
+
+为避免泄露主账户密码，优先使用服务商生成的独立应用密码。填写前请再次确认应用内已不再显示“V2 备份恢复尚未上线”。
 
 ***
 
 ### 💡 获取帮助与提交反馈
 
-如果您在配置或使用过程中遇到任何疑问、Bug 或有功能改进建议，请参考 [反馈与建议](../../question-contact/suggestions.md) 中提供的官方渠道。
+如果您在配置或使用过程中遇到疑问，请参考 [反馈与建议](../../question-contact/suggestions.md)。

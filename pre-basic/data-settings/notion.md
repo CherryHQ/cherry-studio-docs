@@ -6,6 +6,8 @@ icon: square-n
 
 Cherry Studio 支持将话题导入 Notion 的数据库。
 
+<figure><img src="../../.gitbook/assets/cherry-notion-settings-v2.png" alt="Cherry Studio V2 浅色模式的 Notion 配置页面"><figcaption><p>V2 入口：设置 → 数据设置 → Notion 配置</p></figcaption></figure>
+
 ## 第一步
 
 打开网站 [Notion Integrations](https://www.notion.so/profile/integrations) 创建一个应用
@@ -58,7 +60,7 @@ https://www.notion.so/\<long\_hash\_1>?v=\<long\_hash\_2>
 
 填写 `页面标题字段名`：
 
-若你的网页时英文的，则填写 `Name`\
+若你的网页是英文的，则填写 `Name`\
 若你的网页端是中文的，则填写 `名称`
 
 <figure><img src="../../.gitbook/assets/填写页面标题字段名.png" alt=""><figcaption><p>填写页面标题字段名</p></figcaption></figure>

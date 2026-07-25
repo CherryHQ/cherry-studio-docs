@@ -26,9 +26,9 @@ Trace 默认隐藏，需要先开启开发者模式：
 开启后，之前已经产生的会话不会补生成 Trace；只有后续新的问答才会记录调用链。
 {% endhint %}
 
-Trace 数据存储在当前应用数据目录中。通常不需要手动处理；如需清理，可进入 `设置 → 数据 → 数据目录` 使用 **清除缓存**。不要根据固定系统路径直接删除文件。
+Trace 数据存储在当前应用数据目录中。通常不需要手动处理；如需清理，可进入 `设置 → 数据设置 → 数据目录` 使用 **清除缓存**。不要根据固定系统路径直接删除文件。
 
-<figure><img src="../.gitbook/assets/cherry-data-settings-v2.png" alt="V2 数据目录与缓存清理入口"><figcaption><p>数据目录与缓存清理入口；本机路径已遮罩。</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/cherry-storage-location-v2.png" alt="浅色模式下的 Cherry Studio V2 数据目录与缓存清理入口，用户名已匿名处理"><figcaption><p>数据目录与缓存清理入口</p></figcaption></figure>
 
 ## 场景介绍
 

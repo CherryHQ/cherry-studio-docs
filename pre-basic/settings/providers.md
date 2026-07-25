@@ -6,11 +6,13 @@ icon: cloud-check
 
 当前页面仅做界面功能的介绍，配置教程可以参考基础教程中的 [服务商配置](../providers/) 教程。
 
+<figure><img src="../../.gitbook/assets/cherry-providers-settings-v2.png" alt="浅色模式下的 Cherry Studio V2 模型服务设置页面"><figcaption><p>设置 → 模型服务：选择服务商、填写凭据并管理模型</p></figcaption></figure>
+
 {% hint style="info" %}
 不同服务商对凭据的叫法可能不同：API Key、密钥、令牌或授权登录。V2 还支持部分服务商的账号授权、多个端点和自定义请求头。
 {% endhint %}
 
-### API 秘钥
+### API 密钥
 
 在 Cherry Studio 当中，单个服务商支持多 Key 轮询使用，轮询方式为从前到后列表循环的方式。
 

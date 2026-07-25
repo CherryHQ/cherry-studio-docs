@@ -39,7 +39,7 @@ icon: graduation-cap
 
 **助手** 将这套「角色设定」**永久保存**，再次打开即可直接使用，避免重复配置。一个助手 = 一份「系统提示词 + 模型参数预设」。
 
-* **怎么创建**：进入助手对话页，在助手列表的添加菜单中选择创建助手（填写名字、提示词并选择 Emoji），详见 [助手与助手库](../cherrystudio/preview/assistants.md)。
+* **怎么创建**：进入对话页，选择 **展示方式 → 管理助手**，再点击 **新建助手**，详见 [助手与助手库](../cherrystudio/preview/assistants.md)。
 * **怎么使用**：在助手对话页选择一个助手并新建话题即可开始对话，详见 [对话](../cherrystudio/preview/chat.md)。
 * **功能叠加**：助手可以挂载知识库或 MCP 外部工具。
 * **细节文档**：[助手与助手库](../cherrystudio/preview/assistants.md)

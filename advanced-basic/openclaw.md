@@ -12,6 +12,8 @@ OpenClaw 是独立的开源智能体工具。Cherry Studio V2 已把原来的独
 2. 点击 **Code Switch**；
 3. 在工具列表中选择 **OpenClaw**。
 
+<figure><img src="../.gitbook/assets/cherry-openclaw.png" alt="浅色模式下 Code Switch 中的 OpenClaw 页面"><figcaption><p>启动台 → Code Switch → OpenClaw</p></figcaption></figure>
+
 在同一页面可以完成安装或升级、选择 Provider 与模型、启动或停止 Gateway，以及打开 Dashboard。
 
 完整步骤请阅读 [Code Switch 使用教程](code-tools.md)。

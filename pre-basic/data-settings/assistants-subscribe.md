@@ -2,15 +2,20 @@
 icon: rss
 ---
 
-# 助手导入与 URL 订阅
+# 助手导入
 
-Cherry Studio V2 已把助手导入移到对话页的助手目录中，不再通过旧版“数据设置 → 助手订阅”维护一个全局订阅地址。
+Cherry Studio V2 已把助手导入移到对话页的资源库中，不再通过旧版“数据设置 → 助手订阅”维护全局订阅地址。
 
 ## 打开导入对话框
 
 1. 打开顶部 **对话**；
-2. 在助手列表的添加菜单中选择 **导入助手**；
-3. 选择 **文件、剪贴板或 URL**。
+2. 点击助手列表右上角的 **展示方式**；
+3. 选择 **管理助手**；
+4. 在资源库右上角点击 **导入助手**。
+
+<figure><img src="../../.gitbook/assets/cherry-resource-library-v2.png" alt="Cherry Studio V2 浅色模式的助手资源库，右上角提供新建助手、助手库和导入助手入口"><figcaption><p>助手资源库与“导入助手”入口</p></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/cherry-assistant-import-v2.png" alt="Cherry Studio V2 从外部导入助手对话框，支持文件上传、剪贴板和 URL 导入"><figcaption><p>从文件、剪贴板或 URL 导入助手</p></figcaption></figure>
 
 三种方式都支持同一套助手 JSON 格式：
 
@@ -35,7 +40,7 @@ V2 的 URL 导入只允许 `https://raw.githubusercontent.com/...` 或 `https://
 ]
 ```
 
-导入完成后，助手会出现在当前助手目录中。没有指定模型时，V2 会使用 [默认助手模型](../settings/default-models.md)；你也可以在助手编辑页改成其他模型。
+导入完成后，助手会出现在资源库和对话页的助手列表中。没有指定模型时，V2 会使用 [默认助手模型](../settings/default-models.md)；你也可以在助手编辑页改成其他模型。
 
 ## 维护共享助手包
 

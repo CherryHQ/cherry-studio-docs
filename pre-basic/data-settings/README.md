@@ -4,21 +4,21 @@ icon: floppy-disk
 
 # 数据设置
 
-打开 `设置 → 数据` 可以统一管理数据目录、本地备份、WebDAV、S3、外部数据导入和笔记软件导出。
+打开 `设置 → 数据设置` 可以查看数据目录、管理本地备份，并配置笔记软件导出。WebDAV 与 S3 页面在 V2 中已经可见，但备份恢复能力尚未开放。
 
-<figure><img src="../../.gitbook/assets/cherry-data-settings-v2.png" alt="Cherry Studio V2 数据设置"><figcaption><p>V2 数据设置；截图中的本机路径已遮罩。</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/cherry-storage-location-v2.png" alt="Cherry Studio V2 浅色模式的数据目录页面，用户名已替换为占位符"><figcaption><p>在数据设置中查看当前数据目录</p></figcaption></figure>
 
-> 一句话：**怕丢数据，就来这里设置一次。**
+> 一句话：先确认数据位置，并在升级、迁移或重置前创建本地备份。
 
 ## 我应该用什么备份方案？
 
 | 你的场景 | 推荐方案 |
 |---|---|
-| 个人单机使用，担心硬盘坏掉 | [WebDAV 备份](webdav.md)（用坚果云、123 盘等）|
-| 多台电脑想同步对话/助手 | [WebDAV 备份](webdav.md) —— A 电脑备份，B 电脑恢复 |
-| 已经有 AWS / 阿里云 OSS 等 S3 兼容存储 | [S3 兼容存储备份](s3-compatible.md) |
+| 升级、迁移或重置前保护数据 | 优先使用当前版本可用的本地备份或导出能力 |
+| 希望用 WebDAV 跨设备恢复 | 查看 [WebDAV 备份](webdav.md) 的 V2 当前状态，等待功能开放 |
+| 希望保存到 S3 兼容存储 | 查看 [S3 兼容存储](s3-compatible.md) 的 V2 当前状态，等待功能开放 |
 | 想把对话内容自动归档到笔记软件 | [Notion](notion.md) / [Obsidian](obsidian.md) / [思源笔记](siyuan.md) |
-| 想导入别人分享的助手 | [助手导入与 URL 订阅](assistants-subscribe.md) |
+| 想导入别人分享的助手 | [助手导入](assistants-subscribe.md) |
 
 ## 备份的是什么？
 
@@ -31,11 +31,11 @@ icon: floppy-disk
 ## 多久备份一次？
 
 * **本地备份**：升级、迁移目录或重置数据前先创建
-* **WebDAV / S3**：用于异地保存与跨设备恢复
+* **WebDAV / S3**：V2 功能开放后，再根据页面说明配置远端备份
 
 ## 数据存哪？
 
-在 `设置 → 数据 → 数据目录` 查看实际位置。更换硬盘前看 [修改存储位置](../personalization-settings/storage.md)，并先备份。
+在 `设置 → 数据设置 → 数据目录` 查看实际位置。需要更换目录时，先阅读 [数据存储位置](../personalization-settings/storage.md)，做好备份，再使用路径右侧的迁移入口。
 
 ***
 

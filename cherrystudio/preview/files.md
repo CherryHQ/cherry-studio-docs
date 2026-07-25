@@ -24,9 +24,9 @@ icon: folder
 
 ## 文件存在哪？
 
-Cherry Studio 把应用数据和文件索引保存在当前数据目录中。请在 `设置 → 数据 → 数据目录` 查看实际路径，不要仅根据固定系统路径猜测。
+Cherry Studio 把应用数据和文件索引保存在当前数据目录中。请在 `设置 → 数据设置 → 数据目录` 查看实际路径，不要仅根据固定系统路径猜测。
 
-想换到别的盘？看 [修改存储位置](../../pre-basic/personalization-settings/storage.md)。
+想更换目录？请先备份，再按 [数据存储位置](../../pre-basic/personalization-settings/storage.md) 的步骤迁移。
 
 ## 提示与技巧
 

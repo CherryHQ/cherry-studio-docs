@@ -84,7 +84,7 @@
 * [个性化设置](pre-basic/personalization-settings/README.md)
   * [自定义 CSS](pre-basic/personalization-settings/custom-css.md)
   * [字体推荐](pre-basic/personalization-settings/font.md)
-  * [修改存储位置](pre-basic/personalization-settings/storage.md)
+  * [数据存储位置](pre-basic/personalization-settings/storage.md)
   * [清除 CSS 设置](pre-basic/personalization-settings/clear-css.md)
 
 ## 知识库教程 <a href="#knowledge-base" id="knowledge-base"></a>

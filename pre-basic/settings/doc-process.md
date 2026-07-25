@@ -11,6 +11,8 @@ Cherry Studio V2 已把文件解析拆成两个相邻页面：
 
 它们会被对话附件、翻译、知识库和 Agent 的文件工具复用。
 
+<figure><img src="../../.gitbook/assets/cherry-document-processing-v2.png" alt="浅色模式下的 Cherry Studio V2 文档处理设置页面"><figcaption><p>设置 → 文档处理</p></figcaption></figure>
+
 ## 文档处理
 
 当前 V2 可按平台和配置选择：

@@ -21,7 +21,7 @@ Cherry Studio 可以把完整对话或单条消息导出为 Obsidian 笔记。V2
 
 进入 **设置 → 数据设置 → Obsidian 配置**，在下拉列表中选择默认保管库。
 
-<figure><img src="../../.gitbook/assets/image (142).png" alt="在数据设置中选择 Obsidian 保管库"><figcaption><p>选择默认 Obsidian 保管库</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/cherry-obsidian-settings-v2.png" alt="Cherry Studio V2 浅色模式的 Obsidian 配置页面"><figcaption><p>选择默认 Obsidian 保管库</p></figcaption></figure>
 
 ## 导出完整对话
 
