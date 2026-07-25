@@ -8,10 +8,6 @@ icon: cherries
 
 Cherry Studio 是一个**开源的桌面 AI 工作台**。它把 CherryIN、DeepSeek、OpenAI、Claude、Gemini 以及 Ollama 等本地模型连接到同一个客户端，并提供对话、知识库、Agent智能体、翻译和绘画等能力。
 
-{% hint style="info" %}
-**Cherry Studio 不是大模型本身。** 回答由你选择的云端模型服务商或本地模型生成。Cherry Studio 负责连接模型、管理对话和资料，并把模型能力组织成可直接使用的功能。
-{% endhint %}
-
 ## 你可以用它做什么？
 
 | 你的目标 | 使用的功能 | 示例 |
