@@ -1,120 +1,83 @@
 ---
-description: 如何在 Cherry Studio 使用联网模式
+description: 在 Cherry Studio V2 中配置和使用网络搜索。
 icon: globe
 ---
 
-# 联网模式
+# 网络搜索
 
-{% hint style="info" %}
-联网模式让 AI 在回答前先去搜索最新内容，适合以下场景：
+网络搜索让模型在回答前检索最新网页，适合新闻、价格、政策、软件版本和其他时效性问题。
 
-* **时效性信息**：今日 / 本周 / 刚刚发生的新闻、价格、汇率等
-* **实时数据**：天气、股价、商品库存等动态数值
-* **新兴知识**：刚出现的工具、概念、技术
+## 两类联网方式
+
+### 模型原生搜索
+
+部分模型或服务商原生提供网络搜索。它们是否可用、是否计费以及是否需要额外参数，都由服务商决定。模型选择器或模型设置中显示的能力标识仅供参考，最终以实际请求结果为准。
+
+### Cherry Studio 外部搜索
+
+对没有原生搜索能力的模型，Cherry Studio 可以先调用 `设置 → 网络搜索` 中配置的服务，再把搜索结果交给模型。
+
+V2 的预设包括：
+
+| 服务 | 主要能力 |
+|---|---|
+| Zhipu | 关键词搜索 |
+| Tavily | 关键词搜索 |
+| SearXNG | 自部署关键词搜索 |
+| Exa / Exa MCP | 关键词搜索 |
+| Bocha | 关键词搜索 |
+| Querit | 关键词搜索 |
+| Jina | 关键词搜索与网页正文抓取 |
+| Firecrawl | 关键词搜索 |
+| fetch | 网页正文抓取 |
+
+页面会分别设置 **搜索关键词**和 **抓取 URL** 的默认服务；某个服务不具备对应能力时不会出现在该下拉列表中。
+
+## 配置步骤
+
+1. 打开 `设置 → 网络搜索`；
+2. 选择服务；
+3. 填写 API Key、API Host 或自部署地址；
+4. 点击检测并保存；
+5. 在基础设置中选择默认搜索和网页抓取服务。
+
+{% hint style="danger" %}
+搜索 API Key 只应填写在设置页。截图、Issue 和公开文档中不要展示真实密钥。
 {% endhint %}
 
-## 如何开启联网
+## 在对话中使用
 
-在对话输入框的工具栏中点击 🌐 **小地球** 图标，即可对当前对话开启联网。
+1. 打开对话；
+2. 在输入区工具中启用网络搜索；
+3. 输入需要最新信息的问题；
+4. 检查回答中的来源与日期。
 
-<figure><img src="../../.gitbook/assets/image (94).png" alt=""><figcaption><p>点击地球图标开启联网</p></figcaption></figure>
+没有配置外部搜索、模型也没有原生联网能力时，搜索操作会提示前往设置。
 
-<figure><img src="../../.gitbook/assets/image (96).png" alt=""><figcaption><p>开启状态</p></figcaption></figure>
+## 相关教程
 
-## 联网的两条技术路径
+* [Tavily 登录与配置](tavily.md)
+* [SearXNG 本地部署](searxng.md)
+* [网络搜索黑名单](blacklist.md)
+* [免费联网模式](free-search.md)
+* [火山引擎接入联网](volcengine.md)
 
-Cherry Studio 通过**两种方式**实现联网，根据你选的模型自动决定：
+## 常见问题
 
-### 路径 1：模型自带联网功能（推荐）
+### 有搜索结果但模型回答仍不准确
 
-部分大模型服务商在自家模型中**原生集成了搜索能力**。这类模型在模型名旁边会显示**小地球图标 🌐**。
+搜索只提供候选资料。请检查来源是否可靠、发布时间是否匹配，并要求模型引用或对比多个来源。
 
-开启对话联网后，AI 直接调用模型自身的搜索能力，**无需任何额外配置**。
+### 搜索成功但抓取网页失败
 
-<figure><img src="../../.gitbook/assets/image (100) (1).png" alt=""><figcaption><p>模型名后的小地球图标</p></figcaption></figure>
+搜索与抓取是两项能力。请在基础设置中同时配置可用的 URL 抓取服务；需要登录或禁止抓取的网页仍可能失败。
 
-在 `设置 → 模型服务` 中也能据此区分。
+### SearXNG 无法连接
 
-<figure><img src="../../.gitbook/assets/image (101).png" alt=""><figcaption></figcaption></figure>
-
-**已知支持原生联网的模型 / 服务商**：
-
-* Google Gemini（部分版本）
-* OpenRouter（全部模型支持）
-* 腾讯混元
-* 智谱 AI
-* 阿里云百炼（部分模型）
-* xAI Grok
-
-{% hint style="info" %}
-还有少数模型即使没显示小地球图标，也能联网（取决于服务商配置）。例如 [火山引擎接入联网](volcengine.md) 中介绍的一类情况。
-{% endhint %}
-
-### 路径 2：通过外部搜索服务（用于不带联网功能的模型）
-
-如果你选的模型本身不带联网（多数开源 / 经典模型都如此），Cherry Studio 会**调用配置好的外部搜索服务**，把搜索结果作为上下文喂给模型。
-
-打开 `设置 → 网络搜索` 添加并启用任意一家搜索服务。Cherry Studio 内置支持：
-
-| 搜索服务 | 类型 | 备注 |
-|---|---|---|
-| **Tavily** | 云端 | 老牌、免费额度足够日常用 [→ 注册教程](tavily.md) |
-| **Bocha (博查)** | 云端 | 国内访问友好，中文场景效果好 |
-| **Exa** | 云端 | 偏学术 / 技术内容 |
-| **Exa MCP** | 云端 | Exa 的 MCP 接口版 |
-| **Zhipu (智谱)** | 云端 | 智谱自家的搜索 API |
-| **Querit** | 云端 | 国内访问友好 |
-| **SearXNG** | 自部署 | 开源元搜索引擎，可完全本地化 [→ 部署教程](searxng.md) |
-| **Google / Bing / Baidu** | 本地浏览器 | 直接打开浏览器搜索页，**不读取内容回传给 AI**，仅作为辅助查找 |
-
-#### 首次启用 Tavily（最常见的零配置选择）
-
-1. 在对话框点击 🌐 后，若发现尚未配置任何外部搜索服务，会弹窗提示
-2. 点击 **去设置** → 进入网络搜索配置
-3. 选择 Tavily，点击 **获取秘钥** 跳转 Tavily 官网注册
-4. 在 Tavily 控制台创建 API Key
-5. 复制 Key 回填到 Cherry Studio
-
-<figure><img src="../../.gitbook/assets/image (102) (1).png" alt=""><figcaption><p>弹窗：去设置</p></figcaption></figure>
-
-<figure><img src="../../.gitbook/assets/image (103).png" alt=""><figcaption><p>点击获取秘钥</p></figcaption></figure>
-
-<figure><img src="../../.gitbook/assets/image (103) (1).png" alt=""><figcaption><p>跳转获取秘钥</p></figcaption></figure>
-
-<figure><img src="../../.gitbook/assets/image (105).png" alt=""><figcaption><p>复制 API Key</p></figcaption></figure>
-
-<figure><img src="../../.gitbook/assets/image (108).png" alt=""><figcaption><p>回填 API Key</p></figcaption></figure>
-
-详细注册流程见 [Tavily 联网登录注册教程](tavily.md)。
-
-{% hint style="warning" %}
-Tavily 免费额度有每月调用次数限制，超出后需付费。如长期重度使用建议改用 [SearXNG 本地部署](searxng.md) 或 Bocha 等其他方案。
-{% endhint %}
-
-## 搜索结果黑名单
-
-不想让某些不靠谱的网站出现在搜索结果里？参考 [网络搜索黑名单配置](blacklist.md) 把它们屏蔽掉。
-
-## 免费联网模式
-
-如果你不想花一分钱也想用上搜索能力，看 [免费联网模式](free-search.md)。
-
-## 工作机制
-
-无论走哪条路径，对话流程都是：
-
-1. 你问"今天上海天气怎么样？"
-2. Cherry Studio 把问题先发给搜索服务
-3. 搜索服务返回 N 条相关网页摘要
-4. Cherry Studio 把这些摘要拼到提示词里发给 AI 模型
-5. AI 基于实时数据回答你
-
-<figure><img src="../../.gitbook/assets/image (107).png" alt=""><figcaption><p>联网搜索结果示例</p></figcaption></figure>
-
-<figure><img src="../../.gitbook/assets/image (106).png" alt=""><figcaption><p>联网回答示例</p></figcaption></figure>
+确认服务已经启动、地址和端口可从 Cherry Studio 访问，再查看 [SearXNG 部署教程](searxng.md)。
 
 ***
 
 ### 💡 获取帮助与提交反馈
 
-如果您在配置或使用过程中遇到任何疑问、Bug 或有功能改进建议，请参考 [反馈与建议](../../question-contact/suggestions.md) 中提供的官方渠道。
+如果您在配置或使用过程中遇到疑问，请参考 [反馈与建议](../../question-contact/suggestions.md)。

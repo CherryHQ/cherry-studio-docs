@@ -25,7 +25,7 @@ LM Studio 是一款流行的**本地大模型 GUI**，支持下载、量化并�
 |---|---|
 | 隐私敏感对话 | 选小模型（8B 以下）本机跑，完全离线 |
 | Apple Silicon（M 系芯片）| LM Studio 用 MLX 后端，效率显著高于 llama.cpp |
-| 嵌入模型 | LM Studio 也可加载嵌入模型，用于 [全局记忆](../../advanced-basic/memory.md) 与知识库 |
+| 嵌入模型 | LM Studio 也可加载嵌入模型，用于知识库和需要向量化的记忆方案 |
 
 ## 与 Ollama 的区别
 

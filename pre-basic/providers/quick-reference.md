@@ -17,13 +17,13 @@ Cherry Studio 内置 **60+ 家 Provider**，本页提供总览表，找到目标
 
 | 你的需求 | 推荐方向 |
 |---|---|
-| **新手快速上手**，避免复杂流程 | [CherryIN](cherryin-1.md) 或 [CherryAI](cherryai/) |
+| **新手快速上手**，避免复杂流程 | [CherryIN](cherryin-1.md) |
 | **国内访问最方便** | DeepSeek / Moonshot / 硅基流动 / 智谱 |
 | **海外最强模型** | OpenAI / Anthropic / Gemini |
 | **一个 key 通用 200 家** | [OpenRouter](openrouter.md) |
 | **完全本地、隐私敏感** | [Ollama](ollama.md) / [LM Studio](lm-studio.md) |
 | **企业合规** | [Azure OpenAI](azure-openai.md) / AWS Bedrock |
-| **要做 [Cherry Agent](../../advanced-basic/agent.md)** | [Anthropic](anthropic.md) / [CherryIN](cherryin-1.md)（要支持 Anthropic 协议） |
+| **要做 [Cherry Agent](../../advanced-basic/agent.md)** | 选择 Agent 创建页中实际可用且具备工具调用能力的模型 |
 
 ## 国内大厂自营模型
 
@@ -67,7 +67,6 @@ Cherry Studio 内置 **60+ 家 Provider**，本页提供总览表，找到目标
 
 | Provider | 一句话特点 | 官网 | 专题文档 |
 |---|---|---|---|
-| **CherryAI** | Cherry 官方免费体验 | — | [→](cherryai/) |
 | **CherryIN** | Cherry 官方付费网关，双端点（OpenAI + Anthropic）| [open.cherryin.cc](https://open.cherryin.cc/) | [→](cherryin-1.md) |
 | **OpenRouter** | 海外最大聚合，200+ 模型 | [openrouter.ai](https://openrouter.ai/) | [→](openrouter.md) |
 | **AiHubMix** | 海外聚合 | [aihubmix.com](https://aihubmix.com/) | — |
@@ -113,7 +112,7 @@ Cherry Studio 内置 **60+ 家 Provider**，本页提供总览表，找到目标
 
 ## 嵌入 / 重排专用
 
-只用于做嵌入或重排，配合知识库 / 全局记忆使用。
+只用于做嵌入或重排，主要配合知识库使用。
 
 | Provider | 一句话特点 | 官网 | 专题文档 |
 |---|---|---|---|
@@ -129,7 +128,7 @@ Cherry Studio 内置 **60+ 家 Provider**，本页提供总览表，找到目标
 | **Ollama** | 命令行本地推理，最流行 | [ollama.com](https://ollama.com/) | [→](ollama.md) |
 | **LM Studio** | GUI 本地推理，Apple Silicon 友好 | [lmstudio.ai](https://lmstudio.ai/) | [→](lm-studio.md) |
 | **GPUStack** | 企业级本地推理 | [gpustack.ai](https://gpustack.ai/) | — |
-| **OpenVINO Model Server** | Intel 加速本地推理 | [openvino.ai](https://www.openvino.ai/) | — |
+| **OpenVINO Model Server** | Intel 加速本地推理 | [官方文档](https://docs.openvino.ai/2025/model-server/ovms_what_is_openvino_model_server.html) | — |
 
 ## 模型平台 / 其他
 
@@ -150,7 +149,7 @@ Cherry Studio 内置 **60+ 家 Provider**，本页提供总览表，找到目标
 
 ## 还是不知道选哪个？
 
-直接走 [**CherryIN**](cherryin-1.md) 或 [**CherryAI**](cherryai/) —— 最适合新手快速上手。需要进阶时再换。
+可以先从 [**CherryIN**](cherryin-1.md) 或你已有账号的官方 Provider 开始。可用模型、价格与免费额度以应用内模型列表和服务商页面为准。
 
 ***
 

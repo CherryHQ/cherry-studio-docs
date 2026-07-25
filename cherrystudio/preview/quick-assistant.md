@@ -18,14 +18,14 @@ icon: browsers
 * 配置入口分别在 `设置 → 快捷助手` 与 `设置 → 划词助手`。
 {% endhint %}
 
-<figure><img src="../../.gitbook/assets/cherry-quick-assistant-enabled.png" alt=""><figcaption><p>启用后的快捷助手设置（实拍）</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/cherry-quick-assistant-settings-v2.png" alt="V2 快捷助手设置"><figcaption><p>启用后的 V2 快捷助手设置，并提供实际窗口预览。</p></figcaption></figure>
 
 启用后可见的开关：
 
 * **启用快捷助手**：主开关
 * **点击托盘图标启动**：左键点击系统托盘 Cherry Studio 图标时直接唤起快捷助手（默认开启）
-* **启动时读取剪贴板**：每次唤起快捷助手时自动把剪贴板内容作为输入
-* **快捷助手模型**：`使用助手` 跟随当前对话助手所选模型；`默认模型` 使用 [全局默认快速模型](../../pre-basic/settings/default-models.md)
+* **启动时读取剪贴板**：每次唤起时读取当前剪贴板文字
+* **使用助手 / 默认模型**：可使用指定助手，也可直接使用 [默认助手模型](../../pre-basic/settings/default-models.md)
 
 3. **设置快捷键（在另一个页面）：**
    * 快捷键不在本页配置，需到 `设置 → 快捷键` 中调整。
@@ -41,11 +41,11 @@ icon: browsers
    * **内容总结：** 输入长文本进行摘要。
    *   **解释说明：** 输入需要解释的概念或术语。
 
-       <figure><img src="../../.gitbook/assets/快捷助手-1.png" alt=""><figcaption><p>快捷助手界面示意图</p></figcaption></figure>
+       <figure><img src="../../.gitbook/assets/cherry-quick-assistant-window-v2.png" alt="V2 快捷助手窗口"><figcaption><p>V2 快捷助手窗口内置“回答此问题、文本翻译、内容总结、解释说明”等快捷操作。</p></figcaption></figure>
 3. **关闭：** 按下 <kbd>ESC</kbd> 键或点击快捷助手窗口外部的任意位置即可关闭。
 
 {% hint style="info" %}
-当 `快捷助手模型` 选 **默认模型** 时使用 [全局默认快速模型](../../pre-basic/settings/default-models.md)；选 **使用助手** 后可以选择一个已有助手作为响应的模型。
+选择 **默认模型** 时使用全局默认助手模型；选择 **使用助手** 后可指定一个已有助手。实际使用的模型会显示在输入框占位文字中。
 {% endhint %}
 
 ### 提示与技巧

@@ -2,109 +2,75 @@
 icon: cherries
 ---
 
-# 项目简介
+# Cherry Studio 是什么？
 
-<figure><img src=".gitbook/assets/docs-readme-banner1.png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/docs-readme-banner1.png" alt="Cherry Studio"><figcaption></figcaption></figure>
 
-关注我们的社交账号：[推特(X)](https://x.com/CherryStudioHQ)、[小红书](https://www.xiaohongshu.com/user/profile/662b6853000000000b031d9a)、[微博](https://weibo.com/u/7975656228)、[哔哩哔哩](https://space.bilibili.com/3546657515898892)、[抖音](https://www.douyin.com/user/MS4wLjABAAAAmw9A54m5J0hHVMQY5eGrVJ-EHDoOS0hgJ6M1F9MN2Tn2V163A0xrC4_KVzfmQSxC)
+Cherry Studio 是一个**开源的桌面 AI 工作台**。它把 CherryIN、DeepSeek、OpenAI、Claude、Gemini 以及 Ollama 等本地模型连接到同一个客户端，并提供对话、知识库、智能体Agent、翻译和绘画等能力。
 
-加入我们的社群：[QQ群](https://qm.qq.com/q/lo0D4qVZKi)、[Telegram](https://t.me/CherryStudioAI)、[Discord](https://discord.gg/wez8HtpxqQ)、[微信群](https://www.cherry-ai.com/#Community)
+## 你可以用它做什么？
 
-***
+* **问答、写作或编程**：使用[对话与助手](cherrystudio/preview/chat.md)总结文章、修改邮件或解释代码。
+* **统一管理不同模型**：通过[模型服务](pre-basic/providers/README.md)使用 DeepSeek、Gemini 或本地模型。
+* **根据自己的资料回答**：用[知识库](cherrystudio/preview/knowledge-base.md)查询产品手册、课程资料、合同和笔记。
+* **完成多步骤任务**：让[智能体Agent](advanced-basic/agent.md)读取工作区、整理文件、修改代码或生成报告。
+* **连接外部服务**：通过[MCP](advanced-basic/mcp/README.md)查询数据库，或调用 GitHub、Notion 等服务。
+* **自动运行或进入群聊**：结合[定时任务](advanced-basic/scheduled-tasks.md)和[频道](advanced-basic/agent-channels.md)生成简报并发送到飞书。
+* **处理图片、翻译和笔记**：使用[绘画](cherrystudio/preview/drawing.md)、[翻译](cherrystudio/preview/translation.md)和[笔记](cherrystudio/preview/notes.md)完成内容工作。
 
-Cherry Studio 是一款集多模型对话、智能体、知识库管理、AI 绘画、翻译等功能于一体的全能 AI 助手平台。Cherry Studio 高度自定义的设计、强大的扩展能力和友好的用户体验，使其成为专业用户和 AI 爱好者的理想选择。无论是零基础用户还是开发者，都能在 Cherry Studio 中找到适合自己的 AI 功能，提升工作效率和创造力。
+## 第一次使用，从这里开始
 
-<figure><img src=".gitbook/assets/image (1) (3).png" alt=""><figcaption></figcaption></figure>
+{% content-ref url="getting-started/quick-start.md" %}
+[quick-start.md](getting-started/quick-start.md)
+{% endcontent-ref %}
 
-<figure><img src=".gitbook/assets/image (1) (5).png" alt=""><figcaption></figcaption></figure>
+只需要完成四件事：
 
-***
+1. 下载并安装 Cherry Studio；
+2. 选择一个模型来源；
+3. 获取并启用一个对话模型；
+4. 发送第一条消息并确认收到回答。
 
-### **核心功能与特色**
+完成第一次对话后，再根据需要学习知识库或智能体Agent。没有自动化需求时，不需要提前配置 API 网关、MCP、频道或定时任务。
 
-#### **1. 基础对话功能**
+## 模型、费用与数据分别由谁负责？
 
-* **一问多答**：支持同一问题通过多个模型同时生成回复，方便用户对比不同模型的表现，详见 [对话界面](cherrystudio/preview/chat.md)。
-* **自动分组**：每个助手的对话记录会自动分组管理，便于用户快速查找历史对话。
-* **对话导出**：支持将完整对话或部分对话导出为多种格式（如 Markdown、Word 等），方便储存与分享。
-* **高度自定义参数**：除了基础参数调整外，还支持用户填写自定义参数，满足个性化需求。
-* **助手市场**：内置千余个行业专用助手，涵盖翻译、编程、写作等领域，同时支持用户自定义助手。
-* **多种格式渲染**：支持 Markdown 渲染、公式渲染、HTML 实时预览等功能，提升内容展示效果。
+```text
+云端模型服务商 / 本地模型
+            ↓
+      Cherry Studio
+            ↓
+对话 · 知识库 · 智能体Agent · 翻译 · 绘画
+```
 
-#### **2. 智能体与自动化**
+* **模型来源**：可以使用 CherryIN 中当前可用的模型、自己的服务商 API Key，或本机运行的 Ollama / LM Studio。
+* **软件费用**：Cherry Studio 客户端开源；模型是否收费、如何计费以及可用额度由模型服务商决定。
+* **数据位置**：对话、设置和知识库索引主要保存在本机；使用云端模型时，完成请求所需的内容会发送给对应服务商。
+* **完全本地使用**：需要使用本地模型，并避免启用云端模型、联网搜索和其他外部服务。
 
-* **智能体（Cherry Agent）**：可自主读取文件、运行命令、完成多步任务的 AI，详见 [智能体](advanced-basic/agent.md)。
-* **技能（Skill）**：为助手或智能体加装的"专业能力包"（如做小红书图文、画流程图），开箱即用，详见 [技能](pre-basic/settings/skills.md)。
-* **MCP**：通过 Model Context Protocol 接入外部工具与服务（数据库、Notion、GitHub 等），详见 [MCP 使用教程](advanced-basic/mcp/)。
-* **频道**：将智能体派驻到飞书 / 微信 / Telegram / Discord 等 IM 平台担任群机器人，详见 [频道](advanced-basic/agent-channels.md)。
-* **定时任务**：让智能体按计划自动运行（如每日新闻简报、每周汇总），详见 [定时任务](advanced-basic/scheduled-tasks.md)。
+不要把 API Key 发布到截图、文档、群聊或公开仓库中。怀疑密钥泄露时，请立即到服务商后台撤销并重新生成。
 
-#### **3. 多种特色功能集成**
+## 助手、智能体Agent、知识库
 
-* **AI 绘画**：提供专用绘画面板，用户可通过自然语言描述生成高质量图像。
-* **AI 小程序**：集成多种免费 Web 端 AI 工具，无需切换浏览器即可直接使用。
-* **翻译功能**：支持专用翻译面板、对话翻译、提示词翻译等多种翻译场景。
-* **笔记**：内置 Markdown 编辑器，支持与对话内容互通，便于沉淀整理。
-* **文件管理**：对话、绘画和知识库中的文件统一分类管理，避免繁琐查找。
-* **全局搜索**：支持快速定位历史记录和知识库内容，提升工作效率。
+| 能力 | 最适合的任务 | 是否会主动执行操作 |
+|---|---|---|
+| **助手** | 固定角色和回复风格的日常对话 | 否，以对话为主 |
+| **智能体Agent** | 读取工作区、调用工具并完成多步骤任务 | 是，按权限执行 |
+| **知识库** | 从你导入的资料中检索相关内容 | 否，为对话或智能体Agent提供资料 |
 
-#### **4. 多服务商统一管理机制**
+第一次看到 Skill、MCP、频道等术语时，请阅读[核心概念](advanced-basic/concepts-101.md)。
 
-* **服务商模型聚合**：支持 OpenAI、Gemini、Anthropic、Azure 等主流服务商的模型统一调用。
-* **模型自动获取**：一键获取完整模型列表，无需手动配置。
-* **多秘钥轮询**：支持多个 API 秘钥轮换使用，避免速率限制问题。
-* **精准头像匹配**：为每个模型自动匹配专属头像，提升辨识度。
-* **自定义服务商**：支持符合 OpenAI、Gemini 、Anthropic 等规范的三方服务商接入，兼容性强。
+## 推荐学习顺序
 
-#### **5. 高度自定义界面和布局**
+1. [5 分钟快速开始](getting-started/quick-start.md)
+2. [对话与助手](cherrystudio/preview/chat.md)
+3. [知识库](knowledge-base/knowledge-base.md)
+4. [智能体Agent](advanced-basic/agent.md)
+5. 按需学习 [MCP](advanced-basic/mcp/README.md)、[频道](advanced-basic/agent-channels.md)和[定时任务](advanced-basic/scheduled-tasks.md)
 
-* **自定义 CSS**：支持全局样式自定义，打造专属界面风格。
-* **自定义对话布局**：支持列表或气泡样式布局，并可自定义消息样式（如代码片段样式）。
-* **自定义头像**：支持为软件和助手设置个性化头像。
-* **自定义侧边栏菜单**：用户可根据需求隐藏或排序侧边栏功能，优化使用体验。
+## 获取帮助
 
-#### **6. 本地知识库系统**
-
-* **多种格式支持**：支持 PDF、DOCX、PPTX、XLSX、TXT、MD 等多种文件格式导入。
-* **多种数据源支持**：支持本地文件、网址、站点地图甚至手动输入内容作为知识库源。
-* **知识库导出**：支持将处理好的知识库导出并分享给他人使用。
-* **支持搜索检查**：知识库导入后，用户可实时检索测试，查看处理结果和分段效果。
-
-#### **7. 特色聚焦功能**
-
-* **快捷问答**：在任何场景（如微信、浏览器）中呼出快捷助手，快速获取答案。
-* **划词助手**：在任意应用选中文字后，通过浮动工具栏一键调用 AI 做翻译、解释、优化、总结等操作。
-* **快捷翻译**：支持快速翻译其他场景中的词汇或文本。
-* **内容总结**：对长文本内容进行快速总结，提升信息提取效率。
-* **解释说明**：无需复杂提示词，一键解释说明不懂的问题。
-
-#### **8. 数据保障**
-
-* **多种备份方案**：支持本地备份、WebDAV 备份和定时备份，确保数据安全。
-* **数据安全**：支持全本地场景使用，结合本地大模型，避免数据泄漏风险。
-
-***
-
-### **项目优势**
-
-1. **小白友好**：Cherry Studio 致力于降低技术门槛，零基础用户也能快速上手，让用户专注于工作、学习或者创作。
-2. **文档完善**：提供详细的使用文档和常见问题处理手册，帮助用户快速解决问题。
-3. **持续迭代**：项目团队积极响应用户反馈，持续优化功能，确保项目健康发展。
-4. **开源与扩展性**：支持用户通过开源代码进行定制和扩展，满足个性化需求。
-
-***
-
-### **适用场景**
-
-* **知识管理与查询**：通过本地知识库功能，快速构建和查询专属知识库，适用于研究、教育等领域。
-* **多模型对话与创作**：支持多模型同时对话，帮助用户快速获取信息或生成内容。
-* **翻译与办公自动化**：内置翻译助手和文件处理功能，适合需要跨语言交流或文档处理的用户。
-* **AI 绘画与设计**：通过自然语言描述生成图像，满足创意设计需求。
-
-### Star History
-
-![Star History](https://urlscan.io/liveshot/?width=1300\&height=620\&url=https://cherrystarhistory.ocool.online/)
-
-## 关注我们的社交账号
-
-<table data-view="cards"><thead><tr><th></th><th data-hidden data-card-cover data-type="files"></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><a href="https://www.xiaohongshu.com/user/profile/662b6853000000000b031d9a?xsec_token=YB_1nKvlH4r5hPYVVbbsNHF8Y6n6AKlm5-DaggPCtd2DQ%3D&#x26;xsec_source=app_share&#x26;xhsshare=CopyLink&#x26;appuid=662b6853000000000b031d9a&#x26;apptime=1738627324&#x26;share_id=ace5db41b5954fab8d98a2a7865a62bc&#x26;share_channel=copy_link">小红书</a></td><td><a href=".gitbook/assets/1.png">1.png</a></td><td><a href="https://www.xiaohongshu.com/user/profile/662b6853000000000b031d9a?xsec_token=YB_1nKvlH4r5hPYVVbbsNHF8Y6n6AKlm5-DaggPCtd2DQ%3D&#x26;xsec_source=app_share&#x26;xhsshare=CopyLink&#x26;appuid=662b6853000000000b031d9a&#x26;apptime=1738627324&#x26;share_id=ace5db41b5954fab8d98a2a7865a62bc&#x26;share_channel=copy_link">https://www.xiaohongshu.com/user/profile/662b6853000000000b031d9a?xsec_token=YB_1nKvlH4r5hPYVVbbsNHF8Y6n6AKlm5-DaggPCtd2DQ%3D&#x26;xsec_source=app_share&#x26;xhsshare=CopyLink&#x26;appuid=662b6853000000000b031d9a&#x26;apptime=1738627324&#x26;share_id=ace5db41b5954fab8d98a2a7865a62bc&#x26;share_channel=copy_link</a></td></tr><tr><td><a href="https://b23.tv/hIfGgDW">哔哩哔哩</a></td><td><a href=".gitbook/assets/3.png">3.png</a></td><td><a href="https://b23.tv/hIfGgDW">https://b23.tv/hIfGgDW</a></td></tr><tr><td><a href="https://weibo.com/u/7975656228">微博</a></td><td><a href=".gitbook/assets/2.png">2.png</a></td><td><a href="https://weibo.com/u/7975656228">https://weibo.com/u/7975656228</a></td></tr><tr><td><a href="https://v.douyin.com/ifTpX4X7">抖音</a></td><td><a href=".gitbook/assets/4.png">4.png</a></td><td><a href="https://v.douyin.com/ifTpX4X7">https://v.douyin.com/ifTpX4X7</a></td></tr><tr><td><a href="https://x.com/CherryStudioHQ?t=DYR0ulaLur-bO4Us3bG79A&#x26;s=05">推特(X)</a></td><td><a href=".gitbook/assets/5.png">5.png</a></td><td><a href="https://x.com/CherryStudioHQ?t=DYR0ulaLur-bO4Us3bG79A&#x26;s=05">https://x.com/CherryStudioHQ?t=DYR0ulaLur-bO4Us3bG79A&#x26;s=05</a></td></tr></tbody></table>
+* 遇到错误：先查看[常见问题](question-contact/questions.md)
+* 需要提交 Bug 或建议：查看[反馈与建议](question-contact/suggestions.md)
+* 关注动态：[X](https://x.com/CherryStudioHQ) · [哔哩哔哩](https://space.bilibili.com/3546657515898892) · [微博](https://weibo.com/u/7975656228)
+* 加入社区：[QQ群](https://qm.qq.com/q/lo0D4qVZKi) · [Telegram](https://t.me/CherryStudioAI) · [Discord](https://discord.gg/wez8HtpxqQ)

@@ -41,7 +41,7 @@ icon: database
 
 * 使用**本地嵌入模型**（如通过 [Ollama](../pre-basic/providers/ollama.md) 或 [LM Studio](../pre-basic/providers/lm-studio.md) 运行 `bge-m3`），全流程离线
 * 对话模型同样建议选择本地部署
-* 可配合 [修改存储位置](../pre-basic/personalization-settings/storage.md) 将数据存放至加密磁盘
+* 可在 [数据存储位置](../pre-basic/personalization-settings/storage.md) 查看知识库所在的数据目录；如需磁盘级加密，请使用操作系统提供的加密能力
 
 ## 延伸阅读
 

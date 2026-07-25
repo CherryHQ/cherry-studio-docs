@@ -4,88 +4,96 @@ icon: book-open-cover
 
 # 知识库教程
 
-知识库就像给 AI 配一本**专属参考书**：你把自己的文档、笔记、网页放进去，之后聊天时让 AI 翻这本书来回答。
+本页按 Cherry Studio V2 的实际流程，带你完成：**创建知识库 → 配置检索 → 添加数据源 → 测试召回 → 在对话或 Agent 中使用**。
 
-> 不知道知识库能做什么？先看 [知识库（功能介绍）](../cherrystudio/preview/knowledge-base.md) 的几个使用场景。
+## 1. 创建知识库
 
-本页带你走完完整流程：**添加嵌入模型 → 创建知识库 → 放资料 → 在对话中调用**。
+1. 点击顶部 **知识库**，或从启动台打开；
+2. 在空页面点击 **创建知识库**；
+3. 输入名称并点击 **创建**。
 
-## 添加嵌入模型
+<figure><img src="../.gitbook/assets/cherry-knowledge-base-v2.png" alt="V2 知识库空页面"><figcaption><p>没有知识库时显示“创建知识库”。</p></figcaption></figure>
 
-1. 在 `设置 → 模型服务` 中，找到你常用的 Provider（如 CherryIN、硅基流动、OpenAI 等）；
-2. 点击 **获取模型列表**，在顶部 Tab 切到 **嵌入** 分类；
-3. 选择需要的嵌入模型添加到我的模型列表（推荐 `bge-m3` 或 `text-embedding-3-small`）。
+<figure><img src="../.gitbook/assets/cherry-knowledge-base-create-v2.png" alt="V2 新建知识库"><figcaption><p>V2 第一步只要求名称；模型和检索参数在创建后配置。</p></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/image.webp" alt=""><figcaption></figcaption></figure>
+## 2. 配置嵌入与检索
 
-## 创建知识库
+进入新知识库后打开设置，选择：
 
-1. **入口**：顶部 Tab `+` → **启动台** → 点击 `知识库`（或在左侧栏布局下点击知识库图标）；
-2. **添加**：点击 **+ 添加**，开始创建知识库；
-3. **命名 + 选模型**：输入名称并选择嵌入模型（以 `bge-m3` 为例），即可完成创建。
+* **嵌入模型**：把文本转换为向量；也可使用 V2 提供的本地嵌入模型。
+* **处理服务商**：导入文件时负责提取正文和表格。
+* **智能分段**：按 Markdown 标题、段落和代码块组织分片。
+* **分段大小 / 重叠大小**：控制每个 Chunk 的长度与上下文重叠。
+* **Top K**：每次最多召回的片段数。
+* **重排模型与相似度阈值**：可选，用于重新排序并过滤低相关片段。
 
-<figure><img src="../.gitbook/assets/image-1.webp" alt=""><figcaption></figcaption></figure>
-
-<figure><img src="../.gitbook/assets/image-2.webp" alt=""><figcaption></figcaption></figure>
-
-## 添加文件并向量化
-
-1. 添加文件：点击添加文件的按钮，打开文件选择；
-2. 选择文件：选择支持的文件格式，如 pdf，docx，pptx，xlsx，txt，md，mdx 等，并打开；
-3. 向量化：系统会自动进行向量化处理，当显示完成时（绿色 ✓），代表向量化已完成。
-
-<figure><img src="../.gitbook/assets/image-3.webp" alt=""><figcaption></figcaption></figure>
-
-<figure><img src="../.gitbook/assets/image-4.webp" alt=""><figcaption></figcaption></figure>
-
-<figure><img src="../.gitbook/assets/image-5.webp" alt=""><figcaption></figcaption></figure>
-
-## 添加多种来源的数据
-
-CherryStudio 支持多种添加数据的方式：
-
-1. 文件夹目录：可以添加整个文件夹目录，该目录下支持格式的文件会被自动向量化；
-2. 网址链接：支持网址 url，如[https://docs.siliconflow.cn/introduction](https://docs.siliconflow.cn/introduction)；
-3. 站点地图：支持 xml 格式的站点地图，如[https://docs.siliconflow.cn/sitemap.xml](https://docs.siliconflow.cn/sitemap.xml)；
-4. 纯文本笔记：支持输入纯文本的自定义内容。
-
-{% hint style="info" %}
-提示：
-
-1. 导入知识库的文档中的插图暂不支持转换为向量，需要手动转换为文本；
-2. 使用网址作为知识库来源时不一定会成功，有些网站有比较严格的反扒机制（或需要登录、授权等），因此该方式不一定能获取到准确内容。创建完成后建议先搜索测试一下。
-3. 一般网站都会提供sitemap，如CherryStudio的[sitemap](https://docs.cherry-ai.com/sitemap-pages.xml)，一般情况下在网站的根地址（即网址）后加/sitemap.xml可以获取到相关信息。如`aaa.com/sitemap.xml` 。
-4. 如果网站没提供sitemap或者网址比较杂可自行组合一个sitemap的xml文件使用，文件暂时需要使用公网可直接访问的直链的方式填入，本地文件链接不会被识别。
-
-> 1) 可以让AI生成sitemap文件或让AI写一个sitemap的HTML生成器工具；
-> 2) 直链可以使用oss直链或者网盘直链等方式来生成。如果没有现成工具也可到[ocoolAI](https://one.ocoolai.com/login)官网，登录后使用网站顶栏的免费文件上传工具来生成直链。
+{% hint style="warning" %}
+更换嵌入模型后，通常需要重新索引已有内容。分段参数的修改主要影响之后新添加或重新索引的数据源。
 {% endhint %}
 
-## 搜索知识库
+如果模型下拉为空，请先到 `设置 → 模型服务` 添加嵌入或重排模型。
 
-当文件等资料向量化完成后，即可进行查询：
+## 3. 添加数据源
 
-1. 点击页面下方的搜索知识库按钮；
-2. 输入查询的内容；
-3. 呈现搜索的结果；
-4. 并显示该条结果的匹配分数。
+点击 **添加数据源**。V2 当前界面支持：
 
-<figure><img src="../.gitbook/assets/image-7.webp" alt=""><figcaption></figcaption></figure>
+| 类型 | 说明 |
+|---|---|
+| 文件 | 支持 PDF、DOCX、MD、XLSX、TXT、CSV 等界面列出的格式 |
+| 目录 | 导入目录中受支持的文件 |
+| 链接 | 抓取单个网页文本并分块索引 |
+| 笔记 | 选择 Cherry Studio 笔记作为来源 |
 
-<figure><img src="../.gitbook/assets/image-8.webp" alt=""><figcaption></figcaption></figure>
+单次添加数量和支持格式以对话框提示为准。旧版单独的 Sitemap 导入入口未出现在 V2 添加数据源界面中；如需批量导入网站内容，可先整理成文件/目录，或按当前版本提供的入口处理。
 
-## 对话中引用知识库生成回复
+数据源会经历 **等待中 → 分块中 → 嵌入中 → 就绪**。出错时可查看原因并执行 **重新索引**。
 
-1. 创建一个新的话题，在对话工具栏中，点击知识库，会展开已经创建的知识库列表，选择需要引用的知识库；
-2. 输入并发送问题，模型即返回通过检索结果生成的答案 ；
-3. 同时，引用的数据来源会附在答案下方，可快捷查看源文件。
+## 4. 管理与检查
 
-<figure><img src="../.gitbook/assets/image-9.webp" alt=""><figcaption></figcaption></figure>
+数据源列表支持：
 
-<figure><img src="../.gitbook/assets/image-10.webp" alt=""><figcaption></figcaption></figure>
+* 预览原文；
+* 查看 Chunks；
+* 重新索引；
+* 批量删除；
+* 按文件、目录、链接和笔记筛选。
+
+先用 **召回测试** 输入几个真实问题，查看返回片段、相关度和排序。如果结果不理想，再调整分段、Top K、重排模型或阈值。
+
+**成功标志**：数据源状态显示为“就绪”，并且召回测试能返回与问题相关的原文片段。只有文件上传成功但没有检索结果，不算知识库已经可用。
+
+## 5. 在对话与 Agent 中使用
+
+### 普通对话
+
+在对话输入区打开知识库选择器，勾选目标知识库后再提问。回答下方会显示召回来源，便于回看原文。
+
+### Cherry Agent
+
+V2 Agent 提供 **知识库搜索**和 **知识库管理**工具。为目标 Agent 启用相关工具后，它可以在任务过程中检索资料，或按权限管理知识库内容。
+
+## 常见问题
+
+### 网页抓取失败
+
+目标网页可能需要登录、禁止抓取或依赖脚本渲染。可改用网页导出文件、复制为 Markdown，或使用允许访问的公开页面。
+
+### 扫描 PDF 没有文本
+
+先在 `设置 → OCR` 和 `设置 → 文档处理` 配置合适的服务，再重新导入或重新索引。详情见 [文档预处理](document-preprocessing.md)。
+
+### 检索结果不相关
+
+先确认原文和 Chunks 正确，再尝试减小分段大小、增加适当重叠、调整 Top K，或配置重排模型。
+
+## 下一步
+
+* 日常资料问答：在[对话界面](../cherrystudio/preview/chat.md)选择该知识库后提问；
+* 固定为某个领域助手：在[助手设置](../cherrystudio/preview/assistants.md)中关联知识库；
+* 在多步骤任务中检索或管理资料：为 [Cherry Agent](../advanced-basic/agent.md)启用知识库工具。
 
 ***
 
 ### 💡 获取帮助与提交反馈
 
-如果您在配置或使用过程中遇到任何疑问、Bug 或有功能改进建议，请参考 [反馈与建议](../question-contact/suggestions.md) 中提供的官方渠道。
+如果您在配置或使用过程中遇到疑问，请参考 [反馈与建议](../question-contact/suggestions.md)。

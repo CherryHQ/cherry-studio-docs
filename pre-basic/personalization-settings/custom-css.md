@@ -122,7 +122,7 @@ body[theme-mode="light"] {
 }
 ```
 
-更多主题变量请参考源代码：[https://github.com/CherryHQ/cherry-studio/tree/main/src/renderer/src/assets/styles](https://github.com/CherryHQ/cherry-studio/tree/main/src/renderer/src/assets/styles)
+更多主题变量请参考源代码：[Cherry Studio 样式目录](https://github.com/CherryHQ/cherry-studio/tree/main/src/renderer/assets/styles)
 
 ### 相关推荐
 

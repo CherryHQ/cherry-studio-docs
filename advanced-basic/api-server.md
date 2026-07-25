@@ -2,80 +2,68 @@
 icon: server
 ---
 
-# API 服务器
+# API 网关
 
-API 服务器的核心作用：**将 Cherry Studio 中已配置的 AI 能力，通过本地接口对外开放**（同时也是智能体功能的底层依赖），供其他程序调用。
-
-使用场景：你已在 Cherry Studio 中配置了 OpenAI、Anthropic、DeepSeek 等服务商。若你的其他工具（例如某个编程插件或自定义脚本）希望调用相同的 AI 能力，**API 服务器**会在本机开放一个标准接口，使这些工具可直接复用 Cherry Studio 已有配置，无需重复注册各家账号。
-
-**何时需要启用？**
-
-* 使用 [智能体](agent.md) → **必须启用**
-* 让 Agent 接入 IM 平台（[频道](agent-channels.md)）→ **必须启用**
-* 仅使用 Cherry Studio 普通对话、绘画、翻译等功能 → **无需启用**
-
-> 推荐先阅读 [概念入门](concepts-101.md) 了解 Agent、频道等相关概念。
-
-### 启用 API 服务器
-
-1. 打开 `设置 → API 服务器`
-2. 默认监听端口为 **23333**，可填入 **1000-65535** 之间的任意空闲端口
-3. 点击右上角绿色 **▶ 启动** 按钮
-
-<figure><img src="../.gitbook/assets/cherry-api-server-stopped.png" alt=""><figcaption><p>未启用时显示"已停止"，并提示"请启用 API 服务器以使用智能体功能"</p></figcaption></figure>
-
-启动成功后，状态变为绿色 **运行中**，并显示监听地址 `http://127.0.0.1:<port>`：
-
-<figure><img src="../.gitbook/assets/cherry-api-server-running.png" alt=""><figcaption><p>运行中状态，包含"重启"与"停止"按钮</p></figcaption></figure>
+API 网关把 Cherry Studio 中已配置并启用的模型能力，通过本机 HTTP API 提供给脚本、编程工具或其他兼容客户端。V2 同时提供 **OpenAI 兼容**与 **Anthropic 兼容**接口。
 
 {% hint style="info" %}
-**修改端口的方式**：端口输入框在服务器运行时是只读的。如需修改，请先点击 ⏹ **停止**，改完端口再启动。
+日常使用 Cherry Studio 的对话、绘画、翻译和 Cherry Agent 不需要开启 API 网关。只有外部程序需要调用 Cherry Studio 时才开启。
 {% endhint %}
 
-### API 密钥与授权头
+## 打开与启动
 
-**API 密钥**形如 `cs-sk-xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx`，在首次启用 API 服务器时自动生成并**持续保留**，重启服务器不会刷新。
+1. 打开 `设置 → API 网关`。
+2. 确认端口可用；默认地址通常为 `http://127.0.0.1:23333`。
+3. 点击 **启动**。
+4. 状态变为绿色 **运行中** 后，即可复制地址并按 API 文档接入。
 
-如需手动换新：**必须先点击 ⏹ 停止服务器**，密钥右侧才会出现 **重新生成** 按钮（运行中只显示复制按钮）。点击后旧密钥立即失效，再次启动会生成新密钥。
+<figure><img src="../.gitbook/assets/cherry-api-gateway-v2.png" alt="Cherry Studio V2 API 网关"><figcaption><p>V2 API 网关运行状态。截图中的密钥字段已遮罩。</p></figcaption></figure>
 
-调用 API 时需在请求头加入：
+页面右上角的 **API 文档** 会打开当前版本的接口说明。端点、请求字段和示例应以这里展示的内容为准。
 
+## API 密钥
+
+API 网关使用本地访问密钥保护接口。外部客户端通常需要在请求头中传入：
+
+```http
+Authorization: Bearer <你的 API 网关密钥>
 ```
-Authorization: Bearer cs-sk-xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
-```
 
-{% hint style="warning" %}
-API 密钥拥有访问你 Cherry Studio 内全部 Provider 的权限，**请勿在公网或团队共享渠道暴露**。
+{% hint style="danger" %}
+API 网关密钥可以调用你在 Cherry Studio 中配置的模型。不要把真实密钥放进截图、仓库、聊天记录或公开问题中；如果已经泄露，请立即重新生成。
 {% endhint %}
 
-### 查看 API 文档
+## 接入外部客户端
 
-页面右上角点击 **API 文档** 按钮可打开内置的 OpenAPI 接口文档（Swagger 风格），包含完整的端点与请求示例。
+外部工具通常需要填写三项：
 
-### 端口冲突排查
+| 字段 | 填写内容 |
+|---|---|
+| Base URL | API 网关页面显示的本地地址 |
+| API Key | 页面生成的 API 网关密钥 |
+| API 类型 | 根据客户端选择 OpenAI 兼容或 Anthropic 兼容 |
 
-启动失败并提示 `EADDRINUSE: address already in use 127.0.0.1:<port>` 时：
+不同客户端对 Base URL 是否需要追加路径的要求不同，请先查看 API 文档和目标客户端说明，不要盲目添加 `/v1/chat/completions`。
 
-1. 大概率是另一个 Cherry Studio 实例占用了同一端口
-2. 点击 ⏹ 停止，把端口改成其他空闲值再启动
-3. 或在终端执行 `lsof -i :<port>`（macOS / Linux）查出占用进程并处理
+## 常见问题
 
-### 重启与停止
+### 启动失败或端口被占用
 
-* **重启**：点击 ↻ 图标，常用于密钥重新生成后强制刷新所有连接
-* **停止**：点击红色 ⏹ 图标，会立即关闭服务；正在使用 [智能体](agent.md) 与 [频道](agent-channels.md) 的连接会同步中断
+先停止网关，换一个未被占用的端口后重新启动。如果同时运行多个 Cherry Studio 实例，每个实例应使用不同端口。
 
-{% hint style="info" %}
-API 服务器仅监听 `127.0.0.1`，**不会**暴露到局域网或公网。若需要跨机访问，请配合 SSH 反向隧道或类似方案。
-{% endhint %}
+### 外部程序无法连接
 
-### 下一步
+* 确认页面状态为 **运行中**；
+* 确认地址、端口和 API 类型填写正确；
+* 确认系统防火墙或安全软件没有拦截本地连接；
+* 使用页面中的 **API 文档** 示例做最小请求测试。
 
-* 启用后即可继续配置 [智能体](agent.md)
-* 想把 Agent 接入飞书 / Telegram / Discord 等 IM 平台，请阅读 [频道](agent-channels.md)
+### 是否能直接从其他电脑访问
+
+V2 页面默认显示本机回环地址 `127.0.0.1`，仅供当前电脑访问。不要为了方便直接暴露到公网；确有跨机需求时，应使用受控隧道、访问控制和独立密钥。
 
 ***
 
 ### 💡 获取帮助与提交反馈
 
-如果您在配置或使用过程中遇到任何疑问、Bug 或有功能改进建议，请参考 [反馈与建议](../question-contact/suggestions.md) 中提供的官方渠道。
+如果您在配置或使用过程中遇到疑问，请参考 [反馈与建议](../question-contact/suggestions.md)。

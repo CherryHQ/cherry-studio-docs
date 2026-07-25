@@ -6,6 +6,8 @@ icon: map
 
 支持将话题、消息导出到思源笔记。
 
+<figure><img src="../../.gitbook/assets/cherry-siyuan-settings-v2.png" alt="Cherry Studio V2 浅色模式的思源笔记配置页面"><figcaption><p>V2 入口：设置 → 数据设置 → 思源笔记配置</p></figcaption></figure>
+
 ## 第一步
 
 打开思源笔记，创建一个笔记本

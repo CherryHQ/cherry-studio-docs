@@ -29,7 +29,7 @@ Azure OpenAI 是微软在 Azure 上托管的 OpenAI 模型服务，适合需要�
 
 * **gpt-4o / gpt-4o-mini**：通用对话、Agent
 * **gpt-4 turbo**：长上下文
-* **text-embedding-3-***：嵌入模型，可与 [全局记忆](../../advanced-basic/memory.md)、知识库共用
+* **text-embedding-3-***：嵌入模型，可用于知识库和需要向量化的记忆方案
 
 ## 常见问题
 

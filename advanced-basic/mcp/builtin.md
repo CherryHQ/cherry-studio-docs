@@ -1,6 +1,8 @@
 # 内置 MCP 配置
 
-Cherry Studio **预装了若干常用 MCP**，无需手动安装即可在 `设置 → MCP 服务器` 中启用。下面是当前内置清单，**新版本可能调整**，请以应用内实际显示为准。
+Cherry Studio **预装了若干常用 MCP**，无需手动安装即可在 `设置 → MCP` 中启用。下面是当前内置清单，**新版本可能调整**，请以应用内实际显示为准。
+
+<figure><img src="../../.gitbook/assets/cherry-mcp-builtin-v2.png" alt="浅色模式下的 Cherry Studio V2 内置 MCP 服务器页面"><figcaption><p>设置 → MCP → 内置服务器</p></figcaption></figure>
 
 > 想自己装其他 MCP？看 [配置和使用 MCP](config.md)。
 
@@ -46,7 +48,7 @@ BRAVE_API_KEY=你的_brave_api_key
 MEMORY_FILE_PATH=/path/to/memory.json
 ```
 
-> 注：这是 MCP 形式的记忆。**Cherry Studio 的 [全局记忆](../memory.md)** 是更上层的功能，二者可叠加，但通常用其中之一即可。
+> 注：这是 MCP 形式的记忆。V2 的记忆能力还包括 Cherry Agent 内置记忆；两类方案的差异见[记忆能力（V2）](../memory.md)。
 
 #### `@cherry/nowledge_mem`
 
@@ -85,10 +87,10 @@ MEMORY_FILE_PATH=/path/to/memory.json
 | 想让 AI 处理本地文件 | `@cherry/filesystem` |
 | 想让 AI 跑 Python 代码 | `@cherry/python` |
 | 想让 AI 接 Dify 知识库 | `@cherry/dify_knowledge` |
-| 想让 AI 持久记忆 | 优先用上层的 [全局记忆](../memory.md)，需高级控制再用 `@cherry/memory` |
+| 想让 AI 持久记忆 | Agent 任务优先使用内置记忆；普通对话或自定义存储可使用 `@cherry/memory`，详见[记忆能力（V2）](../memory.md) |
 | 让 AI 帮你安装其他 MCP | `@cherry/mcp-auto-install` |
 
-启用方法都一样：在 `设置 → MCP 服务器` 中找到对应条目，按提示填入环境变量，点击启用即可。
+启用方法都一样：在 `设置 → MCP` 中找到对应条目，按提示填入环境变量，点击启用即可。
 
 ***
 

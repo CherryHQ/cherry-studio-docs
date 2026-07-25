@@ -98,7 +98,9 @@ def generate_markdown(df):
         return "未能获取或解析排行榜数据。"
 
     column_mapping = {
+        'Rank': '排名',
         'Rank (UB)': '排名 (UB)',
+        'Rank Spread': '排名区间',
         'Model': '模型',
         'Score': '分数',
         '95% CI (±)': '95% 置信区间 (±)',
@@ -108,6 +110,16 @@ def generate_markdown(df):
     }
 
     df.rename(columns=column_mapping, inplace=True)
+
+    # The full upstream table contains hundreds of rows and several wide
+    # metadata columns. Keep the public docs readable on laptop and mobile
+    # screens by showing a concise top-30 snapshot; the complete live table
+    # remains available on LMArena.
+    preferred_columns = ['排名', '排名 (UB)', '模型', '分数', '票数']
+    visible_columns = [column for column in preferred_columns if column in df.columns]
+    if visible_columns:
+        df = df.loc[:, visible_columns]
+    df = df.head(30)
 
     utc_now = datetime.now(pytz.utc)
     beijing_tz = pytz.timezone('Asia/Shanghai')
@@ -119,33 +131,35 @@ def generate_markdown(df):
     # to_markdown 会自动处理单元格内的 Markdown 链接
     md_table = df.to_markdown(index=False)
 
-    markdown_content = f"""# LLM Arena 排行榜 (实时更新)
+    markdown_content = f"""# LLM Arena 排行榜
 
-这是一个基于 Chatbot Arena (lmarena.ai) 数据的排行榜，通过自动化流程生成。
+本页展示 [LMArena](https://lmarena.ai/leaderboard/text) 文本榜单前 30 名的每日快照，方便快速了解近期模型表现。完整榜单、筛选项和最新变化请到 LMArena 官网查看。
 
 > **数据更新时间**: {utc_time_str} / {beijing_time_str} (北京时间)
 
-## 排行榜
+{{% hint style="info" %}}
+排行榜反映特定评测和用户投票偏好，不等同于模型在你的任务中一定更好。选择模型时还要考虑价格、速度、上下文、工具调用、隐私和地区可用性。
+{{% endhint %}}
+
+## 前 30 名
 
 {md_table}
 
-## 说明
+## 怎么看这张表
 
-- **排名 (UB)**：基于 Bradley-Terry 模型计算的排名。此排名反映了模型在竞技场中的综合表现，并提供了其 Elo 分数的 **上界** 估计，帮助理解模型的潜在竞争力。
-- **模型**：大型语言模型 (LLM) 的名称。部分模型名称可能已嵌入相关链接。
-- **分数**：模型在竞技场中通过用户投票获得的 Elo 评分。Elo 评分是一种相对排名系统，分数越高表示模型表现越好。
-- **95% 置信区间 (±)**：模型 Elo 评分的95%置信区间（例如：`±6`）。这个区间越小，表示模型的评分越稳定和可靠。
-- **票数**：该模型在竞技场中收到的总投票数量。投票数越多，通常意味着其评分的统计可靠性越高。
-- **组织/公司**：提供该模型的组织或公司。
-- **许可证**：模型的许可协议类型，例如专有 (Proprietary)、Apache 2.0、MIT 等。
+* **排名 / 排名 (UB)**：LMArena 根据对战投票估算的相对名次。
+* **分数**：相对评分，适合比较同一时刻榜单中的模型。
+* **票数**：样本量参考；票数较少时，排名通常更容易波动。
 
-## 数据来源与更新频率
+## 选模型时再确认三件事
 
-本排行榜数据由自动化脚本直接从 <sup>1</sup> [<sup>2</sup>](https://lmarena.ai/) 官方网站获取。此排行榜由 GitHub Actions 每天自动更新。
+1. Provider 是否实际提供这个模型，以及你的地区和账户是否可用；
+2. API 价格、速率限制和上下文是否适合你的任务；
+3. 用 3～5 个真实任务做小规模测试，不要只看总榜名次。
 
-## 免责声明
+## 数据来源
 
-本报告仅供参考。排行榜数据是动态变化的，并基于特定时间段内用户在 Chatbot Arena 上的偏好投票。数据的完整性和准确性取决于上游数据源。不同模型可能采用不同的许可协议，使用时请务必参考模型提供商的官方说明。
+数据来自 [LMArena 官方文本榜单](https://lmarena.ai/leaderboard/text)，由 GitHub Actions 每天更新。模型价格、许可证和能力请以模型服务商官方信息为准。
 """
     return markdown_content
 
