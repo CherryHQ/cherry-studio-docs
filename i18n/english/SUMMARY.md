@@ -65,7 +65,7 @@
   * [Notion Configuration Tutorial](data-settings/notion.md)
   * [Obsidian Configuration Tutorial](data-settings/obsidian.md)
   * [SiYuan Note Configuration Tutorial](data-settings/siyuan.md)
-  * [Assistant Subscription Configuration](data-settings/assistants-subscribe.md)
+  * [Assistant Subscriptions and Import](data-settings/assistants-subscribe.md)
 * [Personalization Settings](personalization-settings/README.md)
   * [Custom CSS](personalization-settings/css.md)
   * [Font Recommendations](personalization-settings/font.md)

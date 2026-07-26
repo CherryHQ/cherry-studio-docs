@@ -77,7 +77,7 @@
   * [Notion 配置教程](pre-basic/data-settings/notion.md)
   * [Obsidian 配置教程](pre-basic/data-settings/obsidian.md)
   * [思源笔记配置教程](pre-basic/data-settings/siyuan.md)
-  * [助手订阅配置](pre-basic/data-settings/assistants-subscribe.md)
+  * [助手订阅与导入](pre-basic/data-settings/assistants-subscribe.md)
 * [个性化设置](pre-basic/personalization-settings/README.md)
   * [自定义 CSS](pre-basic/personalization-settings/custom-css.md)
   * [字体推荐](pre-basic/personalization-settings/font.md)

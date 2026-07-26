@@ -65,7 +65,7 @@
   * [Notion 設定チュートリアル](data-settings/notion.md)
   * [Obsidian 設定チュートリアル](data-settings/obsidian.md)
   * [思源ノート設定チュートリアル](data-settings/siyuan.md)
-  * [アシスタント購読設定](data-settings/assistants-subscribe.md)
+  * [アシスタントの購読とインポート](data-settings/assistants-subscribe.md)
 * [カスタマイズ設定](personalization-settings/README.md)
   * [カスタム CSS](personalization-settings/css.md)
   * [フォント推奨](personalization-settings/font.md)

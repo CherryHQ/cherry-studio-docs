@@ -65,7 +65,7 @@
   * [Интеграция с Notion](data-settings/notion.md)
   * [Интеграция с Obsidian](data-settings/obsidian.md)
   * [Интеграция с Siyuan](data-settings/siyuan.md)
-  * [Подписка на помощников](data-settings/assistants-subscribe.md)
+  * [Подписки на ассистентов и импорт](data-settings/assistants-subscribe.md)
 * [Персонализация](personalization-settings/README.md)
   * [Пользовательский CSS](personalization-settings/css.md)
   * [Рекомендуемые шрифты](personalization-settings/font.md)
