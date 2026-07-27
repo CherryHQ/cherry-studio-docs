@@ -7,7 +7,7 @@ icon: square-n
 
 Cherry Studio V2 can export a topic or an individual message to a Notion database. Each export creates a new page in the target database and writes the converted content into the page body.
 
-The configuration entry has moved to **Settings > Integrations > Notion**. **Data Settings > Export Menu** only shows or hides the “Export to Notion” option; it does not configure the connection.
+The configuration entry is under **Settings > Data > Notion Settings**. **Settings > Data > Export Menu** only shows or hides the “Export to Notion” option; it does not configure the connection.
 
 {% hint style="warning" %}
 A Notion Token is the access credential for this connection. Do not display the complete Token in screenshots, feedback, or shared configurations, and do not publish it on a public page.
@@ -99,13 +99,17 @@ The name is sensitive to characters, spaces, and letter case. Do not enter the d
 
 ## Connect in Cherry Studio
 
-Go to **Settings > Integrations > Notion** and enter:
+Go to **Settings > Data > Notion Settings**.
+
+![Notion settings for database ID, title field, and API key](../.gitbook/assets/cherry-v2-069-notion-en.png)
+
+Enter:
 
 1. **Notion Database ID**;
 2. **Page Title Field Name**;
-3. **Notion Key**.
+3. **Notion API Key**.
 
-Click **Check** beside the Token input. A successful check means:
+Click **Check** beside the **Notion API Key** input. A successful check means:
 
 - The Token is valid.
 - Cherry Studio can read the target database through that Token.
@@ -115,7 +119,7 @@ The check does not validate the Page Title Field Name and does not create a test
 
 ## Choose Whether to Export Reasoning
 
-With **Include Chain of Thought in Export** enabled, Cherry Studio writes reasoning content from a message to Notion when that content is available.
+With **Include Reasoning Chain in Export** enabled, Cherry Studio writes reasoning content from a message to Notion when that content is available.
 
 When disabled, only the normal answer is exported. Keep it disabled when:
 
@@ -129,7 +133,7 @@ The switch does not make a model generate reasoning that it did not originally p
 
 If “Export to Notion” is missing from the conversation menu:
 
-1. Open **Settings > Data Settings > Export Menu**.
+1. Open **Settings > Data > Export Menu**.
 2. Enable **Export to Notion**.
 3. Return to the conversation and reopen the topic or message export menu.
 
@@ -147,7 +151,7 @@ First test with a short conversation that contains no sensitive information:
 
 Cherry Studio uses the topic or message title for the database page. A title longer than 32 characters is truncated and receives an ellipsis.
 
-Notion export uses Cherry Studio's Markdown conversion flow. Some options under **Data Settings > Markdown Export**, such as formula delimiters, model information, and citation handling, may also affect the result.
+Notion export uses Cherry Studio's Markdown conversion flow. Some options under **Settings > Data > Markdown Export**, such as formula delimiters, model information, and citation handling, may also affect the result.
 
 ## Permissions and Data Boundaries
 
@@ -185,6 +189,6 @@ Wait for export progress to finish completely, then refresh Notion. Complex Mark
 
 ### Notion is missing from the conversation menu
 
-Go to **Settings > Data Settings > Export Menu** and enable **Export to Notion**. If it is already enabled, reenter the current conversation and check the menu again.
+Go to **Settings > Data > Export Menu** and enable **Export to Notion**. If it is already enabled, reenter the current conversation and check the menu again.
 
 If the issue persists, submit your Cherry Studio version, Notion status code, redacted Database ID, title field name, and complete error message through [Feedback and Suggestions](../question-contact/suggestions.md).

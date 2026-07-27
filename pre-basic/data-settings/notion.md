@@ -7,7 +7,7 @@ icon: square-n
 
 Cherry Studio V2 可以把话题或单条消息导出到 Notion 数据库。每次导出都会在目标数据库中新建一个页面，并把转换后的内容写入页面正文。
 
-配置入口已经移到 **设置 > 集成 > Notion**。**数据设置 > 导出菜单**只负责显示或隐藏“导出到 Notion”选项，不用于填写连接信息。
+配置入口位于 **设置 > 数据 > Notion 设置**。**设置 > 数据 > 导出菜单设置**只负责显示或隐藏“导出到 Notion”选项，不用于填写连接信息。
 
 {% hint style="warning" %}
 Notion Token 等同于该连接的访问凭据。不要在截图、反馈或共享配置中显示完整 Token，也不要把 Token 写进公开页面。
@@ -99,13 +99,17 @@ https://www.notion.so/workspace/Tasks-0123456789abcdef0123456789abcdef?v=...
 
 ## 在 Cherry Studio 中连接
 
-进入 **设置 > 集成 > Notion**，依次填写：
+进入 **设置 > 数据 > Notion 设置**。
+
+![Notion 设置页面的数据库 ID、标题字段和密钥配置](../../.gitbook/assets/cherry-v2-069-notion-zh-cn.png)
+
+依次填写：
 
 1. **Notion 数据库 ID**；
 2. **页面标题字段名**；
 3. **Notion 密钥**。
 
-点击 Token 输入框旁的 **检测**。检测成功表示：
+点击 **Notion 密钥**输入框旁的 **检测**。检测成功表示：
 
 - Token 有效；
 - Cherry Studio 能通过该 Token 读取目标数据库；
@@ -129,7 +133,7 @@ https://www.notion.so/workspace/Tasks-0123456789abcdef0123456789abcdef?v=...
 
 若对话菜单中没有“导出到 Notion”：
 
-1. 打开 **设置 > 数据设置 > 导出菜单**。
+1. 打开 **设置 > 数据 > 导出菜单设置**。
 2. 开启 **导出到 Notion**。
 3. 返回对话，重新打开话题或消息的导出菜单。
 
@@ -147,7 +151,7 @@ https://www.notion.so/workspace/Tasks-0123456789abcdef0123456789abcdef?v=...
 
 Cherry Studio 会用话题或消息标题创建数据库页面。标题超过 32 个字符时会被截短并添加省略号。
 
-Notion 导出基于 Cherry Studio 的 Markdown 转换流程。**数据设置 > Markdown 导出**中的部分选项，例如公式标记、模型信息和引用处理，也可能影响导出结果。
+Notion 导出基于 Cherry Studio 的 Markdown 转换流程。**设置 > 数据 > Markdown 导出**中的部分选项，例如公式标记、模型信息和引用处理，也可能影响导出结果。
 
 ## 权限与数据边界
 
@@ -185,6 +189,6 @@ Token 可能复制不完整、已撤销或属于另一个 Workspace。回到 Not
 
 ### 对话菜单里没有 Notion
 
-进入 **设置 > 数据设置 > 导出菜单**，打开 **导出到 Notion**。若已打开，重新进入当前对话再检查菜单。
+进入 **设置 > 数据 > 导出菜单设置**，打开 **导出到 Notion**。若已打开，重新进入当前对话再检查菜单。
 
 如仍无法解决，请通过[反馈与建议](../../question-contact/suggestions.md)提交 Cherry Studio 版本、Notion 返回的状态码、已脱敏的 Database ID、标题字段名和完整错误信息。

@@ -5,19 +5,21 @@ icon: cloud-check
 
 # Model Provider Settings
 
-Model Providers is where Cherry Studio connects to large language, vision, embedding, and rerank models. It manages provider credentials, request addresses, protocol endpoints, and model lists. For registration and key instructions for each provider, see [Model Providers](../../../pre-basic/providers/).
+Model Provider is where Cherry Studio connects to large language, vision, embedding, and rerank models. It manages provider credentials, request addresses, protocol endpoints, and model lists. For registration and key instructions for each provider, see [Model Providers](../../../pre-basic/providers/).
 
 {% hint style="info" %}
 Different platforms may call a credential an API Key, key, token, or Token. Its exact format and permissions are determined by the provider; keys from different platforms are not interchangeable.
 {% endhint %}
 
-## Open Model Providers
+## Open Model Provider
 
 Open:
 
-> **Settings → Model Providers**
+> **Settings → Model Provider**
 
 The provider list is on the left, and connection and model settings for the current provider are on the right.
+
+![Provider list and connection settings](../../../.gitbook/assets/cherry-v2-059-provider-settings-empty-en.png)
 
 The provider list supports:
 
@@ -26,7 +28,7 @@ The provider list supports:
 - Dragging providers to change their display order;
 - Expanding multiple instances created from the same preset;
 - Copying, editing, or deleting manageable providers from the context menu;
-- Clicking **+** beside the search box to add a custom provider.
+- Clicking **Add Provider** below the search box to create a custom provider.
 
 If every provider is disabled, the list automatically shows all providers so that you can complete the first configuration.
 
@@ -224,7 +226,7 @@ A health check is useful for testing multiple models at once. A connection check
 
 ## Add a Custom Provider
 
-Click **+** beside the provider search box to create a custom provider.
+Click **Add Provider** below the provider search box to create a custom provider.
 
 Basic process:
 

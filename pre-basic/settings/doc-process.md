@@ -5,7 +5,7 @@ icon: file-code
 
 # 文档处理
 
-文档处理用于把图片转换为纯文本，或把 PDF 等文档转换为 Markdown，供后续检索、解析和知识库索引使用。
+Cherry Studio V2 使用两个独立设置页处理文件：**OCR** 把图片转换为纯文本，**文档处理**把 PDF 等文档转换为 Markdown，供后续检索、解析和知识库索引使用。
 
 Cherry Studio V2 将处理能力分成两类：
 
@@ -14,18 +14,18 @@ Cherry Studio V2 将处理能力分成两类：
 | 图片转文字（OCR） | 图片文件 | 纯文本 | 提取截图、扫描图片中的文字 |
 | 文档转 Markdown | 文档文件 | Markdown 与相关资源 | 保留标题、段落、表格等结构，供知识库继续处理 |
 
-两个能力分别选择默认处理器。一个服务同时支持两种能力时，会在列表中出现两次，配置与默认状态也分别管理。
+两个入口分别选择默认处理器。一个服务同时支持两种能力时，会分别出现在 **OCR** 和 **文档处理**页面中，配置与默认状态也分别管理。
 
-## 打开文档处理设置
+## 打开 OCR 与文档处理设置
 
-进入 **设置 > 文档解析**。
+- 图片转文字：进入 **设置 > OCR**。
+- 文档转 Markdown：进入 **设置 > 文档处理**。
 
-左侧会按照以下顺序列出当前设备可用的能力项：
+![文档处理设置中的 MinerU 配置页面](../../.gitbook/assets/cherry-v2-065-document-processing-zh-cn.png)
 
-1. 图片转文字：System OCR、Tesseract OCR、PaddleOCR、Mistral、Intel OV OCR。
-2. 文档转 Markdown：Mistral、MinerU、Doc2x、Open MinerU、PaddleOCR。
+在 **文档处理**页面中，左侧按当前 UI 顺序显示 MinerU、PaddleOCR、Doc2x、Mistral 和 Open MinerU。**OCR** 页面会显示当前设备可用的图片处理器。
 
-处理器会根据平台和运行环境过滤。列表与本文不完全一致时，以当前应用实际显示为准。
+OCR 处理器会根据平台和运行环境过滤。列表与本文不完全一致时，以当前应用实际显示为准。
 
 {% hint style="warning" %}
 V2 初始不会预设图片或文档的默认处理器。配置完成后，需要在相应能力项上点击 **设为默认**；只填写 API 密钥不会自动设为默认。
@@ -49,11 +49,11 @@ System OCR 不支持 Linux。Intel OV OCR 还要求应用检测到所需的本�
 
 | 处理器 | 默认 API 地址 | 凭据 | 说明 |
 | --- | --- | --- | --- |
-| Mistral | `https://api.mistral.ai` | API Key | 使用 Mistral OCR 解析文档 |
 | MinerU | `https://mineru.net` | API Key | 提交远程解析任务并轮询结果 |
-| Doc2x | `https://v2.doc2x.noedgeai.com` | API Key | 提交远程解析与导出任务 |
-| Open MinerU | `http://127.0.0.1:8000` | 可选 | 连接自行部署的 MinerU 兼容服务 |
 | PaddleOCR | `https://paddleocr.aistudio-app.com/` | API Key | 支持文档解析，也可改为自部署地址 |
+| Doc2x | `https://v2.doc2x.noedgeai.com` | API Key | 提交远程解析与导出任务 |
+| Mistral | `https://api.mistral.ai` | API Key | 使用 Mistral OCR 解析文档 |
+| Open MinerU | `http://127.0.0.1:8000` | 可选 | 连接自行部署的 MinerU 兼容服务 |
 
 表中的地址是当前内置值。服务商接口变更、自建反向代理或私有部署时，可以在界面中修改 **API 地址 (Base URL)**。
 
@@ -121,14 +121,12 @@ PaddleOCR、Mistral、MinerU 和 Doc2x 都需要 API Key；Open MinerU 的 Key �
 
 ### 选择 PaddleOCR 模型
 
-PaddleOCR 页面可以选择：
+PaddleOCR 会根据入口显示不同的模型列表：
 
-- `PaddleOCR-VL-1.5`
-- `PaddleOCR-VL`
-- `PP-StructureV3`
-- `PP-OCRv5`
+- **OCR：** `PP-OCRv6`、`PP-OCRv5`；内置默认值为 `PP-OCRv6`。
+- **文档处理：** `PaddleOCR-VL-1.5`、`PaddleOCR-VL-1.6`、`PaddleOCR-VL`、`PP-StructureV3`；内置默认值为 `PaddleOCR-VL-1.5`。
 
-内置默认值为 `PaddleOCR-VL-1.5`。所选模型必须由目标 PaddleOCR 服务支持；自部署版本的可用模型可能与云端不同。
+所选模型必须由目标 PaddleOCR 服务支持；自部署版本的可用模型可能与云端不同。
 
 页面提供 [PaddleOCR 项目](https://github.com/PaddlePaddle/PaddleOCR)链接，供自部署时参考。Cherry Studio 不会代替你安装或维护服务端。
 
@@ -160,7 +158,7 @@ PaddleOCR 页面可以选择：
 
 ## 验证配置
 
-当前文档解析设置页没有独立的“连接测试”按钮。最可靠的验证方式是：
+当前文档处理设置页没有独立的“连接测试”按钮。最可靠的验证方式是：
 
 1. 为目标能力设好默认处理器。
 2. 对于知识库，在该知识库的 RAG 设置中选择同一文档处理器。

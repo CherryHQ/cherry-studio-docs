@@ -11,44 +11,47 @@ Cherry Studio V2 brings model connections, tool services, application preference
 
 Click the **Settings** icon in the lower-left corner of the main window.
 
-Settings opens **Model Providers** by default. The left sidebar is divided into:
+Settings opens **Model Provider** by default. The top model entries have no section heading; four labeled sections follow:
 
-1. Model connections;
-2. Tool services;
-3. Application settings;
-4. Productivity tools;
-5. System information.
+1. Model Provider, Default Model, Local Models, and API Gateway;
+2. Tools;
+3. Preferences;
+4. Efficiency;
+5. System.
+
+![Settings sections and navigation](../../../.gitbook/assets/cherry-v2-058-settings-navigation-en.png)
 
 {% hint style="info" %}
-Labels and positions may differ slightly by operating system, window size, or version. If a feature is missing, first confirm the version under **About** and check whether it is available only on a specific platform.
+Labels and positions may differ slightly by operating system, window size, or version. If a feature is missing, first confirm the version under **About Us** and check whether it is available only on a specific platform.
 {% endhint %}
 
-## Model Connections
+## Model Entries
 
 | Setting | Purpose | Related documentation |
 | --- | --- | --- |
-| Model Providers | Add or manage model providers, API Keys, API addresses, connection methods, and model lists | [Model Provider Settings](providers.md) |
-| Models | Set default chat, vision, embedding, rerank, translation, and other models | [Default Model Settings](default-models.md) |
-| API Server | Expose Cherry Studio model capabilities to other applications through a local OpenAI-compatible API | [API Server](../../../advanced-basic/api-server.md) |
+| Model Provider | Add or manage model providers, API Keys, API addresses, connection methods, and model lists | [Model Provider Settings](providers.md) |
+| Default Model | Select the Default Assistant, Quick, Translation, and Painting models | [Default Model Settings](default-models.md) |
+| Local Models | Download or remove local embedding and OCR model components | [Local Models](local-models.md) |
+| API Gateway | Expose Cherry Studio model capabilities to other applications through a local OpenAI-compatible API | [API Gateway](../../../advanced-basic/api-server.md) |
 
 For first-time setup, use this order:
 
-1. Enable a provider under **Model Providers** and complete a connection check;
+1. Enable a provider under **Model Provider** and complete a connection check;
 2. Confirm that the models you need appear in the model list;
-3. Set each type of default model under **Models**;
+3. Set each type of default model under **Default Model**;
 4. Return to the chat page and send a test message.
 
 API Keys for model providers are sensitive credentials. Do not put real keys in screenshots, public documentation, or feedback reports.
 
-## Tool Services
+## Tools
 
 | Setting | Purpose | Related documentation |
 | --- | --- | --- |
-| MCP Servers | Install and manage MCP tools that connect assistants or agents to external capabilities | [Using MCP](../../../advanced-basic/mcp/) |
+| MCP | Install and manage MCP tools that connect assistants or agents to external capabilities | [Using MCP](../../../advanced-basic/mcp/) |
+| Skills | Manage skills available to agents | — |
 | Web Search | Select keyword search and URL retrieval providers, and configure result count, compression, and the blacklist | [Web Search](../../../websearch/) |
-| Document Processing | Configure file parsing for PDFs, Office documents, image OCR, and similar formats | [Document Processing](../../../pre-basic/settings/doc-process.md) |
-| Integrations | Connect external knowledge tools such as Obsidian, Notion, SiYuan, Yuque, and Joplin | [Data Settings](../../../data-settings/) |
-| Plugins | View and manage application plugins supported by the current version | No dedicated topic page yet |
+| Document Processing | Configure PDF and Office document parsing | [Document Processing](../../../pre-basic/settings/doc-process.md) |
+| OCR | Configure image text recognition | [Document Processing](../../../pre-basic/settings/doc-process.md) |
 
 Tool availability usually depends on all of the following:
 
@@ -59,24 +62,21 @@ Tool availability usually depends on all of the following:
 
 Do not assume that a feature is ready just because a switch appears in the interface. After configuring it, perform one minimal test in an actual conversation.
 
-## Application Settings
+## Preferences
 
 | Setting | Purpose | Related documentation |
 | --- | --- | --- |
-| General Settings | Application preferences such as language, theme, fonts, message display, startup behavior, proxy, and voice | [General Settings](general.md) |
-| Data Settings | Local data directory, import and export, backups, WebDAV, S3, and note services | [Data Settings](../../../data-settings/) |
+| Appearance | Language, theme, fonts, message display, math rendering, and Custom CSS | [Appearance Settings](display.md) |
+| Notifications | Manage application notifications | — |
+| Data | Local data directory, import and export, backups, WebDAV, S3, and note services | [Data Settings](../../../data-settings/) |
 
-General Settings contains many options. These topics provide more detail:
-
-- [Display Settings](display.md): themes, fonts, layout, and message display;
-- [Voice Features](yu-yin-gong-neng.md): voice input and text-to-speech;
-- [Personalization Settings](../../../personalization-settings/): custom fonts, CSS, and storage location.
+Appearance, Notifications, and Data now have separate entries. Use **System** for startup, proxy, privacy, and other system-level options.
 
 {% hint style="warning" %}
 Most appearance options take effect immediately, but language, proxy, storage location, and some system integrations may require reopening the window or restarting the application. Follow the notice beside the setting and the actual interface to determine whether a restart is required.
 {% endhint %}
 
-## Productivity Tools
+## Efficiency
 
 | Setting | Purpose | Related documentation |
 | --- | --- | --- |
@@ -88,28 +88,25 @@ Most appearance options take effect immediately, but language, proxy, storage lo
 
 Channels and scheduled tasks may let agents run outside the main window or while unattended. Before enabling them, review model costs, tool permissions, accessible data, and task stop conditions.
 
-## System Information
+## System
 
-The **About** page shows:
-
-- The Cherry Studio version;
-- Update status and update channel;
-- Links to the official website and open-source repository;
-- License and related system information.
-
-Development builds may also show **Component Lab**. It is for developing and testing interface components, is not part of the community edition's everyday workflow, and should not be treated as a formal feature entry point in automation steps.
+| Setting | Purpose | Related documentation |
+| --- | --- | --- |
+| System | Manage startup, proxy, privacy, and other system-level options | [General Settings](general.md) |
+| Environment Dependencies | View and manage external runtimes required by features | — |
+| About Us | View the version, update channel, official website, open-source repository, and license | — |
 
 ## Recommended First-Time Setup Order
 
 If you have just installed Cherry Studio, complete the minimum setup in this order:
 
-1. **Model Providers**: enable a provider, enter credentials, and check the connection;
-2. **Models**: select a default chat model;
-3. **General Settings**: select the language, theme, and startup behavior;
-4. **Data Settings**: confirm the data location and create the first backup;
+1. **Model Provider**: enable a provider, enter credentials, and check the connection;
+2. **Default Model**: select the Default Assistant model;
+3. **Appearance**: select the language and theme;
+4. **Data**: confirm the data location and review the export or migration options available in the current version;
 5. **Web Search or Document Processing**: configure only the tools you currently need;
 6. **Shortcuts**: avoid conflicts between global key combinations and other applications;
-7. **About**: confirm that you are using the expected version.
+7. **About Us**: confirm that you are using the expected version.
 
 You do not need to enable every service at once. Stabilize basic chat first, then add Web Search, MCP, channels, and automated tasks one at a time so configuration issues are easier to isolate.
 
@@ -125,7 +122,7 @@ Use these checks after changing settings:
 | Document processing | Upload a small test file and inspect the parsed result |
 | Proxy | Access a service that requires the proxy again; restart the application if necessary |
 | Shortcut | Press the key combination once in the target window |
-| Data or backup | Create a backup and confirm that the file or remote record was actually created |
+| Data, import, or export | Confirm that the expected content appears in the target file or application |
 
 ## Troubleshooting
 

@@ -1,11 +1,11 @@
 ---
-description: Choose models for default chat, quick tasks, and translation in Cherry Studio V2.
+description: Choose models for default chat, quick tasks, translation, and image generation in Cherry Studio V2.
 icon: robot
 ---
 
 # Default Model Settings
 
-Different Cherry Studio features use default models when no model is specified separately. V2 currently provides three global roles: **Default Assistant Model**, **Quick Model**, and **Translation Model**.
+Different Cherry Studio features use default models when no model is specified separately. V2 currently provides four global roles: **Default Assistant Model**, **Quick Model**, **Translation Model**, and **Painting Model**.
 
 They can use the same model, or be configured separately for quality, speed, and cost.
 
@@ -13,7 +13,7 @@ They can use the same model, or be configured separately for quality, speed, and
 
 Before opening Default Model Settings, confirm that:
 
-1. At least one provider is configured under **Settings → Model Providers**;
+1. At least one provider is configured under **Settings → Model Provider**;
 2. The target model was added to that provider;
 3. Both the provider and model are enabled;
 4. The target model works in a connection check or actual conversation.
@@ -21,24 +21,27 @@ Before opening Default Model Settings, confirm that:
 For setup instructions, see [Model Provider Settings](providers.md).
 
 {% hint style="info" %}
-The default model selectors show only enabled models from enabled providers and exclude embedding, rerank, and image-generation-only models. If a target model is missing, return to Model Providers and check its enabled state and capability labels.
+The first three text-model selectors show enabled chat models from enabled providers and exclude embedding, rerank, and image-generation-only models. The Painting Model selector shows only models recognized for image generation. If a target model is missing, return to Model Providers and check its enabled state and capability labels.
 {% endhint %}
 
 ## Open Model Settings
 
 Open:
 
-> **Settings → Models**
+> **Settings → Default Model**
 
-The page contains three model selectors. Additional settings for each role may also appear on the right.
+The page contains four selectors: Default Assistant, Quick, Translation, and Painting. Quick and Translation also provide additional settings on the right.
 
-## Three Default Models
+![Default Assistant, Quick, Translation, and Painting models](../../../.gitbook/assets/cherry-v2-060-default-model-roles-en.png)
+
+## Four Default Models
 
 | Role | Main use | Selection priorities |
 | --- | --- | --- |
 | Default Assistant Model | Chat model used when an assistant does not specify one separately | Stability, instruction following, everyday cost |
 | Quick Model | Topic naming, note summaries, some lightweight internal tasks, and LLM language detection | Fast responses, concise output, low cost |
 | Translation Model | Translation page, Quick Translate, and other features that use the shared translation model | Language coverage, fidelity, format preservation |
+| Painting Model | Default image-generation model for the Paintings page | Image-generation capability, quality, speed, and cost |
 
 ## Default Assistant Model
 
@@ -63,24 +66,6 @@ For everyday use, prioritize a model that:
 - Supports tool calling if you frequently use MCP, Web Search, or agents.
 
 Do not label capabilities manually based only on a model name. Vision, native web search, tool calling, and other capabilities must match actual server support.
-
-### Additional Default Assistant Settings
-
-Click the settings button on the right to change the default assistant's:
-
-- Name and icon;
-- System prompt;
-- Temperature;
-- Top P;
-- Number of context messages;
-- Maximum output tokens;
-- Tool calling mode.
-
-These parameters affect scenarios that use the default assistant configuration. They do not automatically override independent settings in every existing assistant.
-
-{% hint style="warning" %}
-Adjusting Temperature and Top P at the same time may make output less predictable. Keep the defaults unless you have a specific need, and do not set maximum output tokens above the server model's actual limit.
-{% endhint %}
 
 ## Quick Model
 
@@ -156,11 +141,17 @@ After the translation prompt is changed, a restore button appears. Restoring rep
 
 The target-language and source-text variables in the translation prompt must be retained. Removing them may leave the model unaware of the target language or without the text to translate.
 
+## Painting Model
+
+The Painting Model is the default image-generation model used on the Paintings page. It does not automatically fall back to the Default Assistant Model. If it is empty, first enable an image-generation model under Model Providers, then select it here.
+
+Test the output sizes you use, prompt following, text rendering, latency, and pricing. Only models recognized by Cherry Studio as image-generation models appear in this selector.
+
 ## Recommended Configurations
 
 ### Keep It Simple
 
-Use one stable general-purpose chat model for all three roles. This minimizes configuration, but background tasks and translation use the same cost and speed.
+The Default Assistant, Quick, and Translation text roles can use one stable general-purpose chat model. The Painting Model still requires a separately selected image-generation model.
 
 ### Balance Cost
 
@@ -169,6 +160,7 @@ Use one stable general-purpose chat model for all three roles. This minimizes co
 | Default Assistant Model | Your most reliable everyday chat model |
 | Quick Model | An inexpensive, low-latency lightweight chat model |
 | Translation Model | The model that performs best for your target language pairs in testing |
+| Painting Model | An image-generation model with suitable quality, speed, and cost for your typical images |
 
 ### Prioritize Privacy
 
@@ -206,17 +198,18 @@ If you use LLM language detection, also enter a short text on the Translation pa
 4. Compare translation completeness and formatting;
 5. Test Quick Assistant or Selection Assistant once more.
 
+### Painting Model
+
+1. Open the Paintings page;
+2. Enter a test prompt that contains no sensitive information;
+3. Confirm that an image is generated;
+4. Check its size, prompt following, latency, and cost.
+
 ## Troubleshooting
 
 ### Target Model Is Missing from a Selector
 
-Check that both the provider and model are enabled and that the model is not labeled as:
-
-- Embedding;
-- Rerank;
-- Image generation only.
-
-These types do not appear in the three default model selectors.
+Check that both the provider and model are enabled. The Default Assistant, Quick, and Translation selectors exclude embedding, rerank, and image-generation-only models. The Painting Model selector shows only image-generation models. If a model appears in the wrong place, return to Model Providers and check its capability labels.
 
 ### A Previously Selected Model Becomes Blank
 
@@ -259,4 +252,4 @@ Topic naming, note summaries, LLM language detection, and translation may each s
 
 ### Get Help and Submit Feedback
 
-If a default model does not work, submit feedback through the official channels listed in [Feedback and Suggestions](../../../question-contact/suggestions.md). Include the Cherry Studio version, selections for all three model roles, provider, model ID, and sanitized error message.
+If a default model does not work, submit feedback through the official channels listed in [Feedback and Suggestions](../../../question-contact/suggestions.md). Include the Cherry Studio version, selections for all four model roles, provider, model ID, and sanitized error message.

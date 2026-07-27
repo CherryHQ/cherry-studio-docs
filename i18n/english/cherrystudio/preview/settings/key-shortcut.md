@@ -13,20 +13,22 @@ In this guide, `Cmd/Ctrl` means `Command (⌘)` on macOS and `Ctrl` on Windows a
 
 ## Open Shortcut Settings
 
-Go to **Settings > Shortcuts**.
+Go to **Settings > Keyboard Shortcuts**.
 
-The left side of the page organizes shortcuts into four groups:
+The page uses one list for all shortcuts. Select **Filter** beside the search box to show all shortcuts or one of four categories:
 
-| Group | Included actions |
+| Filter | Included actions |
 | --- | --- |
-| Global and Window | Show or hide the app, open Settings, toggle the sidebar, zoom the interface, and search globally |
-| Message Interaction | Clear messages, clear context, search messages, copy or edit messages, and select a model |
-| Sessions and Topics | Create and rename topics, and show or hide the topic list |
-| AI Assistant Tools | Global shortcuts for Quick Assistant and Selection Assistant |
+| General | Show or hide the app, open Settings, exit full screen, print, zoom the interface, and search globally |
+| Messages | Search, copy, or edit messages, and select a model |
+| Conversations | Toggle the left or right sidebar, create topics, and rename topics |
+| AI Tools | Global shortcuts for Quick Assistant and Selection Assistant |
 
-A shortcut appears only when its feature is enabled. For example, Quick Assistant appears under **AI Assistant Tools** only after you enable it. The two Selection Assistant shortcuts are also available only on macOS and Windows.
+A shortcut appears only when its feature is enabled. Quick Assistant and Selection Assistant entries appear under **AI Tools** after you enable the corresponding feature.
 
-The search box at the top searches only the current group. You can filter by an action name or by the displayed key combination.
+The search box filters the current category by action name or displayed key combination.
+
+![Keyboard shortcut list with search and filters](../../../.gitbook/assets/cherry-v2-062-keyboard-shortcuts-overview-en.png)
 
 ## Change a Shortcut
 
@@ -49,7 +51,7 @@ Each shortcut has its own switch on the right:
 - Turning it back on continues using the existing binding.
 - An unbound action cannot be enabled until you assign a key combination.
 
-**Enable All** and **Disable All** affect only bound shortcuts in the current group and current filtered results. They do not change unbound actions.
+**Enable All** and **Disable All** affect only bound shortcuts in the current filter and search results. They do not change unbound actions.
 
 ### Resolve conflicts
 
@@ -64,49 +66,44 @@ If a conflict occurs, assign a different combination to one of the actions. Rese
 
 The following tables describe the current default configuration in Cherry Studio V2. After an upgrade, your actual bindings may retain previous customizations, so use the values displayed in the app as the source of truth.
 
-### Global and Window
+### General
 
 | Action | Default binding | Default state | Description |
 | --- | --- | --- | --- |
-| Show / Hide App | Unbound | Disabled | Show or hide Cherry Studio while another app is in the foreground |
-| Open Settings | `Cmd/Ctrl + ,` | Enabled | Open the Settings window |
-| Toggle Sidebar | `Cmd/Ctrl + [` | Enabled | Toggle or focus the assistant sidebar |
 | Exit Full Screen | `Esc` | Enabled | Exit full-screen mode |
+| Search Messages | `Cmd/Ctrl + Shift + F` | Enabled | Open global message search |
+| Print | `Cmd/Ctrl + P` | Enabled | Print the current page |
+| Open Settings | `Cmd/Ctrl + ,` | Enabled | Open the Settings window |
+| Show / Hide App | Unbound | Disabled | Show or hide Cherry Studio while another app is in the foreground |
 | Zoom In | `Cmd/Ctrl + =` | Enabled | Increase interface zoom; numpad `+` also works |
 | Zoom Out | `Cmd/Ctrl + -` | Enabled | Decrease interface zoom; numpad `-` also works |
 | Reset Zoom | `Cmd/Ctrl + 0` | Enabled | Restore the default zoom level |
-| Search Messages | `Cmd/Ctrl + Shift + F` | Enabled | Open global message search |
 
-### Message Interaction
+### Messages
 
 | Action | Default binding | Default state | Description |
 | --- | --- | --- | --- |
-| Clear Messages | `Cmd/Ctrl + L` | Enabled | Delete all messages in the current topic after confirmation |
-| Search Messages in Current Conversation | `Cmd/Ctrl + F` | Enabled | Find messages within the current topic |
-| Clear Context | `Cmd/Ctrl + K` | Enabled | Toggle the context separator in the current topic without deleting message history |
 | Copy Previous Message | `Cmd/Ctrl + Shift + C` | Disabled | Copy the body of the last message in the current topic |
 | Edit Last User Message | `Cmd/Ctrl + Shift + E` | Disabled | Open the last user message for editing |
+| Search Messages in Current Conversation | `Cmd/Ctrl + F` | Enabled | Find messages within the current topic |
 | Select Model | `Cmd/Ctrl + Shift + M` | Enabled | Open the conversation model selector for the current assistant |
 
-{% hint style="warning" %}
-**Clear Messages** and **Clear Context** are different actions. Clear Messages deletes every message in the current topic after confirmation. Clear Context only starts subsequent conversation from a new context segment; existing messages remain on the page. Triggering Clear Context again removes an unused separator at the end.
-{% endhint %}
-
-### Sessions and Topics
+### Conversations
 
 | Action | Default binding | Default state | Description |
 | --- | --- | --- | --- |
+| Toggle Left Sidebar | `Cmd/Ctrl + [` | Enabled | Show, hide, or focus the assistant sidebar |
 | New Topic | `Cmd/Ctrl + N` | Enabled | Create an independent topic under the current assistant |
 | Rename Topic | `Cmd/Ctrl + T` | Disabled | Change the current topic name |
-| Toggle Topic Display | `Cmd/Ctrl + ]` | Enabled | Toggle or focus the topic list |
+| Toggle Right Sidebar | `Cmd/Ctrl + ]` | Enabled | Show, hide, or focus the topic list |
 
-### AI Assistant Tools
+### AI Tools
 
 | Action | Default binding | Default state | Requirement |
 | --- | --- | --- | --- |
 | Quick Assistant | `Cmd/Ctrl + E` | Disabled | Enable the feature in Quick Assistant settings first |
-| Toggle Selection Assistant | Unbound | Disabled | Enable Selection Assistant first; macOS and Windows only |
-| Selection Assistant: Pick Text | Unbound | Disabled | Enable Selection Assistant first; macOS and Windows only |
+| Toggle Selection Assistant | Unbound | Disabled | Enable Selection Assistant first |
+| Selection Assistant: Pick Text | Unbound | Disabled | Enable Selection Assistant first |
 
 Quick Assistant, Selection Assistant, and Show / Hide App use global shortcuts. After they are bound and enabled, they respond even when the Cherry Studio window is not focused. Most other conversation and window shortcuts work only while the Cherry Studio window is in the foreground.
 
@@ -134,11 +131,11 @@ If the shortcut still does not work after you change it, test with an uncommon c
 
 ### Why can't I see the Selection Assistant shortcuts?
 
-Selection Assistant shortcuts appear only when the feature is enabled, and they are currently supported only on macOS and Windows. Linux does not display these two shortcuts.
+Selection Assistant shortcuts appear only after the feature is enabled. Enable it under **Settings > Selection Assistant**, then return to Keyboard Shortcuts.
 
 ### Why didn't “Enable All” enable some actions?
 
-The bulk action processes only shortcuts that are already bound within the current group and current search results. For any unbound item that displays “Press shortcut,” assign a key combination first.
+The bulk action processes only shortcuts that are already bound within the current filter and search results. For any unbound item that displays “Press shortcut,” assign a key combination first.
 
 ### How do I quickly return to the default configuration?
 

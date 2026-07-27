@@ -5,7 +5,7 @@ icon: file-code
 
 # Document Processing
 
-Document Processing converts images to plain text or documents such as PDFs to Markdown for later retrieval, parsing, and knowledge base indexing.
+Cherry Studio V2 uses two separate settings pages for file processing: **OCR** converts images to plain text, while **Document Processing** converts documents such as PDFs to Markdown for later retrieval, parsing, and knowledge base indexing.
 
 Cherry Studio V2 separates processing into two capabilities:
 
@@ -14,21 +14,21 @@ Cherry Studio V2 separates processing into two capabilities:
 | Image to Text (OCR) | Image file | Plain text | Extract text from screenshots and scanned images |
 | Document to Markdown | Document file | Markdown and related resources | Preserve headings, paragraphs, tables, and other structures for further knowledge base processing |
 
-Each capability has its own default processor. When one service supports both capabilities, it appears twice in the list, with separate configuration and default states.
+Each entry has its own default processor. When one service supports both capabilities, it appears on both the **OCR** and **Document Processing** pages, with separate configuration and default states.
 
-## Open Document Processing Settings
+## Open OCR and Document Processing Settings
 
-Go to **Settings > Document Parsing**.
+- For image-to-text processing, go to **Settings > OCR**.
+- For document-to-Markdown processing, go to **Settings > Document Processing**.
 
-The left side lists capabilities available on the current device in this order:
+![MinerU configuration in Document Processing settings](../../.gitbook/assets/cherry-v2-065-document-processing-en.png)
 
-1. Image to Text: System OCR, Tesseract OCR, PaddleOCR, Mistral, and Intel OV OCR.
-2. Document to Markdown: Mistral, MinerU, Doc2x, Open MinerU, and PaddleOCR.
+On the **Document Processing** page, the current UI lists MinerU, PaddleOCR, Doc2x, Mistral, and Open MinerU in that order. The **OCR** page shows the image processors available on the current device.
 
-Processors are filtered by platform and runtime environment. If your list differs from this guide, use the list currently displayed in the app.
+OCR processors are filtered by platform and runtime environment. If your list differs from this guide, use the list currently displayed in the app.
 
 {% hint style="warning" %}
-V2 does not initially assign a default processor for images or documents. After configuration, click **Set as Default** on the relevant capability. Entering an API key alone does not make a processor the default.
+V2 does not initially assign a default processor for images or documents. After configuration, click **Set as default** on the relevant capability. Entering an API key alone does not make a processor the default.
 {% endhint %}
 
 ## Processor Capability Matrix
@@ -49,11 +49,11 @@ System OCR does not support Linux. Intel OV OCR also requires the app to detect 
 
 | Processor | Default API URL | Credential | Description |
 | --- | --- | --- | --- |
-| Mistral | `https://api.mistral.ai` | API Key | Parse documents with Mistral OCR |
 | MinerU | `https://mineru.net` | API Key | Submit a remote parsing job and poll for its result |
-| Doc2x | `https://v2.doc2x.noedgeai.com` | API Key | Submit remote parsing and export jobs |
-| Open MinerU | `http://127.0.0.1:8000` | Optional | Connect to a self-hosted MinerU-compatible service |
 | PaddleOCR | `https://paddleocr.aistudio-app.com/` | API Key | Supports document parsing and can use a self-hosted URL |
+| Doc2x | `https://v2.doc2x.noedgeai.com` | API Key | Submit remote parsing and export jobs |
+| Mistral | `https://api.mistral.ai` | API Key | Parse documents with Mistral OCR |
+| Open MinerU | `http://127.0.0.1:8000` | Optional | Connect to a self-hosted MinerU-compatible service |
 
 The table shows the current built-in URLs. If a provider changes its interface, or you use a reverse proxy or private deployment, edit **API URL (Base URL)** in the interface.
 
@@ -70,7 +70,7 @@ System OCR appears only on macOS and Windows. After you select it, the page show
 - macOS uses the system OCR capability and does not show a language selector.
 - On Windows, choose the recognition language under **Language**. The operating system must still support the selected language.
 
-System OCR becomes the default Image to Text processor only after you click **Set as Default**.
+System OCR becomes the default Image to Text processor only after you click **Set as default**.
 
 ### Tesseract OCR
 
@@ -121,14 +121,12 @@ When using a self-hosted or proxy URL:
 
 ### Select a PaddleOCR Model
 
-The PaddleOCR page offers:
+PaddleOCR shows a different model list for each entry:
 
-- `PaddleOCR-VL-1.5`
-- `PaddleOCR-VL`
-- `PP-StructureV3`
-- `PP-OCRv5`
+- **OCR:** `PP-OCRv6` and `PP-OCRv5`; the built-in default is `PP-OCRv6`.
+- **Document Processing:** `PaddleOCR-VL-1.5`, `PaddleOCR-VL-1.6`, `PaddleOCR-VL`, and `PP-StructureV3`; the built-in default is `PaddleOCR-VL-1.5`.
 
-The built-in default is `PaddleOCR-VL-1.5`. The target PaddleOCR service must support the selected model. Models available in a self-hosted deployment may differ from the cloud service.
+The target PaddleOCR service must support the selected model. Models available in a self-hosted deployment may differ from the cloud service.
 
 The page links to the [PaddleOCR project](https://github.com/PaddlePaddle/PaddleOCR) as a self-hosting reference. Cherry Studio does not install or maintain the server for you.
 
@@ -138,9 +136,9 @@ The defaults for Image to Text and Document to Markdown are independent:
 
 1. On the left, select the processor for Image to Text.
 2. Complete the local language or API configuration.
-3. Click **Set as Default**.
+3. Click **Set as default**.
 4. Select the processor for Document to Markdown.
-5. Complete its API configuration and click **Set as Default**.
+5. Complete its API configuration and click **Set as default**.
 
 After a processor becomes the default, both the item on the left and its detail page display a **Default** badge.
 
@@ -160,7 +158,7 @@ Document Processing only converts content; it does not replace an embedding mode
 
 ## Verify the Configuration
 
-The current Document Parsing settings page has no separate connection test button. The most reliable verification is:
+The current Document Processing settings page has no separate connection test button. The most reliable verification is:
 
 1. Set the default processor for the target capability.
 2. For a knowledge base, select the same document processor in that knowledge base's RAG settings.
@@ -181,7 +179,7 @@ This processor appears only in a qualifying Windows Intel Core Ultra environment
 
 ### I entered an API key, but processing still reports no default processor
 
-The key and the default processor are separate settings. Return to the processor page for the relevant capability and click **Set as Default**.
+The key and the default processor are separate settings. Return to the processor page for the relevant capability and click **Set as default**.
 
 ### How do I manage many API keys?
 

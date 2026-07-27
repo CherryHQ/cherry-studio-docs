@@ -2525,7 +2525,7 @@
       "title": "软件设置",
       "change_type": "update",
       "content_status": "verified",
-      "screenshot_status": "queued",
+      "screenshot_status": "captured",
       "qa_status": "automated_pass",
       "review_status": "building",
       "production_url": "https://docs.cherryai.com.cn/pre-basic/settings",
@@ -2556,7 +2556,18 @@
           "status": "verified"
         }
       },
-      "screenshots": []
+      "screenshots": [
+        {
+          "scene": "settings-navigation",
+          "locales": {
+            "zh-CN": ".gitbook/assets/cherry-v2-058-settings-navigation-zh-cn.png",
+            "zh-TW": "i18n/traditional-chinese/.gitbook/assets/cherry-v2-058-settings-navigation-zh-tw.png",
+            "en": "i18n/english/.gitbook/assets/cherry-v2-058-settings-navigation-en.png",
+            "ja": "i18n/japanese/.gitbook/assets/cherry-v2-058-settings-navigation-ja.png",
+            "ru": "i18n/russian/.gitbook/assets/cherry-v2-058-settings-navigation-ru.png"
+          }
+        }
+      ]
     },
     {
       "id": "059",
@@ -2565,7 +2576,7 @@
       "title": "模型服务设置",
       "change_type": "update",
       "content_status": "verified",
-      "screenshot_status": "queued",
+      "screenshot_status": "captured",
       "qa_status": "automated_pass",
       "review_status": "building",
       "production_url": "https://docs.cherryai.com.cn/pre-basic/settings/providers",
@@ -2598,7 +2609,18 @@
           "status": "verified"
         }
       },
-      "screenshots": []
+      "screenshots": [
+        {
+          "scene": "provider-settings-empty",
+          "locales": {
+            "zh-CN": ".gitbook/assets/cherry-v2-059-provider-settings-empty-zh-cn.png",
+            "zh-TW": "i18n/traditional-chinese/.gitbook/assets/cherry-v2-059-provider-settings-empty-zh-tw.png",
+            "en": "i18n/english/.gitbook/assets/cherry-v2-059-provider-settings-empty-en.png",
+            "ja": "i18n/japanese/.gitbook/assets/cherry-v2-059-provider-settings-empty-ja.png",
+            "ru": "i18n/russian/.gitbook/assets/cherry-v2-059-provider-settings-empty-ru.png"
+          }
+        }
+      ]
     },
     {
       "id": "060",
@@ -2607,7 +2629,7 @@
       "title": "默认模型设置",
       "change_type": "update",
       "content_status": "verified",
-      "screenshot_status": "queued",
+      "screenshot_status": "captured",
       "qa_status": "automated_pass",
       "review_status": "building",
       "production_url": "https://docs.cherryai.com.cn/pre-basic/settings/default-models",
@@ -2638,11 +2660,76 @@
           "status": "verified"
         }
       },
-      "screenshots": []
+      "screenshots": [
+        {
+          "scene": "default-model-roles",
+          "locales": {
+            "zh-CN": ".gitbook/assets/cherry-v2-060-default-model-roles-zh-cn.png",
+            "zh-TW": "i18n/traditional-chinese/.gitbook/assets/cherry-v2-060-default-model-roles-zh-tw.png",
+            "en": "i18n/english/.gitbook/assets/cherry-v2-060-default-model-roles-en.png",
+            "ja": "i18n/japanese/.gitbook/assets/cherry-v2-060-default-model-roles-ja.png",
+            "ru": "i18n/russian/.gitbook/assets/cherry-v2-060-default-model-roles-ru.png"
+          }
+        }
+      ]
+    },
+    {
+      "id": "113",
+      "order": 62,
+      "section": "基础教程",
+      "title": "本地模型",
+      "change_type": "new",
+      "content_status": "verified",
+      "screenshot_status": "captured",
+      "qa_status": "automated_pass",
+      "review_status": "building",
+      "production_url": "https://docs.cherryai.com.cn/pre-basic/settings/local-models",
+      "preview_path": "/review/113",
+      "fact_evidence": [
+        "product:52b3e3eeb474527ac4f1bddf9dd8e512fec70134:src/renderer/pages/settings/SettingsPage.tsx:75-90",
+        "product:52b3e3eeb474527ac4f1bddf9dd8e512fec70134:src/renderer/pages/settings/DependenciesSettings/LocalModelsSection.tsx:35-97,127-250",
+        "product:52b3e3eeb474527ac4f1bddf9dd8e512fec70134:src/main/services/localModel/LocalModelDownloadService.ts:62-117",
+        "product:52b3e3eeb474527ac4f1bddf9dd8e512fec70134:src/main/services/localModel/LocalEmbeddingDownloadService.ts:70-135",
+        "product:52b3e3eeb474527ac4f1bddf9dd8e512fec70134:src/main/services/localModel/LocalOcrDownloadService.ts:84-108,204-227"
+      ],
+      "locales": {
+        "zh-CN": {
+          "path": "pre-basic/settings/local-models.md",
+          "status": "verified"
+        },
+        "zh-TW": {
+          "path": "i18n/traditional-chinese/cherrystudio/preview/settings/local-models.md",
+          "status": "verified"
+        },
+        "en": {
+          "path": "i18n/english/cherrystudio/preview/settings/local-models.md",
+          "status": "verified"
+        },
+        "ja": {
+          "path": "i18n/japanese/cherrystudio/preview/settings/local-models.md",
+          "status": "verified"
+        },
+        "ru": {
+          "path": "i18n/russian/cherrystudio/preview/settings/local-models.md",
+          "status": "verified"
+        }
+      },
+      "screenshots": [
+        {
+          "scene": "local-models",
+          "locales": {
+            "zh-CN": ".gitbook/assets/cherry-v2-113-local-models-zh-cn.png",
+            "zh-TW": "i18n/traditional-chinese/.gitbook/assets/cherry-v2-113-local-models-zh-tw.png",
+            "en": "i18n/english/.gitbook/assets/cherry-v2-113-local-models-en.png",
+            "ja": "i18n/japanese/.gitbook/assets/cherry-v2-113-local-models-ja.png",
+            "ru": "i18n/russian/.gitbook/assets/cherry-v2-113-local-models-ru.png"
+          }
+        }
+      ]
     },
     {
       "id": "061",
-      "order": 62,
+      "order": 63,
       "section": "基础教程",
       "title": "常规设置",
       "change_type": "update",
@@ -2683,12 +2770,12 @@
     },
     {
       "id": "062",
-      "order": 63,
+      "order": 64,
       "section": "基础教程",
       "title": "快捷键设置",
       "change_type": "update",
       "content_status": "verified",
-      "screenshot_status": "queued",
+      "screenshot_status": "captured",
       "qa_status": "automated_pass",
       "review_status": "building",
       "production_url": "https://docs.cherryai.com.cn/pre-basic/settings/key-shortcut",
@@ -2720,11 +2807,22 @@
           "status": "verified"
         }
       },
-      "screenshots": []
+      "screenshots": [
+        {
+          "scene": "keyboard-shortcuts-overview",
+          "locales": {
+            "zh-CN": ".gitbook/assets/cherry-v2-062-keyboard-shortcuts-overview-zh-cn.png",
+            "zh-TW": "i18n/traditional-chinese/.gitbook/assets/cherry-v2-062-keyboard-shortcuts-overview-zh-tw.png",
+            "en": "i18n/english/.gitbook/assets/cherry-v2-062-keyboard-shortcuts-overview-en.png",
+            "ja": "i18n/japanese/.gitbook/assets/cherry-v2-062-keyboard-shortcuts-overview-ja.png",
+            "ru": "i18n/russian/.gitbook/assets/cherry-v2-062-keyboard-shortcuts-overview-ru.png"
+          }
+        }
+      ]
     },
     {
       "id": "063",
-      "order": 64,
+      "order": 65,
       "section": "基础教程",
       "title": "语音功能",
       "change_type": "update",
@@ -2765,19 +2863,20 @@
     },
     {
       "id": "064",
-      "order": 65,
+      "order": 66,
       "section": "基础教程",
-      "title": "显示设置",
+      "title": "外观设置",
       "change_type": "update",
       "content_status": "verified",
-      "screenshot_status": "queued",
+      "screenshot_status": "captured",
       "qa_status": "automated_pass",
       "review_status": "building",
       "production_url": "https://docs.cherryai.com.cn/pre-basic/settings/display",
       "preview_path": "/review/064",
       "fact_evidence": [
         "product:52b3e3eeb474527ac4f1bddf9dd8e512fec70134:src/renderer/pages/settings/SettingsPage.tsx:134-157",
-        "product:52b3e3eeb474527ac4f1bddf9dd8e512fec70134:src/renderer/pages/settings/AppearanceSettings/AppearanceSettings.tsx:340-564"
+        "product:52b3e3eeb474527ac4f1bddf9dd8e512fec70134:src/renderer/pages/settings/AppearanceSettings/AppearanceSettings.tsx:340-564",
+        "product:52b3e3eeb474527ac4f1bddf9dd8e512fec70134:src/renderer/components/chat/settings/ChatPreferenceSections.tsx:241-360"
       ],
       "locales": {
         "zh-CN": {
@@ -2801,16 +2900,27 @@
           "status": "verified"
         }
       },
-      "screenshots": []
+      "screenshots": [
+        {
+          "scene": "appearance-message-settings",
+          "locales": {
+            "zh-CN": ".gitbook/assets/cherry-v2-064-appearance-message-settings-zh-cn.png",
+            "zh-TW": "i18n/traditional-chinese/.gitbook/assets/cherry-v2-064-appearance-message-settings-zh-tw.png",
+            "en": "i18n/english/.gitbook/assets/cherry-v2-064-appearance-message-settings-en.png",
+            "ja": "i18n/japanese/.gitbook/assets/cherry-v2-064-appearance-message-settings-ja.png",
+            "ru": "i18n/russian/.gitbook/assets/cherry-v2-064-appearance-message-settings-ru.png"
+          }
+        }
+      ]
     },
     {
       "id": "065",
-      "order": 66,
+      "order": 67,
       "section": "基础教程",
       "title": "文档处理",
       "change_type": "update",
       "content_status": "verified",
-      "screenshot_status": "queued",
+      "screenshot_status": "captured",
       "qa_status": "automated_pass",
       "review_status": "building",
       "production_url": "https://docs.cherryai.com.cn/pre-basic/settings/doc-process",
@@ -2843,11 +2953,22 @@
           "status": "verified"
         }
       },
-      "screenshots": []
+      "screenshots": [
+        {
+          "scene": "document-processing",
+          "locales": {
+            "zh-CN": ".gitbook/assets/cherry-v2-065-document-processing-zh-cn.png",
+            "zh-TW": "i18n/traditional-chinese/.gitbook/assets/cherry-v2-065-document-processing-zh-tw.png",
+            "en": "i18n/english/.gitbook/assets/cherry-v2-065-document-processing-en.png",
+            "ja": "i18n/japanese/.gitbook/assets/cherry-v2-065-document-processing-ja.png",
+            "ru": "i18n/russian/.gitbook/assets/cherry-v2-065-document-processing-ru.png"
+          }
+        }
+      ]
     },
     {
       "id": "066",
-      "order": 67,
+      "order": 68,
       "section": "基础教程",
       "title": "数据设置",
       "change_type": "update",
@@ -2888,12 +3009,12 @@
     },
     {
       "id": "067",
-      "order": 68,
+      "order": 69,
       "section": "基础教程",
       "title": "WebDAV 备份",
       "change_type": "update",
       "content_status": "verified",
-      "screenshot_status": "queued",
+      "screenshot_status": "captured",
       "qa_status": "automated_pass",
       "review_status": "building",
       "production_url": "https://docs.cherryai.com.cn/pre-basic/data-settings/webdav",
@@ -2924,11 +3045,22 @@
           "status": "verified"
         }
       },
-      "screenshots": []
+      "screenshots": [
+        {
+          "scene": "webdav",
+          "locales": {
+            "zh-CN": ".gitbook/assets/cherry-v2-067-webdav-zh-cn.png",
+            "zh-TW": "i18n/traditional-chinese/.gitbook/assets/cherry-v2-067-webdav-zh-tw.png",
+            "en": "i18n/english/.gitbook/assets/cherry-v2-067-webdav-en.png",
+            "ja": "i18n/japanese/.gitbook/assets/cherry-v2-067-webdav-ja.png",
+            "ru": "i18n/russian/.gitbook/assets/cherry-v2-067-webdav-ru.png"
+          }
+        }
+      ]
     },
     {
       "id": "068",
-      "order": 69,
+      "order": 70,
       "section": "基础教程",
       "title": "S3 兼容存储备份",
       "change_type": "update",
@@ -2980,12 +3112,12 @@
     },
     {
       "id": "069",
-      "order": 70,
+      "order": 71,
       "section": "基础教程",
       "title": "Notion 配置教程",
       "change_type": "update",
       "content_status": "verified",
-      "screenshot_status": "queued",
+      "screenshot_status": "captured",
       "qa_status": "automated_pass",
       "review_status": "building",
       "production_url": "https://docs.cherryai.com.cn/pre-basic/data-settings/notion",
@@ -3017,11 +3149,22 @@
           "status": "verified"
         }
       },
-      "screenshots": []
+      "screenshots": [
+        {
+          "scene": "notion",
+          "locales": {
+            "zh-CN": ".gitbook/assets/cherry-v2-069-notion-zh-cn.png",
+            "zh-TW": "i18n/traditional-chinese/.gitbook/assets/cherry-v2-069-notion-zh-tw.png",
+            "en": "i18n/english/.gitbook/assets/cherry-v2-069-notion-en.png",
+            "ja": "i18n/japanese/.gitbook/assets/cherry-v2-069-notion-ja.png",
+            "ru": "i18n/russian/.gitbook/assets/cherry-v2-069-notion-ru.png"
+          }
+        }
+      ]
     },
     {
       "id": "070",
-      "order": 71,
+      "order": 72,
       "section": "基础教程",
       "title": "Obsidian 配置教程",
       "change_type": "update",
@@ -3062,12 +3205,12 @@
     },
     {
       "id": "071",
-      "order": 72,
+      "order": 73,
       "section": "基础教程",
       "title": "思源笔记配置教程",
       "change_type": "update",
       "content_status": "verified",
-      "screenshot_status": "queued",
+      "screenshot_status": "captured",
       "qa_status": "automated_pass",
       "review_status": "building",
       "production_url": "https://docs.cherryai.com.cn/pre-basic/data-settings/siyuan",
@@ -3099,11 +3242,22 @@
           "status": "verified"
         }
       },
-      "screenshots": []
+      "screenshots": [
+        {
+          "scene": "siyuan",
+          "locales": {
+            "zh-CN": ".gitbook/assets/cherry-v2-071-siyuan-zh-cn.png",
+            "zh-TW": "i18n/traditional-chinese/.gitbook/assets/cherry-v2-071-siyuan-zh-tw.png",
+            "en": "i18n/english/.gitbook/assets/cherry-v2-071-siyuan-en.png",
+            "ja": "i18n/japanese/.gitbook/assets/cherry-v2-071-siyuan-ja.png",
+            "ru": "i18n/russian/.gitbook/assets/cherry-v2-071-siyuan-ru.png"
+          }
+        }
+      ]
     },
     {
       "id": "072",
-      "order": 73,
+      "order": 74,
       "section": "基础教程",
       "title": "助手订阅配置",
       "change_type": "update",
@@ -3155,7 +3309,7 @@
     },
     {
       "id": "073",
-      "order": 74,
+      "order": 75,
       "section": "基础教程",
       "title": "个性化设置",
       "change_type": "update",
@@ -3196,7 +3350,7 @@
     },
     {
       "id": "074",
-      "order": 75,
+      "order": 76,
       "section": "基础教程",
       "title": "自定义 CSS",
       "change_type": "update",
@@ -3240,7 +3394,7 @@
     },
     {
       "id": "075",
-      "order": 76,
+      "order": 77,
       "section": "基础教程",
       "title": "字体推荐",
       "change_type": "update",
@@ -3281,7 +3435,7 @@
     },
     {
       "id": "076",
-      "order": 77,
+      "order": 78,
       "section": "基础教程",
       "title": "修改存储位置",
       "change_type": "update",
@@ -3323,7 +3477,7 @@
     },
     {
       "id": "077",
-      "order": 78,
+      "order": 79,
       "section": "基础教程",
       "title": "清除 CSS 设置",
       "change_type": "update",
@@ -3363,7 +3517,7 @@
     },
     {
       "id": "078",
-      "order": 79,
+      "order": 80,
       "section": "知识库教程",
       "title": "知识库教程",
       "change_type": "update",
@@ -3405,7 +3559,7 @@
     },
     {
       "id": "079",
-      "order": 80,
+      "order": 81,
       "section": "知识库教程",
       "title": "知识库数据",
       "change_type": "update",
@@ -3451,7 +3605,7 @@
     },
     {
       "id": "080",
-      "order": 81,
+      "order": 82,
       "section": "知识库教程",
       "title": "嵌入模型",
       "change_type": "update",
@@ -3494,7 +3648,7 @@
     },
     {
       "id": "081",
-      "order": 82,
+      "order": 83,
       "section": "知识库教程",
       "title": "文档预处理",
       "change_type": "update",
@@ -3536,7 +3690,7 @@
     },
     {
       "id": "082",
-      "order": 83,
+      "order": 84,
       "section": "进阶教程",
       "title": "概念入门：助手 / 智能体 / 技能 / MCP / 频道",
       "change_type": "update",
@@ -3582,7 +3736,7 @@
     },
     {
       "id": "083",
-      "order": 84,
+      "order": 85,
       "section": "进阶教程",
       "title": "MCP 使用教程",
       "change_type": "update",
@@ -3623,7 +3777,7 @@
     },
     {
       "id": "084",
-      "order": 85,
+      "order": 86,
       "section": "进阶教程",
       "title": "MCP 环境安装",
       "change_type": "update",
@@ -3664,7 +3818,7 @@
     },
     {
       "id": "085",
-      "order": 86,
+      "order": 87,
       "section": "进阶教程",
       "title": "配置和使用 MCP",
       "change_type": "update",
@@ -3705,7 +3859,7 @@
     },
     {
       "id": "086",
-      "order": 87,
+      "order": 88,
       "section": "进阶教程",
       "title": "自动安装 MCP",
       "change_type": "update",
@@ -3746,7 +3900,7 @@
     },
     {
       "id": "087",
-      "order": 88,
+      "order": 89,
       "section": "进阶教程",
       "title": "内置 MCP 配置",
       "change_type": "update",
@@ -3788,7 +3942,7 @@
     },
     {
       "id": "088",
-      "order": 89,
+      "order": 90,
       "section": "进阶教程",
       "title": "配置 Dify 知识库",
       "change_type": "update",
@@ -3828,7 +3982,7 @@
     },
     {
       "id": "089",
-      "order": 90,
+      "order": 91,
       "section": "进阶教程",
       "title": "常见问题",
       "change_type": "update",
@@ -3870,7 +4024,7 @@
     },
     {
       "id": "090",
-      "order": 91,
+      "order": 92,
       "section": "进阶教程",
       "title": "调用链使用教程",
       "change_type": "update",
@@ -3912,7 +4066,7 @@
     },
     {
       "id": "091",
-      "order": 92,
+      "order": 93,
       "section": "进阶教程",
       "title": "代码工具",
       "change_type": "rewrite",
@@ -3953,9 +4107,9 @@
     },
     {
       "id": "092",
-      "order": 93,
+      "order": 94,
       "section": "进阶教程",
-      "title": "API 服务器",
+      "title": "API 网关",
       "change_type": "update",
       "content_status": "verified",
       "screenshot_status": "captured",
@@ -4007,7 +4161,7 @@
     },
     {
       "id": "093",
-      "order": 94,
+      "order": 95,
       "section": "进阶教程",
       "title": "技能",
       "change_type": "rewrite",
@@ -4048,7 +4202,7 @@
     },
     {
       "id": "094",
-      "order": 95,
+      "order": 96,
       "section": "进阶教程",
       "title": "频道",
       "change_type": "rewrite",
@@ -4089,7 +4243,7 @@
     },
     {
       "id": "095",
-      "order": 96,
+      "order": 97,
       "section": "进阶教程",
       "title": "定时任务",
       "change_type": "rewrite",
@@ -4131,7 +4285,7 @@
     },
     {
       "id": "096",
-      "order": 97,
+      "order": 98,
       "section": "进阶教程",
       "title": "智能体工作区记忆",
       "change_type": "rewrite",
@@ -4173,7 +4327,7 @@
     },
     {
       "id": "097",
-      "order": 98,
+      "order": 99,
       "section": "进阶教程",
       "title": "OpenClaw",
       "change_type": "rewrite",
@@ -4215,7 +4369,7 @@
     },
     {
       "id": "098",
-      "order": 99,
+      "order": 100,
       "section": "进阶教程",
       "title": "提示词与快速插入",
       "change_type": "rewrite",
@@ -4259,7 +4413,7 @@
     },
     {
       "id": "099",
-      "order": 100,
+      "order": 101,
       "section": "进阶教程",
       "title": "Agent 案例",
       "change_type": "update",
@@ -4302,7 +4456,7 @@
     },
     {
       "id": "100",
-      "order": 101,
+      "order": 102,
       "section": "进阶教程",
       "title": "构建黄金市场复盘 Agent",
       "change_type": "update",
@@ -4343,7 +4497,7 @@
     },
     {
       "id": "101",
-      "order": 102,
+      "order": 103,
       "section": "项目贡献",
       "title": "贡献代码",
       "change_type": "update",
@@ -4386,7 +4540,7 @@
     },
     {
       "id": "102",
-      "order": 103,
+      "order": 104,
       "section": "项目贡献",
       "title": "贡献文档",
       "change_type": "update",
@@ -4426,7 +4580,7 @@
     },
     {
       "id": "103",
-      "order": 104,
+      "order": 105,
       "section": "问题&反馈",
       "title": "常见问题",
       "change_type": "update",
@@ -4470,7 +4624,7 @@
     },
     {
       "id": "104",
-      "order": 105,
+      "order": 106,
       "section": "问题&反馈",
       "title": "如何高效提问",
       "change_type": "update",
@@ -4511,7 +4665,7 @@
     },
     {
       "id": "105",
-      "order": 106,
+      "order": 107,
       "section": "问题&反馈",
       "title": "知识科普",
       "change_type": "update",
@@ -4552,7 +4706,7 @@
     },
     {
       "id": "106",
-      "order": 107,
+      "order": 108,
       "section": "问题&反馈",
       "title": "反馈 & 建议",
       "change_type": "update",
@@ -4594,7 +4748,7 @@
     },
     {
       "id": "107",
-      "order": 108,
+      "order": 109,
       "section": "联系我们",
       "title": "商务合作",
       "change_type": "update",
@@ -4633,7 +4787,7 @@
     },
     {
       "id": "108",
-      "order": 109,
+      "order": 110,
       "section": "联系我们",
       "title": "Cherry Studio 开源许可协议",
       "change_type": "update",
@@ -4673,7 +4827,7 @@
     },
     {
       "id": "109",
-      "order": 110,
+      "order": 111,
       "section": "关于",
       "title": "隐私协议",
       "change_type": "update",
@@ -4718,7 +4872,7 @@
     },
     {
       "id": "110",
-      "order": 111,
+      "order": 112,
       "section": "其他内容",
       "title": "模型数据",
       "change_type": "update",
@@ -4762,7 +4916,7 @@
     },
     {
       "id": "111",
-      "order": 112,
+      "order": 113,
       "section": "其他内容",
       "title": "LLM Arena 排行榜",
       "change_type": "update",

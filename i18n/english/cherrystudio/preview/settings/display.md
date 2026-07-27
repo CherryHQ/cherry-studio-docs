@@ -1,11 +1,11 @@
 ---
-description: Adjust the theme, colors, zoom, fonts, and topic list layout in Cherry Studio V2.
+description: Adjust Cherry Studio V2 themes, colors, zoom, fonts, message display, and math rendering.
 icon: table-columns
 ---
 
-# Display Settings
+# Appearance Settings
 
-Cherry Studio V2 display options are under **Settings > General Settings > Display & Language**. This page covers appearance and conversation layout settings. For language, system startup, proxy, and privacy settings, see [General Settings](general.md).
+Open **Settings > Appearance**. The page contains Display & Language, font, input, message, math, code display, code execution, and Custom CSS sections. This guide focuses on themes, zoom, fonts, message display, and math rendering.
 
 ## Theme and Accent Color
 
@@ -90,32 +90,26 @@ Global Font and Code Font are independent. Resetting one does not affect the oth
 The chat message font size belongs to message display settings and is not adjusted separately here. Use Zoom when the entire interface is too large or small. Use Global Font or Code Font when you only want to change the typeface.
 {% endhint %}
 
-## Topic Settings
+## Message Settings
 
-### Topic position
+Message Settings controls the layout and reading behavior of conversation content:
 
-**Topic Position** determines which side of the conversation area shows the topic list:
+- **Wide layout mode:** Increases the usable width for message content;
+- **Use serif font:** Changes only the font style of message text;
+- **Collapse Thought Content:** Collapses model reasoning by default;
+- **Show message outline:** Adds a structure entry point for long conversations;
+- **Message style:** Switches between bubble and other display styles;
+- **Multiple-model answer style:** Uses folded, vertical, horizontal, or grid layouts;
+- **Message navigation:** Uses no navigation, buttons, or anchors;
+- **Message font size:** Changes message text without zooming the entire interface.
 
-- **Left:** Assistants and topics share the left area, with tabs to switch between them.
-- **Right:** The assistant list stays on the left, and the topic list appears on the right side of the conversation area.
+Message font size ranges from 12 to 22, with 14 as the default.
 
-Changing this option does not move or delete existing topics or messages; it only changes the interface layout.
+![Message layout, style, navigation, and font size settings](../../../.gitbook/assets/cherry-v2-064-appearance-message-settings-en.png)
 
-### Automatically switch to topics
+## Math Settings
 
-This option appears only when Topic Position is **Left**.
-
-When enabled, clicking an assistant or Agent automatically switches to its topic / session list. When disabled, it changes only the current assistant or Agent and does not switch the left tab.
-
-### Show topic time
-
-When enabled, each topic displays its creation time in `YYYY/MM/DD HH:mm` format. Disabling the option hides the time without changing the topic's creation timestamp.
-
-### Keep pinned topics first
-
-When enabled, pinned topics appear before regular topics, while regular topics retain their existing order.
-
-Disabling the option does not remove pinned markers; it only stops reordering by pinned status. You can still pin or unpin a topic from its menu.
+**Enable `$...$`** controls whether content enclosed by single dollar signs is rendered as inline math. It is enabled by default. If a currency amount in regular text is incorrectly rendered as an equation, turn it off and check the message again.
 
 ## FAQ
 
@@ -127,12 +121,8 @@ First confirm that the operating system has switched to another appearance and t
 
 Cherry Studio reads system fonts when you enter Settings. After installing a font, reopen the app, then return to **Display & Language**.
 
-### The topic list is not in the expected position
-
-Check whether **Topic Position** is set to Left or Right, and confirm that the topic list is not currently hidden on the conversation page. You can also restore it with the topic display shortcut, which defaults to `Cmd/Ctrl + ]`.
-
 ### Custom CSS causes display problems
 
-Go to **Settings > General Settings > Custom CSS**, temporarily remove the relevant styles, and see whether the interface recovers. Custom CSS selectors may change between versions, so avoid relying on deeply nested internal DOM structures.
+Go to **Settings > Appearance > Custom CSS**, temporarily remove the relevant styles, and see whether the interface recovers. Custom CSS selectors may change between versions, so avoid relying on deeply nested internal DOM structures.
 
 If the problem persists, submit your operating system, Cherry Studio version, display setting values, and a full interface screenshot through [Feedback and Suggestions](../../../question-contact/suggestions.md).

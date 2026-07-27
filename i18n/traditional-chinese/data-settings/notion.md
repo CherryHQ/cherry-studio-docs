@@ -7,7 +7,7 @@ icon: square-n
 
 Cherry Studio V2 可以將話題或單一訊息匯出到 Notion 資料庫。每次匯出都會在目標資料庫中建立一個新頁面，並將轉換後的內容寫入頁面正文。
 
-設定入口已經移至 **設定 > 整合 > Notion**。**資料設定 > 匯出選單**只負責顯示或隱藏「匯出到 Notion」選項，不會用於填寫連線資訊。
+設定入口位於 **設定 > 資料 > Notion 設定**。**設定 > 資料 > 匯出選單設定**只負責顯示或隱藏「匯出到 Notion」選項，不會用於填寫連線資訊。
 
 {% hint style="warning" %}
 Notion Token 等同於該連線的存取憑證。請勿在截圖、意見回饋或共用設定中顯示完整的 Token，也不要將 Token 寫入公開頁面。
@@ -99,13 +99,17 @@ https://www.notion.so/workspace/Tasks-0123456789abcdef0123456789abcdef?v=...
 
 ## 在 Cherry Studio 中連線
 
-前往 **設定 > 整合 > Notion**，依序填寫：
+前往 **設定 > 資料 > Notion 設定**。
+
+![Notion 設定頁面的資料庫 ID、標題欄位與金鑰設定](../.gitbook/assets/cherry-v2-069-notion-zh-tw.png)
+
+依序填寫：
 
 1. **Notion 資料庫 ID**；
 2. **頁面標題欄位名稱**；
 3. **Notion 金鑰**。
 
-點擊 Token 輸入框旁的 **檢查**。檢查成功表示：
+點擊 **Notion 金鑰**輸入框旁的 **檢查**。檢查成功表示：
 
 - Token 有效；
 - Cherry Studio 可以透過該 Token 讀取目標資料庫；
@@ -129,7 +133,7 @@ https://www.notion.so/workspace/Tasks-0123456789abcdef0123456789abcdef?v=...
 
 如果對話選單中沒有「匯出到 Notion」：
 
-1. 開啟 **設定 > 資料設定 > 匯出選單**。
+1. 開啟 **設定 > 資料 > 匯出選單設定**。
 2. 開啟 **匯出到 Notion**。
 3. 返回對話，重新開啟話題或訊息的匯出選單。
 
@@ -147,7 +151,7 @@ https://www.notion.so/workspace/Tasks-0123456789abcdef0123456789abcdef?v=...
 
 Cherry Studio 會使用話題或訊息標題建立資料庫頁面。標題超過 32 個字元時，會被截短並加上刪節號。
 
-Notion 匯出以 Cherry Studio 的 Markdown 轉換流程為基礎。**資料設定 > Markdown 匯出**中的部分選項，例如公式標記、模型資訊和引用處理，也可能影響匯出結果。
+Notion 匯出以 Cherry Studio 的 Markdown 轉換流程為基礎。**設定 > 資料 > Markdown 匯出**中的部分選項，例如公式標記、模型資訊和引用處理，也可能影響匯出結果。
 
 ## 權限與資料邊界
 
@@ -185,6 +189,6 @@ Token 可能複製不完整、已撤銷或屬於另一個 Workspace。請返回 
 
 ### 對話選單中沒有 Notion
 
-前往 **設定 > 資料設定 > 匯出選單**，開啟 **匯出到 Notion**。如果已經開啟，請重新進入目前的對話，再檢查選單。
+前往 **設定 > 資料 > 匯出選單設定**，開啟 **匯出到 Notion**。如果已經開啟，請重新進入目前的對話，再檢查選單。
 
 如果仍無法解決，請透過[意見回饋與建議](../question-contact/suggestions.md)提交 Cherry Studio 版本、Notion 傳回的狀態碼、已移除敏感資訊的 Database ID、標題欄位名稱和完整的錯誤資訊。
