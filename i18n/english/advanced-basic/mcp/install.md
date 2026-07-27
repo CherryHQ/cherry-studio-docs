@@ -9,6 +9,8 @@ Cherry Studio can manage two commonly used MCP runtimes:
 Not every MCP Server requires UV and Bun. Remote SSE / Streamable HTTP servers and most built-in Cherry Studio servers do not depend on these runtimes. Use the `command` in the server documentation to determine what you need to install.
 {% endhint %}
 
+![Environment dependency settings](../../.gitbook/assets/cherry-v2-084-dependencies-en.png)
+
 ## Use the in-app installer
 
 1. Open **Settings → Environment Dependencies**.

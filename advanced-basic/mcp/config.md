@@ -7,6 +7,8 @@
 
 如果还不了解 MCP 的作用，请先阅读 [MCP 使用教程](README.md)。如果系统缺少 NPX、Bun 或 UV，请先完成 [MCP 环境安装](install.md)。
 
+![添加 MCP 服务器](../../.gitbook/assets/cherry-v2-085-mcp-add-zh-cn.png)
+
 ## 选择添加方式
 
 打开 **设置 → MCP 服务器**，点击 **添加**，可以选择：

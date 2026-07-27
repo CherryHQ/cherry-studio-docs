@@ -5,6 +5,8 @@ icon: message
 
 # 会話インターフェース
 
+![チャットワークスペース](../../.gitbook/assets/cherry-v2-008-chat-conversation-ja.png)
+
 会話は Cherry Studio で最もよく使われるワークスペースです。用途ごとにアシスタントを作成し、各アシスタントで複数の独立したトピックを管理できます。必要に応じて、ファイル、ナレッジベース、Web 検索、MCP ツール、複数のモデルも追加できます。
 
 {% hint style="info" %}

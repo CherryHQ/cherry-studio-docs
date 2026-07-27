@@ -8,6 +8,8 @@ icon: bolt
 
 Cherry Studio V2 使用“提示词”统一管理这类内容，替代旧版本的“快捷短语”。
 
+![新建提示词](../../.gitbook/assets/cherry-v2-098-quick-phrase-zh-cn.png)
+
 ## 新建提示词
 
 ### 从资源库新建

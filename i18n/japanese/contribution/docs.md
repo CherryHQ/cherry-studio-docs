@@ -158,8 +158,8 @@ PNG または WebP を推奨します。鮮明さは保ちつつ、意味のな�
 `SUMMARY.md` は GitBook のサイドバー階層を決定します。ページを追加、移動、名前変更するときは、対応する言語の `SUMMARY.md` も確認してください。
 
 ```markdown
-* [Agent 案例](advanced-basic/agent-an-li/README.md)
-  * [黄金市场复盘 Agent](advanced-basic/agent-an-li/gold-price-case.md)
+* [Agent 案例](../advanced-basic/agent-an-li/README.md)
+  * [黄金市场复盘 Agent](../advanced-basic/agent-an-li/gold-price-case.md)
 ```
 
 同じ Markdown ファイルを、同じ `SUMMARY.md` から重複して参照しないでください。

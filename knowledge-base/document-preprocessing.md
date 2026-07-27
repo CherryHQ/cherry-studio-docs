@@ -6,6 +6,8 @@ icon: face-viewfinder
 
 文档预处理会在分块和向量化之前，把 PDF、Word、表格等文档转换成更适合检索的 Markdown 文本。它主要用于扫描件、复杂版式、表格和多栏文档。
 
+![文档预处理设置](../.gitbook/assets/cherry-v2-081-document-preprocessing-zh-cn.png)
+
 如果文档本身已有清晰的文本层，Cherry Studio 的内置读取通常就能工作。不要为了“更高级”而默认给所有文件启用在线处理器，应先用少量资料比较实际效果。
 
 ## 处理流程

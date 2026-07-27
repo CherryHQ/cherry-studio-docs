@@ -4,6 +4,8 @@ icon: highlighter
 
 # 劃詞助手
 
+![劃詞助手設定](../../.gitbook/assets/cherry-v2-018-selection-assistant-settings-zh-tw.png)
+
 劃詞助手會在其他應用程式中選取文字後顯示浮動工具列。你可以直接翻譯、解釋、總結、搜尋或複製所選內容，也可以新增自己的 AI 操作。
 
 {% hint style="info" %}

@@ -2,9 +2,11 @@
 icon: server
 ---
 
-# API 服务器
+# API 网关
 
-API 服务器把 Cherry Studio 中已配置的模型、MCP 和知识库能力开放为本地 HTTP 接口。其他应用可以通过兼容 OpenAI 或 Anthropic 的请求格式调用这些能力，无需在每个工具中重复配置服务商密钥。
+API 网关把 Cherry Studio 中已配置的模型、MCP 和知识库能力开放为本地 HTTP 接口。其他应用可以通过兼容 OpenAI 或 Anthropic 的请求格式调用这些能力，无需在每个工具中重复配置服务商密钥。
+
+![API 网关设置页面](../.gitbook/assets/cherry-v2-092-api-gateway-overview-zh-cn.png)
 
 常见用途包括：
 

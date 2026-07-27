@@ -6,6 +6,8 @@ icon: server
 
 API サーバーは、Cherry Studio に設定済みのモデル、MCP、ナレッジベース機能をローカル HTTP API として公開します。他のアプリケーションは、OpenAI または Anthropic 互換のリクエスト形式でこれらの機能を呼び出せるため、ツールごとにプロバイダーの API キーを設定し直す必要がありません。
 
+![API サーバー設定画面](../.gitbook/assets/cherry-v2-092-api-gateway-overview-ja.png)
+
 主な用途：
 
 * スクリプトやサードパーティ製ツールから、Cherry Studio に設定済みのモデルプロバイダーを再利用する。

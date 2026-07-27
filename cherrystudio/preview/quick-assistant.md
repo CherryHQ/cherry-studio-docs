@@ -4,6 +4,8 @@ icon: browsers
 
 # 快捷助手
 
+![快捷助手设置](../../.gitbook/assets/cherry-v2-017-quick-assistant-settings-zh-cn.png)
+
 快捷助手是一个可从其他应用上方唤起的轻量窗口。它适合临时提问、翻译、总结或解释一段文字，不必先切回 Cherry Studio 主窗口。
 
 {% hint style="info" %}

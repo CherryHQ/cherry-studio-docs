@@ -158,8 +158,8 @@ git switch -c docs/short-description upstream/main
 `SUMMARY.md` определяет иерархию боковой панели GitBook. При добавлении, перемещении или переименовании страницы проверьте `SUMMARY.md` соответствующего языка:
 
 ```markdown
-* [Agent 案例](advanced-basic/agent-an-li/README.md)
-  * [黄金市场复盘 Agent](advanced-basic/agent-an-li/gold-price-case.md)
+* [Agent 案例](../advanced-basic/agent-an-li/README.md)
+  * [黄金市场复盘 Agent](../advanced-basic/agent-an-li/gold-price-case.md)
 ```
 
 Один файл Markdown не должен упоминаться несколько раз в одном `SUMMARY.md`.

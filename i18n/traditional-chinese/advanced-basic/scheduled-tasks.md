@@ -8,6 +8,8 @@ icon: calendar-clock
 
 排程任務由 Cherry Studio 本機的排程器執行，不是作業系統層級的背景服務。到了排定時間，Cherry Studio 必須處於執行狀態；重新開啟應用程式後，仍處於活躍狀態的任務會恢復排程。
 
+![建立排程任務](../.gitbook/assets/cherry-v2-095-scheduled-task-zh-tw.png)
+
 {% hint style="warning" %}
 排程任務屬於無人值守操作。執行任務的智能體必須啟用自主模式，或使用全自動權限模式；啟用自主模式時，Cherry Studio 會自動切換為全自動權限。工具呼叫不會逐次等待確認，請限制智能體可存取的工作目錄，並避免在提示詞中儲存密碼、API Key 或其他敏感資訊。
 {% endhint %}

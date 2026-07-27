@@ -4,6 +4,8 @@ icon: grid-2
 
 # 小程式
 
+![小程式目錄](../../.gitbook/assets/cherry-v2-013-mini-apps-grid-zh-tw.png)
+
 小程式可以在 Cherry Studio 中開啟常用網站。內建目錄包含多種 AI、搜尋和開發服務，你也可以將自己的網頁位址新增為小程式，並透過頂部標籤在多個網頁之間切換。
 
 {% hint style="info" %}

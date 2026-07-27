@@ -8,6 +8,8 @@ Cherry Studio 可以安装并管理 OpenClaw，在本机启动 OpenClaw Gateway�
 
 OpenClaw 是独立运行的个人 AI 助手，不等同于 Cherry Studio 的[智能体](agent.md)。如果只需要在 Cherry Studio 内完成对话或工具任务，直接使用智能体即可；需要使用 OpenClaw 的控制面板、渠道和运行方式时，再启用本页功能。
 
+![OpenClaw 页面](../.gitbook/assets/cherry-v2-097-openclaw-zh-cn.png)
+
 {% hint style="warning" %}
 OpenClaw 拥有较高的系统权限，智能体任务也可能消耗较多 Token。请只在可信设备和可信工作区中运行，并检查它获得的文件、命令和第三方渠道权限。
 {% endhint %}

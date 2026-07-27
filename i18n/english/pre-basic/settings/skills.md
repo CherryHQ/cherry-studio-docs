@@ -8,6 +8,8 @@ A skill is a set of specialized instructions and supporting files that an agent 
 
 Skills do not change the underlying model, and they are not standalone applications. Cherry Studio V2 first installs a skill in the global skill library. You then choose which [agents](../../advanced-basic/agent.md) can use it. The same skill can be enabled for multiple agents, and each agent keeps its own enablement state.
 
+![Online skill search](../../.gitbook/assets/cherry-v2-093-skills-online-en.png)
+
 {% hint style="info" %}
 In V2, skills are available only to agents, not regular assistants. Installing a skill in the global library does not automatically enable it for every agent.
 {% endhint %}

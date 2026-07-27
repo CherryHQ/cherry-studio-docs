@@ -4,6 +4,8 @@ icon: browsers
 
 # Quick Assistant
 
+![Quick Assistant settings](../../.gitbook/assets/cherry-v2-017-quick-assistant-settings-en.png)
+
 Quick Assistant is a lightweight window that you can open above another application. Use it for a temporary question, translation, summary, or explanation without switching back to the main Cherry Studio window first.
 
 {% hint style="info" %}

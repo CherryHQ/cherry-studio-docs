@@ -8,6 +8,8 @@ icon: sparkles
 
 技能不会改变底层模型，也不是单独运行的应用。Cherry Studio V2 先把技能安装到全局技能库，再由你决定为哪些[智能体](../../advanced-basic/agent.md)启用；同一技能可以供多个智能体使用，每个智能体的启用状态彼此独立。
 
+![在线技能搜索页面](../../.gitbook/assets/cherry-v2-093-skills-online-zh-cn.png)
+
 {% hint style="info" %}
 当前 V2 技能用于智能体，不用于普通助手。安装到全局技能库不代表所有智能体都会自动启用它。
 {% endhint %}

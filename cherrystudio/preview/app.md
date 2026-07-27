@@ -4,6 +4,8 @@ icon: grid-2
 
 # 小程序
 
+![小程序目录](../../.gitbook/assets/cherry-v2-013-mini-apps-grid-zh-cn.png)
+
 小程序可以在 Cherry Studio 内打开常用网站。内置目录包含多种 AI、搜索和开发服务，你也可以把自己的网页地址添加为小程序，并通过顶部标签在多个网页之间切换。
 
 {% hint style="info" %}

@@ -313,4 +313,4 @@ Cherry Studio 未從 `/config` 中找到同時屬於 `general` 與 `web` 的已�
 
 ### 取得協助與提交意見
 
-如果在設定或使用過程中遇到問題，請透過[意見回饋](../../question-contact/suggestions.md)中列出的官方管道提交意見。請附上 Cherry Studio 版本、SearXNG 版本、錯誤碼和經過遮蔽處理的記錄，但不要提交真實網域憑證或驗證密碼。
+如果在設定或使用過程中遇到問題，請透過[意見回饋](../question-contact/suggestions.md)中列出的官方管道提交意見。請附上 Cherry Studio 版本、SearXNG 版本、錯誤碼和經過遮蔽處理的記錄，但不要提交真實網域憑證或驗證密碼。

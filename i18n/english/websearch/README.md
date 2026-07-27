@@ -265,4 +265,4 @@ Reduce **Number of Search Results**, or enable **Cutoff** and gradually decrease
 
 ### 💡 Get Help and Submit Feedback
 
-If you encounter questions, bugs, or feature suggestions during setup or use, see the official channels in [Feedback and Suggestions](../../question-contact/suggestions.md).
+If you encounter questions, bugs, or feature suggestions during setup or use, see the official channels in [Feedback and Suggestions](../question-contact/suggestions.md).

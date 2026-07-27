@@ -9,6 +9,8 @@ Cherry Studio 可以管理兩種常用的 MCP 執行環境：
 並非所有 MCP 伺服器都需要安裝 UV 和 Bun。遠端 SSE / Streamable HTTP 伺服器和多數 Cherry Studio 內建伺服器都不依賴這兩個執行環境。請根據伺服器文件中的 `command` 判斷需要安裝的項目。
 {% endhint %}
 
+![環境相依套件設定](../../.gitbook/assets/cherry-v2-084-dependencies-zh-tw.png)
+
 ## 使用應用程式內的安裝程式
 
 1. 開啟**設定 → 環境相依套件**。

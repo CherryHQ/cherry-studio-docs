@@ -4,6 +4,8 @@ icon: robot
 
 # Agent
 
+![建立 Agent](../.gitbook/assets/cherry-v2-010-agent-create-zh-tw.png)
+
 Agent 可以在受控權限下讀取工作區、呼叫工具並連續完成多步驟任務。它適合「需要真正執行」的工作，例如整理一批檔案、修改專案程式碼、呼叫 MCP 服務或依排程產生報告。
 
 如果只需要固定角色設定、知識庫問答或日常聊天，先使用助手會更簡單。兩者的差異請參閱[概念入門](concepts-101.md)。

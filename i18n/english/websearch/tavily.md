@@ -215,4 +215,4 @@ If you must use a proxy or gateway, confirm that it:
 
 ### Get Help and Submit Feedback
 
-If you encounter a problem during setup or use, submit feedback through the official channels listed in [Feedback and Suggestions](../../question-contact/suggestions.md). Include the Cherry Studio version, model name, error message, and whether a proxy is in use, but do not attach a real API Key.
+If you encounter a problem during setup or use, submit feedback through the official channels listed in [Feedback and Suggestions](../question-contact/suggestions.md). Include the Cherry Studio version, model name, error message, and whether a proxy is in use, but do not attach a real API Key.

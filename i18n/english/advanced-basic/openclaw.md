@@ -8,6 +8,8 @@ Cherry Studio can install and manage OpenClaw, start the OpenClaw Gateway locall
 
 OpenClaw is a standalone personal AI assistant and is not the same as a Cherry Studio [agent](agent.md). If you only need to complete conversations or tool-based tasks inside Cherry Studio, use an agent directly. Enable the feature on this page when you need OpenClaw's Dashboard, channels, and runtime.
 
+![OpenClaw page](../.gitbook/assets/cherry-v2-097-openclaw-en.png)
+
 {% hint style="warning" %}
 OpenClaw has elevated system permissions, and agent tasks may also consume a significant number of tokens. Run it only on trusted devices and in trusted workspaces, and review the file, command, and third-party channel permissions that it receives.
 {% endhint %}

@@ -158,8 +158,8 @@ Do not stack many hints on one page. Use ordinary paragraphs or lists for regula
 `SUMMARY.md` determines the GitBook sidebar hierarchy. When adding, moving, or renaming a page, also check the corresponding language's `SUMMARY.md`:
 
 ```markdown
-* [Agent Case Studies](advanced-basic/agent-an-li/README.md)
-  * [Gold Market Review Agent](advanced-basic/agent-an-li/gold-price-case.md)
+* [Agent Case Studies](../advanced-basic/agent-an-li/README.md)
+  * [Gold Market Review Agent](../advanced-basic/agent-an-li/gold-price-case.md)
 ```
 
 Do not reference the same Markdown file more than once in one `SUMMARY.md`.

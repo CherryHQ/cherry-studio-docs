@@ -4,6 +4,8 @@ icon: browsers
 
 # クイックアシスタント
 
+![クイックアシスタント設定](../../.gitbook/assets/cherry-v2-017-quick-assistant-settings-ja.png)
+
 クイックアシスタントは、他のアプリの上に呼び出せる軽量ウィンドウです。Cherry Studio のメインウィンドウへ切り替えなくても、一時的な質問、翻訳、要約、文章の説明に使用できます。
 
 {% hint style="info" %}

@@ -8,6 +8,8 @@ Scheduled tasks let an [agent](agent.md) run a prompt automatically at a specifi
 
 Cherry Studio's local scheduler runs these tasks; it is not an operating-system background service. Cherry Studio must be running when a task becomes due. When you reopen the app, it resumes tasks that are still active.
 
+![Create a scheduled task](../.gitbook/assets/cherry-v2-095-scheduled-task-en.png)
+
 {% hint style="warning" %}
 Scheduled tasks run unattended. The agent must have Autonomous Mode (Soul Mode) enabled or use Bypass Permissions (Full Auto). When Autonomous Mode is enabled, Cherry Studio automatically switches the agent to Full Auto permissions. Tool calls do not wait for approval one by one. Restrict the working directories the agent can access, and do not store passwords, API keys, or other sensitive information in prompts.
 {% endhint %}

@@ -215,4 +215,4 @@ https://api.tavily.com
 
 ### 取得協助與提交意見
 
-如果在設定或使用過程中遇到問題，請透過[意見回饋](../../question-contact/suggestions.md)中列出的官方管道提交意見。回報時建議說明 Cherry Studio 版本、模型名稱、錯誤提示和是否使用代理，但不要附上真實 API Key。
+如果在設定或使用過程中遇到問題，請透過[意見回饋](../question-contact/suggestions.md)中列出的官方管道提交意見。回報時建議說明 Cherry Studio 版本、模型名稱、錯誤提示和是否使用代理，但不要附上真實 API Key。

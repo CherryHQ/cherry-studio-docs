@@ -4,6 +4,8 @@ icon: image
 
 # 繪畫
 
+![繪畫工作區中的提示詞](../../.gitbook/assets/cherry-v2-011-paintings-prompt-zh-tw.png)
+
 繪畫是 Cherry Studio 的獨立圖片生成工作區。它會讀取你已設定的服務商和模型，讓你在同一頁面中選擇圖片模型、輸入提示詞、調整該模型支援的參數，並管理本次生成的圖片。
 
 {% hint style="info" %}

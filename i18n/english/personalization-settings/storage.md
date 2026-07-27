@@ -6,8 +6,10 @@ icon: floppy-disk
 
 The Cherry Studio app data directory stores its database, internal files, knowledge bases, notes, and some runtime state. If the system drive lacks space or you need to put data on another local drive that stays online, migrate the directory from within the app.
 
+![Data directory settings](../.gitbook/assets/cherry-v2-076-storage-location-en.png)
+
 {% hint style="danger" %}
-Changing the data directory is a high-risk operation. Create a restorable backup first and confirm that it contains the files you need. Do not quit the app, shut down, or disconnect the target drive during migration.
+Changing the data directory is a high-risk operation. In-app Backup & Restore V2 is not available yet. If you do not have a verified independent copy, postpone the migration. If you must proceed, fully quit Cherry Studio and copy the current app data directory to another drive first. Do not quit the app, shut down, or disconnect the target drive during migration.
 {% endhint %}
 
 ## View the Current Directory
@@ -49,12 +51,12 @@ Do not treat changing the app data directory as a complete backup method.
 
 ## Prepare for Migration
 
-1. Create a local backup under **Settings > Data Settings**, or use [WebDAV](../data-settings/WebDAV.md) / [S3-Compatible Storage](../data-settings/s3-compatible.md).
-2. If uploaded files must be retained, confirm that “Skip File Data During Backup” is not enabled.
-3. Stop active generation, knowledge base processing, file import, and synchronization tasks.
+1. Record the current app data path shown in Settings.
+2. Fully quit Cherry Studio, copy the entire current directory to another drive, and confirm that the copy is readable.
+3. Reopen the app and stop active generation, knowledge base processing, file import, and synchronization tasks.
 4. Confirm that the target drive has enough space, a stable connection, and write permission for the current user.
 5. Create an **empty folder** as the target.
-6. Record the current path and keep the original directory until migration has been verified.
+6. Keep the original directory and offline copy until migration has been verified.
 
 {% hint style="warning" %}
 Avoid a network share, on-demand cloud synchronization directory, or removable drive that is frequently disconnected. The database and runtime state require continuous, stable local file access.
@@ -106,7 +108,7 @@ Do not delete the original directory immediately after migration. Check in order
 3. Check that knowledge bases, notes, and internal files are available.
 4. Create a test conversation, then quit normally.
 5. Start Cherry Studio again and confirm that the new data remains.
-6. Create another backup.
+6. Fully quit the app, then make an offline copy of the new directory.
 
 Complete at least two full launches and use the app for a while before deciding whether to archive or delete the original directory.
 
@@ -126,7 +128,7 @@ If one launch looks like a fresh installation, quit the app first and do not res
 If the new directory does not work correctly:
 
 1. Do not delete either the new or old directory.
-2. Back up any data that is still accessible.
+2. If you need to preserve the current state of the new directory, fully quit the app and copy that directory.
 3. Select the original directory again under **Data Directory**.
 4. If the original directory already contains complete data, disable **Copy Data** to avoid overwriting in either direction.
 5. Restart, then repeat the checks under “Verify After Migration.”

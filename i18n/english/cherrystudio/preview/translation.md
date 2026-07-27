@@ -4,6 +4,8 @@ icon: language
 
 # Translation
 
+![Translation workspace](../../.gitbook/assets/cherry-v2-012-translate-workspace-en.png)
+
 The Translation page uses your configured language models to translate text. It supports automatic language detection, streaming results, text and document import, image OCR, translation history, and custom languages. It is suitable for short passages, emails, code snippets, and text extracted from files.
 
 ## Before you begin

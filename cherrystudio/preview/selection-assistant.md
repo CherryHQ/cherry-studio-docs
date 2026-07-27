@@ -4,6 +4,8 @@ icon: highlighter
 
 # 划词助手
 
+![划词助手设置](../../.gitbook/assets/cherry-v2-018-selection-assistant-settings-zh-cn.png)
+
 划词助手会在其他应用中选中文字后显示浮动工具栏。可以直接翻译、解释、总结、搜索或复制所选内容，也可以添加自己的 AI 操作。
 
 {% hint style="info" %}

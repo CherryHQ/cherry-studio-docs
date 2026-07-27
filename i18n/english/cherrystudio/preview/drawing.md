@@ -4,6 +4,8 @@ icon: image
 
 # Painting
 
+![Prompt in the Paintings workspace](../../.gitbook/assets/cherry-v2-011-paintings-prompt-en.png)
+
 Painting is Cherry Studio's dedicated image generation workspace. It uses your configured providers and models, allowing you to select an image model, enter a prompt, adjust supported parameters, and manage the images generated for the current task from one page.
 
 {% hint style="info" %}

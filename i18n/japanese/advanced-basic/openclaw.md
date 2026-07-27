@@ -8,6 +8,8 @@ Cherry Studio では OpenClaw をインストールして管理し、ローカ�
 
 OpenClaw は独立して動作するパーソナル AI アシスタントであり、Cherry Studio の[エージェント](agent.md)とは異なります。Cherry Studio 内でチャットやツールを使ったタスクを行うだけなら、エージェントを使用してください。OpenClaw のダッシュボード、チャンネル、実行方式が必要な場合に、この機能を有効にします。
 
+![OpenClaw 画面](../.gitbook/assets/cherry-v2-097-openclaw-ja.png)
+
 {% hint style="warning" %}
 OpenClaw には高いシステム権限があり、エージェントのタスクによっては多くのトークンを消費することもあります。信頼できるデバイスとワークスペースでのみ実行し、許可されているファイル、コマンド、外部チャンネルへのアクセスを確認してください。
 {% endhint %}

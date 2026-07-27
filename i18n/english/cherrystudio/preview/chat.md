@@ -5,6 +5,8 @@ icon: message
 
 # Chat interface
 
+![Chat workspace](../../.gitbook/assets/cherry-v2-008-chat-conversation-en.png)
+
 Chat is the most frequently used workspace in Cherry Studio. You can create assistants for different purposes, manage multiple independent topics under each assistant, and add files, knowledge bases, web search, MCP tools, or multiple models as needed.
 
 {% hint style="info" %}

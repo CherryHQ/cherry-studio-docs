@@ -260,4 +260,4 @@ ExaMCP may have returned candidate links that Fetch could not read. Try reducing
 
 ### 💡 Get Help and Submit Feedback
 
-If you encounter questions, bugs, or feature suggestions during setup or use, see the official channels in [Feedback and Suggestions](../../question-contact/suggestions.md).
+If you encounter questions, bugs, or feature suggestions during setup or use, see the official channels in [Feedback and Suggestions](../question-contact/suggestions.md).

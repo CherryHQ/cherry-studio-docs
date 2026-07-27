@@ -158,8 +158,8 @@ Cherry Studio 桌面截图统一采用：
 `SUMMARY.md` 决定 GitBook 侧栏层级。新增、移动或改名页面时，应同步检查对应语种的 `SUMMARY.md`：
 
 ```markdown
-* [Agent 案例](advanced-basic/agent-an-li/README.md)
-  * [黄金市场复盘 Agent](advanced-basic/agent-an-li/gold-price-case.md)
+* [Agent 案例](../advanced-basic/agent-an-li/README.md)
+  * [黄金市场复盘 Agent](../advanced-basic/agent-an-li/gold-price-case.md)
 ```
 
 同一个 Markdown 文件不能在同一份 `SUMMARY.md` 中重复引用。

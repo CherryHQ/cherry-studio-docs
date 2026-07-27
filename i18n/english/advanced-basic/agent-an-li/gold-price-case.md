@@ -2,11 +2,11 @@
 icon: chart-line
 ---
 
-# Build a Gold Market Review Agent with Kimi K2.5
+# Build a Gold Market Review Agent with Kimi 3
 
 This case study demonstrates how to use a Cherry Studio Agent to review gold price movements: retrieve public information, align prices with event times, save sources, and generate a report that is easy to review manually.
 
-Kimi K2.5 is the example model in this case. You can replace it with another model as long as the model can be used by Cherry Studio Agents through an **Anthropic Messages** endpoint. Models, prices, and tool compatibility can vary by provider, so verify the setup with a small task first.
+Kimi 3 is the example model in this case. You can replace it with another model as long as the model can be used by Cherry Studio Agents through an **Anthropic Messages** endpoint. Models, prices, and tool compatibility can vary by provider, so verify the setup with a small task first.
 
 {% hint style="warning" %}
 This case demonstrates a research workflow and does not provide investment advice. A model can miss sources, misread data, or generate incorrect code. Do not trade directly based on generated results.
@@ -41,7 +41,7 @@ The Agent can use the `Task` tool to delegate independent research steps to subt
 ## Step 1: Prepare a Model
 
 1. Open **Settings → Model Providers**.
-2. Configure a provider that offers Kimi K2.5, or select another model suitable for tool calling.
+2. Configure a provider that offers Kimi 3, or select another model suitable for tool calling.
 3. Confirm that the model's endpoint types include **Anthropic Messages**.
 4. Save it and complete a regular chat first, then confirm that the model appears in the Agent model selector.
 
@@ -237,7 +237,7 @@ Open it locally and check that:
 
 ## Frequently Asked Questions
 
-### Kimi K2.5 Does Not Appear in the Agent Model List
+### Kimi 3 Does Not Appear in the Agent Model List
 
 Confirm that the model's endpoint types include **Anthropic Messages**, and check whether the model is incorrectly marked as Embedding, Rerank, or image generation. Providers offering a model with the same name do not necessarily expose the same endpoint capabilities.
 

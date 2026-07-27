@@ -4,6 +4,8 @@ icon: robot
 
 # Agents
 
+![Create an agent](../.gitbook/assets/cherry-v2-010-agent-create-en.png)
+
 An Agent can read a workspace, call tools, and complete multi-step tasks in sequence under controlled permissions. It is designed for work that must actually be performed, such as organizing a batch of files, modifying project code, calling MCP services, or generating scheduled reports.
 
 If you only need a consistent persona, knowledge base Q&A, or everyday chat, an Assistant is simpler. See [Concepts 101](concepts-101.md) for a comparison.

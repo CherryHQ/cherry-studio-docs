@@ -8,6 +8,8 @@ icon: bolt
 
 Cherry Studio V2 では、このような内容を旧バージョンの「クイックフレーズ」に代わり、「プロンプト」として一元管理します。
 
+![プロンプトを作成](../../.gitbook/assets/cherry-v2-098-quick-phrase-ja.png)
+
 ## プロンプトを新規作成する
 
 ### リソースライブラリから作成する

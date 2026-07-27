@@ -9,6 +9,8 @@ Cherry Studio 可以管理两种常用的 MCP 运行时：
 不是所有 MCP 服务器都需要安装 UV 和 Bun。远程 SSE / Streamable HTTP 服务器，以及多数 Cherry Studio 内置服务器，不依赖这两个运行时。请根据服务器文档中的 `command` 决定需要安装什么。
 {% endhint %}
 
+![环境依赖设置](../../.gitbook/assets/cherry-v2-084-dependencies-zh-cn.png)
+
 ## 使用应用内安装器
 
 1. 打开 **设置 → 环境依赖**。

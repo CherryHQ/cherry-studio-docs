@@ -4,6 +4,8 @@ icon: note-sticky
 
 # ノート
 
+![ノートエディター](../../.gitbook/assets/cherry-v2-016-notes-editor-ja.png)
+
 ノートは Cherry Studio に組み込まれた Markdown ワークスペースです。各ノートはローカルの `.md` ファイルとして保存され、チャット結果の整理、下書きの作成、他の Markdown ツールでも読み取れる資料の管理に適しています。
 
 {% hint style="info" %}

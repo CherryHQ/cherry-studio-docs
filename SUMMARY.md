@@ -11,7 +11,7 @@
   * [启动台](cherrystudio/preview/launchpad.md)
   * [对话界面](cherrystudio/preview/chat.md)
   * [助手库](cherrystudio/preview/assistants.md)
-  * [资源库](cherrystudio/preview/library.md)
+  * [资源管理入口](cherrystudio/preview/library.md)
   * [智能体](advanced-basic/agent.md)
   * [绘画](cherrystudio/preview/drawing.md)
   * [翻译](cherrystudio/preview/translation.md)
@@ -112,7 +112,7 @@
 * [OpenClaw](advanced-basic/openclaw.md)
 * [提示词与快速插入](pre-basic/settings/quick-phrase.md)
 * [Agent 案例](advanced-basic/agent-an-li/README.md)
-  * [用 Kimi K2.5 构建黄金市场复盘 Agent](advanced-basic/agent-an-li/gold-price-case.md)
+  * [用 Kimi 3 构建黄金市场复盘 Agent](advanced-basic/agent-an-li/gold-price-case.md)
 
 ## 项目贡献 <a href="#contribution" id="contribution"></a>
 

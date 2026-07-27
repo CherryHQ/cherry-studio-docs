@@ -2,9 +2,11 @@
 icon: server
 ---
 
-# API Server
+# API Gateway
 
-The API Server exposes the models, MCP, and knowledge-base capabilities configured in Cherry Studio as local HTTP endpoints. Other applications can call these capabilities with OpenAI- or Anthropic-compatible request formats without configuring provider keys separately in every tool.
+The API Gateway exposes the models, MCP, and knowledge-base capabilities configured in Cherry Studio as local HTTP endpoints. Other applications can call these capabilities with OpenAI- or Anthropic-compatible request formats without configuring provider keys separately in every tool.
+
+![API Gateway settings](../.gitbook/assets/cherry-v2-092-api-gateway-overview-en.png)
 
 Common uses include:
 

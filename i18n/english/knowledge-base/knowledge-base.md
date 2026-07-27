@@ -8,7 +8,7 @@ A knowledge base organizes local documents and webpages into a searchable reposi
 
 A knowledge base does not train or modify the model. It is useful for information that you need to query repeatedly, reuse across chats, or cannot conveniently attach to every message because of its volume.
 
-This page walks you through the complete workflow: **prepare an embedding model → create a knowledge base → add sources → test retrieval → use it in a chat**.
+This page walks you through the complete workflow: **create a knowledge base → check retrieval settings → add sources → test retrieval → use it in a chat**.
 
 {% hint style="info" %}
 For a quick overview, start with [Knowledge Base Overview](../cherrystudio/preview/knowledge-base.md). For model selection, data storage, and document parsing, see [Embedding Models](emb-models-info.md), [Knowledge Base Data](data.md), and [Document Preprocessing](zhi-shi-ku-wen-dang-yu-chu-li.md), respectively.
@@ -16,15 +16,15 @@ For a quick overview, start with [Knowledge Base Overview](../cherrystudio/previ
 
 ## Before You Begin
 
-Before creating a knowledge base, you need at least one available **embedding model**. An embedding model converts sources and questions into searchable data. Regular chat models do not appear in the knowledge base's embedding model list.
+You do not need to configure an embedding model before creating a knowledge base. Without one, the knowledge base starts with BM25 keyword retrieval. If the local embedding model has already been downloaded, a new knowledge base uses that model and its dimensions automatically.
 
-Configure a provider under **Settings → Model Providers**, then confirm that the target model:
+If you plan to use vector or hybrid retrieval, you can prepare an embedding model under **Settings → Model Providers** and confirm that it:
 
 * Has been added to the model list and is enabled
 * Includes embedding in its capability types
 * Has a working API endpoint, API key, and network connection
 
-The model list can change as providers update their offerings, so this guide does not prescribe a specific online model. See [Embedding Models](emb-models-info.md) for selection guidance and common options.
+A regular chat model cannot replace an embedding model. The available list can change as providers update their offerings, so this guide does not prescribe a specific online model. See [Embedding Models](emb-models-info.md) for selection guidance and common options.
 
 ## Create a Knowledge Base
 
@@ -32,12 +32,13 @@ The model list can change as providers update their offerings, so this guide doe
 2. Click the add button in the left navigation area and select **Create Knowledge Base**.
 3. Enter a name that is easy to recognize.
 4. If you have created groups, you can assign the knowledge base to one.
-5. Select an enabled embedding model and finish creating the knowledge base.
 
-The creation window shows only enabled models marked with embedding capability. If the list is empty, return to the model provider settings and check the configuration.
+![Enter a name and optional group when creating a knowledge base](../.gitbook/assets/cherry-v2-078-knowledge-create-en.png)
+
+The creation window does not include an embedding-model selector. If the local embedding model is downloaded, Cherry Studio assigns it to the new knowledge base automatically; otherwise, the knowledge base starts in BM25 mode. After creation, use **RAG Settings** at the top of the page to review or change the embedding model and dimensions.
 
 {% hint style="warning" %}
-The embedding model and vector dimensions determine the index format. Before importing sources in bulk, use a small amount of content to complete a retrieval test. If you later change the embedding model or dimensions, you must regenerate the index through the rebuild process.
+The embedding model and dimensions determine the vector-index format. If you intend to use vector or hybrid retrieval, finish this configuration and test with a small source before importing in bulk. Changing the model or dimensions later starts a rebuild.
 {% endhint %}
 
 ## Add Sources
@@ -161,9 +162,9 @@ Change only one category of parameters at a time, then repeat the retrieval test
 
 ## Frequently Asked Questions
 
-### No Embedding Model Is Available During Creation
+### Why Does a New Knowledge Base Use BM25 Only?
 
-Check that the model provider is enabled, the model capability is marked as embedding, and the API configuration works. A regular chat model cannot replace an embedding model.
+The creation window does not select an embedding model. If the local embedding model has not been downloaded, the new knowledge base starts with BM25. To use vector or hybrid retrieval, select an embedding model in **RAG Settings**. If that list is empty, check the provider, capability label, and API configuration.
 
 ### Sources Remain in Processing
 

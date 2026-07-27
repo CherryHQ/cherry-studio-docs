@@ -165,4 +165,4 @@ Vault フォルダーが移動、オフライン、または読み取り権限�
 
 Obsidian のインストール方法と設定パスを確認してください。Cherry Studio は一般的な XDG、Snap、Flatpak の場所を確認しますが、カスタムポータブル版や標準外のパスは自動検出できない場合があります。
 
-解決しない場合は、[フィードバックと提案](../../question-contact/suggestions.md)から Cherry Studio と Obsidian のバージョン、OS、インストール方法、`obsidian://` リンクを開けるかどうか、マスキング済みの Vault 名とパスを送信してください。
+解決しない場合は、[フィードバックと提案](../question-contact/suggestions.md)から Cherry Studio と Obsidian のバージョン、OS、インストール方法、`obsidian://` リンクを開けるかどうか、マスキング済みの Vault 名とパスを送信してください。

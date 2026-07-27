@@ -4,7 +4,7 @@ icon: grid
 
 # Launchpad
 
-The Launchpad is Cherry Studio's home page, providing one place to open frequently used features and MiniApps. From here, you can access workspaces such as Knowledge Base, Paintings, Assistant Library, Translate, Files, Code, OpenClaw, Notes, and Library.
+The Launchpad is Cherry Studio's home page. It provides one place to open built-in features and pinned MiniApps, making it a convenient starting point for new work across multiple tabs.
 
 ## Open the Launchpad
 
@@ -23,22 +23,21 @@ The **Apps** section of the Launchpad includes these shortcuts:
 
 | App | What it is for |
 | :--- | :--- |
-| Apps | Open and manage web MiniApps |
-| Knowledge Base | Manage knowledge bases, data sources, and retrieval settings |
+| Chat | Start conversations and use assistants |
+| Work | Create and run agent tasks |
 | Paintings | Generate and manage images with image models |
-| Assistant Library | Browse and import community assistants |
-| Translate | Translate text and compare the source with the translation |
+| Translation | Translate text and compare the source with the translation |
+| MiniApp | Open and manage web MiniApps |
+| Knowledge Base | Manage knowledge bases, data sources, and retrieval settings |
 | Files | View files that you have used in Cherry Studio |
-| Code | Manage and run supported AI coding tools |
-| OpenClaw | Install, configure, and open OpenClaw |
+| Code Switch | Manage and run supported AI coding tools |
 | Notes | Create and organize Markdown notes |
-| Library | Manage assistants, agents, skills, and prompts |
 
-**Assistant Library** and **Library** are separate destinations. Assistant Library is where you browse assistants that can be imported; Library is where you manage your own assistants, agents, skills, and prompts.
+Drag an icon to reorder the built-in apps on the Launchpad. Right-click an icon to pin that app to the left sidebar or remove it from the sidebar. Required entries such as Chat cannot be unpinned.
 
 ## MiniApps section
 
-MiniApps pinned to the Launchpad appear below the **Apps** section. MiniApps that remain open may also appear here, making it easy to return to them.
+MiniApps pinned to the Launchpad appear below the **Apps** section. MiniApps and built-in apps have separate orders; drag a MiniApp icon to change its position in this section.
 
 To add or remove a shortcut, open the actions menu for the MiniApp on the **MiniApps** page, then select **Add to Launchpad** or **Remove from Launchpad**.
 
@@ -50,4 +49,4 @@ Removing a MiniApp from the Launchpad only removes its shortcut. It does not del
 
 * Start new work from the Launchpad. To continue an existing conversation or task, use the left sidebar or the history list for that feature.
 * Keep different features open in separate tabs so that you do not have to leave your current workspace.
-* Add frequently used web MiniApps to the Launchpad so that you can find them more quickly.
+* Add frequently used web MiniApps to the Launchpad, and pin high-use built-in apps to the sidebar.

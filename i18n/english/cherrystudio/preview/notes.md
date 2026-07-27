@@ -4,6 +4,8 @@ icon: note-sticky
 
 # Notes
 
+![Notes editor](../../.gitbook/assets/cherry-v2-016-notes-editor-en.png)
+
 Notes is Cherry Studio's built-in Markdown workspace. Each note is stored as a local `.md` file, making it suitable for organizing chat results, drafting content, and maintaining material that other Markdown tools can read.
 
 {% hint style="info" %}

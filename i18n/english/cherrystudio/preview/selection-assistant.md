@@ -4,6 +4,8 @@ icon: highlighter
 
 # Selection Assistant
 
+![Selection Assistant settings](../../.gitbook/assets/cherry-v2-018-selection-assistant-settings-en.png)
+
 Selection Assistant displays a floating toolbar when you select text in another application. You can translate, explain, summarize, search, or copy the selected content immediately, and you can add your own AI actions.
 
 {% hint style="info" %}

@@ -265,4 +265,4 @@ GPT-5 系列推理模型使用 `minimal` 思考強度時，無法啟用 OpenAI �
 
 ### 💡 取得協助與提交意見
 
-如果您在設定或使用過程中遇到疑問、Bug 或功能建議，請參閱[意見回饋](../../question-contact/suggestions.md)中的官方管道。
+如果您在設定或使用過程中遇到疑問、Bug 或功能建議，請參閱[意見回饋](../question-contact/suggestions.md)中的官方管道。

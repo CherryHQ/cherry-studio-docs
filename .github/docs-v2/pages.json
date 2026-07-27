@@ -318,8 +318,8 @@
       "change_type": "rewrite",
       "content_status": "verified",
       "screenshot_status": "captured",
-      "qa_status": "visual_pass",
-      "review_status": "ready",
+      "qa_status": "automated_pass",
+      "review_status": "building",
       "production_url": "https://docs.cherryai.com.cn/cherrystudio/preview/launchpad",
       "preview_path": "/review/007",
       "fact_evidence": [
@@ -464,23 +464,21 @@
       "id": "112",
       "order": 10,
       "section": "Cherry Studio",
-      "title": "资源库",
-      "change_type": "new",
+      "title": "资源管理入口",
+      "change_type": "rewrite",
       "content_status": "verified",
-      "screenshot_status": "queued",
+      "screenshot_status": "not_required",
       "qa_status": "automated_pass",
       "review_status": "building",
       "production_url": "https://docs.cherryai.com.cn/cherrystudio/preview/library",
       "preview_path": "/review/112",
       "fact_evidence": [
+        "product:52b3e3eeb474527ac4f1bddf9dd8e512fec70134:src/renderer/components/layout/TabsProvider.tsx:37-71",
+        "product:52b3e3eeb474527ac4f1bddf9dd8e512fec70134:src/renderer/components/GlobalSearch/globalSearchGroups.ts:99-102",
         "product:52b3e3eeb474527ac4f1bddf9dd8e512fec70134:src/renderer/pages/home/HomePage.tsx:274-297,757-786",
         "product:52b3e3eeb474527ac4f1bddf9dd8e512fec70134:src/renderer/pages/agents/AgentPage.tsx:280-303,1026-1047",
-        "product:52b3e3eeb474527ac4f1bddf9dd8e512fec70134:src/renderer/pages/settings/SettingsPage.tsx:101-107",
-        "product:52b3e3eeb474527ac4f1bddf9dd8e512fec70134:src/renderer/components/GlobalSearch/globalSearchGroups.ts:99-102",
-        "product:52b3e3eeb474527ac4f1bddf9dd8e512fec70134:src/renderer/components/resourceCatalog/catalog/ResourceCatalogView.tsx:15-42",
-        "product:52b3e3eeb474527ac4f1bddf9dd8e512fec70134:src/renderer/components/resourceCatalog/catalog/ResourceGrid.tsx:114-180,311-345",
-        "product:52b3e3eeb474527ac4f1bddf9dd8e512fec70134:src/renderer/components/resourceCatalog/catalog/ResourceCardMenu.tsx:14-48,94-165",
-        "product:52b3e3eeb474527ac4f1bddf9dd8e512fec70134:src/renderer/types/resourceCatalog.ts:8,39-43"
+        "product:52b3e3eeb474527ac4f1bddf9dd8e512fec70134:src/renderer/pages/settings/SkillsSettings.tsx:1-5",
+        "product:52b3e3eeb474527ac4f1bddf9dd8e512fec70134:src/renderer/components/composer/tools/components/QuickPhrasesButton.tsx:141-171"
       ],
       "locales": {
         "zh-CN": {
@@ -513,7 +511,7 @@
       "title": "智能体",
       "change_type": "update",
       "content_status": "verified",
-      "screenshot_status": "queued",
+      "screenshot_status": "captured",
       "qa_status": "automated_pass",
       "review_status": "building",
       "production_url": "https://docs.cherryai.com.cn/advanced-basic/agent",
@@ -547,7 +545,18 @@
           "status": "verified"
         }
       },
-      "screenshots": []
+      "screenshots": [
+        {
+          "scene": "agent-create",
+          "locales": {
+            "zh-CN": ".gitbook/assets/cherry-v2-010-agent-create-zh-cn.png",
+            "zh-TW": "i18n/traditional-chinese/.gitbook/assets/cherry-v2-010-agent-create-zh-tw.png",
+            "en": "i18n/english/.gitbook/assets/cherry-v2-010-agent-create-en.png",
+            "ja": "i18n/japanese/.gitbook/assets/cherry-v2-010-agent-create-ja.png",
+            "ru": "i18n/russian/.gitbook/assets/cherry-v2-010-agent-create-ru.png"
+          }
+        }
+      ]
     },
     {
       "id": "011",
@@ -556,7 +565,7 @@
       "title": "绘画",
       "change_type": "update",
       "content_status": "verified",
-      "screenshot_status": "queued",
+      "screenshot_status": "captured",
       "qa_status": "automated_pass",
       "review_status": "building",
       "production_url": "https://docs.cherryai.com.cn/cherrystudio/preview/drawing",
@@ -590,7 +599,18 @@
           "status": "verified"
         }
       },
-      "screenshots": []
+      "screenshots": [
+        {
+          "scene": "paintings-prompt",
+          "locales": {
+            "zh-CN": ".gitbook/assets/cherry-v2-011-paintings-prompt-zh-cn.png",
+            "zh-TW": "i18n/traditional-chinese/.gitbook/assets/cherry-v2-011-paintings-prompt-zh-tw.png",
+            "en": "i18n/english/.gitbook/assets/cherry-v2-011-paintings-prompt-en.png",
+            "ja": "i18n/japanese/.gitbook/assets/cherry-v2-011-paintings-prompt-ja.png",
+            "ru": "i18n/russian/.gitbook/assets/cherry-v2-011-paintings-prompt-ru.png"
+          }
+        }
+      ]
     },
     {
       "id": "012",
@@ -599,7 +619,7 @@
       "title": "翻译",
       "change_type": "update",
       "content_status": "verified",
-      "screenshot_status": "queued",
+      "screenshot_status": "captured",
       "qa_status": "automated_pass",
       "review_status": "building",
       "production_url": "https://docs.cherryai.com.cn/cherrystudio/preview/translation",
@@ -633,7 +653,18 @@
           "status": "verified"
         }
       },
-      "screenshots": []
+      "screenshots": [
+        {
+          "scene": "translate-workspace",
+          "locales": {
+            "zh-CN": ".gitbook/assets/cherry-v2-012-translate-workspace-zh-cn.png",
+            "zh-TW": "i18n/traditional-chinese/.gitbook/assets/cherry-v2-012-translate-workspace-zh-tw.png",
+            "en": "i18n/english/.gitbook/assets/cherry-v2-012-translate-workspace-en.png",
+            "ja": "i18n/japanese/.gitbook/assets/cherry-v2-012-translate-workspace-ja.png",
+            "ru": "i18n/russian/.gitbook/assets/cherry-v2-012-translate-workspace-ru.png"
+          }
+        }
+      ]
     },
     {
       "id": "013",
@@ -780,7 +811,7 @@
       "title": "笔记",
       "change_type": "update",
       "content_status": "verified",
-      "screenshot_status": "queued",
+      "screenshot_status": "captured",
       "qa_status": "automated_pass",
       "review_status": "building",
       "production_url": "https://docs.cherryai.com.cn/cherrystudio/preview/notes",
@@ -814,7 +845,18 @@
           "status": "verified"
         }
       },
-      "screenshots": []
+      "screenshots": [
+        {
+          "scene": "notes-editor",
+          "locales": {
+            "zh-CN": ".gitbook/assets/cherry-v2-016-notes-editor-zh-cn.png",
+            "zh-TW": "i18n/traditional-chinese/.gitbook/assets/cherry-v2-016-notes-editor-zh-tw.png",
+            "en": "i18n/english/.gitbook/assets/cherry-v2-016-notes-editor-en.png",
+            "ja": "i18n/japanese/.gitbook/assets/cherry-v2-016-notes-editor-ja.png",
+            "ru": "i18n/russian/.gitbook/assets/cherry-v2-016-notes-editor-ru.png"
+          }
+        }
+      ]
     },
     {
       "id": "017",
@@ -823,7 +865,7 @@
       "title": "快捷助手",
       "change_type": "update",
       "content_status": "verified",
-      "screenshot_status": "queued",
+      "screenshot_status": "captured",
       "qa_status": "automated_pass",
       "review_status": "building",
       "production_url": "https://docs.cherryai.com.cn/cherrystudio/preview/quick-assistant",
@@ -856,7 +898,18 @@
           "status": "verified"
         }
       },
-      "screenshots": []
+      "screenshots": [
+        {
+          "scene": "quick-assistant-settings",
+          "locales": {
+            "zh-CN": ".gitbook/assets/cherry-v2-017-quick-assistant-settings-zh-cn.png",
+            "zh-TW": "i18n/traditional-chinese/.gitbook/assets/cherry-v2-017-quick-assistant-settings-zh-tw.png",
+            "en": "i18n/english/.gitbook/assets/cherry-v2-017-quick-assistant-settings-en.png",
+            "ja": "i18n/japanese/.gitbook/assets/cherry-v2-017-quick-assistant-settings-ja.png",
+            "ru": "i18n/russian/.gitbook/assets/cherry-v2-017-quick-assistant-settings-ru.png"
+          }
+        }
+      ]
     },
     {
       "id": "018",
@@ -865,7 +918,7 @@
       "title": "划词助手",
       "change_type": "update",
       "content_status": "verified",
-      "screenshot_status": "queued",
+      "screenshot_status": "captured",
       "qa_status": "automated_pass",
       "review_status": "building",
       "production_url": "https://docs.cherryai.com.cn/cherrystudio/preview/selection-assistant",
@@ -899,7 +952,18 @@
           "status": "verified"
         }
       },
-      "screenshots": []
+      "screenshots": [
+        {
+          "scene": "selection-assistant-settings",
+          "locales": {
+            "zh-CN": ".gitbook/assets/cherry-v2-018-selection-assistant-settings-zh-cn.png",
+            "zh-TW": "i18n/traditional-chinese/.gitbook/assets/cherry-v2-018-selection-assistant-settings-zh-tw.png",
+            "en": "i18n/english/.gitbook/assets/cherry-v2-018-selection-assistant-settings-en.png",
+            "ja": "i18n/japanese/.gitbook/assets/cherry-v2-018-selection-assistant-settings-ja.png",
+            "ru": "i18n/russian/.gitbook/assets/cherry-v2-018-selection-assistant-settings-ru.png"
+          }
+        }
+      ]
     },
     {
       "id": "019",
@@ -3440,7 +3504,7 @@
       "title": "修改存储位置",
       "change_type": "update",
       "content_status": "verified",
-      "screenshot_status": "queued",
+      "screenshot_status": "captured",
       "qa_status": "automated_pass",
       "review_status": "building",
       "production_url": "https://docs.cherryai.com.cn/pre-basic/personalization-settings/storage",
@@ -3473,7 +3537,18 @@
           "status": "verified"
         }
       },
-      "screenshots": []
+      "screenshots": [
+        {
+          "scene": "storage-location",
+          "locales": {
+            "zh-CN": ".gitbook/assets/cherry-v2-076-storage-location-zh-cn.png",
+            "zh-TW": "i18n/traditional-chinese/.gitbook/assets/cherry-v2-076-storage-location-zh-tw.png",
+            "en": "i18n/english/.gitbook/assets/cherry-v2-076-storage-location-en.png",
+            "ja": "i18n/japanese/.gitbook/assets/cherry-v2-076-storage-location-ja.png",
+            "ru": "i18n/russian/.gitbook/assets/cherry-v2-076-storage-location-ru.png"
+          }
+        }
+      ]
     },
     {
       "id": "077",
@@ -3522,7 +3597,7 @@
       "title": "知识库教程",
       "change_type": "update",
       "content_status": "verified",
-      "screenshot_status": "queued",
+      "screenshot_status": "captured",
       "qa_status": "automated_pass",
       "review_status": "building",
       "production_url": "https://docs.cherryai.com.cn/knowledge-base/knowledge-base",
@@ -3555,7 +3630,18 @@
           "status": "verified"
         }
       },
-      "screenshots": []
+      "screenshots": [
+        {
+          "scene": "knowledge-create",
+          "locales": {
+            "zh-CN": ".gitbook/assets/cherry-v2-078-knowledge-create-zh-cn.png",
+            "zh-TW": "i18n/traditional-chinese/.gitbook/assets/cherry-v2-078-knowledge-create-zh-tw.png",
+            "en": "i18n/english/.gitbook/assets/cherry-v2-078-knowledge-create-en.png",
+            "ja": "i18n/japanese/.gitbook/assets/cherry-v2-078-knowledge-create-ja.png",
+            "ru": "i18n/russian/.gitbook/assets/cherry-v2-078-knowledge-create-ru.png"
+          }
+        }
+      ]
     },
     {
       "id": "079",
@@ -3610,17 +3696,19 @@
       "title": "嵌入模型",
       "change_type": "update",
       "content_status": "verified",
-      "screenshot_status": "queued",
+      "screenshot_status": "captured",
       "qa_status": "automated_pass",
       "review_status": "building",
       "production_url": "https://docs.cherryai.com.cn/knowledge-base/emb-models-info",
       "preview_path": "/review/080",
       "fact_evidence": [
         "product:52b3e3eeb474527ac4f1bddf9dd8e512fec70134:src/main/data/services/KnowledgeBaseService.ts:207-240",
-        "product:52b3e3eeb474527ac4f1bddf9dd8e512fec70134:src/main/features/knowledge/KnowledgeService.ts:549-582",
+        "product:52b3e3eeb474527ac4f1bddf9dd8e512fec70134:src/main/features/knowledge/KnowledgeService.ts:470-501,549-582",
+        "product:52b3e3eeb474527ac4f1bddf9dd8e512fec70134:src/renderer/pages/knowledge/components/CreateKnowledgeBaseDialog.tsx:41-44,141-163",
         "product:52b3e3eeb474527ac4f1bddf9dd8e512fec70134:src/renderer/pages/knowledge/hooks/useEmbeddingDimensions.ts:11-45",
         "product:52b3e3eeb474527ac4f1bddf9dd8e512fec70134:src/shared/data/presets/localEmbedding.ts:15-29",
-        "product:52b3e3eeb474527ac4f1bddf9dd8e512fec70134:src/renderer/pages/knowledge/panels/ragConfig/RagConfigPanel.tsx:43-165"
+        "product:52b3e3eeb474527ac4f1bddf9dd8e512fec70134:src/renderer/pages/knowledge/panels/ragConfig/RagConfigPanel.tsx:43-189",
+        "product:52b3e3eeb474527ac4f1bddf9dd8e512fec70134:src/renderer/pages/knowledge/panels/ragConfig/LocalEmbeddingDownloadButton.tsx:29-137"
       ],
       "locales": {
         "zh-CN": {
@@ -3644,7 +3732,18 @@
           "status": "verified"
         }
       },
-      "screenshots": []
+      "screenshots": [
+        {
+          "scene": "embedding-settings",
+          "locales": {
+            "zh-CN": ".gitbook/assets/cherry-v2-080-embedding-settings-zh-cn.png",
+            "zh-TW": "i18n/traditional-chinese/.gitbook/assets/cherry-v2-080-embedding-settings-zh-tw.png",
+            "en": "i18n/english/.gitbook/assets/cherry-v2-080-embedding-settings-en.png",
+            "ja": "i18n/japanese/.gitbook/assets/cherry-v2-080-embedding-settings-ja.png",
+            "ru": "i18n/russian/.gitbook/assets/cherry-v2-080-embedding-settings-ru.png"
+          }
+        }
+      ]
     },
     {
       "id": "081",
@@ -3653,7 +3752,7 @@
       "title": "文档预处理",
       "change_type": "update",
       "content_status": "verified",
-      "screenshot_status": "queued",
+      "screenshot_status": "captured",
       "qa_status": "automated_pass",
       "review_status": "building",
       "production_url": "https://docs.cherryai.com.cn/knowledge-base/document-preprocessing",
@@ -3686,7 +3785,18 @@
           "status": "verified"
         }
       },
-      "screenshots": []
+      "screenshots": [
+        {
+          "scene": "document-preprocessing",
+          "locales": {
+            "zh-CN": ".gitbook/assets/cherry-v2-081-document-preprocessing-zh-cn.png",
+            "zh-TW": "i18n/traditional-chinese/.gitbook/assets/cherry-v2-081-document-preprocessing-zh-tw.png",
+            "en": "i18n/english/.gitbook/assets/cherry-v2-081-document-preprocessing-en.png",
+            "ja": "i18n/japanese/.gitbook/assets/cherry-v2-081-document-preprocessing-ja.png",
+            "ru": "i18n/russian/.gitbook/assets/cherry-v2-081-document-preprocessing-ru.png"
+          }
+        }
+      ]
     },
     {
       "id": "082",
@@ -3782,7 +3892,7 @@
       "title": "MCP 环境安装",
       "change_type": "update",
       "content_status": "verified",
-      "screenshot_status": "queued",
+      "screenshot_status": "captured",
       "qa_status": "automated_pass",
       "review_status": "building",
       "production_url": "https://docs.cherryai.com.cn/advanced-basic/mcp/install",
@@ -3814,7 +3924,18 @@
           "status": "verified"
         }
       },
-      "screenshots": []
+      "screenshots": [
+        {
+          "scene": "dependencies",
+          "locales": {
+            "zh-CN": ".gitbook/assets/cherry-v2-084-dependencies-zh-cn.png",
+            "zh-TW": "i18n/traditional-chinese/.gitbook/assets/cherry-v2-084-dependencies-zh-tw.png",
+            "en": "i18n/english/.gitbook/assets/cherry-v2-084-dependencies-en.png",
+            "ja": "i18n/japanese/.gitbook/assets/cherry-v2-084-dependencies-ja.png",
+            "ru": "i18n/russian/.gitbook/assets/cherry-v2-084-dependencies-ru.png"
+          }
+        }
+      ]
     },
     {
       "id": "085",
@@ -3823,7 +3944,7 @@
       "title": "配置和使用 MCP",
       "change_type": "update",
       "content_status": "verified",
-      "screenshot_status": "queued",
+      "screenshot_status": "captured",
       "qa_status": "automated_pass",
       "review_status": "building",
       "production_url": "https://docs.cherryai.com.cn/advanced-basic/mcp/config",
@@ -3855,7 +3976,18 @@
           "status": "verified"
         }
       },
-      "screenshots": []
+      "screenshots": [
+        {
+          "scene": "mcp-add",
+          "locales": {
+            "zh-CN": ".gitbook/assets/cherry-v2-085-mcp-add-zh-cn.png",
+            "zh-TW": "i18n/traditional-chinese/.gitbook/assets/cherry-v2-085-mcp-add-zh-tw.png",
+            "en": "i18n/english/.gitbook/assets/cherry-v2-085-mcp-add-en.png",
+            "ja": "i18n/japanese/.gitbook/assets/cherry-v2-085-mcp-add-ja.png",
+            "ru": "i18n/russian/.gitbook/assets/cherry-v2-085-mcp-add-ru.png"
+          }
+        }
+      ]
     },
     {
       "id": "086",
@@ -3905,7 +4037,7 @@
       "title": "内置 MCP 配置",
       "change_type": "update",
       "content_status": "verified",
-      "screenshot_status": "queued",
+      "screenshot_status": "captured",
       "qa_status": "automated_pass",
       "review_status": "building",
       "production_url": "https://docs.cherryai.com.cn/advanced-basic/mcp/builtin",
@@ -3938,7 +4070,18 @@
           "status": "verified"
         }
       },
-      "screenshots": []
+      "screenshots": [
+        {
+          "scene": "builtin-mcp",
+          "locales": {
+            "zh-CN": ".gitbook/assets/cherry-v2-087-builtin-mcp-zh-cn.png",
+            "zh-TW": "i18n/traditional-chinese/.gitbook/assets/cherry-v2-087-builtin-mcp-zh-tw.png",
+            "en": "i18n/english/.gitbook/assets/cherry-v2-087-builtin-mcp-en.png",
+            "ja": "i18n/japanese/.gitbook/assets/cherry-v2-087-builtin-mcp-ja.png",
+            "ru": "i18n/russian/.gitbook/assets/cherry-v2-087-builtin-mcp-ru.png"
+          }
+        }
+      ]
     },
     {
       "id": "088",
@@ -4071,7 +4214,7 @@
       "title": "代码工具",
       "change_type": "rewrite",
       "content_status": "verified",
-      "screenshot_status": "queued",
+      "screenshot_status": "captured",
       "qa_status": "automated_pass",
       "review_status": "building",
       "production_url": "https://docs.cherryai.com.cn/advanced-basic/code-tools",
@@ -4103,7 +4246,28 @@
           "status": "verified"
         }
       },
-      "screenshots": []
+      "screenshots": [
+        {
+          "scene": "code-tools-overview",
+          "locales": {
+            "zh-CN": ".gitbook/assets/cherry-v2-091-code-tools-overview-zh-cn.png",
+            "zh-TW": "i18n/traditional-chinese/.gitbook/assets/cherry-v2-091-code-tools-overview-zh-tw.png",
+            "en": "i18n/english/.gitbook/assets/cherry-v2-091-code-tools-overview-en.png",
+            "ja": "i18n/japanese/.gitbook/assets/cherry-v2-091-code-tools-overview-ja.png",
+            "ru": "i18n/russian/.gitbook/assets/cherry-v2-091-code-tools-overview-ru.png"
+          }
+        },
+        {
+          "scene": "code-tools-config",
+          "locales": {
+            "zh-CN": ".gitbook/assets/cherry-v2-091-code-tools-config-zh-cn.png",
+            "zh-TW": "i18n/traditional-chinese/.gitbook/assets/cherry-v2-091-code-tools-config-zh-tw.png",
+            "en": "i18n/english/.gitbook/assets/cherry-v2-091-code-tools-config-en.png",
+            "ja": "i18n/japanese/.gitbook/assets/cherry-v2-091-code-tools-config-ja.png",
+            "ru": "i18n/russian/.gitbook/assets/cherry-v2-091-code-tools-config-ru.png"
+          }
+        }
+      ]
     },
     {
       "id": "092",
@@ -4166,7 +4330,7 @@
       "title": "技能",
       "change_type": "rewrite",
       "content_status": "verified",
-      "screenshot_status": "queued",
+      "screenshot_status": "captured",
       "qa_status": "automated_pass",
       "review_status": "building",
       "production_url": "https://docs.cherryai.com.cn/pre-basic/settings/skills",
@@ -4198,7 +4362,18 @@
           "status": "verified"
         }
       },
-      "screenshots": []
+      "screenshots": [
+        {
+          "scene": "skills-online",
+          "locales": {
+            "zh-CN": ".gitbook/assets/cherry-v2-093-skills-online-zh-cn.png",
+            "zh-TW": "i18n/traditional-chinese/.gitbook/assets/cherry-v2-093-skills-online-zh-tw.png",
+            "en": "i18n/english/.gitbook/assets/cherry-v2-093-skills-online-en.png",
+            "ja": "i18n/japanese/.gitbook/assets/cherry-v2-093-skills-online-ja.png",
+            "ru": "i18n/russian/.gitbook/assets/cherry-v2-093-skills-online-ru.png"
+          }
+        }
+      ]
     },
     {
       "id": "094",
@@ -4248,7 +4423,7 @@
       "title": "定时任务",
       "change_type": "rewrite",
       "content_status": "verified",
-      "screenshot_status": "queued",
+      "screenshot_status": "captured",
       "qa_status": "automated_pass",
       "review_status": "building",
       "production_url": "https://docs.cherryai.com.cn/advanced-basic/scheduled-tasks",
@@ -4281,7 +4456,18 @@
           "status": "verified"
         }
       },
-      "screenshots": []
+      "screenshots": [
+        {
+          "scene": "scheduled-task",
+          "locales": {
+            "zh-CN": ".gitbook/assets/cherry-v2-095-scheduled-task-zh-cn.png",
+            "zh-TW": "i18n/traditional-chinese/.gitbook/assets/cherry-v2-095-scheduled-task-zh-tw.png",
+            "en": "i18n/english/.gitbook/assets/cherry-v2-095-scheduled-task-en.png",
+            "ja": "i18n/japanese/.gitbook/assets/cherry-v2-095-scheduled-task-ja.png",
+            "ru": "i18n/russian/.gitbook/assets/cherry-v2-095-scheduled-task-ru.png"
+          }
+        }
+      ]
     },
     {
       "id": "096",
@@ -4332,7 +4518,7 @@
       "title": "OpenClaw",
       "change_type": "rewrite",
       "content_status": "verified",
-      "screenshot_status": "queued",
+      "screenshot_status": "captured",
       "qa_status": "automated_pass",
       "review_status": "building",
       "production_url": "https://docs.cherryai.com.cn/advanced-basic/openclaw",
@@ -4365,7 +4551,18 @@
           "status": "verified"
         }
       },
-      "screenshots": []
+      "screenshots": [
+        {
+          "scene": "openclaw",
+          "locales": {
+            "zh-CN": ".gitbook/assets/cherry-v2-097-openclaw-zh-cn.png",
+            "zh-TW": "i18n/traditional-chinese/.gitbook/assets/cherry-v2-097-openclaw-zh-tw.png",
+            "en": "i18n/english/.gitbook/assets/cherry-v2-097-openclaw-en.png",
+            "ja": "i18n/japanese/.gitbook/assets/cherry-v2-097-openclaw-ja.png",
+            "ru": "i18n/russian/.gitbook/assets/cherry-v2-097-openclaw-ru.png"
+          }
+        }
+      ]
     },
     {
       "id": "098",
@@ -4374,7 +4571,7 @@
       "title": "提示词与快速插入",
       "change_type": "rewrite",
       "content_status": "verified",
-      "screenshot_status": "queued",
+      "screenshot_status": "captured",
       "qa_status": "automated_pass",
       "review_status": "building",
       "production_url": "https://docs.cherryai.com.cn/pre-basic/settings/quick-phrase",
@@ -4409,7 +4606,18 @@
           "status": "verified"
         }
       },
-      "screenshots": []
+      "screenshots": [
+        {
+          "scene": "quick-phrase",
+          "locales": {
+            "zh-CN": ".gitbook/assets/cherry-v2-098-quick-phrase-zh-cn.png",
+            "zh-TW": "i18n/traditional-chinese/.gitbook/assets/cherry-v2-098-quick-phrase-zh-tw.png",
+            "en": "i18n/english/.gitbook/assets/cherry-v2-098-quick-phrase-en.png",
+            "ja": "i18n/japanese/.gitbook/assets/cherry-v2-098-quick-phrase-ja.png",
+            "ru": "i18n/russian/.gitbook/assets/cherry-v2-098-quick-phrase-ru.png"
+          }
+        }
+      ]
     },
     {
       "id": "099",

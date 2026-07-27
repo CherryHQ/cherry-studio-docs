@@ -9,6 +9,8 @@ Cherry Studio では、よく使われる次の 2 種類の MCP ランタイム�
 すべての MCP サーバーで UV と Bun のインストールが必要なわけではありません。リモートの SSE / Streamable HTTP サーバーと、Cherry Studio の大半の内蔵サーバーは、これら 2 つのランタイムに依存しません。必要な環境は、サーバーのドキュメントに記載された `command` を見て判断してください。
 {% endhint %}
 
+![環境依存関係の設定](../../.gitbook/assets/cherry-v2-084-dependencies-ja.png)
+
 ## アプリ内インストーラーを使用する
 
 1. **設定 → 環境依存関係**を開きます。

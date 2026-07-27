@@ -158,8 +158,8 @@ Cherry Studio 桌面螢幕擷取畫面統一採用：
 `SUMMARY.md` 決定 GitBook 側邊欄層級。新增、移動或重新命名頁面時，應同步檢查對應語言的 `SUMMARY.md`：
 
 ```markdown
-* [Agent 案例](advanced-basic/agent-an-li/README.md)
-  * [黃金市場回顧 Agent](advanced-basic/agent-an-li/gold-price-case.md)
+* [Agent 案例](../advanced-basic/agent-an-li/README.md)
+  * [黃金市場回顧 Agent](../advanced-basic/agent-an-li/gold-price-case.md)
 ```
 
 同一個 Markdown 檔案不能在同一份 `SUMMARY.md` 中重複引用。

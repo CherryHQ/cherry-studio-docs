@@ -7,6 +7,8 @@ Using MCP in Cherry Studio involves two steps:
 
 If you are not familiar with MCP yet, read the [MCP Tutorial](README.md) first. If NPX, Bun, or UV is missing from your system, complete [MCP Environment Installation](install.md) before continuing.
 
+![Add an MCP Server](../../.gitbook/assets/cherry-v2-085-mcp-add-en.png)
+
 ## Choose how to add a server
 
 Open **Settings → MCP Servers**, click **Add Server**, and choose:

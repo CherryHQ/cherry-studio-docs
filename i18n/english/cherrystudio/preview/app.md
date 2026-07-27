@@ -4,6 +4,8 @@ icon: grid-2
 
 # Mini Apps
 
+![Mini App directory](../../.gitbook/assets/cherry-v2-013-mini-apps-grid-en.png)
+
 Mini Apps let you open frequently used websites inside Cherry Studio. The built-in catalog includes various AI, search, and development services. You can also add your own web address as a Mini App and use top tabs to switch between multiple websites.
 
 {% hint style="info" %}

@@ -7,6 +7,8 @@ Cherry Studio で MCP を使用するには、次の 2 つの設定が必要で�
 
 MCP の役割が分からない場合は、先に [MCP 使用ガイド](README.md) を参照してください。システムに NPX、Bun、UV がない場合は、まず [MCP 環境のインストール](install.md) を完了してください。
 
+![MCP Server の追加](../../.gitbook/assets/cherry-v2-085-mcp-add-ja.png)
+
 ## 追加方法を選択する
 
 **設定 → MCP Server** を開いて **追加** をクリックすると、次の方法を選択できます。

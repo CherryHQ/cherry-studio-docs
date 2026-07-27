@@ -8,6 +8,8 @@ Prompts let you save content that you enter repeatedly, such as writing requirem
 
 Cherry Studio V2 manages this content as **prompts**, replacing the **Quick Phrases** used in earlier versions.
 
+![Create a prompt](../../.gitbook/assets/cherry-v2-098-quick-phrase-en.png)
+
 ## Create a prompt
 
 ### Create one from Library

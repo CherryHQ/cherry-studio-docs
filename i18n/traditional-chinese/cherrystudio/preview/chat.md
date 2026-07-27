@@ -5,6 +5,8 @@ icon: message
 
 # 對話介面
 
+![對話工作區](../../.gitbook/assets/cherry-v2-008-chat-conversation-zh-tw.png)
+
 對話是 Cherry Studio 最常用的工作區。你可以為不同用途建立助手，在每個助手下管理多個獨立話題，並依照需要加入檔案、知識庫、網路搜尋、MCP 工具或多個模型。
 
 {% hint style="info" %}

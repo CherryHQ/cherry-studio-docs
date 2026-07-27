@@ -6,6 +6,8 @@ icon: face-viewfinder
 
 Document preprocessing converts PDFs, Word documents, spreadsheets, and other files into Markdown text that is more suitable for retrieval before chunking and vectorization. It is primarily useful for scans, complex layouts, tables, and multicolumn documents.
 
+![Document preprocessing settings](../.gitbook/assets/cherry-v2-081-document-preprocessing-en.png)
+
 If a document already has a clear text layer, Cherry Studio's built-in reader will usually work. Do not enable an online processor for every file by default simply because it seems “more advanced.” First compare actual results with a small set of sources.
 
 ## Processing Workflow

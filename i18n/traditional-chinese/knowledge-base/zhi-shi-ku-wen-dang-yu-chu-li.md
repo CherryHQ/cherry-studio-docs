@@ -6,6 +6,8 @@ icon: face-viewfinder
 
 文件預處理會在分塊和向量化之前，將 PDF、Word、試算表等文件轉換成更適合檢索的 Markdown 文字。它主要用於掃描文件、複雜版面配置、表格和多欄文件。
 
+![文件預處理設定](../.gitbook/assets/cherry-v2-081-document-preprocessing-zh-tw.png)
+
 如果文件本身已有清楚的文字層，Cherry Studio 的內建讀取通常就能正常運作。不要為了「更進階」而預設為所有檔案啟用線上處理器，應先使用少量資料比較實際效果。
 
 ## 處理流程

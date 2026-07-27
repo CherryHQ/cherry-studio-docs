@@ -2,57 +2,48 @@
 icon: library
 ---
 
-# Library
+# Resource Management Entry Points
 
-Library provides one place to manage the assistants, agents, skills, and prompts that you create or install in Cherry Studio. You can switch between resource types, search your existing resources, and create, import, edit, or delete them from the same page.
+Cherry Studio V2 no longer provides a standalone Library page. Assistants, agents, skills, and prompts can still be managed, but their entry points now live in the contexts where they are used.
 
-{% hint style="info" %}
-Library and [Assistant Library](agents.md) serve different purposes. Assistant Library is where you browse and import community assistants; Library is where you manage resources that belong to you.
+{% hint style="warning" %}
+The legacy `/app/library` route is no longer served, and Launchpad has no Library tile. After an upgrade, pinned tabs for the old route are removed automatically. Do not continue looking for the page shown in older screenshots.
 {% endhint %}
 
-## Open Library
+## Current Entry Points
 
-Select **Library** on the Launchpad. The left sidebar shows the four resource types and their item counts, while the main area shows cards for the selected type.
+| Resource | Where to manage it | Main actions |
+| :--- | :--- | :--- |
+| Assistant | Open **Chat**, then enter assistant management from the resource menu on the left | Create, import, edit, duplicate, export, group, and delete assistants |
+| Agent | Open **Work**, then enter agent management from the resource menu on the left | Create, edit, configure working directories and tools, and delete agents |
+| Skill | Open **Settings → Skills** | Search, install, inspect, and uninstall global skills |
+| Prompt | Open **Quick Phrases** from the conversation composer, then choose **Manage** or **Add** | Create, edit, search, insert, and delete reusable prompts |
 
-![Resource types and cards in Library](../../.gitbook/assets/cherry-v2-112-library-overview-en.png)
+These entry points appear directly in the current working context. For example, after editing an assistant, you can return to the conversation without first leaving for a separate resource page.
 
-| Type | What you can do |
-| :--- | :--- |
-| Assistant | Create or import assistants, then configure their models, prompts, knowledge bases, and tools |
-| Agent | Create agents and configure their models, working directories, permissions, and available tools |
-| Skill | Install skills from ZIP files or directories, view their contents, and uninstall them |
-| Prompt | Create and maintain reusable prompts |
+## Assistant Library and Resource Management
 
-## Find and organize resources
+[Assistant Library](agents.md) is still used to browse and import community assistants. An imported assistant appears in your assistant list and is maintained from the assistant management entry in **Chat**.
 
-1. Select a resource type in the left sidebar.
-2. Enter a name or keyword in the search box at the top.
-3. In the **Assistant** list, you can also filter resources by tag.
+Assistant Library is not a replacement route for the former standalone Library:
 
-The actions menu on an assistant card includes **Manage tags**. After creating a tag, you can assign it to other assistants as well.
+- Assistant Library provides community content.
+- Assistant management maintains assistants you already own.
+- Agents, skills, and prompts use the separate entry points in the table above.
 
-## Create or import resources
+## An Old Link Does Not Open
 
-Use the action button in the upper-right corner. The available action changes with the selected resource type:
+If a bookmark, history entry, or older guide contains `/app/library`:
 
-* Assistants, agents, and prompts open their respective configuration pages. The resource is created only after you complete the required fields and save it.
-* Assistants can be imported from a JSON file.
-* Skills can be installed from a local ZIP file or directory. To search the skills marketplace, go to **Settings → Skills**.
+1. Do not keep refreshing that address.
+2. Open the new entry point for the corresponding resource type.
+3. The app removes old pinned tabs during restore; it does not delete the underlying assistant, agent, skill, or prompt data.
 
-After a resource is created or installed, it appears in the list for its resource type.
+Global Search also filters legacy Library route records so that the removed page is not opened again.
 
-## Edit and manage resources
+## Next Steps
 
-Select a resource card to open its editor or details page. You can also use the card's actions menu to:
-
-* Edit the resource configuration.
-* Duplicate or export an assistant.
-* Delete an assistant, agent, or prompt.
-* View skill details or uninstall a skill that you no longer need.
-
-Before deleting or uninstalling a resource, Cherry Studio asks you to confirm. This action may affect workflows that reference the resource, so make sure it is no longer in use.
-
-## Next steps
-
-* Learn how to create and run [agents](../../advanced-basic/agent.md).
-* Learn how to install and manage skills.
+- Learn how to use [Assistant Library](agents.md).
+- Learn how to create and run [agents](../../advanced-basic/agent.md).
+- Learn how to install and manage [skills](../../pre-basic/settings/skills.md).
+- Learn how to manage [Quick Phrases](../../pre-basic/settings/quick-phrase.md).

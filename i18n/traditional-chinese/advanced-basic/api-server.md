@@ -2,9 +2,11 @@
 icon: server
 ---
 
-# API 伺服器
+# API 閘道
 
-API 伺服器會將 Cherry Studio 中已設定的模型、MCP 及知識庫功能公開為本機 HTTP 介面。其他應用程式可以透過 OpenAI 或 Anthropic 相容的要求格式呼叫這些功能，不必在每個工具中重複設定服務商金鑰。
+API 閘道會將 Cherry Studio 中已設定的模型、MCP 及知識庫功能公開為本機 HTTP 介面。其他應用程式可以透過 OpenAI 或 Anthropic 相容的要求格式呼叫這些功能，不必在每個工具中重複設定服務商金鑰。
+
+![API 閘道設定頁面](../.gitbook/assets/cherry-v2-092-api-gateway-overview-zh-tw.png)
 
 常見用途包括：
 

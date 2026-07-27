@@ -260,4 +260,4 @@ ExaMCP 可能已傳回候選連結，但 Fetch 無法讀取某些頁面。嘗試
 
 ### 💡 取得協助與提交意見
 
-如果您在設定或使用過程中遇到疑問、Bug 或功能建議，請參閱[意見回饋](../../question-contact/suggestions.md)中的官方管道。
+如果您在設定或使用過程中遇到疑問、Bug 或功能建議，請參閱[意見回饋](../question-contact/suggestions.md)中的官方管道。

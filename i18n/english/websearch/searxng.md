@@ -313,4 +313,4 @@ Official resources:
 
 ### Get Help and Submit Feedback
 
-If you encounter a problem during setup or use, submit feedback through the official channels listed in [Feedback and Suggestions](../../question-contact/suggestions.md). Include the Cherry Studio version, SearXNG version, error code, and sanitized logs, but do not submit real domain credentials or authentication passwords.
+If you encounter a problem during setup or use, submit feedback through the official channels listed in [Feedback and Suggestions](../question-contact/suggestions.md). Include the Cherry Studio version, SearXNG version, error code, and sanitized logs, but do not submit real domain credentials or authentication passwords.

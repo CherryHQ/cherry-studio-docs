@@ -8,6 +8,8 @@ icon: calendar-clock
 
 定时任务由 Cherry Studio 本机的调度器执行，不是操作系统级后台服务。到点运行时，Cherry Studio 必须处于运行状态；应用重新打开后，会恢复仍处于活跃状态的任务。
 
+![新建定时任务](../.gitbook/assets/cherry-v2-095-scheduled-task-zh-cn.png)
+
 {% hint style="warning" %}
 定时任务属于无人值守操作。运行它的智能体必须启用自主模式，或使用全自动权限模式；开启自主模式时，Cherry Studio 会自动切换为全自动权限。工具调用不会逐次等待确认，请限制智能体可访问的工作目录，并避免在提示词中保存密码、API Key 或其他敏感信息。
 {% endhint %}

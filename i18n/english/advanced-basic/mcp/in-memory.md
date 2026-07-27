@@ -2,6 +2,8 @@
 
 Cherry Studio provides a collection of built-in MCP servers that you can install directly. They run inside the app or use preset connections, so you do not need to write JSON configurations manually. Use them to quickly add web access, file operations, code execution, memory, third-party services, and other capabilities to assistants and Agents.
 
+![Built-in MCP Server list](../../.gitbook/assets/cherry-v2-087-builtin-mcp-en.png)
+
 {% hint style="info" %}
 “Built-in” does not mean that every server is automatically enabled. You must first install a server from the built-in list. Servers marked **Requires Configuration** also require arguments or environment variables.
 {% endhint %}

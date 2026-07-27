@@ -4,6 +4,8 @@ icon: note-sticky
 
 # 筆記
 
+![筆記編輯器](../../.gitbook/assets/cherry-v2-016-notes-editor-zh-tw.png)
+
 筆記是 Cherry Studio 內建的 Markdown 工作區。每篇筆記都會儲存為本機 `.md` 檔案，適合整理對話結果、撰寫草稿，以及維護其他 Markdown 工具也能讀取的資料。
 
 {% hint style="info" %}

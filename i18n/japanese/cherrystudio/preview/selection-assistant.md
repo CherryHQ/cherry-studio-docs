@@ -4,6 +4,8 @@ icon: highlighter
 
 # テキスト選択ツール
 
+![テキスト選択ツールの設定](../../.gitbook/assets/cherry-v2-018-selection-assistant-settings-ja.png)
+
 テキスト選択ツールは、他のアプリでテキストを選択するとフローティングツールバーを表示します。選択した内容を直接翻訳、説明、要約、検索、コピーでき、独自の AI 操作も追加できます。
 
 {% hint style="info" %}
