@@ -2,169 +2,86 @@
 icon: square-info
 ---
 
-# 嵌入模型参考信息
+# 嵌入模型
+
+嵌入模型会把文本转换成向量，用于按语义查找相关资料。它负责检索，不负责生成最终回答；聊天模型、嵌入模型和重排序模型是三种不同能力。
+
+![知识库中的嵌入模型设置](../.gitbook/assets/cherry-v2-080-embedding-settings-zh-cn.png)
+
+## 新建知识库时的默认行为
+
+新建窗口只要求填写名称，并可选择分组，不需要先选择嵌入模型。
+
+- 如果本地嵌入模型尚未下载，知识库会先以 **BM25** 模式创建。BM25 按关键词检索，不生成向量，也不会调用嵌入接口。
+- 如果本地嵌入模型已经下载完成，新知识库会自动使用该模型和固定维度，从一开始建立向量索引。
+
+因此，没有嵌入模型也可以导入资料和搜索；需要语义检索时，再到知识库设置中启用即可。
+
+## 启用语义检索
+
+进入目标知识库，点击右上角的**设置**，在**嵌入模型**一栏选择一种方式。
+
+### 使用本地模型
+
+点击**下载本地模型**。下载完成后，Cherry Studio 会自动选择并保存内置的本地嵌入模型，并为已有资料补建向量。
+
+本地模型的优势是资料片段不需要发送给外部嵌入服务；首次下载和首次索引会占用时间、内存与磁盘空间。若当前平台不支持本地运行，下载按钮不会显示。
+
+### 使用已配置的模型服务
+
+也可以从下拉列表选择已启用且具有 **Embedding** 能力的模型。若列表中没有目标模型，请先到**设置 → 模型服务**完成服务商配置，并确认模型能力标记为嵌入。
+
+保存时，Cherry Studio 会发送一段短测试文本以获取实际向量维度。API 地址、密钥、模型 ID 或网络不可用时，保存会失败，但不会使用猜测的维度。
 
 {% hint style="info" %}
-为了防止出错，在本文档中部分模型的 max input 的值没有写成极限值，如：在官方给出的最大输入值为8k（未明确给出具体数值）时，本文档中给出的参考值为8191或8000等。（看不懂忽视，按照文档中的参考值填写即可）
+DeepSeek、Kimi、GLM、GPT、Claude 等名称本身不代表模型支持嵌入。是否可选取决于具体模型的能力，而不是品牌。
 {% endhint %}
 
-### 火山-豆包
+## 已有资料会怎样处理
 
-[官方模型信息参考地址](https://console.volcengine.com/ark/region:ark+cn-beijing/model?feature=\&projectName=default\&vendor=Bytedance\&view=LIST_VIEW)
+模型变更会根据知识库当前状态选择安全流程：
 
-| 名称                      | max input |
-| ----------------------- | --------- |
-| Doubao-embedding        | 4095      |
-| Doubao-embedding-vision | 8191      |
-| Doubao-embedding-large  | 4095      |
+| 当前状态 | 处理方式 |
+| --- | --- |
+| BM25 知识库首次启用嵌入模型 | 原知识库内补建向量，不需要重新创建 |
+| 空知识库更换嵌入模型 | 直接保存新设置 |
+| 已有向量和资料后更换嵌入模型 | 进入恢复/重建流程，避免新旧向量混用 |
 
-### 阿里
+启用或重建期间不要退出应用，也不要移动原始资料。资料较多时，处理时间和在线模型费用都会相应增加。
 
-[官方模型信息参考地址](https://help.aliyun.com/zh/model-studio/user-guide/embedding?spm=a2c4g.11186623.0.i1)
+## 如何选择模型
 
-| 名称                      | max input |
-| ----------------------- | --------- |
-| text-embedding-v3       | 8192      |
-| text-embedding-v2       | 2048      |
-| text-embedding-v1       | 2048      |
-| text-embedding-async-v2 | 2048      |
-| text-embedding-async-v1 | 2048      |
+重点比较以下因素：
 
-### OpenAI&#x20;
+- **语言覆盖**：用自己的中文、英文、日文或俄文资料做召回测试。
+- **隐私**：在线模型会接收资料片段和查询；敏感资料优先评估本地模型。
+- **速度和成本**：首次索引、重新索引和查询都可能调用在线嵌入接口。
+- **稳定性**：模型 ID、输出维度和接口行为应保持稳定。
 
-[官方模型信息参考地址](https://platform.openai.com/docs/guides/embeddings#embedding-models)
+不要只根据排行榜或模型名称选择。使用同一批资料和固定问题，比较正确片段能否进入前几条结果。
 
-| 名称                     | max input |
-| ---------------------- | --------- |
-| text-embedding-3-small | 8191      |
-| text-embedding-3-large | 8191      |
-| text-embedding-ada-002 | 8191      |
+## 常见问题
 
-### 百度
+### 嵌入模型列表为空
 
-[官方模型信息参考地址](https://cloud.baidu.com/doc/WENXINWORKSHOP/s/om6070n97#%E8%AF%B7%E6%B1%82%E5%8F%82%E6%95%B0)
+确认服务商已启用、模型已添加，并且模型能力包含 **Embedding**。普通聊天模型和 Rerank 模型不会出现在这里。
 
-| 名称           | max input |
-| ------------ | --------- |
-| Embedding-V1 | 384       |
-| tao-8k       | 8192      |
+### 保存时提示获取维度失败
 
-### 智谱
+依次检查服务商状态、API 地址、密钥、模型 ID、网络和账户余额。保存时会发起一次真实的嵌入请求。
 
-[官方模型信息参考地址](https://bigmodel.cn/console/modelcenter/square)
+### 只使用 BM25 会有什么限制
 
-| 名称          | max input |
-| ----------- | --------- |
-| embedding-2 | 1024      |
-| embedding-3 | 2048      |
+BM25 擅长精确关键词、产品名和编号，但对同义改写和自然语言表达的召回通常弱于语义检索。可以先用 BM25 验证资料质量，再决定是否启用嵌入模型。
 
-### 混元
+### 更换 API 密钥需要重建吗
 
-[官方模型信息参考地址](https://cloud.tencent.com/document/product/1729/102832)
+如果仍然调用同一个模型且输出维度不变，通常不需要。若服务商实际路由到不同模型版本，应重新做召回测试。
 
-| 名称                | max input |
-| ----------------- | --------- |
-| hunyuan-embedding | 1024      |
-
-### 百川
-
-[官方模型信息参考地址](https://platform.baichuan-ai.com/docs/text-Embedding)
-
-| 名称                      | max input |
-| ----------------------- | --------- |
-| Baichuan-Text-Embedding | 512       |
-
-### together
-
-[官方模型信息参考地址](https://docs.together.ai/docs/serverless-models#embedding-models)
-
-| 名称                        | max input |
-| ------------------------- | --------- |
-| M2-BERT-80M-2K-Retrieval  | 2048      |
-| M2-BERT-80M-8K-Retrieval  | 8192      |
-| M2-BERT-80M-32K-Retrieval | 32768     |
-| UAE-Large-v1              | 512       |
-| BGE-Large-EN-v1.5         | 512       |
-| BGE-Base-EN-v1.5          | 512       |
-
-### Jina&#x20;
-
-[官方模型信息参考地址](https://jina.ai/models/jina-embedding-b-en-v1)
-
-| 名称                                 | max input |
-| ---------------------------------- | --------- |
-| jina-embedding-b-en-v1             | 512       |
-| jina-embeddings-v2-base-en         | 8191      |
-| jina-embeddings-v2-base-zh         | 8191      |
-| jina-embeddings-v2-base-de         | 8191      |
-| jina-embeddings-v2-base-code       | 8191      |
-| jina-embeddings-v2-base-es         | 8191      |
-| jina-colbert-v1-en                 | 8191      |
-| jina-reranker-v1-base-en           | 8191      |
-| jina-reranker-v1-turbo-en          | 8191      |
-| jina-reranker-v1-tiny-en           | 8191      |
-| jina-clip-v1                       | 8191      |
-| jina-reranker-v2-base-multilingual | 8191      |
-| reader-lm-1.5b                     | 256000    |
-| reader-lm-0.5b                     | 256000    |
-| jina-colbert-v2                    | 8191      |
-| jina-embeddings-v3                 | 8191      |
-
-### 硅基流动
-
-[官方模型信息参考地址](https://siliconflow.cn/zh-cn/models)
-
-| 名称                                    | max input |
-| ------------------------------------- | --------- |
-| BAAI/bge-m3                           | 8191      |
-| netease-youdao/bce-embedding-base\_v1 | 512       |
-| BAAI/bge-large-zh-v1.5                | 512       |
-| BAAI/bge-large-en-v1.5                | 512       |
-| Pro/BAAI/bge-m3                       | 8191      |
-
-### Gemini
-
-[官方模型信息参考地址](https://ai.google.dev/gemini-api/docs/models/gemini?hl=zh-cn#text-embedding)
-
-| 名称                 | max input |
-| ------------------ | --------- |
-| text-embedding-004 | 2048      |
-
-### nomic
-
-[官方模型信息参考地址](https://docs.nomic.ai/atlas/embeddings-and-retrieval/text-embedding)
-
-| 名称                    | max input |
-| --------------------- | --------- |
-| nomic-embed-text-v1   | 8192      |
-| nomic-embed-text-v1.5 | 8192      |
-| gte-multilingual-base | 8192      |
-
-### console
-
-[官方模型信息参考地址](https://console.upstage.ai/docs/capabilities/embeddings)
-
-| 名称                | max input |
-| ----------------- | --------- |
-| embedding-query   | 4000      |
-| embedding-passage | 4000      |
-
-### cohere
-
-[官方模型信息参考地址](https://docs.cohere.com/docs/models#embed)
-
-| 名称                            | max input |
-| ----------------------------- | --------- |
-| embed-english-v3.0            | 512       |
-| embed-english-light-v3.0      | 512       |
-| embed-multilingual-v3.0       | 512       |
-| embed-multilingual-light-v3.0 | 512       |
-| embed-english-v2.0            | 512       |
-| embed-english-light-v2.0      | 512       |
-| embed-multilingual-v2.0       | 256       |
+详细的数据流和本地文件位置请参阅[知识库数据](data.md)。
 
 ***
 
-### 💡 获取帮助与提交反馈
+### 获取帮助与提交反馈
 
-如果您在配置或使用过程中遇到任何疑问、Bug 或有功能改进建议，请参考 [反馈与建议](../question-contact/suggestions.md) 中提供的官方渠道。
+如果模型识别、下载或索引过程中遇到问题，请通过[反馈与建议](../question-contact/suggestions.md)联系社区。

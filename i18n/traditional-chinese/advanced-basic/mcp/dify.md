@@ -1,29 +1,102 @@
+# 連接 Dify 知識庫
+
+如果團隊已經使用 [Dify](https://dify.ai/) 管理資料，可以透過 Cherry Studio 內建的 `@cherry/dify-knowledge` MCP 伺服器直接檢索這些知識庫，無需再次匯入文件。
+
+連接完成後，助手或 Agent 可以先讀取目前金鑰可存取的知識庫清單，再依問題檢索相關片段，並以檢索結果作為回答依據。此功能只會讀取知識庫，不會建立、修改或刪除 Dify 中的資料。
+
+## 使用前準備
+
+請先在 Dify 中完成以下工作：
+
+1. 建立至少一個知識庫，匯入文件並等待索引完成。
+2. 在知識庫的 API 存取頁面產生 **Knowledge API Key**。請勿使用應用程式（App）的 API Key。
+3. 確認 API 根位址：
+   - Dify 雲端服務：`https://api.dify.ai/v1`
+   - 私有部署：使用該部署的知識庫 API 位址，通常以 `/v1` 結尾
 
 {% hint style="warning" %}
-此文件由 AI 從中文翻譯而來，尚未經過審閱。
+API Key 可以讀取其權限範圍內的知識庫內容。請勿將真實金鑰寫入文件、截圖或公開聊天中；如果金鑰已經外洩，請立即在 Dify 中撤銷並重新產生。
 {% endhint %}
 
-# 配置 Dify 知識庫
+## 安裝內建 MCP 伺服器
 
-> Dify 知識庫 MCP 需要將 Cherry Studio 升級至 v1.2.9 或更高版本。
+1. 開啟 Cherry Studio 的 **設定 → MCP 伺服器**。
+2. 在內建 MCP 伺服器清單中搜尋 `@cherry/dify-knowledge`。
+3. 按一下**安裝**。
+4. 在已安裝的伺服器清單中按一下 `@cherry/dify-knowledge`，進入詳細資料頁面。
 
-### 新增 Dify 知識庫 MCP 伺服器
+此伺服器由 Cherry Studio 內建執行，不需要另外安裝 Node.js、Python 或第三方 MCP 程式。
 
-<figure><img src="../../.gitbook/assets/CleanShot 2025-04-27 at 10.36.29@2x.jpg" alt=""><figcaption></figcaption></figure>
+## 填寫連線資訊
 
-1. 開啟 `搜索MCP`。
-2. 新增 `dify-knowledge` 伺服器。
+在伺服器詳細資料的**設定**頁面填寫：
 
-### 設定 Dify 知識庫
+| 欄位 | 填寫內容 | 範例 |
+| --- | --- | --- |
+| 參數 | Dify 知識庫 API 根位址，只填寫一行 | `https://api.dify.ai/v1` |
+| 環境變數 | `DIFY_KEY=知識庫 API Key` | `DIFY_KEY=dataset-xxxxxxxx` |
 
-<figure><img src="../../.gitbook/assets/CleanShot 2025-04-27 at 10.36.05@2x.jpg" alt=""><figcaption></figcaption></figure>
+儲存後啟用伺服器。如果連線正常，**工具**頁面會顯示以下兩個工具：
 
-> 需配置參數和環境變數
+- `list_knowledges`：列出目前 API Key 可以存取的知識庫及其 ID。
+- `search_knowledge`：使用知識庫 ID 和查詢文字檢索內容；未指定 `topK` 時，預設最多傳回 6 筆結果。
 
-1. Dify 知識庫金鑰可透過以下方式取得：
+{% hint style="info" %}
+請勿在參數中附加 `/datasets`，也不要填寫某個知識庫的 ID。Cherry Studio 會依工具呼叫自動組合知識庫清單和檢索介面。
+{% endhint %}
 
-<figure><img src="../../.gitbook/assets/CleanShot 2025-04-27 at 10.46.16@2x.jpg" alt=""><figcaption></figcaption></figure>
+## 在對話中使用
 
-### 使用 Dify 知識庫 MCP
+安裝並啟用伺服器後，還需要將它授權給實際使用的助手或 Agent：
 
-<figure><img src="../../.gitbook/assets/CleanShot 2025-04-27 at 10.26.24@2x.jpg" alt=""><figcaption></figcaption></figure>
+1. 開啟目標助手或 Agent 的工具設定。
+2. 新增並啟用 `@cherry/dify-knowledge`。
+3. 選擇支援工具呼叫的模型並開始對話。
+
+首次使用時，可以先請模型確認可存取的知識庫：
+
+```text
+請列出你目前可以存取的 Dify 知識庫，並顯示每個知識庫的名稱和 ID。
+```
+
+確認目標知識庫後，再提出包含範圍和輸出要求的問題：
+
+```text
+請在「產品說明中心」知識庫中查詢帳號移轉的操作步驟。
+只根據檢索到的資料回答，並列出重要注意事項。
+```
+
+模型會自行呼叫 `list_knowledges` 或 `search_knowledge`。工具傳回的檢索結果包含文件名稱、片段內容、相關度分數和關鍵字；最終回答的組織方式仍取決於模型能力和提示詞。
+
+## 常見問題
+
+### 啟用時提示缺少參數
+
+檢查**參數**中是否已填寫 API 根位址。此內建伺服器至少需要一行參數才能啟動。
+
+### 傳回 401、403 或存取錯誤
+
+請依序檢查：
+
+- `DIFY_KEY` 的名稱是否完全正確；
+- 使用的是否為知識庫 API Key，而不是應用程式 API Key；
+- 金鑰是否仍然有效，且有權存取目標知識庫；
+- 是否可從目前電腦存取私有部署的 API 位址。
+
+### 可以連線，但知識庫清單空白
+
+確認 Dify 中至少有一個知識庫，並檢查目前 Knowledge API Key 的授權範圍。Cherry Studio 只能列出該金鑰可以存取的知識庫。
+
+### 對話時沒有呼叫 Dify
+
+確認伺服器處於啟用狀態，且已新增至目前的助手或 Agent。還需要使用支援工具呼叫的模型；必要時，請在問題中明確要求「先檢索 Dify 知識庫，再回答」。
+
+### 檢索結果不理想
+
+請先在 Dify 中檢查文件是否已完成索引，再使用更具體的關鍵字重新提問。目前的內建工具使用 Dify 語意檢索介面，不會取代 Dify 端的分段、索引和召回設定。
+
+## 相關文件
+
+- [MCP 伺服器常見問題](./chang-jian-wen-ti.md)
+- [內建 MCP 伺服器](in-memory.md)
+- [意見與建議](../../question-contact/suggestions.md)

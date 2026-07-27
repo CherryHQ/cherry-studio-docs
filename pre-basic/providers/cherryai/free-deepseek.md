@@ -1,106 +1,78 @@
+---
+icon: brain
+---
 
 # DeepSeek V3.2
 
-Cherry Studio 用户现在可以通过内置的 **CherryIN** 服务免费体验 **DeepSeek V3.2**——DeepSeek 于 2025 年 12 月 1 日发布的旗舰级稀疏注意力 MoE 模型，首次将"思考"原生集成到工具调用中，是进阶 Agent 与长上下文场景的理想选择。
+Cherry Studio 能识别多家服务商提供的 DeepSeek V3.2 及其常见变体。模型是否免费、是否仍可用，以及具体的模型 ID，由你所使用的服务商决定。
 
-***
+{% hint style="warning" %}
+本文不再承诺 DeepSeek V3.2 始终属于 CherryAI 或 CherryIN 免费试用模型。请以模型选择器中的**免费**标记、服务商控制台和实际请求结果为准。
+{% endhint %}
 
-## 🚀 什么是 DeepSeek V3.2？
+## 先检查是否已经可用
 
-DeepSeek V3.2 基于 V3.2-Exp 迭代而来，采用 Mixture-of-Experts（MoE）架构，并引入 **DeepSeek Sparse Attention（DSA）** 稀疏注意力机制，在保持超大规模总参数的同时显著降低长上下文推理成本。
+1. 打开对话界面的模型选择器；
+2. 搜索 `DeepSeek V3.2`；
+3. 如果找到模型，确认其所属服务商；
+4. 选择模型并发送一条简单测试消息。
 
-- 架构：MoE + DeepSeek Sparse Attention（DSA）+ Multi-Head Latent Attention（MLA）
-- 总参数量：685B
-- 每 Token 激活参数量：约 37B
-- 专家数：每层 256 个专家
-- 开源许可：MIT
-- 发布时间：2025 年 12 月 1 日（V3.2-Exp 于 2025 年 9 月 29 日发布）
+同一模型可能由多个服务商提供，显示名称和 API 模型 ID 也可能不同。选择前请确认账户额度、地区可用性和服务商计费规则。
 
-V3.2 同时发布了面向 API 的 **DeepSeek-V3.2-Speciale** 版本，在复杂推理任务上取得 IMO、CMO、ICPC World Finals 与 IOI 2025 的金牌级表现。
+## 通过服务商接入
 
-<figure><img src="../../../.gitbook/assets/deepseek-v3.2-benchmark.webp" alt=""><figcaption></figcaption></figure>
+如果模型选择器中没有 DeepSeek V3.2：
 
-***
+1. 打开 `设置 → 模型服务`；
+2. 选择 [DeepSeek](../deepseek.md) 官方服务，或账户中提供该模型的聚合服务商；
+3. 填写 API Key 并检查 Base URL；
+4. 点击**添加**，在同步预览中应用模型变更；
+5. 搜索 DeepSeek V3.2，并打开目标模型的开关；
+6. 运行连接检查或模型健康检查。
 
-## 📚 延续扎实的训练与对齐流程
+Cherry Studio 的模型注册表包含多个服务商使用的 DeepSeek V3.2 标识，但这只用于识别模型能力，并不表示所有服务商账户都能调用它。
 
-DeepSeek V3.2 沿用了 V3 系列成熟的训练流水线，并针对 Agent 场景做了关键扩展：
+## 无法同步时手动添加
 
-1. **大规模预训练**：在海量高质量多语言语料上完成基础训练，覆盖代码、数学与科学知识。
-2. **稀疏注意力引入**：在 128K 序列长度下训练主模型与 lightning indexer，每个 query token 选择 2048 个 key-value token 参与注意力。
-3. **大规模 Agent 数据合成**：覆盖 1,800+ 环境与 85,000+ 复杂指令的全新 Agent 训练数据合成方法。
-4. **思考与工具调用融合**：V3.2 是 DeepSeek 首个将"思考"原生集成到工具调用中的模型，支持在"思考模式"与"非思考模式"下均可调用工具。
+部分网关不提供模型列表接口。此时点击**自定义**，将服务商控制台给出的模型 ID 原样填入。
 
-<figure><img src="../../../.gitbook/assets/deepseek-v3.2-thinking-with-tools.jpeg" alt=""><figcaption></figcaption></figure>
+常见名称可能包含：
 
-***
+- `deepseek-v3.2`
+- `deepseek/deepseek-v3.2`
+- 带日期、`thinking`、`exp` 或 `speciale` 后缀的变体
 
-## ⚙️ 旗舰级核心能力
+{% hint style="danger" %}
+不要根据本文猜测模型 ID。不同服务商的 ID、能力和路由可能不同，必须复制该服务商控制台或 API 文档中的实际值。
+{% endhint %}
 
-DeepSeek V3.2 主打"与 GPT-5 水平相当"的综合能力，并在 Agent 与复杂推理上大幅强化：
+## 在对话中使用
 
-- ✅ **原生思考 + 工具调用**：首个将 thinking 集成进 tool-use 的 DeepSeek 模型
-- ✅ **顶级推理能力**：V3.2-Speciale 在 IMO / CMO / ICPC World Finals / IOI 2025 上达到金牌水平
-- ✅ **代码与开发任务**：继承 V3 系列强代码能力
-- ✅ **长上下文稳定性**：DSA 带来的长文档与代码库级分析能力
-- ✅ **结构化工具调用**：适合构建多步规划与执行的 Agent
+DeepSeek V3.2 系列适合代码、长文本分析和多步骤推理等任务。使用时建议：
 
-<figure><img src="../../../.gitbook/assets/deepseek-v3.2-agent-benchmark.webp" alt=""><figcaption></figcaption></figure>
+- 复杂任务再启用模型提供的推理能力，简单问答无需刻意增加推理开销；
+- 需要调用 MCP 或其他工具时，先确认模型带有工具调用能力标签并完成一次测试；
+- 长对话出现上下文或输出限制时，新建话题或减少附带文件；
+- 重要结果应自行复核，不要把模型输出直接作为最终决策。
 
-***
+不同变体的能力并不相同。例如带特殊后缀的推理版本可能不支持工具调用；以 Cherry Studio 中显示的模型能力和实际测试为准。
 
-## 💡 DeepSeek Sparse Attention：更长、更省
+## 常见问题
 
-DSA 是 V3.2 的核心技术升级，通过 **lightning indexer + 细粒度 token 选择** 实现：
+### 搜索到了模型，但无法选择
 
-- 首次在大模型上实现细粒度稀疏注意力
-- 将核心注意力复杂度从 O(L²) 降低
-- 在长上下文训练与推理上显著提速，同时保持与稠密注意力几乎一致的输出质量
+确认所属服务商和该模型的开关都已启用。如果模型来自旧配置，可以重新同步列表后再检查。
 
-| 场景 | 推荐用法 | 示例 |
-| --- | --- | --- |
-| 短对话 / 简单问答 | 直接调用 | 日常问答、摘要 |
-| 中等复杂任务 | 启用工具调用 | 数据分析、代码重构 |
-| 复杂 Agent 任务 | 思考 + 工具调用 | 多步规划、代码库分析、长文档审阅 |
+### 返回 401、403 或余额不足
 
-***
+检查 API Key、账户权限、余额和地区限制。试用额度用尽后，可以切换服务商或配置自己的 API Key。
 
-## 🌟 开放、可用、生态友好
+### 返回“模型不存在”
 
-- ⚡ DSA 带来的长上下文推理加速
-- 💰 通过 CherryIN 在 Cherry Studio 中**免费使用**
-- 🖥️ 开源权重、MIT 许可，vLLM、SGLang 等主流推理框架 Day-0 支持
+通常是模型 ID 与服务商不匹配。删除错误条目，重新同步列表，或复制服务商文档中的完整 ID 手动添加。
 
-<figure><img src="../../../.gitbook/assets/deepseek-v3.2-cost-compare.png" alt=""><figcaption></figcaption></figure>
+### 无法使用工具
 
-***
+服务商提供了同名模型，不代表该端点一定开放工具调用。请查看模型能力标签；必要时更换支持工具调用的变体或服务商。
 
-## 🧠 聚焦实用能力：代码与 Agent
-
-DeepSeek V3.2 在实际开发工作流中表现尤为出色：
-
-- 多语言代码生成与重构
-- 代码仓库级上下文理解与补丁生成
-- Agent 工具链：稳定调用外部工具、搜索、代码执行
-- 数学与复杂推理：支持竞赛级题目
-
-***
-
-## 🧭 如何在 Cherry Studio 中使用？
-
-1. 打开 Cherry Studio，进入 **设置 → 模型服务**。
-2. 找到 **CherryIN** 服务商并开启。
-3. 在模型列表中选择 **DeepSeek V3.2**。
-4. 返回聊天界面，在顶部模型选择处切换为 **DeepSeek V3.2** 即可开始对话。
-
-> 💡 提示：CherryIN 提供的免费模型额度由 Cherry Studio 官方承担，适合日常体验与评测；生产环境建议结合 DeepSeek 官方 API 使用。
-
-***
-
-📘 **立即体验 DeepSeek V3.2，开启旗舰级推理与 Agent 之旅！**
-
-***
-
-### 💡 获取帮助与提交反馈
-
-如果您在配置或使用过程中遇到任何疑问、Bug 或有功能改进建议，请参考 [反馈与建议](../../../question-contact/suggestions.md) 中提供的官方渠道。
+免费试用的通用规则见 [CherryAI（免费试用）](README.md)，服务商配置流程见[模型服务](../README.md)。

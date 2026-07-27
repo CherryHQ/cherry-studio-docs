@@ -2,40 +2,161 @@
 icon: file-signature
 ---
 
+# フィードバックと提案
+
+適切な窓口を選び、再現可能な情報を提供すると、問題が確認・対応されるまでの時間を大幅に短縮できます。
+
+## 最初に窓口を選ぶ
+
+| 内容 | 推奨窓口 | 適した報告 |
+| :--- | :--- | :--- |
+| ソフトウェアの不具合 | [GitHub Bug Report](https://github.com/CherryHQ/cherry-studio/issues/new/choose) | クラッシュ、機能異常、回帰、画面の誤り |
+| 機能の提案 | [GitHub Feature Request](https://github.com/CherryHQ/cherry-studio/issues/new/choose) | 新機能、操作性の改善、既存機能の強化 |
+| 利用方法の議論 | [GitHub Discussions](https://github.com/CherryHQ/cherry-studio/discussions) | 使い方、経験の共有、構成の相談 |
+| セキュリティ脆弱性 | [GitHub Security Advisory](https://github.com/CherryHQ/cherry-studio/security/advisories/new) | データ漏えい、権限回避、不正な操作につながる可能性がある脆弱性 |
+| GitHub を利用できない | [support@cherry-ai.com](mailto:support@cherry-ai.com) | GitHub にログインできない場合、または公開に適さない一般的なサポート情報 |
+
 {% hint style="warning" %}
-このドキュメントはAIによって中国語から翻訳されており、まだレビューされていません。
+セキュリティ脆弱性を公開 Issue に投稿したり、グループチャットで再現手順を公開したりしないでください。非公開の Security Advisory を使用してください。
 {% endhint %}
 
-# フィードバック＆提案
+## 送信前に行う 4 つのこと
 
-## Telegram 討論グループ
+1. 最新の安定版へ更新し、問題が引き続き再現するか確認します。
+2. [よくある質問](questions.md)を確認し、設定、利用上限、ネットワーク、モデルプロバイダーに起因する問題を除外します。
+3. 既存の [Open Issues](https://github.com/CherryHQ/cherry-studio/issues)、[Closed Issues](https://github.com/CherryHQ/cherry-studio/issues?q=is%3Aissue%20state%3Aclosed)、[Discussions](https://github.com/CherryHQ/cherry-studio/discussions) を検索します。
+4. スクリーンショット、ログ、設定から API Key、Token、Cookie、個人のファイルパス、会話の機密情報を削除します。
 
-{% hint style="info" %}
-討論グループのメンバーは自身の使用経験を共有し、問題解決をサポートします。
-{% endhint %}
+同じ問題がすでにある場合は、重複する Issue を作成せず、新しい再現情報を追加してください。
 
-Telegram 討論グループでヘルプを入手：[https://t.me/CherryStudioAI](https://t.me/CherryStudioAI)
+## Bug を報告する
 
-## QQグループ
+### タイトル
 
-{% hint style="info" %}
-QQグループメンバーは相互支援し、ダウンロードリンクを共有します。
-{% endhint %}
+タイトルには**機能、プラットフォーム、現象**を含め、本文を開かなくても保守担当者がおおよその内容を判断できるようにします。
 
-[QQグループ(1025067911)](https://qm.qq.com/q/hlHOddwAS)
+```text
+[Bug] macOS：ナレッジベースの再インデックス後も処理中のままになる
+```
 
-## Github Issues
+「使えない」「問題がある」「修正して」だけのタイトルは避けてください。
 
-{% hint style="info" %}
-開発者の記憶漏れを防ぐ記録に適しています。またはここで議論に参加できます。
-{% endhint %}
+### 必須情報
 
-Github Issues：[https://github.com/CherryHQ/cherry-studio/issues/new/choose](https://github.com/CherryHQ/cherry-studio/issues/new/choose)
+対応可能な Bug 報告には、少なくとも次の情報が必要です。
 
-## メール
+* Cherry Studio のバージョン。
+* Windows、macOS、Linux のいずれかと OS のバージョン。
+* 関係する機能、モデルプロバイダー、モデル名。API Key は記載しないでください。
+* 安定して再現できる操作手順。
+* 実際の結果と期待する結果。
+* どのバージョンまたは操作の後から問題が発生したか。
+* すでに試した確認方法。
+* 必要なスクリーンショット、画面録画、匿名化したログ。
 
-{% hint style="info" %}
-他のフィードバックチャネルが見つからない場合、開発者に連絡して支援を求めることができます。
-{% endhint %}
+バージョンは**設定 → について**で確認できます。アプリログは**設定 → データ設定 → データ → アプリログ**から開けます。
 
-開発者へのメール連絡：support@cherry-ai.com
+### 推奨テンプレート
+
+```markdown
+## 環境
+
+- Cherry Studio：
+- OS：
+- インストール元：
+- モデルプロバイダー / モデル：
+
+## 再現手順
+
+1.
+2.
+3.
+
+## 実際の結果
+
+
+## 期待する結果
+
+
+## 補足情報
+
+- 再現性：
+- 発生し始めたバージョン：
+- 試したこと：
+- 匿名化したログ / スクリーンショット：
+```
+
+### 最小再現
+
+特定のアシスタント、ナレッジベース、MCP、カスタム CSS に関係する問題は、先に変数を減らしてください。
+
+* 空のアシスタントまたはトピックを新規作成する。
+* 関係のない MCP、スキル、ウェブ検索を一時的に無効にする。
+* 機密情報を含まない短いテストデータを使う。
+* 「どの設定を有効にすると問題が発生するか」を記録する。
+
+環境全体のスクリーンショットよりも、最小再現の方が原因を特定しやすくなります。
+
+## 機能を提案する
+
+機能提案では「何がほしいか」だけでなく、「現在どのような問題があるか」も説明してください。
+
+次の情報を含めることを推奨します。
+
+1. **利用場面**：誰が、どのワークフローで問題に直面しているか。
+2. **現在の障害**：既存機能ではなぜ要件を満たせないか。
+3. **期待する結果**：理想的な操作と出力。
+4. **代替手段**：現在の回避方法と、その欠点。
+5. **範囲と境界**：必ず対応すべき内容と、後回しにできる内容。
+6. **参考資料**：必要に応じて、匿名化したスクリーンショット、フロー図、操作案。
+
+1 件の Issue では、できるだけ 1 つの独立した要望だけを扱ってください。無関係な要望を同じ Issue にまとめると、範囲の確認と計画が難しくなります。
+
+プロジェクトの方向性は [Cherry Studio Roadmap](https://github.com/orgs/CherryHQ/projects/7) で確認できます。Roadmap は提供を約束するものではありません。実際の範囲と時期は、保守担当者の最新説明が優先されます。
+
+## 質問と議論
+
+一般的な使い方の質問は [GitHub Discussions](https://github.com/CherryHQ/cherry-studio/discussions) に投稿できます。質問には次の内容も記載してください。
+
+* 何を実現したいか。
+* 現在の設定と操作経路。
+* すでに試したこと。
+* どの手順で止まっているか。
+* どのような支援を求めているか。
+
+安定して再現できるソフトウェアの不具合が含まれる場合は Bug Report を使い、実装状況を追跡したい新しい要望には Feature Request を使ってください。
+
+## セキュリティ問題を報告する
+
+次のような問題を見つけた場合は、[GitHub Security Advisory](https://github.com/CherryHQ/cherry-studio/security/advisories/new) で非公開報告してください。
+
+* API Key、Token、ローカルデータが意図せず読み取られる可能性がある。
+* 権限確認を回避できる。
+* 信頼できないコンテンツが、不正なコマンドやファイル操作を引き起こす可能性がある。
+* 更新パッケージ、依存関係、ネットワーク通信に悪用可能なリスクがある。
+
+報告には、影響範囲、再現手順、必要な検証資料、考えられる緩和策を含めてください。実在するユーザーのデータや現在も有効な認証情報は送信しないでください。
+
+脆弱性ではないセキュリティ相談は、[security@cherry-ai.com](mailto:security@cherry-ai.com) へ連絡できます。
+
+## コミュニティ
+
+コミュニティのグループは、経験の共有と相互支援に適していますが、正式な問題追跡システムではありません。保守担当者による確認、バージョンとの関連付け、継続的な追跡が必要な問題は、引き続き GitHub に投稿してください。
+
+* [Telegram：CherryStudioAI](https://t.me/CherryStudioAI)
+* [Discord：Cherry Studio](https://discord.gg/wez8HtpxqQ)
+* [QQ グループ：575014769](https://qm.qq.com/q/lo0D4qVZKi)
+
+グループへの招待は、プラットフォームの規則や人数制限により変更される場合があります。リンクが無効な場合は、[Cherry Studio 公式リポジトリ](https://github.com/CherryHQ/cherry-studio)の README にある最新の入口を確認してください。
+
+## プライバシーを守る
+
+送信前に確認してください。
+
+* API Key、アクセス Token、Cookie、パスワードを完全に隠した。
+* ファイルパスに含まれる氏名、会社名、プロジェクト名を匿名化した。
+* 会話、ナレッジベース、文書に不要な個人データや業務データが含まれていない。
+* ログは問題が発生した時間帯に関係する部分だけを残した。
+* スクリーンショットに、他のアプリ、ブラウザータブ、通知の機密情報が表示されていない。
+
+認証情報をすでに公開してしまった場合は、投稿を削除するだけでは不十分です。該当するプロバイダーの管理画面で直ちに無効化し、再発行してください。

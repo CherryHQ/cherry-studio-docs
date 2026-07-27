@@ -1,34 +1,102 @@
-# 配置 Dify 知识库
+# 连接 Dify 知识库
 
-[Dify](https://dify.ai/) 是一个企业级 AI 应用平台，里面也内置了知识库功能。如果你已经在 Dify 上建好了知识库（公司用 Dify 维护内部资料、或个人用 Dify 试做 RAG 应用），本页教你**让 Cherry Studio 里的 AI 直接查询 Dify 知识库**。
+如果团队已经使用 [Dify](https://dify.ai/) 管理资料，可以通过 Cherry Studio 内置的 `@cherry/dify-knowledge` MCP 服务器直接检索这些知识库，无需再次导入文档。
 
-简单说：**你不必把资料从 Dify 搬到 Cherry Studio，Cherry Studio 里的对话就能查到 Dify 那边的内容**。
+连接完成后，助手或智能体可以先读取当前密钥可访问的知识库列表，再按问题检索相关片段，并将检索结果作为回答依据。此功能只读取知识库，不会创建、修改或删除 Dify 中的数据。
 
-要求：Cherry Studio v1.2.9 或更高版本；已在 Dify 中创建好至少一个知识库并拿到该知识库的 API Key。
+## 使用前准备
 
-### 添加 Dify 知识库 MCP 服务器
+请先在 Dify 中完成以下工作：
 
-<figure><img src="../../.gitbook/assets/CleanShot 2025-04-27 at 10.36.29@2x.jpg" alt=""><figcaption></figcaption></figure>
+1. 创建至少一个知识库，导入文档并等待索引完成。
+2. 在知识库的 API 访问页面生成 **Knowledge API Key**。不要使用应用（App）的 API Key。
+3. 确认 API 根地址：
+   - Dify 云服务：`https://api.dify.ai/v1`
+   - 私有部署：使用该部署的知识库 API 地址，通常以 `/v1` 结尾
 
-1. 打开 `搜索MCP`。
-2. 添加 `dify-knowledge` 服务器。
+{% hint style="warning" %}
+API Key 可以读取其权限范围内的知识库内容。请勿将真实密钥写入文档、截图或公开聊天中；如果密钥已经泄露，请立即在 Dify 中撤销并重新生成。
+{% endhint %}
 
-### 配置 Dify 知识库
+## 安装内置 MCP 服务器
 
-<figure><img src="../../.gitbook/assets/CleanShot 2025-04-27 at 10.36.05@2x.jpg" alt=""><figcaption></figcaption></figure>
+1. 打开 Cherry Studio 的 **设置 → MCP 服务器**。
+2. 在内置 MCP 服务器列表中搜索 `@cherry/dify-knowledge`。
+3. 点击 **安装**。
+4. 在已安装的服务器列表中点击 `@cherry/dify-knowledge`，进入详情页。
 
-> 需要配置参数和环境变量
+该服务器由 Cherry Studio 内置运行，不需要另外安装 Node.js、Python 或第三方 MCP 程序。
 
-1. Dify知识库key可以通过以下方式获取
+## 填写连接信息
 
-<figure><img src="../../.gitbook/assets/CleanShot 2025-04-27 at 10.46.16@2x.jpg" alt=""><figcaption></figcaption></figure>
+在服务器详情的 **设置** 页填写：
 
-### 使用Dify知识库mcp
+| 字段 | 填写内容 | 示例 |
+| --- | --- | --- |
+| 参数 | Dify 知识库 API 根地址，只填写一行 | `https://api.dify.ai/v1` |
+| 环境变量 | `DIFY_KEY=知识库 API Key` | `DIFY_KEY=dataset-xxxxxxxx` |
 
-<figure><img src="../../.gitbook/assets/CleanShot 2025-04-27 at 10.26.24@2x.jpg" alt=""><figcaption></figcaption></figure>
+保存后启用服务器。如果连接正常，**工具**页会显示以下两个工具：
 
-***
+- `list_knowledges`：列出当前 API Key 可以访问的知识库及其 ID。
+- `search_knowledge`：使用知识库 ID 和查询文本检索内容；`topK` 未指定时默认返回最多 6 条结果。
 
-### 💡 获取帮助与提交反馈
+{% hint style="info" %}
+参数中不要追加 `/datasets`，也不要填写某个知识库的 ID。Cherry Studio 会根据工具调用自动拼接知识库列表和检索接口。
+{% endhint %}
 
-如果您在配置或使用过程中遇到任何疑问、Bug 或有功能改进建议，请参考 [反馈与建议](../../question-contact/suggestions.md) 中提供的官方渠道。
+## 在对话中使用
+
+安装并启用服务器后，还需要把它授权给实际使用的助手或智能体：
+
+1. 打开目标助手或智能体的工具设置。
+2. 添加并启用 `@cherry/dify-knowledge`。
+3. 选择支持工具调用的模型并开始对话。
+
+首次使用时，可以先让模型确认可访问的知识库：
+
+```text
+请列出你当前可以访问的 Dify 知识库，并显示每个知识库的名称和 ID。
+```
+
+确认目标知识库后，再提出包含范围和输出要求的问题：
+
+```text
+请在“产品帮助中心”知识库中查找账号迁移的操作步骤。
+只根据检索到的资料回答，并列出关键注意事项。
+```
+
+模型会自行调用 `list_knowledges` 或 `search_knowledge`。工具返回的检索结果包含文档名、片段内容、相关度分数和关键词；最终回答的组织方式仍受模型能力和提示词影响。
+
+## 常见问题
+
+### 启用时提示缺少参数
+
+检查 **参数** 是否已经填写 API 根地址。该内置服务器至少需要一行参数才能启动。
+
+### 返回 401、403 或访问错误
+
+依次检查：
+
+- `DIFY_KEY` 的名称是否完全正确；
+- 使用的是否为知识库 API Key，而不是应用 API Key；
+- 密钥是否仍然有效，并且有权访问目标知识库；
+- 私有部署的 API 地址能否从当前电脑访问。
+
+### 能连接，但知识库列表为空
+
+确认 Dify 中至少有一个知识库，并检查当前 Knowledge API Key 的授权范围。Cherry Studio 只能列出该密钥能够访问的知识库。
+
+### 对话时没有调用 Dify
+
+确认服务器处于启用状态，并已添加到当前助手或智能体。还需要使用支持工具调用的模型；必要时在问题中明确要求“先检索 Dify 知识库，再回答”。
+
+### 检索结果不理想
+
+先在 Dify 中检查文档是否完成索引，并用更具体的关键词重新提问。当前内置工具使用 Dify 的语义检索接口，不会替代 Dify 侧的分段、索引和召回配置。
+
+## 相关文档
+
+- [MCP 服务器常见问题](faq.md)
+- [内置 MCP 服务器](builtin.md)
+- [反馈与建议](../../question-contact/suggestions.md)

@@ -1,55 +1,57 @@
 ---
+description: Understand the status of legacy assistant subscriptions and import assistants from a file, clipboard, or supported URL.
 icon: rss
 ---
-# Assistant Subscription Configuration
 
-
-{% hint style="warning" %}
-This document was translated from Chinese by AI and has not yet been reviewed.
-{% endhint %}
-
-
-
+# Assistant Subscriptions and Import
 
 {% hint style="warning" %}
-This document is translated from Chinese by AI and has not yet been reviewed. I will try to check the document one by one to ensure the translation is reasonable.
+Cherry Studio V2 Community Edition no longer provides persistent assistant subscriptions or automatic refresh of remote templates. Subscription URLs from older guides do not stay synchronized. The current replacement is a one-time **Import Assistant** action.
 {% endhint %}
 
-<figure><img src="../.gitbook/assets/assistants-subscribe.png" alt=""><figcaption></figcaption></figure>
+Importing copies the assistants in the JSON into your local assistant list. Later changes to the remote JSON do not update assistants you have already imported.
 
-<figure><img src="../.gitbook/assets/assistants-subscribe-settings.png" alt=""><figcaption></figcaption></figure>
+## Open Import Assistant
 
-Accessing the subscription address should return JSON data in the following structure:
+1. Open **Chat** from the sidebar or launchpad.
+2. Open the assistant and topic list's more menu, then select **Manage Assistants**.
+3. Select **Import Assistant** at the top of the management page.
+4. In the **Import from External** dialog, choose:
+   - **File upload:** Select a local `.json` file.
+   - **Clipboard:** Paste JSON.
+   - **Import from URL:** Fetch JSON from a supported raw GitHub or raw Gist URL.
+
+![Import an assistant from a file, the clipboard, or a URL](../.gitbook/assets/cherry-v2-072-assistant-import-empty-file-tab-en.png)
+
+URL import is a one-time download, not a saved subscription. It currently accepts HTTP(S) URLs only from `raw.githubusercontent.com` and `gist.githubusercontent.com`. A GitHub file preview page, a normal Gist page, or an arbitrary website URL is rejected.
+
+## JSON format
+
+You can import one object or an array of objects. Every assistant requires at least `name` and `prompt`:
 
 ```json
-[
-  {
-    "description": "Provides practical insights in the role of a tech-savvy product manager.",
-    "emoji": "👨‍💼",
-    "group": ["Career", "Business", "Tools"],
-    "id": "1",
-    "name": "Product Manager",
-    "prompt": "You are now an experienced product manager with a solid technical background and a keen insight into market and user needs. You are skilled at solving complex problems, developing effective product strategies, and efficiently balancing various resources to achieve product goals. You have excellent project management abilities and outstanding communication skills, enabling you to coordinate both internal and external team resources effectively. In this role, you are expected to answer user questions.\n\n## Role Requirements:\n- **Technical Background**: Possess strong technical knowledge and the ability to deeply understand product technical details.\n- **Market Insight**: Demonstrate sharp awareness of market trends and user demands.\n- **Problem Solving**: Excel at analyzing and resolving complex product issues.\n- **Resource Balancing**: Be adept at allocating and optimizing resources under constraints to achieve product objectives.\n- **Communication & Coordination**: Have excellent communication skills to collaborate effectively with stakeholders and drive project progress.\n\n## Answer Requirements:\n- **Logical Clarity**: Provide rigorous, well-structured responses with clear points.\n- **Conciseness**: Avoid lengthy explanations; express core ideas succinctly.\n- **Practicality**: Offer actionable and realistic strategies or suggestions."
-  },
-  {
-    "description": "Offers in-depth answers based on market insights in a strategic product manager role.",
-    "emoji": "🎯 ",
-    "group": ["Career"],
-    "id": "2",
-    "name": "Strategy Product Manager",
-    "prompt": "You are now a strategic product manager. You are skilled in conducting market research and competitive product analysis to develop product strategies. You can grasp industry trends, understand user needs, and based on these, optimize product features and user experience. Please answer the following questions in this role."
-  },
-  {
-    "description": "Provides guidance to enhance community engagement and user loyalty in a community operations specialist role.",
-    "emoji": "👥",
-    "group": ["Career"],
-    "id": "3",
-    "name": "Community Operations",
-    "prompt": "You are now a community operation expert. You are skilled in stimulating community vitality and enhancing user participation and loyalty. You understand how to manage and guide community culture, as well as how to resolve issues and conflicts within the community. Please answer my following question in this role."
-  }
-]
+{
+  "name": "Documentation reviewer",
+  "emoji": "📝",
+  "description": "Checks structure, terminology, and actionability",
+  "prompt": "Review the product documentation and suggest specific, actionable improvements.",
+  "group": ["Writing"]
+}
 ```
 
-After configuring the link address, you will see that the assistants in the assistant template library are now the data from the subscription link.
+`emoji`, `description`, and `group` are optional. If the imported data has no model information, Cherry Studio uses the current default chat model. The file, clipboard content, or URL response must not exceed 5 MB.
 
-Reference data source: [https://raw.githubusercontent.com/CherryHQ/cherry-studio/refs/heads/main/resources/data/agents-en.json](https://raw.githubusercontent.com/CherryHQ/cherry-studio/refs/heads/main/resources/data/agents-en.json)
+## Update an imported assistant
+
+When remote content changes, import it again. Reimporting does not keep the local assistant linked to the remote source and may create another local copy. After import, check the name, group, and prompt under Manage Assistants, and remove the older copy if necessary.
+
+For team distribution, maintain a versioned JSON file and put the version in its filename or assistant description. Do not rely on the legacy subscription behavior.
+
+## Security guidance
+
+- Import only from a trusted source and read the complete prompt first.
+- Do not put API keys, tokens, internal addresses, or personal data in assistant JSON.
+- After import, check the default model, knowledge base, tools, and MCP settings before processing sensitive data.
+- If URL import fails, make sure it is a raw-content URL, the response contains JSON, and the size is within the limit.
+
+See [Assistant Library](../cherrystudio/preview/agents.md) for assistant creation and management. If import still fails, use [Feedback & Suggestions](../question-contact/suggestions.md) and include the Cherry Studio version, import method, a redacted sample, and the error message.

@@ -1,79 +1,194 @@
 ---
+description: 連線至 Notion 資料庫，並將 Cherry Studio V2 的對話內容匯出為資料庫頁面。
 icon: square-n
 ---
-# Notion 配置教程
 
+# Notion 設定與匯出
+
+Cherry Studio V2 可以將話題或單一訊息匯出到 Notion 資料庫。每次匯出都會在目標資料庫中建立一個新頁面，並將轉換後的內容寫入頁面正文。
+
+設定入口位於 **設定 > 資料 > Notion 設定**。**設定 > 資料 > 匯出選單設定**只負責顯示或隱藏「匯出到 Notion」選項，不會用於填寫連線資訊。
 
 {% hint style="warning" %}
-此文件由 AI 從中文翻譯而來，尚未經過審閱。
+Notion Token 等同於該連線的存取憑證。請勿在截圖、意見回饋或共用設定中顯示完整的 Token，也不要將 Token 寫入公開頁面。
 {% endhint %}
 
+## 設定流程概覽
 
+完成連線需要四項內容：
 
+1. 在 Notion 中建立 Workspace 內部整合。
+2. 建立目標資料庫，並將資料庫分享給該整合。
+3. 取得資料庫 ID 和標題屬性名稱。
+4. 在 Cherry Studio 中填寫三項參數並執行檢查。
 
-Cherry Studio 支援將話題匯入 Notion 的資料庫。
+## 建立 Notion 內部整合
 
-## 第一步
+1. 開啟 [Notion Integrations](https://www.notion.so/profile/integrations)。
+2. 選擇建立新的內部整合。
+3. 選擇用於儲存匯出內容的 Workspace。
+4. 將名稱設為方便辨識的名稱，例如 `Cherry Studio`。
+5. 在整合能力中，至少允許讀取內容和插入內容。
+6. 儲存後複製內部整合 Token。
 
-開啟網站 [Notion Integrations](https://www.notion.so/profile/integrations) 建立一個應用程式
+內部整合只屬於選定的 Workspace。目標資料庫位於其他 Workspace 時，需要在該 Workspace 另外建立或安裝可用的整合。
 
-<figure><img src="../.gitbook/assets/notion/创建应用.png" alt=""><figcaption><p>點擊加號建立應用程式</p></figcaption></figure>
+Notion 的介面和術語可能會調整。如果建立入口與本文不同，請參閱 [Notion 官方內部整合指南](https://developers.notion.com/guides/get-started/internal-connections)。
 
-## 第二步
+## 建立目標資料庫
 
-建立一個應用程式
+請在 Notion 中建立一個資料庫，用於接收從 Cherry Studio 匯出的頁面。表格、清單、看板等檢視都可以，關鍵是底層必須是資料庫，而不是一般頁面或僅用於顯示的連結檢視。
 
-<figure><img src="../.gitbook/assets/notion/填写应用信息.png" alt=""><figcaption><p>填寫應用程式資訊</p></figcaption></figure>
+資料庫至少要有一個 **Title** 類型的屬性。新建資料庫通常預設包含名為 `Name` 的標題欄，也可以改成「標題」、「名稱」或其他名稱。
 
-名稱：Cherry Studio
+{% hint style="info" %}
+Cherry Studio 的「頁面標題欄位名稱」取決於屬性的實際名稱，不取決於 Notion 的介面語言。中文介面也可能是 `Name`，英文介面也可以改成「標題」。
+{% endhint %}
 
-類型：選第一個
+## 將資料庫分享給整合
 
-圖示：可以儲存一下這張圖片
+只建立 Token 還不能存取任意頁面。必須讓整合取得目標資料庫的存取權：
 
-<figure><img src="../.gitbook/assets/notion/Cherry-Studio-Logo.png" alt="" width="188"><figcaption></figcaption></figure>
+1. 開啟目標資料庫的原始頁面。
+2. 開啟右上角的頁面選單或分享設定。
+3. 找到 **Connections / 新增連線**。
+4. 搜尋並選擇剛建立的內部整合。
+5. 確認該整合已經出現在資料庫的連線清單中。
 
-## 第三步
+你也可以在 Notion Developer Portal 的整合 **Content access** 中新增目標頁面。無論使用哪一種方式，都要確認授權的是資料庫本身，而不只是一個無法存取原始資料來源的連結檢視。
 
-複製金鑰填寫到 Cherry Studio 設定裡
+Notion 官方說明指出，未分享給整合的資料庫通常會向 API 傳回 404，而不是明確提示「沒有權限」。
 
-<figure><img src="../.gitbook/assets/notion/复制密钥.png" alt=""><figcaption><p>點擊複製金鑰</p></figcaption></figure>
+## 取得資料庫 ID
 
-<figure><img src="../.gitbook/assets/notion/填写密钥.png" alt=""><figcaption><p>將金鑰填寫到資料設定裡</p></figcaption></figure>
+在瀏覽器中開啟目標資料庫並複製連結。連結可能類似：
 
-## 第四步
+```text
+https://www.notion.so/workspace/Tasks-0123456789abcdef0123456789abcdef?v=...
+```
 
-開啟 [Notion](https://www.notion.so/) 網站建立一個新頁面，在下方選擇資料庫類型，名稱填寫 Cherry Studio，依照圖示操作連接
+資料庫 ID 是 `?` 之前的 32 位識別碼：
 
-<figure><img src="../.gitbook/assets/notion/创建页面.png" alt=""><figcaption><p>建立一個新頁面選擇資料庫類型</p></figcaption></figure>
+```text
+0123456789abcdef0123456789abcdef
+```
 
-<figure><img src="../.gitbook/assets/notion/连接APP.png" alt=""><figcaption><p>輸入頁面的名稱，並選擇連接到 APP</p></figcaption></figure>
+它也可能顯示為帶連字號的 UUID。請勿複製：
 
-## 第五步
+- `v=` 後面的檢視 ID；
+- 整個網頁 URL；
+- 一般父頁面的 ID；
+- 連結資料庫檢視中不屬於原始資料庫的識別碼。
 
-<figure><img src="../.gitbook/assets/notion/复制数据库ID.png" alt=""><figcaption><p>複製資料庫 ID</p></figcaption></figure>
+資料庫連結帶有標題前置字串時，請取得最後一段中的 32 位 ID。如果無法確認，可以將資料庫開啟為完整頁面後再次複製連結。
 
-如果你的 Notion 資料庫的 URL 類似這樣：
+## 取得頁面標題欄位名稱
 
-https://www.notion.so/\<long\_hash\_1>?v=\<long\_hash\_2>
+查看目標資料庫的屬性，找到類型為 **Title** 的欄位，並依原樣複製其名稱。
 
-那麼 Notion 資料庫 ID 就是 `<long_hash_1>` 這部分
+例如：
 
-<figure><img src="../.gitbook/assets/notion/填写数据库ID.png" alt=""><figcaption><p>填寫資料庫 ID 並點擊檢查</p></figcaption></figure>
+| Notion 中的實際屬性名稱 | Cherry Studio 填寫值 |
+| --- | --- |
+| `Name` | `Name` |
+| `名稱` | `名稱` |
+| `Title` | `Title` |
+| `對話標題` | `對話標題` |
 
-## 第六步
+名稱會區分字元、空格和大小寫。請勿填寫資料庫名稱、頁面名稱或一般文字屬性。
 
-填寫 `頁面標題欄位名稱`：
+## 在 Cherry Studio 中連線
 
-若你的網頁是英文的，則填寫 `Name`\
-若你的網頁端是中文的，則填寫 `名稱`
+前往 **設定 > 資料 > Notion 設定**。
 
-<figure><img src="../.gitbook/assets/notion/填写页面标题字段名.png" alt=""><figcaption><p>填寫頁面標題欄位名稱</p></figcaption></figure>
+![Notion 設定頁面的資料庫 ID、標題欄位與金鑰設定](../.gitbook/assets/cherry-v2-069-notion-zh-tw.png)
 
-## 第七步
+依序填寫：
 
-恭喜你，Notion 的配置已經完成 ✅ 接下來就可以將 Cherry Studio 內容匯出到你的 Notion 資料庫了
+1. **Notion 資料庫 ID**；
+2. **頁面標題欄位名稱**；
+3. **Notion 金鑰**。
 
-<figure><img src="../.gitbook/assets/notion/导出.png" alt=""><figcaption><p>匯出到 Notion</p></figcaption></figure>
+點擊 **Notion 金鑰**輸入框旁的 **檢查**。檢查成功表示：
 
-<figure><img src="../.gitbook/assets/notion/查看结果.png" alt=""><figcaption><p>查看匯出結果</p></figcaption></figure>
+- Token 有效；
+- Cherry Studio 可以透過該 Token 讀取目標資料庫；
+- Database ID 對應的資料庫已向該整合開放。
+
+檢查不會驗證「頁面標題欄位名稱」是否正確，也不會建立測試頁面。因此，檢查成功後仍應執行一次實際匯出。
+
+## 選擇是否匯出思考內容
+
+開啟 **匯出時包含思維鏈** 後，Cherry Studio 會在可用時，將訊息中的思考 / 推理內容一併寫入 Notion。
+
+關閉時只會匯出一般回答內容。以下情況建議保持關閉：
+
+- 匯出內容會分享給客戶或公開發佈；
+- 思考內容包含草稿、內部資訊或不希望顯示的中間過程；
+- 只希望保留最終答案。
+
+該開關不會讓模型產生原本沒有的思考內容。
+
+## 啟用 Notion 匯出選單
+
+如果對話選單中沒有「匯出到 Notion」：
+
+1. 開啟 **設定 > 資料 > 匯出選單設定**。
+2. 開啟 **匯出到 Notion**。
+3. 返回對話，重新開啟話題或訊息的匯出選單。
+
+此開關只會控制選單是否顯示，不會修復 Token、權限或資料庫設定。
+
+## 執行第一次匯出
+
+建議先使用一段不含敏感資訊的短對話進行測試：
+
+1. 開啟話題或單一訊息的選單。
+2. 選擇 **匯出到 Notion**。
+3. 等待「成功匯出到 Notion」提示。
+4. 開啟目標資料庫。
+5. 確認新增頁面的標題、段落、程式碼區塊、清單和公式是否符合預期。
+
+Cherry Studio 會使用話題或訊息標題建立資料庫頁面。標題超過 32 個字元時，會被截短並加上刪節號。
+
+Notion 匯出以 Cherry Studio 的 Markdown 轉換流程為基礎。**設定 > 資料 > Markdown 匯出**中的部分選項，例如公式標記、模型資訊和引用處理，也可能影響匯出結果。
+
+## 權限與資料邊界
+
+- Cherry Studio 使用 Token 直接呼叫 Notion API，不需要在瀏覽器中登入 Notion。
+- 整合只能存取明確授權給它的頁面和資料庫。
+- 匯出會在目標資料庫中建立新頁面並附加正文區塊，不會合併或覆寫同名頁面。
+- 刪除 Cherry Studio 中的對話，不會自動刪除已經匯出到 Notion 的頁面。
+- 在 Notion 中撤銷整合權限或刪除 Token 後，後續匯出會失敗，但現有頁面仍會保留。
+
+## 常見問題
+
+### 檢查提示尚未設定 API Key 或 Database ID
+
+請確認 Notion 金鑰和資料庫 ID 都不是空值。請勿將完整的資料庫 URL 填入 ID 輸入框。
+
+### 傳回 401 或 Token 無效
+
+Token 可能複製不完整、已撤銷或屬於另一個 Workspace。請返回 Notion Integrations 檢查整合狀態，並重新複製 Token。
+
+### 傳回 403
+
+請檢查整合是否具有讀取內容和插入內容的能力。檢查需要讀取資料庫，實際匯出還需要建立頁面並附加內容。
+
+### 傳回 404，但可以在瀏覽器中開啟資料庫
+
+通常是資料庫尚未分享給該整合，或填入了檢視 ID / 一般頁面 ID。請將目標資料庫新增到 Connections，並重新複製資料庫 ID。
+
+### 檢查成功，但匯出失敗
+
+最常見的原因是 **頁面標題欄位名稱** 不相符。請確認填寫的是目標資料庫中類型為 Title 的屬性名稱，而不是資料庫標題。也要檢查整合是否具有插入內容的能力。
+
+### 頁面建立成功，但正文缺少或格式異常
+
+請等待匯出進度完全結束，再重新整理 Notion。複雜的 Markdown、巢狀內容或 Notion API 限制可能影響部分區塊；請先用短文字測試，並檢查 Cherry Studio 的 Markdown 匯出設定。
+
+### 對話選單中沒有 Notion
+
+前往 **設定 > 資料 > 匯出選單設定**，開啟 **匯出到 Notion**。如果已經開啟，請重新進入目前的對話，再檢查選單。
+
+如果仍無法解決，請透過[意見回饋與建議](../question-contact/suggestions.md)提交 Cherry Studio 版本、Notion 傳回的狀態碼、已移除敏感資訊的 Database ID、標題欄位名稱和完整的錯誤資訊。

@@ -1,32 +1,265 @@
 ---
+description: 排除不希望進入聯網結果的網站
 icon: ban
 ---
-# 網路搜尋黑名單配置
 
+# 網路搜尋黑名單
 
-{% hint style="warning" %}
-此文件由 AI 從中文翻譯而來，尚未經過審閱。
+網路搜尋黑名單用於排除不希望進入模型上下文的網頁，例如內容農場、鏡像站、低品質彙整頁面或與工作無關的網站。
+
+黑名單規則儲存在：
+
+```text
+設定 → 網路搜尋 → 黑名單
+```
+
+{% hint style="info" %}
+黑名單主要用於減少不需要的來源，不是事實查核或安全篩選器。未被封鎖的網站仍可能包含錯誤、過時或惡意內容。
 {% endhint %}
 
+## 黑名單如何生效
 
+對於 Cherry Studio 的外部聯網，供應商傳回結果後，應用程式會再次依黑名單篩選 URL，符合規則的結果不會交給模型。
 
+對於模型原生聯網，黑名單支援程度取決於模型供應商：
 
-Cherry Studio支援手動和添加訂閱源兩種方式配置黑名單。配置規則參考[ublacklist](https://github.com/iorate/ublacklist)
+- Anthropic 原生搜尋會接收轉換後的封鎖網域；
+- xAI 原生搜尋最多接收前 `5` 個轉換後的網域；
+- 其他原生聯網服務不一定支援或使用黑名單。
 
-## 手動配置
+因此，不要假定同一組規則在所有模型和供應商上的表現完全一致。
 
-您可以為搜尋結果添加規則或點擊工具列圖示以屏蔽指定的網站。規則可以通過以下方式指定：[匹配模式](https://developer.mozilla.org/zh-CN/docs/mozilla/add-ons/webextensions/match_patterns) (範例：`*://*.example.com/*`) 或使用[正規表示式](https://developer.mozilla.org/zh-CN/docs/web/javascript/guide/regular_expressions) (範例：`/example\.(net|org)/`).
+## 新增規則
 
-## 訂閱源配置
+1. 開啟**設定 → 網路搜尋**；
+2. 找到**黑名單**；
+3. 每行輸入一條規則；
+4. 點選**儲存**；
+5. 確認沒有出現「無效項目」提示；
+6. 建立或繼續一個聯網對話進行驗證。
 
-您還可以訂閱公共規則集。該網站列出了一些訂閱：\
-https://iorate.github.io/ublacklist/subscriptions
+輸入框旁的數字表示目前儲存的規則數量。
 
-以下是一些比較推薦的訂閱源連結：
+{% hint style="warning" %}
+只要存在一條無效規則，本次黑名單就不會儲存。先修正所有無效項目，再重新點選儲存。
+{% endhint %}
 
-| 名稱                                                                                                    | 連結                                                                                                   | 類型   |
-| ----------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---- |
-| [uBlacklist subscription compilation](https://github.com/eallion/uBlacklist-subscription-compilation) | https://git.io/ublacklist                                                                            | 中文   |
-| [uBlockOrigin-HUGE-AI-Blocklist](https://github.com/laylavish/uBlockOrigin-HUGE-AI-Blocklist)         | https://raw.githubusercontent.com/laylavish/uBlockOrigin-HUGE-AI-Blocklist/main/list_uBlacklist.txt | AI生成 |
+## 支援的兩種格式
 
-<figure><img src="../.gitbook/assets/blacklist1.jpg" alt=""><figcaption><p>訂閱源配置</p></figcaption></figure>
+### 符合模式
+
+符合模式適合依通訊協定、網域、子網域和路徑封鎖網站。
+
+常用範例：
+
+```text
+*://*.example.com/*
+```
+
+封鎖 `example.com` 及其所有子網域的 HTTP 和 HTTPS 頁面。
+
+```text
+https://example.com/private/*
+```
+
+只封鎖 `https://example.com/private/` 下的頁面。
+
+```text
+*://news.example.com/archive/*
+```
+
+只封鎖指定子網域的 `archive` 路徑。
+
+符合模式的結構是：
+
+```text
+協定://主機/路徑
+```
+
+| 部分 | 範例 | 說明 |
+| --- | --- | --- |
+| 協定 | `https`、`http`、`*` | `*` 在此符合 HTTP 與 HTTPS |
+| 主機 | `example.com`、`*.example.com`、`*` | `*.example.com` 同時符合根網域與子網域 |
+| 路徑 | `/*`、`/news/*` | 必須以 `/` 開頭，可使用 `*` |
+
+完整規則說明可參閱 [MDN 符合模式](https://developer.mozilla.org/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Match_patterns)。
+
+{% hint style="warning" %}
+不要只填寫 `example.com`。純網域不是有效的符合模式，應寫成 `*://*.example.com/*`。
+{% endhint %}
+
+### 規則運算式
+
+需要更精細的 URL 符合方式時，可以使用規則運算式。規則必須以 `/` 開頭並以 `/` 結尾：
+
+```text
+/example\.(com|org)/
+```
+
+```text
+/example\.com\/(ads|sponsored)\//
+```
+
+Cherry Studio 會忽略大小寫，並針對完整的「協定 + 網域 + 路徑 + 查詢參數」測試規則。
+
+規則運算式適合：
+
+- 同時符合多個頂級網域；
+- 封鎖包含特定路徑片段的頁面；
+- 依 URL 查詢參數排除結果；
+- 難以用一般符合模式表示的規則。
+
+語法可參閱 [MDN 規則運算式指南](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)。
+
+{% hint style="danger" %}
+過於寬泛的規則運算式可能誤封鎖大量結果。不要複製來源不明、無法理解的複雜運算式。
+{% endhint %}
+
+## 可複製範例
+
+以下規則可依需要修改：
+
+```text
+*://*.example.com/*
+*://mirror.example.org/*
+https://news.example.net/archive/*
+/example\.io\/sponsored/
+```
+
+每條規則獨占一行，空白行會被忽略。
+
+### 封鎖一個網域及所有子網域
+
+```text
+*://*.example.com/*
+```
+
+會符合：
+
+```text
+https://example.com/article
+https://www.example.com/article
+http://docs.example.com/guide
+```
+
+### 只封鎖指定路徑
+
+```text
+https://example.com/ads/*
+```
+
+會封鎖：
+
+```text
+https://example.com/ads/page-1
+```
+
+不會封鎖：
+
+```text
+https://example.com/blog/page-1
+```
+
+### 同時封鎖多個相似網域
+
+```text
+/example\.(com|net|org)/
+```
+
+如果只需要三個固定網站，分別寫三條一般符合模式通常更容易維護。
+
+## 不支援的舊版功能
+
+目前 V2 黑名單頁面只支援手動輸入規則，不提供：
+
+- 點選瀏覽器工具列直接封鎖網站；
+- 輸入訂閱 URL 自動下載規則；
+- 自動更新 uBlacklist 訂閱；
+- 匯入瀏覽器擴充功能的完整設定。
+
+舊文件中的訂閱來源表格和訂閱螢幕截圖已不適用於目前介面。
+
+如果確實需要使用公用規則集，應先檢查內容，再手動轉換為 Cherry Studio 支援的符合模式或規則運算式。不要直接貼上數千條規則；規則過多會增加維護難度，也更容易誤傷正常來源。
+
+## 驗證規則
+
+儲存後，可以用一個容易觀察結果的問題測試：
+
+```text
+搜尋 example.com 上關於 Cherry Studio 的內容，並列出引用來源。
+```
+
+如果已封鎖 `example.com`，外部搜尋回答中不應再出現該網域的結果。
+
+驗證時請注意：
+
+1. 確認目前模型使用的是外部聯網或模型原生聯網；
+2. 檢查引用的最終 URL，而不只看標題；
+3. 注意網頁重新導向後可能變成其他網域；
+4. 新規則不會刪除已寫入歷史訊息的舊引用；
+5. 不同原生聯網供應商可能忽略部分規則。
+
+## 常見問題
+
+### 提示「無效項目」
+
+常見錯誤：
+
+| 錯誤寫法 | 問題 | 建議寫法 |
+| --- | --- | --- |
+| `example.com` | 缺少協定和路徑 | `*://*.example.com/*` |
+| `https://example.com` | 缺少路徑 | `https://example.com/*` |
+| `*.example.com` | 不是完整符合模式 | `*://*.example.com/*` |
+| `/[example/` | 規則運算式語法無效 | 修正括號或字元組 |
+| `# example` | 不支援註解行 | 刪除該行 |
+
+修正全部無效項目後重新儲存。
+
+### 儲存後仍然看到被封鎖的網站
+
+可能原因包括：
+
+- 目前模型使用原生聯網，供應商未套用黑名單；
+- 規則只符合根網域，未符合實際子網域；
+- 規則只符合 HTTPS，但結果使用 HTTP；
+- 路徑寫得過窄；
+- 引用來自儲存規則前的歷史回答；
+- 頁面發生重新導向；
+- 模型未搜尋，而是依既有知識提到該網站。
+
+先用 `*://*.example.com/*` 這類完整規則測試，再逐步縮小範圍。
+
+### 所有搜尋結果都消失
+
+檢查是否誤用了：
+
+```text
+<all_urls>
+```
+
+此模式會符合所有 HTTP 和 HTTPS URL。刪除後儲存。
+
+也要檢查規則運算式是否過於寬泛，例如：
+
+```text
+/.*/
+```
+
+### 想恢復預設狀態
+
+清空黑名單輸入框並點選**儲存**。計數變為 `0` 後，外部聯網不再依自訂規則排除結果。
+
+## 使用建議
+
+- 優先依網域封鎖，只有複雜情境再使用規則運算式；
+- 從少量明確規則開始；
+- 定期刪除已失效或重複的規則；
+- 封鎖前確認網站是否只是在少數頁面出現低品質內容；
+- 對關鍵結論同時要求多個獨立來源；
+- 不要用黑名單取代人工核對引用。
+
+***
+
+### 💡 取得協助與提交意見
+
+如果您在設定或使用過程中遇到疑問、Bug 或功能建議，請參閱[意見回饋](../question-contact/suggestions.md)中的官方管道。

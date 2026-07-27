@@ -1,31 +1,269 @@
-
-{% hint style="warning" %}
-このドキュメントはAIによって中国語から翻訳されており、まだレビューされていません。
-{% endhint %}
-
 # SiliconFlow
 
-## 1. SiliconCloudのモデルサービス設定 <a href="#id-2-siliconcloud" id="id-2-siliconflow"></a>
+SiliconFlow は、チャット、ビジョン、Embedding、Rerank、画像生成 API を提供しています。Cherry Studio V2 には SiliconFlow プロバイダーが組み込まれており、チャット、Embedding、画像生成に専用のアダプターが実装されています。
 
-#### [​](https://docs.siliconflow.cn/usercases/use-siliconcloud-in-cherry-studio#2-1)1.2 左下の設定をクリックし、モデルサービスで【SiliconFlow】を選択 <a href="#id-2-1" id="id-2-1"></a>
+V2 のプリセット API Host：
 
-<figure><img src="https://raw.githubusercontent.com/siliconflow/doc-images/refs/heads/main/1-apikey-settings.webp" alt=""><figcaption></figcaption></figure>
+```text
+https://api.siliconflow.cn
+```
 
-#### [​](https://docs.siliconflow.cn/usercases/use-siliconcloud-in-cherry-studio#2-2-siliconcloud-api)1.2 リンクをクリックしてSiliconCloud APIキーを取得 <a href="#id-2-2-siliconcloud-api" id="id-2-2-siliconcloud-api"></a>
+実際の OpenAI 互換リクエストでは `/v1` パスが使用されます。たとえば `https://api.siliconflow.cn/v1/chat/completions` です。
 
-1. [SiliconCloud](https://cloud.siliconflow.cn/)にログイン（未登録の場合は初回ログイン時に自動でアカウントが登録されます）
-2. [APIキー](https://cloud.siliconflow.cn/account/ak)にアクセスし、新規キーを作成または既存キーをコピー
+{% hint style="info" %}
+初回設定では、V2 のプリセットアドレスをそのまま使用してください。コンソール画面、モデル広場の URL、ドキュメントの URL を API Host に入力しないでください。
+{% endhint %}
 
-<figure><img src="https://raw.githubusercontent.com/siliconflow/doc-images/refs/heads/main/2-siliconcloud-apikey.png" alt=""><figcaption></figcaption></figure>
+## 利用前の準備
 
-#### [​](https://docs.siliconflow.cn/usercases/use-siliconcloud-in-cherry-studio#2-3)1.3 管理をクリックしてモデルを追加 <a href="#id-2-3" id="id-2-3"></a>
+1. SiliconFlow に登録してログインします。
+2. プラットフォームで必要なアカウント認証を完了します。
+3. API Key を作成します。
+4. チャージするか、アカウントに利用可能な残高があることを確認します。
+5. 使用するモデルが現在も提供されていることを確認します。
+6. モデルの料金とレート制限を確認します。
 
-<figure><img src="https://raw.githubusercontent.com/siliconflow/doc-images/refs/heads/main/3-models.png" alt=""><figcaption></figcaption></figure>
+SiliconFlow では、モデル、機能、料金、提供状況が変更されることがあります。本書ではボーナス、無料モデル、料金を固定情報として掲載しません。[モデル広場](https://cloud.siliconflow.cn/models)とコンソールで最新情報を確認してください。
 
-## [​](https://docs.siliconflow.cn/usercases/use-siliconcloud-in-cherry-studio#3)2. モデルサービスの使用方法 <a href="#id-3" id="id-3"></a>
+## API Key の取得
 
-1. 左側メニューバーの「対話」ボタンをクリック
-2. 入力ボックスにテキストを入力してチャットを開始
-3. 上部メニューのモデル名を選択してモデルを切り替え
+1. [SiliconFlow コンソール](https://cloud.siliconflow.cn/)にログインします。
+2. [API キー](https://cloud.siliconflow.cn/account/ak)を開きます。
+3. **新規キー**をクリックします。
+4. 識別しやすい名前を入力します。
+5. 生成された Key をコピーします。
+6. 安全なパスワード管理ツールに保存します。
 
-<figure><img src="https://raw.githubusercontent.com/siliconflow/doc-images/refs/heads/main/4-chat.webp" alt=""><figcaption></figcaption></figure>
+{% hint style="danger" %}
+API Key はアカウントの認証情報に相当します。チャット、ドキュメント、コードリポジトリ、問題報告用のスクリーンショットに記載しないでください。漏えいした場合は、直ちに削除して再作成してください。
+{% endhint %}
+
+## Cherry Studio での設定
+
+1. `設定 → モデルサービス`を開きます。
+2. 左側のフィルターを**すべてのプロバイダー**に切り替えます。
+3. **Silicon / SiliconFlow**を選択します。
+4. API Key 欄に SiliconFlow のキーを貼り付けます。
+5. API Host は `https://api.siliconflow.cn` のままにします。
+6. ページ上部のプロバイダースイッチをオンにします。
+7. **追加**をクリックするか、モデルを同期します。
+8. 同期プレビューを確認して変更を適用します。
+9. 使用するモデルだけを有効にします。
+10. モデルのヘルスチェックを実行します。
+
+接続チェックで確認できるのは、キーと基本リクエストが利用可能であることだけです。リスト内のすべてのモデルをアカウントから呼び出せるとは限りません。最終的な権限、残高、レートは SiliconFlow によって判定されます。
+
+## モデルの同期と追加
+
+Cherry Studio は、SiliconFlow のモデル一覧 API から現在のモデルを取得します。SiliconFlow の `/v1/models` では、次のタイプによる絞り込みにも対応しています。
+
+- `chat`
+- `embedding`
+- `reranker`
+- `text-to-image`
+- `image-to-image`
+- その他の音声・動画タイプ
+
+同期後の推奨手順：
+
+1. 追加、更新、削除される項目を確認します。
+2. 各モデルのタイプを確認します。
+3. 同期結果を適用します。
+4. 手動で残していた古いモデルを削除します。
+5. それぞれでヘルスチェックを実行します。
+
+V2 の組み込みモデルは候補にすぎず、プラットフォームからリアルタイムで返される結果が優先されます。モデルが Embedding、Rerank、ビジョン、画像生成として自動認識されない場合は、モデル管理で機能を確認できます。ただし、インターフェースの違いを回避するために表示名だけを変更しないでください。
+
+{% hint style="warning" %}
+Model ID は、`Pro/` プレフィックス、組織名、大文字・小文字、スラッシュ、バージョンサフィックスを含め、SiliconFlow の現在のリストと完全に一致させる必要があります。
+{% endhint %}
+
+## チャットモデルの選択
+
+SiliconFlow のチャットでは、OpenAI 互換の Chat Completions を使用します。
+
+次の順序でテストすることをおすすめします。
+
+1. 短いテキストメッセージを送信します。
+2. ストリーミング出力を確認します。
+3. システムプロンプトを追加します。
+4. 長めのコンテキストをテストします。
+5. その後、画像、思考、ツール呼び出しをテストします。
+
+`Pro/` バージョンと通常バージョンでは、料金、スループット、可用性が異なる場合があります。別々の Model ID として扱い、それぞれでヘルスチェックを実行してください。
+
+## ビジョンモデル
+
+画像を受け取れるのは、SiliconFlow が明確に視覚言語モデルとして指定している Model ID だけです。
+
+Cherry Studio では、次の手順で確認します。
+
+1. 最新のモデルを同期します。
+2. 画像機能が表示されているモデルを選択します。
+3. まず小さな画像を 1 枚アップロードします。
+4. モデルが実際に画像を理解できているか確認します。
+5. その後、複数画像または高解像度画像を試します。
+
+同じモデルシリーズでも、テキスト版とビジョン版で ID が異なる場合があります。画像を使用すると、リクエスト本文のサイズ、コンテキスト消費量、料金も増加します。
+
+## 思考モード
+
+SiliconFlow の一部の DeepSeek、GLM、Qwen、Hunyuan モデルでは、`enable_thinking` と `thinking_budget` を使用します。
+
+Cherry Studio V2 は、対応する SiliconFlow の思考モデルに対して次の処理を行います。
+
+- `enable_thinking` スイッチを使用します。
+- 思考予算を設定した場合、ゼロではない予算を少なくとも 32,768 に引き上げます。
+- 思考をオフにした場合は `enable_thinking: false` を送信します。
+
+このため、現在の V2 は SiliconFlow で小さな思考予算を厳密に指定する用途には向いていません。消費量を抑えるには、思考をオフにする、コンテキストを短くする、思考を行わないモデルを使用する、のいずれかを優先してください。
+
+思考を有効にした後にエラーが発生した場合：
+
+1. 思考設定を**デフォルト**に戻します。
+2. モデルのカスタムパラメーターを消去します。
+3. Model ID が現在も提供されていることを確認します。
+4. SiliconFlow の最新のモデル説明と照合します。
+5. ヘルスチェックを再実行します。
+
+## MCP とツール呼び出し
+
+SiliconFlow の Chat Completions は `tools` に対応していますが、正しく呼び出せるかどうかは最終的にモデルごとに異なります。
+
+1. まず通常のチャットが動作することを確認します。
+2. 単純な MCP ツールを 1 つだけ有効にします。
+3. ツールを呼び出すよう明示的に指示します。
+4. 構造化された呼び出しが生成されているか確認します。
+5. ツールの結果がモデルに返されることを確認します。
+6. その後、ツールを追加します。
+
+モデルが「ツールを呼び出す」とテキストで説明するだけでは、実際の呼び出しではありません。この場合は、モデルの機能、プロンプト、ツール定義を確認してください。
+
+## Embedding、Rerank、ナレッジベース
+
+SiliconFlow は次の API を提供しています。
+
+```text
+POST /v1/embeddings
+POST /v1/rerank
+```
+
+現在表示されるモデル例には `BAAI/bge-m3`、Qwen Embedding、Qwen Reranker、BGE Reranker などがありますが、実際の一覧はモデル広場または同期結果から取得してください。
+
+ナレッジベースを作成する場合：
+
+1. モデルを同期します。
+2. Embedding として明確に認識されているモデルを選択します。
+3. ベクトル次元を検出します。
+4. ヘルスチェックを実行します。
+5. 次に、現在利用可能な Rerank モデルを選択します。
+6. 少量のドキュメントをインポートして試します。
+7. 検索と再ランキングの結果を確認してから一括インポートします。
+
+一部の Qwen Embedding モデルでは出力次元を選択できます。既存のナレッジベースで使用した次元は、直接変更しないでください。変更すると、通常はベクトルインデックスの再構築が必要です。
+
+Rerank と Embedding では、異なるエンドポイントとモデルを使用します。Embedding が利用できても Rerank が利用できるとは限らないため、個別に確認してください。
+
+## 画像の生成と編集
+
+Cherry Studio V2 には SiliconFlow 専用の画像モデルが実装されており、リクエストは次のエンドポイントに送信されます。
+
+```text
+POST /v1/images/generations
+```
+
+現在の V2 のモデル登録情報は、主に Qwen Image の生成と編集に対応しています。公式サイトに掲載されている他の画像モデルが、現在のバージョンで正しく認識されるとは限りません。Cherry Studio の描画ページで選択できる項目を基準にしてください。
+
+モデルの機能に応じて、V2 は次の項目を送信できます。
+
+- `image_size`
+- `batch_size`
+- `seed`
+- `negative_prompt`
+- `num_inference_steps`
+- `guidance_scale`
+- `cfg`
+- `prompt_enhancement`
+- 編集用の入力画像（最大 3 枚）
+
+SiliconFlow は明示的な `image_size` を使用します。V2 は、個別のアスペクト比パラメーターを有効なリクエストへ自動変換しません。また、現在の専用アダプターはマスク入力にも対応していません。
+
+{% hint style="warning" %}
+画像モデルは、出力枚数に応じて課金される場合があります。初回テストではバッチ数を 1 にし、モデルが対応する一般的なサイズを使用してください。
+{% endhint %}
+
+画像 URL が返された場合は、結果を速やかに保存してください。一時リンクの有効期間は SiliconFlow によって決まります。
+
+## PDF と添付ファイル
+
+現在の V2 は、まずローカルで PDF のテキストを抽出し、その後 SiliconFlow のチャットモデルへ送信します。
+
+- テキスト形式の PDF は通常処理できます。
+- スキャンされた文書には、先に OCR が必要です。
+- 表、複雑なレイアウト、画像の情報は失われる場合があります。
+- 抽出されたテキストはモデルのコンテキストと料金を消費します。
+- PDF 内の画像は、ビジョンモデルへ個別に送信する必要があります。
+
+SiliconFlow はクラウドサービスです。ドキュメント、画像、ナレッジベースの内容をアップロードする前に、プライバシー、著作権、組織のセキュリティ要件を満たしていることを確認してください。
+
+## レート、残高、トラブルシューティング情報
+
+SiliconFlow のレート制限はモデルごとに計算される場合があり、RPM、TPM、RPD、TPD、IPM、IPD などの指標によって同時に制限されることがあります。
+
+推奨事項：
+
+1. コンソールで残高とモデル料金を確認します。
+2. 自動タスクには同時実行数と再試行回数の上限を設定します。
+3. 429 が発生した場合は頻度を下げて待機します。
+4. モデルを定期的に同期します。
+5. サポートへ問い合わせる際に備えて、エラーレスポンスの `x-siliconcloud-trace-id` を保存します。
+
+複数の Key を作成してアカウント単位のレート制限を回避しないでください。プラットフォームの制限は通常、Key ごとに独立して計算されるものではありません。
+
+## よくある問題
+
+### 401 が返される
+
+API Key が正しくない、削除済み、コピー時に空白が入った、またはリクエストで Bearer 認証が正しく使用されていません。Key をコピーし直すか、再作成してください。
+
+### 403 が返される
+
+アカウント、モデル、またはコンテンツへの権限がありません。本人確認、残高、モデルの利用資格、プラットフォームのポリシーを確認してください。
+
+### 404 が返される
+
+API Host、Model ID、またはインターフェースのタイプが正しくありません。V2 のプリセットアドレスに戻して、モデルを再同期してください。
+
+### 429 が返される
+
+モデルの RPM、TPM、RPD、TPD、IPM、IPD のいずれかの上限に達しています。同時実行数を減らし、コンテキストを短くして、回復するまで待機してください。
+
+### 503 または 504 が返される
+
+モデルが混雑しているか、アップストリームがタイムアウトしています。同時実行数を減らして再試行してください。継続して失敗する場合は、別の提供中モデルに切り替え、Trace ID を記録します。
+
+### モデル一覧が空
+
+API Key、API Host、ネットワークプロキシを確認してください。モデル広場から完全な Model ID をコピーして手動で追加することもできます。
+
+### プリセットモデルを利用できない
+
+V2 のプリセットは、モデルの提供終了、名称変更、権限変更より古い場合があります。リアルタイムの同期結果を基準にして、無効なモデルを削除してください。
+
+### 思考予算と設定が一致しない
+
+現在の V2 は、対応する SiliconFlow モデルのゼロではない思考予算を少なくとも 32,768 に引き上げます。これはクライアントのアダプターによる動作です。消費量を抑えるには、思考をオフにするか、思考を行わないモデルへ切り替えてください。
+
+### Embedding は利用できるが Rerank は利用できない
+
+両者は異なるモデルとインターフェースを使用します。Rerank の Model ID、残高、機能ラベルを確認し、個別にヘルスチェックを実行してください。
+
+### 画像モデルが公式サイトにあるのに描画ページに表示されない
+
+現在の V2 では、そのモデルの画像生成モードがまだ登録されていません。チャットモデルとして使用せず、対応を待つか、描画ページに表示されているモデルを選択してください。
+
+### 画像編集で最初の画像しか処理されない
+
+モデルが複数画像の編集に対応しているか確認してください。V2 は最大 3 枚の入力画像を送信しますが、モデルによっては 1 枚しか受け付けない場合があります。
+
+一般的な設定については、[モデルサービス](README.md)と[モデルサービス設定](../../cherrystudio/preview/settings/providers.md)を参照してください。SiliconFlow の現在のインターフェースとモデルについては、[モデル一覧](https://docs.siliconflow.cn/cn/api-reference/models/get-model-list)、[Chat Completions](https://docs.siliconflow.cn/cn/api-reference/chat-completions/chat-completions)、[Embedding](https://docs.siliconflow.cn/cn/api-reference/embeddings/create-embeddings)、[Rerank](https://docs.siliconflow.cn/cn/api-reference/rerank/create-rerank)、[画像生成](https://docs.siliconflow.cn/cn/userguide/capabilities/images)を参照してください。フィードバック方法については、[フィードバックと提案](../../question-contact/suggestions.md)を参照してください。

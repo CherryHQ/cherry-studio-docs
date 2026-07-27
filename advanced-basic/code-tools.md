@@ -1,101 +1,90 @@
 ---
-description: Tools
+description: 在 Cherry Studio 中配置并启动 AI 编程 CLI
 icon: code
 ---
 
-# Code Tools 使用教程
+# 代码工具
 
-Code Tools 可以在 Cherry Studio 内直接启动和管理多种 AI 编程 CLI 工具，例如 Claude Code、Qwen Code、Gemini CLI、OpenAI Codex、iFlow CLI、GitHub Copilot CLI、Kimi CLI 和 OpenCode。本教程以 Cherry Studio v1.9.9 为例，引导你完成一次完整配置。
+代码工具用于在 Cherry Studio 中配置并启动 AI 编程 CLI。你可以复用已经配置的模型服务，指定项目目录和终端，再在独立终端窗口中使用 CLI。
 
-***
+## 开始前
 
-### 操作步骤
+* 代码工具需要 **Bun**。如果页面提示尚未安装，点击提示中的 **安装 Bun**。
+* 使用 Kimi CLI 时还需要 **uv**；可以在 **设置 → MCP 设置 → 环境依赖** 中安装。
+* 除 GitHub Copilot CLI 外，请先在 Cherry Studio 中配置可用的模型服务和 API Key。
 
-#### 1. 确认 Cherry Studio 版本
-
-请先确认 Cherry Studio 已升级到当前正式版。你可以前往 [客户端下载](../cherrystudio/download.md)、[GitHub Releases](https://github.com/CherryHQ/cherry-studio/releases) 或 [官方网站](https://cherryai.com.cn/download) 下载安装包。
-
-#### 2. 进入 Code Tools 界面
-
-顶部导航模式：点击界面顶部的 `+` 号打开启动台，然后点击 **Code**。
-
-<figure><img src="../.gitbook/assets/cherry-code-tools-new-tab.png" alt=""><figcaption><p>点击顶部 + 打开启动台</p></figcaption></figure>
-
-<figure><img src="../.gitbook/assets/cherry-code-tools-launchpad-code.png" alt=""><figcaption><p>在启动台中点击 Code</p></figcaption></figure>
-
-{% hint style="info" %}
-左侧导航模式下，可直接点击左侧导航栏里的 **Code** 按钮进入该页面。
+{% hint style="warning" %}
+AI 编程 CLI 可以在所选工作目录中读取、修改文件并执行命令。建议先使用 Git 或其他方式保存当前版本，不要选择包含无关敏感文件的目录。
 {% endhint %}
 
-#### 3. 选择 CLI 工具
+## 打开代码工具
 
-根据你的需求和所持有的 API Key，选择一个要使用的 Code Agent 工具。目前支持以下几种：
+1. 点击顶部标签栏右侧的 `+`，打开启动台。
+2. 点击 **Code**。
+3. 在代码工具页面选择要使用的 CLI。
 
-* **Claude Code**
-* **Qwen Code**
-* **Gemini CLI**
-* **OpenAI Codex**
-* **iFlow CLI**
-* **GitHub Copilot CLI**
-* **Kimi CLI**
-* **OpenCode**
+![代码工具页面中的 CLI 入口](../.gitbook/assets/cherry-v2-091-code-tools-overview-zh-cn.png)
 
-<figure><img src="../.gitbook/assets/cherry-code-tools-cli-select.png" alt=""><figcaption><p>选择 Code Agent 工具</p></figcaption></figure>
+当前支持：
 
-#### 4. 选择 Agent 调用的模型
+| CLI | 模型来源 |
+| :--- | :--- |
+| Claude Code | Anthropic 兼容模型 |
+| Qwen Code | OpenAI 兼容模型 |
+| Gemini CLI | Gemini 兼容模型 |
+| OpenAI Codex | OpenAI 或 OpenAI Responses 兼容模型 |
+| iFlow CLI | OpenAI 兼容模型 |
+| GitHub Copilot CLI | 不显示模型选择；使用 GitHub Copilot 自身的认证与模型能力 |
+| Kimi CLI | OpenAI 兼容模型 |
+| OpenCode | OpenAI、OpenAI Responses 或 Anthropic 兼容模型 |
 
-在模型下拉列表中，选择与所选 CLI 工具兼容的模型。 _（详细的模型兼容性说明，请参考下方的“重要注意事项”）_
+模型列表会根据所选 CLI 的接口类型自动筛选。某个模型没有出现时，先检查服务商是否已启用、模型是否已添加，以及接口类型是否兼容。
 
-<figure><img src="../.gitbook/assets/cherry-code-tools-model-select.png" alt=""><figcaption><p>选择模型</p></figcaption></figure>
+## 配置并启动
 
-#### 5. 指定工作目录
+选择 CLI 卡片后，在配置窗口中完成以下项目：
 
-点击 **选择目录** 按钮，为 Agent 指定一个工作目录。Agent 将拥有访问此目录下所有文件和子目录的权限，以便理解项目上下文、读取文件和执行代码。
+![代码工具的启动配置窗口](../.gitbook/assets/cherry-v2-091-code-tools-config-zh-cn.png)
 
-<figure><img src="../.gitbook/assets/cherry-code-tools-workdir.png" alt=""><figcaption><p>指定工作目录</p></figcaption></figure>
+1. **模型**：选择要交给 CLI 使用的模型。GitHub Copilot CLI 没有这一项。
+2. **工作目录**：选择 CLI 启动时进入的项目目录。最近使用的目录会保留在列表中。
+3. **终端**：在 macOS 或 Windows 上选择一个已检测到的终端。Windows 使用 WSL、Alacritty 或 WezTerm 时，如果未能自动定位程序，需要设置自定义可执行文件路径。
+4. **环境变量**：按 `KEY=value` 格式填写，每行一个。Cherry Studio 会根据模型生成所需变量；这里填写的同名变量会覆盖自动生成值。
+5. **检查更新并安装最新版本**：按需开启。开启后，启动前会查询并更新所选 CLI。
+6. 点击 **启动**。
 
-#### 6. 设置环境变量
+如果 CLI 尚未安装，Cherry Studio 会在首次启动时下载安装，然后在所选终端和工作目录中运行。Kimi CLI 由 uv 负责下载和启动，因此首次运行同样需要网络连接。
 
-* **自动配置**：你在第 4 步（模型）和第 5 步（工作目录）中的选择，会自动生成相应的环境变量。
-* **自定义添加**：如果你的 Agent 或项目需要其他特定的环境变量（例如 `PROXY_URL` 等），可以在此区域自定义添加。
+{% hint style="info" %}
+GitHub Copilot CLI 不使用 Cherry Studio 的模型选择器。需要额外认证信息时，请按照该 CLI 的要求在环境变量区域配置，例如使用 `GITHUB_TOKEN`。
+{% endhint %}
 
-<figure><img src="../.gitbook/assets/cherry-code-tools-env-vars.png" alt=""><figcaption><p>环境变量配置</p></figcaption></figure>
+## 环境变量与密钥
 
-#### 7. 更新选项
+除自定义环境变量外，Cherry Studio 会从所选模型服务中读取 API 地址、模型标识和 API Key，并转换为对应 CLI 需要的变量或启动参数。
 
-* **内置可执行文件**：Cherry Studio 已集成上述 Code Agent 的可执行文件，通常无需手动安装 CLI。
-* **自动更新**：如果希望 CLI 工具始终保持最新版本，可以勾选 **检查更新并安装最新版本**。勾选后，每次启动时程序都会联网检查并更新可执行工具包。
+自定义变量适合代理地址或 CLI 专用开关。填写前请确认变量名；同名自定义值优先于自动生成值，错误覆盖可能导致认证或连接失败。
 
-<figure><img src="../.gitbook/assets/cherry-code-tools-update-option.png" alt=""><figcaption><p>更新选项</p></figcaption></figure>
+{% hint style="warning" %}
+不要在截图、日志或公开问题中暴露 API Key、GitHub Token 或其他凭据。代码工具会把自定义环境变量保存在当前配置中，只应在可信设备上使用。
+{% endhint %}
 
-#### 8. 启动 Agent
+## 常见问题
 
-所有配置完成后，点击 **启动** 按钮。Cherry Studio 会自动调用系统自带的 Terminal（终端）工具，并在其中加载好所有环境变量，然后运行你选择的 Code Agent。现在你可以在弹出的终端窗口中与 AI Agent 交互。
+### 启动按钮不可用
 
-<figure><img src="../.gitbook/assets/cherry-code-tools-terminal.png" alt=""><figcaption><p>在终端中运行 Code Agent</p></figcaption></figure>
+确认已经安装 Bun、选择工作目录，并为除 GitHub Copilot CLI 之外的工具选择模型。
 
-***
+### 模型列表为空
 
-### 重要注意事项
+所选 CLI 只显示接口类型兼容的模型。返回模型服务设置，检查服务商是否启用、API Key 是否可用、模型是否已添加，以及模型的 Endpoint 类型。
 
-1. **模型兼容性说明**：
-   * **Claude Code**：需要选择支持 Anthropic API Endpoint 格式的模型。优先使用 Claude 系列模型；部分官方平台也会提供 Claude Code 兼容模型，具体以模型下拉列表和服务商说明为准。
-   * **Qwen Code**：支持 OpenAI Chat Completions API 格式的模型，推荐使用 Qwen Coder 系列模型以获得更好的代码生成效果。
-   * **Gemini CLI**：需要选择 Google Gemini 系列模型。
-   * **OpenAI Codex**：需要选择 OpenAI / Codex 兼容的 GPT 系列模型，具体以当前账号和模型服务商支持为准。
-   * **iFlow CLI** / **GitHub Copilot CLI** / **Kimi CLI** / **OpenCode**：需选择与其平台协议相互兼容的 API 模型，通常由对应的服务商官方渠道或 API 聚合网关提供。
-   * **注意**：第三方网关（如 One API、New API 等）即使能转发同名模型，也不一定兼容对应 CLI 的认证方式、Endpoint 格式或工具调用协议。若启动失败，请优先使用该 CLI 官方支持的模型服务。
-2. **依赖与环境冲突**：
-   * Cherry Studio 内部集成了独立的 Node.js 运行环境、Code Agent 可执行文件及环境变量配置，旨在提供一个开箱即用的纯净环境。
-   * 如果你在启动 Agent 时遇到依赖冲突或奇怪的错误，可以考虑暂时 **卸载或禁用系统内已安装的相关依赖**（如全局安装的 Node.js 或特定工具链），以排除冲突。
-3. **API Token 消耗警告**：
-   * **Code Agent 对 API Token 的消耗量非常大**。在处理复杂任务时，Agent 为了思考、规划和生成代码，可能会产生大量请求，导致 Token 快速消耗。
-   * 请务必根据自己的 API 额度和预算，**量力而为**，密切关注 Token 使用情况，以防止预算超支。
+### Kimi CLI 提示找不到 uv
 
-希望本教程能帮助你快速上手 Cherry Studio 强大的 Code Agent 功能！
+前往 **设置 → MCP 设置 → 环境依赖** 安装 uv。刚安装后仍未识别时，重启 Cherry Studio。
 
-***
+### 终端没有打开
 
-### 💡 获取帮助与提交反馈
+改选系统默认终端。Windows 使用其他终端时，确认对应程序已安装；WSL、Alacritty 或 WezTerm 还可以通过 **设置自定义终端路径** 指定可执行文件。
 
-如果您在配置或使用过程中遇到任何疑问、Bug 或有功能改进建议，请参考 [反馈与建议](../question-contact/suggestions.md) 中提供的官方渠道。
+首次启动、安装 CLI 或检查更新都依赖网络，可能需要等待。若失败，请先检查网络、代理和 API 服务配置，再重新启动。

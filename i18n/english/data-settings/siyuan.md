@@ -1,63 +1,198 @@
 ---
+description: Connect to the SiYuan Note API and export Cherry Studio V2 conversations or notes as SiYuan documents.
 icon: map
 ---
-# Siyuan Notes Configuration Tutorial
 
+# SiYuan Note Configuration and Export
+
+Cherry Studio V2 can export a complete topic, an individual message, or a Cherry Studio note to a specified SiYuan notebook. Exported content is created as a Markdown document through the SiYuan Kernel API.
+
+Configuration is under **Settings > Data > Siyuan Note**. **Settings > Data > Export Menu** only controls whether “Export to SiYuan Note” is displayed.
 
 {% hint style="warning" %}
-This document was translated from Chinese by AI and has not yet been reviewed.
+An API Token can access your SiYuan data. Do not show the complete Token in screenshots, feedback, or shared configurations. For a self-hosted instance, do not expose an unprotected API directly to the internet.
 {% endhint %}
 
+## Prepare SiYuan Note
 
+1. Start SiYuan Note and confirm that its Kernel is running.
+2. Create or select the notebook that will receive exported content.
+3. Obtain the API Token.
+4. Copy the target notebook ID.
+5. Confirm that the device running Cherry Studio can reach the SiYuan API URL.
 
+The default local Endpoint for the official SiYuan API is:
 
-Supports exporting topics and messages to Siyuan Notes.
+```text
+http://127.0.0.1:6806
+```
 
-## Step One
+Find the API Token under **SiYuan Note > Settings > About**. For the complete interface contract, see the [official SiYuan API documentation](https://github.com/siyuan-note/siyuan/blob/master/API.md).
 
-Open Siyuan Notes and create a notebook.
+## Obtain the Notebook ID
 
-<figure><img src="../.gitbook/assets/siyuan-image-1.png" alt=""><figcaption><p>Click to create a new notebook</p></figcaption></figure>
+Open the target notebook's settings in SiYuan Note and use **Copy Notebook ID**. An ID usually looks like:
 
-## Step Two
+```text
+20210817205410-2kvfpfn
+```
 
-Open the notebook settings and copy the `Notebook ID`.
+Do not enter the notebook name, workspace path, or a document ID. Cherry Studio passes this value as the `notebook` parameter to SiYuan's document creation interface.
 
-<figure><img src="../.gitbook/assets/siyuan-image-2.png" alt="" width="400"><figcaption><p>Open notebook settings</p></figcaption></figure>
+## Configure Cherry Studio
 
-<figure><img src="../.gitbook/assets/siyuan-image-3.png" alt=""><figcaption><p>Click the Copy Notebook ID button</p></figcaption></figure>
+Go to **Settings > Data > Siyuan Note**.
 
-## Step Three
+![Siyuan Note settings for API URL, token, box ID, and root path](../.gitbook/assets/cherry-v2-071-siyuan-en.png)
 
-Copy the Notebook ID and fill it into Cherry Studio settings.
+Enter:
 
-<figure><img src="../.gitbook/assets/siyuan-image-4.png" alt=""><figcaption><p>Fill in the Notebook ID in the data settings</p></figcaption></figure>
+| Field | Description |
+| --- | --- |
+| Siyuan Note API URL | The SiYuan Kernel URL, such as `http://127.0.0.1:6806` |
+| Siyuan Note Token | The API Token displayed in SiYuan settings |
+| Siyuan Note Box ID | The target notebook ID that receives exported documents |
+| Siyuan Note Root Path | Optional; the parent path for all exported documents in the notebook |
 
-## Step Four
+Do not add `/` to the end of **Siyuan Note API URL**. This avoids a double slash when it is joined with an `/api/...` path.
 
-Fill in the Siyuan Notes address.
+### Local and Self-Hosted URLs
 
-*   **Local**
-    Usually `http://127.0.0.1:6806`
-*   **Self-deployed**
-    Your domain `http://note.domain.com`
+- **SiYuan and Cherry Studio are on the same computer:** Usually use `http://127.0.0.1:6806`.
+- **SiYuan is on another local network device or NAS:** Use an IP address and port that the Cherry Studio device can reach; do not enter the other device's own `127.0.0.1`.
+- **Publicly accessible self-hosted instance:** Use an HTTPS domain and restrict source access with a firewall or reverse proxy.
 
-<figure><img src="../.gitbook/assets/siyuan-image-5.png" alt=""><figcaption><p>Enter your Siyuan Notes address</p></figcaption></figure>
+When connecting to SiYuan behind Docker, a NAS, or a reverse proxy, also confirm that the `/api/` path is not rewritten or blocked.
 
-## Step Five
+## Check the Connection
 
-Copy the Siyuan Notes `API Token`.
+After entering **Siyuan Note API URL** and **Siyuan Note Token**, click **Check**.
 
-<figure><img src="../.gitbook/assets/siyuan-image-6.png" alt=""><figcaption><p>Copy Siyuan Notes Token</p></figcaption></figure>
+Cherry Studio calls:
 
-Fill it into Cherry Studio settings and check.
+```text
+POST /api/notebook/lsNotebooks
+```
 
-<figure><img src="../.gitbook/assets/siyuan-image-7.png" alt=""><figcaption><p>Fill in the database ID and click Check</p></figcaption></figure>
+A successful check means that the URL is reachable, the Token works, and the interface returns `code: 0`. The check does not verify:
 
-## Step Six
+- Whether the entered Siyuan Note Box ID exists;
+- Whether the target notebook is open;
+- Whether the Siyuan Note Root Path is valid;
+- Whether the current configuration can create a document successfully.
 
-Congratulations, the Siyuan Notes configuration is complete ✅ Now you can export Cherry Studio content to your Siyuan Notes.
+Run one real export even after the check succeeds.
 
-<figure><img src="../.gitbook/assets/siyuan-image-8.png" alt=""><figcaption><p>Export to Siyuan Notes</p></figcaption></figure>
+## Set the Siyuan Note Root Path
 
-<figure><img src="../.gitbook/assets/siyuan-image-9.png" alt=""><figcaption><p>View export results</p></figcaption></figure>
+When left blank, Cherry Studio uses:
+
+```text
+/CherryStudio
+```
+
+You can also enter another path, for example:
+
+```text
+/AI Conversations
+```
+
+If the path does not begin with `/`, Cherry Studio adds it automatically.
+
+### Use a Date Template
+
+The root path is first rendered through SiYuan's `renderSprig` interface, so you can use a supported Sprig template to organize documents by date. For example:
+
+```text
+/CherryStudio/{{now | date "2006/01"}}
+```
+
+This may render as:
+
+```text
+/CherryStudio/2026/07
+```
+
+Invalid template syntax causes export to fail. For the first configuration, use a fixed path, confirm that export succeeds, then add a template.
+
+## Enable the Export Menu
+
+If “Export to SiYuan Note” is missing from a menu:
+
+1. Open **Settings > Data > Export Menu**.
+2. Enable **Export to SiYuan Note**.
+3. Return to the topic, message, or note and reopen the export menu.
+
+This switch controls only menu visibility; it does not fill in integration settings automatically.
+
+## Perform the First Export
+
+First test with a short message that contains no sensitive information:
+
+1. Open the menu for a topic, message, or Cherry Studio note.
+2. Select **Export to SiYuan Note**.
+3. Wait for a success or error message.
+4. Return to the target SiYuan notebook.
+5. Check whether the root path contains a document named from the topic or message title.
+6. Open the document and review its heading, paragraphs, lists, code blocks, and formulas.
+
+Before each export, Cherry Studio calls `lsNotebooks` again to check the connection, then:
+
+1. Renders the Document Root Path.
+2. Removes certain special characters from the title.
+3. Joins the root path and document title.
+4. Calls `POST /api/filetree/createDocWithMd` to create the document.
+
+The official SiYuan interface does not overwrite an existing document when the same path is requested again. To update old content, handle the old document in SiYuan, or change the title or root path and export again.
+
+## Exported Content Scope
+
+- **Complete Topic:** Convert messages in the current topic to Markdown in order.
+- **Individual Message:** Export only the selected message.
+- **Cherry Studio Note:** Export the current note's Markdown content.
+
+The current SiYuan export has no separate “Include Reasoning Content” switch. To preserve specific content, confirm the actual text to be exported in Cherry Studio first.
+
+## Security Recommendations
+
+- For local use, keep the API listening only on the local device or a trusted network.
+- For remote use, enable HTTPS and restrict access through the reverse proxy and firewall.
+- If a Token leaks, replace it immediately in SiYuan, then update Cherry Studio.
+- Do not put a real Token in documentation, screenshots, chats, or a version control repository.
+- Configure reliable backups for important notebooks; export does not replace a SiYuan data backup.
+
+## FAQ
+
+### Check reports “Enter the API URL and Token”
+
+The check requires only API URL and Token. Confirm that both inputs are nonempty and that the URL includes `http://` or `https://`.
+
+### The local URL cannot connect
+
+Confirm that SiYuan is running, a browser on the same computer can reach `127.0.0.1:6806`, and the port has not changed. You cannot use `127.0.0.1` when Cherry Studio and SiYuan are on different devices.
+
+### The check succeeds, but export reports incomplete configuration
+
+An actual export also requires **Siyuan Note Box ID**. Enter the notebook ID, not the notebook name or a document ID.
+
+### The check succeeds, but document creation fails
+
+Confirm that the target notebook exists and is available, then simplify the root path to `/CherryStudio`. If export then works, the original Sprig template or path may be invalid.
+
+### A self-hosted instance returns 401 or 403
+
+Confirm that the Token is complete, the reverse proxy preserves the `Authorization: Token ...` request header, and its access policy allows the device running Cherry Studio.
+
+### The service returns 404 or an HTML page
+
+The API URL may point to a web subpath, or the reverse proxy may not forward `/api/` to the SiYuan Kernel. Use the instance root URL and do not include `/api/notebook/lsNotebooks`.
+
+### A repeated export did not overwrite the old document
+
+This is the behavior of the `createDocWithMd` interface: the same path does not overwrite an existing document. Change the document title or root path, or handle the old document in SiYuan first.
+
+### SiYuan Note is missing from the conversation menu
+
+Go to **Settings > Data > Export Menu** and enable **Export to SiYuan Note**. If it is already enabled, reenter the current conversation and open the menu again.
+
+If the issue persists, submit your Cherry Studio and SiYuan versions, deployment method, redacted API URL, Notebook ID, root path, and interface error details through [Feedback and Suggestions](../question-contact/suggestions.md).

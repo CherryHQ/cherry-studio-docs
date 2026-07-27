@@ -1,32 +1,33 @@
 ---
+description: 瞭解 Cherry Studio V2 目前 S3 相容儲存空間備份頁面的可用狀態。
 icon: cloud-binary
 ---
-# S3 相容儲存備份
 
+# S3 相容儲存空間備份
+
+目前版本可以透過 **設定 > 資料 > S3 儲存空間** 開啟設定頁面，但頁面明確提示 **「V2 備份與還原功能尚未上線，敬請期待」**。
+
+![S3 儲存空間設定頁面與 V2 備份功能尚未上線提示](../.gitbook/assets/cherry-v2-068-s3-unavailable-zh-tw.png)
 
 {% hint style="warning" %}
-此文件由 AI 從中文翻譯而來，尚未經過審閱。
+目前版本無法透過此頁面建立、還原或自動管理 S3 備份。請勿將頁面中顯示的設定項目理解為已經可用的功能。
 {% endhint %}
 
+## 頁面目前顯示的內容
 
+頁面預留了以下設定和操作：
 
+- API 位址、區域和儲存空間；
+- Access Key ID 與 Secret Access Key；
+- 選用的備份目錄；
+- **立即備份**與**管理備份**；
+- 自動同步、備份數量上限和精簡備份。
 
-Cherry Studio 資料備份支援透過 S3 相容儲存（物件儲存）的方式進行備份。常見的 S3 相容儲存服務有：AWS S3、Cloudflare R2、阿里雲 OSS、騰訊雲 COS 以及 MinIO 等。
+這些輸入框、按鈕和開關目前均無法使用。看到頁面不代表 S3 連線已經建立，也不能用來驗證 Endpoint、儲存空間或憑證。
 
-基於 S3 相容儲存可以透過 `A電腦` $$\xrightarrow{\text{備份}}$$ `S3儲存` $$\xrightarrow{\text{恢復}}$$ `B電腦` 的方式來實現多端資料同步。
+## 使用建議
 
-### 配置 S3 相容儲存
-
-1.  建立物件儲存桶（Bucket），並記錄下儲存桶名稱。**強烈建議將儲存桶設定為私有讀寫以避免備份資料洩露！！**
-2.  參考文件，前往雲服務控制台取得 S3 相容儲存的 `Access Key ID`、`Secret Access Key`、`Endpoint`、`Bucket`、`Region` 等資訊。
-    - **Endpoint**：S3 相容儲存的存取地址，通常形如 `https://<bucket-name>.<region>.amazonaws.com` 或 `https://<ACCOUNT_ID>.r2.cloudflarestorage.com`。
-    - **Region**：儲存桶所在的區域，例如 `us-west-1`、`ap-southeast-1` 等，cloudflare R2 請填寫 `auto`。
-    - **Bucket**：儲存桶名稱。
-    - **Access Key ID** 和 **Secret Access Key**：用於身份驗證的憑證。
-    - **Root Path**：可選，指定備份到儲存桶時的根路徑，預設為空。
-    - **相關文件**
-        - AWS S3：[取得 Access Key ID 和 Secret Access Key](https://docs.aws.amazon.com/zh_cn/IAM/latest/UserGuide/id_credentials_access-keys.html)
-        - Cloudflare R2：[取得 Access Key ID 和 Secret Access Key](https://developers.cloudflare.com/r2/api/tokens/)
-        - 阿里雲 OSS：[取得 Access Key ID 和 Access Key Secret](https://help.aliyun.com/zh/oss/developer-reference/use-amazon-s3-sdks-to-access-oss#306596478ed3r)
-        - 騰訊雲 COS：[取得 SecretId 和 SecretKey](https://cloud.tencent.com/document/product/436/37421)
-3.  在 S3 備份設定中填寫上述資訊，點擊備份按鈕即可進行備份，點擊管理按鈕可以查看和管理備份檔案列表。
+- 目前不要在此頁面輸入真實的物件儲存憑證，也不要依賴它保存重要資料。
+- 不要根據舊版介面或舊教學執行備份、還原、自動同步或備份清理。
+- 物件儲存中已存在的檔案不會被此未開放頁面讀取、修改或刪除。
+- 後續版本啟用此功能後，請以應用程式中的可用狀態、更新說明和本頁最新內容為準。

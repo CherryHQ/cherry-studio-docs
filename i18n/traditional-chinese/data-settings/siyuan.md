@@ -1,60 +1,198 @@
 ---
+description: 連線至思源筆記 API，並將 Cherry Studio V2 的對話或筆記匯出為思源文件。
 icon: map
 ---
 
+# 思源筆記設定與匯出
+
+Cherry Studio V2 可以將完整話題、單一訊息或 Cherry Studio 筆記匯出到指定的思源筆記本。匯出內容會透過思源 Kernel API 建立為 Markdown 文件。
+
+設定入口位於 **設定 > 資料 > 思源筆記設定**。**設定 > 資料 > 匯出選單設定**只會控制「匯出到思源筆記」是否顯示。
+
 {% hint style="warning" %}
-此文件由 AI 從中文翻譯而來，尚未經過審閱。
+API Token 可以存取你的思源資料。請勿在截圖、意見回饋或共用設定中顯示完整的 Token；自行部署的執行個體請勿將未受保護的 API 直接公開到網際網路。
 {% endhint %}
 
-# 思源筆記配置教程
+## 準備思源筆記
 
-支援將話題、訊息匯出到思源筆記。
+1. 啟動思源筆記，確認 Kernel 正常執行。
+2. 建立或選擇用於接收匯出內容的筆記本。
+3. 取得 API Token。
+4. 複製目標筆記本 ID。
+5. 確認 Cherry Studio 所在裝置可以存取思源 API 位址。
 
-## 第一步
+思源官方 API 的本機預設 Endpoint 為：
 
-開啟思源筆記，建立一個筆記本
+```text
+http://127.0.0.1:6806
+```
 
-<figure><img src="../.gitbook/assets/siyuan-image-1.png" alt=""><figcaption><p>點擊新建筆記本</p></figcaption></figure>
+你可以在 **思源筆記 > 設定 > 關於**中查看 API Token。完整介面規格請參閱[思源官方 API 文件](https://github.com/siyuan-note/siyuan/blob/master/API.md)。
 
-## 第二步
+## 取得筆記本 ID
 
-開啟筆記本進入設定，並複製`筆記本ID`
+在思源筆記中開啟目標筆記本的設定，使用 **複製筆記本 ID**。ID 通常類似：
 
-<figure><img src="../.gitbook/assets/siyuan-image-2.png" alt="" width="400"><figcaption><p>開啟筆記本設定</p></figcaption></figure>
+```text
+20210817205410-2kvfpfn
+```
 
-<figure><img src="../.gitbook/assets/siyuan-image-3.png" alt=""><figcaption><p>點擊複製筆記本ID按鈕</p></figcaption></figure>
+請勿填寫筆記本名稱、工作空間路徑或文件 ID。Cherry Studio 會將該值作為 `notebook` 參數傳給思源的文件建立介面。
 
-## 第三步
+## 在 Cherry Studio 中設定
 
-將複製的筆記本ID填寫到 Cherry Studio 設定中
+前往 **設定 > 資料 > 思源筆記設定**。
 
-<figure><img src="../.gitbook/assets/siyuan-image-4.png" alt=""><figcaption><p>將筆記本ID填寫到資料設定中</p></figcaption></figure>
+![思源筆記設定頁面的 API URL、權杖、筆記本 ID 與根路徑](../.gitbook/assets/cherry-v2-071-siyuan-zh-tw.png)
 
-## 第四步
+填寫：
 
-填寫思源筆記地址
+| 欄位 | 說明 |
+| --- | --- |
+| 思源筆記 API URL | 思源 Kernel 的存取位址，例如 `http://127.0.0.1:6806` |
+| 思源筆記權杖 | 思源設定中顯示的 API Token |
+| 筆記本 ID | 接收匯出文件的目標 Notebook ID |
+| 思源筆記根路徑 | 選填；所有匯出文件在筆記本中的父路徑 |
 
-* **本地**\
-  通常為 `http://127.0.0.1:6806`
-* **自部署**\
-  輸入你的網域名稱 `http://note.domain.com`
+建議不要在 **思源筆記 API URL** 末尾加上 `/`，以免與 `/api/...` 路徑組合後出現兩個斜線。
 
-<figure><img src="../.gitbook/assets/siyuan-image-5.png" alt=""><figcaption><p>填入你的思源筆記地址</p></figcaption></figure>
+### 本機與自行部署位址
 
-## 第五步
+- **思源與 Cherry Studio 位於同一部電腦：** 通常使用 `http://127.0.0.1:6806`。
+- **思源位於區域網路中的其他裝置或 NAS：** 使用 Cherry Studio 所在裝置可以存取的 IP 與連接埠，不能填寫對方裝置自己的 `127.0.0.1`。
+- **透過網際網路自行部署：** 使用帶有 HTTPS 的網域，並在防火牆或反向 Proxy 中限制存取來源。
 
-複製思源筆記 `API Token`
+連線至 Docker、NAS 或反向 Proxy 後方的思源時，還要確認 `/api/` 路徑沒有被改寫或攔截。
 
-<figure><img src="../.gitbook/assets/siyuan-image-6.png" alt=""><figcaption><p>複製思源筆記令牌</p></figcaption></figure>
+## 檢查連線
 
-填入 Cherry Studio 設定中並進行檢查
+填入 **思源筆記 API URL**和 **思源筆記權杖**後，點擊 **檢查**。
 
-<figure><img src="../.gitbook/assets/siyuan-image-7.png" alt=""><figcaption><p>填寫資料庫 ID 並點擊檢查</p></figcaption></figure>
+Cherry Studio 會呼叫：
 
-## 第六步
+```text
+POST /api/notebook/lsNotebooks
+```
 
-恭喜您，思源筆記的配置已完成 ✅ 接下來即可將 Cherry Studio 內容匯出到您的思源筆記中
+檢查成功表示位址可以存取、Token 可用，而且介面傳回 `code: 0`。檢查不會驗證：
 
-<figure><img src="../.gitbook/assets/siyuan-image-8.png" alt=""><figcaption><p>匯出到思源筆記</p></figcaption></figure>
+- 填寫的筆記本 ID 是否存在；
+- 目標筆記本是否已經開啟；
+- 思源筆記根路徑是否有效；
+- 目前的設定能否成功建立文件。
 
-<figure><img src="../.gitbook/assets/siyuan-image-9.png" alt=""><figcaption><p>檢視匯出結果</p></figcaption></figure>
+因此，檢查成功後仍要執行一次實際匯出。
+
+## 設定思源筆記根路徑
+
+留空時，Cherry Studio 會使用：
+
+```text
+/CherryStudio
+```
+
+你也可以填寫其他路徑，例如：
+
+```text
+/AI 對話
+```
+
+如果路徑不是以 `/` 開頭，Cherry Studio 會自動補上。
+
+### 使用日期範本
+
+根路徑會先透過思源的 `renderSprig` 介面轉譯，因此可以使用思源支援的 Sprig 範本依日期歸檔。例如：
+
+```text
+/CherryStudio/{{now | date "2006/01"}}
+```
+
+轉譯後可能得到：
+
+```text
+/CherryStudio/2026/07
+```
+
+範本語法錯誤會導致匯出失敗。第一次設定時，建議先使用固定路徑，確認匯出成功後再加入範本。
+
+## 啟用匯出選單
+
+如果選單中沒有「匯出到思源筆記」：
+
+1. 開啟 **設定 > 資料 > 匯出選單設定**。
+2. 開啟 **匯出到思源筆記**。
+3. 返回話題、訊息或筆記，重新開啟匯出選單。
+
+此開關只會控制選單是否顯示，不會自動填寫整合設定。
+
+## 執行第一次匯出
+
+建議先使用不含敏感資訊的短訊息進行測試：
+
+1. 開啟話題、訊息或 Cherry Studio 筆記的選單。
+2. 選擇 **匯出到思源筆記**。
+3. 等待成功或錯誤提示。
+4. 返回目標思源筆記本。
+5. 檢查根路徑下是否出現以話題或訊息標題命名的文件。
+6. 開啟文件，檢查標題、段落、清單、程式碼區塊和公式。
+
+每次匯出前，Cherry Studio 會先再次呼叫 `lsNotebooks` 檢查連線，然後：
+
+1. 轉譯文件根路徑；
+2. 清理標題中的部分特殊字元；
+3. 組合根路徑和文件標題；
+4. 呼叫 `POST /api/filetree/createDocWithMd` 建立文件。
+
+思源官方介面不會讓相同路徑的重複請求覆寫現有文件。需要更新舊內容時，請在思源中處理舊文件，或修改標題 / 根路徑後重新匯出。
+
+## 匯出內容範圍
+
+- **完整話題：** 依目前話題的訊息順序轉換為 Markdown。
+- **單一訊息：** 只匯出選取的訊息。
+- **Cherry Studio 筆記：** 匯出目前筆記的 Markdown 內容。
+
+目前的思源匯出沒有獨立的「包含思考內容」開關。需要保留特定內容時，應先在 Cherry Studio 中確認實際要匯出的文字。
+
+## 安全建議
+
+- 在本機使用時，讓 API 只監聽本機或受信任的網路。
+- 遠端使用時，請啟用 HTTPS，並限制反向 Proxy 和防火牆的存取。
+- Token 外洩後，請立即在思源中更換，再更新 Cherry Studio。
+- 請勿將真實 Token 寫入文件、截圖、聊天或版本庫。
+- 為重要筆記本設定可靠的備份；匯出功能不能取代思源資料備份。
+
+## 常見問題
+
+### 檢查提示「請填寫 API 位址和 Token」
+
+檢查只需要 API 位址和 Token。請確認兩個輸入框都不是空值，而且位址包含 `http://` 或 `https://`。
+
+### 無法連線到本機位址
+
+請確認思源正在執行、瀏覽器可以在同一部電腦上存取 `127.0.0.1:6806`，並檢查連接埠是否已修改。如果 Cherry Studio 與思源不在同一部裝置上，不能使用 `127.0.0.1`。
+
+### 檢查成功，但匯出提示設定不完整
+
+實際匯出還需要 **筆記本 ID**。請檢查填寫的是 Notebook ID，而不是筆記本名稱或文件 ID。
+
+### 檢查成功，但建立文件失敗
+
+請確認目標筆記本存在且可用，並先將根路徑改為簡單的 `/CherryStudio`。如果如此可以匯出，原來的 Sprig 範本或路徑可能不合法。
+
+### 自行部署的執行個體傳回 401 或 403
+
+請檢查 Token 是否完整、反向 Proxy 是否保留 `Authorization: Token ...` 請求標頭，以及存取原則是否允許 Cherry Studio 所在裝置。
+
+### 傳回 404 或 HTML 頁面
+
+API 位址可能填成了網頁子路徑，或反向 Proxy 沒有將 `/api/` 轉送給思源 Kernel。API 位址應是執行個體的根位址，不要包含 `/api/notebook/lsNotebooks`。
+
+### 重複匯出後沒有覆寫舊文件
+
+這是 `createDocWithMd` 的介面行為：相同路徑不會覆寫現有文件。請修改文件標題或根路徑，或先在思源中處理舊文件。
+
+### 對話選單中沒有思源筆記
+
+前往 **設定 > 資料 > 匯出選單設定**，開啟 **匯出到思源筆記**。如果已經開啟，請重新進入目前的對話，再開啟選單。
+
+如果仍無法解決，請透過[意見回饋與建議](../question-contact/suggestions.md)提交 Cherry Studio 與思源版本、部署方式、已移除敏感資訊的 API 位址、筆記本 ID、根路徑和介面錯誤資訊。

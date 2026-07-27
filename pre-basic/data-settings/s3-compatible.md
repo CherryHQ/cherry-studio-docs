@@ -1,31 +1,33 @@
 ---
+description: 了解 Cherry Studio V2 当前 S3 兼容存储备份页面的可用状态。
 icon: cloud-binary
 ---
 
 # S3 兼容存储备份
 
-Cherry Studio 数据备份支持通过 S3 兼容存储(对象存储)的方式进行备份。常见的 S3 兼容存储服务有：AWS S3、Cloudflare R2、阿里云 OSS、腾讯云 COS 以及 MinIO 等。
+当前版本可以通过 **设置 > 数据 > S3 存储** 打开配置页面，但页面明确提示 **“V2 备份恢复尚未上线，敬请期待”**。
 
-基于 S3 兼容存储可以通过 `A电脑` $$\xrightarrow{\text{备份}}$$ `S3存储` $$\xrightarrow{\text{恢复}}$$ `B电脑` 的方式来实现多端数据同步。
+![S3 存储设置页面与 V2 备份功能尚未上线提示](../../.gitbook/assets/cherry-v2-068-s3-unavailable-zh-cn.png)
 
-### 配置 S3 兼容存储
+{% hint style="warning" %}
+当前版本不能通过此页面创建、恢复或自动管理 S3 备份。请不要把页面中显示的配置项理解为已经可用的功能。
+{% endhint %}
 
-1. 创建对象存储桶（Bucket），并记录下存储桶名称。**强烈建议将存储桶设置为私有读写以避免备份数据泄露！！**
-2. 参考文档，前往云服务控制台获取 S3 兼容存储的 `Access Key ID`、`Secret Access Key`、`Endpoint`、`Bucket`、`Region` 等信息。
-   - **Endpoint**：S3 兼容存储的访问地址，通常形如 `https://<bucket-name>.<region>.amazonaws.com` 或 `https://<ACCOUNT_ID>.r2.cloudflarestorage.com`。
-   - **Region**：存储桶所在的区域，例如 `us-west-1`、`ap-southeast-1` 等，cloudflare R2 请填写 `auto`。
-   - **Bucket**：存储桶名称。
-   - **Access Key ID** 和 **Secret Access Key**：用于身份验证的凭据。
-   - **Root Path**：可选，指定备份到存储桶时的根路径，默认为空。
-   - **相关文档**
-     - AWS S3：[获取 Access Key ID 和 Secret Access Key](https://docs.aws.amazon.com/zh_cn/IAM/latest/UserGuide/id_credentials_access-keys.html)
-     - Cloudflare R2：[获取 Access Key ID 和 Secret Access Key](https://developers.cloudflare.com/r2/api/tokens/)
-     - 阿里云 OSS：[获取 Access Key ID 和 Access Key Secret](https://help.aliyun.com/zh/oss/developer-reference/use-amazon-s3-sdks-to-access-oss#306596478ed3r)
-     - 腾讯云 COS：[获取 SecretId 和 SecretKey](https://cloud.tencent.com/document/product/436/37421)
-3. 在 S3 备份设置中填写上述信息，点击备份按钮即可进行备份，点击管理按钮可以查看和管理备份文件列表。
+## 页面当前显示的内容
 
-***
+页面预留了以下配置和操作：
 
-### 💡 获取帮助与提交反馈
+- API 地址、区域和存储桶；
+- Access Key ID 与 Secret Access Key；
+- 可选的备份目录；
+- **立即备份**与**管理备份**；
+- 自动同步、最大备份数和精简备份。
 
-如果您在配置或使用过程中遇到任何疑问、Bug 或有功能改进建议，请参考 [反馈与建议](../../question-contact/suggestions.md) 中提供的官方渠道。
+这些输入框、按钮和开关当前均不可用。看到页面不表示 S3 连接已经建立，也不能用于验证 Endpoint、存储桶或凭据。
+
+## 使用建议
+
+- 当前不要在此页面输入真实的对象存储凭据，也不要依赖它保存重要数据。
+- 不要根据旧版界面或旧教程执行备份、恢复、自动同步或备份清理。
+- 已经存在于对象存储中的文件不会被此不可用页面读取、修改或删除。
+- 后续版本启用该功能后，请以应用中的可用状态、更新说明和本页最新内容为准。

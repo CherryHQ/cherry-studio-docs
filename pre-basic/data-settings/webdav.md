@@ -1,63 +1,31 @@
 ---
+description: 了解 Cherry Studio V2 当前 WebDAV 备份页面的可用状态。
 icon: cloud-arrow-up
 ---
 
 # WebDAV 备份
 
-Cherry Studio 数据备份支持通过 WebDAV 的方式进行备份。你可以选择合适的 WebDAV 服务来进行云端备份。
+当前版本可以通过 **设置 > 数据 > WebDAV** 打开 WebDAV 页面，但页面明确提示 **“V2 备份恢复尚未上线，敬请期待”**。
 
-基于 WebDAV 可以通过 `A电脑` $$\xrightarrow{\text{备份}}$$ `WebDAV` $$\xrightarrow{\text{恢复}}$$ `B电脑` 的方式来实现多端数据同步。
+![WebDAV 设置页面与 V2 备份功能尚未上线提示](../../.gitbook/assets/cherry-v2-067-webdav-zh-cn.png)
 
-#### 以坚果云为例
-
-1. 登录坚果云，点击右上角用户名，选择“账户信息”：
-
-<figure><img src="../../.gitbook/assets/image (39).png" alt=""><figcaption></figcaption></figure>
-
-2. 选择“安全选项”，点击“添加应用”
-
-<figure><img src="../../.gitbook/assets/image (40).png" alt=""><figcaption></figcaption></figure>
-
-3. 输入应用名称，生成随机密码；
-
-<figure><img src="../../.gitbook/assets/image (41).png" alt=""><figcaption></figcaption></figure>
-
-4. 复制记录密码；
-
-<figure><img src="../../.gitbook/assets/image (42).png" alt=""><figcaption></figcaption></figure>
-
-5. 获取服务器地址，账户和密码；
-
-<figure><img src="../../.gitbook/assets/image (43).png" alt=""><figcaption></figcaption></figure>
-
-6. 在 Cherry Studio 设置——数据设置中，填写 WebDAV 信息；
-
-<figure><img src="../../.gitbook/assets/image (48).png" alt=""><figcaption></figcaption></figure>
-
-7. 选择备份或者恢复数据，并可以设置自动备份的时间周期。
-
-<figure><img src="../../.gitbook/assets/image (47).png" alt=""><figcaption></figcaption></figure>
-
-{% hint style="success" %}
-WebDAV 服务门槛比较低的一般就是网盘：
-
-* [坚果云](https://www.jianguoyun.com/)
-* [123 盘](https://www.123pan.com/)（需要会员）
-* [阿里云盘](https://www.alipan.com/)（需要购买）
-* [Box](https://www.box.com/) (免费空间容量为 10GB，单个文件大小限制为 250MB。)
-* [Dropbox](https://www.dropbox.com/) （Dropbox 免费 2GB，可以邀请好友扩容 16GB 。）
-* [TeraCloud](https://teracloud.jp/en/) （免费空间为 10GB，另外一个通过邀请可以获得 5GB 额外空间。）
-* [Yandex Disk](https://disk.yandex.com/) (免费用户提供 10GB 容量。)
-
-其次是一些需要自己部署服务：
-
-* [Alist](https://alist.nn.ci/zh/)
-* [Cloudreve](https://cloudreve.org/)
-* [sharelist](https://github.com/reruin/sharelist)
+{% hint style="warning" %}
+当前版本不能通过此页面创建、恢复或自动管理 WebDAV 备份。请不要把页面中显示的配置项理解为已经可用的功能。
 {% endhint %}
 
-***
+## 页面当前显示的内容
 
-### 💡 获取帮助与提交反馈
+页面预留了以下配置和操作：
 
-如果您在配置或使用过程中遇到任何疑问、Bug 或有功能改进建议，请参考 [反馈与建议](../../question-contact/suggestions.md) 中提供的官方渠道。
+- WebDAV 地址、用户名、密码和路径；
+- **备份到 WebDAV**与**从 WebDAV 恢复**；
+- 自动备份周期和最大备份数；
+- 精简备份选项。
+
+这些输入框、按钮和开关当前均不可用。看到页面不表示 WebDAV 连接已经建立，也不能用于验证服务器地址或凭据。
+
+## 使用建议
+
+- 当前不要在此页面输入真实 WebDAV 凭据，也不要依赖它保存重要数据。
+- 不要根据旧版界面或旧教程执行备份、恢复或自动备份操作。
+- 后续版本启用该功能后，请以应用中的可用状态、更新说明和本页最新内容为准。

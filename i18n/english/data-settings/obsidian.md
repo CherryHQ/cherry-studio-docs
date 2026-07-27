@@ -1,137 +1,168 @@
 ---
-description: 数据设置→Obsidian配置
+description: Export Cherry Studio V2 topics, messages, or notes to a local Obsidian vault.
 icon: gem
 ---
-# Obsidian Configuration Tutorial
 
+# Obsidian Configuration and Export
 
-{% hint style="warning" %}
-This document was translated from Chinese by AI and has not yet been reviewed.
-{% endhint %}
+Cherry Studio V2 can export a complete topic, an individual message, or a Cherry Studio note as a Markdown file in Obsidian. Export uses Obsidian's built-in `obsidian://` URI and the system clipboard; no third-party Obsidian plugin is required.
 
-
-
-
-Cherry Studio supports integration with Obsidian, allowing you to export full conversations or single conversation entries to your Obsidian vault.
+Configuration is under **Settings > Integrations > Obsidian**. **Data Settings > Export Menu** only controls whether “Export to Obsidian” appears in menus.
 
 {% hint style="warning" %}
-This process does not require installing additional Obsidian plugins. However, since Cherry Studio's import to Obsidian works similarly to Obsidian Web Clipper, it is recommended that users upgrade Obsidian to the latest version (current Obsidian version should be at least greater than **1.7.2**), to avoid [import failures if the conversation is too long](https://github.com/obsidianmd/obsidian-clipper/releases/tag/0.7.0).
+“New (overwrite if it exists)” replaces an existing Markdown file at the same path. For your first test, create a test folder and back up any important vault first.
 {% endhint %}
 
-## Latest Tutorial
+## Before You Begin
+
+1. Install Obsidian on the current computer and launch it at least once.
+2. Open the target local vault in Obsidian.
+3. Confirm that the vault folder still exists and that the current user can read and write it.
+4. Reopen Obsidian settings in Cherry Studio.
+
+Cherry Studio reads Obsidian's local configuration and lists vaults registered on this computer:
+
+- Windows: Reads the Obsidian configuration under the user's app data.
+- macOS: Reads `~/Library/Application Support/obsidian/obsidian.json`.
+- Linux: Supports common XDG, Snap, and Flatpak configuration locations.
+
+A vault synchronized to another computer but never opened in the current Obsidian client does not automatically appear in the list.
+
+## Choose the Default Vault
+
+1. Open **Settings > Integrations > Obsidian**.
+2. Under **Default Obsidian Vault**, select the target vault.
+3. Return to the conversation page.
+
+If no default has been selected, Cherry Studio uses the first vault in the discovered list. You can still temporarily choose another vault in the export dialog.
 
 {% hint style="info" %}
-Compared to the old version of exporting to Obsidian, the new export to Obsidian feature can automatically select the vault path, eliminating the need to manually enter the vault name and folder name.
+“Repository” and “Vault” in the Cherry Studio interface both refer to an Obsidian vault. This setting selects a local vault name, not a remote Obsidian Sync vault or account.
 {% endhint %}
 
-### Step One: Configure Cherry Studio
+## Enable the Export Menu
 
-Open Cherry Studio's _Settings_ → _Data Settings_ → _Obsidian Settings_ menu. The dropdown box will automatically display the names of Obsidian vaults opened on this machine. Select your target Obsidian vault:
+If “Export to Obsidian” is missing from a menu:
 
-<figure><img src="../.gitbook/assets/image (142).png" alt=""><figcaption></figcaption></figure>
+1. Open **Settings > Data Settings > Export Menu**.
+2. Enable **Export to Obsidian**.
+3. Return to the conversation or note and reopen its export menu.
 
-### Step Two: Export Conversation
+This switch controls only entry visibility; it does not affect vault discovery or the `obsidian://` protocol.
 
-#### Export Full Conversation
+## Open the Export Dialog
 
-Return to Cherry Studio's conversation interface, right-click on the conversation, select _Export_, and click _Export to Obsidian_:
+### Export a Complete Topic
 
-<figure><img src="../.gitbook/assets/image (143).png" alt=""><figcaption></figcaption></figure>
+Open the target topic's menu in the topic list on the left and select **Export to Obsidian**.
 
-At this point, a window will pop up, allowing you to adjust the **Properties** of the conversation note to be exported to Obsidian, the **folder location** within Obsidian, and the **processing method** for exporting to Obsidian:
+The complete topic is converted to Markdown in message order. The default handling method is **New (overwrite if it exists)**.
 
-*   **Vault**: Click the dropdown menu to select other Obsidian vaults
-*   **Path**: Click the dropdown menu to select the folder for storing the exported conversation notes
-*   As Obsidian note properties (Properties):
-    *   Tags (tags)
-    *   Created time (created)
-    *   Source (source)
-*   There are three available **processing methods** for exporting to Obsidian:
-*   There are three available **processing methods** for exporting to Obsidian:
-    *   **Create new (overwrite if exists)**: Create a new conversation note in the `folder` specified in the **Path**. If a note with the same name exists, it will overwrite the old note.
-    *   **Prepend**: If a note with the same name already exists, export the selected conversation content and add it to the beginning of that note.
-    *   **Append**: If a note with the same name already exists, export the selected conversation content and add it to the end of that note.
+### Export an Individual Message
 
-{% hint style="info" %}
-Only the first method includes Properties, while the latter two methods do not.
+Open the message menu and select **Export to Obsidian**.
+
+An individual message export includes only the current message. The dialog still lets you change the title, target path, and handling method.
+
+### Export a Cherry Studio Note
+
+Select **Export to Obsidian** from the note menu. A note uses its current Markdown content and does not display the Export Chain of Thought switch.
+
+## Configure the Export Dialog
+
+| Field | Purpose |
+| --- | --- |
+| Title | The filename source for a new file and the YAML `title` in New mode |
+| Vault | The target Obsidian vault for this export |
+| Path | The vault root, an existing folder, or an existing `.md` file |
+| Tags | Written to YAML `tags` in New mode; separate multiple tags with ASCII commas |
+| Created Time | Written to YAML `created` in New mode |
+| Source | Written to YAML `source` in New mode; defaults to `Cherry Studio` |
+| Handling Method | New/overwrite, prepend, or append |
+| Export Chain of Thought | Determines whether available reasoning content is included for a conversation or message |
+
+Title cannot be empty. When creating a new file, Cherry Studio removes filename characters that are invalid on the current platform and truncates an excessively long name.
+
+### Choose a Path
+
+The path selector reads folders and Markdown files in the target vault and ignores hidden entries whose names begin with `.`.
+
+- Selecting **Root Directory** or a folder generates a new `.md` filename from the title.
+- Selecting an existing `.md` file uses that file path directly, changes the title to its filename, and switches the default method to **Append**.
+- After switching vaults, select the path again.
+
+If the directory tree is empty, confirm that the vault path still exists and that Cherry Studio has permission to read the directory.
+
+## Three Handling Methods
+
+| Handling method | Existing file with the same name | Write position | YAML Properties |
+| --- | --- | --- | --- |
+| New (overwrite if it exists) | Overwrite existing content | Replace the entire file | Write `title`, `created`, `source`, and `tags` |
+| Prepend | Preserve existing content | Add new content at the beginning | Do not write new Properties |
+| Append | Preserve existing content | Add new content at the end | Do not write new Properties |
+
+Prepend and Append insert a Markdown separator between the old and new content. They do not try to merge headings or regenerate existing YAML.
+
+{% hint style="warning" %}
+When you select a folder and use “New (overwrite if it exists),” the title determines the target filename. An existing file with the same name in that directory is replaced.
 {% endhint %}
 
-<figure><img src="../.gitbook/assets/image (144).png" alt=""><figcaption><p>Configure note properties</p></figcaption></figure>
+## Export Reasoning Content
 
-<figure><img src="../.gitbook/assets/image (145).png" alt=""><figcaption><p>Select path</p></figcaption></figure>
+The conversation and message export dialogs provide an **Export Chain of Thought** switch:
 
-<figure><img src="../.gitbook/assets/image (146).png" alt=""><figcaption><p>Select processing method</p></figcaption></figure>
+- Off: Export only normal answer content.
+- On: Include reasoning content when the message contains it.
 
-After selecting all options, click OK to export the full conversation to the corresponding Obsidian vault's folder.
+Exported content becomes regular Markdown. Before sharing the file with someone else or publishing it, check whether it contains drafts, intermediate work, or sensitive information.
 
-#### Export Single Conversation Entry
+The switch does not generate reasoning that did not already exist and does not appear when exporting a Cherry Studio note.
 
-For exporting a single conversation entry, click the _three-bar menu_ below the conversation, select _Export_, and click _Export to Obsidian_:
+## How Export Works
 
-<figure><img src="../.gitbook/assets/image (147).png" alt=""><figcaption><p>Export single conversation entry</p></figcaption></figure>
+After you confirm, Cherry Studio:
 
-A window similar to the one for exporting a full conversation will then appear, asking you to configure the **note properties** and **note processing method**. Follow the [tutorial above](obsidian.md#dao-chu-wan-zheng-dui-hua) to complete it.
+1. Writes the Markdown content to the system clipboard.
+2. Constructs an `obsidian://new` URI containing the vault, file path, and handling method.
+3. Asks the operating system to open Obsidian.
+4. Lets Obsidian create, overwrite, prepend, or append the file from the clipboard.
 
-### Export Successful
+A success message in Cherry Studio therefore means the export request was sent; it does not guarantee that the file was written. Switch to Obsidian and confirm that the target file exists with the correct content.
 
-🎉 Congratulations! You have now completed all configurations for Cherry Studio to integrate with Obsidian and have successfully gone through the export process. Enjoy yourselves!
+This flow uses parameters such as `clipboard`, `append`, and `overwrite` from the [official Obsidian URI](https://help.obsidian.md/Extending%2BObsidian/Obsidian%2BURI).
 
-<figure><img src="../.gitbook/assets/image (140).png" alt=""><figcaption><p>Export to Obsidian</p></figcaption></figure>
+## FAQ
 
-<figure><img src="../.gitbook/assets/image (139).png" alt=""><figcaption><p>View export results</p></figcaption></figure>
+### Settings displays “No Obsidian Vault Found”
 
-***
+Launch Obsidian under the same operating system user, open the target local vault, then reenter Cherry Studio settings. Only vaults registered in Obsidian's local configuration can be discovered.
 
-## Old Tutorial (for Cherry Studio < v1.1.13)
+### The vault is visible, but the path list is empty
 
-### Step One: Prepare Obsidian
+The vault folder may have moved, be offline, or lack read permission. Return to Obsidian, confirm that the vault opens normally, and check whether its external drive or network directory is online.
 
-Open your Obsidian vault and create a `folder` to save exported conversations (using 'Cherry Studio' folder as an example in the image):
+### Obsidian does not open after clicking Export
 
-<figure><img src="../.gitbook/assets/image (127).png" alt=""><figcaption></figcaption></figure>
+The operating system may not have registered the `obsidian://` protocol. Windows and macOS usually register it after Obsidian runs. On Linux, ensure that the desktop file's `Exec` entry supports the `%u` parameter. See the registration instructions in the official Obsidian URI documentation.
 
-Pay attention to the text highlighted in the bottom left corner; this is your `vault` name.
+### Cherry Studio reports success, but no note is created
 
-### Step Two: Configure Cherry Studio
+The success message only means the URI was sent. Check whether Obsidian opened, whether the target vault is correct, and whether the operating system lets Cherry Studio open an external protocol. Also confirm that security software did not block or immediately replace the clipboard.
 
-In Cherry Studio's _Settings_ → _Data Settings_ → _Obsidian Settings_ menu, enter the `vault` name and `folder` name obtained in [Step One](obsidian.md#di-yi-bu):
+### Export overwrote an old note
 
-<figure><img src="../.gitbook/assets/image (129).png" alt=""><figcaption></figcaption></figure>
+“New (overwrite if it exists)” replaces a file at the same path. Recover it from a vault backup, version control, or Obsidian Sync version history. Next time, use a different title, another folder, Prepend, or Append.
 
-`Global tags` is optional and can be set for all exported conversations in Obsidian. Fill it in as needed.
+### Prepend or Append did not create Properties
 
-### Step Three: Export Conversation
+This is the current design. Only New/overwrite mode generates YAML Properties; Prepend and Append write only a separator and Markdown body.
 
-#### Export Full Conversation
+### Obsidian is missing from the conversation menu
 
-Return to Cherry Studio's conversation interface, right-click on the conversation, select _Export_, and click _Export to Obsidian_.
+Go to **Settings > Data Settings > Export Menu** and enable **Export to Obsidian**. If it is already enabled, reenter the current conversation and open the menu again.
 
-<figure><img src="../.gitbook/assets/image (138).png" alt=""><figcaption><p>Export full conversation</p></figcaption></figure>
+### The vault is still missing on Linux
 
-At this point, a window will pop up, allowing you to adjust the **Properties** of the conversation note to be exported to Obsidian, as well as the **processing method** for exporting to Obsidian. There are three available **processing methods** for exporting to Obsidian:
+Confirm the Obsidian installation method and configuration path. Cherry Studio checks common XDG, Snap, and Flatpak locations, but a custom portable build or nonstandard path may not be discovered automatically.
 
-*   **Create new (overwrite if exists)**: Create a new conversation note in the `folder` specified in [Step Two](obsidian.md#di-er-bu). If a note with the same name exists, it will overwrite the old note.
-*   **Prepend**: If a note with the same name already exists, export the selected conversation content and add it to the beginning of that note.
-*   **Append**: If a note with the same name already exists, export the selected conversation content and add it to the end of that note.
-
-<figure><img src="../.gitbook/assets/image (137).png" alt=""><figcaption><p>Configure note properties</p></figcaption></figure>
-
-{% hint style="info" %}
-Only the first method includes Properties, while the latter two methods do not.
-{% endhint %}
-
-#### Export Single Conversation Entry
-
-For exporting a single conversation entry, click the _three-bar menu_ below the conversation, select _Export_, and click _Export to Obsidian_.
-
-<figure><img src="../.gitbook/assets/image (141).png" alt=""><figcaption><p>Export single conversation entry</p></figcaption></figure>
-
-A window similar to the one for exporting a full conversation will then appear, asking you to configure the **note properties** and **note processing method**. Follow the [tutorial above](obsidian.md#dao-chu-wan-zheng-dui-hua) to complete it.
-
-### Export Successful
-
-🎉 Congratulations! You have now completed all configurations for Cherry Studio to integrate with Obsidian and have successfully gone through the export process. Enjoy yourselves!
-
-<figure><img src="../.gitbook/assets/image (140.png" alt=""><figcaption><p>Export to Obsidian</p></figcaption></figure>
-
-<figure><img src="../.gitbook/assets/image (139).png" alt=""><figcaption><p>View export results</p></figcaption></figure>
+If the issue persists, submit your Cherry Studio and Obsidian versions, operating system, installation method, whether an `obsidian://` link opens, and the redacted vault name and path through [Feedback and Suggestions](../question-contact/suggestions.md).

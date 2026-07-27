@@ -1,98 +1,72 @@
+---
+icon: feather
+---
+
 # Qwen3-8B
 
+Cherry Studio recognizes Qwen3-8B models from multiple providers. Some versions use `Qwen/Qwen3-8B` as an in-app trial model and direct its service entry point to CherryIN. Other providers may use the same or a different model ID.
 
 {% hint style="warning" %}
-This document was translated from Chinese by AI and has not yet been reviewed.
+A model appearing in the trial list does not mean it will remain free. Refer to the **Free** indicator in the model selector, the provider console, and actual request results.
 {% endhint %}
 
+## Check whether it is already available
 
+1. Open the model selector on the Chats page;
+2. Search for `Qwen3-8B`, or enable the **Free** tag;
+3. Confirm which provider supplies the model;
+4. Select the model and send a simple test message.
 
+If CherryIN appears beside the trial indicator, select the indicator to open the corresponding provider settings. CherryAI itself does not appear in the regular Model Services list.
 
-**The well-known MaaS service platform "SiliconFlow" provides free access to the Qwen3-8B model call service.** As a cost-effective member of the Tongyi Qianwen Qwen3 series, Qwen3-8B achieves powerful capabilities in a compact size, making it an ideal choice for intelligent applications and efficient development.
+## Connect through a provider
 
-***
+If Qwen3-8B does not appear in the model selector:
 
-**🚀 What is Qwen3-8B?**
+1. Open `Settings → Model Services`;
+2. Select ModelScope, OpenRouter, or another provider that offers the model for your account;
+3. Enter the API Key and check the Base URL;
+4. Select **Add** and apply the model changes;
+5. Search for and enable Qwen3-8B;
+6. Run a connection check or Model Health Check.
 
-Qwen3-8B is an **8-billion-parameter dense model** in the Tongyi Qianwen third-generation large model series released by Alibaba in April 2025, adopting the **Apache 2.0 open-source license**, and can be freely used for commercial and research purposes.
+Some providers use `Qwen/Qwen3-8B`, while others use `qwen/qwen3-8b`. Letter case, namespaces, and suffixes can all affect routing.
 
-*   **Total Parameters: 8 billion**
-*   **Architecture Type: Dense (pure dense structure)**
-*   **Context Length: 128K tokens**
-*   **Multilingual Support: Covers 119 languages and dialects**
+## Add the model manually when it cannot be synced
 
-Despite its compact size, Qwen3-8B performs stably in reasoning, code, mathematics, and Agent capabilities, rivaling larger previous generation models in performance and demonstrating extremely high practicality in real-world applications.
+If the provider does not offer a model-list API, select **Custom** and copy the complete model ID from the provider console or API documentation.
 
-<figure><img src="../../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+{% hint style="danger" %}
+Do not copy a model ID directly from another platform. Even when names match, providers may use different namespaces, capability settings, or API paths.
+{% endhint %}
 
-***
+## Reasoning and tool calling
 
-**📚 Strong Training Foundation, Small Models Also Have Great Wisdom**
+The Qwen3 family may support controllable reasoning. Depending on provider capabilities, Cherry Studio uses the `enable_thinking` parameter or a compatible method for controlling thinking mode on APIs that do not support the parameter.
 
-Qwen3-8B was pre-trained on approximately **36 trillion tokens of high-quality multilingual data**, covering web text, technical documents, codebases, and domain-specific synthetic data, ensuring broad knowledge coverage.
+Recommendations:
 
-Its post-training phase incorporated a **four-stage reinforcement process**, specifically optimizing the following capabilities:
+- Rely on thinking settings only when the model selector shows Reasoning capability;
+- Before using MCP or other tools, confirm the Tool capability tag and complete a simple test;
+- Do not hard-code `/think` or `/no_think` into every prompt. Prefer Cherry Studio's thinking settings;
+- When multiple providers offer a model with the same name, test reasoning and tool calling separately for each.
 
-✅ Natural Language Understanding and Generation\
-✅ Mathematical Reasoning and Logical Analysis\
-✅ Multilingual Translation and Expression\
-✅ Tool Calling and Task Planning
+## Troubleshooting
 
-Thanks to the comprehensive upgrade of its training system, **Qwen3-8B's actual performance approaches or even surpasses Qwen2.5-14B**, achieving a significant leap in parameter efficiency.
+### Qwen3-8B does not appear under the Free filter
 
-<figure><img src="../../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
+The trial model may not be available in your current version or region. You can still configure a provider that supports it and use your own API Key.
 
-***
+### Selecting the trial indicator opens CherryIN
 
-**💡 Hybrid Inference Mode: Thinking or Quick Response?**
+This is expected. V2 maps the service entry point for specific Qwen trial models to CherryIN so users can configure the service after their trial quota is exhausted.
 
-Qwen3-8B supports flexible switching between **"Thinking Mode" and "Non-Thinking Mode"**, allowing users to independently choose the response method based on task complexity.
+### Thinking mode does not change
 
-Control mode via:
+Check whether the provider supports `enable_thinking` and whether the current model is a variant with switchable reasoning. Some endpoints ignore unsupported parameters.
 
-*   **API Parameter Setting**: `enable_thinking=True/False`
-*   **Prompt Command**: Add `/think` or `/no_think` in the input
+### The provider returns “model not found”
 
-| Mode              | Applicable Scenarios                   | Examples                                          |
-| ----------------- | -------------------------------------- | ------------------------------------------------- |
-| **Thinking Mode** | Complex reasoning, math problems, planning tasks | <p>- Solving geometry problems<br>- Writing complete project architecture</p> |
-| **Non-Thinking Mode** | Quick Q&A, translation, summarization  | <p>- Checking weather<br>- Chinese-English translation</p>      |
+Check the letter case and complete model ID, then sync the list again. If you added the entry manually, replace it with the ID supplied by the current provider.
 
-This design allows users to **freely balance response speed and reasoning depth**, enhancing the user experience.
-
-***
-
-**⚙️ Native Support for Agent Capabilities, Empowering Intelligent Applications**
-
-Qwen3-8B possesses excellent **Agent capabilities** and can be easily integrated into various automation systems:
-
-🔹 **Function Calling**: Supports structured tool calling\
-🔹 **MCP Protocol Compatibility**: Natively supports the Model Context Protocol, facilitating extension of external capabilities\
-🔹 **Multi-tool Collaboration**: Can integrate plugins such as search, calculators, and code execution
-
-It is recommended to use it in conjunction with the **Qwen-Agent framework** to quickly build intelligent assistants with memory, planning, and execution capabilities.
-
-***
-
-**🌐 Extensive Language Support for Global Applications**
-
-Qwen3-8B supports **119 languages and dialects**, including Chinese, English, Arabic, Spanish, Japanese, Korean, and Indonesian, making it suitable for international product development, cross-language customer service, and multilingual content generation.
-
-It demonstrates particularly excellent understanding of Chinese, supporting Simplified Chinese, Traditional Chinese, and Cantonese expressions, making it suitable for Hong Kong, Macao, Taiwan, and overseas Chinese markets.
-
-***
-
-**🧠 Strong Practical Capabilities, Wide Scenario Coverage**
-
-Qwen3-8B performs exceptionally well in multiple high-frequency application scenarios:
-
-✅ **Code Generation**: Supports mainstream languages like Python, JavaScript, and Java, and can generate executable code based on requirements\
-✅ **Mathematical Reasoning**: Shows stable performance in benchmarks like GSM8K, suitable for educational applications\
-✅ **Content Creation**: Writes emails, reports, and copy with clear structure and natural language\
-✅ **Intelligent Assistant**: Can build lightweight AI assistants for personal knowledge base Q&A, schedule management, information extraction, etc.
-
-***
-
-Experience Qwen3-8B for free now through **SiliconFlow** and start your journey with lightweight AI applications!
-
-📘 Use it now, make AI accessible!
+For general free-trial rules, see [CherryAI (Free Trial)](README.md). For the provider setup process, see [Model Services](../README.md).

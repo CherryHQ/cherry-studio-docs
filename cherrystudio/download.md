@@ -4,144 +4,122 @@ icon: download
 
 # 客户端下载
 
-{% hint style="info" %}
-当前最新正式版：v1.9.12
-{% endhint %}
+Cherry Studio 提供 Windows、macOS 和 Linux 安装包。为避免下载页中的具体版本号过期，本页只保留长期有效的官方入口；打开下载页面后，请选择最新稳定版及与你的系统架构匹配的文件。
 
-## 直链下载
+## 官方下载入口
 
-### Windows 版本
+* [Cherry Studio 官网下载页](https://cherry-ai.com/download)
+* [GitHub Releases](https://github.com/CherryHQ/cherry-studio/releases)
+* [GitHub 最新稳定版](https://github.com/CherryHQ/cherry-studio/releases/latest)
 
 {% hint style="warning" %}
-注意：Windows 7 系统不支持安装 Cherry Studio。
+只从 Cherry Studio 官网、`CherryHQ/cherry-studio` 官方仓库或下载页明确列出的镜像获取安装包。不要运行来源不明、被重新打包或要求关闭安全软件的安装程序。
 {% endhint %}
 
-#### 安装版（Setup）
+## 选择稳定版还是预览版
 
-<details>
+| 类型 | 如何识别 | 适合谁 |
+| :--- | :--- | :--- |
+| 稳定版 | GitHub Releases 中标记为 **Latest**，版本号通常不含 `alpha`、`beta` 或 `rc` | 日常使用，推荐 |
+| 预发布版 | 标记为 **Pre-release**，版本号可能包含 `alpha`、`beta` 或 `rc` | 希望提前测试新功能的用户 |
+| 每日预览构建 | 来自官方 [V2 Daily Preview Build](https://github.com/CherryHQ/cherry-studio/actions/workflows/v2-daily-preview-build.yml) | 开发、测试和问题复现 |
 
-<summary>x64 版本</summary>
+预览版可能包含未完成的数据迁移、界面或兼容性改动。安装前先完成备份；重要数据环境优先使用稳定版。
 
-主线路：
+## Windows
 
-【[Cherry Studio 官网](https://cherryai.com.cn/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.9.12/Cherry-Studio-1.9.12-x64-setup.exe)】
+### 选择架构
 
-备用线路：
+打开 **设置 → 系统 → 系统信息**，查看“系统类型”：
 
-【[线路1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.9.12/Cherry-Studio-1.9.12-x64-setup.exe)】 【[线路2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.9.12/Cherry-Studio-1.9.12-x64-setup.exe)】 【[线路3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.9.12/Cherry-Studio-1.9.12-x64-setup.exe)】
+* `x64` 或“基于 x64 的处理器”：下载 `x64`。
+* `ARM64` 或“基于 ARM 的处理器”：下载 `arm64`。
 
-</details>
+大多数 Intel 和 AMD 电脑使用 `x64`。只有 Windows on ARM 设备使用 `arm64`。
 
-<details>
+### 选择安装包
 
-<summary>ARM64 版本</summary>
+| 文件类型 | 说明 |
+| :--- | :--- |
+| `*-x64-setup.exe` / `*-arm64-setup.exe` | 安装版；支持选择安装目录并创建快捷方式 |
+| `*-x64-portable.exe` / `*-arm64-portable.exe` | 便携版；适合不希望执行安装流程的场景 |
 
-主线路：
+{% hint style="warning" %}
+Cherry Studio 不支持 Windows 7。请在受支持的 Windows 版本上安装。
+{% endhint %}
 
-【[Cherry Studio 官网](https://cherryai.com.cn/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.9.12/Cherry-Studio-1.9.12-arm64-setup.exe)】
+安装步骤和系统安全提示见 [Windows 安装教程](../cherry-studio/installation/windows.md)。
 
-备用线路：
+## macOS
 
-【[线路1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.9.12/Cherry-Studio-1.9.12-arm64-setup.exe)】 【[线路2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.9.12/Cherry-Studio-1.9.12-arm64-setup.exe)】 【[线路3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.9.12/Cherry-Studio-1.9.12-arm64-setup.exe)】
+打开 **苹果菜单 → 关于本机**，查看“芯片”或“处理器”：
 
-</details>
+* 显示 Apple M 系列芯片：下载 `arm64`。
+* 显示 Intel 处理器：下载 `x64`。
 
-#### 便携版（Portable）
+| 文件类型 | 说明 |
+| :--- | :--- |
+| `*-arm64.dmg` / `*-x64.dmg` | 推荐的图形化安装包 |
+| `*-arm64.zip` / `*-x64.zip` | 压缩包版本 |
 
-<details>
+Apple Silicon 包适用于 M1、M2、M3、M4 等 Apple 芯片。架构选错时，应用可能无法打开或只能通过兼容层运行。
 
-<summary>x64 版本</summary>
+安装步骤和“无法验证开发者”等提示见 [macOS 安装教程](../cherry-studio/installation/macos.md)。
 
-主线路：
+## Linux
 
-【[Cherry Studio 官网](https://cherryai.com.cn/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.9.12/Cherry-Studio-1.9.12-x64-portable.exe)】
+在终端运行：
 
-备用线路：
+```bash
+uname -m
+```
 
-【[线路1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.9.12/Cherry-Studio-1.9.12-x64-portable.exe)】 【[线路2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.9.12/Cherry-Studio-1.9.12-x64-portable.exe)】 【[线路3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.9.12/Cherry-Studio-1.9.12-x64-portable.exe)】
+* 输出 `x86_64`：选择 `x86_64` 或 `amd64`。
+* 输出 `aarch64` / `arm64`：选择 `arm64` / `aarch64`。
 
-</details>
+官方 Release 通常提供：
 
-<details>
+| 文件类型 | 适合场景 |
+| :--- | :--- |
+| `.AppImage` | 跨发行版直接运行 |
+| `.deb` | Debian、Ubuntu 及其衍生发行版 |
+| `.rpm` | Fedora、RHEL、Rocky Linux 等 RPM 系发行版 |
 
-<summary>ARM64 版本</summary>
+不同格式的架构命名可能不同，例如 x64 在 `.deb` 文件名中常写作 `amd64`，在 AppImage 中可能写作 `x86_64`。
 
-主线路：
+## 下载后检查
 
-【[Cherry Studio 官网](https://cherryai.com.cn/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.9.12/Cherry-Studio-1.9.12-arm64-portable.exe)】
+1. 确认文件来自官方域名或 `github.com/CherryHQ/cherry-studio`。
+2. 再次核对操作系统、架构和安装包格式。
+3. 如果 Release 页面提供 SHA-256 摘要，可在运行前与本地文件摘要比对。
+4. 更新或测试预览版前，先备份 Cherry Studio 数据。
 
-备用线路：
+### 计算 SHA-256
 
-【[线路1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.9.12/Cherry-Studio-1.9.12-arm64-portable.exe)】 【[线路2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.9.12/Cherry-Studio-1.9.12-arm64-portable.exe)】 【[线路3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.9.12/Cherry-Studio-1.9.12-arm64-portable.exe)】
+{% tabs %}
+{% tab title="Windows PowerShell" %}
+```powershell
+Get-FileHash .\Cherry-Studio-安装包文件名 -Algorithm SHA256
+```
+{% endtab %}
 
-</details>
+{% tab title="macOS" %}
+```bash
+shasum -a 256 ~/Downloads/Cherry-Studio-安装包文件名
+```
+{% endtab %}
 
-***
+{% tab title="Linux" %}
+```bash
+sha256sum ~/Downloads/Cherry-Studio-安装包文件名
+```
+{% endtab %}
+{% endtabs %}
 
-### macOS 版本
+输出应与官方 Release 中对应文件的 SHA-256 完全一致。不一致时不要运行该文件，请重新从官方入口下载。
 
-<details>
+## 下一步
 
-<summary>Intel 芯片版本（x64）</summary>
-
-主线路：
-
-【[Cherry Studio 官网](https://cherryai.com.cn/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.9.12/Cherry-Studio-1.9.12-x64.dmg)】
-
-备用线路：
-
-【[线路1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.9.12/Cherry-Studio-1.9.12.dmg)】 【[线路2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.9.12/Cherry-Studio-1.9.12-x64.dmg)】 【[线路3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.9.12/Cherry-Studio-1.9.12-x64.dmg)】
-
-</details>
-
-<details>
-
-<summary>Apple Silicon 版本（ARM64，M 系列芯片）</summary>
-
-主线路：
-
-【[Cherry Studio 官网](https://cherryai.com.cn/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.9.12/Cherry-Studio-1.9.12-arm64.dmg)】
-
-备用线路：
-
-【[线路1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.9.12/Cherry-Studio-1.9.12-arm64.dmg)】 【[线路2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.9.12/Cherry-Studio-1.9.12-arm64.dmg)】 【[线路3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.9.12/Cherry-Studio-1.9.12-arm64.dmg)】
-
-</details>
-
-***
-
-### Linux 版本
-
-<details>
-
-<summary>x86_64 版本</summary>
-
-主线路：
-
-【[Cherry Studio 官网](https://cherryai.com.cn/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.9.12/Cherry-Studio-1.9.12-x86_64.AppImage)】
-
-备用线路：
-
-【[线路1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.9.12/Cherry-Studio-1.9.12-x86_64.AppImage)】 【[线路2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.9.12/Cherry-Studio-1.9.12-x86_64.AppImage)】 【[线路3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.9.12/Cherry-Studio-1.9.12-x86_64.AppImage)】
-
-</details>
-
-<details>
-
-<summary>ARM64 版本</summary>
-
-主线路：
-
-【[Cherry Studio 官网](https://cherryai.com.cn/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.9.12/Cherry-Studio-1.9.12-arm64.AppImage)】
-
-备用线路：
-
-【[线路1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.9.12/Cherry-Studio-1.9.12-arm64.AppImage)】 【[线路2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.9.12/Cherry-Studio-1.9.12-arm64.AppImage)】 【[线路3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.9.12/Cherry-Studio-1.9.12-arm64.AppImage)】
-
-</details>
-
-***
-
-## 网盘下载
-
-[夸克](https://pan.quark.cn/s/4044324d0ecd#/list/share)
+* [安装教程](../cherry-studio/installation/)
+* [配置模型服务](../pre-basic/providers/)
+* [对话界面](preview/chat.md)

@@ -1,108 +1,90 @@
 ---
-description: Tools
+description: Cherry Studio で AI コーディング CLI を設定して起動する
 icon: code
 ---
-# Code Tools 使い方ガイド
 
+# コードツール
+
+コードツールでは、Cherry Studio から AI コーディング CLI を設定して起動できます。設定済みのモデルサービスを再利用し、プロジェクトのディレクトリとターミナルを指定して、独立したターミナルウィンドウで CLI を使用できます。
+
+## 使用前の準備
+
+* コードツールを使用するには **Bun** が必要です。未インストールと表示された場合は、案内にある **Bun をインストール** をクリックしてください。
+* Kimi CLI を使用する場合は **uv** も必要です。**設定 → MCP 設定 → 環境依存関係** からインストールできます。
+* GitHub Copilot CLI を除き、使用可能なモデルサービスと API Key をあらかじめ Cherry Studio に設定してください。
 
 {% hint style="warning" %}
-このドキュメントはAIによって中国語から翻訳されており、まだレビューされていません。
+AI コーディング CLI は、選択した作業ディレクトリ内のファイルを読み取り、変更し、コマンドを実行できます。作業前に Git などで現在の状態を保存し、無関係な機密ファイルを含むディレクトリは選択しないでください。
 {% endhint %}
 
+## コードツールを開く
 
+1. 上部のタブバー右側にある `+` をクリックして、ランチャーを開きます。
+2. **Code** をクリックします。
+3. コードツールのページで使用する CLI を選択します。
 
+![コードツールページの CLI 入口](../.gitbook/assets/cherry-v2-091-code-tools-overview-ja.png)
 
-Cherry Studio v1.5.7 では、操作が簡単で強力な Code Agent 機能が導入され、複数の AI プログラミングエージェントを直接起動および管理できます。本チュートリアルでは、設定と起動の完全なプロセスをガイドします。
+現在、次の CLI に対応しています。
 
-***
+| CLI | モデルの取得元 |
+| :--- | :--- |
+| Claude Code | Anthropic 互換モデル |
+| Qwen Code | OpenAI 互換モデル |
+| Gemini CLI | Gemini 互換モデル |
+| OpenAI Codex | OpenAI または OpenAI Responses 互換モデル |
+| iFlow CLI | OpenAI 互換モデル |
+| GitHub Copilot CLI | モデル選択は表示されません。GitHub Copilot 独自の認証とモデル機能を使用します |
+| Kimi CLI | OpenAI 互換モデル |
+| OpenCode | OpenAI、OpenAI Responses、または Anthropic 互換モデル |
 
-### 操作手順
+モデル一覧は、選択した CLI のインターフェース種別に応じて自動的に絞り込まれます。目的のモデルが表示されない場合は、プロバイダーが有効か、モデルが追加済みか、インターフェース種別が対応しているかを確認してください。
 
-#### 1. Cherry Studio のアップグレード
+## 設定して起動する
 
-まず、Cherry Studio が **v1.5.7** 以降にアップグレードされていることを確認してください。最新バージョンは [GitHub Releases](https://github.com/CherryHQ/cherry-studio/releases) または公式サイトからダウンロードできます。
+CLI のカードを選択したら、設定ウィンドウで次の項目を指定します。
 
-<figure><img src="../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
+![コードツールの起動設定画面](../.gitbook/assets/cherry-v2-091-code-tools-config-ja.png)
 
-#### 2. ナビゲーションバーの位置調整
+1. **モデル**：CLI で使用するモデルを選択します。GitHub Copilot CLI にはこの項目はありません。
+2. **作業ディレクトリ**：CLI の起動先となるプロジェクトディレクトリを選択します。最近使用したディレクトリは一覧に残ります。
+3. **ターミナル**：macOS または Windows では、検出済みのターミナルを選択します。Windows で WSL、Alacritty、または WezTerm を使用し、実行ファイルを自動検出できない場合は、カスタムの実行ファイルパスを設定してください。
+4. **環境変数**：`KEY=value` 形式で、1 行に 1 つ入力します。Cherry Studio はモデルに応じて必要な変数を自動生成します。同じ名前の変数をここに入力すると、自動生成された値を上書きします。
+5. **最新バージョンを自動的に更新する**：必要に応じて有効にします。有効にすると、起動前に選択した CLI の更新を確認し、最新版へ更新します。
+6. **起動** をクリックします。
 
-上部タブ機能を便利に使用するため、ナビゲーションバーを上部に調整することを推奨します。
-* 操作手順: `設定` → `表示設定` → `ナビゲーションバー設定`
-* 「ナビゲーションバー位置」オプションを **`上部`** に設定
+CLI がまだインストールされていない場合、Cherry Studio は初回起動時にダウンロードしてインストールし、選択したターミナルと作業ディレクトリで実行します。Kimi CLI のダウンロードと起動は uv が行うため、初回実行時には同様にネットワーク接続が必要です。
 
-<figure><img src="../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+{% hint style="info" %}
+GitHub Copilot CLI は Cherry Studio のモデル選択を使用しません。追加の認証情報が必要な場合は、その CLI の要件に従って環境変数欄に設定してください。例：`GITHUB_TOKEN`
+{% endhint %}
 
-#### 3. 新規タブの作成
+## 環境変数と認証情報
 
-インターーフェース上部の「+」アイコンをクリックし、新しい空白タブを作成します。
+カスタム環境変数とは別に、Cherry Studio は選択したモデルサービスから API アドレス、モデル ID、API Key を読み取り、各 CLI が必要とする環境変数または起動引数に変換します。
 
-<figure><img src="../.gitbook/assets/image (2) (1) (1).png" alt=""><figcaption></figcaption></figure>
+カスタム変数は、プロキシアドレスや CLI 固有のオプションを設定する場合に使用できます。入力する前に変数名を確認してください。同名のカスタム値が自動生成された値より優先されるため、誤って上書きすると認証や接続に失敗することがあります。
 
-#### 4. Code Agent 機能の有効化
+{% hint style="warning" %}
+スクリーンショット、ログ、公開の Issue に API Key、GitHub Token、その他の認証情報を含めないでください。コードツールはカスタム環境変数を現在の設定に保存するため、信頼できるデバイスでのみ使用してください。
+{% endhint %}
 
-新規タブで `Code`（または `</>`）アイコンをクリックし、Code Agent 設定画面に移動します。
+## トラブルシューティング
 
-<figure><img src="../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+### 起動ボタンを押せない
 
-#### 5. CLI ツールの選択
+Bun がインストール済みで、作業ディレクトリが選択されていることを確認してください。GitHub Copilot CLI 以外では、モデルの選択も必要です。
 
-要件と所有する API Key に基づき、使用する Code Agent ツールを選択します。現在サポートされているツール:
-* **Claude Code**
-* **Gemini CLI**
-* **Qwen Code**
-* **OpenAI Codex**
+### モデル一覧が空
 
-<figure><img src="../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+選択した CLI には、対応するインターフェース種別のモデルだけが表示されます。モデルサービス設定に戻り、プロバイダーが有効か、API Key が使用可能か、モデルが追加済みか、モデルの Endpoint 種別が対応しているかを確認してください。
 
-#### 6. Agent が呼び出すモデルの選択
+### Kimi CLI で uv が見つからない
 
-モデルドロップダウンから、選択した CLI ツールと互換性のあるモデルを選択します。_（詳細な互換性情報は下部「重要注意事項」参照）_
+**設定 → MCP 設定 → 環境依存関係** から uv をインストールしてください。インストール直後も認識されない場合は、Cherry Studio を再起動してください。
 
-<figure><img src="../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
+### ターミナルが開かない
 
-#### 7. 作業ディレクトリの指定
+システム既定のターミナルに切り替えてください。Windows で別のターミナルを使用する場合は、そのアプリがインストール済みか確認してください。WSL、Alacritty、WezTerm は **カスタムターミナルパスを設定** から実行ファイルを指定することもできます。
 
-「ディレクトリを選択」ボタンをクリックし、Agent の作業ディレクトリを指定します。Agent はこのディレクトリ内の全ファイル・サブディレクトリにアクセスし、プロジェクトのコンコンテキスト理解・ファイル読み取り・コード実行が可能になります。
-
-<figure><img src="../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
-
-#### 8. 環境変数の設定
-* **自動設定**: 手順6（モデル）と7（作業ディレクトリ）の選択に基づき、対応する環境変数が自動生成されます
-* **カスタム追加**: Agent やプロジェクトに特定の環境変数（例: `PROXY_URL`）が必要な場合、この領域で追加設定できます
-
-<figure><img src="../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
-
-#### 9. 更新オプション
-* **内蔵実行ファイル**: Cherry Studio は全 Code Agent の実行ファイルを統合しており、多くの場合オフラインで即時使用可能です
-* **自動更新**: Agent を常に最新版に保つ場合、**`更新をチェックして最新版をインストール`** オプションをチェックします。有効時は起動毎にオンライン更新チェックが行われます
-
-<figure><img src="../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
-
-#### 10. Agent の起動
-
-設定完了後、**`起動`** ボタンをクリックします。Cherry Studio はシステムのターミナルを自動起動し、全環境変数をロード後、選択した Code Agent を実行します。ポップアップしたターミナルウィンドウで AI Agent との対話を開始できます。
-
-<figure><img src="../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
-
-***
-
-### 重要注意事項
-
-1. **モデル互換性について**:
-   * **Claude Code**: Anthropic API エンドポイント形式をサポートするモデルが必要です。現在公式サポートモデル:
-     * Claude シリーズモデル
-     * DeepSeek V3.1 (公式APIプラットフォーム)
-     * Kimi K2 (公式APIプラットフォーム)
-     * 智譜 GLM 4.5 (公式APIプラットフォーム)
-     * **注意**: One API/New API 等のサードパーティプロバイダーは DeepSeek/Kimi/GLM 向けに OpenAI Chat Completions 形式のみサポートする場合が多く、Claude Code との直接互換性がない可能性があります
-   * **Gemini CLI**: Google の Gemini シリーズモデルのみ対応
-   * **Qwen Code**: OpenAI Chat Completions API 形式をサポートするモデルと互換性があり、最適なコード生成には **`Qwen3 Coder`** シリーズを強く推奨
-   * **OpenAI Codex**: GPT シリーズモデル（`gpt-4o`, `gpt-5` 等）をサポート
-2. **依存関係と環境競合**:
-   * Cherry Studio は独立した Node.js 環境・Code Agent 実行ファイル・環境変数設定を統合し、すぐに使えるクリーン環境を提供
-   * Agent 起動時に依存関係の競合や異常エラーが発生する場合、システムにインストール済みの関連依存（Node.js 等）を一時**削除または無効化**して競合を排除
-3. **API トークン消費警告**:
-   * **Code Agent は非常に大量の API トークンを消費します**。複雑なタスク処理時、Agent の思考・計画・コード生成により大量リクエストが発生し、トークンが急激に減少
-   * API 割当量と予算に応じて**無理のない範囲で使用**し、トークン使用状況を厳密に監視し予算超過を防止
-
-本チュートリアルが Cherry Studio の強力な Code Agent 機能を素早く習得する助けとなることを願っています！
+初回起動、CLI のインストール、更新確認にはネットワーク接続が必要なため、処理に時間がかかる場合があります。失敗した場合は、ネットワーク、プロキシ、API サービスの設定を確認してから、もう一度起動してください。

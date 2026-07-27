@@ -1,31 +1,265 @@
 ---
+description: 排除不希望进入联网结果的网站
 icon: ban
 ---
 
-# 网络搜索黑名单配置
+# 网络搜索黑名单
 
-Cherry Studio支持手动和添加订阅源两种方式配置黑名单。配置规则参考[ublacklist](https://github.com/iorate/ublacklist)
+网络搜索黑名单用于排除不希望进入模型上下文的网页，例如内容农场、镜像站、低质量聚合页或与工作无关的网站。
 
-## 手动配置
+黑名单规则保存在：
 
-您可以为搜索结果添加规则或点击工具栏图标以屏蔽指定的网站。规则可以通过以下方式指定：[匹配模式](https://developer.mozilla.org/zh-CN/docs/mozilla/add-ons/webextensions/match_patterns) (示例：`*://*.example.com/*`) 或使用[正则表达式](https://developer.mozilla.org/zh-CN/docs/web/javascript/guide/regular_expressions) (示例：`/example\.(net|org)/`).
+```text
+设置 → 网络搜索 → 黑名单
+```
 
-## 订阅源配置
+{% hint style="info" %}
+黑名单主要用于减少不需要的来源，不是事实核查或安全过滤器。未被屏蔽的网站仍可能包含错误、过时或恶意内容。
+{% endhint %}
 
-您还可以订阅公共规则集。该网站列出了一些订阅：\
-https://iorate.github.io/ublacklist/subscriptions
+## 黑名单如何生效
 
-以下是一些比较推荐的订阅源链接：
+对于 Cherry Studio 的外部联网，服务商返回结果后，应用会再次按黑名单过滤 URL，匹配的结果不会交给模型。
 
-| 名称                                                                                                    | 链接                                                                                                   | 类型   |
-| ----------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---- |
-| [uBlacklist subscription compilation](https://github.com/eallion/uBlacklist-subscription-compilation) | https://git.io/ublacklist                                                                            | 中文   |
-| [uBlockOrigin-HUGE-AI-Blocklist](https://github.com/laylavish/uBlockOrigin-HUGE-AI-Blocklist)         | https://raw.githubusercontent.com/laylavish/uBlockOrigin-HUGE-AI-Blocklist/main/list\_uBlacklist.txt | AI生成 |
+对于模型原生联网，黑名单支持程度取决于模型服务商：
 
-<figure><img src="../../.gitbook/assets/blacklist1.jpg" alt=""><figcaption><p>订阅源配置</p></figcaption></figure>
+- Anthropic 原生搜索会接收转换后的屏蔽域名；
+- xAI 原生搜索最多接收前 `5` 个转换后的域名；
+- 其他原生联网服务不一定支持或使用黑名单。
+
+因此，不要假设同一组规则在所有模型和服务商上表现完全一致。
+
+## 添加规则
+
+1. 打开**设置 → 网络搜索**；
+2. 找到**黑名单**；
+3. 每行输入一条规则；
+4. 点击**保存**；
+5. 确认没有出现“无效条目”提示；
+6. 新建或继续一个联网对话进行验证。
+
+输入框旁的数字表示当前保存的规则条数。
+
+{% hint style="warning" %}
+只要存在一条无效规则，本次黑名单就不会保存。先修正所有无效条目，再重新点击保存。
+{% endhint %}
+
+## 支持的两种格式
+
+### 匹配模式
+
+匹配模式适合按协议、域名、子域名和路径屏蔽网站。
+
+常用示例：
+
+```text
+*://*.example.com/*
+```
+
+屏蔽 `example.com` 及其所有子域名的 HTTP 和 HTTPS 页面。
+
+```text
+https://example.com/private/*
+```
+
+只屏蔽 `https://example.com/private/` 下的页面。
+
+```text
+*://news.example.com/archive/*
+```
+
+只屏蔽指定子域名的 `archive` 路径。
+
+匹配模式的结构是：
+
+```text
+协议://主机/路径
+```
+
+| 部分 | 示例 | 说明 |
+| --- | --- | --- |
+| 协议 | `https`、`http`、`*` | `*` 在这里匹配 HTTP 与 HTTPS |
+| 主机 | `example.com`、`*.example.com`、`*` | `*.example.com` 同时匹配根域名与子域名 |
+| 路径 | `/*`、`/news/*` | 必须以 `/` 开始，可使用 `*` |
+
+完整规则说明可参考 [MDN 匹配模式](https://developer.mozilla.org/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Match_patterns)。
+
+{% hint style="warning" %}
+不要只填写 `example.com`。纯域名不是有效的匹配模式，应写成 `*://*.example.com/*`。
+{% endhint %}
+
+### 正则表达式
+
+需要更精细的 URL 匹配时，可以使用正则表达式。规则必须以 `/` 开头并以 `/` 结尾：
+
+```text
+/example\.(com|org)/
+```
+
+```text
+/example\.com\/(ads|sponsored)\//
+```
+
+Cherry Studio 会忽略大小写，并针对完整的“协议 + 域名 + 路径 + 查询参数”测试规则。
+
+正则表达式适合：
+
+- 同时匹配多个顶级域名；
+- 屏蔽包含特定路径片段的页面；
+- 根据 URL 查询参数排除结果；
+- 难以用普通匹配模式表示的规则。
+
+语法可参考 [MDN 正则表达式指南](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)。
+
+{% hint style="danger" %}
+过于宽泛的正则表达式可能误屏蔽大量结果。不要复制来源不明、无法理解的复杂表达式。
+{% endhint %}
+
+## 可复制示例
+
+以下规则可按需修改：
+
+```text
+*://*.example.com/*
+*://mirror.example.org/*
+https://news.example.net/archive/*
+/example\.io\/sponsored/
+```
+
+每条规则独占一行，空行会被忽略。
+
+### 屏蔽一个域名及全部子域名
+
+```text
+*://*.example.com/*
+```
+
+会匹配：
+
+```text
+https://example.com/article
+https://www.example.com/article
+http://docs.example.com/guide
+```
+
+### 只屏蔽指定路径
+
+```text
+https://example.com/ads/*
+```
+
+会屏蔽：
+
+```text
+https://example.com/ads/page-1
+```
+
+不会屏蔽：
+
+```text
+https://example.com/blog/page-1
+```
+
+### 同时屏蔽多个相似域名
+
+```text
+/example\.(com|net|org)/
+```
+
+如果只需要三个固定网站，分别写三条普通匹配模式通常更容易维护。
+
+## 不支持的旧版能力
+
+当前 V2 黑名单页面只支持手动输入规则，不提供：
+
+- 点击浏览器工具栏直接屏蔽网站；
+- 输入订阅 URL 自动下载规则；
+- 自动更新 uBlacklist 订阅；
+- 导入浏览器扩展的完整配置。
+
+旧文档中的订阅源表格和订阅截图不再适用于当前界面。
+
+如果确实需要使用公共规则集，应先检查内容，再手动转换为 Cherry Studio 支持的匹配模式或正则表达式。不要直接粘贴上千条规则；过多规则会增加维护难度，也更容易误伤正常来源。
+
+## 验证规则
+
+保存后，可以用一个容易观察结果的问题测试：
+
+```text
+搜索 example.com 上关于 Cherry Studio 的内容，并列出引用来源。
+```
+
+如果已屏蔽 `example.com`，外部搜索回答中不应再出现该域名的结果。
+
+验证时注意：
+
+1. 确认当前模型使用的是外部联网还是模型原生联网；
+2. 检查引用的最终 URL，而不只看标题；
+3. 注意网页重定向后可能变成其他域名；
+4. 新规则不会删除已经写入历史消息的旧引用；
+5. 不同原生联网服务商可能忽略部分规则。
+
+## 常见问题
+
+### 提示“无效条目”
+
+常见错误：
+
+| 错误写法 | 问题 | 建议写法 |
+| --- | --- | --- |
+| `example.com` | 缺少协议和路径 | `*://*.example.com/*` |
+| `https://example.com` | 缺少路径 | `https://example.com/*` |
+| `*.example.com` | 不是完整匹配模式 | `*://*.example.com/*` |
+| `/[example/` | 正则表达式语法无效 | 修正括号或字符组 |
+| `# example` | 不支持注释行 | 删除该行 |
+
+修正全部无效条目后重新保存。
+
+### 保存后仍然看到被屏蔽的网站
+
+可能原因包括：
+
+- 当前模型使用原生联网，服务商没有应用黑名单；
+- 规则只匹配根域名，没有匹配实际子域名；
+- 规则只匹配 HTTPS，而结果使用 HTTP；
+- 路径写得过窄；
+- 引用来自保存规则前的历史回答；
+- 页面发生重定向；
+- 模型在没有搜索的情况下凭已有知识提到该网站。
+
+先用 `*://*.example.com/*` 这类完整规则测试，再逐步缩小范围。
+
+### 所有搜索结果都消失了
+
+检查是否误用了：
+
+```text
+<all_urls>
+```
+
+该模式会匹配所有 HTTP 和 HTTPS URL。删除它后保存。
+
+也要检查正则表达式是否过于宽泛，例如：
+
+```text
+/.*/
+```
+
+### 想恢复默认状态
+
+清空黑名单输入框并点击**保存**。计数变为 `0` 后，外部联网不再按自定义规则排除结果。
+
+## 使用建议
+
+- 优先按域名屏蔽，只有复杂场景再用正则表达式；
+- 从少量明确规则开始；
+- 定期删除已经失效或重复的规则；
+- 屏蔽前确认网站是否只是偶尔出现低质量页面；
+- 对关键结论同时要求多个独立来源；
+- 不要用黑名单代替人工核对引用。
 
 ***
 
 ### 💡 获取帮助与提交反馈
 
-如果您在配置或使用过程中遇到任何疑问、Bug 或有功能改进建议，请参考 [反馈与建议](../../question-contact/suggestions.md) 中提供的官方渠道。
+如果您在配置或使用过程中遇到疑问、Bug 或功能建议，请参考[反馈与建议](../../question-contact/suggestions.md)中的官方渠道。

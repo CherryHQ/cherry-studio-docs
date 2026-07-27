@@ -2,109 +2,121 @@
 icon: cherries
 ---
 
-# 项目简介
+# Cherry Studio 社区版
 
-<figure><img src=".gitbook/assets/docs-readme-banner1.png" alt=""><figcaption></figcaption></figure>
+Cherry Studio 是一款开源的桌面 AI 客户端，可在 Windows、macOS 和 Linux 上统一使用云端或本地大模型。它不仅提供多模型对话，还把助手、智能体、知识库、技能、MCP、翻译、绘画、文件和笔记等能力整合在同一个工作空间中。
 
-关注我们的社交账号：[推特(X)](https://x.com/CherryStudioHQ)、[小红书](https://www.xiaohongshu.com/user/profile/662b6853000000000b031d9a)、[微博](https://weibo.com/u/7975656228)、[哔哩哔哩](https://space.bilibili.com/3546657515898892)、[抖音](https://www.douyin.com/user/MS4wLjABAAAAmw9A54m5J0hHVMQY5eGrVJ-EHDoOS0hgJ6M1F9MN2Tn2V163A0xrC4_KVzfmQSxC)
+社区版适合希望自主选择模型服务、在本地管理工作资料，并按需扩展 AI 工作流的个人用户和开发者。
 
-加入我们的社群：[QQ群](https://qm.qq.com/q/lo0D4qVZKi)、[Telegram](https://t.me/CherryStudioAI)、[Discord](https://discord.gg/wez8HtpxqQ)、[微信群](https://www.cherry-ai.com/#Community)
+## 你可以用它做什么
 
-***
+| 需求 | Cherry Studio 中的能力 |
+| :--- | :--- |
+| 使用不同厂商或本地部署的模型 | 统一配置模型服务，在对话中切换或同时比较多个模型 |
+| 保存固定角色和对话设置 | 创建助手，配置提示词、模型参数、知识库和 MCP |
+| 让 AI 读取工作区并执行任务 | 创建智能体，控制可访问目录、工具和审批模式 |
+| 让 AI 遵循专门的工作流程 | 安装技能，并按智能体启用 |
+| 连接搜索、数据库或第三方服务 | 添加本地或远程 MCP Server |
+| 建立自己的资料检索库 | 导入文档并配置 Embedding 模型 |
+| 处理图片、翻译、笔记和文件 | 使用绘画、翻译、笔记和文件等独立工作区 |
+| 在聊天平台或固定时间运行智能体 | 配置频道和定时任务 |
 
-Cherry Studio 是一款集多模型对话、智能体、知识库管理、AI 绘画、翻译等功能于一体的全能 AI 助手平台。Cherry Studio 高度自定义的设计、强大的扩展能力和友好的用户体验，使其成为专业用户和 AI 爱好者的理想选择。无论是零基础用户还是开发者，都能在 Cherry Studio 中找到适合自己的 AI 功能，提升工作效率和创造力。
+## 主要工作区
 
-<figure><img src=".gitbook/assets/image (1) (3).png" alt=""><figcaption></figcaption></figure>
+Cherry Studio V2 的侧栏可以按需显示这些应用：
 
-<figure><img src=".gitbook/assets/image (1) (5).png" alt=""><figcaption></figcaption></figure>
+* **对话**：与助手和模型交流，管理会话和消息。
+* **智能体**：执行需要文件、命令或多步工具调用的任务。
+* **资源库**：集中管理助手、智能体、技能和提示词。
+* **绘画**：使用图像生成模型创建和管理图片。
+* **翻译**：进行双语翻译和对照阅读。
+* **小程序**：在应用内打开已添加的 Web 工具。
+* **知识库**：导入资料、处理分段并进行检索。
+* **文件**：集中查看和管理应用中的文件资源。
+* **Code Tools**：管理面向开发者的代码工具。
+* **笔记**：编辑和整理 Markdown 笔记。
+* **OpenClaw**：使用独立的自主智能体工作区。
 
-***
+侧栏只显示你启用的入口；隐藏某项不会删除对应数据。
 
-### **核心功能与特色**
+## 快速开始
 
-#### **1. 基础对话功能**
+### 1. 下载并安装
 
-* **一问多答**：支持同一问题通过多个模型同时生成回复，方便用户对比不同模型的表现，详见 [对话界面](cherrystudio/preview/chat.md)。
-* **自动分组**：每个助手的对话记录会自动分组管理，便于用户快速查找历史对话。
-* **对话导出**：支持将完整对话或部分对话导出为多种格式（如 Markdown、Word 等），方便储存与分享。
-* **高度自定义参数**：除了基础参数调整外，还支持用户填写自定义参数，满足个性化需求。
-* **助手市场**：内置千余个行业专用助手，涵盖翻译、编程、写作等领域，同时支持用户自定义助手。
-* **多种格式渲染**：支持 Markdown 渲染、公式渲染、HTML 实时预览等功能，提升内容展示效果。
+前往[客户端下载](cherrystudio/download.md)选择适合系统的版本。首次安装或遇到系统安全提示时，参考[安装教程](cherry-studio/installation/)。
 
-#### **2. 智能体与自动化**
+Cherry Studio 支持 Windows、macOS 和 Linux。不同系统和芯片架构使用的安装包不同，请根据下载页说明选择。
 
-* **智能体（Cherry Agent）**：可自主读取文件、运行命令、完成多步任务的 AI，详见 [智能体](advanced-basic/agent.md)。
-* **技能（Skill）**：为助手或智能体加装的"专业能力包"（如做小红书图文、画流程图），开箱即用，详见 [技能](pre-basic/settings/skills.md)。
-* **MCP**：通过 Model Context Protocol 接入外部工具与服务（数据库、Notion、GitHub 等），详见 [MCP 使用教程](advanced-basic/mcp/)。
-* **频道**：将智能体派驻到飞书 / 微信 / Telegram / Discord 等 IM 平台担任群机器人，详见 [频道](advanced-basic/agent-channels.md)。
-* **定时任务**：让智能体按计划自动运行（如每日新闻简报、每周汇总），详见 [定时任务](advanced-basic/scheduled-tasks.md)。
+### 2. 配置模型服务
 
-#### **3. 多种特色功能集成**
+打开 **设置 → 模型服务**：
 
-* **AI 绘画**：提供专用绘画面板，用户可通过自然语言描述生成高质量图像。
-* **AI 小程序**：集成多种免费 Web 端 AI 工具，无需切换浏览器即可直接使用。
-* **翻译功能**：支持专用翻译面板、对话翻译、提示词翻译等多种翻译场景。
-* **笔记**：内置 Markdown 编辑器，支持与对话内容互通，便于沉淀整理。
-* **文件管理**：对话、绘画和知识库中的文件统一分类管理，避免繁琐查找。
-* **全局搜索**：支持快速定位历史记录和知识库内容，提升工作效率。
+1. 选择已有服务商，或添加兼容服务商。
+2. 填写 API 地址和 API Key。
+3. 获取模型列表，启用需要使用的模型。
+4. 返回对话页面，选择模型并发送第一条消息。
 
-#### **4. 多服务商统一管理机制**
+如果使用 Ollama、LM Studio 等本地服务，请先确保对应服务已经在本机运行。详细步骤见[模型服务](pre-basic/providers/)。
 
-* **服务商模型聚合**：支持 OpenAI、Gemini、Anthropic、Azure 等主流服务商的模型统一调用。
-* **模型自动获取**：一键获取完整模型列表，无需手动配置。
-* **多秘钥轮询**：支持多个 API 秘钥轮换使用，避免速率限制问题。
-* **精准头像匹配**：为每个模型自动匹配专属头像，提升辨识度。
-* **自定义服务商**：支持符合 OpenAI、Gemini 、Anthropic 等规范的三方服务商接入，兼容性强。
+### 3. 从一个场景开始
 
-#### **5. 高度自定义界面和布局**
+* 日常问答、写作或翻译：从[对话界面](cherrystudio/preview/chat.md)开始。
+* 需要固定提示词和参数：在[资源库](cherrystudio/preview/library.md)创建助手。
+* 需要操作本地文件或运行工具：创建[智能体](advanced-basic/agent.md)。
+* 需要基于个人资料回答：创建[知识库](knowledge-base/knowledge-base.md)。
 
-* **自定义 CSS**：支持全局样式自定义，打造专属界面风格。
-* **自定义对话布局**：支持列表或气泡样式布局，并可自定义消息样式（如代码片段样式）。
-* **自定义头像**：支持为软件和助手设置个性化头像。
-* **自定义侧边栏菜单**：用户可根据需求隐藏或排序侧边栏功能，优化使用体验。
+不需要一次配置全部功能。先完成一个可验证的小任务，再增加技能、MCP 或自动化，排错会更容易。
 
-#### **6. 本地知识库系统**
+## 助手、智能体与扩展能力
 
-* **多种格式支持**：支持 PDF、DOCX、PPTX、XLSX、TXT、MD 等多种文件格式导入。
-* **多种数据源支持**：支持本地文件、网址、站点地图甚至手动输入内容作为知识库源。
-* **知识库导出**：支持将处理好的知识库导出并分享给他人使用。
-* **支持搜索检查**：知识库导入后，用户可实时检索测试，查看处理结果和分段效果。
+### 助手
 
-#### **7. 特色聚焦功能**
+助手保存可重复使用的对话配置，包括提示词、模型参数、知识库和 MCP。它适合以对话为主的稳定场景。
 
-* **快捷问答**：在任何场景（如微信、浏览器）中呼出快捷助手，快速获取答案。
-* **划词助手**：在任意应用选中文字后，通过浮动工具栏一键调用 AI 做翻译、解释、优化、总结等操作。
-* **快捷翻译**：支持快速翻译其他场景中的词汇或文本。
-* **内容总结**：对长文本内容进行快速总结，提升信息提取效率。
-* **解释说明**：无需复杂提示词，一键解释说明不懂的问题。
+### 智能体
 
-#### **8. 数据保障**
+智能体可以访问指定目录并调用内置工具、MCP 和技能。你可以选择普通、计划、自动编辑或全自动权限模式。详见[智能体](advanced-basic/agent.md)。
 
-* **多种备份方案**：支持本地备份、WebDAV 备份和定时备份，确保数据安全。
-* **数据安全**：支持全本地场景使用，结合本地大模型，避免数据泄漏风险。
+### 技能与 MCP
 
-***
+* [技能](pre-basic/settings/skills.md)告诉智能体如何按特定流程完成一类工作。
+* [MCP](advanced-basic/mcp/)为助手或智能体连接外部工具、提示词和资源。
 
-### **项目优势**
+如果还不确定该选什么，先阅读[概念入门](advanced-basic/concepts-101.md)。
 
-1. **小白友好**：Cherry Studio 致力于降低技术门槛，零基础用户也能快速上手，让用户专注于工作、学习或者创作。
-2. **文档完善**：提供详细的使用文档和常见问题处理手册，帮助用户快速解决问题。
-3. **持续迭代**：项目团队积极响应用户反馈，持续优化功能，确保项目健康发展。
-4. **开源与扩展性**：支持用户通过开源代码进行定制和扩展，满足个性化需求。
+## 数据与安全
 
-***
+Cherry Studio 的应用配置和工作资料主要保存在本地，但“使用桌面应用”不等于“所有处理都在本地完成”：
 
-### **适用场景**
+* 使用云端模型时，消息、附件或检索到的上下文会按请求需要发送给所选模型服务商。
+* 使用远程 MCP Server、频道或其他第三方服务时，相关数据可能发送给对应服务。
+* 智能体和本地 MCP Server 可能按已授予的权限读取文件或运行命令。
+* 使用本地模型可以减少云端传输，但仍要检查所连接的模型服务、插件和网络工具。
 
-* **知识管理与查询**：通过本地知识库功能，快速构建和查询专属知识库，适用于研究、教育等领域。
-* **多模型对话与创作**：支持多模型同时对话，帮助用户快速获取信息或生成内容。
-* **翻译与办公自动化**：内置翻译助手和文件处理功能，适合需要跨语言交流或文档处理的用户。
-* **AI 绘画与设计**：通过自然语言描述生成图像，满足创意设计需求。
+{% hint style="warning" %}
+不要把 API Key、访问令牌、密码或私钥写进提示词、知识库、文档和截图。为智能体限制可访问目录，为 MCP 和频道使用最小权限，并在启用全自动模式前先完成受控测试。
+{% endhint %}
 
-### Star History
+重要数据应定期备份。Cherry Studio 支持本地导出以及 WebDAV、S3 兼容存储等备份方式，具体选项见[数据设置](pre-basic/data-settings/)。
 
-![Star History](https://urlscan.io/liveshot/?width=1300\&height=620\&url=https://cherrystarhistory.ocool.online/)
+## 开源与许可
 
-## 关注我们的社交账号
+Cherry Studio 社区版代码托管在 [GitHub](https://github.com/CherryHQ/cherry-studio)，社区版采用 GNU Affero General Public License v3.0（AGPL-3.0）。使用、修改或分发前，请阅读[开源许可协议](contact-us/questions/license.md)。
 
-<table data-view="cards"><thead><tr><th></th><th data-hidden data-card-cover data-type="files"></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><a href="https://www.xiaohongshu.com/user/profile/662b6853000000000b031d9a?xsec_token=YB_1nKvlH4r5hPYVVbbsNHF8Y6n6AKlm5-DaggPCtd2DQ%3D&#x26;xsec_source=app_share&#x26;xhsshare=CopyLink&#x26;appuid=662b6853000000000b031d9a&#x26;apptime=1738627324&#x26;share_id=ace5db41b5954fab8d98a2a7865a62bc&#x26;share_channel=copy_link">小红书</a></td><td><a href=".gitbook/assets/1.png">1.png</a></td><td><a href="https://www.xiaohongshu.com/user/profile/662b6853000000000b031d9a?xsec_token=YB_1nKvlH4r5hPYVVbbsNHF8Y6n6AKlm5-DaggPCtd2DQ%3D&#x26;xsec_source=app_share&#x26;xhsshare=CopyLink&#x26;appuid=662b6853000000000b031d9a&#x26;apptime=1738627324&#x26;share_id=ace5db41b5954fab8d98a2a7865a62bc&#x26;share_channel=copy_link">https://www.xiaohongshu.com/user/profile/662b6853000000000b031d9a?xsec_token=YB_1nKvlH4r5hPYVVbbsNHF8Y6n6AKlm5-DaggPCtd2DQ%3D&#x26;xsec_source=app_share&#x26;xhsshare=CopyLink&#x26;appuid=662b6853000000000b031d9a&#x26;apptime=1738627324&#x26;share_id=ace5db41b5954fab8d98a2a7865a62bc&#x26;share_channel=copy_link</a></td></tr><tr><td><a href="https://b23.tv/hIfGgDW">哔哩哔哩</a></td><td><a href=".gitbook/assets/3.png">3.png</a></td><td><a href="https://b23.tv/hIfGgDW">https://b23.tv/hIfGgDW</a></td></tr><tr><td><a href="https://weibo.com/u/7975656228">微博</a></td><td><a href=".gitbook/assets/2.png">2.png</a></td><td><a href="https://weibo.com/u/7975656228">https://weibo.com/u/7975656228</a></td></tr><tr><td><a href="https://v.douyin.com/ifTpX4X7">抖音</a></td><td><a href=".gitbook/assets/4.png">4.png</a></td><td><a href="https://v.douyin.com/ifTpX4X7">https://v.douyin.com/ifTpX4X7</a></td></tr><tr><td><a href="https://x.com/CherryStudioHQ?t=DYR0ulaLur-bO4Us3bG79A&#x26;s=05">推特(X)</a></td><td><a href=".gitbook/assets/5.png">5.png</a></td><td><a href="https://x.com/CherryStudioHQ?t=DYR0ulaLur-bO4Us3bG79A&#x26;s=05">https://x.com/CherryStudioHQ?t=DYR0ulaLur-bO4Us3bG79A&#x26;s=05</a></td></tr></tbody></table>
+欢迎参与：
+
+* [贡献代码](contribution/code.md)
+* [贡献文档](contribution/docs.md)
+* [提交问题](https://github.com/CherryHQ/cherry-studio/issues)
+* [参与讨论](https://github.com/CherryHQ/cherry-studio/discussions)
+
+## 获取帮助
+
+遇到问题时，先查看[常见问题](question-contact/questions.md)和[如何高效提问](question-contact/ask.md)。提交反馈时，请提供 Cherry Studio 版本、操作系统、复现步骤和必要日志，并先移除 API Key、文件内容等敏感信息。
+
+社区入口：
+
+* [Telegram](https://t.me/CherryStudioAI)
+* [Discord](https://discord.gg/wez8HtpxqQ)
+* [QQ 群](https://qm.qq.com/q/lo0D4qVZKi)
+* [反馈与建议](question-contact/suggestions.md)

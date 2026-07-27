@@ -1,70 +1,132 @@
+# MCP の自動インストール
+
+Cherry Studio 内蔵の `@cherry/mcp-auto-install` は、モデルによる MCP Server の検出、設定手順の読み取り、起動コマンドの生成を支援します。パッケージ名や設定形式が分からない場合に、インストールアシスタントとして使用できます。
 
 {% hint style="warning" %}
-このドキュメントはAIによって中国語から翻訳されており、まだレビューされていません。
+この機能はまだテスト段階です。現在の V2 では、インストールアシスタントは JSON モードで動作し、生成した Server 設定が Cherry Studio に直接書き込まれることは保証されません。「検出と設定生成」の機能として扱い、インポート前に結果を手動で確認してください。
 {% endhint %}
 
-# MCPの自動インストール
+## 処理の流れ
 
-> MCPの自動インストールには、Cherry Studioをv1.1.18以上にアップグレードする必要があります。
+一般的なインストール支援は、次の 4 段階で行われます。
 
-## 機能の概要
+1. モデルがインストールアシスタントを使って利用可能な Server を検索し、設定手順を読み取ります。
+2. インストールアシスタントが推奨コマンド、引数、環境変数を返します。
+3. パッケージの提供元と設定内容を確認し、JSON を Cherry Studio にインポートします。
+4. MCP 設定で新しい Server を有効にし、ツールとログを確認します。
 
-手動インストールに加えて、Cherry Studioには`@mcpmarket/mcp-auto-install`ツールが組み込まれており、より便利なMCPサーバーのインストール方法を提供します。MCPサービスをサポートする大規模モデルチャットで対応するコマンドを入力するだけで使用できます。
+インストールアシスタント自体は、次のプリセットで起動します。
 
-{% hint style="warning" %}
-**テスト段階に関する注意:**
-
-* `@mcpmarket/mcp-auto-install`は現在もテスト段階です
-* 効果は大規模モデルの「知能」に依存し、自動的に追加される場合もあれば、**MCP設定で特定のパラメータを手動で変更する必要がある場合もあります**
-* 現在の検索ソースは@modelcontextprotocolから行っており、自身で設定可能です（下記説明）
-{% endhint %}
-
-## 使用方法
-
-例えば、以下のように入力できます：
-
-```
-帮我安装一个 filesystem mcp server
+```text
+npx -y @mcpmarket/mcp-auto-install connect --json
 ```
 
-<figure><img src="../../.gitbook/assets/mcp-auto-install_shot1.png" alt=""><figcaption><p>MCPサーバーインストールのためのコマンド入力</p></figcaption></figure>
+Cherry Studio がローカルレジストリのパスを管理するため、`MCP_REGISTRY_PATH` を手動で入力する必要はありません。
 
-<figure><img src="../../.gitbook/assets/mcp-auto-install_shot2.png" alt=""><figcaption><p>MCPサーバー設定画面</p></figcaption></figure>
+## インストールアシスタントを有効にする
 
-システムは自動的に要件を認識し、`@mcpmarket/mcp-auto-install`を通じてインストールを完了します。このツールは以下のような複数タイプのMCPサーバーをサポートしています：
+1. **設定 → MCP Server** を開きます。
+2. 内蔵 Server から `@cherry/mcp-auto-install` を検索します。
+3. **インストール** をクリックし、インストール済みリストで有効にします。
+4. 対象のアシスタントまたは Agent のツール設定に `@cherry/mcp-auto-install` を追加します。
+5. ツール呼び出しに対応したモデルを選択します。
 
-* filesystem（ファイルシステム）
-* fetch（ネットワークリクエスト）
-* sqlite（データベース）
-* など...
+初回起動時には NPX パッケージを実行する必要があります。Cherry Studio はシステムの NPX を優先的に使用し、利用できない場合は内蔵 Bun を試します。依存関係に問題がある場合は、MCP 設定で依存関係インストーラーを実行し、アプリを再起動してください。
 
-> MCP_PACKAGE_SCOPES変数でMCPサービス検索ソースをカスタマイズ可能で、デフォルト値は`@modelcontextprotocol`です。
+## Server 設定を生成する
 
-## `@mcpmarket/mcp-auto-install`ライブラリの紹介
+「MCP を 1 つインストールして」とだけ依頼するよりも、用途、実行プラットフォーム、出力形式をモデルに説明したほうが、利用可能な結果を得やすくなります。例：
 
-{% hint style="info" %}
-**デフォルト設定例:**
+```text
+MCP 自動インストールツールを使い、ローカルの SQLite データベースへ読み取り専用でアクセスできる MCP Server を探してください。
+私のシステムは macOS です。
+
+最初にパッケージの提供元と必要な権限を説明し、その後 Cherry Studio にインポートできる JSON 設定を生成してください。
+私の代わりに Server を有効にしたり、実際のキーを入力したりしないでください。
+```
+
+インストールアシスタントは次の機能を提供します。
+
+- レジストリから検出可能な MCP Server を一覧表示する。
+- 特定の Server の README と設定案内を読み取る。
+- Server に応じてコマンド、引数、環境変数を生成する。
+- インストールアシスタント独自のローカル Server 登録情報を管理する。
+
+モデルから設定が返されたら、少なくとも次の項目を確認してください。
+
+- npm パッケージ名、公開者、ドキュメントの URL が信頼できるか。
+- `command` と `args` がプロジェクトの公式説明と一致しているか。
+- ダウンロードスクリプト、Shell コマンド、不要な高権限の引数が含まれていないか。
+- 環境変数名が正しく、プレースホルダー値のままになっていないか。
+- Server がアクセスするローカルファイル、ネットワークサービス、アカウントの範囲。
+
+## Cherry Studio にインポートする
+
+モデルに、結果を次の構造へ整理させます。1 回につき 1 つの Server だけを含めてください。
 
 ```json
-// `axun-uUpaWEdMEMU8C61K` はサービスIDで、任意の値にカスタマイズしてください
-"axun-uUpaWEdMEMU8C61K": {
-  "name": "mcp-auto-install",
-  "description": "Automatically install MCP services (Beta version)",
-  "isActive": false,
-  "registryUrl": "https://registry.npmmirror.com",
-  "command": "npx",
-  "args": [
-    "-y",
-    "@mcpmarket/mcp-auto-install",
-    "connect",
-    "--json"
-  ],
-  "env": {
-    "MCP_REGISTRY_PATH": "詳細はhttps://www.npmjs.com/package/@mcpmarket/mcp-auto-installを参照"
-  },
-  "disabledTools": []
+{
+  "mcpServers": {
+    "example-server": {
+      "command": "npx",
+      "args": ["-y", "@example/mcp-server"],
+      "env": {
+        "EXAMPLE_API_KEY": "在 Cherry Studio 中替换"
+      }
+    }
+  }
 }
 ```
 
-`@mcpmarket/mcp-auto-install`はオープンソースのnpmパッケージで、詳細情報と使用方法は[npm公式リポジトリ](https://www.npmjs.com/package/@mcpmarket/mcp-auto-install)で確認できます。`@mcpmarket`はCherry Studio公式のMCPサービスコレクションです。
+次に：
+
+1. **設定 → MCP Server** を開きます。
+2. **追加 → JSON からインポート** をクリックします。
+3. 確認済みの設定を貼り付けます。
+4. インポート後に Server の詳細を開き、プレースホルダーを置き換えて保存します。
+5. Server を有効にし、**ツール** ページで実際に公開されるツールを確認します。
+6. テストが完了したら、その Server を必要なアシスタントまたは Agent に追加します。
+
+{% hint style="danger" %}
+NPX はサードパーティ製コードをダウンロードして実行できます。モデルの推奨だけを根拠に不明なパッケージを実行したり、API Key をモデルへ直接送ったりしないでください。パッケージ、バージョン、ソースコード、公式ドキュメントを確認したうえで、Cherry Studio の Server 設定にキーを入力してください。
 {% endhint %}
+
+## 検索範囲をカスタマイズする
+
+インストールアシスタントは、デフォルトで `@modelcontextprotocol` npm scope から Server を検出します。他の scope を検索するには、`@cherry/mcp-auto-install` の Server 詳細ページで次の環境変数を追加します。
+
+```text
+MCP_PACKAGE_SCOPES=@modelcontextprotocol,@your-scope
+```
+
+複数の scope は半角カンマで区切ります。検索範囲を広げるとサードパーティ製パッケージの数も増えるため、提供元の審査基準も厳しくしてください。
+
+## よくある質問
+
+### 会話でインストールアシスタントが呼び出されない
+
+`@cherry/mcp-auto-install` が有効になっていて、現在のアシスタントまたは Agent に追加されていることを確認し、ツール呼び出しに対応したモデルを使用してください。プロンプトで「最初に MCP 自動インストールツールを呼び出す」と明示することもできます。
+
+### NPX が見つからない、または起動に失敗すると表示される
+
+MCP 設定で依存関係インストーラーを実行し、Cherry Studio を再起動します。それでも失敗する場合は、Server のログを開き、NPX、内蔵 Bun、ネットワークプロキシ、npm registry を確認してください。
+
+### 対象の Server が見つからない
+
+デフォルトの検索範囲は限られています。最初にパッケージの npm scope を確認し、`MCP_PACKAGE_SCOPES` でその scope を追加してください。自動インストールを使用せず、プロジェクトの公式ドキュメントに従って [MCP を手動設定](config.md) することもできます。
+
+### 設定を生成したが、Server の一覧に追加されていない
+
+これは現在の JSON モードでは正常な動作です。モデルが整理した `mcpServers` JSON をコピーし、**追加 → JSON からインポート** からインストールしてください。
+
+### インポート後に有効化できない
+
+インストールアシスタントが生成するのは推奨設定であり、パス、キー、プラットフォーム固有の引数が不足している場合があります。対象 Server の公式ドキュメントに従って設定を修正し、[MCP Server のよくある質問](chang-jian-wen-ti.md) を参考にログを確認してください。
+
+## 関連ドキュメント
+
+- [`@mcpmarket/mcp-auto-install` パッケージの説明](https://www.npmjs.com/package/@mcpmarket/mcp-auto-install)
+- [MCP の設定と使用](config.md)
+- [内蔵 MCP Server](in-memory.md)
+- [MCP Server のよくある質問](chang-jian-wen-ti.md)
+- [フィードバックと提案](../../question-contact/suggestions.md)

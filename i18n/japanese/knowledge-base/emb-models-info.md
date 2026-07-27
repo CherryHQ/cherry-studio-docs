@@ -2,171 +2,86 @@
 icon: square-info
 ---
 
-{% hint style="warning" %}
-このドキュメントはAIによって中国語から翻訳されており、まだレビューされていません。
-{% endhint %}
+# Embedding モデル
 
----
-icon: cherries
----
+Embedding モデルはテキストをベクトルへ変換し、意味に基づいて関連資料を検索できるようにします。担当するのは検索であり、最終回答の生成ではありません。チャット、Embedding、Rerank はそれぞれ別のモデル能力です。
 
-# 埋め込みモデル参考情報
+![ナレッジベースの Embedding モデル設定](../.gitbook/assets/cherry-v2-080-embedding-settings-ja.png)
+
+## 新しいナレッジベースのデフォルト動作
+
+新規作成ダイアログで入力するのは名前と、任意のグループだけです。この画面では Embedding モデルを選択しません。
+
+- ローカル Embedding モデルが未ダウンロードの場合、ナレッジベースは **BM25** モードで作成されます。BM25 はキーワードで検索し、ベクトルを生成せず、Embedding API も呼び出しません。
+- ローカル Embedding モデルがすでにダウンロード済みの場合、新しいナレッジベースはそのモデルと固定の次元数を自動的に使用し、最初からベクトルインデックスを作成します。
+
+したがって、Embedding モデルがなくても資料の追加と検索は可能です。意味検索が必要になった時点で、ナレッジベース設定から有効にできます。
+
+## 意味検索を有効にする
+
+対象のナレッジベースを開き、右上の**設定**をクリックして、**Embedding モデル**で次のいずれかを選択します。
+
+### ローカルモデルを使用する
+
+**ローカルモデルをダウンロード**をクリックします。ダウンロードが完了すると、Cherry Studio は内蔵のローカル Embedding モデルを自動的に選択して保存し、既存資料のベクトルを補完します。
+
+ローカルモデルでは、資料の断片を外部の Embedding サービスへ送信する必要がありません。初回のダウンロードとインデックス作成には、時間、メモリ、ディスク容量が必要です。現在のプラットフォームがローカル実行に対応していない場合、ダウンロードボタンは表示されません。
+
+### 設定済みのモデルプロバイダーを使用する
+
+有効で **Embedding** 能力を持つモデルを一覧から選ぶこともできます。対象モデルが表示されない場合は、**設定 → モデルサービス**でプロバイダーを設定し、モデル能力が Embedding として登録されていることを確認してください。
+
+保存時に Cherry Studio は短いテスト文字列を送信し、実際のベクトル次元数を取得します。API アドレス、キー、モデル ID、ネットワークのいずれかが利用できない場合、保存は失敗します。推測した次元数が使われることはありません。
 
 {% hint style="info" %}
-エラーを防ぐため、本文書では一部のモデルについてmax input値を厳密な上限値ではなく参考値として記載しています。例：公式が「8k」と公表している場合（具体的数値未公表時）、本文書では8191や8000などの参考値を設定しています。（理解不能な場合は無視し、ドキュメント記載の参考値を使用してください）
+DeepSeek、Kimi、GLM、GPT、Claude などの名称だけでは、Embedding 対応かどうかは判断できません。選択できるかどうかはブランドではなく、個々のモデル能力で決まります。
 {% endhint %}
 
-### 火山-豆包
+## 既存資料の処理
 
-[公式モデル情報](https://console.volcengine.com/ark/region:ark+cn-beijing/model?feature=\&projectName=default\&vendor=Bytedance\&view=LIST_VIEW)
+モデルを変更すると、ナレッジベースの状態に応じて安全な処理が選ばれます。
 
-| モデル名                  | max input |
-| ----------------------- | --------- |
-| Doubao-embedding        | 4095      |
-| Doubao-embedding-vision | 8191      |
-| Doubao-embedding-large  | 4095      |
+| 現在の状態 | 処理 |
+| --- | --- |
+| BM25 のナレッジベースで初めて Embedding を有効にする | 同じナレッジベース内でベクトルを補完。再作成は不要 |
+| 空のナレッジベースで Embedding モデルを変更する | 新しい設定を直接保存 |
+| ベクトルと資料がある状態で Embedding モデルを変更する | 新旧ベクトルの混在を防ぐため、復元／再構築フローを開始 |
 
-### 阿里
+有効化または再構築中は、アプリを終了したり元資料を移動したりしないでください。資料が多いほど処理時間が長くなり、オンラインモデルでは費用も増える場合があります。
 
-[公式モデル情報](https://help.aliyun.com/zh/model-studio/user-guide/embedding?spm=a2c4g.11186623.0.i1)
+## モデルの選び方
 
-| モデル名                      | max input |
-| ------------------------- | --------- |
-| text-embedding-v3         | 8192      |
-| text-embedding-v2         | 2048      |
-| text-embedding-v1         | 2048      |
-| text-embedding-async-v2   | 2048      |
-| text-embedding-async-v1   | 2048      |
+次の要素を比較してください。
 
-### OpenAI&#x20;
+- **言語対応**：実際の中国語、英語、日本語、ロシア語などの資料で検索精度を試します。
+- **プライバシー**：オンラインモデルには資料の断片と検索文が送信されます。機密資料ではローカルモデルを検討します。
+- **速度と費用**：初回のインデックス作成、再インデックス、検索でオンライン Embedding API が呼ばれる場合があります。
+- **安定性**：モデル ID、出力次元数、API の動作が安定していることを確認します。
 
-[公式モデル情報](https://platform.openai.com/docs/guides/embeddings#embedding-models)
+ランキングやモデル名だけで決めず、同じ資料と固定した質問を使って、正しい断片が上位に表示されるか比較してください。
 
-| モデル名                   | max input |
-| ---------------------- | --------- |
-| text-embedding-3-small | 8191      |
-| text-embedding-3-large | 8191      |
-| text-embedding-ada-002 | 8191      |
+## トラブルシューティング
 
-### 百度
+### Embedding モデルの一覧が空
 
-[公式モデル情報](https://cloud.baidu.com/doc/WENXINWORKSHOP/s/om6070n97#%E8%AF%B7%E6%B1%82%E5%8F%82%E6%95%B0)
+プロバイダーが有効で、モデルが追加済みであり、能力に **Embedding** が含まれていることを確認してください。通常のチャットモデルと Rerank モデルは一覧に表示されません。
 
-| モデル名         | max input |
-| ------------ | --------- |
-| Embedding-V1 | 384       |
-| tao-8k       | 8192      |
+### 保存時に次元数の取得が失敗する
 
-### 智谱
+プロバイダーの状態、API アドレス、キー、モデル ID、ネットワーク、残高を順に確認してください。保存時には実際の Embedding リクエストが 1 回送信されます。
 
-[公式モデル情報](https://bigmodel.cn/console/modelcenter/square)
+### BM25 だけを使う場合の制限
 
-| モデル名        | max input |
-| ----------- | --------- |
-| embedding-2 | 1024      |
-| embedding-3 | 2048      |
+BM25 は正確なキーワード、製品名、番号に向いていますが、言い換えや自然な表現の検索は意味検索より弱い傾向があります。まず BM25 で資料の品質を確認し、その後 Embedding モデルを有効にするか判断できます。
 
-### 混元
+### API キーの変更には再構築が必要か
 
-[公式モデル情報](https://cloud.tencent.com/document/product/1729/102832)
+同じモデルと次元数を引き続き使用する場合、通常は不要です。プロバイダーが別のモデルバージョンへルーティングする場合は、検索テストをやり直してください。
 
-| モデル名              | max input |
-| ----------------- | --------- |
-| hunyuan-embedding | 1024      |
+詳しいデータフローとローカルファイルの保存場所は、[ナレッジベースのデータ](data.md)を参照してください。
 
-### 百川
+***
 
-[公式モデル情報](https://platform.baichuan-ai.com/docs/text-Embedding)
+### ヘルプとフィードバック
 
-| モデル名                    | max input |
-| ----------------------- | --------- |
-| Baichuan-Text-Embedding | 512       |
-
-### together
-
-[公式モデル情報](https://docs.together.ai/docs/serverless-models#embedding-models)
-
-| モデル名                        | max input |
-| ------------------------- | --------- |
-| M2-BERT-80M-2K-Retrieval  | 2048      |
-| M2-BERT-80M-8K-Retrieval  | 8192      |
-| M2-BERT-80M-32K-Retrieval | 32768     |
-| UAE-Large-v1              | 512       |
-| BGE-Large-EN-v1.5         | 512       |
-| BGE-Base-EN-v1.5          | 512       |
-
-### Jina&#x20;
-
-[公式モデル情報](https://jina.ai/models/jina-embedding-b-en-v1)
-
-| モデル名                                 | max input |
-| ---------------------------------- | --------- |
-| jina-embedding-b-en-v1             | 512       |
-| jina-embeddings-v2-base-en         | 8191      |
-| jina-embeddings-v2-base-zh         | 8191      |
-| jina-embeddings-v2-base-de         | 8191      |
-| jina-embeddings-v2-base-code       | 8191      |
-| jina-embeddings-v2-base-es         | 8191      |
-| jina-colbert-v1-en                 | 8191      |
-| jina-reranker-v1-base-en           | 8191      |
-| jina-reranker-v1-turbo-en          | 8191      |
-| jina-reranker-v1-tiny-en           | 8191      |
-| jina-clip-v1                       | 8191      |
-| jina-reranker-v2-base-multilingual | 8191      |
-| reader-lm-1.5b                     | 256000    |
-| reader-lm-0.5b                     | 256000    |
-| jina-colbert-v2                    | 8191      |
-| jina-embeddings-v3                 | 8191      |
-
-### 硅基流动
-
-[公式モデル情報](https://siliconflow.cn/zh-cn/models)
-
-| モデル名                                    | max input |
-| ------------------------------------- | --------- |
-| BAAI/bge-m3                           | 8191      |
-| netease-youdao/bce-embedding-base\_v1 | 512       |
-| BAAI/bge-large-zh-v1.5                | 512       |
-| BAAI/bge-large-en-v1.5                | 512       |
-| Pro/BAAI/bge-m3                       | 8191      |
-
-### Gemini
-
-[公式モデル情報](https://ai.google.dev/gemini-api/docs/models/gemini?hl=zh-cn#text-embedding)
-
-| モデル名                 | max input |
-| ------------------ | --------- |
-| text-embedding-004 | 2048      |
-
-### nomic
-
-[公式モデル情報](https://docs.nomic.ai/atlas/embeddings-and-retrieval/text-embedding)
-
-| モデル名                    | max input |
-| --------------------- | --------- |
-| nomic-embed-text-v1   | 8192      |
-| nomic-embed-text-v1.5 | 8192      |
-| gte-multilingual-base | 8192      |
-
-### console
-
-[公式モデル情報](https://console.upstage.ai/docs/capabilities/embeddings)
-
-| モデル名              | max input |
-| ----------------- | --------- |
-| embedding-query   | 4000      |
-| embedding-passage | 4000      |
-
-### cohere
-
-[公式モデル情報](https://docs.cohere.com/docs/models#embed)
-
-| モデル名                            | max input |
-| ----------------------------- | --------- |
-| embed-english-v3.0            | 512       |
-| embed-english-light-v3.0      | 512       |
-| embed-multilingual-v3.0       | 512       |
-| embed-multilingual-light-v3.0 | 512       |
-| embed-english-v2.0            | 512       |
-| embed-english-light-v2.0      | 512       |
-| embed-multilingual-v2.0       | 256       |
+モデルの検出、ダウンロード、インデックス作成で問題が発生した場合は、[フィードバックと提案](../question-contact/suggestions.md)からコミュニティへお問い合わせください。

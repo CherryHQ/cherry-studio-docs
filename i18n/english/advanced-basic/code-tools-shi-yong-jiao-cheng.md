@@ -1,112 +1,90 @@
 ---
-description: Tools
+description: Configure and launch AI coding CLIs in Cherry Studio
 icon: code
 ---
-# Code Tools Usage Guide
 
+# Code Tools
+
+Code Tools lets you configure and launch AI coding CLIs from Cherry Studio. You can reuse model services that are already configured, select a project directory and terminal, and then work with the CLI in a separate terminal window.
+
+## Before you start
+
+* Code Tools requires **Bun**. If the page reports that it is not installed, select **Install Bun** in the prompt.
+* Kimi CLI also requires **uv**. You can install it under **Settings → MCP Servers → Dependencies**.
+* Except for GitHub Copilot CLI, configure a compatible model service and API key in Cherry Studio before you begin.
 
 {% hint style="warning" %}
-This document was translated from Chinese by AI and has not yet been reviewed.
+AI coding CLIs can read and modify files and run commands in the selected working directory. Save the current version with Git or another method first, and do not select a directory that contains unrelated sensitive files.
 {% endhint %}
 
+## Open Code Tools
 
+1. Select `+` on the right side of the top tab bar to open the Launchpad.
+2. Select **Code**.
+3. On the Code Tools page, select the CLI that you want to use.
 
+![CLI shortcuts on the Code Tools page](../.gitbook/assets/cherry-v2-091-code-tools-overview-en.png)
 
-Cherry Studio v1.5.7 introduces an easy-to-use and powerful Code Agent feature, allowing you to directly launch and manage various AI programming agents. This tutorial will guide you through the complete setup and launch process.
+The following CLIs are supported:
 
-***
+| CLI | Model source |
+| :--- | :--- |
+| Claude Code | Anthropic-compatible models |
+| Qwen Code | OpenAI-compatible models |
+| Gemini CLI | Gemini-compatible models |
+| OpenAI Codex | OpenAI- or OpenAI Responses-compatible models |
+| iFlow CLI | OpenAI-compatible models |
+| GitHub Copilot CLI | No model selector; uses GitHub Copilot's own authentication and model capabilities |
+| Kimi CLI | OpenAI-compatible models |
+| OpenCode | OpenAI-, OpenAI Responses-, or Anthropic-compatible models |
 
-### Steps
+The model list is automatically filtered by the endpoint types supported by the selected CLI. If a model is missing, check whether its provider is enabled, the model has been added, and its endpoint type is compatible.
 
-#### 1. Upgrade Cherry Studio
+## Configure and launch
 
-First, please ensure your Cherry Studio has been upgraded to **v1.5.7** or a higher version. You can go to [GitHub Releases](https://github.com/CherryHQ/cherry-studio/releases) or the official website to download the latest version.
+After selecting a CLI card, complete the following fields in the configuration dialog:
 
-<figure><img src="../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
+![Code Tools launch configuration dialog](../.gitbook/assets/cherry-v2-091-code-tools-config-en.png)
 
-#### 2. Adjust Navigation Bar Position
+1. **Model**: Select the model that the CLI should use. GitHub Copilot CLI does not show this field.
+2. **Working Directory**: Select the project directory where the CLI should start. Recently used directories remain in the list.
+3. **Terminal**: On macOS or Windows, select a detected terminal. On Windows, if Cherry Studio cannot locate WSL, Alacritty, or WezTerm automatically, set a custom executable path.
+4. **Environment Variables**: Enter one variable per line in `KEY=value` format. Cherry Studio generates the variables required by the model; a custom variable with the same name overrides the generated value.
+5. **Automatically update to latest version**: Enable this when needed. When enabled, Cherry Studio checks for and installs updates for the selected CLI before launch.
+6. Select **Launch**.
 
-To facilitate the use of the top tab feature, we recommend adjusting the navigation bar to the top.
+If the CLI is not installed, Cherry Studio downloads and installs it on the first launch, then runs it in the selected terminal and working directory. Kimi CLI is downloaded and launched through uv, so its first run also requires a network connection.
 
-*   Path: `Settings` -> `Display Settings` -> `Navigation Bar Settings`
-*   Set the "Navigation Bar Position" option to **`Top`**.
+{% hint style="info" %}
+GitHub Copilot CLI does not use Cherry Studio's model selector. If it requires additional authentication, add the information requested by that CLI in the Environment Variables field, for example `GITHUB_TOKEN`.
+{% endhint %}
 
-<figure><img src="../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+## Environment variables and credentials
 
-#### 3. Create New Tab
+In addition to your custom environment variables, Cherry Studio reads the API address, model identifier, and API key from the selected model service and converts them into the variables or launch arguments required by the CLI.
 
-Click the "+" icon at the top of the interface to create a new blank tab.
+Custom variables are useful for proxy addresses and CLI-specific switches. Confirm each variable name before adding it. A custom value takes precedence over a generated value with the same name, and an incorrect override can cause authentication or connection failures.
 
-<figure><img src="../.gitbook/assets/image (2) (1) (1).png" alt=""><figcaption></figcaption></figure>
+{% hint style="warning" %}
+Do not expose API keys, GitHub tokens, or other credentials in screenshots, logs, or public issues. Code Tools saves custom environment variables in the current configuration, so use them only on a trusted device.
+{% endhint %}
 
-#### 4. Open Code Agent Functionality
+## Troubleshooting
 
-In the newly created tab, click the `Code` (or `</>`) icon to enter the Code Agent configuration interface.
+### The Launch button is unavailable
 
-<figure><img src="../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+Confirm that Bun is installed and a working directory is selected. For every tool except GitHub Copilot CLI, also select a model.
 
-#### 5. Select CLI Tool
+### The model list is empty
 
-Based on your needs and API Key, select a Code Agent tool to use. Currently, the following are supported:
+The selected CLI shows only models with compatible endpoint types. Return to the model service settings and check that the provider is enabled, the API key works, the model has been added, and the model has a compatible endpoint type.
 
-*   **Claude Code**
-*   **Gemini CLI**
-*   **Qwen Code**
-*   **OpenAI Codex**
+### Kimi CLI cannot find uv
 
-<figure><img src="../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+Install uv under **Settings → MCP Servers → Dependencies**. If Cherry Studio still cannot find it after installation, restart the app.
 
-#### 6. Select Model for Agent Invocation
+### The terminal did not open
 
-In the model dropdown list, select a model compatible with your chosen CLI tool. _(For detailed model compatibility instructions, please refer to "Important Notes" below)_
+Switch to the system default terminal. On Windows, confirm that the other terminal application is installed. For WSL, Alacritty, or WezTerm, you can also use **Set custom terminal path** to select the executable.
 
-<figure><img src="../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
-
-#### 7. Specify Working Directory
-
-Click the "Select Directory" button to specify a working directory for the Agent. The Agent will have access to all files and subdirectories within this directory, allowing it to understand the project context, read files, and execute code.
-
-<figure><img src="../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
-
-#### 8. Set Environment Variables
-
-*   **Automatic Configuration**: Your selections in Step 6 (Model) and Step 7 (Working Directory) will automatically generate the corresponding environment variables.
-*   **Custom Addition**: If your Agent or project requires other specific environment variables (e.g., `PROXY_URL`, etc.), you can add them custom in this area.
-
-<figure><img src="../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
-
-#### 9. Update Options
-
-*   **Built-in Executables**: Cherry Studio has integrated the executable files for all the Code Agents listed above, allowing you to use them directly without an internet connection in most cases.
-*   **Automatic Updates**: If you want the Agent to always stay up-to-date, you can check the **`Check for updates and install the latest version`** option. When checked, the program will connect to the internet to check and update the Agent tool every time it starts.
-
-<figure><img src="../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
-
-#### 10. Launch Agent
-
-Once all configurations are complete, click the **`Launch`** button. Cherry Studio will automatically call your system's built-in Terminal tool, load all environment variables into it, and then run your selected Code Agent. You can now interact with the AI Agent in the popped-up terminal window.
-
-<figure><img src="../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
-
-***
-
-### Important Notes
-
-1.  **Model Compatibility Instructions**:
-    *   **Claude Code**: Requires selecting models that support the Anthropic API Endpoint format. Currently, officially supported models include:
-        *   Claude series models
-        *   DeepSeek V3.1 (Official API Platform)
-        *   Kimi K2 (Official API Platform)
-        *   Zhipu GLM 4.5 (Official API Platform)
-        *   **Note**: Many current third-party service providers (such as One API, New API, etc.) mainly support the OpenAI Chat Completions format for DeepSeek, Kimi, and GLM API interfaces, which may not be directly compatible with Claude Code. Adaptation by service providers is required.
-    *   **Gemini CLI**: Requires selecting Google's Gemini series models.
-    *   **Qwen Code**: Supports models with the OpenAI Chat Completions API format. It is highly recommended to use the **`Qwen3 Coder`** series models for optimal code generation results.
-    *   **OpenAI Codex**: Supports GPT series models (e.g., `gpt-4o`, `gpt-5`, etc.).
-2.  **Dependencies and Environment Conflicts**:
-    *   Cherry Studio integrates an independent Node.js runtime environment, Code Agent executables, and environment variable configurations, aiming to provide a clean, out-of-the-box environment.
-    *   If you encounter dependency conflicts or unusual errors when launching the Agent, consider temporarily **uninstalling or disabling related dependencies already installed on your system** (e.g., globally installed Node.js or specific toolchains) to rule out conflicts.
-3.  **API Token Consumption Warning**:
-    *   **Code Agent consumes a very large amount of API Tokens**. When handling complex tasks, the Agent may generate numerous requests for thinking, planning, and code generation, leading to rapid Token consumption.
-    *   Please be sure to **act within your means** based on your API quota and budget, and closely monitor Token usage to prevent budget overruns.
-
-We hope this tutorial helps you quickly get started with Cherry Studio's powerful Code Agent functionality!
+The first launch, CLI installation, and update checks all require a network connection and may take some time. If an operation fails, check your network, proxy, and API service settings, then try launching again.

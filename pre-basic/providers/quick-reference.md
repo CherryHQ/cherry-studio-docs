@@ -4,156 +4,126 @@ icon: list
 
 # 全部 Provider 快速参考
 
-Cherry Studio 内置 **60+ 家 Provider**，本页提供总览表，找到目标 Provider 后**按指引填写密钥即可使用**。已有专题文档的 Provider 提供跳转链接，其余按通用步骤（[Provider 总览](README.md)）配置。
+本页列出 Cherry Studio V2 当前内置的模型服务模板，方便你确认服务商名称、预设接口和凭证入口。列表会随版本更新；如果本页与客户端不一致，请以 `设置 → 模型服务 → 全部` 中实际显示的内容为准。
 
-## 使用步骤
+{% hint style="info" %}
+这里的“接口”表示 Cherry Studio 为该模板预设的连接方式，并不等同于其中每个模型都支持相同能力。模型是否支持视觉、推理或工具调用，请以服务商的模型说明和实际测试为准。
+{% endhint %}
 
-1. **查找目标 Provider**（可用 Ctrl/⌘+F 快速搜索）
-2. 点击 **官网** 注册账号并获取 API Key
-3. 在 Cherry Studio `设置 → 模型服务` 中找到对应 Provider，填写密钥后点击"获取模型列表"
-4. 完成配置
+## 怎么使用这张表
 
-## 一句话决策
+1. 在下面找到已有账户或准备接入的服务商；
+2. 打开**凭证入口**，根据服务商要求创建 API Key 或云账户凭证；
+3. 返回 Cherry Studio 的 `设置 → 模型服务`，将左侧筛选切换为**全部**并选择同名服务商；
+4. 按[模型服务](README.md)中的步骤完成鉴权、同步模型、启用模型和连接检查。
 
-| 你的需求 | 推荐方向 |
+如果服务商不在列表中，但提供兼容接口，请使用[自定义服务商](zi-ding-yi-fu-wu-shang.md)。
+
+## 接口名称说明
+
+| 本页简称 | 对应接口 |
 |---|---|
-| **新手快速上手**，避免复杂流程 | [CherryIN](cherryin-1.md) 或 [CherryAI](cherryai/) |
-| **国内访问最方便** | DeepSeek / Moonshot / 硅基流动 / 智谱 |
-| **海外最强模型** | OpenAI / Anthropic / Gemini |
-| **一个 key 通用 200 家** | [OpenRouter](openrouter.md) |
-| **完全本地、隐私敏感** | [Ollama](ollama.md) / [LM Studio](lm-studio.md) |
-| **企业合规** | [Azure OpenAI](azure-openai.md) / AWS Bedrock |
-| **要做 [Cherry Agent](../../advanced-basic/agent.md)** | [Anthropic](anthropic.md) / [CherryIN](cherryin-1.md)（要支持 Anthropic 协议） |
+| OpenAI Chat | OpenAI Chat Completions |
+| OpenAI Responses | OpenAI Responses |
+| Anthropic | Anthropic Messages |
+| Gemini | Google Generate Content |
+| Ollama | Ollama Chat |
+| 专用接入 | 由 Cherry Studio 使用该云平台或服务的专用鉴权与路由 |
 
-## 国内大厂自营模型
+左侧列表中的 **Agent** 筛选会显示具有 Anthropic 兼容端点的服务商。它只是连接方式筛选，不保证所有模型都能调用工具。
 
-无需翻墙、有中文优势、价格相对便宜。
+## 多接口模板
 
-| Provider | 一句话特点 | 官网 | 专题文档 |
+这些模板预设了两种接口。你可以在同一服务商下为不同模型选择合适的连接方式。
+
+| Provider | 预设接口 | 凭证入口 | 专题 |
 |---|---|---|---|
-| **DeepSeek** | 编程与推理性价比之王 | [deepseek.com](https://platform.deepseek.com/) | [→](deepseek.md) |
-| **Moonshot AI (Kimi)** | 超长上下文（最长 200 万字） | [moonshot.cn](https://platform.moonshot.cn/) | [→](moonshot.md) |
-| **ZhiPu (智谱)** | GLM 系列，多模态 | [bigmodel.cn](https://open.bigmodel.cn/) | — |
-| **doubao (豆包/火山引擎)** | 字节出品，价格亲民 | [volcengine.com](https://www.volcengine.com/product/doubao) | [→](doubao.md) |
-| **hunyuan (腾讯混元)** | 腾讯系，适合接腾讯生态 | [cloud.tencent.com](https://cloud.tencent.com/product/hunyuan) | — |
-| **Baidu Cloud (文心一言)** | 百度 ERNIE 系列 | [cloud.baidu.com](https://cloud.baidu.com/) | — |
-| **Bailian (阿里百炼)** | Qwen 系列、有海量模型 | [bailian.console.aliyun.com](https://bailian.console.aliyun.com/) | [→](a-li-yun-bai-lian.md) |
-| **BAICHUAN AI** | 百川大模型 | [baichuan-ai.com](https://platform.baichuan-ai.com/) | — |
-| **MiniMax** | 国内多模态（语音、视频） | [minimaxi.com](https://platform.minimaxi.com/) | [→](minimax.md) |
-| **StepFun** | 阶跃星辰 | [stepfun.com](https://platform.stepfun.com/) | — |
-| **Yi** | 零一万物 | [01.ai](https://platform.lingyiwanwu.com/) | — |
-| **LongCat** | 美团 LongCat 系列 | [longcat.chat](https://longcat.chat/) | — |
-| **Xiaomi MiMo** | 小米大模型 | — | — |
+| CherryIN | Anthropic、OpenAI Chat | [获取凭证](https://open.cherryin.ai/console/token) | [配置](cherryin-1.md) |
+| Silicon | Anthropic、OpenAI Chat | [获取凭证](https://cloud.siliconflow.cn/) | [配置](siliconcloud.md) |
+| AiHubMix | Anthropic、OpenAI Chat | [获取凭证](https://aihubmix.com) | — |
+| ZhiPu | Anthropic、OpenAI Chat | [获取凭证](https://open.bigmodel.cn/usercenter/apikeys) | — |
+| deepseek | Anthropic、OpenAI Chat | [获取凭证](https://platform.deepseek.com/api_keys) | [配置](deepseek.md) |
+| DMXAPI | Anthropic、OpenAI Chat | [获取凭证](https://www.dmxapi.cn/) | — |
+| TokenFlux | Anthropic、OpenAI Chat | [获取凭证](https://api.tokenflux.ai/dashboard/api-keys) | — |
+| 302.AI | Anthropic、OpenAI Chat | [获取凭证](https://dash.302.ai/apis/list) | — |
+| Qiniu | Anthropic、OpenAI Chat | [获取凭证](https://portal.qiniu.com/ai-inference/api-key) | — |
+| OpenRouter | Anthropic、OpenAI Chat | [获取凭证](https://openrouter.ai/settings/keys) | [配置](openrouter.md) |
+| Ollama | Anthropic、Ollama | [官网](https://ollama.com/) | [配置](ollama.md) |
+| New API | Anthropic、OpenAI Chat | [文档](https://docs.newapi.pro/) | [配置](newapi.md) |
+| LM Studio | Anthropic、OpenAI Chat | [官网](https://lmstudio.ai/) | [配置](lm-studio.md) |
+| Moonshot AI | Anthropic、OpenAI Chat | [获取凭证](https://platform.moonshot.cn/console/api-keys) | [配置](moonshot.md) |
+| Bailian | Anthropic、OpenAI Chat | [获取凭证](https://bailian.console.aliyun.com/?tab=model#/api-key) | [配置](a-li-yun-bai-lian.md) |
+| MiniMax | Anthropic、OpenAI Chat | [获取凭证](https://platform.minimaxi.com/user-center/basic-information/interface-key) | [配置](minimax.md) |
+| ModelScope | Anthropic、OpenAI Chat | [获取凭证](https://modelscope.cn/my/myaccesstoken) | [配置](modelscope.md) |
+| LongCat | Anthropic、OpenAI Chat | [获取凭证](https://longcat.chat/platform/api_keys) | — |
+| Xiaomi MiMo | Anthropic、OpenAI Chat | [获取凭证](https://platform.xiaomimimo.com/#/console/usage) | — |
+| zai | Anthropic、OpenAI Chat | [获取凭证](https://z.ai/manage-apikey/apikey-list) | — |
+| minimax-global | Anthropic、OpenAI Chat | [获取凭证](https://platform.minimax.io/user-center/basic-information/interface-key) | — |
 
-## 海外大厂自营模型
+## 单接口模板
 
-效果第一梯队，国内访问通常需要代理。
-
-| Provider | 一句话特点 | 官网 | 专题文档 |
+| Provider | 预设接口 | 凭证入口 | 专题 |
 |---|---|---|---|
-| **OpenAI** | GPT 系列 | [openai.com](https://platform.openai.com/) | [→](openai.md) |
-| **Anthropic** | Claude 系列，Cherry Agent 首选 | [anthropic.com](https://console.anthropic.com/) | [→](anthropic.md) |
-| **Gemini (Google)** | Google 大模型 | [aistudio.google.com](https://aistudio.google.com/) | [→](google-gemini.md) |
-| **Azure OpenAI** | 微软托管的 OpenAI，企业合规 | [portal.azure.com](https://portal.azure.com/) | [→](azure-openai.md) |
-| **VertexAI** | Google Cloud 托管 | [cloud.google.com](https://cloud.google.com/vertex-ai) | [→](vertex-ai.md) |
-| **AWS Bedrock** | 亚马逊托管多家模型 | [aws.amazon.com/bedrock](https://aws.amazon.com/bedrock/) | — |
-| **Mistral** | 欧洲开源模型代表 | [mistral.ai](https://console.mistral.ai/) | — |
-| **Grok (xAI)** | 马斯克 xAI，自带联网 | [x.ai](https://console.x.ai/) | [→](grok.md) |
-| **Perplexity** | 搜索增强对话 | [perplexity.ai](https://www.perplexity.ai/) | — |
+| OpenVINO Model Server | OpenAI Chat | [官网](https://www.intel.com/content/www/us/en/developer/tools/openvino-toolkit/overview.html) | — |
+| ocoolAI | OpenAI Chat | [获取凭证](https://one.ocoolai.com/token) | — |
+| AlayaNew | OpenAI Chat | [官网](https://www.alayanew.com/) | — |
+| AIOnly | OpenAI Chat | [获取凭证](https://maas.aiionly.com/keyApi) | — |
+| BurnCloud | OpenAI Chat | [获取凭证](https://ai.burncloud.com/token) | — |
+| Cephalon | OpenAI Chat | [获取凭证](https://cephalon.cloud/api) | — |
+| LANYUN | OpenAI Chat | [获取凭证](https://maas.lanyun.net/#/system/apiKey) | — |
+| PH8 | OpenAI Chat | [获取凭证](https://ph8.co/apiKey) | — |
+| SophNet | OpenAI Chat | [获取凭证](https://sophnet.com/#/project/key) | — |
+| PPIO | OpenAI Chat | [获取凭证](https://ppio.com/settings/key-management) | [配置](ppio.md) |
+| Anthropic | Anthropic | [获取凭证](https://console.anthropic.com/settings/keys) | [配置](anthropic.md) |
+| OpenAI | OpenAI Responses | [获取凭证](https://platform.openai.com/api-keys) | [配置](openai.md) |
+| Gemini | Gemini | [获取凭证](https://aistudio.google.com/app/apikey) | [配置](google-gemini.md) |
+| Github Models | OpenAI Chat | [获取凭证](https://github.com/settings/tokens) | — |
+| Github Copilot | OpenAI Chat | [官网](https://github.com/features/copilot) | [配置](github-copilot.md) |
+| Yi | OpenAI Chat | [获取凭证](https://platform.lingyiwanwu.com/apikeys) | — |
+| BAICHUAN AI | OpenAI Chat | [获取凭证](https://platform.baichuan-ai.com/console/apikey) | — |
+| StepFun | OpenAI Chat | [获取凭证](https://platform.stepfun.com/interface-key) | — |
+| doubao | OpenAI Chat | [控制台](https://www.volcengine.com/experience/ark) | [配置](doubao.md) |
+| Infini | OpenAI Chat | [获取凭证](https://cloud.infini-ai.com/iam/secret/key) | — |
+| Groq | OpenAI Chat | [获取凭证](https://console.groq.com/keys) | [配置](groq.md) |
+| Together | OpenAI Chat | [获取凭证](https://api.together.ai/settings/api-keys) | — |
+| Fireworks | OpenAI Chat | [获取凭证](https://fireworks.ai/account/api-keys) | — |
+| nvidia | OpenAI Chat | [控制台](https://build.nvidia.com/explore/discover) | — |
+| Grok | OpenAI Chat | [官网](https://x.ai/) | [配置](grok.md) |
+| Hyperbolic | OpenAI Chat | [获取凭证](https://app.hyperbolic.xyz/settings) | — |
+| Mistral | OpenAI Chat | [获取凭证](https://console.mistral.ai/api-keys/) | — |
+| Jina | OpenAI Chat | [官网](https://jina.ai) | — |
+| Perplexity | OpenAI Chat | [获取凭证](https://www.perplexity.ai/settings/api) | — |
+| Xirang | OpenAI Chat | [控制台](https://huiju.ctyun.cn/service/serviceGroup) | — |
+| hunyuan | OpenAI Chat | [获取凭证](https://console.cloud.tencent.com/hunyuan/api-key) | — |
+| Tencent Cloud TI | OpenAI Chat | [获取凭证](https://console.cloud.tencent.com/lkeap/api) | — |
+| Baidu Cloud | OpenAI Chat | [获取凭证](https://console.bce.baidu.com/iam/#/iam/apikey/list) | — |
+| VoyageAI | OpenAI Chat | [获取凭证](https://dashboard.voyageai.com/organization/api-keys) | — |
+| Poe | OpenAI Chat | [获取凭证](https://poe.com/api/keys) | — |
+| Hugging Face | OpenAI Responses | [获取凭证](https://huggingface.co/settings/tokens) | — |
+| Vercel AI Gateway | OpenAI Chat | [官网](https://vercel.com/) | — |
+| Cerebras AI | OpenAI Chat | [控制台](https://cloud.cerebras.ai) | — |
 
-## 网关 / 聚合
+## 专用接入模板
 
-一个 key 接入多家模型，账号集中管理。
+这几项不是普通的 API Key + Base URL 组合。请按页面字段准备对应云平台信息。
 
-| Provider | 一句话特点 | 官网 | 专题文档 |
+| Provider | 鉴权或连接方式 | 凭证入口 | 专题 |
 |---|---|---|---|
-| **CherryAI** | Cherry 官方免费体验 | — | [→](cherryai/) |
-| **CherryIN** | Cherry 官方付费网关，双端点（OpenAI + Anthropic）| [open.cherryin.cc](https://open.cherryin.cc/) | [→](cherryin-1.md) |
-| **OpenRouter** | 海外最大聚合，200+ 模型 | [openrouter.ai](https://openrouter.ai/) | [→](openrouter.md) |
-| **AiHubMix** | 海外聚合 | [aihubmix.com](https://aihubmix.com/) | — |
-| **DMXAPI** | 国内聚合 | [dmxapi.cn](https://dmxapi.cn/) | — |
-| **302.AI** | 国内聚合 | [302.ai](https://302.ai/) | — |
-| **NewAPI** | 自建网关（开源） | — | [→](newapi.md) |
-| **OneAPI** | 自建网关（开源） | — | [→](oneapi.md) |
-| **PPIO 派欧云** | 国内云算力 + 模型 | [ppio.com](https://ppio.com/) | [→](ppio.md) |
-| **BurnCloud** | 国内聚合 | — | — |
-| **AIOnly** | 国内聚合 | — | — |
-| **ocoolAI** | 国内聚合 | — | — |
-| **TokenFlux** | 海外网关 | — | — |
-| **Poe** | Quora 旗下 AI 集市 | [poe.com](https://poe.com/) | — |
-| **Vercel AI Gateway** | Vercel 旗下网关 | [vercel.com/ai](https://vercel.com/ai) | — |
+| Azure OpenAI | Azure 凭证、API Version、部署信息 | [Azure Portal](https://portal.azure.com/) | [配置](azure-openai.md) |
+| VertexAI | Google Cloud 项目、区域与凭证 | [Google Cloud Console](https://console.cloud.google.com/apis/credentials) | [配置](vertex-ai.md) |
+| GPUStack | GPUStack 服务地址与凭证 | [官网](https://gpustack.ai/) | — |
+| AWS Bedrock | AWS 区域与 IAM 或 Bedrock API Key | [IAM 文档](https://docs.aws.amazon.com/bedrock/latest/userguide/security-iam.html) | — |
 
-## 超低延迟 / 高吞吐推理服务
+{% hint style="warning" %}
+服务商可能调整注册地址、模型权限、地区限制和计费规则。创建凭证前请阅读该平台最新说明；Cherry Studio 只负责连接，不代替服务商提供账户或额度。
+{% endhint %}
 
-适合需要"速度感"的场景（IM 机器人、实时翻译等）。
+## 列表中没有目标服务
 
-| Provider | 一句话特点 | 官网 | 专题文档 |
-|---|---|---|---|
-| **Groq** | LPU 硬件，毫秒级响应 | [groq.com](https://console.groq.com/) | [→](groq.md) |
-| **Cerebras AI** | 自研芯片，超大上下文 | [cerebras.ai](https://cerebras.ai/) | — |
-| **Together** | 开源模型集中托管 | [together.ai](https://www.together.ai/) | — |
-| **Fireworks** | 开源模型推理优化 | [fireworks.ai](https://fireworks.ai/) | — |
-| **Hyperbolic** | 推理服务，性价比 | [hyperbolic.xyz](https://hyperbolic.xyz/) | — |
+- 自建 New API：使用 [New API](newapi.md) 模板；
+- 自建 One API 或其他兼容网关：参考 [OneAPI](oneapi.md) 或[自定义服务商](zi-ding-yi-fu-wu-shang.md)；
+- 仅有 OpenAI、Anthropic、Gemini 或 OpenAI Responses 兼容地址：直接创建[自定义服务商](zi-ding-yi-fu-wu-shang.md)并填写对应端点。
 
-## 国产云 + 算力服务
+如果模板名称存在，但你的部署地址与默认值不同，可以复制该服务商，再修改副本的地址和鉴权配置。
 
-| Provider | 一句话特点 | 官网 | 专题文档 |
-|---|---|---|---|
-| **Silicon (硅基流动)** | 国内最大开源模型托管 | [siliconflow.cn](https://cloud.siliconflow.cn/) | [→](siliconcloud.md) |
-| **ModelScope (魔搭)** | 阿里旗下开源模型平台 | [modelscope.cn](https://modelscope.cn/) | [→](modelscope.md) |
-| **华为云** | 华为云盘古 | [huaweicloud.com](https://www.huaweicloud.com/) | [→](huawei.md) |
-| **Tencent Cloud TI** | 腾讯云 TI 平台 | [cloud.tencent.com](https://cloud.tencent.com/product/ti) | — |
-| **无问芯穹** | 国内算力网关 | [infini-ai.com](https://infini-ai.com/) | [→](wu-wen-xin-qiong.md) |
-| **AlayaNew** | 国内推理服务 | — | — |
-| **Qiniu (七牛)** | 七牛云 AI | [qiniu.com](https://www.qiniu.com/) | — |
-| **Cephalon** | 国内推理 | — | — |
-| **LANYUN** | 国内推理 | — | — |
-| **Xirang** | 国内推理 | — | — |
-| **Infini** | 国内推理 | — | — |
-
-## 嵌入 / 重排专用
-
-只用于做嵌入或重排，配合知识库 / 全局记忆使用。
-
-| Provider | 一句话特点 | 官网 | 专题文档 |
-|---|---|---|---|
-| **Jina** | 嵌入、重排、CLIP，免费额度大 | [jina.ai](https://jina.ai/) | — |
-| **VoyageAI** | 嵌入 / 重排专家 | [voyageai.com](https://www.voyageai.com/) | — |
-
-## 本地推理
-
-完全离线，保护隐私。
-
-| Provider | 一句话特点 | 官网 | 专题文档 |
-|---|---|---|---|
-| **Ollama** | 命令行本地推理，最流行 | [ollama.com](https://ollama.com/) | [→](ollama.md) |
-| **LM Studio** | GUI 本地推理，Apple Silicon 友好 | [lmstudio.ai](https://lmstudio.ai/) | [→](lm-studio.md) |
-| **GPUStack** | 企业级本地推理 | [gpustack.ai](https://gpustack.ai/) | — |
-| **OpenVINO Model Server** | Intel 加速本地推理 | [openvino.ai](https://www.openvino.ai/) | — |
-
-## 模型平台 / 其他
-
-| Provider | 一句话特点 | 官网 | 专题文档 |
-|---|---|---|---|
-| **Hugging Face** | 全球最大开源模型社区 | [huggingface.co](https://huggingface.co/) | — |
-| **GitHub Copilot** | 微软 GitHub 编程助手 | [github.com/features/copilot](https://github.com/features/copilot) | [→](github-copilot.md) |
-| **GitHub Models** | GitHub 模型市场（Beta）| [github.com/marketplace/models](https://github.com/marketplace/models) | — |
-| **MiniMax Global** | MiniMax 海外版 | — | — |
-| **SophNet** | 国内模型托管 | — | — |
-| **PH8** | 国内推理 | — | — |
-| **Z.ai** | 智谱国际版 | [z.ai](https://z.ai/) | — |
-| **nvidia** | NVIDIA NIM 推理 | [nvidia.com](https://www.nvidia.com/ai/) | — |
-
-## 自定义服务商
-
-如果你用的服务不在上面列表里，但提供 **OpenAI 兼容 / Anthropic 兼容 / Gemini 兼容** 任一协议，都可以通过 [自定义服务商](zi-ding-yi-fu-wu-shang.md) 添加。
-
-## 还是不知道选哪个？
-
-直接走 [**CherryIN**](cherryin-1.md) 或 [**CherryAI**](cherryai/) —— 最适合新手快速上手。需要进阶时再换。
-
-***
-
-### 💡 获取帮助与提交反馈
-
-如果您在配置或使用过程中遇到任何疑问、Bug 或有功能改进建议，请参考 [反馈与建议](../../question-contact/suggestions.md) 中提供的官方渠道。
+遇到问题时，请先按[模型服务](README.md#常见问题)检查服务商开关、模型开关、API Key、Base URL 和接口类型。

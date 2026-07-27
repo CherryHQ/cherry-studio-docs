@@ -1,171 +1,87 @@
 ---
 icon: square-info
 ---
-# Embedding Model Reference Information
 
+# Embedding Models
 
-{% hint style="warning" %}
-This document was translated from Chinese by AI and has not yet been reviewed.
-{% endhint %}
+An embedding model converts text into vectors so that Cherry Studio can retrieve sources by meaning. It handles retrieval rather than answer generation; chat, embedding, and rerank models are separate capabilities.
 
+![Embedding model settings in a knowledge base](../.gitbook/assets/cherry-v2-080-embedding-settings-en.png)
 
+## Default Behavior for a New Knowledge Base
 
+The creation dialog asks only for a name and, optionally, a group. You do not select an embedding model there.
+
+- If the local embedding model has not been downloaded, the knowledge base starts in **BM25** mode. BM25 retrieves by keywords, creates no vectors, and does not call an embedding API.
+- If the local embedding model is already downloaded, a new knowledge base automatically uses it with its fixed dimensions and builds a vector index from the start.
+
+You can therefore import and search sources without an embedding model, then enable semantic retrieval later from the knowledge base settings.
+
+## Enable Semantic Retrieval
+
+Open the target knowledge base, click **Settings** in the upper-right corner, and choose one of the following options under **Embedding Model**.
+
+### Use the Local Model
+
+Click **Download Local Model**. When the download finishes, Cherry Studio automatically selects and saves the built-in local embedding model, then backfills vectors for existing sources.
+
+The local model keeps source passages away from an external embedding service. Its first download and first indexing run require time, memory, and disk space. The download button is hidden on platforms that cannot run the model locally.
+
+### Use a Configured Model Provider
+
+You can also choose an enabled model with **Embedding** capability from the list. If the model is missing, configure its provider under **Settings → Model Providers** and confirm that the model is marked as an embedding model.
+
+When you save, Cherry Studio sends a short test string to determine the actual vector dimensions. Saving fails if the API URL, key, model ID, or network is unavailable; the app does not guess a dimension.
 
 {% hint style="info" %}
-To prevent errors, in this document, the `max input` values for some models are not written as their absolute maximums. For example, when the official maximum input value is 8k (without a clear specific number given), the reference values provided in this document are 8191 or 8000, etc. (If unclear, ignore and just use the reference values in the document.)
+Names such as DeepSeek, Kimi, GLM, GPT, and Claude do not by themselves mean that a model supports embeddings. Availability depends on the capability of the specific model, not its brand.
 {% endhint %}
 
-### Volcano-Doubao
+## What Happens to Existing Sources
 
-[Official Model Information Reference Link](https://console.volcengine.com/ark/region:ark+cn-beijing/model?feature=\&projectName=default\&vendor=Bytedance\&view=LIST_VIEW)
+Cherry Studio chooses a safe path based on the current state of the knowledge base:
 
-| Name                      | max input |
-| ----------------------- | --------- |
-| Doubao-embedding        | 4095      |
-| Doubao-embedding-vision | 8191      |
-| Doubao-embedding-large  | 4095      |
+| Current state | Behavior |
+| --- | --- |
+| Enable embeddings for a BM25-only knowledge base | Backfill vectors in the same knowledge base; no recreation is required |
+| Change the embedding model in an empty knowledge base | Save the new setting directly |
+| Change the embedding model after vectors and sources exist | Start the restore/rebuild flow so old and new vectors are not mixed |
 
-### Alibaba
+Do not quit the app or move original sources while enabling or rebuilding. More sources require more processing time and, with an online model, may incur more cost.
 
-[Official Model Information Reference Link](https://help.aliyun.com/zh/model-studio/user-guide/embedding?spm=a2c4g.11186623.0.i1)
+## Choose a Model
 
-| Name                      | max input |
-| ----------------------- | --------- |
-| text-embedding-v3       | 8192      |
-| text-embedding-v2       | 2048      |
-| text-embedding-v1       | 2048      |
-| text-embedding-async-v2 | 2048      |
-| text-embedding-async-v1 | 2048      |
+Compare these factors:
 
-### OpenAI&#x20;
+- **Language coverage**: Test with your own Chinese, English, Japanese, or Russian sources.
+- **Privacy**: Online models receive source passages and queries; evaluate the local model for sensitive data.
+- **Speed and cost**: Initial indexing, reindexing, and queries may all call an online embedding API.
+- **Stability**: The model ID, vector dimensions, and API behavior should remain stable.
 
-[Official Model Information Reference Link](https://platform.openai.com/docs/guides/embeddings#embedding-models)
+Do not choose solely from a leaderboard or model name. Use the same sources and a fixed set of questions, then compare whether the correct passages appear among the top results.
 
-| Name                     | max input |
-| ---------------------- | --------- |
-| text-embedding-3-small | 8191      |
-| text-embedding-3-large | 8191      |
-| text-embedding-ada-002 | 8191      |
+## Troubleshooting
 
-### Baidu
+### The Embedding Model List Is Empty
 
-[Official Model Information Reference Link](https://cloud.baidu.com/doc/WENXINWORKSHOP/s/om6070n97#%E8%AF%B7%E6%B1%82%E5%8F%82%E6%95%B0)
+Confirm that the provider is enabled, the model has been added, and its capability includes **Embedding**. Chat and rerank models do not appear in this list.
 
-| Name           | max input |
-| ------------ | --------- |
-| Embedding-V1 | 384       |
-| tao-8k       | 8192      |
+### Saving Fails While Retrieving Dimensions
 
-### Zhipu
+Check the provider status, API URL, key, model ID, network, and account balance. Saving makes one real embedding request.
 
-[Official Model Information Reference Link](https://bigmodel.cn/console/modelcenter/square)
+### What Are the Limits of BM25-Only Search?
 
-| Name          | max input |
-| ----------- | --------- |
-| embedding-2 | 1024      |
-| embedding-3 | 2048      |
+BM25 works well for exact keywords, product names, and identifiers, but it usually recalls paraphrases and natural-language expressions less effectively than semantic search. You can start with BM25 to validate source quality, then decide whether to enable an embedding model.
 
-### Hunyuan
+### Does Changing an API Key Require a Rebuild?
 
-[Official Model Information Reference Link](https://cloud.tencent.com/document/product/1729/102832)
+Usually not, provided that the same model and dimensions remain in use. If the provider routes requests to a different model version, run your retrieval tests again.
 
-| Name                | max input |
-| ----------------- | --------- |
-| hunyuan-embedding | 1024      |
+See [Knowledge Base Data](data.md) for the detailed data flow and local file locations.
 
-### Baichuan
+***
 
-[Official Model Information Reference Link](https://platform.baichuan-ai.com/docs/text-Embedding)
+### Get Help and Submit Feedback
 
-| Name                      | max input |
-| ----------------------- | --------- |
-| Baichuan-Text-Embedding | 512       |
-
-### together
-
-[Official Model Information Reference Link](https://docs.together.ai/docs/serverless-models#embedding-models)
-
-| Name                        | max input |
-| ------------------------- | --------- |
-| M2-BERT-80M-2K-Retrieval  | 2048      |
-| M2-BERT-80M-8K-Retrieval  | 8192      |
-| M2-BERT-80M-32K-Retrieval | 32768     |
-| UAE-Large-v1              | 512       |
-| BGE-Large-EN-v1.5         | 512       |
-| BGE-Base-EN-v1.5          | 512       |
-
-### Jina&#x20;
-
-[Official Model Information Reference Link](https://jina.ai/models/jina-embedding-b-en-v1)
-
-| Name                                 | max input |
-| ---------------------------------- | --------- |
-| jina-embedding-b-en-v1             | 512       |
-| jina-embeddings-v2-base-en         | 8191      |
-| jina-embeddings-v2-base-zh         | 8191      |
-| jina-embeddings-v2-base-de         | 8191      |
-| jina-embeddings-v2-base-code       | 8191      |
-| jina-embeddings-v2-base-es         | 8191      |
-| jina-colbert-v1-en                 | 8191      |
-| jina-reranker-v1-base-en           | 8191      |
-| jina-reranker-v1-turbo-en          | 8191      |
-| jina-reranker-v1-tiny-en           | 8191      |
-| jina-clip-v1                       | 8191      |
-| jina-reranker-v2-base-multilingual | 8191      |
-| reader-lm-1.5b                     | 256000    |
-| reader-lm-0.5b                     | 256000    |
-| jina-colbert-v2                    | 8191      |
-| jina-embeddings-v3                 | 8191      |
-
-### Silicon Flow
-
-[Official Model Information Reference Link](https://siliconflow.cn/zh-cn/models)
-
-| Name                                    | max input |
-| ------------------------------------- | --------- |
-| BAAI/bge-m3                           | 8191      |
-| netease-youdao/bce-embedding-base\_v1 | 512       |
-| BAAI/bge-large-zh-v1.5                | 512       |
-| BAAI/bge-large-en-v1.5                | 512       |
-| Pro/BAAI/bge-m3                       | 8191      |
-
-### Gemini
-
-[Official Model Information Reference Link](https://ai.google.dev/gemini-api/docs/models/gemini?hl=zh-cn#text-embedding)
-
-| Name                 | max input |
-| ------------------ | --------- |
-| text-embedding-004 | 2048      |
-
-### nomic
-
-[Official Model Information Reference Link](https://docs.nomic.ai/atlas/embeddings-and-retrieval/text-embedding)
-
-| Name                    | max input |
-| --------------------- | --------- |
-| nomic-embed-text-v1   | 8192      |
-| nomic-embed-text-v1.5 | 8192      |
-| gte-multilingual-base | 8192      |
-
-### console
-
-[Official Model Information Reference Link](https://console.upstage.ai/docs/capabilities/embeddings)
-
-| Name                | max input |
-| ----------------- | --------- |
-| embedding-query   | 4000      |
-| embedding-passage | 4000      |
-
-### cohere
-
-[Official Model Information Reference Link](https://docs.cohere.com/docs/models#embed)
-
-| Name                            | max input |
-| ----------------------------- | --------- |
-| embed-english-v3.0            | 512       |
-| embed-english-light-v3.0      | 512       |
-| embed-multilingual-v3.0       | 512       |
-| embed-multilingual-light-v3.0 | 512       |
-| embed-english-v2.0            | 512       |
-| embed-english-light-v2.0      | 512       |
-| embed-multilingual-v2.0       | 256       |
+If model detection, downloading, or indexing fails, contact the community through [Feedback and Suggestions](../question-contact/suggestions.md).

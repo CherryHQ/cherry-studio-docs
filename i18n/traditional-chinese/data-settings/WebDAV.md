@@ -1,64 +1,31 @@
 ---
+description: 瞭解 Cherry Studio V2 目前 WebDAV 備份頁面的可用狀態。
 icon: cloud-arrow-up
 ---
+
 # WebDAV 備份
 
+目前版本可以透過 **設定 > 資料 > WebDAV** 開啟 WebDAV 頁面，但頁面明確提示 **「V2 備份還原尚未上線，敬請期待」**。
+
+![WebDAV 設定頁面與 V2 備份功能尚未上線提示](../.gitbook/assets/cherry-v2-067-webdav-zh-tw.png)
 
 {% hint style="warning" %}
-此文件由 AI 從中文翻譯而來，尚未經過審閱。
+目前版本無法透過此頁面建立、還原或自動管理 WebDAV 備份。請不要將頁面中顯示的設定項目視為已經可用的功能。
 {% endhint %}
 
+## 頁面目前顯示的內容
 
+頁面預留了下列設定和操作：
 
+- WebDAV 主機位址、使用者名稱、密碼和路徑；
+- 備份到 WebDAV 與從 WebDAV 還原；
+- 自動備份週期和最大備份數；
+- 精簡備份選項。
 
-Cherry Studio 數據備份支援透過 WebDAV 的方式進行備份。您可以選擇合適的 WebDAV 服務來進行雲端備份。
+這些輸入框、按鈕和開關目前都無法使用。看到此頁面不表示 WebDAV 連線已經建立，也不能用來驗證伺服器位址或憑證。
 
-基於 WebDAV 可以通過 `A電腦` $$\xrightarrow{\text{備份}}$$ `WebDAV` $$\xrightarrow{\text{恢復}}$$ `B電腦` 的方式來實現多端數據同步。
+## 使用建議
 
-#### 以堅果雲為例
-
-1. 登入堅果雲，點擊右上角使用者名稱，選擇「帳戶資訊」：
-
-<figure><img src="../../../.gitbook/assets/image (39).png" alt=""><figcaption></figcaption></figure>
-
-2. 選擇「安全選項」，點擊「新增應用」
-
-<figure><img src="../../../.gitbook/assets/image (40).png" alt=""><figcaption></figcaption></figure>
-
-3. 輸入應用名稱，產生隨機密碼；
-
-<figure><img src="../../../.gitbook/assets/image (41).png" alt=""><figcaption></figcaption></figure>
-
-4. 複製記錄密碼；
-
-<figure><img src="../../../.gitbook/assets/image (42).png" alt=""><figcaption></figcaption></figure>
-
-5. 取得伺服器地址、帳戶和密碼；
-
-<figure><img src="../../../.gitbook/assets/image (43).png" alt=""><figcaption></figcaption></figure>
-
-6. 在 Cherry Studio 設定——數據設定中，填寫 WebDAV 資訊；
-
-<figure><img src="../../../.gitbook/assets/image (48).png" alt=""><figcaption></figcaption></figure>
-
-7. 選擇備份或恢復數據，並可以設定自動備份的時間週期。
-
-<figure><img src="../../../.gitbook/assets/image (47).png" alt=""><figcaption></figcaption></figure>
-
-{% hint style="success" %}
-WebDAV 服務門檻較低的一般就是網盤：
-
-- [堅果雲](https://www.jianguoyun.com/)
-- [123 盤](https://www.123pan.com/)（需要會員）
-- [阿里雲盤](https://www.alipan.com/)（需要購買）
-- [Box](https://www.box.com/) (免費空間容量為 10GB，單個檔案大小限制為 250MB。)
-- [Dropbox](https://www.dropbox.com/) （Dropbox 免費 2GB，可以邀請好友擴容 16GB。）
-- [TeraCloud](https://teracloud.jp/en/) （免費空間為 10GB，另外一個透過邀請可以獲得 5GB 额外空間。）
-- [Yandex Disk](https://disk.yandex.com/) (免費使用者提供 10GB 容量。)
-
-其次是一些需要自己部署服務：
-
-- [Alist](https://alist.nn.ci/zh/)
-- [Cloudreve](https://cloudreve.org/)
-- [sharelist](https://github.com/reruin/sharelist)
-{% endhint %}
+- 目前不要在此頁面輸入真實的 WebDAV 憑證，也不要依賴它保存重要資料。
+- 不要依照舊版介面或舊教學執行備份、還原或自動備份操作。
+- 後續版本啟用此功能後，請以應用程式中的可用狀態、更新說明和本頁最新內容為準。

@@ -1,154 +1,125 @@
 ---
 icon: download
 ---
+
 # Загрузка клиента
 
+Cherry Studio предоставляет установочные пакеты для Windows, macOS и Linux. Чтобы указанные на этой странице номера версий не устаревали, здесь приведены только постоянные официальные источники. Откройте страницу загрузки и выберите последнюю стабильную версию и файл, соответствующий архитектуре вашей системы.
+
+## Официальные источники загрузки
+
+* [Официальная страница загрузки Cherry Studio](https://cherry-ai.com/download)
+* [GitHub Releases](https://github.com/CherryHQ/cherry-studio/releases)
+* [Последняя стабильная версия на GitHub](https://github.com/CherryHQ/cherry-studio/releases/latest)
 
 {% hint style="warning" %}
-Этот документ переведен с китайского языка с помощью ИИ и еще не был проверен.
+Загружайте установочные пакеты только с официального сайта Cherry Studio, из официального репозитория `CherryHQ/cherry-studio` или с зеркала, явно указанного на странице загрузки. Не запускайте установщики из неизвестных источников, повторно упакованные сборки или программы, требующие отключить защитное ПО.
 {% endhint %}
 
+## Выбор стабильной или предварительной версии
 
+| Тип | Как определить | Для кого подходит |
+| :--- | :--- | :--- |
+| Стабильная версия | Помечена как **Latest** в GitHub Releases; номер версии обычно не содержит `alpha`, `beta` или `rc` | Для повседневного использования; рекомендуется |
+| Предварительная версия | Помечена как **Pre-release**; номер версии может содержать `alpha`, `beta` или `rc` | Для пользователей, которые хотят заранее испытать новые функции |
+| Ежедневная предварительная сборка | Публикуется в официальном процессе [V2 Daily Preview Build](https://github.com/CherryHQ/cherry-studio/actions/workflows/v2-daily-preview-build.yml) | Для разработки, тестирования и воспроизведения проблем |
 
+Предварительные версии могут включать незавершённые изменения миграции данных, интерфейса или совместимости. Создайте резервную копию перед установкой и отдавайте предпочтение стабильной версии в средах с важными данными.
 
-{% hint style="info" %}
-Текущая последняя стабильная версия: v1.6.7
-{% endhint %}
+## Windows
 
-## Прямая загрузка
+### Выбор архитектуры
 
-### Версия для Windows
+Откройте **Параметры → Система → О системе** и проверьте поле «Тип системы»:
+
+* Если указано `x64` или «процессор x64» — загрузите `x64`.
+* Если указано `ARM64` или «процессор ARM» — загрузите `arm64`.
+
+Большинство компьютеров с процессорами Intel и AMD используют `x64`. `arm64` требуется только устройствам Windows on ARM.
+
+### Выбор установочного пакета
+
+| Тип файла | Описание |
+| :--- | :--- |
+| `*-x64-setup.exe` / `*-arm64-setup.exe` | Устанавливаемая версия; позволяет выбрать каталог установки и создать ярлыки |
+| `*-x64-portable.exe` / `*-arm64-portable.exe` | Портативная версия; подходит, если вы не хотите выполнять установку |
 
 {% hint style="warning" %}
-Примечание: система Windows 7 не поддерживает установку Cherry Studio.
+Cherry Studio не поддерживает Windows 7. Устанавливайте приложение в поддерживаемой версии Windows.
 {% endhint %}
 
-#### Установочная версия (Setup)
+Шаги установки и сведения о системных предупреждениях безопасности см. в [Инструкции по установке в Windows](../pre-basic/installation/windows.md).
 
-<details>
+## macOS
 
-<summary>Версия x64</summary>
+Откройте **Меню Apple → Об этом Mac** и проверьте поле «Чип» или «Процессор»:
 
-Основной источник：
+* Если указан чип Apple серии M — загрузите `arm64`.
+* Если указан процессор Intel — загрузите `x64`.
 
-【[Официальный сайт Cherry Studio](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.7/Cherry-Studio-1.6.7-x64-setup.exe)】
+| Тип файла | Описание |
+| :--- | :--- |
+| `*-arm64.dmg` / `*-x64.dmg` | Рекомендуемый графический установочный пакет |
+| `*-arm64.zip` / `*-x64.zip` | Версия в архиве |
 
-Резервный источник：
+Пакеты Apple Silicon предназначены для чипов Apple M1, M2, M3, M4 и других. При неверном выборе архитектуры приложение может не открыться или работать только через слой совместимости.
 
-【[Источник 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.7/Cherry-Studio-1.6.7-x64-setup.exe)】 【[Источник 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.7/Cherry-Studio-1.6.7-x64-setup.exe)】 【[Источник 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.7/Cherry-Studio-1.6.7-x64-setup.exe)】
+Шаги установки и сведения о предупреждении «Не удаётся проверить разработчика» см. в [Инструкции по установке в macOS](../pre-basic/installation/macos.md).
 
-</details>
+## Linux
 
-<details>
+Выполните в терминале:
 
-<summary>Версия ARM64</summary>
+```bash
+uname -m
+```
 
-Основной источник：
+* Если выводится `x86_64` — выберите `x86_64` или `amd64`.
+* Если выводится `aarch64` / `arm64` — выберите `arm64` / `aarch64`.
 
-【[Официальный сайт Cherry Studio](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.7/Cherry-Studio-1.6.7-arm64-setup.exe)】
+Официальный Release обычно включает:
 
-Резервный источник：
+| Тип файла | Подходящий сценарий |
+| :--- | :--- |
+| `.AppImage` | Прямой запуск в разных дистрибутивах |
+| `.deb` | Debian, Ubuntu и производные от них дистрибутивы |
+| `.rpm` | Fedora, RHEL, Rocky Linux и другие RPM-дистрибутивы |
 
-【[Источник 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.7/Cherry-Studio-1.6.7-arm64-setup.exe)】 【[Источник 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.7/Cherry-Studio-1.6.7-arm64-setup.exe)】 【[Источник 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.7/Cherry-Studio-1.6.7-arm64-setup.exe)】
+В разных форматах архитектура может обозначаться по-разному. Например, x64 в имени файла `.deb` часто записывается как `amd64`, а в AppImage — как `x86_64`.
 
-</details>
+## Проверка после загрузки
 
-#### Портативная версия (Portable)
+1. Убедитесь, что файл получен с официального домена или с `github.com/CherryHQ/cherry-studio`.
+2. Ещё раз проверьте операционную систему, архитектуру и формат установочного пакета.
+3. Если на странице Release опубликована контрольная сумма SHA-256, сравните её с контрольной суммой локального файла перед запуском.
+4. Создайте резервную копию данных Cherry Studio перед обновлением или проверкой предварительной версии.
 
-<details>
+### Вычисление SHA-256
 
-<summary>Версия x64</summary>
+{% tabs %}
+{% tab title="Windows PowerShell" %}
+```powershell
+Get-FileHash .\Cherry-Studio-имя-файла-установщика -Algorithm SHA256
+```
+{% endtab %}
 
-Основной источник：
+{% tab title="macOS" %}
+```bash
+shasum -a 256 ~/Downloads/Cherry-Studio-имя-файла-установщика
+```
+{% endtab %}
 
-【[Официальный сайт Cherry Studio](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.7/Cherry-Studio-1.6.7-x64-portable.exe)】
+{% tab title="Linux" %}
+```bash
+sha256sum ~/Downloads/Cherry-Studio-имя-файла-установщика
+```
+{% endtab %}
+{% endtabs %}
 
-Резервный источник：
+Результат должен полностью совпадать с SHA-256 соответствующего файла в официальном Release. Если значения не совпадают, не запускайте файл и загрузите его повторно из официального источника.
 
-【[Источник 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.7/Cherry-Studio-1.6.7-x64-portable.exe)】 【[Источник 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.7/Cherry-Studio-1.6.7-x64-portable.exe)】 【[Источник 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.7/Cherry-Studio-1.6.7-x64-portable.exe)】
+## Дальнейшие действия
 
-</details>
-
-<details>
-
-<summary>Версия ARM64</summary>
-
-Основной источник：
-
-【[Официальный сайт Cherry Studio](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.7/Cherry-Studio-1.6.7-arm64-portable.exe)】
-
-Резервный источник：
-
-【[Источник 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.7/Cherry-Studio-1.6.7-arm64-portable.exe)】 【[Источник 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.7/Cherry-Studio-1.6.7-arm64-portable.exe)】 【[Источник 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.7/Cherry-Studio-1.6.7-arm64-portable.exe)】
-
-</details>
-
-***
-
-### Версия для macOS
-
-<details>
-
-<summary>Версия для процессоров Intel (x64)</summary>
-
-Основной источник：
-
-【[Официальный сайт Cherry Studio](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.7/Cherry-Studio-1.6.7-x64.dmg)】
-
-Резервный источник：
-
-【[Источник 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.7/Cherry-Studio-1.6.7.dmg)】 【[Источник 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.7/Cherry-Studio-1.6.7-x64.dmg)】 【[Источник 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.7/Cherry-Studio-1.6.7-x64.dmg)】
-
-</details>
-
-<details>
-
-<summary>Версия для Apple Silicon (ARM64, чипы серии M)</summary>
-
-Основной источник：
-
-【[Официальный сайт Cherry Studio](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.7/Cherry-Studio-1.6.7-arm64.dmg)】
-
-Резервный источник：
-
-【[Источник 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.7/Cherry-Studio-1.6.7-arm64.dmg)】 【[Источник 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.7/Cherry-Studio-1.6.7-arm64.dmg)】 【[Источник 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.7/Cherry-Studio-1.6.7-arm64.dmg)】
-
-</details>
-
-***
-
-### Версия для Linux
-
-<details>
-
-<summary>Версия x86_64</summary>
-
-Основной источник：
-
-【[Официальный сайт Cherry Studio](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.7/Cherry-Studio-1.6.7-x86_64.AppImage)】
-
-Резервный источник：
-
-【[Источник 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.7/Cherry-Studio-1.6.7-x86_64.AppImage)】 【[Источник 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.7/Cherry-Studio-1.6.7-x86_64.AppImage)】 【[Источник 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.7/Cherry-Studio-1.6.7-x86_64.AppImage)】
-
-</details>
-
-<details>
-
-<summary>Версия ARM64</summary>
-
-Основной источник：
-
-【[Официальный сайт Cherry Studio](https://cherry-ai.com/download)】 【[GitHub](https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.7/Cherry-Studio-1.6.7-arm64.AppImage)】
-
-Резервный источник：
-
-【[Источник 1](https://download-cf.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.7/Cherry-Studio-1.6.7-arm64.AppImage)】 【[Источник 2](https://download.ocoolai.com/https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.7/Cherry-Studio-1.6.7-arm64.AppImage)】 【[Источник 3](https://download.ocoolai.online/https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.7/Cherry-Studio-1.6.7-arm64.AppImage)】
-
-</details>
-
-***
-
-## Загрузка через облачные диски
-
-[Quark](https://pan.quark.cn/s/4044324d0ecd#/list/share)
+* [Инструкция по установке](../pre-basic/installation/)
+* [Настройка сервисов моделей](../pre-basic/providers/)
+* [Диалог](preview/chat.md)

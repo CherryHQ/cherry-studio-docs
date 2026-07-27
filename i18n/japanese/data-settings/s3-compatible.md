@@ -1,36 +1,33 @@
 ---
+description: Cherry Studio V2 の S3 互換ストレージバックアップ機能の現在の提供状況を確認します。
 icon: cloud-binary
 ---
-# S3互換ストレージバックアップ
 
+# S3 互換ストレージバックアップ
 
-{% hint style="warning" %}
-このドキュメントはAIによって中国語から翻訳されており、まだレビューされていません。
-{% endhint %}
+現在のバージョンでは **設定 > データ > S3 ストレージ** を開けますが、画面には **「Backup & Restore V2 はまだ利用できません」** と明記されています。
 
-
-
+![S3 ストレージ設定画面と Backup & Restore V2 の未提供案内](../.gitbook/assets/cherry-v2-068-s3-unavailable-ja.png)
 
 {% hint style="warning" %}
-このドキュメントは中国語から翻訳されており、現在レビューされていません。翻訳が適切かどうか、順次確認する予定です。
+現在のバージョンでは、この画面から S3 バックアップの作成、復元、自動管理はできません。設定項目が表示されていても、機能が利用可能という意味ではありません。
 {% endhint %}
 
-Cherry Studioのデータバックアップは、S3互換ストレージ（オブジェクトストレージ）方式をサポートしています。代表的なS3互換ストレージサービスには、AWS S3、Cloudflare R2、Alibaba Cloud OSS、Tencent Cloud COS、およびMinIOなどがあります。
+## 現在表示される項目
 
-S3互換ストレージを利用することで、`Aコンピュータ` $$\xrightarrow{\text{バックアップ}}$$ `S3ストレージ` $$\xrightarrow{\text{復元}}$$ `Bコンピュータ` の形式でマルチデバイスデータ同期を実現できます。
+画面には、次の設定と操作が用意されています。
 
-### S3互換ストレージ設定手順
+- API エンドポイント、リージョン、バケット
+- Access Key ID と Secret Access Key
+- 任意のバックアップディレクトリ
+- **今すぐバックアップ**と**バックアップを管理**
+- 自動同期、最大バックアップ数、スリムバックアップ
 
-1.  オブジェクトストレージバケット（Bucket）を作成し、バケット名を記録します。**※バックアップデータ漏洩防止のため、バケットはプライベート読み書きモードに設定することを強く推奨します！**
-2.  各クラウドサービスのドキュメントを参照し、管理コンソールから以下のS3互換ストレージ情報を取得します：
-    - **Endpoint**：S3互換ストレージのアクセスURL（例: `https://<bucket-name>.<region>.amazonaws.com` または `https://<ACCOUNT_ID>.r2.cloudflarestorage.com`）
-    - **Region**：バケットのリージョン（例: `us-west-1`, `ap-southeast-1`）。Cloudflare R2の場合は`auto`を入力
-    - **Bucket**：バケット名
-    - **Access Key ID** と **Secret Access Key**：認証用クレデンシャル
-    - **Root Path**（オプション）：バックアップ時のルートパス（デフォルトは空）
-    - **関連ドキュメント**
-        - AWS S3：[Access Key IDとSecret Access Keyの取得方法](https://docs.aws.amazon.com/zh_cn/IAM/latest/UserGuide/id_credentials_access-keys.html)
-        - Cloudflare R2：[Access Key IDとSecret Access Keyの取得方法](https://developers.cloudflare.com/r2/api/tokens/)
-        - Alibaba Cloud OSS：[Access Key IDとAccess Key Secretの取得方法](https://help.aliyun.com/zh/oss/developer-reference/use-amazon-s3-sdks-to-access-oss#306596478ed3r)
-        - Tencent Cloud COS：[SecretIdとSecretKeyの取得方法](https://cloud.tencent.com/document/product/436/37421)
-3.  S3バックアップ設定に上記情報を入力後、「バックアップ」ボタンで実行、「管理」ボタンでバックアップファイルの一覧確認・管理が可能です。
+これらの入力欄、ボタン、スイッチは現在無効です。画面を開いても S3 接続は確立されず、エンドポイント、バケット、認証情報の検証にも使えません。
+
+## 利用上の注意
+
+- 現在は実際のオブジェクトストレージ認証情報を入力せず、重要なデータの保護をこの画面に依存しないでください。
+- 旧バージョンの画面やガイドをもとに、バックアップ、復元、自動同期、バックアップ削除を実行しないでください。
+- オブジェクトストレージに既にあるファイルが、この未提供画面から読み取り、変更、削除されることはありません。
+- 機能が提供された後は、アプリで有効になった操作、リリースノート、本ページの最新版を確認してください。

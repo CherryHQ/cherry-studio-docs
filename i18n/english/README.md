@@ -1,108 +1,122 @@
 ---
 icon: cherries
 ---
-# Project Introduction
 
+# Cherry Studio Community Edition
+
+Cherry Studio is an open-source desktop AI client for using cloud or local large language models from one application on Windows, macOS, and Linux. Beyond multi-model conversations, it brings Assistants, Agents, knowledge bases, Skills, MCP, translation, image generation, files, notes, and other capabilities into a single workspace.
+
+Community Edition is designed for individual users and developers who want to choose their own model services, manage work data locally, and extend AI workflows as needed.
+
+## What you can do
+
+| Need | Capability in Cherry Studio |
+| :--- | :--- |
+| Use models from different providers or local deployments | Configure model services in one place, then switch models or compare multiple models in a conversation |
+| Save a consistent role and conversation settings | Create an Assistant with a prompt, model parameters, knowledge bases, and MCP |
+| Let AI read a workspace and perform tasks | Create an Agent and control accessible directories, tools, and approval modes |
+| Have AI follow a specialized workflow | Install Skills and enable them for individual Agents |
+| Connect search, databases, or third-party services | Add a local or remote MCP Server |
+| Build a personal retrieval library | Import documents and configure an Embedding model |
+| Work with images, translations, notes, and files | Use the separate Image Generation, Translation, Notes, and Files workspaces |
+| Run an Agent from a chat platform or at a scheduled time | Configure Channels and Scheduled Tasks |
+
+## Main workspaces
+
+The Cherry Studio V2 sidebar can display these applications as needed:
+
+* **Chat**: Communicate with Assistants and models, and manage sessions and messages.
+* **Agents**: Perform tasks that require files, commands, or multi-step tool calls.
+* **Library**: Manage Assistants, Agents, Skills, and prompts in one place.
+* **Image Generation**: Create and manage images with image-generation models.
+* **Translation**: Translate between two languages and read the texts side by side.
+* **Mini Apps**: Open added web tools inside the application.
+* **Knowledge Base**: Import sources, process chunks, and retrieve information.
+* **Files**: View and manage file resources from the application.
+* **Code Tools**: Manage developer-oriented coding tools.
+* **Notes**: Edit and organize Markdown notes.
+* **OpenClaw**: Use a separate autonomous Agent workspace.
+
+The sidebar shows only the entry points that you enable. Hiding an item does not delete its data.
+
+## Quick start
+
+### 1. Download and install
+
+Open [Client Downloads](cherrystudio/download.md) and select the version for your system. For your first installation or when the operating system displays a security warning, see the [Installation Guide](pre-basic/installation/).
+
+Cherry Studio supports Windows, macOS, and Linux. Installation packages differ by operating system and chip architecture, so follow the instructions on the download page.
+
+### 2. Configure model services
+
+Open **Settings → Model Services**:
+
+1. Select an existing provider or add a compatible provider.
+2. Enter the API URL and API key.
+3. Fetch the model list and enable the models you want to use.
+4. Return to Chat, select a model, and send your first message.
+
+If you use a local service such as Ollama or LM Studio, make sure the service is already running on the computer. See [Model Services](pre-basic/providers/) for detailed instructions.
+
+### 3. Start with one use case
+
+* For everyday Q&A, writing, or translation, start with [Chat](cherrystudio/preview/chat.md).
+* For a consistent prompt and parameters, create an Assistant in the [Library](cherrystudio/preview/library.md).
+* To work with local files or run tools, create an [Agent](advanced-basic/agent.md).
+* To answer from personal sources, create a [Knowledge Base](knowledge-base/knowledge-base.md).
+
+You do not need to configure every feature at once. Complete one small, verifiable task before adding Skills, MCP, or automation; this makes troubleshooting easier.
+
+## Assistants, Agents, and extensions
+
+### Assistant
+
+An Assistant stores a reusable conversation configuration, including its prompt, model parameters, knowledge bases, and MCP. It is designed for stable, conversation-centered use cases.
+
+### Agent
+
+An Agent can access specified directories and call built-in tools, MCP, and Skills. You can choose Normal, Plan, Auto-edit, or Full Auto permission modes. See [Agents](advanced-basic/agent.md).
+
+### Skills and MCP
+
+* [Skills](pre-basic/settings/skills.md) tell an Agent how to complete a type of work using a specific workflow.
+* [MCP](advanced-basic/mcp/) connects external tools, prompts, and resources to an Assistant or Agent.
+
+If you are not sure which one to choose, read [Concepts 101](advanced-basic/concepts-101.md).
+
+## Data and security
+
+Cherry Studio stores its application configuration and work data primarily on the local computer, but “using a desktop application” does not mean that “all processing stays local”:
+
+* When you use a cloud model, messages, attachments, or retrieved context are sent to the selected model provider as required by the request.
+* When you use a remote MCP Server, Channel, or another third-party service, relevant data may be sent to that service.
+* Agents and local MCP Servers may read files or run commands according to the permissions you grant.
+* Local models can reduce cloud data transfer, but you must still review connected model services, plugins, and network tools.
 
 {% hint style="warning" %}
-This document was translated from Chinese by AI and has not yet been reviewed.
+Do not put API keys, access tokens, passwords, or private keys in prompts, knowledge bases, documentation, or screenshots. Restrict directories accessible to Agents, use least privilege for MCP and Channels, and complete a controlled test before enabling Full Auto Mode.
 {% endhint %}
 
+Back up important data regularly. Cherry Studio supports local export and backups to WebDAV, S3-compatible storage, and other destinations. See [Data Settings](data-settings/) for available options.
 
+## Open source and licensing
 
+The Cherry Studio Community Edition source code is hosted on [GitHub](https://github.com/CherryHQ/cherry-studio) and licensed under the GNU Affero General Public License v3.0 (AGPL-3.0). Before using, modifying, or distributing it, read the [Open Source License Agreement](contact-us/questions/cherrystudio-xu-ke-xie-yi.md).
 
-<figure><img src=".gitbook/assets/docs-readme-banner1.png" alt=""><figcaption></figcaption></figure>
+You are welcome to participate:
 
-Follow our social accounts: [Twitter (X)](https://x.com/CherryStudioHQ), [Xiaohongshu](https://www.xiaohongshu.com/user/profile/662b6853000000000b031d9a), [Weibo](https://weibo.com/u/7975656228), [Bilibili](https://space.bilibili.com/3546657515898892), [Douyin](https://www.douyin.com/user/MS4wLjABAAAAmw9A54m5J0hHVMQY5eGrVJ-EHDoOS0hgJ6M1F9MN2Tn2V163A0xrC4_KVzfmQSxC)
+* [Contribute code](contribution/code.md)
+* [Contribute documentation](contribution/docs.md)
+* [Report an issue](https://github.com/CherryHQ/cherry-studio/issues)
+* [Join a discussion](https://github.com/CherryHQ/cherry-studio/discussions)
 
-Join our communities: [QQ Group (575014769)](https://qm.qq.com/q/lo0D4qVZKi), [Telegram](https://t.me/CherryStudioAI), [Discord](https://discord.gg/wez8HtpxqQ), [WeChat Group (Click to view)](https://www.cherry-ai.com/#Community)
+## Get help
 
-***
+When you encounter a problem, start with [Frequently Asked Questions](question-contact/questions.md) and [How to Ask Effective Questions](question-contact/ask.md). When submitting feedback, include the Cherry Studio version, operating system, reproduction steps, and necessary logs, and remove sensitive information such as API keys or file contents first.
 
-Cherry Studio is an all-in-one AI assistant platform integrating multi-model conversations, knowledge base management, AI painting, translation, and more.
-Cherry Studio's highly customizable design, powerful extensibility, and user-friendly experience make it an ideal choice for professional users and AI enthusiasts. Whether you are a beginner or a developer, you can find suitable AI functions in Cherry Studio to improve work efficiency and creativity.
+Community links:
 
-<figure><img src=".gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
-
-<figure><img src=".gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
-
-***
-
-### **Core Features and Highlights**
-
-#### **1. Basic Conversation Features**
-
-*   **Multi-response for one question**: Supports generating responses from multiple models simultaneously for the same question, allowing users to compare the performance of different models. See [Conversation Interface](cherrystudio/preview/chat.md) for details.
-*   **Automatic Grouping**: Conversation records for each assistant are automatically grouped for easy access to historical conversations.
-*   **Conversation Export**: Supports exporting complete or partial conversations in various formats (e.g., Markdown, Word) for convenient storage and sharing.
-*   **Highly Customizable Parameters**: In addition to basic parameter adjustments, users can fill in custom parameters to meet personalized needs.
-*   **Assistant Marketplace**: Built-in thousands of industry-specific assistants covering translation, programming, writing, and other fields. Users can also customize their own assistants.
-*   **Multi-format Rendering**: Supports Markdown rendering, formula rendering, real-time HTML preview, and other functions to enhance content display.
-
-#### **2. Integration of Diverse Features**
-
-*   **AI Painting**: Provides a dedicated drawing panel where users can generate high-quality images through natural language descriptions.
-*   **AI Mini-programs**: Integrates various free web-based AI tools, allowing direct use without switching browsers.
-*   **Translation Function**: Supports dedicated translation panels, conversation translation, prompt translation, and other translation scenarios.
-*   **File Management**: Files from conversations, paintings, and knowledge bases are uniformly categorized and managed to avoid tedious searching.
-*   **Global Search**: Supports quickly locating historical records and knowledge base content, improving work efficiency.
-
-#### **3. Unified Management Mechanism for Multiple Providers**
-
-*   **Provider Model Aggregation**: Supports unified calling of models from mainstream providers such as OpenAI, Gemini, Anthropic, Azure.
-*   **Automatic Model Retrieval**: One-click to get a complete list of models, no manual configuration required.
-*   **Multi-key Rotation**: Supports rotating multiple API keys to avoid rate limit issues.
-*   **Accurate Avatar Matching**: Automatically matches exclusive avatars for each model, enhancing recognition.
-*   **Custom Providers**: Supports integration with third-party providers that comply with OpenAI, Gemini, Anthropic, and other specifications, ensuring strong compatibility.
-
-#### **4. Highly Customizable Interface and Layout**
-
-*   **Custom CSS**: Supports global style customization to create an exclusive interface style.
-*   **Custom Conversation Layout**: Supports list or bubble style layouts, and allows customizing message styles (e.g., code snippet style).
-*   **Custom Avatars**: Supports setting personalized avatars for the software and assistants.
-*   **Custom Sidebar Menu**: Users can hide or reorder sidebar functions according to their needs to optimize the user experience.
-
-#### **5. Local Knowledge Base System**
-
-*   **Multiple Format Support**: Supports importing various file formats such as PDF, DOCX, PPTX, XLSX, TXT, MD.
-*   **Multiple Data Source Support**: Supports local files, URLs, sitemaps, and even manual input content as knowledge base sources.
-*   **Knowledge Base Export**: Supports exporting processed knowledge bases and sharing them with others.
-*   **Search Verification Support**: After importing the knowledge base, users can perform real-time search tests to check processing results and segmentation effects.
-
-#### **6. Featured Focus Functions**
-
-*   **Quick Q&A**: Call up the quick assistant in any scenario (e.g., WeChat, browser) to get answers quickly.
-*   **Quick Translation**: Supports quick translation of words or text in other scenarios.
-*   **Content Summarization**: Quickly summarizes long text content, improving information extraction efficiency.
-*   **Explanation**: Explains confusing questions with one click, no complex prompts required.
-
-#### **7. Data Security**
-
-*   **Multiple Backup Solutions**: Supports local backup, WebDAV backup, and scheduled backups to ensure data security.
-*   **Data Safety**: Supports full local use scenarios, combined with local large models, to avoid data leakage risks.
-
-***
-
-### **Project Advantages**
-
-1.  **Beginner-Friendly**: Cherry Studio is committed to lowering technical barriers, allowing even beginners to get started quickly and focus on work, study, or creation.
-2.  **Comprehensive Documentation**: Provides detailed user documentation and a manual for common issues to help users quickly solve problems.
-3.  **Continuous Iteration**: The project team actively responds to user feedback and continuously optimizes functions to ensure healthy project development.
-4.  **Open Source and Extensibility**: Supports users in customizing and extending through open-source code to meet personalized needs.
-
-***
-
-### **Applicable Scenarios**
-
-*   **Knowledge Management and Query**: Build and query exclusive knowledge bases quickly through the local knowledge base function, suitable for research, education, and other fields.
-*   **Multi-model Conversation and Creation**: Supports multi-model simultaneous conversations, helping users quickly obtain information or generate content.
-*   **Translation and Office Automation**: Built-in translation assistant and file processing functions, suitable for users who need cross-language communication or document processing.
-*   **AI Painting and Design**: Generates images through natural language descriptions to meet creative design needs.
-
-### Star History
-
-![Star History](https://urlscan.io/liveshot/?width=1300\&height=620\&url=https://cherrystarhistory.ocool.online/)
-
-## Follow Our Social Accounts
-
-<table data-view="cards"><thead><tr><th></th><th data-hidden data-card-cover data-type="files"></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><a href="https://www.xiaohongshu.com/user/profile/662b6853000000000b031d9a?xsec_token=YB_1nKvlH4r5hPYVVbbsNHF8Y6n6AKlm5-DaggPCtd2DQ%3D&#x26;xsec_source=app_share&#x26;xhsshare=CopyLink&#x26;appuid=662b6853000000000b031d9a&#x26;apptime=1738627324&#x26;share_id=ace5db41b5954fab8d98a2a7865a62bc&#x26;share_channel=copy_link">Xiaohongshu</a></td><td><a href=".gitbook/assets/1.png">1.png</a></td><td><a href="https://www.xiaohongshu.com/user/profile/662b6853000000000b031d9a?xsec_token=YB_1nKvlH4r5hPYVVbbsNHF8Y6n6AKlm5-DaggPCtd2DQ%3D&#x26;xsec_source=app_share&#x26;xhsshare=CopyLink&#x26;appuid=662b6853000000000b031d9a&#x26;apptime=1738627324&#x26;share_id=ace5db41b5954fab8d98a2a7865a62bc&#x26;share_channel=copy_link">https://www.xiaohongshu.com/user/profile/662b6853000000000b031d9a?xsec_token=YB_1nKvlH4r5hPYVVbbsNHF8Y6n6AKlm5-DaggPCtd2DQ%3D&#x26;xsec_source=app_share&#x26;xhsshare=CopyLink&#x26;appuid=662b6853000000000b031d9a&#x26;apptime=1738627324&#x26;share_id=ace5db41b5954fab8d98a2a7865a62bc&#x26;share_channel=copy_link</a></td></tr><tr><td><a href="https://b23.tv/hIfGgDW">Bilibili</a></td><td><a href=".gitbook/assets/3.png">3.png</a></td><td><a href="https://b23.tv/hIfGgDW">https://b23.tv/hIfGgDW</a></td></tr><tr><td><a href="https://weibo.com/u/7975656228">Weibo</a></td><td><a href=".gitbook/assets/2.png">2.png</a></td><td><a href="https://weibo.com/u/7975656228">https://weibo.com/u/7975656228</a></td></tr><tr><td><a href="https://v.douyin.com/ifTpX4X7">Douyin</a></td><td><a href=".gitbook/assets/4.png">4.png</a></td><td><a href="https://v.douyin.com/ifTpX4X7">https://v.douyin.com/ifTpX4X7</a></td></tr><tr><td><a href="https://x.com/CherryStudioHQ?t=DYR0ulaLur-bO4Us3bG79A&#x26;s=05">Twitter (X)</a></td><td><a href=".gitbook/assets/5.png">5.png</a></td><td><a href="https://x.com/CherryStudioHQ?t=DYR0ulaLur-bO4Us3bG79A&#x26;s=05">https://x.com/CherryStudioHQ?t=DYR0ulaLur-bO4Us3bG79A&#x26;s=05</a></td></tr></tbody></table>
+* [Telegram](https://t.me/CherryStudioAI)
+* [Discord](https://discord.gg/wez8HtpxqQ)
+* [QQ Group](https://qm.qq.com/q/lo0D4qVZKi)
+* [Feedback and Suggestions](question-contact/suggestions.md)

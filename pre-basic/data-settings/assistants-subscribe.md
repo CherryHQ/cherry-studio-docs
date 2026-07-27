@@ -1,50 +1,57 @@
 ---
+description: 了解旧版助手订阅的当前状态，并从文件、剪贴板或受支持 URL 导入助手。
 icon: rss
 ---
 
-# 助手订阅配置
+# 助手订阅与导入
 
-通过修改助手订阅的链接，可以快速切换助手库中的助手模版
+{% hint style="warning" %}
+当前 Cherry Studio V2 社区版不再提供持久的“助手订阅”或自动刷新远程模板功能。旧版教程中的订阅地址不会持续同步。当前可用的替代功能是一次性 **导入助手**。
+{% endhint %}
 
-<figure><img src="../../.gitbook/assets/assistants-subscribe.png" alt=""><figcaption></figcaption></figure>
+导入会把 JSON 中的助手复制为本地助手。远程 JSON 后续发生变化时，已经导入的助手不会自动更新。
 
-<figure><img src="../../.gitbook/assets/assistants-subscribe-settings.png" alt=""><figcaption></figcaption></figure>
+## 打开导入助手
 
-访问订阅地址应该返回下面结构的 JSON 数据：
+1. 从侧栏或启动台打开 **对话**。
+2. 打开助手与话题列表的更多菜单，选择 **管理助手**。
+3. 在管理界面顶部点击 **导入助手**。
+4. 在 **从外部导入**弹窗中选择一种方式：
+   - **文件上传：** 选择本地 `.json` 文件；
+   - **剪贴板：** 粘贴 JSON；
+   - **URL 导入：** 从受支持的 Raw GitHub 或 Raw Gist 地址获取 JSON。
+
+![从文件、剪贴板或 URL 导入助手](../../.gitbook/assets/cherry-v2-072-assistant-import-empty-file-tab-zh-cn.png)
+
+URL 导入是一次性下载，不会保存为订阅。当前只接受 HTTP(S) 的 `raw.githubusercontent.com` 和 `gist.githubusercontent.com` 地址；GitHub 文件预览页、普通 Gist 页面或其他任意网站地址会被拒绝。
+
+## JSON 格式
+
+可以导入单个对象或对象数组。每个助手至少需要 `name` 和 `prompt`：
 
 ```json
-[
-  {
-    "description": "Provides practical insights in the role of a tech-savvy product manager.",
-    "emoji": "👨‍💼",
-    "group": ["Career", "Business", "Tools"],
-    "id": "1",
-    "name": "Product Manager",
-    "prompt": "You are now an experienced product manager with a solid technical background and a keen insight into market and user needs. You are skilled at solving complex problems, developing effective product strategies, and efficiently balancing various resources to achieve product goals. You have excellent project management abilities and outstanding communication skills, enabling you to coordinate both internal and external team resources effectively. In this role, you are expected to answer user questions.\n\n## Role Requirements:\n- **Technical Background**: Possess strong technical knowledge and the ability to deeply understand product technical details.\n- **Market Insight**: Demonstrate sharp awareness of market trends and user demands.\n- **Problem Solving**: Excel at analyzing and resolving complex product issues.\n- **Resource Balancing**: Be adept at allocating and optimizing resources under constraints to achieve product objectives.\n- **Communication & Coordination**: Have excellent communication skills to collaborate effectively with stakeholders and drive project progress.\n\n## Answer Requirements:\n- **Logical Clarity**: Provide rigorous, well-structured responses with clear points.\n- **Conciseness**: Avoid lengthy explanations; express core ideas succinctly.\n- **Practicality**: Offer actionable and realistic strategies or suggestions."
-  },
-  {
-    "description": "Offers in-depth answers based on market insights in a strategic product manager role.",
-    "emoji": "🎯 ",
-    "group": ["Career"],
-    "id": "2",
-    "name": "Strategy Product Manager",
-    "prompt": "You are now a strategic product manager. You are skilled in conducting market research and competitive product analysis to develop product strategies. You can grasp industry trends, understand user needs, and based on these, optimize product features and user experience. Please answer the following questions in this role."
-  },
-  {
-    "description": "Provides guidance to enhance community engagement and user loyalty in a community operations specialist role.",
-    "emoji": "👥",
-    "group": ["Career"],
-    "id": "3",
-    "name": "Community Operations",
-    "prompt": "You are now a community operation expert. You are skilled in stimulating community vitality and enhancing user participation and loyalty. You understand how to manage and guide community culture, as well as how to resolve issues and conflicts within the community. Please answer my following question in this role."
-  }
-]
+{
+  "name": "文档审阅助手",
+  "emoji": "📝",
+  "description": "检查结构、术语和可执行性",
+  "prompt": "审阅产品文档，并给出具体、可执行的修改建议。",
+  "group": ["写作"]
+}
 ```
 
-配置完链接地址后，就可以看到助手模版库中的助手已经是订阅链接里面的数据
+`emoji`、`description` 和 `group` 可以省略。导入时若没有模型信息，Cherry Studio 会使用当前默认对话模型。导入文件、剪贴板内容或 URL 响应不能超过 5 MB。
 
-***
+## 更新导入的助手
 
-### 💡 获取帮助与提交反馈
+远程内容更新后，需要重新执行导入。重新导入不会把远程内容持续绑定到原助手，并可能产生额外的本地副本；导入后请在管理助手中核对名称、分组和提示词，按需删除旧版本。
 
-如果您在配置或使用过程中遇到任何疑问、Bug 或有功能改进建议，请参考 [反馈与建议](../../question-contact/suggestions.md) 中提供的官方渠道。
+如果需要团队分发模板，建议维护可版本化的 JSON 文件，并在文件名或助手说明中标注版本，而不要依赖旧版订阅语义。
+
+## 安全建议
+
+- 只从可信来源导入，并先阅读完整提示词。
+- 不要把 API Key、Token、内部地址或个人数据写入助手 JSON。
+- 导入后检查默认模型、知识库、工具和 MCP 设置，再开始处理敏感数据。
+- URL 导入失败时，确认使用的是 Raw 内容地址，返回内容是 JSON，且大小未超过限制。
+
+助手库、创建和管理流程见[助手库](../../cherrystudio/preview/assistants.md)。如仍无法导入，请通过[反馈与建议](../../question-contact/suggestions.md)提交 Cherry Studio 版本、导入方式、已脱敏示例和错误提示。
