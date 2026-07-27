@@ -4,7 +4,7 @@ icon: note-sticky
 
 # 笔记
 
-笔记是 Cherry Studio 内置的 Markdown 编辑器，方便您在与 AI 对话之外整理灵感、保存阶段性产出，并与对话/智能体能力联动。
+笔记是 Cherry Studio 内置的 Markdown 编辑器，方便您在与 AI 对话之外整理灵感、保存阶段性产出，并与对话/Agent 能力联动。
 
 ### 打开笔记
 

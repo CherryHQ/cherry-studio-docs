@@ -11,9 +11,9 @@ V2 已移除独立的「助手库」启动台/侧边栏页面。助手预设没�
 **命名说明**：Cherry Studio 中有两个相关但不同的概念，请注意区分：
 
 * **助手 / 助手库**：用于普通对话的「角色 + 提示词 + 参数」预设。助手库是对话页内的预设目录，添加后会出现在助手列表中。
-* **Cherry Agent（智能体）**：一个能自主调用工具、访问文件、执行多步任务的智能体系统。入口：顶部导航的 **工作**。如需让其他应用调用 Cherry Studio 中的模型，可另行配置[本地 API 网关](../../advanced-basic/api-server.md)，但它不是运行 Agent 的前置条件。详见 [Cherry Agent](../../advanced-basic/agent.md)。
+* **Agent**：能够自主调用工具、访问文件并执行多步任务。入口：顶部导航的 **工作**。如需让其他应用调用 Cherry Studio 中的模型，可另行配置[本地 API 网关](../../advanced-basic/api-server.md)，但它不是运行 Agent 的前置条件。详见 [Agent](../../advanced-basic/agent.md)。
 
-两者是不同模块：助手侧重日常对话，智能体侧重工具调用与任务执行。
+两者是不同模块：助手侧重日常对话，Agent 侧重工具调用与任务执行。
 
 ### 使用前需要什么？
 
@@ -84,18 +84,18 @@ V2 使用**分组**组织助手：
 
 <figure><img src="../../.gitbook/assets/cherry-assistant-import-v2.png" alt="Cherry Studio V2 从外部导入助手对话框，支持文件上传、剪贴板和 URL 导入"><figcaption><p>V2 助手导入对话框</p></figcaption></figure>
 
-### 何时使用助手库，何时使用 Cherry Agent？
+### 何时使用助手库，何时使用 Agent？
 
 | 场景 | 推荐 |
 |---|---|
 | 个性化"角色"快速对话（写作、翻译、技术问答等） | **助手库** |
-| 让 AI 自主调用工具、读写文件、跨步骤完成任务 | **[Cherry Agent](../../advanced-basic/agent.md)** |
-| 定时执行、跨平台消息推送 | **Cherry Agent + [定时任务](../../advanced-basic/scheduled-tasks.md) + [频道](../../advanced-basic/agent-channels.md)** |
+| 让 AI 自主调用工具、读写文件、跨步骤完成任务 | **[Agent](../../advanced-basic/agent.md)** |
+| 定时执行、跨平台消息推送 | **Agent + [定时任务](../../advanced-basic/scheduled-tasks.md) + [频道](../../advanced-basic/agent-channels.md)** |
 
 ### 下一步
 
 * 想让助手根据自己的资料回答：创建[知识库](../../knowledge-base/knowledge-base.md)并关联到助手；
-* 想让 AI 读写工作区并完成多步骤任务：使用[Cherry Agent](../../advanced-basic/agent.md)；
+* 想让 AI 读写工作区并完成多步骤任务：使用[Agent](../../advanced-basic/agent.md)；
 * 想调整模型、温度和工具栏：继续阅读[对话界面](chat.md)。
 
 ***

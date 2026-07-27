@@ -89,7 +89,7 @@
   * [Problemas Comuns](advanced-basic/mcp/chang-jian-wen-ti.md)
 * [Instruções de Uso da Cadeia de Chamadas](advanced-basic/diao-yong-lian-shi-yong-shuo-ming.md)
 * [Tutorial de Uso das Ferramentas de Código](advanced-basic/code-tools-shi-yong-jiao-cheng.md)
-* [Tutorial de Uso Cherry Agent](advanced-basic/agent.md)
+* [Tutorial de Uso Agent](advanced-basic/agent.md)
 
 ## Contribuição para o Projeto <a href="#contribution" id="contribution"></a>
 

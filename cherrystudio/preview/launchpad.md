@@ -13,7 +13,7 @@ icon: grid
 | 应用 | 说明 |
 |---|---|
 | [对话（助手）](chat.md) | 使用和管理对话助手、话题与助手库 |
-| [工作（智能体）](../../advanced-basic/agent.md) | 让 AI 调用工具并完成多步骤任务 |
+| [工作（Agent）](../../advanced-basic/agent.md) | 让 AI 调用工具并完成多步骤任务 |
 | [绘画](drawing.md) | 文生图模型 |
 | [翻译](translation.md) | 双栏快速翻译 |
 | [小程序](app.md) | 客户端内运行 AI 厂商网页版 |

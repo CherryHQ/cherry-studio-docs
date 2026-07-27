@@ -39,7 +39,7 @@ OpenRouter 的模型 ID 形如 `<vendor>/<model>`：
 OpenRouter 默认走 OpenAI 协议格式封装所有上游模型。这意味着：
 
 * ✅ 普通对话、知识库、快捷助手都可用
-* ⚠️ [Cherry Agent](../../advanced-basic/agent.md) **建议直接用** Anthropic / CherryIN，不要走 OpenRouter（Agent 需要 Anthropic 原生协议）
+* ⚠️ [Agent](../../advanced-basic/agent.md) **建议直接用** Anthropic / CherryIN，不要走 OpenRouter（Agent 需要 Anthropic 原生协议）
 
 {% hint style="info" %}
 * OpenRouter 在原厂价格基础上有少量加价（通常 5-10%），换来"一个账号通用"

@@ -89,7 +89,7 @@
   * [Common Issues](advanced-basic/mcp/chang-jian-wen-ti.md)
 * [Call Chain Usage Instructions](advanced-basic/diao-yong-lian-shi-yong-shuo-ming.md)
 * [Code Tools Usage Tutorial](advanced-basic/code-tools-shi-yong-jiao-cheng.md)
-* [Cherry Agent Usage Tutorial](advanced-basic/agent.md)
+* [Agent Usage Tutorial](advanced-basic/agent.md)
 
 ## Project Contribution <a href="#contribution" id="contribution"></a>
 

@@ -48,11 +48,11 @@ BRAVE_API_KEY=你的_brave_api_key
 MEMORY_FILE_PATH=/path/to/memory.json
 ```
 
-> 注：这是 MCP 形式的记忆。V2 的记忆能力还包括 Cherry Agent 内置记忆；两类方案的差异见[记忆能力（V2）](../memory.md)。
+> 注：这是 MCP 形式的记忆。V2 的记忆能力还包括 Agent 内置记忆；两类方案的差异见[记忆能力（V2）](../memory.md)。
 
 #### `@cherry/nowledge_mem`
 
-接入 [Nowledge Mem](https://mem.nowledge.co/) 应用，把对话、工具、笔记、智能体和文件都保存在本地的私有记忆系统中。需要先在本机安装 Nowledge Mem。
+接入 [Nowledge Mem](https://mem.nowledge.co/) 应用，把对话、工具、笔记、Agent 和文件都保存在本地的私有记忆系统中。需要先在本机安装 Nowledge Mem。
 
 ### 思维 / 框架
 

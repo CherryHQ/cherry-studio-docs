@@ -1,7 +1,7 @@
 ---
 icon: robot
 ---
-# Руководство по использованию Cherry Agent
+# Руководство по использованию Agent
 
 
 {% hint style="warning" %}

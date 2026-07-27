@@ -1,7 +1,7 @@
 ---
 icon: robot
 ---
-# Cherry Agent 使用教程
+# Agent 使用教程
 
 
 {% hint style="warning" %}
@@ -11,7 +11,7 @@ icon: robot
 
 
 
-Cherry Studio v1.7.0.alpha 版本引入了 Agent，可在 Cherry Studio 中使用 Cherry Agent。本教程將引導您完成設定與啟動的完整流程。
+Cherry Studio v1.7.0.alpha 版本引入了 Agent，可在 Cherry Studio 中使用 Agent。本教程將引導您完成設定與啟動的完整流程。
 
 ### 1. 建立 Anthropic 類型的供應商
 

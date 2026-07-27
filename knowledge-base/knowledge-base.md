@@ -68,7 +68,7 @@ icon: book-open-cover
 
 在对话输入区打开知识库选择器，勾选目标知识库后再提问。回答下方会显示召回来源，便于回看原文。
 
-### Cherry Agent
+### Agent
 
 V2 Agent 提供 **知识库搜索**和 **知识库管理**工具。为目标 Agent 启用相关工具后，它可以在任务过程中检索资料，或按权限管理知识库内容。
 
@@ -90,7 +90,7 @@ V2 Agent 提供 **知识库搜索**和 **知识库管理**工具。为目标 Age
 
 * 日常资料问答：在[对话界面](../cherrystudio/preview/chat.md)选择该知识库后提问；
 * 固定为某个领域助手：在[助手设置](../cherrystudio/preview/assistants.md)中关联知识库；
-* 在多步骤任务中检索或管理资料：为 [Cherry Agent](../advanced-basic/agent.md)启用知识库工具。
+* 在多步骤任务中检索或管理资料：为 [Agent](../advanced-basic/agent.md) 启用知识库工具。
 
 ***
 

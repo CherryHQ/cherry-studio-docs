@@ -96,7 +96,7 @@
 
 ## Agent 与自动化 <a href="#advanced-basic" id="advanced-basic"></a>
 
-* [Cherry Agent（智能体）](advanced-basic/agent.md)
+* [Agent](advanced-basic/agent.md)
 * [MCP 使用教程](advanced-basic/mcp/README.md)
   * [MCP 环境安装](advanced-basic/mcp/install.md)
   * [配置和使用 MCP](advanced-basic/mcp/config.md)

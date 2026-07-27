@@ -89,7 +89,7 @@
   * [Problèmes courants](advanced-basic/mcp/chang-jian-wen-ti.md)
 * [Guide d'utilisation de la chaîne d'appel](advanced-basic/diao-yong-lian-shi-yong-shuo-ming.md)
 * [Guide d'utilisation des Code Tools](advanced-basic/code-tools-shi-yong-jiao-cheng.md)
-* [Guide d'utilisation de Cherry Agent](advanced-basic/agent.md)
+* [Guide d'utilisation de Agent](advanced-basic/agent.md)
 
 ## Contributions au projet <a href="#contribution" id="contribution"></a>
 

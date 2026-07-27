@@ -89,7 +89,7 @@
   * [Часто задаваемые вопросы](advanced-basic/mcp/chang-jian-wen-ti.md)
 * [Инструкция по цепочке вызовов](advanced-basic/diao-yong-lian-shi-yong-shuo-ming.md)
 * [Руководство по Code Tools](advanced-basic/code-tools-shi-yong-jiao-cheng.md)
-* [Руководство по Cherry Agent](advanced-basic/agent.md)
+* [Руководство по Agent](advanced-basic/agent.md)
 
 ## Участие в проекте <a href="#contribution" id="contribution"></a>
 

@@ -1,7 +1,7 @@
 ---
 icon: robot
 ---
-# Cherry Agent の使い方ガイド
+# Agent の使い方ガイド
 
 
 {% hint style="warning" %}
@@ -11,7 +11,7 @@ icon: robot
 
 
 
-Cherry Studio v1.7.0.alpha バージョンで Agent が導入されました。Cherry Studio 内で Cherry Agent を使用できます。このチュートリアルでは、設定から起動までの手順を案内します。
+Cherry Studio v1.7.0.alpha バージョンで Agent が導入されました。Cherry Studio 内で Agent を使用できます。このチュートリアルでは、設定から起動までの手順を案内します。
 
 ### 1. Anthropic タイプのプロバイダを作成する
 

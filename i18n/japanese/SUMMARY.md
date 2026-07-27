@@ -89,7 +89,7 @@
   * [よくある質問](advanced-basic/mcp/chang-jian-wen-ti.md)
 * [呼び出しチェーン使用説明](advanced-basic/diao-yong-lian-shi-yong-shuo-ming.md)
 * [Code Tools 使用チュートリアル](advanced-basic/code-tools-shi-yong-jiao-cheng.md)
-* [Cherry Agent 使用チュートリアル](advanced-basic/agent.md)
+* [Agent 使用チュートリアル](advanced-basic/agent.md)
 
 ## プロジェクトコントリビューション <a href="#contribution" id="contribution"></a>
 

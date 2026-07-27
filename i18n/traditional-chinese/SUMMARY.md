@@ -89,7 +89,7 @@
   * [常見問題](advanced-basic/mcp/chang-jian-wen-ti.md)
 * [調用鏈使用說明](advanced-basic/diao-yong-lian-shi-yong-shuo-ming.md)
 * [Code Tools 使用教程](advanced-basic/code-tools-shi-yong-jiao-cheng.md)
-* [Cherry Agent 使用教程](advanced-basic/agent.md)
+* [Agent 使用教程](advanced-basic/agent.md)
 
 ## 項目貢獻 <a href="#contribution" id="contribution"></a>
 

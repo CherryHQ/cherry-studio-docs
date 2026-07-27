@@ -23,7 +23,7 @@ Cherry Studio 内置 **60+ 家 Provider**，本页提供总览表，找到目标
 | **一个 key 通用 200 家** | [OpenRouter](openrouter.md) |
 | **完全本地、隐私敏感** | [Ollama](ollama.md) / [LM Studio](lm-studio.md) |
 | **企业合规** | [Azure OpenAI](azure-openai.md) / AWS Bedrock |
-| **要做 [Cherry Agent](../../advanced-basic/agent.md)** | 选择 Agent 创建页中实际可用且具备工具调用能力的模型 |
+| **要做 [Agent](../../advanced-basic/agent.md)** | 选择 Agent 创建页中实际可用且具备工具调用能力的模型 |
 
 ## 国内大厂自营模型
 
@@ -52,7 +52,7 @@ Cherry Studio 内置 **60+ 家 Provider**，本页提供总览表，找到目标
 | Provider | 一句话特点 | 官网 | 专题文档 |
 |---|---|---|---|
 | **OpenAI** | GPT 系列 | [openai.com](https://platform.openai.com/) | [→](openai.md) |
-| **Anthropic** | Claude 系列，Cherry Agent 首选 | [anthropic.com](https://console.anthropic.com/) | [→](anthropic.md) |
+| **Anthropic** | Claude 系列，Agent 首选 | [anthropic.com](https://console.anthropic.com/) | [→](anthropic.md) |
 | **Gemini (Google)** | Google 大模型 | [aistudio.google.com](https://aistudio.google.com/) | [→](google-gemini.md) |
 | **Azure OpenAI** | 微软托管的 OpenAI，企业合规 | [portal.azure.com](https://portal.azure.com/) | [→](azure-openai.md) |
 | **VertexAI** | Google Cloud 托管 | [cloud.google.com](https://cloud.google.com/vertex-ai) | [→](vertex-ai.md) |

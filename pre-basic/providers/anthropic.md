@@ -1,6 +1,6 @@
 # Anthropic
 
-Anthropic 的 Claude 是当前最适合作为 [Cherry Agent](../../advanced-basic/agent.md) 后端的模型之一，因为 Agent 需要 Anthropic 协议端点。
+Anthropic 的 Claude 是当前最适合作为 [Agent](../../advanced-basic/agent.md) 后端的模型之一，因为 Agent 需要 Anthropic 协议端点。
 
 ## 获取 API Key
 
@@ -24,7 +24,7 @@ Anthropic 的 Claude 是当前最适合作为 [Cherry Agent](../../advanced-basi
 
 ## Agent 场景配置
 
-把该 Provider 在 [Cherry Agent](../../advanced-basic/agent.md) 配置时选为默认模型来源，即可直接获得 Anthropic 协议 Agent 能力。
+把该 Provider 在 [Agent](../../advanced-basic/agent.md) 配置时选为默认模型来源，即可直接获得 Anthropic 协议 Agent 能力。
 
 {% hint style="info" %}
 * 中国大陆无法直接访问 Anthropic API，需自备代理（参考 [常规设置 → 代理模式](../settings/general.md)）

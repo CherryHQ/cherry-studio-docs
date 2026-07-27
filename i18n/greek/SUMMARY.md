@@ -89,7 +89,7 @@
   * [Συχνές ερωτήσεις](advanced-basic/mcp/chang-jian-wen-ti.md)
 * [Οδηγίες χρήσης αλυσίδας κλήσεων](advanced-basic/diao-yong-lian-shi-yong-shuo-ming.md)
 * [Οδηγός χρήσης εργαλείων κώδικα](advanced-basic/code-tools-shi-yong-jiao-cheng.md)
-* [Οδηγός χρήσης Cherry Agent](advanced-basic/agent.md)
+* [Οδηγός χρήσης Agent](advanced-basic/agent.md)
 
 ## Συνεισφορά στο έργο <a href="#contribution" id="contribution"></a>
 

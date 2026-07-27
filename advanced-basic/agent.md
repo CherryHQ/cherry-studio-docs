@@ -2,14 +2,14 @@
 icon: robot
 ---
 
-# 智能体
+# Agent
 
-智能体让 AI 不仅能对话，更能**自主完成任务**。
+Agent 让 AI 不仅能对话，更能**自主完成任务**。
 
 类比：
 
 * 普通对话中的 AI 类似 **仅能给建议的同事** —— 你询问方法，它告诉你步骤
-* 智能体类似 **具备执行能力的同事** —— 你给定目标，它自主读取文件、查询资料、调用工具，逐步完成
+* Agent 类似 **具备执行能力的同事** —— 你给定目标，它自主读取文件、查询资料、调用工具，逐步完成
 
 适用场景示例：
 
@@ -18,7 +18,7 @@ icon: robot
 * "审阅指定的 Python 文件，给出改进建议并直接修改"
 * "每日早上 9 点自动执行以上任务"（结合 [定时任务](scheduled-tasks.md)）
 
-> 推荐先阅读 [概念入门](concepts-101.md) 理清助手 / 智能体 / 技能 / MCP / 频道之间的关系。
+> 推荐先阅读 [概念入门](concepts-101.md) 理清助手 / Agent / 技能 / MCP / 频道之间的关系。
 
 ### 开始前的两项准备
 
@@ -60,15 +60,15 @@ V2 已支持把已启用的 Google / Gemini 对话模型用于 Agent。若模型
 
 <figure><img src="../.gitbook/assets/cherry-api-server-running.png" alt=""><figcaption><p>API 网关运行中，Agent 方可工作</p></figcaption></figure>
 
-### 第 3 步：进入智能体页面
+### 第 3 步：进入 Agent 页面
 
-顶部点击 **工作** 进入 Agent 工作区。V2 内置 **Cherry Assistant** 使用顾问，也可以基于自己的需求新建智能体。旧版的 Cherry Claw 品牌与「自主模式」名称已移除，其任务管理、记忆和工作区身份能力已成为所有 Agent 的默认能力。
+顶部点击 **工作** 进入 Agent 工作区。V2 内置 **Cherry Assistant** 使用顾问，也可以基于自己的需求新建 Agent。旧版的 Cherry Claw 品牌与「自主模式」名称已移除，其任务管理、记忆和工作区身份能力已成为所有 Agent 的默认能力。
 
-<figure><img src="../.gitbook/assets/cherry-agent-step3-list.png" alt=""><figcaption><p>智能体页面：左侧列表 + 右侧对话区</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/cherry-agent-step3-list.png" alt=""><figcaption><p>Agent 页面：左侧列表 + 右侧对话区</p></figcaption></figure>
 
-### 第 4 步：新建一个智能体
+### 第 4 步：新建一个 Agent
 
-点击智能体列表中的添加入口，打开分步创建向导：
+点击 Agent 列表中的添加入口，打开分步创建向导：
 
 <figure><img src="../.gitbook/assets/cherry-agent-step3-create-form.png" alt=""><figcaption><p>添加 Agent 表单</p></figcaption></figure>
 
@@ -82,11 +82,11 @@ V2 已支持把已启用的 Google / Gemini 对话模型用于 Agent。若模型
 
 完成向导后点击 **创建**。工作区在开始任务时从输入框下方的工作区选择器中设置，可选择已有工作区、添加本地文件夹，或选择不使用工作目录。
 
-### 第 5 步：调整智能体的提示词、工具与技能
+### 第 5 步：调整 Agent 的提示词、工具与技能
 
-点击智能体卡片本身，进入完整编辑面板：
+点击 Agent 卡片本身，进入完整编辑面板：
 
-<figure><img src="../.gitbook/assets/cherry-agent-step4-edit-panel.png" alt=""><figcaption><p>智能体编辑面板（基础设置 Tab）</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/cherry-agent-step4-edit-panel.png" alt=""><figcaption><p>Agent 编辑面板（基础设置 Tab）</p></figcaption></figure>
 
 编辑对话框的分类如下：
 
@@ -122,9 +122,9 @@ V2 已移除 **自主模式 / Soul Mode** 开关。所有 Agent 都会加载工�
 从 V1 升级后，旧的 `allowed_tools` 自动批准偏好不会迁移为 V2 的禁用工具列表。请逐个检查 Agent 的工具设置，主动禁用不应使用的工具。
 {% endhint %}
 
-### 第 6 步：与智能体对话
+### 第 6 步：与 Agent 对话
 
-返回智能体页面，点击智能体卡片进入会话：
+返回 Agent 页面，点击 Agent 卡片进入会话：
 
 * 在底部输入框输入任务，例如"请帮我把 `~/Downloads/report.md` 转成 PPT 大纲"
 * 在输入框下方选择本次任务使用的 **工作区**；工作区决定 Agent 主要读写的目录
@@ -147,7 +147,7 @@ Agent 会在会话中展示任务进度、工具调用和最终结果。涉及�
 
 ### 常见问题
 
-#### 智能体页面提示 API 网关不可用
+#### Agent 页面提示 API 网关不可用
 
 回 `设置 → API 网关`，点击绿色 ▶ 启动按钮。详情见 [API 网关](api-server.md)。
 

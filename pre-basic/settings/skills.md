@@ -8,9 +8,9 @@ icon: sparkles
 
 类比：手机出厂自带相机、地图、计算器等基础应用，但若需要观看短视频则需安装抖音、若需要点外卖则需安装美团 —— **应用扩展了手机的专项能力**。
 
-Cherry Studio 中的智能体同样如此：默认具备通用能力，若需要"撰写小红书图文"、"起草专利申请"、"绘制 Mermaid 流程图"等专项任务，可**为其加装对应的技能**。
+Cherry Studio 中的 Agent 同样如此：默认具备通用能力，若需要"撰写小红书图文"、"起草专利申请"、"绘制 Mermaid 流程图"等专项任务，可**为其加装对应的技能**。
 
-* **可加装对象**：[智能体](../../advanced-basic/agent.md)
+* **可加装对象**：[Agent](../../advanced-basic/agent.md)
 * **不可加装对象**：[助手](../../cherrystudio/preview/assistants.md) 和底层模型
 * **启用效果**：处理相关任务时，AI 自动按技能定义的专业方式响应
 
@@ -38,7 +38,7 @@ Cherry Studio 中的智能体同样如此：默认具备通用能力，若需要
 
 **方式一：让 Agent 帮你装**（最简单）
 
-在智能体对话中直接对一个 Agent 说，例如：
+在 Agent 对话中直接说明需求，例如：
 
 > "请帮我安装一个可以做小红书图文的技能。"
 
@@ -54,11 +54,11 @@ Agent 会自动搜索注册表并完成安装。空态面板里也有一条同�
 
 安装成功后，技能会出现在技能卡片列表中，并可在 Agent 设置中启用。
 
-### 在 [智能体](../../advanced-basic/agent.md) 中启用
+### 在 [Agent](../../advanced-basic/agent.md) 中启用
 
 除了在 `设置 → 技能` 中做全局管理，也可以进入单个 Agent 的编辑界面查看它当前可用的技能：
 
-<figure><img src="../../.gitbook/assets/cherry-agent-skills-tab.jpg" alt=""><figcaption><p>智能体编辑界面中的技能 Tab</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/cherry-agent-skills-tab.jpg" alt=""><figcaption><p>Agent 编辑界面中的技能 Tab</p></figcaption></figure>
 
 * 进入 Agent 编辑界面 → `技能` 选项卡
 * 查看当前可用技能，并通过搜索框筛选

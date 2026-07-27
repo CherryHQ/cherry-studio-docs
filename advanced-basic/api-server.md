@@ -7,7 +7,7 @@ icon: server
 API 网关把 Cherry Studio 中已配置并启用的模型能力，通过本机 HTTP API 提供给脚本、编程工具或其他兼容客户端。V2 同时提供 **OpenAI 兼容**与 **Anthropic 兼容**接口。
 
 {% hint style="info" %}
-日常使用 Cherry Studio 的对话、绘画、翻译和 Cherry Agent 不需要开启 API 网关。只有外部程序需要调用 Cherry Studio 时才开启。
+日常使用 Cherry Studio 的对话、绘画、翻译和 Agent 不需要开启 API 网关。只有外部程序需要调用 Cherry Studio 时才开启。
 {% endhint %}
 
 ## 打开与启动

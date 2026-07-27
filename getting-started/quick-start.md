@@ -76,7 +76,7 @@ Cherry Studio 不是模型本身。使用云端模型时，模型费用、额度
 | 学会上传文件、切换模型和管理话题 | [对话界面](../cherrystudio/preview/chat.md) |
 | 保存一个固定角色和提示词 | [助手与助手库](../cherrystudio/preview/assistants.md) |
 | 用自己的 PDF、Word、网页或笔记问答 | [知识库教程](../knowledge-base/knowledge-base.md) |
-| 让 AI 读取文件、调用工具并执行多步骤任务 | [Cherry Agent](../advanced-basic/agent.md) |
+| 让 AI 读取文件、调用工具并执行多步骤任务 | [Agent](../advanced-basic/agent.md) |
 | 还分不清助手、Agent、Skill 和 MCP | [核心概念](../advanced-basic/concepts-101.md) |
 
 {% hint style="success" %}

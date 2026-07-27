@@ -6,14 +6,14 @@ icon: cherries
 
 <figure><img src=".gitbook/assets/docs-readme-banner1.png" alt="Cherry Studio"><figcaption></figcaption></figure>
 
-Cherry Studio 是一个**开源的桌面 AI 工作台**。它把 CherryIN、DeepSeek、OpenAI、Claude、Gemini 以及 Ollama 等本地模型连接到同一个客户端，并提供对话、知识库、智能体Agent、翻译和绘画等能力。
+Cherry Studio 是一个**开源的桌面 AI 工作台**。它把 CherryIN、DeepSeek、OpenAI、Claude、Gemini 以及 Ollama 等本地模型连接到同一个客户端，并提供对话、知识库、Agent、翻译和绘画等能力。
 
 ## 你可以用它做什么？
 
 * **问答、写作或编程**：使用[对话与助手](cherrystudio/preview/chat.md)总结文章、修改邮件或解释代码。
 * **统一管理不同模型**：通过[模型服务](pre-basic/providers/README.md)使用 DeepSeek、Gemini 或本地模型。
 * **根据自己的资料回答**：用[知识库](cherrystudio/preview/knowledge-base.md)查询产品手册、课程资料、合同和笔记。
-* **完成多步骤任务**：让[智能体Agent](advanced-basic/agent.md)读取工作区、整理文件、修改代码或生成报告。
+* **完成多步骤任务**：让[Agent](advanced-basic/agent.md)读取工作区、整理文件、修改代码或生成报告。
 * **连接外部服务**：通过[MCP](advanced-basic/mcp/README.md)查询数据库，或调用 GitHub、Notion 等服务。
 * **自动运行或进入群聊**：结合[定时任务](advanced-basic/scheduled-tasks.md)和[频道](advanced-basic/agent-channels.md)生成简报并发送到飞书。
 * **处理图片、翻译和笔记**：使用[绘画](cherrystudio/preview/drawing.md)、[翻译](cherrystudio/preview/translation.md)和[笔记](cherrystudio/preview/notes.md)完成内容工作。
@@ -31,7 +31,7 @@ Cherry Studio 是一个**开源的桌面 AI 工作台**。它把 CherryIN、Deep
 3. 获取并启用一个对话模型；
 4. 发送第一条消息并确认收到回答。
 
-完成第一次对话后，再根据需要学习知识库或智能体Agent。没有自动化需求时，不需要提前配置 API 网关、MCP、频道或定时任务。
+完成第一次对话后，再根据需要学习知识库或 Agent。没有自动化需求时，不需要提前配置 API 网关、MCP、频道或定时任务。
 
 ## 模型、费用与数据分别由谁负责？
 
@@ -40,7 +40,7 @@ Cherry Studio 是一个**开源的桌面 AI 工作台**。它把 CherryIN、Deep
             ↓
       Cherry Studio
             ↓
-对话 · 知识库 · 智能体Agent · 翻译 · 绘画
+对话 · 知识库 · Agent · 翻译 · 绘画
 ```
 
 * **模型来源**：可以使用 CherryIN 中当前可用的模型、自己的服务商 API Key，或本机运行的 Ollama / LM Studio。
@@ -50,13 +50,13 @@ Cherry Studio 是一个**开源的桌面 AI 工作台**。它把 CherryIN、Deep
 
 不要把 API Key 发布到截图、文档、群聊或公开仓库中。怀疑密钥泄露时，请立即到服务商后台撤销并重新生成。
 
-## 助手、智能体Agent、知识库
+## 助手、Agent、知识库
 
 | 能力 | 最适合的任务 | 是否会主动执行操作 |
 |---|---|---|
 | **助手** | 固定角色和回复风格的日常对话 | 否，以对话为主 |
-| **智能体Agent** | 读取工作区、调用工具并完成多步骤任务 | 是，按权限执行 |
-| **知识库** | 从你导入的资料中检索相关内容 | 否，为对话或智能体Agent提供资料 |
+| **Agent** | 读取工作区、调用工具并完成多步骤任务 | 是，按权限执行 |
+| **知识库** | 从你导入的资料中检索相关内容 | 否，为对话或 Agent 提供资料 |
 
 第一次看到 Skill、MCP、频道等术语时，请阅读[核心概念](advanced-basic/concepts-101.md)。
 
@@ -65,7 +65,7 @@ Cherry Studio 是一个**开源的桌面 AI 工作台**。它把 CherryIN、Deep
 1. [5 分钟快速开始](getting-started/quick-start.md)
 2. [对话与助手](cherrystudio/preview/chat.md)
 3. [知识库](knowledge-base/knowledge-base.md)
-4. [智能体Agent](advanced-basic/agent.md)
+4. [Agent](advanced-basic/agent.md)
 5. 按需学习 [MCP](advanced-basic/mcp/README.md)、[频道](advanced-basic/agent-channels.md)和[定时任务](advanced-basic/scheduled-tasks.md)
 
 ## 获取帮助

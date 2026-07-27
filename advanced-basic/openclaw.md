@@ -4,7 +4,7 @@ icon: spider
 
 # OpenClaw
 
-OpenClaw 是独立的开源智能体工具。Cherry Studio V2 已把原来的独立 OpenClaw 页面并入 **Code Switch**，不再从启动台提供单独入口。
+OpenClaw 是独立的开源 Agent 工具。Cherry Studio V2 已把原来的独立 OpenClaw 页面并入 **Code Switch**，不再从启动台提供单独入口。
 
 ## V2 入口
 
@@ -19,12 +19,12 @@ OpenClaw 是独立的开源智能体工具。Cherry Studio V2 已把原来的独
 完整步骤请阅读 [Code Switch 使用教程](code-tools.md)。
 
 {% hint style="info" %}
-如果只想在 Cherry Studio 图形界面中执行文件、命令和多步任务，请直接使用 [Cherry Agent](agent.md)。OpenClaw 更适合需要其独立 Gateway、Dashboard 或生态工具的用户。
+如果只想在 Cherry Studio 图形界面中执行文件、命令和多步任务，请直接使用 [Agent](agent.md)。OpenClaw 更适合需要其独立 Gateway、Dashboard 或生态工具的用户。
 {% endhint %}
 
-## 与 Cherry Agent 的区别
+## 与 Agent 的区别
 
-| 维度 | Cherry Agent | OpenClaw |
+| 维度 | Agent | OpenClaw |
 |---|---|---|
 | 入口 | 顶部 `工作` | 启动台 → Code Switch |
 | 运行形态 | Cherry Studio 内置工作区 | 独立 OpenClaw Gateway |

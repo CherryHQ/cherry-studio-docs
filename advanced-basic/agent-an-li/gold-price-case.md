@@ -2,7 +2,7 @@
 
 本案例演示如何在 Cherry Studio V2 中创建一个研究型 Agent：它会搜索公开资料、整理时间线、比较历史数据，并把结果写成可复核的报告。
 
-<figure><img src="../../.gitbook/assets/cherry-agent-step3-list.png" alt="浅色模式下的 Cherry Studio V2 智能体工作区"><figcaption><p>先在智能体工作区选择或创建用于市场复盘的 Agent</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/cherry-agent-step3-list.png" alt="浅色模式下的 Cherry Studio V2 Agent 工作区"><figcaption><p>先在 Agent 工作区选择或创建用于市场复盘的 Agent</p></figcaption></figure>
 
 {% hint style="warning" %}
 本案例只用于演示 Agent 工作流，不构成投资建议。金融数据可能延迟或出错；做出任何决策前，请核对原始来源并咨询具备资质的专业人士。
