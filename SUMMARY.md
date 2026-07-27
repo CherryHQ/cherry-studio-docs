@@ -9,7 +9,7 @@
   * [Windows](cherry-studio/installation/windows.md)
   * [macOS](cherry-studio/installation/macos.md)
   * [Linux](cherry-studio/installation/linux.md)
-* [核心概念：助手 / Agent / Skill / MCP](advanced-basic/concepts-101.md)
+* [核心概念](advanced-basic/concepts-101.md)
 * [第一次对话](cherrystudio/preview/chat.md)
 
 ## 常用功能
