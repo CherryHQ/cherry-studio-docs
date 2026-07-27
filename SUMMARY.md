@@ -114,7 +114,7 @@
 * [OpenClaw](advanced-basic/openclaw.md)
 * [快捷短语](pre-basic/settings/quick-phrase.md)
 * [Agent 案例](advanced-basic/agent-an-li/README.md)
-  * [金价暴跌看懵了？我用 Kimi K2.5 + Cherry Studio 做了个“复盘神器”（附 Agent 设计+完整教程）](advanced-basic/agent-an-li/gold-price-case.md)
+  * [用 Agent 完成黄金行情复盘](advanced-basic/agent-an-li/gold-price-case.md)
 
 ## 项目贡献 <a href="#contribution" id="contribution"></a>
 

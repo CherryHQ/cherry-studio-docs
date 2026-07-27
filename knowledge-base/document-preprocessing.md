@@ -10,7 +10,7 @@ icon: face-viewfinder
 
 打开 `设置 → 文档处理`，依次配置：
 
-* **系统 OCR**：macOS 用户开箱即用（无需配置）；Windows 需手动选择 OCR 引擎
+* **系统 OCR**：macOS 可直接使用，无需配置；Windows 需手动选择 OCR 引擎
 * **文档处理服务商**：默认 `MinerU`，可填写 `API Key` + `API Host`（默认 `https://mineru.net`）；也可切换为 Tesseract / Paddle OCR / OpenVINO / 三方 Provider
 
 <figure><img src="../.gitbook/assets/CleanShot 2025-06-03 at 11.50.10@2x (1).jpg" alt=""><figcaption></figcaption></figure>

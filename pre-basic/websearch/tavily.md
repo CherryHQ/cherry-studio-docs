@@ -30,7 +30,7 @@ icon: binary-lock
 <figure><img src="../../.gitbook/assets/image (118).png" alt="" width="375"><figcaption><p>很多同学卡在这一步，人麻了....莫慌</p></figcaption></figure>
 
 {% hint style="danger" %}
-很简单，此时你有2个办法。
+此时可以选择以下两种方式。
 
 1. 下载一个验证身份的APP，微软出的—— Authenticator 【略微繁琐】
 2. 使用微信小程序：腾讯身份验证器 。【简单，有手就行，建议】

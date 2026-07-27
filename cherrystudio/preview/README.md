@@ -28,7 +28,7 @@ Cherry Studio V2 是一款桌面级 AI 客户端，核心入口分为**顶部应
 顶部应用栏可同时保留多个标签。启动台中的应用被打开后会出现在顶部；不需要时可关闭标签，不会删除该功能或数据。
 {% endhint %}
 
-需要自动执行任务时，从 [Agent](../../advanced-basic/agent.md) 开始；还不理解 Agent、Skill 和 MCP 的区别时，先看[核心概念](../../advanced-basic/concepts-101.md)。
+需要自动执行任务时，从 [Agent](../../advanced-basic/agent.md) 开始；各项能力的定位和组合方式见[核心概念](../../advanced-basic/concepts-101.md)。
 
 ***
 
