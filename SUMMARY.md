@@ -3,7 +3,7 @@
 ## 开始使用
 
 * [项目简介](README.md)
-* [5 分钟快速开始](getting-started/quick-start.md)
+* [快速开始](getting-started/quick-start.md)
 * [客户端下载](cherrystudio/download.md)
 * [安装教程](cherry-studio/installation/README.md)
   * [Windows](cherry-studio/installation/windows.md)

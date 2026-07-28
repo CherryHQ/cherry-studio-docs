@@ -60,7 +60,7 @@ Windows 7 不受支持。安装版通常更适合日常使用；便携版的数�
 
 ## 下载后的下一步
 
-安装并看到 Cherry Studio 主界面后，继续完成[5 分钟快速开始](../getting-started/quick-start.md)：添加模型服务、启用一个对话模型并发送测试消息。
+安装并看到 Cherry Studio 主界面后，继续完成[快速开始](../getting-started/quick-start.md)：添加模型服务、启用一个对话模型并发送测试消息。
 
 ***
 

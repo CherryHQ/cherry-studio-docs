@@ -39,4 +39,4 @@ CherryIN 是否免费、具体额度和模型可用状态可能随服务端调�
 
 ## 下一步
 
-返回[5 分钟快速开始](../../../getting-started/quick-start.md)，在对话页选择刚刚启用的模型并发送测试消息。
+返回[快速开始](../../../getting-started/quick-start.md)，在对话页选择刚刚启用的模型并发送测试消息。

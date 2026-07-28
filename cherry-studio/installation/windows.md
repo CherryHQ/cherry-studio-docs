@@ -42,4 +42,4 @@ icon: windows
 
 ## 成功标志与下一步
 
-看到 Cherry Studio 主界面即表示客户端安装成功。接着按[5 分钟快速开始](../../getting-started/quick-start.md)添加一个对话模型并发送测试消息。
+看到 Cherry Studio 主界面即表示客户端安装成功。接着按[快速开始](../../getting-started/quick-start.md)添加一个对话模型并发送测试消息。

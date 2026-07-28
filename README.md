@@ -24,14 +24,7 @@ Cherry Studio 是一个**开源的桌面 AI 工作台**。它把 CherryIN、Deep
 [quick-start.md](getting-started/quick-start.md)
 {% endcontent-ref %}
 
-只需要完成四件事：
-
-1. 下载并安装 Cherry Studio；
-2. 选择一个模型来源；
-3. 获取并启用一个对话模型；
-4. 发送第一条消息并确认收到回答。
-
-完成第一次对话后，再根据需要学习知识库或 Agent。没有自动化需求时，不需要提前配置 API 网关、MCP、频道或定时任务。
+按[快速开始](getting-started/quick-start.md)完成模型配置和第一次对话后，再根据需要查阅知识库、Agent 或其他功能。
 
 ## 模型、费用与数据分别由谁负责？
 
@@ -59,14 +52,6 @@ Cherry Studio 是一个**开源的桌面 AI 工作台**。它把 CherryIN、Deep
 | **知识库** | 从你导入的资料中检索相关内容 | 否，为对话或 Agent 提供资料 |
 
 第一次看到 Skill、MCP、频道等术语时，请阅读[核心概念](advanced-basic/concepts-101.md)。
-
-## 推荐学习顺序
-
-1. [5 分钟快速开始](getting-started/quick-start.md)
-2. [对话与助手](cherrystudio/preview/chat.md)
-3. [知识库](knowledge-base/knowledge-base.md)
-4. [Agent](advanced-basic/agent.md)
-5. 按需学习 [MCP](advanced-basic/mcp/README.md)、[频道](advanced-basic/agent-channels.md)和[定时任务](advanced-basic/scheduled-tasks.md)
 
 ## 获取帮助
 

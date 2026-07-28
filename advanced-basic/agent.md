@@ -20,9 +20,9 @@ Agent 让 AI 不仅能对话，更能**自主完成任务**。
 
 > 推荐先阅读 [概念入门](concepts-101.md) 理清助手 / Agent / 技能 / MCP / 频道之间的关系。
 
-### 开始前的两项准备
+### 开始前的准备
 
-#### 1. 一个可用于 Agent 的对话模型
+需要先启用一个可用于 Agent 的对话模型。
 
 V2 的 Agent 模型选择器会显示可用于对话的模型，并过滤嵌入、重排、图像生成等非对话模型。可选来源包括：
 
@@ -32,9 +32,9 @@ V2 的 Agent 模型选择器会显示可用于对话的模型，并过滤嵌入�
 
 不同模型的工具调用稳定性和费用差异较大。首次使用建议选择明确支持工具调用的模型，再用一个小任务测试。
 
-#### 2. 启用 API 网关
-
-Cherry Studio 需要本地 API 网关为 Agent 路由模型请求。打开 `设置 → API 网关`，确认服务已启动；相关配置见 [API 网关](api-server.md)。
+{% hint style="info" %}
+部分模型会由 Cherry Studio 在内部通过本地 API 网关路由。Agent 运行时会自动启动所需服务，不需要手动配置或开启 API 网关。
+{% endhint %}
 
 {% hint style="warning" %}
 **Token 消耗提示**：Agent 模式涉及多轮对话与工具调用，单次任务的 token 消耗显著高于普通对话。建议在 Provider 后台设置月度上限以避免超支。
@@ -54,19 +54,13 @@ Cherry Studio 需要本地 API 网关为 Agent 路由模型请求。打开 `设�
 V2 已支持把已启用的 Google / Gemini 对话模型用于 Agent。若模型未出现在选择器中，请先确认 Provider 和模型均已启用，且模型类型不是嵌入、重排或生图。
 {% endhint %}
 
-### 第 2 步：启用 API 网关
-
-打开 `设置 → API 网关`，确认端口与密钥后点击 ▶ 启动。详细说明见 [API 网关](api-server.md)。
-
-<figure><img src="../.gitbook/assets/cherry-api-server-running.png" alt=""><figcaption><p>API 网关运行中，Agent 方可工作</p></figcaption></figure>
-
-### 第 3 步：进入 Agent 页面
+### 第 2 步：进入 Agent 页面
 
 顶部点击 **工作** 进入 Agent 工作区。V2 内置 **Cherry Assistant** 使用顾问，也可以基于自己的需求新建 Agent。旧版的 Cherry Claw 品牌与「自主模式」名称已移除，其任务管理、记忆和工作区身份能力已成为所有 Agent 的默认能力。
 
 <figure><img src="../.gitbook/assets/cherry-agent-step3-list.png" alt=""><figcaption><p>Agent 页面：左侧列表 + 右侧对话区</p></figcaption></figure>
 
-### 第 4 步：新建一个 Agent
+### 第 3 步：新建一个 Agent
 
 点击 Agent 列表中的添加入口，打开分步创建向导：
 
@@ -82,7 +76,7 @@ V2 已支持把已启用的 Google / Gemini 对话模型用于 Agent。若模型
 
 完成向导后点击 **创建**。工作区在开始任务时从输入框下方的工作区选择器中设置，可选择已有工作区、添加本地文件夹，或选择不使用工作目录。
 
-### 第 5 步：调整 Agent 的提示词、工具与技能
+### 第 4 步：调整 Agent 的提示词、工具与技能
 
 点击 Agent 卡片本身，进入完整编辑面板：
 
@@ -122,7 +116,7 @@ V2 已移除 **自主模式 / Soul Mode** 开关。所有 Agent 都会加载工�
 从 V1 升级后，旧的 `allowed_tools` 自动批准偏好不会迁移为 V2 的禁用工具列表。请逐个检查 Agent 的工具设置，主动禁用不应使用的工具。
 {% endhint %}
 
-### 第 6 步：与 Agent 对话
+### 第 5 步：与 Agent 对话
 
 返回 Agent 页面，点击 Agent 卡片进入会话：
 
@@ -149,7 +143,7 @@ Agent 会在会话中展示任务进度、工具调用和最终结果。涉及�
 
 #### Agent 页面提示 API 网关不可用
 
-回 `设置 → API 网关`，点击绿色 ▶ 启动按钮。详情见 [API 网关](api-server.md)。
+Agent 通常会自动启动所需的本地 API 网关。若仍出现此提示，请先重启 Cherry Studio；问题持续时，到 `设置 → API 网关` 检查端口是否被占用，并尝试手动启动。详情见 [API 网关](api-server.md)。
 
 #### 创建 Agent 时下拉里没有模型
 
@@ -159,7 +153,7 @@ Agent 会在会话中展示任务进度、工具调用和最终结果。涉及�
 
 #### Agent 输出突然停止
 
-V2 会把 Agent 运行失败直接显示在对话中，不再以空白回复掩盖错误。请先展开错误信息，检查模型额度、API 网关、权限请求、工作区访问或工具执行失败。V2 编辑界面已不再提供每个 Agent 的「最大会话轮数」字段。
+V2 会把 Agent 运行失败直接显示在对话中，不再以空白回复掩盖错误。请先展开错误信息，检查模型额度、API 网关自动启动状态、权限请求、工作区访问或工具执行失败。V2 编辑界面已不再提供每个 Agent 的「最大会话轮数」字段。
 
 ### 下一步
 

@@ -30,7 +30,7 @@ Cherry Studio 通常提供 AppImage、deb 和 rpm 等格式。具体文件名和
 
 ## 成功标志与下一步
 
-看到 Cherry Studio 主界面即表示安装完成。接着按[5 分钟快速开始](../../getting-started/quick-start.md)添加一个对话模型并发送测试消息。
+看到 Cherry Studio 主界面即表示安装完成。接着按[快速开始](../../getting-started/quick-start.md)添加一个对话模型并发送测试消息。
 
 如果程序打不开：
 

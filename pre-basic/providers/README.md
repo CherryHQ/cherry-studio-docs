@@ -98,7 +98,7 @@ Anthropic、Azure OpenAI、DeepSeek、Grok、Groq、LM Studio、OpenRouter、Mis
 
 ## 下一步
 
-完成模型检测后，返回[5 分钟快速开始](../../getting-started/quick-start.md)发送第一条测试消息。只有需要知识库时才配置嵌入模型；只有需要绘画时才配置图像生成模型。
+完成模型检测后，返回[快速开始](../../getting-started/quick-start.md)发送第一条测试消息。只有需要知识库时才配置嵌入模型；只有需要绘画时才配置图像生成模型。
 
 ***
 
