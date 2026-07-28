@@ -4,7 +4,7 @@ icon: folder
 
 # 文件
 
-文件页是 Cherry Studio V2 的本地文件管理入口，可上传并按类型整理应用内文件。
+文件页是 Cherry Studio 的本地文件管理入口，可上传并按类型整理应用内文件。
 
 可以理解成 Cherry Studio 内部的"我的电脑"。
 
@@ -12,7 +12,7 @@ icon: folder
 
 顶部 Tab `+` → **启动台** → 点击 `文件`。
 
-<figure><img src="../../.gitbook/assets/cherry-files-v2.png" alt="Cherry Studio V2 文件页面"><figcaption><p>V2 文件页提供类型筛选、批量操作、上传入口和回收站。</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/cherry-files-v2.png" alt="Cherry Studio 文件页面"><figcaption><p>文件页提供类型筛选、批量操作、上传入口和回收站</p></figcaption></figure>
 
 ## 在这里可以做什么
 

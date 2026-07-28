@@ -2,9 +2,9 @@
 icon: robot
 ---
 
-# Agent
+# 工作（Agent）
 
-Agent 让 AI 不仅能对话，更能**自主完成任务**。
+**工作**是 Cherry Studio 中专门运行 Agent 的页面。它让 AI 不仅能对话，还能读取工作区、调用工具并**自主完成多步骤任务**。
 
 类比：
 
@@ -18,13 +18,13 @@ Agent 让 AI 不仅能对话，更能**自主完成任务**。
 * "审阅指定的 Python 文件，给出改进建议并直接修改"
 * "每日早上 9 点自动执行以上任务"（结合 [定时任务](scheduled-tasks.md)）
 
-> 推荐先阅读 [概念入门](concepts-101.md) 理清助手 / Agent / 技能 / MCP / 频道之间的关系。
+> 推荐先阅读 [核心概念](concepts-101.md)，了解对话中的助手与工作页面中的 Agent 有什么不同。
 
 ### 开始前的准备
 
 需要先启用一个可用于 Agent 的对话模型。
 
-V2 的 Agent 模型选择器会显示可用于对话的模型，并过滤嵌入、重排、图像生成等非对话模型。可选来源包括：
+工作页面的模型选择器会显示可用于对话的模型，并过滤嵌入、重排、图像生成等非对话模型。可选来源包括：
 
 * **[CherryIN](../pre-basic/providers/cherryin-1.md)**、[Anthropic](../pre-basic/providers/anthropic.md) 等支持 Anthropic 或兼容端点的 Provider
 * **Google / Gemini** 官方或自定义 Google 网关中的对话模型
@@ -51,14 +51,14 @@ V2 的 Agent 模型选择器会显示可用于对话的模型，并过滤嵌入�
 <figure><img src="../.gitbook/assets/cherry-agent-step1-provider.png" alt=""><figcaption><p>已配置 CherryIN 并添加 agent 模型</p></figcaption></figure>
 
 {% hint style="info" %}
-V2 已支持把已启用的 Google / Gemini 对话模型用于 Agent。若模型未出现在选择器中，请先确认 Provider 和模型均已启用，且模型类型不是嵌入、重排或生图。
+已启用的 Google / Gemini 对话模型也可用于 Agent。若模型未出现在选择器中，请先确认 Provider 和模型均已启用，且模型类型不是嵌入、重排或生图。
 {% endhint %}
 
-### 第 2 步：进入 Agent 页面
+### 第 2 步：进入工作页面
 
-顶部点击 **工作** 进入 Agent 工作区。V2 内置 **Cherry Assistant** 使用顾问，也可以基于自己的需求新建 Agent。旧版的 Cherry Claw 品牌与「自主模式」名称已移除，其任务管理、记忆和工作区身份能力已成为所有 Agent 的默认能力。
+顶部点击 **工作** 进入 Agent 工作区。可以使用内置的 **Cherry Assistant**，也可以根据自己的需求新建 Agent。
 
-<figure><img src="../.gitbook/assets/cherry-agent-step3-list.png" alt=""><figcaption><p>Agent 页面：左侧列表 + 右侧对话区</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/cherry-agent-step3-list.png" alt="Cherry Studio 工作页面"><figcaption><p>工作页面：左侧管理 Agent，右侧下达和执行任务</p></figcaption></figure>
 
 ### 第 3 步：新建一个 Agent
 
@@ -92,7 +92,7 @@ V2 已支持把已启用的 Google / Gemini 对话模型用于 Agent。若模型
 * **高级设置**：环境变量等高级配置
 
 {% hint style="info" %}
-V2 的编辑对话框会自动保存修改，关闭对话框时也会提交尚未完成的自动保存。已打开的 Agent 会话会接收模型、权限与工具策略等配置更新，无需先关闭全部会话。
+编辑对话框会自动保存修改，关闭对话框时也会提交尚未完成的自动保存。已打开的 Agent 会话会接收模型、权限与工具策略等配置更新，无需先关闭全部会话。
 {% endhint %}
 
 #### 权限模式的 4 种选择
@@ -109,11 +109,7 @@ V2 的编辑对话框会自动保存修改，关闭对话框时也会提交尚�
 {% endhint %}
 
 {% hint style="info" %}
-V2 已移除 **自主模式 / Soul Mode** 开关。所有 Agent 都会加载工作区身份文件并具备任务管理与记忆能力；**权限模式**只决定工具调用是否需要确认。[频道](agent-channels.md) 和 [定时任务](scheduled-tasks.md) 可以使用任意 Agent，不再以自主模式或全自动模式作为前置条件。
-{% endhint %}
-
-{% hint style="warning" %}
-从 V1 升级后，旧的 `allowed_tools` 自动批准偏好不会迁移为 V2 的禁用工具列表。请逐个检查 Agent 的工具设置，主动禁用不应使用的工具。
+所有 Agent 都具备任务管理、记忆和工作区能力；**权限模式**决定工具调用是否需要确认。[频道](agent-channels.md) 和[定时任务](scheduled-tasks.md)可以使用任意 Agent。
 {% endhint %}
 
 ### 第 5 步：与 Agent 对话
@@ -149,11 +145,11 @@ Agent 通常会自动启动所需的本地 API 网关。若仍出现此提示，
 
 * 确认 Provider 与模型均已启用
 * 确认至少添加了一个对话模型；嵌入、重排和生图模型不会出现在 Agent 模型选择器中
-* Google / Gemini 模型可用于 V2 Agent；若未出现，请检查 Google Provider 是否启用
+* Google / Gemini 模型可用于 Agent；若未出现，请检查 Google Provider 是否启用
 
 #### Agent 输出突然停止
 
-V2 会把 Agent 运行失败直接显示在对话中，不再以空白回复掩盖错误。请先展开错误信息，检查模型额度、API 网关自动启动状态、权限请求、工作区访问或工具执行失败。V2 编辑界面已不再提供每个 Agent 的「最大会话轮数」字段。
+Agent 运行失败时会在对话中显示错误。请先展开错误信息，检查模型额度、API 网关自动启动状态、权限请求、工作区访问或工具执行失败。
 
 ### 下一步
 

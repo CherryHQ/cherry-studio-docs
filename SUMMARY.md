@@ -3,34 +3,34 @@
 ## 开始使用
 
 * [项目简介](README.md)
+* [快速开始](getting-started/quick-start.md)
 * [客户端下载](cherrystudio/download.md)
 * [安装教程](cherry-studio/installation/README.md)
   * [Windows](cherry-studio/installation/windows.md)
   * [macOS](cherry-studio/installation/macos.md)
   * [Linux](cherry-studio/installation/linux.md)
-* [快速开始](getting-started/quick-start.md)
-* [模型服务配置](pre-basic/providers/README.md)
-* [第一次对话](cherrystudio/preview/chat.md)
 * [核心概念](advanced-basic/concepts-101.md)
 
 ## 常用功能
 
 * [功能介绍](cherrystudio/preview/README.md)
   * [启动台](cherrystudio/preview/launchpad.md)
-  * [助手与助手库](cherrystudio/preview/assistants.md)
+  * [对话](cherrystudio/preview/chat.md)
+  * [工作](advanced-basic/agent.md)
   * [绘画](cherrystudio/preview/drawing.md)
   * [翻译](cherrystudio/preview/translation.md)
   * [小程序](cherrystudio/preview/app.md)
   * [知识库](cherrystudio/preview/knowledge-base.md)
   * [文件](cherrystudio/preview/files.md)
+  * [Code Switch](advanced-basic/code-tools.md)
   * [笔记](cherrystudio/preview/notes.md)
   * [快捷助手](cherrystudio/preview/quick-assistant.md)
   * [划词助手](cherrystudio/preview/selection-assistant.md)
 
-## 模型与基础设置 <a href="#pre-basic" id="pre-basic"></a>
+## 模型与设置 <a href="#pre-basic" id="pre-basic"></a>
 
-* [模型服务快速参考](pre-basic/providers/quick-reference.md)
-  * [CherryIN 模型服务](pre-basic/providers/cherryai/README.md)
+* [模型服务](pre-basic/providers/README.md)
+  * [CherryIN（服务商）](pre-basic/providers/cherryai/README.md)
     * [DeepSeek V3.2](pre-basic/providers/cherryai/free-deepseek.md)
     * [智谱 GLM-4.6V](pre-basic/providers/cherryai/free-glm46v.md)
     * [智谱 GLM-4.5-Air](pre-basic/providers/cherryai/free-glm45air.md)
@@ -80,7 +80,7 @@
   * [Notion 配置教程](pre-basic/data-settings/notion.md)
   * [Obsidian 配置教程](pre-basic/data-settings/obsidian.md)
   * [思源笔记配置教程](pre-basic/data-settings/siyuan.md)
-  * [助手导入（V2）](pre-basic/data-settings/assistants-subscribe.md)
+  * [助手导入](pre-basic/data-settings/assistants-subscribe.md)
 * [个性化设置](pre-basic/personalization-settings/README.md)
   * [自定义 CSS](pre-basic/personalization-settings/custom-css.md)
   * [字体设置](pre-basic/personalization-settings/font.md)
@@ -90,27 +90,18 @@
 ## 知识库教程 <a href="#knowledge-base" id="knowledge-base"></a>
 
 * [知识库教程](knowledge-base/knowledge-base.md)
-* [知识库数据](knowledge-base/data.md)
-* [嵌入模型](knowledge-base/emb-models-info.md)
 * [文档预处理](knowledge-base/document-preprocessing.md)
 
-## Agent 与自动化 <a href="#advanced-basic" id="advanced-basic"></a>
+## 自动化与扩展 <a href="#advanced-basic" id="advanced-basic"></a>
 
-* [Agent](advanced-basic/agent.md)
 * [MCP 使用教程](advanced-basic/mcp/README.md)
-  * [MCP 环境安装](advanced-basic/mcp/install.md)
-  * [配置和使用 MCP](advanced-basic/mcp/config.md)
-  * [自动安装 MCP](advanced-basic/mcp/auto-install.md)
-  * [内置 MCP 配置](advanced-basic/mcp/builtin.md)
   * [配置 Dify 知识库](advanced-basic/mcp/dify.md)
-  * [常见问题](advanced-basic/mcp/faq.md)
 * [调用链使用教程](advanced-basic/trace.md)
-* [Code Switch 使用教程](advanced-basic/code-tools.md)
 * [API 网关](advanced-basic/api-server.md)
 * [技能](pre-basic/settings/skills.md)
 * [频道](advanced-basic/agent-channels.md)
 * [定时任务](advanced-basic/scheduled-tasks.md)
-* [记忆能力（V2）](advanced-basic/memory.md)
+* [记忆能力](advanced-basic/memory.md)
 * [OpenClaw](advanced-basic/openclaw.md)
 * [快捷短语](pre-basic/settings/quick-phrase.md)
 * [Agent 案例](advanced-basic/agent-an-li/README.md)

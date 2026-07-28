@@ -6,6 +6,8 @@ icon: face-viewfinder
 
 知识库的文档预处理会在分块和索引前，把 PDF、Word、PowerPoint、Excel 等文件转换为 Markdown。它是可选能力：文字层清晰、结构简单的资料可以直接使用内置读取，不需要配置云端服务。
 
+<figure><img src="../.gitbook/assets/cherry-document-preprocessing-flow.svg" alt="知识库文档预处理流程"><figcaption><p>复杂文档先解析为结构化内容，再进行分块、嵌入和检索；清晰文本可直接进入后续流程</p></figcaption></figure>
+
 ## 什么时候需要
 
 | 文件情况 | 建议 |

@@ -4,7 +4,7 @@ icon: book-open-cover
 
 # 知识库教程
 
-本页按 Cherry Studio V2 的实际流程，带你完成：**创建知识库 → 配置检索 → 添加数据源 → 测试召回 → 在对话或 Agent 中使用**。
+本页带你完成：**创建知识库 → 配置检索 → 添加数据源 → 测试召回 → 在对话或工作中使用**。
 
 ## 1. 创建知识库
 
@@ -12,15 +12,15 @@ icon: book-open-cover
 2. 在空页面点击 **创建知识库**；
 3. 输入名称并点击 **创建**。
 
-<figure><img src="../.gitbook/assets/cherry-knowledge-base-v2.png" alt="V2 知识库空页面"><figcaption><p>没有知识库时显示“创建知识库”。</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/cherry-knowledge-base-v2.png" alt="Cherry Studio 知识库页面"><figcaption><p>知识库页面用于创建和管理资料库。</p></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/cherry-knowledge-base-create-v2.png" alt="V2 新建知识库"><figcaption><p>V2 第一步只要求名称；模型和检索参数在创建后配置。</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/cherry-knowledge-base-create-v2.png" alt="Cherry Studio 新建知识库"><figcaption><p>新建知识库时先填写名称，创建后再添加数据源并配置模型与检索参数。</p></figcaption></figure>
 
 ## 2. 配置嵌入与检索
 
 进入新知识库后打开设置，选择：
 
-* **嵌入模型**：把文本转换为向量；也可使用 V2 提供的本地嵌入模型。
+* **嵌入模型**：把文本转换为向量；也可以使用本地嵌入模型。
 * **处理服务商**：导入文件时负责提取正文和表格。
 * **智能分段**：按 Markdown 标题、段落和代码块组织分片。
 * **分段大小 / 重叠大小**：控制每个 Chunk 的长度与上下文重叠。
@@ -35,7 +35,7 @@ icon: book-open-cover
 
 ## 3. 添加数据源
 
-点击 **添加数据源**。V2 当前界面支持：
+点击 **添加数据源**。当前界面支持：
 
 | 类型 | 说明 |
 |---|---|
@@ -44,7 +44,7 @@ icon: book-open-cover
 | 链接 | 抓取单个网页文本并分块索引 |
 | 笔记 | 选择 Cherry Studio 笔记作为来源 |
 
-单次添加数量和支持格式以对话框提示为准。旧版单独的 Sitemap 导入入口未出现在 V2 添加数据源界面中；如需批量导入网站内容，可先整理成文件/目录，或按当前版本提供的入口处理。
+单次添加数量和支持格式以对话框提示为准。如需批量导入网站内容，可以先整理成文件或目录。
 
 数据源会经历 **等待中 → 分块中 → 嵌入中 → 就绪**。出错时可查看原因并执行 **重新索引**。
 
@@ -62,15 +62,15 @@ icon: book-open-cover
 
 **成功标志**：数据源状态显示为“就绪”，并且召回测试能返回与问题相关的原文片段。只有文件上传成功但没有检索结果，不算知识库已经可用。
 
-## 5. 在对话与 Agent 中使用
+## 5. 在对话与工作中使用
 
 ### 普通对话
 
 在对话输入区打开知识库选择器，勾选目标知识库后再提问。回答下方会显示召回来源，便于回看原文。
 
-### Agent
+### 工作（Agent）
 
-V2 Agent 提供 **知识库搜索**和 **知识库管理**工具。为目标 Agent 启用相关工具后，它可以在任务过程中检索资料，或按权限管理知识库内容。
+工作页面中的 Agent 提供**知识库搜索**和**知识库管理**工具。为目标 Agent 启用相关工具后，它可以在任务过程中检索资料，或按权限管理知识库内容。
 
 ## 常见问题
 
@@ -89,8 +89,8 @@ V2 Agent 提供 **知识库搜索**和 **知识库管理**工具。为目标 Age
 ## 下一步
 
 * 日常资料问答：在[对话界面](../cherrystudio/preview/chat.md)选择该知识库后提问；
-* 固定为某个领域助手：在[助手设置](../cherrystudio/preview/assistants.md)中关联知识库；
-* 在多步骤任务中检索或管理资料：为 [Agent](../advanced-basic/agent.md) 启用知识库工具。
+* 固定为某个领域助手：在[对话页面的助手设置](../cherrystudio/preview/chat.md#zhu-shou-she-zhi)中关联知识库；
+* 在多步骤任务中检索或管理资料：为[工作（Agent）](../advanced-basic/agent.md)启用知识库工具。
 
 ***
 

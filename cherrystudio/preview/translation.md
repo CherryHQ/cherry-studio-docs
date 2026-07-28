@@ -8,7 +8,7 @@ Cherry Studio 的翻译功能为您提供快速、准确的文本翻译服务，
 
 ### 界面概览
 
-<figure><img src="../../.gitbook/assets/cherry-translation-v2.png" alt="Cherry Studio V2 翻译页面"><figcaption><p>V2 翻译页面：选择源语言、目标语言和翻译模型后，在左侧输入，右侧查看结果。</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/cherry-translation-v2.png" alt="Cherry Studio 翻译页面"><figcaption><p>翻译页面：选择源语言、目标语言和翻译模型后，在左侧输入，右侧查看结果</p></figcaption></figure>
 
 操作栏从左到右：
 

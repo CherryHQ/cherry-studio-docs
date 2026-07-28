@@ -12,7 +12,7 @@ icon: grid-2
 2. 点击 `小程序` 应用图标
 3. 在小程序网格中选择需要打开的服务
 
-<figure><img src="../../.gitbook/assets/cherry-mini-apps-v2.png" alt="Cherry Studio V2 小程序网格"><figcaption><p>V2 小程序网格；顶部“自定义”可添加网页，搜索框用于快速筛选。</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/cherry-mini-apps-v2.png" alt="Cherry Studio 小程序网格"><figcaption><p>小程序网格；顶部“自定义”可添加网页，搜索框用于快速筛选</p></figcaption></figure>
 
 页面顶部有 **自定义**、**小程序显示设置** 和搜索框。内置站点会随版本更新，以应用内列表为准。
 

@@ -23,7 +23,7 @@ icon: highlighter
 
 打开 `设置 → 划词助手`：
 
-<figure><img src="../../.gitbook/assets/cherry-selection-assistant-settings-v2.png" alt="V2 划词助手设置"><figcaption><p>V2 划词助手设置：触发方式、窗口行为、功能排序和应用筛选集中在同一页。</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/cherry-selection-assistant-settings-v2.png" alt="划词助手设置"><figcaption><p>划词助手设置：触发方式、窗口行为、功能排序和应用筛选集中在同一页</p></figcaption></figure>
 
 1. 打开 **启用** 开关
 2. **macOS** 用户首次启用会弹窗请求 **辅助功能权限**：
@@ -36,7 +36,7 @@ icon: highlighter
    * **Ctrl 键**（仅 Windows）：选中文字后**再长按 Ctrl 键**才弹（避免误触）
    * **快捷键**：选中文字后按快捷键再弹，快捷键在 `设置 → 快捷键` 中改
 
-V2 启用后会在同一页面展开取词方式、窗口行为、透明度、功能列表和应用筛选。
+启用后会在同一页面展开取词方式、窗口行为、透明度、功能列表和应用筛选。
 
 ### 内置操作
 

@@ -10,7 +10,7 @@ icon: note-sticky
 
 打开顶部 `+` 进入 **启动台**，点击 `笔记`。打开后笔记会作为顶部应用标签保留。
 
-<figure><img src="../../.gitbook/assets/cherry-notes-v2.png" alt="Cherry Studio V2 笔记编辑器"><figcaption><p>V2 笔记编辑器：左侧管理笔记，右侧编写 Markdown 内容。</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/cherry-notes-v2.png" alt="Cherry Studio 笔记编辑器"><figcaption><p>笔记编辑器：左侧管理笔记，右侧编写 Markdown 内容</p></figcaption></figure>
 
 ### 创建第一篇笔记
 

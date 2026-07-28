@@ -18,7 +18,7 @@ icon: browsers
 * 配置入口分别在 `设置 → 快捷助手` 与 `设置 → 划词助手`。
 {% endhint %}
 
-<figure><img src="../../.gitbook/assets/cherry-quick-assistant-settings-v2.png" alt="V2 快捷助手设置"><figcaption><p>启用后的 V2 快捷助手设置，并提供实际窗口预览。</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/cherry-quick-assistant-settings-v2.png" alt="快捷助手设置"><figcaption><p>启用后的快捷助手设置，并提供实际窗口预览</p></figcaption></figure>
 
 启用后可见的开关：
 
@@ -41,7 +41,7 @@ icon: browsers
    * **内容总结：** 输入长文本进行摘要。
    *   **解释说明：** 输入需要解释的概念或术语。
 
-       <figure><img src="../../.gitbook/assets/cherry-quick-assistant-window-v2.png" alt="V2 快捷助手窗口"><figcaption><p>V2 快捷助手窗口内置“回答此问题、文本翻译、内容总结、解释说明”等快捷操作。</p></figcaption></figure>
+       <figure><img src="../../.gitbook/assets/cherry-quick-assistant-window-v2.png" alt="快捷助手窗口"><figcaption><p>快捷助手窗口内置“回答此问题、文本翻译、内容总结、解释说明”等快捷操作</p></figcaption></figure>
 3. **关闭：** 按下 <kbd>ESC</kbd> 键或点击快捷助手窗口外部的任意位置即可关闭。
 
 {% hint style="info" %}

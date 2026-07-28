@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="430" viewBox="0 0 1200 430" role="img" aria-labelledby="title desc">
+  <title id="title">Dify 知识库通过 MCP 接入 Cherry Studio</title>
+  <desc id="desc">Dify 地址和知识库 API Key 配置到内置 Dify MCP，再由对话或工作调用。</desc>
+  <defs><marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#ff5f5f"/></marker></defs>
+  <rect width="1200" height="430" rx="28" fill="#f7f8fa"/>
+  <text x="60" y="68" font-family="Arial,'Microsoft YaHei',sans-serif" font-size="30" font-weight="700" fill="#20242c">Dify 知识库接入路径</text>
+  <g font-family="Arial,'Microsoft YaHei',sans-serif">
+    <g transform="translate(70 145)"><rect width="250" height="170" rx="20" fill="#fff" stroke="#dfe3e8"/><text x="125" y="64" text-anchor="middle" font-size="27" font-weight="700" fill="#303640">Dify</text><text x="125" y="105" text-anchor="middle" font-size="18" fill="#6d7480">知识库地址</text><text x="125" y="136" text-anchor="middle" font-size="18" fill="#6d7480">Dataset API Key</text></g>
+    <path d="M330 230H442" stroke="#ff5f5f" stroke-width="4" marker-end="url(#a)"/>
+    <g transform="translate(460 125)"><rect width="280" height="210" rx="22" fill="#fff1f1" stroke="#ff8b8b" stroke-width="2"/><text x="140" y="65" text-anchor="middle" font-size="25" font-weight="700" fill="#303640">@cherry/dify-knowledge</text><text x="140" y="108" text-anchor="middle" font-size="18" fill="#6d7480">设置 → MCP → 内置服务器</text><text x="140" y="146" text-anchor="middle" font-size="18" fill="#6d7480">填写 Dify 地址和 DIFY_KEY</text><text x="140" y="181" text-anchor="middle" font-size="18" fill="#2d8a57">状态正常 · 工具已加载</text></g>
+    <path d="M750 230H862" stroke="#ff5f5f" stroke-width="4" marker-end="url(#a)"/>
+    <g transform="translate(880 145)"><rect width="250" height="170" rx="20" fill="#fff" stroke="#dfe3e8"/><text x="125" y="62" text-anchor="middle" font-size="27" font-weight="700" fill="#303640">Cherry Studio</text><text x="125" y="105" text-anchor="middle" font-size="18" fill="#6d7480">对话：勾选 MCP</text><text x="125" y="136" text-anchor="middle" font-size="18" fill="#6d7480">工作：Agent 工具</text></g>
+  </g>
+  <text x="600" y="390" text-anchor="middle" font-family="Arial,'Microsoft YaHei',sans-serif" font-size="17" fill="#777f8c">API Key 只填写在本地配置中，不要出现在截图、群聊或公开仓库</text>
+</svg>

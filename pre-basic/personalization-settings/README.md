@@ -6,7 +6,7 @@ icon: pen-swirl
 
 让 Cherry Studio **长成你喜欢的样子**：换颜色、改字体、维护自定义 CSS，并管理数据位置。
 
-<figure><img src="../../.gitbook/assets/cherry-appearance-v2.png" alt="浅色模式下的 Cherry Studio V2 外观设置，包含语言、主题、缩放和字体选项"><figcaption><p>设置 → 外观：常用个性化选项集中在同一页</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/cherry-appearance-v2.png" alt="浅色模式下的 Cherry Studio 外观设置，包含语言、主题、缩放和字体选项"><figcaption><p>设置 → 外观：常用个性化选项集中在同一页</p></figcaption></figure>
 
 ## 我可以改什么？
 
@@ -17,7 +17,7 @@ icon: pen-swirl
 | 查看或迁移应用数据目录 | [数据存储位置](storage.md) |
 | CSS 改得太乱想还原 | [清除 CSS 设置](clear-css.md) |
 
-## V2 中分别在哪里设置
+## 分别在哪里设置
 
 | | 外观设置 | 本节进阶文档 |
 |---|---|---|

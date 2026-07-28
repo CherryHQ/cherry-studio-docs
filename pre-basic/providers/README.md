@@ -4,7 +4,7 @@ icon: cloud-plus
 
 # 模型服务配置
 
-Cherry Studio 内置 60+ 家 Provider（模型服务商）的连接模板，覆盖国内外大部分主流模型与本地推理框架。本节为每家 Provider 提供独立配置指南。
+Cherry Studio 当前内置 **66 家 Provider（模型服务商）**连接模板，覆盖云端模型、聚合网关、本地推理和开发工具账号。Provider 名单会随客户端更新；是否仍可用以及支持哪些模型，以 `设置 → 模型服务` 中的实时列表为准。
 
 {% hint style="info" %}
 **Provider（模型服务商）** 提供真正生成回答的模型。Cherry Studio 负责连接和使用这些模型，但不是模型本身。
@@ -28,12 +28,13 @@ Cherry Studio 把 Provider 按协议分为以下几类，行为略有差异：
 | 类型 | 兼容协议 | 典型代表 |
 |---|---|---|
 | **OpenAI 兼容** | `/v1/chat/completions` | OpenAI、DeepSeek、硅基流动、OpenRouter、绝大多数三方网关 |
-| **Anthropic 兼容** | `/v1/messages` | Anthropic、CherryIN、部分网关 |
+| **Anthropic 兼容** | `/v1/messages` | Anthropic、部分网关 |
 | **Gemini** | Google AI Studio / Vertex | Google Gemini、Vertex AI |
 | **Bedrock** | AWS Bedrock SDK | AWS Bedrock |
 | **Azure OpenAI** | Azure OpenAI Service | Azure OpenAI |
 | **本地推理** | 本地 HTTP 服务 | Ollama、LM Studio、GPUStack、OpenVINO Model Server |
-| **特殊网关** | 厂商私有协议 | NewAPI、OneAPI、AiHubMix、DMXAPI 等 |
+| **聚合 / 特殊网关** | 多端点或厂商私有协议 | CherryIN、OpenRouter、NewAPI、AiHubMix、DMXAPI 等 |
+| **开发工具账号** | OAuth 或外部 CLI | Claude Code、OpenAI Codex、Grok CLI、OpenCode Go、GitHub Copilot |
 
 ### 添加一个 Provider 的通用步骤
 
@@ -57,6 +58,13 @@ Cherry Studio 把 Provider 按协议分为以下几类，行为略有差异：
 #### 通用/网关类
 * [CherryIN](cherryai/)
 * [NewAPI](newapi.md) / [OneAPI](oneapi.md) — 自建/三方网关
+
+#### 开发工具账号
+* Claude Code
+* OpenAI Codex
+* Grok CLI
+* OpenCode Go
+* [GitHub Copilot](github-copilot.md)
 
 #### 海外厂商
 * [OpenAI](openai.md)

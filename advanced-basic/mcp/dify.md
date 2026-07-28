@@ -1,6 +1,8 @@
 # 配置 Dify 知识库
 
-[Dify](https://dify.ai/) 是一个 AI 应用开发平台，也提供知识库功能。通过 Cherry Studio V2 内置的 `@cherry/dify-knowledge` MCP 服务器，你可以在对话中查询已有的 Dify 知识库，无需重复导入资料。
+[Dify](https://dify.ai/) 是一个 AI 应用开发平台，也提供知识库功能。通过 Cherry Studio 内置的 `@cherry/dify-knowledge` MCP 服务器，你可以在对话或工作中查询已有的 Dify 知识库，无需重复导入资料。
+
+<figure><img src="../../.gitbook/assets/cherry-dify-mcp-flow.svg" alt="Dify 知识库接入 Cherry Studio 的流程"><figcaption><p>Dify 提供知识库与 API，MCP 服务器完成连接，再由 Cherry Studio 的对话或工作调用</p></figcaption></figure>
 
 ## 使用前准备
 
@@ -22,24 +24,15 @@ Dify API Key 属于敏感凭据。不要把它放进截图、公开文档、群�
 3. 打开服务器配置，填写 Dify 地址和 `DIFY_KEY`。
 4. 保存后确认服务器状态正常，并已加载知识库查询工具。
 
-<figure><img src="../../.gitbook/assets/CleanShot 2025-04-27 at 10.36.29@2x.jpg" alt="在 MCP 列表中添加 Dify 知识库服务器"><figcaption><p>添加 Dify 知识库 MCP 服务器</p></figcaption></figure>
-
-<figure><img src="../../.gitbook/assets/CleanShot 2025-04-27 at 10.36.05@2x.jpg" alt="配置 Dify 知识库 MCP 服务器"><figcaption><p>填写 Dify 地址和知识库 API Key</p></figcaption></figure>
-
 ## 获取知识库 API Key
 
 在 Dify 中打开目标知识库，进入 API 访问或 API 扩展页面，创建并复制知识库 API Key。不同 Dify 版本的入口名称可能略有差异，以当前界面为准。
 
-<figure><img src="../../.gitbook/assets/CleanShot 2025-04-27 at 10.46.16@2x.jpg" alt="在 Dify 中获取知识库 API Key"><figcaption><p>获取目标知识库的 API Key</p></figcaption></figure>
+## 在对话或工作中使用
 
-## 在对话中使用
-
-1. 回到 Cherry Studio 对话页。
-2. 在当前助手中启用 Dify MCP 服务器。
-3. 新建话题，并明确要求模型从 Dify 知识库检索后回答。
-4. 检查工具调用记录和引用内容，确认结果来自目标知识库。
-
-<figure><img src="../../.gitbook/assets/CleanShot 2025-04-27 at 10.26.24@2x.jpg" alt="在对话中调用 Dify 知识库"><figcaption><p>通过 MCP 查询 Dify 知识库</p></figcaption></figure>
+1. **对话**：在当前助手中启用 Dify MCP 服务器，新建话题，并明确要求模型从 Dify 知识库检索后回答。
+2. **工作**：在目标工作区或 Agent 中启用相同服务器，让多步骤任务在需要时调用知识库。
+3. 检查工具调用记录和引用内容，确认结果来自目标知识库。
 
 ## 排查连接失败
 

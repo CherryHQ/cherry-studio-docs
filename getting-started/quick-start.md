@@ -2,7 +2,7 @@
 icon: rocket-launch
 ---
 
-# 快速开始
+# 快速开始与第一次对话
 
 本页用于完成第一次 AI 对话。成功标准是：**在 Cherry Studio 中选择一个模型，发送消息，并收到正常回答。**
 
@@ -16,12 +16,12 @@ icon: rocket-launch
 
 | 我是哪类用户？ | 推荐方式 | 需要准备 |
 |---|---|---|
-| 第一次使用，不想研究 API | **CherryIN** | 按客户端提示登录或填写授权信息，以界面实际要求为准 |
+| 第一次使用，不想研究 API | **CherryIN 模型服务** | 按客户端提示登录或填写授权信息，以界面实际要求为准 |
 | 已有或可以获取 DeepSeek、OpenAI、Gemini 等服务商的 API Key | **对应模型服务商** | 服务商创建的 API Key |
 | 希望模型推理主要在本机完成 | **Ollama / LM Studio** | 已安装并启动本地推理服务 |
 
 {% hint style="warning" %}
-Cherry Studio 不是模型本身。使用云端模型时，模型费用、额度、内容处理和隐私政策由对应服务商决定。
+Cherry Studio 和 CherryIN 都不是具体模型：Cherry Studio 是桌面客户端，CherryIN 是模型服务商（Provider）。使用云端模型时，模型费用、额度、内容处理和隐私政策由对应服务商决定。
 {% endhint %}
 
 ## 第 1 步：下载并安装
@@ -69,9 +69,9 @@ Cherry Studio 不是模型本身。使用云端模型时，模型费用、额度
 | 接下来想做什么？ | 下一步 |
 |---|---|
 | 学会上传文件、切换模型和管理话题 | [对话界面](../cherrystudio/preview/chat.md) |
-| 保存一个固定角色和提示词 | [助手与助手库](../cherrystudio/preview/assistants.md) |
+| 保存一个固定角色和提示词 | [对话页面中的助手库](../cherrystudio/preview/chat.md#zhu-shou-ku) |
 | 用自己的 PDF、Word、网页或笔记问答 | [知识库教程](../knowledge-base/knowledge-base.md) |
-| 让 AI 读取文件、调用工具并执行多步骤任务 | [Agent](../advanced-basic/agent.md) |
+| 让 AI 读取文件、调用工具并执行多步骤任务 | [工作（Agent）](../advanced-basic/agent.md) |
 | 了解助手、Agent、Skill 和 MCP 的关系 | [核心概念](../advanced-basic/concepts-101.md) |
 
 {% hint style="success" %}

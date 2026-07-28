@@ -4,7 +4,7 @@ icon: monero
 
 # MCP 使用教程
 
-<figure><img src="../../.gitbook/assets/cherry-mcp-settings-v2.png" alt="浅色模式下的 Cherry Studio V2 MCP 设置页面"><figcaption><p>设置 → MCP：管理服务器、内置服务器和市场</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/cherry-mcp-settings-v2.png" alt="Cherry Studio MCP 设置页面"><figcaption><p>设置 → MCP：管理服务器、内置服务器和市场</p></figcaption></figure>
 
 ## 一句话理解 MCP
 
@@ -43,15 +43,46 @@ MCP 由 Anthropic 公司发起并制定统一规范，全球开发者按此规�
 
 > 推荐先阅读 [概念入门](../concepts-101.md)。
 
-## 我需要怎么用？
+## 1. 检查运行环境
 
-总体三步：
+打开 `设置 → 环境依赖`。目标 MCP 的命令包含 `uvx` / `uv run` 时需要 uv，包含 `bunx` / `bun run` 时需要 Bun。显示版本号或“内置”即表示可用；不必预先安装页面中的全部工具。
 
-1. **第一次用**：[装好 MCP 运行环境](install.md)（一次性，1 分钟）
-2. **添加一个 MCP**：[手动配置](config.md) 或 [让 AI 自动安装](auto-install.md)
-3. **在对话/Agent 中启用它** → 然后正常聊天/跑任务，AI 会自己决定何时调用
+## 2. 添加 MCP
 
-详细流程见上面三个链接。
+{% tabs %}
+{% tab title="内置服务器（推荐）" %}
+1. 打开 `设置 → MCP → 内置服务器`。
+2. 找到需要的服务器，例如 `@cherry/fetch`。
+3. 按页面提示启用或添加。
+4. 返回 MCP 服务器列表，确认状态正常。
+
+<figure><img src="../../.gitbook/assets/cherry-mcp-builtin-v2.png" alt="Cherry Studio 内置 MCP 服务器"><figcaption><p>优先选择客户端已经集成的 MCP</p></figcaption></figure>
+{% endtab %}
+
+{% tab title="自定义服务器" %}
+1. 打开 `设置 → MCP → MCP 服务器`。
+2. 点击 **添加 → 快速创建**。
+3. 按 MCP 官方说明填写名称、传输类型、命令、参数和环境变量。
+4. 保存并等待首次下载和启动完成。
+
+<figure><img src="../../.gitbook/assets/cherry-mcp-quick-create-v2.png" alt="Cherry Studio MCP 快速创建表单"><figcaption><p>命令、参数与环境变量需要分别填写</p></figcaption></figure>
+{% endtab %}
+{% endtabs %}
+
+常见传输类型：
+
+| 类型 | 使用场景 |
+|---|---|
+| stdio | 在本机通过命令启动 |
+| SSE | 连接使用服务器发送事件的远端 MCP |
+| Streamable HTTP | 连接使用当前 HTTP 传输协议的远端 MCP |
+
+## 3. 在对话或工作中启用
+
+* **对话**：在输入框工具区打开 **MCP**，勾选需要的服务器。
+* **工作**：打开 Agent 编辑面板，进入 `工具 → MCP`，只启用当前任务需要的服务器。
+
+成功时，服务器状态正常，工具列表中能看到对应工具，执行任务时会出现工具调用记录。
 
 ## 哪里能找到 MCP？
 
@@ -71,13 +102,17 @@ MCP 由 Anthropic 公司发起并制定统一规范，全球开发者按此规�
 **Q：MCP 是否会获取我的数据？**
 取决于具体的 MCP 实现。官方仓库中的开源 MCP 代码可审查，相对可信；第三方闭源 MCP 安装前请确认开发者身份。
 
-## 下一步
+### 服务器无法启动
 
-* 第一次用：先看 [MCP 环境安装](install.md)
-* 想直接试一个：看 [配置和使用 MCP](config.md) 跟着走一遍
-* 嫌手动配置麻烦：试试 [自动安装 MCP](auto-install.md)
-* 想看 Cherry Studio 内置了哪些 MCP：[内置 MCP 配置](builtin.md)
-* 装到一半遇到问题：[常见问题](faq.md)
+依次检查命令是否存在、参数是否分开填写、首次下载依赖所需的网络，以及 API Key 等环境变量是否完整。修改后保存并重新启动服务器。
+
+### 对话里看不到 MCP 工具
+
+确认 MCP 总开关和目标服务器均已启用，当前助手或 Agent 已关联该服务器，并且服务器成功加载出工具列表。配置完成后建议新建话题再测试。
+
+{% hint style="warning" %}
+命令、参数和环境变量必须以目标 MCP 的当前官方说明为准。只安装可信服务器，并仅授予完成任务所需的最小账号和目录权限。
+{% endhint %}
 
 ***
 

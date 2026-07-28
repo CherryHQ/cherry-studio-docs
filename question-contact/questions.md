@@ -30,31 +30,23 @@ icon: seal-question
 
 ***
 
-## 控制台报错查看方法
+## 查看请求的完整错误信息
 
-* 点击 Cherry Studio 客户端窗口后按下快捷键 <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>I</kbd>（Mac端：<kbd>Command</kbd> + <kbd>Option</kbd> + <kbd>I</kbd>）
+1. 先点击 Cherry Studio 客户端窗口，再按 <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>I</kbd>；macOS 使用 <kbd>Command</kbd> + <kbd>Option</kbd> + <kbd>I</kbd>。
+2. 打开 **Network**，然后重新执行刚才失败的操作。
+3. 点击带红色错误标记的请求。
+4. 打开 **Response**，查看服务商返回的完整错误内容。
 
-{% hint style="info" %}
-- 当前活动窗口必须为 Cherry Studio 的客户端窗口才能调出控制台;
-- 需要先打开控制台，再点击测试或者发起对话等请求才能收集到请求信息。
-{% endhint %}
+<figure><img src="../.gitbook/assets/cherry-devtools-error-flow.svg" alt="Cherry Studio 控制台错误排查流程"><figcaption><p>Network → 失败请求 → Response</p></figcaption></figure>
 
-* 在弹出的控制台窗口中点击 <mark style="color:blue;">`Network`</mark> → 点击查看②处最后一个标有红色 <mark style="color:red;">`×`</mark> 的 <mark style="color:red;">`completions`</mark>_（对话类、翻译、模型连通性检查等遇到错误时）_ 或 <mark style="color:red;">`generations`</mark>_（绘画遇到错误时）_ → 点击<mark style="color:blue;">`Response`</mark>查看完整的返回内容（图中④的区域）。
-
-> 如果你无法判断该错误的原因,请将该界面截图发送到 [官方交流群](https://t.me/CherryStudioAI) 中寻求帮助。
-
-<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt="" width="563"><figcaption></figcaption></figure>
-
-该检查方法不仅在对话时可以获取错误信息，在模型测试时、添加知识库时、绘画时等都可以使用。无论哪种情况下都需要先打开调试窗口，再进行请求操作来获取请求信息。·
+| 操作场景 | 常见请求名称 |
+|---|---|
+| 对话、翻译、模型检测 | `completions` |
+| 绘画 | `generations` |
+| 知识库创建或索引 | `embeddings` |
 
 {% hint style="info" %}
-不同场景下Name(上图②处)栏里的名称会有所区别
-
-对话、翻译、模型检查：<mark style="color:red;">`completions`</mark>
-
-绘画：<mark style="color:red;">`generations`</mark>
-
-知识库创建：<mark style="color:red;">`embeddings`</mark>
+必须先打开控制台，再重新发起请求，Network 才能记录本次错误。求助时请提供错误码和 Response 内容，但务必遮住 API Key、账号、文件路径等敏感信息。
 {% endhint %}
 
 ***

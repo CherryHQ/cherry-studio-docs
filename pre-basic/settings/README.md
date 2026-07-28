@@ -4,9 +4,9 @@ icon: gear
 
 # 设置
 
-Cherry Studio V2 把设置分为模型、工具、偏好、效率和系统五组。旧版“常规设置”“显示设置”“API 服务器”等名称已拆分或更名。
+Cherry Studio 的设置按应用中的分组排列。建议先从当前页面左侧导航定位功能，再打开对应教程。
 
-## V2 设置地图
+## 设置地图
 
 | 分组 | 页面 | 主要用途 |
 |---|---|---|
@@ -19,7 +19,7 @@ Cherry Studio V2 把设置分为模型、工具、偏好、效率和系统五组
 | 效率 | 频道、定时任务、快捷键、快捷助手、划词助手 | 自动化、跨平台入口和全局工具 |
 | 系统 | 系统、环境依赖、关于我们 | 启动、代理、运行依赖和版本信息 |
 
-<figure><img src="../../.gitbook/assets/cherry-system-settings-v2.png" alt="Cherry Studio V2 设置导航"><figcaption><p>V2 设置左侧导航及系统设置页面。</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/cherry-system-settings-v2.png" alt="Cherry Studio 设置导航"><figcaption><p>设置左侧导航及系统设置页面</p></figcaption></figure>
 
 本节重点文档：
 
@@ -38,7 +38,7 @@ Cherry Studio V2 把设置分为模型、工具、偏好、效率和系统五组
 * [MCP](../../advanced-basic/mcp/)
 * [频道](../../advanced-basic/agent-channels.md)
 * [定时任务](../../advanced-basic/scheduled-tasks.md)
-* [记忆能力（V2）](../../advanced-basic/memory.md)
+* [记忆能力](../../advanced-basic/memory.md)
 
 {% hint style="info" %}
 大多数设置保存后立即生效。数据目录、硬件加速和环境依赖等系统级选项可能需要重启；涉及重置数据或迁移目录时，请先创建备份。

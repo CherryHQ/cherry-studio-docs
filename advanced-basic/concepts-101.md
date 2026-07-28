@@ -4,20 +4,33 @@ icon: graduation-cap
 
 # 核心概念
 
-Cherry Studio 将模型、资料和工具组织为助手、Agent、知识库、技能和 MCP 等能力。本页说明它们分别解决什么问题，以及如何组合；具体配置步骤见对应教程。
+本页按 Cherry Studio 界面中看到的名称介绍各项能力。需要操作步骤时，直接点击对应名称进入教程。
 
 <figure><img src="../.gitbook/assets/cherry-concepts-map-v2.svg" alt="Cherry Studio 核心概念组合关系"><figcaption><p>模型、资料、工具、触发方式与最终工作结果之间的关系</p></figcaption></figure>
 
 ## 能力对照
 
-* **模型服务（Provider）** — 提供生成回答所需的模型，并决定可用模型、费用与数据政策。
-* **助手（Assistant）** — 保存对话规则和回复风格，适合固定角色的日常问答、写作、翻译或编程。
-* **Agent** — 读取工作区、调用工具并执行多步骤任务，例如整理文件、分析项目、修改代码或生成报告。
-* **知识库** — 检索导入的文档，为基于产品手册、课程资料、合同或笔记的回答提供内容。
-* **技能（Skill）** — 为 Agent 提供可复用的流程、模板和资料，适合固定流程的专项任务。
-* **MCP** — 让助手或 Agent 使用外部工具和数据源，例如数据库、Notion 或 GitHub。
-* **频道** — 将 Agent 接入飞书、Telegram、QQ、微信、Discord 或 Slack 等 IM 平台。
-* **定时任务** — 按计划触发 Agent，适合日报、周报和数据同步等周期性任务。
+| 界面名称 | 主要用途 | 进入教程 |
+|---|---|---|
+| **启动台** | 查找并打开应用，把常用应用固定到顶部 | [启动台](../cherrystudio/preview/launchpad.md) |
+| **对话** | 与模型交流；管理助手、助手库和话题 | [对话](../cherrystudio/preview/chat.md) |
+| **工作** | 让 Agent 读取工作区、调用工具并执行多步骤任务 | [工作（Agent）](agent.md) |
+| **绘画** | 使用图像模型生成或编辑图片 | [绘画](../cherrystudio/preview/drawing.md) |
+| **翻译** | 翻译文本、图片和文档 | [翻译](../cherrystudio/preview/translation.md) |
+| **小程序** | 在客户端内打开常用网页应用 | [小程序](../cherrystudio/preview/app.md) |
+| **知识库** | 导入资料并建立可检索的内容库 | [知识库](../knowledge-base/knowledge-base.md) |
+| **文件** | 集中管理应用内使用的文件 | [文件](../cherrystudio/preview/files.md) |
+| **Code Switch** | 管理和调用外部编码工具 | [Code Switch](code-tools.md) |
+| **笔记** | 使用内置 Markdown 编辑器整理内容 | [笔记](../cherrystudio/preview/notes.md) |
+| **快捷助手** | 用全局快捷键呼出迷你对话窗口 | [快捷助手](../cherrystudio/preview/quick-assistant.md) |
+| **划词助手** | 对其他应用中选中的文字执行 AI 操作 | [划词助手](../cherrystudio/preview/selection-assistant.md) |
+
+## 对话中的助手与工作中的 Agent
+
+* **助手（Assistant）**属于**对话**页面，用于保存角色、提示词和回复风格。
+* **Agent**运行在**工作**页面，可以读取工作区、调用工具并连续执行多个步骤。
+
+简单判断：只需要“回答我”时使用对话；需要“替我做”时使用工作。
 
 ## 助手与 Agent
 
@@ -25,7 +38,7 @@ Cherry Studio 将模型、资料和工具组织为助手、Agent、知识库、�
 
 Agent 面向需要连续执行的任务。它可以读取工作区、调用已授权的工具，并根据目标完成多个步骤。
 
-相关文档：[对话与助手](../cherrystudio/preview/assistants.md) · [Agent](agent.md)
+相关文档：[对话与助手库](../cherrystudio/preview/chat.md#zhu-shou-ku) · [工作（Agent）](agent.md)
 
 ## 知识库
 
@@ -65,8 +78,8 @@ Cherry Studio 已内置文件上传和知识库能力。读取本地资料不要
 ## 按需求查阅
 
 * 配置模型并开始对话：[快速开始](../getting-started/quick-start.md)
-* 固定对话角色：[助手与助手库](../cherrystudio/preview/assistants.md)
+* 固定对话角色：[对话页面中的助手库](../cherrystudio/preview/chat.md#zhu-shou-ku)
 * 使用自己的资料：[知识库](../knowledge-base/knowledge-base.md)
-* 执行多步骤任务：[Agent](agent.md)
+* 执行多步骤任务：[工作（Agent）](agent.md)
 * 连接外部服务：[MCP](mcp/)
 * 接入群聊或周期运行：[频道](agent-channels.md) · [定时任务](scheduled-tasks.md)

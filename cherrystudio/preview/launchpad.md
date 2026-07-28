@@ -23,7 +23,7 @@ icon: grid
 | [笔记](notes.md) | 内置 Markdown 编辑器 |
 
 {% hint style="info" %}
-V2 不再提供独立的「助手库」或「OpenClaw」启动台入口：助手库已并入助手对话页，OpenClaw 已并入 Code Switch 页面。
+助手库位于对话页，OpenClaw 位于 Code Switch 页面，因此不会作为独立启动台入口显示。
 {% endhint %}
 
 ### 排序应用和添加到侧边栏

@@ -5,7 +5,7 @@ icon: code
 
 # Code Switch 使用教程
 
-Code Switch 可以在 Cherry Studio 内直接启动和管理多种 AI 编程 CLI 工具，例如 Claude Code、OpenAI Codex、OpenCode、Gemini CLI、Qwen Code、Kimi Code、Qoder CLI、GitHub Copilot CLI 和 OpenClaw。本教程按 V2 界面说明完整配置流程。
+Code Switch 可以在 Cherry Studio 内直接启动和管理多种 AI 编程 CLI 工具，例如 Claude Code、OpenAI Codex、OpenCode、Gemini CLI、Qwen Code、Kimi Code、Qoder CLI、GitHub Copilot CLI 和 OpenClaw。本教程按当前界面说明完整配置流程。
 
 ***
 
@@ -19,7 +19,7 @@ Code Switch 可以在 Cherry Studio 内直接启动和管理多种 AI 编程 CLI
 
 点击顶部 Tab 栏的 `+` 打开启动台，然后选择 **Code Switch**。如果已经把 Code Switch 固定到左侧导航，也可以直接点击左侧图标。
 
-<figure><img src="../.gitbook/assets/cherry-launchpad.png" alt="V2 启动台中的 Code Switch 入口"><figcaption><p>V2 启动台中的 Code Switch 入口</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/cherry-launchpad.png" alt="启动台中的 Code Switch 入口"><figcaption><p>启动台中的 Code Switch 入口</p></figcaption></figure>
 
 #### 3. 选择 CLI 工具
 
@@ -69,7 +69,7 @@ CLI 已安装且配置可用后，点击状态卡片中的 **启动**。启动�
 2. 在 Windows 或 macOS 上，从系统检测到的终端列表中选择终端
 3. 点击 **启动**
 
-工作目录会作为 CLI 的启动目录，CLI 可按自身权限访问其中的文件和子目录。V2 启动弹窗不提供任意环境变量编辑区，也不支持手动填写任意终端可执行文件路径；需要额外环境变量时，请在系统或目标终端中配置。
+工作目录会作为 CLI 的启动目录，CLI 可按自身权限访问其中的文件和子目录。启动弹窗不提供任意环境变量编辑区，也不支持手动填写任意终端可执行文件路径；需要额外环境变量时，请在系统或目标终端中配置。
 
 {% hint style="warning" %}
 当前终端自动检测支持 Windows 和 macOS；Linux 上不会列出可启动的终端。

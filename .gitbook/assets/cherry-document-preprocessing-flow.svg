@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="430" viewBox="0 0 1200 430" role="img" aria-labelledby="title desc">
+  <title id="title">知识库文档预处理流程</title>
+  <desc id="desc">文件经过文档解析、Markdown 结构化、分块、嵌入后进入知识库检索。</desc>
+  <defs><marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#ff5f5f"/></marker></defs>
+  <rect width="1200" height="430" rx="28" fill="#f7f8fa"/>
+  <text x="60" y="66" font-family="Arial,'Microsoft YaHei',sans-serif" font-size="30" font-weight="700" fill="#20242c">从原始文件到可检索知识</text>
+  <text x="60" y="104" font-family="Arial,'Microsoft YaHei',sans-serif" font-size="18" fill="#6d7480">复杂文档先解析；文字层清晰的资料可以直接进入分块</text>
+  <g font-family="Arial,'Microsoft YaHei',sans-serif">
+    <g transform="translate(60 160)"><rect width="180" height="150" rx="18" fill="#fff" stroke="#dfe3e8"/><text x="90" y="58" text-anchor="middle" font-size="25" fill="#303640">原始文件</text><text x="90" y="94" text-anchor="middle" font-size="16" fill="#777f8c">PDF · Word · PPT</text><text x="90" y="120" text-anchor="middle" font-size="16" fill="#777f8c">Excel · 扫描件</text></g>
+    <path d="M250 235H298" stroke="#ff5f5f" stroke-width="3" marker-end="url(#a)"/>
+    <g transform="translate(310 160)"><rect width="180" height="150" rx="18" fill="#fff1f1" stroke="#ff8b8b"/><text x="90" y="58" text-anchor="middle" font-size="25" fill="#303640">文档解析</text><text x="90" y="94" text-anchor="middle" font-size="16" fill="#777f8c">内置读取 / OCR</text><text x="90" y="120" text-anchor="middle" font-size="16" fill="#777f8c">MinerU · Doc2x 等</text></g>
+    <path d="M500 235H548" stroke="#ff5f5f" stroke-width="3" marker-end="url(#a)"/>
+    <g transform="translate(560 160)"><rect width="180" height="150" rx="18" fill="#fff" stroke="#dfe3e8"/><text x="90" y="58" text-anchor="middle" font-size="25" fill="#303640">Markdown</text><text x="90" y="94" text-anchor="middle" font-size="16" fill="#777f8c">保留标题、段落</text><text x="90" y="120" text-anchor="middle" font-size="16" fill="#777f8c">表格与代码结构</text></g>
+    <path d="M750 235H798" stroke="#ff5f5f" stroke-width="3" marker-end="url(#a)"/>
+    <g transform="translate(810 160)"><rect width="140" height="150" rx="18" fill="#fff" stroke="#dfe3e8"/><text x="70" y="58" text-anchor="middle" font-size="25" fill="#303640">分块</text><text x="70" y="94" text-anchor="middle" font-size="16" fill="#777f8c">Chunk</text><text x="70" y="120" text-anchor="middle" font-size="16" fill="#777f8c">重叠上下文</text></g>
+    <path d="M960 235H1008" stroke="#ff5f5f" stroke-width="3" marker-end="url(#a)"/>
+    <g transform="translate(1020 160)"><rect width="120" height="150" rx="18" fill="#fff" stroke="#dfe3e8"/><text x="60" y="58" text-anchor="middle" font-size="25" fill="#303640">索引</text><text x="60" y="94" text-anchor="middle" font-size="16" fill="#777f8c">嵌入</text><text x="60" y="120" text-anchor="middle" font-size="16" fill="#777f8c">检索</text></g>
+  </g>
+  <path d="M150 326V365H870V324" fill="none" stroke="#9aa1ac" stroke-width="2" stroke-dasharray="7 7" marker-end="url(#a)"/>
+  <text x="510" y="398" text-anchor="middle" font-family="Arial,'Microsoft YaHei',sans-serif" font-size="16" fill="#777f8c">文字层清晰、结构简单时，可跳过额外解析</text>
+</svg>

@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="520" viewBox="0 0 1200 520" role="img" aria-labelledby="title desc">
+  <title id="title">Cherry Studio 调用链结构</title>
+  <desc id="desc">一次请求形成 Trace，并包含模型、知识库、网络搜索和 MCP 等 Span。</desc>
+  <defs><marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#ff5f5f"/></marker></defs>
+  <rect width="1200" height="520" rx="28" fill="#f7f8fa"/>
+  <text x="60" y="66" font-family="Arial,'Microsoft YaHei',sans-serif" font-size="30" font-weight="700" fill="#20242c">一次请求如何形成调用链</text>
+  <g font-family="Arial,'Microsoft YaHei',sans-serif">
+    <rect x="60" y="130" width="230" height="100" rx="18" fill="#fff" stroke="#dfe3e8"/>
+    <text x="175" y="176" text-anchor="middle" font-size="24" font-weight="700" fill="#303640">用户请求</text>
+    <text x="175" y="206" text-anchor="middle" font-size="16" fill="#6d7480">发送消息或执行任务</text>
+    <path d="M300 180H402" stroke="#ff5f5f" stroke-width="4" marker-end="url(#a)"/>
+    <rect x="420" y="110" width="300" height="140" rx="22" fill="#fff1f1" stroke="#ff8b8b" stroke-width="2"/>
+    <text x="570" y="166" text-anchor="middle" font-size="28" font-weight="700" fill="#303640">Trace</text>
+    <text x="570" y="202" text-anchor="middle" font-size="18" fill="#6d7480">记录总耗时、Token 与执行状态</text>
+    <path d="M730 180H832" stroke="#ff5f5f" stroke-width="4" marker-end="url(#a)"/>
+    <rect x="850" y="130" width="290" height="100" rx="18" fill="#fff" stroke="#dfe3e8"/>
+    <text x="995" y="176" text-anchor="middle" font-size="24" font-weight="700" fill="#303640">模型输出</text>
+    <text x="995" y="206" text-anchor="middle" font-size="16" fill="#6d7480">回答、文件或任务结果</text>
+
+    <path d="M570 260V314" stroke="#9aa1ac" stroke-width="3"/>
+    <path d="M210 314H990" stroke="#9aa1ac" stroke-width="3"/>
+    <g fill="#fff" stroke="#dfe3e8">
+      <rect x="105" y="340" width="210" height="105" rx="18"/>
+      <rect x="365" y="340" width="210" height="105" rx="18"/>
+      <rect x="625" y="340" width="210" height="105" rx="18"/>
+      <rect x="885" y="340" width="210" height="105" rx="18"/>
+    </g>
+    <g stroke="#9aa1ac" stroke-width="3"><path d="M210 314V340"/><path d="M470 314V340"/><path d="M730 314V340"/><path d="M990 314V340"/></g>
+    <g text-anchor="middle">
+      <text x="210" y="386" font-size="22" font-weight="700" fill="#303640">模型调用</text><text x="210" y="418" font-size="16" fill="#6d7480">输入 · 输出 · Token</text>
+      <text x="470" y="386" font-size="22" font-weight="700" fill="#303640">网络搜索</text><text x="470" y="418" font-size="16" fill="#6d7480">问题 · 搜索结果</text>
+      <text x="730" y="386" font-size="22" font-weight="700" fill="#303640">知识库</text><text x="730" y="418" font-size="16" fill="#6d7480">查询 · 命中片段</text>
+      <text x="990" y="386" font-size="22" font-weight="700" fill="#303640">MCP 工具</text><text x="990" y="418" font-size="16" fill="#6d7480">入参 · 返回值 · 耗时</text>
+    </g>
+  </g>
+</svg>

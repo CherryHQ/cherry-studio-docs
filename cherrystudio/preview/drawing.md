@@ -4,13 +4,13 @@ icon: image
 
 # 绘画
 
-绘画页是 Cherry Studio V2 的图像生成工作区。它直接复用你在模型服务中配置的图像模型，并以“画板会话”的方式保存提示词和生成结果。
+绘画页是 Cherry Studio 的图像生成工作区。它直接复用你在模型服务中配置的图像模型，并以“画板会话”的方式保存提示词和生成结果。
 
 ## 进入绘画
 
 点击顶部 **绘画**；如果顶部没有该入口，也可以打开 **启动台 → 绘画**。
 
-<figure><img src="../../.gitbook/assets/cherry-drawing-v2.png" alt="Cherry Studio V2 绘画页面"><figcaption><p>V2 绘画页：左侧管理画板，底部输入提示词并选择图像模型。</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/cherry-drawing-v2.png" alt="Cherry Studio 绘画页面"><figcaption><p>绘画页：左侧管理画板，底部输入提示词并选择图像模型</p></figcaption></figure>
 
 ## 开始生成
 
@@ -35,9 +35,9 @@ icon: image
 3. 打开 `设置 → 默认模型`，可把常用模型设为 **绘画模型**；
 4. 回到绘画页重新打开模型选择器。
 
-<figure><img src="../../.gitbook/assets/cherry-default-models-v2.png" alt="V2 默认模型设置"><figcaption><p>V2 的默认模型中新增了“绘画模型”。</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/cherry-default-models-v2.png" alt="默认模型设置"><figcaption><p>默认模型中可以指定绘画模型</p></figcaption></figure>
 
-不同模型支持的能力并不相同。图片尺寸、参考图、编辑、输出数量等选项，以所选模型在当前界面实际显示的字段为准；V2 不再按旧版的固定三栏参数面板组织页面。
+不同模型支持的能力并不相同。图片尺寸、参考图、编辑、输出数量等选项，以所选模型在当前界面实际显示的字段为准。
 
 ## 提示与技巧
 

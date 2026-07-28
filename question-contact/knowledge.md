@@ -4,6 +4,8 @@ icon: book-bookmark
 
 # 知识科普
 
+<figure><img src="../.gitbook/assets/cherry-document-preprocessing-flow.svg" alt="文档进入知识库前的处理流程"><figcaption><p>从文档解析、分块到嵌入与检索：下文中的 Token、Embedding 与知识库概念会在这条流程里协同工作</p></figcaption></figure>
+
 ## 什么是 tokens？
 
 Tokens 是 AI 模型处理文本的基本单位，可以理解为模型"思考"的最小单元。它不完全等同于我们理解的字符或单词，而是模型自己的一种特殊的文本分割方式。
