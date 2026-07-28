@@ -2,7 +2,7 @@
 icon: file-signature
 ---
 
-# 反馈 & 建议
+# 反馈与建议
 
 ## GitHub Issues
 

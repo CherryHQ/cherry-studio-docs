@@ -3,14 +3,15 @@
 ## 开始使用
 
 * [项目简介](README.md)
-* [快速开始](getting-started/quick-start.md)
 * [客户端下载](cherrystudio/download.md)
 * [安装教程](cherry-studio/installation/README.md)
   * [Windows](cherry-studio/installation/windows.md)
   * [macOS](cherry-studio/installation/macos.md)
   * [Linux](cherry-studio/installation/linux.md)
-* [核心概念](advanced-basic/concepts-101.md)
+* [快速开始](getting-started/quick-start.md)
+* [模型服务配置](pre-basic/providers/README.md)
 * [第一次对话](cherrystudio/preview/chat.md)
+* [核心概念](advanced-basic/concepts-101.md)
 
 ## 常用功能
 
@@ -28,8 +29,7 @@
 
 ## 模型与基础设置 <a href="#pre-basic" id="pre-basic"></a>
 
-* [模型服务](pre-basic/providers/README.md)
-  * [全部 Provider 快速参考](pre-basic/providers/quick-reference.md)
+* [模型服务快速参考](pre-basic/providers/quick-reference.md)
   * [CherryIN 模型服务](pre-basic/providers/cherryai/README.md)
     * [DeepSeek V3.2](pre-basic/providers/cherryai/free-deepseek.md)
     * [智谱 GLM-4.6V](pre-basic/providers/cherryai/free-glm46v.md)
@@ -121,12 +121,12 @@
 * [贡献代码](contribution/code.md)
 * [贡献文档](contribution/docs.md)
 
-## 问题&反馈 <a href="#question-contact" id="question-contact"></a>
+## 问题与反馈 <a href="#question-contact" id="question-contact"></a>
 
 * [常见问题](question-contact/questions.md)
 * [如何高效提问](question-contact/ask.md)
 * [知识科普](question-contact/knowledge.md)
-* [反馈 & 建议](question-contact/suggestions.md)
+* [反馈与建议](question-contact/suggestions.md)
 
 ## 联系我们 <a href="#contact-us" id="contact-us"></a>
 
@@ -140,4 +140,5 @@
 ## 其他内容 <a href="#other" id="other"></a>
 
 * [模型数据](other/models-info.md)
-* [模型榜单](other/model_rank/lmarena.md)
+* [模型榜单](other/model_rank/README.md)
+  * [LLM Arena 排行榜](other/model_rank/lmarena.md)
