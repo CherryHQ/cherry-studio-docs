@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="850" viewBox="0 0 1400 850" role="img" aria-labelledby="title desc">
+  <title id="title">Cherry Studio 核心概念组合关系</title>
+  <desc id="desc">模型服务为助手和 Agent 提供模型；知识库提供资料；技能提供流程；MCP 提供外部工具与数据；频道和定时任务触发 Agent；最终产出回答或任务结果。</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0 0L10 5L0 10z" fill="#94a3b8"/>
+    </marker>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#1f2937" flood-opacity="0.08"/>
+    </filter>
+    <style>
+      .font { font-family: Inter, "Microsoft YaHei", "PingFang SC", Arial, sans-serif; }
+      .title { font-size: 34px; font-weight: 700; fill: #1f2937; }
+      .subtitle { font-size: 18px; fill: #64748b; }
+      .node-title { font-size: 23px; font-weight: 700; fill: #1f2937; }
+      .node-text { font-size: 16px; fill: #64748b; }
+      .edge { fill: none; stroke: #94a3b8; stroke-width: 3; marker-end: url(#arrow); }
+      .edge-label { font-size: 15px; font-weight: 700; fill: #64748b; }
+    </style>
+  </defs>
+
+  <rect width="1400" height="850" rx="28" fill="#f8fafc"/>
+  <text class="font title" x="700" y="58" text-anchor="middle">核心能力如何组合</text>
+  <text class="font subtitle" x="700" y="94" text-anchor="middle">模型负责生成，资料与工具扩展上下文，助手或 Agent 负责完成工作</text>
+
+  <g filter="url(#shadow)">
+    <rect x="500" y="126" width="400" height="100" rx="22" fill="#fff5f4" stroke="#f7c8c5"/>
+    <text class="font node-title" x="700" y="167" text-anchor="middle">模型服务 Provider</text>
+    <text class="font node-text" x="700" y="198" text-anchor="middle">提供模型，并决定费用、额度与数据政策</text>
+  </g>
+
+  <path class="edge" d="M620 226V292"/>
+  <path class="edge" d="M780 226V292"/>
+  <text class="font edge-label" x="700" y="262" text-anchor="middle">提供模型</text>
+
+  <g filter="url(#shadow)">
+    <rect x="340" y="294" width="300" height="130" rx="22" fill="#ffffff" stroke="#e2e8f0"/>
+    <circle cx="394" cy="348" r="28" fill="#eef6ff"/>
+    <path d="M380 341h28a8 8 0 0 1 8 8v9a8 8 0 0 1-8 8h-10l-8 7v-7h-10a8 8 0 0 1-8-8v-9a8 8 0 0 1 8-8z" fill="none" stroke="#3b82f6" stroke-width="3"/>
+    <text class="font node-title" x="440" y="349">助手</text>
+    <text class="font node-text" x="394" y="395">固定角色与回复方式，以对话为主</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="760" y="294" width="300" height="130" rx="22" fill="#ffffff" stroke="#e2e8f0"/>
+    <circle cx="814" cy="348" r="28" fill="#ecfdf5"/>
+    <path d="M802 362v-20l12-8 12 8v20l-12 8z" fill="none" stroke="#10b981" stroke-width="3" stroke-linejoin="round"/>
+    <circle cx="814" cy="350" r="5" fill="#10b981"/>
+    <text class="font node-title" x="860" y="349">Agent</text>
+    <text class="font node-text" x="814" y="395">调用工具，连续执行多步骤任务</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="62" y="292" width="220" height="132" rx="22" fill="#ffffff" stroke="#e2e8f0"/>
+    <text class="font node-title" x="172" y="339" text-anchor="middle">知识库</text>
+    <text class="font node-text" x="172" y="373" text-anchor="middle">提供企业资料</text>
+    <text class="font node-text" x="172" y="398" text-anchor="middle">支持基于内容回答</text>
+  </g>
+  <path class="edge" d="M282 344H336"/>
+  <path class="edge" d="M282 382C470 476 684 476 758 382"/>
+  <text class="font edge-label" x="300" y="330">资料</text>
+
+  <g filter="url(#shadow)">
+    <rect x="1118" y="254" width="220" height="112" rx="22" fill="#ffffff" stroke="#e2e8f0"/>
+    <text class="font node-title" x="1228" y="298" text-anchor="middle">技能 Skill</text>
+    <text class="font node-text" x="1228" y="333" text-anchor="middle">提供流程、模板与方法</text>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="1118" y="390" width="220" height="112" rx="22" fill="#ffffff" stroke="#e2e8f0"/>
+    <text class="font node-title" x="1228" y="434" text-anchor="middle">MCP</text>
+    <text class="font node-text" x="1228" y="469" text-anchor="middle">提供外部工具与数据</text>
+  </g>
+  <path class="edge" d="M1118 310H1064"/>
+  <path class="edge" d="M1118 446H1042C1018 446 996 432 980 416"/>
+  <text class="font edge-label" x="1068" y="294">方法</text>
+  <text class="font edge-label" x="1066" y="432">工具</text>
+
+  <g filter="url(#shadow)">
+    <rect x="310" y="546" width="260" height="116" rx="22" fill="#ffffff" stroke="#e2e8f0"/>
+    <text class="font node-title" x="440" y="590" text-anchor="middle">频道</text>
+    <text class="font node-text" x="440" y="625" text-anchor="middle">从飞书等 IM 平台接收消息</text>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="600" y="546" width="260" height="116" rx="22" fill="#ffffff" stroke="#e2e8f0"/>
+    <text class="font node-title" x="730" y="590" text-anchor="middle">定时任务</text>
+    <text class="font node-text" x="730" y="625" text-anchor="middle">按计划自动触发任务</text>
+  </g>
+  <path class="edge" d="M570 575C690 540 760 486 834 426"/>
+  <path class="edge" d="M790 546C824 506 858 468 886 426"/>
+  <text class="font edge-label" x="688" y="520" text-anchor="middle">触发 Agent</text>
+
+  <g filter="url(#shadow)">
+    <rect x="940" y="566" width="398" height="150" rx="24" fill="#fff5f4" stroke="#f7c8c5"/>
+    <text class="font node-title" x="1139" y="612" text-anchor="middle">工作结果</text>
+    <text class="font node-text" x="1139" y="649" text-anchor="middle">回答 · 报告 · 表格 · 文件 · 代码</text>
+    <text class="font node-text" x="1139" y="679" text-anchor="middle">可继续在对话中确认、修改或交付</text>
+  </g>
+  <path class="edge" d="M640 386C780 462 858 528 940 612"/>
+  <path class="edge" d="M940 414C972 486 1002 532 1040 566"/>
+
+  <g class="font">
+    <rect x="72" y="754" width="1256" height="56" rx="18" fill="#ffffff" stroke="#e2e8f0"/>
+    <text class="node-text" x="700" y="789" text-anchor="middle">常见组合：模型 + 助手 + 知识库用于企业问答；模型 + Agent + 技能 / MCP 用于自动化任务</text>
+  </g>
+</svg>

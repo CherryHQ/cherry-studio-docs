@@ -18,6 +18,10 @@ Cherry Studio 是一个**开源的桌面 AI 工作台**。它把 CherryIN、Deep
 * **自动运行或进入群聊**：结合[定时任务](advanced-basic/scheduled-tasks.md)和[频道](advanced-basic/agent-channels.md)生成简报并发送到飞书。
 * **处理图片、翻译和笔记**：使用[绘画](cherrystudio/preview/drawing.md)、[翻译](cherrystudio/preview/translation.md)和[笔记](cherrystudio/preview/notes.md)完成内容工作。
 
+<figure><img src=".gitbook/assets/cherry-capabilities-overview-v2.svg" alt="Cherry Studio 业务能力总览"><figcaption><p>从日常对话、企业资料问答，到数据分析与 Agent 自动执行</p></figcaption></figure>
+
+<figure><img src=".gitbook/assets/cherry-business-analysis-stable.png" alt="Cherry Studio 对季度营收数据生成柱状图"><figcaption><p>对话示例：把季度营收数据整理为可视化图表，并继续分析业务趋势</p></figcaption></figure>
+
 ## 第一次使用，从这里开始
 
 {% content-ref url="getting-started/quick-start.md" %}

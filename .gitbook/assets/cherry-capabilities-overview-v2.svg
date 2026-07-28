@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="820" viewBox="0 0 1400 820" role="img" aria-labelledby="title desc">
+  <title id="title">Cherry Studio 业务能力总览</title>
+  <desc id="desc">展示 Cherry Studio 在对话与助手、企业资料问答、数据分析与内容生成、Agent 自动执行四类场景中的典型工作结果。</desc>
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="8" stdDeviation="14" flood-color="#1f2937" flood-opacity="0.08"/>
+    </filter>
+    <linearGradient id="brand" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f36f67"/>
+      <stop offset="1" stop-color="#e95058"/>
+    </linearGradient>
+    <style>
+      .font { font-family: Inter, "Microsoft YaHei", "PingFang SC", Arial, sans-serif; }
+      .title { font-size: 34px; font-weight: 700; fill: #1f2937; }
+      .subtitle { font-size: 18px; fill: #64748b; }
+      .card-title { font-size: 24px; font-weight: 700; fill: #1f2937; }
+      .label { font-size: 17px; fill: #475569; }
+      .small { font-size: 15px; fill: #64748b; }
+      .result { font-size: 16px; font-weight: 700; fill: #d84d55; }
+    </style>
+  </defs>
+
+  <rect width="1400" height="820" rx="28" fill="#f8fafc"/>
+  <text class="font title" x="700" y="62" text-anchor="middle">从模型能力到可交付的工作结果</text>
+  <text class="font subtitle" x="700" y="98" text-anchor="middle">同一个桌面工作台，覆盖日常沟通、企业知识、内容生产与多步骤任务</text>
+
+  <g filter="url(#shadow)">
+    <rect x="72" y="140" width="600" height="260" rx="24" fill="#ffffff" stroke="#e2e8f0"/>
+    <circle cx="130" cy="198" r="30" fill="#fff1f0"/>
+    <path d="M116 190h28a8 8 0 0 1 8 8v10a8 8 0 0 1-8 8h-10l-8 7v-7h-10a8 8 0 0 1-8-8v-10a8 8 0 0 1 8-8z" fill="none" stroke="#e95058" stroke-width="3"/>
+    <text class="font card-title" x="178" y="207">对话与助手</text>
+    <rect x="112" y="246" width="210" height="52" rx="16" fill="#f1f5f9"/>
+    <text class="font label" x="132" y="278">整理这份会议记录</text>
+    <rect x="352" y="246" width="270" height="104" rx="16" fill="#fff5f4" stroke="#f7c8c5"/>
+    <text class="font small" x="374" y="276">会议结论</text>
+    <circle cx="378" cy="304" r="4" fill="#e95058"/>
+    <text class="font label" x="392" y="310">三项决策与负责人</text>
+    <circle cx="378" cy="332" r="4" fill="#e95058"/>
+    <text class="font label" x="392" y="338">下一步行动与截止时间</text>
+    <path d="M322 272h24" stroke="#94a3b8" stroke-width="3" stroke-linecap="round"/>
+    <path d="M338 264l8 8-8 8" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <text class="font result" x="112" y="370">适合：问答、写作、总结、翻译与编程</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="728" y="140" width="600" height="260" rx="24" fill="#ffffff" stroke="#e2e8f0"/>
+    <circle cx="786" cy="198" r="30" fill="#eef6ff"/>
+    <path d="M774 181h21l9 9v27h-30z" fill="none" stroke="#3b82f6" stroke-width="3" stroke-linejoin="round"/>
+    <path d="M795 181v10h9M781 201h16M781 209h16" fill="none" stroke="#3b82f6" stroke-width="3" stroke-linecap="round"/>
+    <text class="font card-title" x="834" y="207">企业资料问答</text>
+    <rect x="770" y="246" width="104" height="82" rx="14" fill="#f8fafc" stroke="#cbd5e1"/>
+    <text class="font small" x="822" y="278" text-anchor="middle">合同</text>
+    <text class="font small" x="822" y="304" text-anchor="middle">制度</text>
+    <rect x="894" y="246" width="104" height="82" rx="14" fill="#f8fafc" stroke="#cbd5e1"/>
+    <text class="font small" x="946" y="278" text-anchor="middle">手册</text>
+    <text class="font small" x="946" y="304" text-anchor="middle">报告</text>
+    <path d="M1014 287h46" stroke="#94a3b8" stroke-width="3" stroke-linecap="round"/>
+    <path d="M1052 279l8 8-8 8" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="1078" y="246" width="204" height="82" rx="16" fill="#eff6ff" stroke="#bfdbfe"/>
+    <text class="font label" x="1180" y="278" text-anchor="middle">带资料依据的回答</text>
+    <text class="font small" x="1180" y="305" text-anchor="middle">便于复核与追溯</text>
+    <text class="font result" x="770" y="370">适合：产品、法务、培训、售后与内部知识</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="72" y="456" width="600" height="292" rx="24" fill="#ffffff" stroke="#e2e8f0"/>
+    <circle cx="130" cy="514" r="30" fill="#f2edff"/>
+    <path d="M114 528v-14h8v14zm14 0v-26h8v26zm14 0v-38h8v38z" fill="#7c5ce7"/>
+    <text class="font card-title" x="178" y="523">数据分析与内容生成</text>
+    <rect x="112" y="560" width="510" height="124" rx="16" fill="#fafafa" stroke="#e2e8f0"/>
+    <path d="M146 650V592M146 650h210" stroke="#cbd5e1" stroke-width="2"/>
+    <rect x="174" y="622" width="32" height="28" rx="5" fill="#f6a39d"/>
+    <rect x="224" y="602" width="32" height="48" rx="5" fill="#f18078"/>
+    <rect x="274" y="574" width="32" height="76" rx="5" fill="#e95058"/>
+    <path d="M382 594h196M382 622h156M382 650h180" stroke="#cbd5e1" stroke-width="8" stroke-linecap="round"/>
+    <text class="font result" x="112" y="718">输入数据或需求 → 生成图表、报告、文案与图片</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="728" y="456" width="600" height="292" rx="24" fill="#ffffff" stroke="#e2e8f0"/>
+    <circle cx="786" cy="514" r="30" fill="#ecfdf5"/>
+    <path d="M774 530v-20l12-8 12 8v20l-12 8z" fill="none" stroke="#10b981" stroke-width="3" stroke-linejoin="round"/>
+    <circle cx="786" cy="518" r="5" fill="#10b981"/>
+    <text class="font card-title" x="834" y="523">Agent 自动执行</text>
+    <g class="font">
+      <circle cx="814" cy="592" r="23" fill="#ecfdf5" stroke="#a7f3d0"/>
+      <text class="label" x="814" y="599" text-anchor="middle">1</text>
+      <text class="label" x="854" y="599">读取工作区与资料</text>
+      <circle cx="814" cy="642" r="23" fill="#ecfdf5" stroke="#a7f3d0"/>
+      <text class="label" x="814" y="649" text-anchor="middle">2</text>
+      <text class="label" x="854" y="649">调用工具并完成多个步骤</text>
+      <circle cx="814" cy="692" r="23" fill="#ecfdf5" stroke="#a7f3d0"/>
+      <text class="label" x="814" y="699" text-anchor="middle">3</text>
+      <text class="label" x="854" y="699">交付文件、表格、代码或报告</text>
+    </g>
+    <path d="M814 615v4M814 665v4" stroke="#10b981" stroke-width="3" stroke-linecap="round"/>
+  </g>
+
+  <rect x="544" y="378" width="312" height="82" rx="41" fill="url(#brand)" filter="url(#shadow)"/>
+  <circle cx="594" cy="419" r="24" fill="#ffffff" fill-opacity="0.2"/>
+  <circle cx="586" cy="413" r="4" fill="#ffffff"/>
+  <circle cx="602" cy="413" r="4" fill="#ffffff"/>
+  <path d="M584 426c7 7 14 7 21 0" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+  <text class="font" x="634" y="428" font-size="27" font-weight="700" fill="#ffffff">Cherry Studio</text>
+</svg>

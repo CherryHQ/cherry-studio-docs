@@ -6,6 +6,8 @@ icon: graduation-cap
 
 Cherry Studio 将模型、资料和工具组织为助手、Agent、知识库、技能和 MCP 等能力。本页说明它们分别解决什么问题，以及如何组合；具体配置步骤见对应教程。
 
+<figure><img src="../.gitbook/assets/cherry-concepts-map-v2.svg" alt="Cherry Studio 核心概念组合关系"><figcaption><p>模型、资料、工具、触发方式与最终工作结果之间的关系</p></figcaption></figure>
+
 ## 能力对照
 
 * **模型服务（Provider）** — 提供生成回答所需的模型，并决定可用模型、费用与数据政策。

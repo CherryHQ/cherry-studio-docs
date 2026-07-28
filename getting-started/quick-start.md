@@ -36,6 +36,8 @@ Cherry Studio 不是模型本身。使用云端模型时，模型费用、额度
 4. 点击 **获取模型列表**；
 5. 添加并启用至少一个**对话模型**。
 
+<figure><img src="../.gitbook/assets/cherry-model-service-stable.png" alt="Cherry Studio 模型服务设置"><figcaption><p>设置 → 模型服务：选择服务商并启用对话模型</p></figcaption></figure>
+
 {% hint style="info" %}
 嵌入模型用于知识库，重排模型用于优化检索，图像模型用于绘画。第一次对话需要选择“对话模型”。
 {% endhint %}
@@ -55,6 +57,8 @@ Cherry Studio 不是模型本身。使用云端模型时，模型费用、额度
 进入 **对话** 页面，在模型选择器中选择刚才启用的对话模型，然后发送一条测试消息：
 
 > 请用三句话介绍 Cherry Studio，并说明你当前可以帮助我完成什么。
+
+<figure><img src="../.gitbook/assets/cherry-business-analysis-stable.png" alt="Cherry Studio 对话生成图表示例"><figcaption><p>对话页面：模型可以把数据整理为表格、图表和分析建议</p></figcaption></figure>
 
 **成功标志**：页面开始显示模型回复，且不是空白消息或连接错误。
 
