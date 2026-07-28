@@ -4,45 +4,36 @@ icon: face-viewfinder
 
 # 文档预处理
 
-知识库文档预处理用于在向量化前对 PDF / 图片等非文本内容做 OCR 与结构解析，让知识库能正确检索这些资料。
+知识库的文档预处理会在分块和索引前，把 PDF、Word、PowerPoint、Excel 等文件转换为 Markdown。它是可选能力：文字层清晰、结构简单的资料可以直接使用内置读取，不需要配置云端服务。
 
-### 配置OCR服务商
+## 什么时候需要
 
-打开 `设置 → 文档处理`，依次配置：
+| 文件情况 | 建议 |
+|---|---|
+| Markdown、TXT、HTML、CSV，或文字层清晰的普通 PDF / Word | 文档处理保持 **未设置** |
+| 扫描 PDF、多栏论文、合同、复杂表格或公式 | 选择 MinerU、Doc2x、Mistral、PaddleOCR 等解析服务 |
+| 企业内网或资料不宜上传第三方 | 使用自部署 Open MinerU |
 
-* **系统 OCR**：macOS 可直接使用，无需配置；Windows 需手动选择 OCR 引擎
-* **文档处理服务商**：默认 `MinerU`，可填写 `API Key` + `API Host`（默认 `https://mineru.net`）；也可切换为 Tesseract / Paddle OCR / OpenVINO / 三方 Provider
+## 配置位置
 
-<figure><img src="../.gitbook/assets/CleanShot 2025-06-03 at 11.50.10@2x (1).jpg" alt=""><figcaption></figcaption></figure>
+1. 在 `设置 → 文档处理` 配置需要的服务、API 地址和密钥。
+2. 打开目标知识库的 `检索设置 → 文档处理`，选择处理器；不需要额外解析时选择 **未设置**。
+3. 导入文件后等待状态从 **处理中** 变为 **就绪**，再用召回测试检查关键内容。
 
-点击获取API KEY后会在浏览器打开申请地址，点击立即申请填写表单后获取API KEY，并将其填入API KEY中。
+API 服务只有在保存有效密钥后才会出现在知识库的处理器列表中；Open MinerU 可以不填密钥，但 API 地址必须指向可访问的自部署服务。
 
-<figure><img src="../.gitbook/assets/CleanShot 2025-06-03 at 11.51.55@2x.jpg" alt=""><figcaption></figcaption></figure>
+{% hint style="info" %}
+文档处理只负责生成可索引内容。后续的分块、嵌入和检索仍由知识库完成；**预处理失败** 与 **嵌入失败** 应分别排查。
+{% endhint %}
 
-### 在知识库中启用文档预处理
+## 更换处理器
 
-<figure><img src="../.gitbook/assets/CleanShot 2025-06-03 at 20.01.03@2x.jpg" alt=""><figcaption></figcaption></figure>
+知识库的选择按库保存，不会强制所有知识库使用同一种服务。已经生成处理产物的文件在普通重新索引时会复用已有产物；需要让旧文件改用新处理器时，移除并重新导入原文件最稳妥。
 
-在创建好的知识库设置中打开 **文档预处理** 开关，即可在添加文件时自动使用上一步配置的 OCR Provider。
-
-### 上传文档
-
-<figure><img src="../.gitbook/assets/CleanShot 2025-06-03 at 12.01.59@2x.jpg" alt=""><figcaption></figcaption></figure>
-
-> 可以通过右上角搜索对知识库结果检测
-
-### 在对话中使用
-
-<figure><img src="../.gitbook/assets/CleanShot 2025-06-03 at 14.11.00@2x.jpg" alt=""><figcaption></figcaption></figure>
-
-> 知识库使用Tips: 使用**能力较强**的模型时可以将知识库搜索模式修改为意图识别，意图识别可以更准确、广泛的描述您的问题。
-
-### 开启知识库意图识别
-
-<figure><img src="../.gitbook/assets/CleanShot 2025-06-03 at 14.12.47@2x.jpg" alt=""><figcaption></figcaption></figure>
+服务差异、API Key 要求和常见问题见 [文档处理](../pre-basic/settings/doc-process.md)。
 
 ***
 
 ### 💡 获取帮助与提交反馈
 
-如果您在配置或使用过程中遇到任何疑问、Bug 或有功能改进建议，请参考 [反馈与建议](../question-contact/suggestions.md) 中提供的官方渠道。
+如果您在配置或使用过程中遇到疑问，请参考 [反馈与建议](../question-contact/suggestions.md)。
