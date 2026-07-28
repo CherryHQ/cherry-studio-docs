@@ -156,11 +156,31 @@ V2 将输入、消息和代码块的显示选项集中在 `设置 → 外观`。
 
 #### <mark style="color:blue;">**`消息样式`**</mark>：
 
-可将对话界面切换为气泡样式或列表样式。
+可将对话界面切换为**气泡**或**简洁**样式。气泡样式将用户消息放在右侧气泡中；简洁样式按“用户 / 助手”纵向排列。
+
+{% tabs %}
+{% tab title="气泡" %}
+<figure><img src="../../.gitbook/assets/cherry-message-style-bubble.png" alt="Cherry Studio 气泡消息样式"><figcaption><p>气泡样式：用户消息在右侧气泡中显示</p></figcaption></figure>
+{% endtab %}
+
+{% tab title="简洁" %}
+<figure><img src="../../.gitbook/assets/cherry-message-style-plain.png" alt="Cherry Studio 简洁消息样式"><figcaption><p>简洁样式：用户与助手消息按角色纵向排列</p></figcaption></figure>
+{% endtab %}
+{% endtabs %}
 
 #### <mark style="color:blue;">**`代码风格`**</mark>：
 
-可切换代码片段的显示风格。
+可切换代码片段的语法高亮主题。以下使用同一段代码对比 Auto 与 Dracula 主题。
+
+{% tabs %}
+{% tab title="Auto" %}
+<figure><img src="../../.gitbook/assets/cherry-code-style-auto.png" alt="Cherry Studio Auto 代码风格"><figcaption><p>Auto 代码风格</p></figcaption></figure>
+{% endtab %}
+
+{% tab title="Dracula" %}
+<figure><img src="../../.gitbook/assets/cherry-code-style-dracula.png" alt="Cherry Studio Dracula 代码风格"><figcaption><p>Dracula 代码风格</p></figcaption></figure>
+{% endtab %}
+{% endtabs %}
 
 #### <mark style="color:blue;">**`消息字体大小`**</mark>：
 
