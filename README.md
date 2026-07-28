@@ -28,13 +28,13 @@ Cherry Studio 是一个**开源的桌面 AI 工作台**。它把 CherryIN、Deep
 
 ## 模型、费用与数据分别由谁负责？
 
-```text
-云端模型服务商 / 本地模型
-            ↓
-      Cherry Studio
-            ↓
+<p align="center">
+云端模型服务商 / 本地模型<br>
+↓<br>
+Cherry Studio<br>
+↓<br>
 对话 · 知识库 · Agent · 翻译 · 绘画
-```
+</p>
 
 * **模型来源**：可以使用 CherryIN 中当前可用的模型、自己的服务商 API Key，或本机运行的 Ollama / LM Studio。
 * **软件费用**：Cherry Studio 客户端开源；模型是否收费、如何计费以及可用额度由模型服务商决定。
