@@ -6,9 +6,7 @@ icon: cherries
 
 <figure><img src=".gitbook/assets/docs-readme-banner1.png" alt="Cherry Studio"><figcaption></figcaption></figure>
 
-## 关注我们的社交账号
-
-<table data-view="cards"><thead><tr><th></th><th data-hidden data-card-cover data-type="files"></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><a href="https://www.xiaohongshu.com/user/profile/662b6853000000000b031d9a">小红书</a></td><td><a href=".gitbook/assets/1.png">1.png</a></td><td><a href="https://www.xiaohongshu.com/user/profile/662b6853000000000b031d9a">https://www.xiaohongshu.com/user/profile/662b6853000000000b031d9a</a></td></tr><tr><td><a href="https://space.bilibili.com/3546657515898892">哔哩哔哩</a></td><td><a href=".gitbook/assets/3.png">3.png</a></td><td><a href="https://space.bilibili.com/3546657515898892">https://space.bilibili.com/3546657515898892</a></td></tr><tr><td><a href="https://weibo.com/u/7975656228">微博</a></td><td><a href=".gitbook/assets/2.png">2.png</a></td><td><a href="https://weibo.com/u/7975656228">https://weibo.com/u/7975656228</a></td></tr><tr><td><a href="https://www.douyin.com/user/MS4wLjABAAAAmw9A54m5J0hHVMQY5eGrVJ-EHDoOS0hgJ6M1F9MN2Tn2V163A0xrC4_KVzfmQSxC">抖音</a></td><td><a href=".gitbook/assets/4.png">4.png</a></td><td><a href="https://www.douyin.com/user/MS4wLjABAAAAmw9A54m5J0hHVMQY5eGrVJ-EHDoOS0hgJ6M1F9MN2Tn2V163A0xrC4_KVzfmQSxC">https://www.douyin.com/user/MS4wLjABAAAAmw9A54m5J0hHVMQY5eGrVJ-EHDoOS0hgJ6M1F9MN2Tn2V163A0xrC4_KVzfmQSxC</a></td></tr><tr><td><a href="https://x.com/CherryStudioHQ">推特（X）</a></td><td><a href=".gitbook/assets/5.png">5.png</a></td><td><a href="https://x.com/CherryStudioHQ">https://x.com/CherryStudioHQ</a></td></tr></tbody></table>
+关注我们的社交账号：[推特（X）](https://x.com/CherryStudioHQ) · [小红书](https://www.xiaohongshu.com/user/profile/662b6853000000000b031d9a) · [微博](https://weibo.com/u/7975656228) · [哔哩哔哩](https://space.bilibili.com/3546657515898892) · [抖音](https://www.douyin.com/user/MS4wLjABAAAAmw9A54m5J0hHVMQY5eGrVJ-EHDoOS0hgJ6M1F9MN2Tn2V163A0xrC4_KVzfmQSxC)
 
 加入我们的社群：[QQ群](https://qm.qq.com/q/lo0D4qVZKi) · [Telegram](https://t.me/CherryStudioAI) · [Discord](https://discord.gg/wez8HtpxqQ) · [微信群](https://www.cherry-ai.com/#Community)
 
@@ -73,3 +71,11 @@ Cherry Studio<br>
 
 * 遇到错误：先查看[常见问题](question-contact/questions.md)
 * 需要提交 Bug 或建议：查看[反馈与建议](question-contact/suggestions.md)
+
+***
+
+## 关注我们的社交账号
+
+<table data-view="cards"><thead><tr><th></th><th data-hidden data-card-cover data-type="files"></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><a href="https://www.xiaohongshu.com/user/profile/662b6853000000000b031d9a">小红书</a></td><td><a href=".gitbook/assets/1.png">1.png</a></td><td><a href="https://www.xiaohongshu.com/user/profile/662b6853000000000b031d9a">https://www.xiaohongshu.com/user/profile/662b6853000000000b031d9a</a></td></tr><tr><td><a href="https://space.bilibili.com/3546657515898892">哔哩哔哩</a></td><td><a href=".gitbook/assets/3.png">3.png</a></td><td><a href="https://space.bilibili.com/3546657515898892">https://space.bilibili.com/3546657515898892</a></td></tr><tr><td><a href="https://weibo.com/u/7975656228">微博</a></td><td><a href=".gitbook/assets/2.png">2.png</a></td><td><a href="https://weibo.com/u/7975656228">https://weibo.com/u/7975656228</a></td></tr><tr><td><a href="https://www.douyin.com/user/MS4wLjABAAAAmw9A54m5J0hHVMQY5eGrVJ-EHDoOS0hgJ6M1F9MN2Tn2V163A0xrC4_KVzfmQSxC">抖音</a></td><td><a href=".gitbook/assets/4.png">4.png</a></td><td><a href="https://www.douyin.com/user/MS4wLjABAAAAmw9A54m5J0hHVMQY5eGrVJ-EHDoOS0hgJ6M1F9MN2Tn2V163A0xrC4_KVzfmQSxC">https://www.douyin.com/user/MS4wLjABAAAAmw9A54m5J0hHVMQY5eGrVJ-EHDoOS0hgJ6M1F9MN2Tn2V163A0xrC4_KVzfmQSxC</a></td></tr><tr><td><a href="https://x.com/CherryStudioHQ">推特（X）</a></td><td><a href=".gitbook/assets/5.png">5.png</a></td><td><a href="https://x.com/CherryStudioHQ">https://x.com/CherryStudioHQ</a></td></tr></tbody></table>
+
+加入我们的社群：[QQ群](https://qm.qq.com/q/lo0D4qVZKi) · [Telegram](https://t.me/CherryStudioAI) · [Discord](https://discord.gg/wez8HtpxqQ) · [微信群](https://www.cherry-ai.com/#Community)
