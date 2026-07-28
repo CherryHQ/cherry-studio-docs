@@ -6,7 +6,15 @@ icon: books
 
 知识库就像给 AI 配一本**专属参考书**：你把自己的文档、笔记、网址塞进去，之后聊天时让 AI 翻这本书来回答你的问题。
 
-<figure><img src="../../.gitbook/assets/cherry-knowledge-base-v2.png" alt="Cherry Studio V2 知识库空页面"><figcaption><p>没有知识库时，点击“创建知识库”开始。</p></figcaption></figure>
+{% tabs %}
+{% tab title="未创建时" %}
+<figure><img src="../../.gitbook/assets/cherry-knowledge-base-v2.png" alt="Cherry Studio V2 知识库空页面"><figcaption><p>未创建知识库时，点击“创建知识库”开始。</p></figcaption></figure>
+{% endtab %}
+
+{% tab title="创建后" %}
+<figure><img src="../../.gitbook/assets/cherry-knowledge-base-populated-v2.png" alt="Cherry Studio V2 知识库列表"><figcaption><p>创建知识库并添加数据源后的列表页面。</p></figcaption></figure>
+{% endtab %}
+{% endtabs %}
 
 ## 用知识库能干什么？
 

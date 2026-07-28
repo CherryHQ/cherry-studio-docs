@@ -8,7 +8,7 @@ Cherry Studio V2 是一款桌面级 AI 客户端，核心入口分为**顶部应
 
 第一次使用时，请先完成[快速开始](../../getting-started/quick-start.md)。下面是功能索引，不需要在开始对话前逐项配置。
 
-<figure><img src="../../.gitbook/assets/cherry-launchpad.png" alt="Cherry Studio V2 启动台"><figcaption><p>启动台集中展示可打开的应用；常用应用可以固定到顶部应用栏。</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/cherry-launchpad.png" alt="Cherry Studio V2 顶部应用栏"><figcaption><p>常用应用固定到顶部应用栏后，可在不同功能间快速切换。</p></figcaption></figure>
 
 | 功能 | 简述 | V2 入口 |
 |---|---|---|
