@@ -36,14 +36,20 @@ Cherry Studio V2 的模型请求由客户端主进程执行，开发者工具的
 
 1. 打开 **设置 → 系统**，启用**开发者模式**。
 2. **完全退出并重新启动 Cherry Studio**，让开发者模式生效。
+
+<figure><img src="../.gitbook/assets/cherry-developer-mode-v2.png" alt="Cherry Studio V2 系统设置中的启用开发者模式开关"><figcaption><p>在设置 → 系统中启用开发者模式，然后完全退出并重新启动应用</p></figcaption></figure>
+
 3. 回到发生问题的对话或工作任务，重新执行刚才失败的操作。
-4. 点击右侧的**调用链**入口，选择标红的失败节点；模型请求通常包含一个 `http.request` 子节点。
+4. 点击对话顶部右侧的**调用链**入口，展开请求节点。模型请求通常包含一个 `http.request` 子节点；请求失败时，对应节点会标红。
+
+<figure><img src="../.gitbook/assets/cherry-call-chain-list-v2.png" alt="Cherry Studio V2 对话页面中的调用链节点列表"><figcaption><p>调用链会按层级显示 ai.turn、ai.streamText 和 http.request 等节点</p></figcaption></figure>
+
 5. 在节点详情中查看**响应状态、输入、输出、请求头、响应头**或**原始数据**。服务商返回的错误正文通常位于**输出**中。
 
-<figure><img src="../.gitbook/assets/cherry-call-chain-error-flow.svg" alt="Cherry Studio 通过开发者模式和调用链排查请求错误"><figcaption><p>启用开发者模式并重启 → 重现错误 → 调用链 → 失败节点 → 输出</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/cherry-call-chain-request-details-v2.png" alt="Cherry Studio V2 调用链 http.request 节点的输出详情"><figcaption><p>选择 http.request 后，可查看请求方法、URL、响应状态及输入、输出、请求头、响应头和原始数据</p></figcaption></figure>
 
 {% hint style="info" %}
-调用链只记录启用开发者模式并重启后产生的请求。不同服务商能够提供的字段可能不同；请求和响应正文过长时会被截断，因此这里展示的是可用于排查的请求详情，不保证等同于完整的原始 HTTP 抓包。
+调用链只记录启用开发者模式并重启后产生的请求。旧消息不会补录调用链；发送请求后如果面板仍显示没有 Trace 信息，可以关闭调用链面板后重新打开。不同服务商能够提供的字段可能不同；请求和响应正文过长时会被截断，因此这里展示的是可用于排查的请求详情，不保证等同于完整的原始 HTTP 抓包。
 {% endhint %}
 
 {% hint style="warning" %}
