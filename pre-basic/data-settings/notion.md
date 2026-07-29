@@ -69,7 +69,7 @@ https://www.notion.so/\<long\_hash\_1>?v=\<long\_hash\_2>
 
 恭喜你，Notion 的配置已经完成了 ✅ 接下来就可以将 Cherry Studio 内容导出到你的 Notion 数据库了
 
-<figure><img src="../../.gitbook/assets/chat-export-menu-v2.png" alt="Cherry Studio V2 的话题导出菜单"><figcaption><p>右键话题并选择导出到 Notion</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/notion-export-menu-v2.png" alt="Cherry Studio V2 的话题导出菜单"><figcaption><p>右键话题并选择导出到 Notion</p></figcaption></figure>
 
 <figure><img src="../../.gitbook/assets/查看结果.png" alt=""><figcaption><p>查看导出结果</p></figcaption></figure>
 
