@@ -174,4 +174,10 @@
 ## 其他内容 <a href="#other" id="other"></a>
 
 * [模型数据](other/models-info.md)
-* [模型榜单](other/model_rank/lmarena.md)
+* [模型榜单](other/model_rank/README.md)
+  * [Agent 智能体榜单](other/model_rank/agent.md)
+  * [文本榜单](other/model_rank/text.md)
+  * [搜索榜单](other/model_rank/search.md)
+  * [视觉榜单](other/model_rank/vision.md)
+  * [代码 / Web 开发榜单](other/model_rank/code-webdev.md)
+  * [文生图榜单](other/model_rank/text-to-image.md)
