@@ -103,7 +103,7 @@
 * [定时任务](advanced-basic/scheduled-tasks.md)
 * [记忆能力](advanced-basic/memory.md)
 * [OpenClaw](advanced-basic/openclaw.md)
-* [快捷短语](pre-basic/settings/quick-phrase.md)
+* [提示词管理](pre-basic/settings/quick-phrase.md)
 * [Agent 案例](advanced-basic/agent-an-li/README.md)
   * [用 Agent 完成黄金行情复盘](advanced-basic/agent-an-li/gold-price-case.md)
 

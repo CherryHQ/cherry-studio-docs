@@ -34,7 +34,7 @@ Cherry Studio 支持将话题导入 Notion 的数据库。
 
 <figure><img src="../../.gitbook/assets/复制密钥.png" alt=""><figcaption><p>点击复制密钥</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/填写密钥.png" alt=""><figcaption><p>将密钥填写到数据设置里</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/data-notion-secret-v2.png" alt="Cherry Studio V2 的 Notion 密钥设置"><figcaption><p>将密钥填写到数据设置里</p></figcaption></figure>
 
 ## 第四步
 
@@ -54,7 +54,7 @@ https://www.notion.so/\<long\_hash\_1>?v=\<long\_hash\_2>
 
 那么 Notion 数据库 ID 就是 `<long_hash_1>` 这部分
 
-<figure><img src="../../.gitbook/assets/填写数据库ID.png" alt=""><figcaption><p>填写数据库 ID 并点击检查</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/data-notion-database-v2.png" alt="Cherry Studio V2 的 Notion 数据库 ID 设置"><figcaption><p>填写数据库 ID 并点击检查</p></figcaption></figure>
 
 ## 第六步
 
@@ -63,13 +63,13 @@ https://www.notion.so/\<long\_hash\_1>?v=\<long\_hash\_2>
 若你的网页是英文的，则填写 `Name`\
 若你的网页端是中文的，则填写 `名称`
 
-<figure><img src="../../.gitbook/assets/填写页面标题字段名.png" alt=""><figcaption><p>填写页面标题字段名</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/data-notion-title-v2.png" alt="Cherry Studio V2 的 Notion 页面标题字段名设置"><figcaption><p>填写页面标题字段名</p></figcaption></figure>
 
 ## 第七步
 
 恭喜你，Notion 的配置已经完成了 ✅ 接下来就可以将 Cherry Studio 内容导出到你的 Notion 数据库了
 
-<figure><img src="../../.gitbook/assets/导出.png" alt=""><figcaption><p>导出到 Notion</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/chat-export-menu-v2.png" alt="Cherry Studio V2 的话题导出菜单"><figcaption><p>右键话题并选择导出到 Notion</p></figcaption></figure>
 
 <figure><img src="../../.gitbook/assets/查看结果.png" alt=""><figcaption><p>查看导出结果</p></figcaption></figure>
 

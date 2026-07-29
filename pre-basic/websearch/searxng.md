@@ -263,11 +263,11 @@ SearXNG 本地或在服务器部署成功后，接下来是 CherryStudio 的相�
 
 来到网络搜索设置页面，选择 Searxng ：
 
-<figure><img src="../../.gitbook/assets/searxng_config_img_12.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/network-search-searxng-v2.png" alt="Cherry Studio V2 浅色模式的 SearXNG 配置页面"><figcaption><p>选择 SearXNG 并填写 API 地址</p></figcaption></figure>
 
 直接输入本地部署的链接发现验证失败，此时不用担心：
 
-<figure><img src="../../.gitbook/assets/searxng_config_img_13.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/searxng-verify-failed-v2.png" alt="Cherry Studio V2 的 SearXNG 验证失败提示"><figcaption><p>未启用 JSON 返回格式时验证失败</p></figcaption></figure>
 
 因为直接部署后默认并没有配置 json 返回类型，所以无法获取数据，需要修改配置文件。
 
@@ -299,7 +299,7 @@ SearXNG 本地或在服务器部署成功后，接下来是 CherryStudio 的相�
 
 重新回到 Cherry Studio 进行验证，验证成功：
 
-<figure><img src="../../.gitbook/assets/searxng_config_img_21.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/searxng-verify-success-v2.png" alt="Cherry Studio V2 的 SearXNG 验证成功提示"><figcaption><p>配置完成后验证成功</p></figcaption></figure>
 
 本机部署可填写 `http://localhost:<端口号>`。
 

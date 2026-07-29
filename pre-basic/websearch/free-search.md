@@ -15,12 +15,12 @@ Cherry Studio 内置了强大的网络搜索功能，可以让您在对话中实
    *   在主界面中，找到并点击 **设置 (Settings)** 图标或菜单选项；位于界面的左下角。
 
 
-       <figure><img src="../../.gitbook/assets/Pasted image 20250416182458.png" alt=""><figcaption></figcaption></figure>
+       <figure><img src="../../.gitbook/assets/network-search-overview-v2.png" alt="Cherry Studio V2 的网络搜索设置页面"><figcaption><p>从设置进入网络搜索</p></figcaption></figure>
 2. **访问网络搜索配置**
    *   在设置菜单中，找到并选择 **网络搜索** 设置。
 
 
-       <figure><img src="../../.gitbook/assets/Pasted image 20250416182559.png" alt=""><figcaption></figcaption></figure>
+       <figure><img src="../../.gitbook/assets/network-search-global-v2.png" alt="Cherry Studio V2 的网络搜索全局配置"><figcaption><p>网络搜索的全局配置</p></figcaption></figure>
 3. **选择您的搜索引擎**
    * 在“网络搜索”设置页面中，找到 **搜索服务商** 的选项。
    * 点击该选项，从下拉列表或选项中选择您偏好的搜索引擎：
@@ -30,26 +30,26 @@ Cherry Studio 内置了强大的网络搜索功能，可以让您在对话中实
    *   **⚠️ 重要提示**：如果您选择 **谷歌 (Google)** 作为搜索引擎，请务必确保您的网络环境能够 **顺畅访问 Google 服务**。如果遇到连接问题，建议尝试切换到其他服务商或检查您的网络代理设置。
 
 
-       <figure><img src="../../.gitbook/assets/Pasted image 20250416182637.png" alt=""><figcaption></figcaption></figure>
+       <figure><img src="../../.gitbook/assets/network-search-searxng-v2.png" alt="Cherry Studio V2 的搜索服务商配置"><figcaption><p>选择并配置搜索服务商</p></figcaption></figure>
 4. **确认搜索增强模式**
    * 查找名为 **搜索增强模式** 的选项。
    *   确保此选项的开关（Toggle）或复选框（Checkbox）处于 **启用** 状态。此模式能优化搜索查询，提供更相关、更深入的结果。
 
 
-       <figure><img src="../../.gitbook/assets/Pasted image 20250416182728.png" alt=""><figcaption></figcaption></figure>
+       <figure><img src="../../.gitbook/assets/network-search-global-v2.png" alt="Cherry Studio V2 的搜索结果与压缩设置"><figcaption><p>确认全局搜索设置</p></figcaption></figure>
 5. **在对话界面激活网络搜索**
    * 完成上述设置后，返回到 Cherry Studio 的主 **对话界面**。
    * 在消息输入框下方的工具栏中，找到 **网络搜索** 图标 🌐。
    *   **点击该图标** 以启用网络搜索功能。启用后，该图标会 **高亮显示**，表明当前发送的消息将触发网络搜索。
 
 
-       <figure><img src="../../.gitbook/assets/Pasted image 20250416182812.png" alt=""><figcaption></figcaption></figure>
+       <figure><img src="../../.gitbook/assets/chat-websearch-enabled-v2.png" alt="Cherry Studio V2 对话输入框中已启用网络搜索"><figcaption><p>在输入框中启用网络搜索</p></figcaption></figure>
 6. **开始搜索！**
    * 确保网络搜索图标处于 **启用状态** 后，在输入框中输入您想要查询的 **关键词、问题或指令**。
    *   像平常一样发送消息。Cherry Studio 将会自动调用您选择的搜索引擎进行搜索，并将获取到的网络信息整合到它的回复中。
 
 
-       <figure><img src="../../.gitbook/assets/中美关税新动态.png" alt=""><figcaption></figcaption></figure>
+       <figure><img src="../../.gitbook/assets/chat-websearch-result-v2.png" alt="Cherry Studio V2 使用网络搜索后的回答示例"><figcaption><p>使用网络搜索获取并整理最新信息</p></figcaption></figure>
 
 ***
 
@@ -60,7 +60,7 @@ Cherry Studio 内置了强大的网络搜索功能，可以让您在对话中实
   *   如果设置中提供选项，您可以尝试 **增加返回结果的数量**。这样做可以获得更丰富、更全面的网络信息，有助于覆盖问题的更多方面。
 
 
-      <figure><img src="../../.gitbook/assets/Pasted image 20250416184145.png" alt=""><figcaption></figcaption></figure>
+      <figure><img src="../../.gitbook/assets/network-search-global-v2.png" alt="Cherry Studio V2 的搜索结果数量设置"><figcaption><p>按需要调整搜索结果数量</p></figcaption></figure>
 * **性能与限制**:
   * **请注意**：请求更多的搜索结果会 **增加处理时间**，从而 **降低搜索和回复的速度**。
   * 同时，获取过多的网络内容也可能 **超出模型能处理的上下文长度限制**，这有时会导致 **信息丢失、回复不完整或出现报错**。

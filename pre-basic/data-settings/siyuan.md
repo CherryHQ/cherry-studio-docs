@@ -26,7 +26,7 @@ icon: map
 
 复制笔记本ID填写到 Cherry Studio 设置里
 
-<figure><img src="../../.gitbook/assets/siyuan-image-4.png" alt=""><figcaption><p>将笔记本ID填写到数据设置里</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/data-siyuan-notebook-v2.png" alt="Cherry Studio V2 的思源笔记本 ID 设置"><figcaption><p>将笔记本 ID 填写到数据设置里</p></figcaption></figure>
 
 ## 第四步
 
@@ -37,7 +37,7 @@ icon: map
 * **自部署**\
   为你的域名 `http://note.domain.com`
 
-<figure><img src="../../.gitbook/assets/siyuan-image-5.png" alt=""><figcaption><p>填入你的思源笔记地址</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/data-siyuan-url-v2.png" alt="Cherry Studio V2 的思源 API 地址设置"><figcaption><p>填入你的思源笔记地址</p></figcaption></figure>
 
 ## 第五步
 
@@ -47,13 +47,13 @@ icon: map
 
 填入 Cherry Studio 设置里并检查
 
-<figure><img src="../../.gitbook/assets/siyuan-image-7.png" alt=""><figcaption><p>填写数据库 ID 并点击检查</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/data-siyuan-token-v2.png" alt="Cherry Studio V2 的思源 API 令牌设置"><figcaption><p>填写 API 令牌并点击检查</p></figcaption></figure>
 
 ## 第六步
 
 恭喜你，思源笔记的配置已经完成了 ✅ 接下来就可以将 Cherry Studio 内容导出到你的思源笔记中了
 
-<figure><img src="../../.gitbook/assets/siyuan-image-8.png" alt=""><figcaption><p>导出到思源笔记</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/chat-export-menu-v2.png" alt="Cherry Studio V2 的话题导出菜单"><figcaption><p>右键话题并选择导出到思源笔记</p></figcaption></figure>
 
 <figure><img src="../../.gitbook/assets/siyuan-image-9.png" alt=""><figcaption><p>查看导出结果</p></figcaption></figure>
 

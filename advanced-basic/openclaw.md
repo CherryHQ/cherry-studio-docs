@@ -4,17 +4,17 @@ icon: spider
 
 # OpenClaw
 
-OpenClaw 是独立的开源 Agent 工具。Cherry Studio V2 已把原来的独立 OpenClaw 页面并入 **Code Switch**，不再从启动台提供单独入口。
+OpenClaw 是独立的开源 Agent 工具。它位于 Cherry Studio 的 **Code Switch** 页面中，不是“工作”页面里的内置 Agent。
 
 ## V2 入口
 
-1. 打开顶部 `+` 进入 **启动台**；
-2. 点击 **Code Switch**；
-3. 在工具列表中选择 **OpenClaw**。
+1. 点击顶部标签栏的 `+` 打开 **启动台**；
+2. 在启动台中打开 **Code Switch**；
+3. 在左侧工具列表中选择 **OpenClaw**。
 
-<figure><img src="../.gitbook/assets/cherry-openclaw.png" alt="浅色模式下 Code Switch 中的 OpenClaw 页面"><figcaption><p>启动台 → Code Switch → OpenClaw</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/openclaw-v2.png" alt="Cherry Studio V2 浅色模式下 Code Switch 中的 OpenClaw 页面"><figcaption><p>启动台 → Code Switch → OpenClaw</p></figcaption></figure>
 
-在同一页面可以完成安装或升级、选择 Provider 与模型、启动或停止 Gateway，以及打开 Dashboard。
+未安装时，页面右上角会显示 **安装**。安装完成后，可在同一页面继续配置模型服务商，并按当前页面提供的操作管理 OpenClaw。
 
 完整步骤请阅读 [Code Switch 使用教程](code-tools.md)。
 
@@ -26,7 +26,7 @@ OpenClaw 是独立的开源 Agent 工具。Cherry Studio V2 已把原来的独�
 
 | 维度 | Agent | OpenClaw |
 |---|---|---|
-| 入口 | 顶部 `工作` | 启动台 → Code Switch |
+| 入口 | 左侧工具栏 `工作` | 启动台 → Code Switch |
 | 运行形态 | Cherry Studio 内置工作区 | 独立 OpenClaw Gateway |
 | 管理方式 | Agent 配置、工具和权限 | Code Switch 中安装、启停与打开 Dashboard |
 | 适合场景 | 客户端内完成任务 | 使用 OpenClaw 自身工作流和生态 |

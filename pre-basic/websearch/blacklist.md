@@ -22,7 +22,7 @@ https://iorate.github.io/ublacklist/subscriptions
 | [uBlacklist subscription compilation](https://github.com/eallion/uBlacklist-subscription-compilation) | https://git.io/ublacklist                                                                            | 中文   |
 | [uBlockOrigin-HUGE-AI-Blocklist](https://github.com/laylavish/uBlockOrigin-HUGE-AI-Blocklist)         | https://raw.githubusercontent.com/laylavish/uBlockOrigin-HUGE-AI-Blocklist/main/list\_uBlacklist.txt | AI生成 |
 
-<figure><img src="../../.gitbook/assets/blacklist1.jpg" alt=""><figcaption><p>订阅源配置</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/network-search-blacklist-v2.png" alt="Cherry Studio V2 浅色模式的网络搜索黑名单配置"><figcaption><p>手动规则与订阅源配置</p></figcaption></figure>
 
 ***
 
