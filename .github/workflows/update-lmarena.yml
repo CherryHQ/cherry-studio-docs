@@ -26,7 +26,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install --upgrade beautifulsoup4 pandas pytz lxml requests tabulate
 
-      - name: Run script to fetch and update leaderboard
+      - name: Run script to fetch and update leaderboards
         env:
           SCRAPER_API_KEY: ${{ secrets.SCRAPER_API_KEY }}
         run: python .github/scripts/fetch_leaderboard.py
@@ -36,9 +36,11 @@ jobs:
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-          git add other/model_rank/lmarena.md
+          git add other/model_rank/
+          # 删除已被脚本移除的旧文件（如 lmarena.md）
+          git add -A other/model_rank/
           if [ -n "$(git status --porcelain)" ]; then
-            git commit -m "Update LLM leaderboard"
+            git commit -m "Update Arena AI leaderboards"
             git push
             echo "changes=true" >> $GITHUB_OUTPUT
           else
