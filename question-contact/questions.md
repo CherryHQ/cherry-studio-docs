@@ -26,27 +26,28 @@ icon: seal-question
 3. **图片或附件过大**：压缩文件，或减少单次上传数量。
 4. **账户前置条件未完成**：部分服务商可能要求完成绑卡、实名或开通模型。
 
-请先查看对话中的原始错误；信息不完整时，再按下方方法打开控制台。
+请先查看对话中的原始错误；信息不完整时，再按下方方法查看调用链。
 
 ***
 
-## 查看请求的完整错误信息
+## 通过调用链查看请求与错误详情
 
-1. 先点击 Cherry Studio 客户端窗口，再按 <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>I</kbd>；macOS 使用 <kbd>Command</kbd> + <kbd>Option</kbd> + <kbd>I</kbd>。
-2. 打开 **Network**，然后重新执行刚才失败的操作。
-3. 点击带红色错误标记的请求。
-4. 打开 **Response**，查看服务商返回的完整错误内容。
+Cherry Studio V2 的模型请求由客户端主进程执行，开发者工具的 **Network** 面板不再是可靠的排查入口。请改用内置的**调用链**：
 
-<figure><img src="../.gitbook/assets/cherry-devtools-error-flow.svg" alt="Cherry Studio 控制台错误排查流程"><figcaption><p>Network → 失败请求 → Response</p></figcaption></figure>
+1. 打开 **设置 → 系统**，启用**开发者模式**。
+2. **完全退出并重新启动 Cherry Studio**，让开发者模式生效。
+3. 回到发生问题的对话或工作任务，重新执行刚才失败的操作。
+4. 点击右侧的**调用链**入口，选择标红的失败节点；模型请求通常包含一个 `http.request` 子节点。
+5. 在节点详情中查看**响应状态、输入、输出、请求头、响应头**或**原始数据**。服务商返回的错误正文通常位于**输出**中。
 
-| 操作场景 | 常见请求名称 |
-|---|---|
-| 对话、翻译、模型检测 | `completions` |
-| 绘画 | `generations` |
-| 知识库创建或索引 | `embeddings` |
+<figure><img src="../.gitbook/assets/cherry-call-chain-error-flow.svg" alt="Cherry Studio 通过开发者模式和调用链排查请求错误"><figcaption><p>启用开发者模式并重启 → 重现错误 → 调用链 → 失败节点 → 输出</p></figcaption></figure>
 
 {% hint style="info" %}
-必须先打开控制台，再重新发起请求，Network 才能记录本次错误。求助时请提供错误码和 Response 内容，但务必遮住 API Key、账号、文件路径等敏感信息。
+调用链只记录启用开发者模式并重启后产生的请求。不同服务商能够提供的字段可能不同；请求和响应正文过长时会被截断，因此这里展示的是可用于排查的请求详情，不保证等同于完整的原始 HTTP 抓包。
+{% endhint %}
+
+{% hint style="warning" %}
+Cherry Studio 会自动遮盖常见鉴权请求头，但输入、输出、文件路径或服务商返回内容仍可能包含敏感信息。提交反馈前请再次检查并遮盖 API Key、账号、私人对话和本地路径。
 {% endhint %}
 
 ***
