@@ -1,0 +1,81 @@
+name: Format CN-EN Spacing
+
+on:
+  push:
+    branches:
+      - main
+      - master
+    paths:
+      - '**/*.md'
+      - '.github/scripts/format_cn_en_spacing.py'
+      - '.github/workflows/format-spacing.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: format-cn-en-spacing
+  cancel-in-progress: false
+
+jobs:
+  format:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Collect Markdown files to format
+        id: changed
+        run: |
+          set -euo pipefail
+          IGNORE_RE='(^|/)(i18n|\.gitbook|\.github|scripts)(/|$)'
+          FILTERED=""
+
+          if [ "${{ github.event_name }}" = "push" ]; then
+            BEFORE="${{ github.event.before }}"
+            if [ -z "$BEFORE" ] || [ "$BEFORE" = "0000000000000000000000000000000000000000" ]; then
+              BEFORE=$(git rev-list --max-parents=0 HEAD | tail -n1)
+            fi
+            FILES=$(git diff --name-only --diff-filter=AM "$BEFORE" HEAD -- '*.md' || true)
+            for f in $FILES; do
+              if [[ "$f" =~ $IGNORE_RE ]]; then continue; fi
+              if [ -f "$f" ]; then FILTERED="$FILTERED $f"; fi
+            done
+          else
+            # workflow_dispatch：处理仓库内所有 .md（忽略指定目录）
+            while IFS= read -r f; do
+              if [[ "$f" =~ $IGNORE_RE ]]; then continue; fi
+              FILTERED="$FILTERED $f"
+            done < <(find . -name '*.md' -type f | sed 's|^\./||')
+          fi
+
+          FILTERED="$(echo "$FILTERED" | xargs)"
+          echo "files=$FILTERED" >> "$GITHUB_OUTPUT"
+          echo "::notice::Files to format: $FILTERED"
+
+      - name: Run spacing formatter
+        if: steps.changed.outputs.files != ''
+        run: |
+          python .github/scripts/format_cn_en_spacing.py ${{ steps.changed.outputs.files }}
+
+      - name: Commit and push if there are changes
+        if: steps.changed.outputs.files != ''
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git add -A
+          if [ -n "$(git status --porcelain)" ]; then
+            git commit -m "docs: 自动优化中英文混排空格"
+            git push
+            echo "::notice::Pushed spacing fixes."
+          else
+            echo "::notice::No spacing changes to commit."
+          fi
