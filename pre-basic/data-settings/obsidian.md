@@ -30,7 +30,7 @@ Cherry Studio 可以把完整对话或单条消息导出为 Obsidian 笔记。V2
 3. 在弹窗中确认保管库、保存路径、笔记属性和处理方式。
 4. 点击确定。
 
-<figure><img src="../../.gitbook/assets/chat-export-menu-v2.png" alt="从 Cherry Studio V2 的话题菜单导出完整对话到 Obsidian"><figcaption><p>导出完整对话</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/obsidian-export-menu-v2.png" alt="从 Cherry Studio V2 的话题菜单导出完整对话到 Obsidian"><figcaption><p>导出完整对话</p></figcaption></figure>
 
 ### 导出选项
 
@@ -57,7 +57,7 @@ Cherry Studio 可以把完整对话或单条消息导出为 Obsidian 笔记。V2
 
 点击消息下方的菜单，选择 **导出 → 导出到 Obsidian**，然后按同样方式确认保管库、路径和处理方式。
 
-<figure><img src="../../.gitbook/assets/chat-export-menu-v2.png" alt="Cherry Studio V2 的消息导出操作"><figcaption><p>从消息操作中选择导出到 Obsidian</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/obsidian-export-menu-v2.png" alt="Cherry Studio V2 的消息导出操作"><figcaption><p>从消息操作中选择导出到 Obsidian</p></figcaption></figure>
 
 ## 确认导出结果
 
