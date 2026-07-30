@@ -12,9 +12,9 @@ icon: book-open-cover
 2. 在空页面点击 **创建知识库**；
 3. 输入名称并点击 **创建**。
 
-<figure><img src="../.gitbook/assets/cherry-knowledge-base-v2.png" alt="Cherry Studio 知识库页面"><figcaption><p>知识库页面用于创建和管理资料库。</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/cherry-knowledge-base-tutorial-overview-v2-20260730.png" alt="Cherry Studio 知识库页面"><figcaption><p>知识库页面用于创建和管理资料库。</p></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/cherry-knowledge-base-create-v2.png" alt="Cherry Studio 新建知识库"><figcaption><p>新建知识库时先填写名称，创建后再添加数据源并配置模型与检索参数。</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/cherry-knowledge-base-tutorial-create-v2-20260730.png" alt="Cherry Studio 新建知识库"><figcaption><p>新建知识库时先填写名称，创建后再添加数据源并配置模型与检索参数。</p></figcaption></figure>
 
 ## 2. 配置嵌入与检索
 
@@ -43,6 +43,8 @@ icon: book-open-cover
 | 目录 | 导入目录中受支持的文件 |
 | 链接 | 抓取单个网页文本并分块索引 |
 | 笔记 | 选择 Cherry Studio 笔记作为来源 |
+
+![](../.gitbook/assets/cherry-knowledge-base-tutorial-add-source-v2-20260730.png)
 
 单次添加数量和支持格式以对话框提示为准。如需批量导入网站内容，可以先整理成文件或目录。
 
