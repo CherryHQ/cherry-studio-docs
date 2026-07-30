@@ -14,9 +14,11 @@ on:
 permissions:
   contents: write
 
+# 使用 cancel-in-progress 策略。由于进度通过 Git 标签（last-format）持久化，
+# 我们永远只需要最新的工作流运行即可——它会处理自上次标签以来的所有累积变更。
 concurrency:
-  group: format-cn-en-spacing
-  cancel-in-progress: false
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   format:
@@ -25,6 +27,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
+          # 获取完整 Git 历史与标签，基于标签比较至关重要
           fetch-depth: 0
 
       - name: Set up Python
@@ -40,10 +43,19 @@ jobs:
           FILTERED=""
 
           if [ "${{ github.event_name }}" = "push" ]; then
-            BEFORE="${{ github.event.before }}"
-            if [ -z "$BEFORE" ] || [ "$BEFORE" = "0000000000000000000000000000000000000000" ]; then
+            # 确保本地拥有最新标签信息
+            git fetch --tags -f || true
+
+            # 优先使用 last-format 标签作为比较基线，确保累积变更全部覆盖
+            if git rev-parse -q --verify "refs/tags/last-format" >/dev/null; then
+              BEFORE=$(git rev-list -n 1 last-format)
+              echo "Using 'last-format' tag baseline: $BEFORE"
+            else
+              # 标签不存在（首次运行）：退回首父提交（相当于全量）
               BEFORE=$(git rev-list --max-parents=0 HEAD | tail -n1)
+              echo "No 'last-format' tag. Baseline is first commit: $BEFORE"
             fi
+
             FILES=$(git diff --name-only --diff-filter=AM "$BEFORE" HEAD -- '*.md' || true)
             for f in $FILES; do
               if [[ "$f" =~ $IGNORE_RE ]]; then continue; fi
@@ -66,16 +78,41 @@ jobs:
         run: |
           python .github/scripts/format_cn_en_spacing.py ${{ steps.changed.outputs.files }}
 
-      - name: Commit and push if there are changes
-        if: steps.changed.outputs.files != ''
+      - name: Commit, push and update tag
+        env:
+          # 触发本次工作流的 commit SHA，用于标记进度
+          TRIGGERING_SHA: ${{ github.sha }}
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-          git add -A
-          if [ -n "$(git status --porcelain)" ]; then
+
+          # 拉取最新的远程变更，防止运行期间有手动提交等情况
+          git pull --rebase --autostash
+
+          # 仅暂存 Markdown 变更（脚本本身不会修改非 .md 文件）
+          git add -A -- '*.md'
+
+          if ! git diff --cached --quiet; then
+            echo "Changes detected. Committing and pushing..."
             git commit -m "docs: 自动优化中英文混排空格"
-            git push
-            echo "::notice::Pushed spacing fixes."
+
+            # 为应对罕见的网络或竞态问题，增加推送重试机制
+            for i in 1 2 3; do
+              git push && break || sleep 5
+              if [ $i -eq 3 ]; then
+                echo "Push failed after 3 attempts."
+                exit 1
+              fi
+              echo "Push failed. Retrying (Attempt $(($i+1)))..."
+              git pull --rebase --autostash
+            done
+            echo "Push successful."
           else
-            echo "::notice::No spacing changes to commit."
+            echo "No spacing changes to commit."
           fi
+
+          echo "Updating 'last-format' tag to the latest processed commit..."
+          # 无论是否有文件提交，都将标签更新到触发本次工作流的 commit，
+          # 防止因某些原因（如无内容变更）导致重复处理相同的 commits
+          git tag -f last-format "$TRIGGERING_SHA"
+          git push origin last-format --force
