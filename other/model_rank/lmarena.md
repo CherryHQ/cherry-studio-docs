@@ -2,7 +2,7 @@
 
 这是一个基于 Chatbot Arena (lmarena.ai) 数据的排行榜，通过自动化流程生成。
 
-> **数据更新时间**: 2026-07-29 10:38:17 UTC / 2026-07-29 18:38:17 CST (北京时间)
+> **数据更新时间**: 2026-07-30 10:24:11 UTC / 2026-07-30 18:24:11 CST (北京时间)
 
 ## 排行榜
 
@@ -48,7 +48,7 @@
 |     38 |          2049 | qwen3.5-max-previewAlibaba · Proprietary                                | 1465±5             |  21,306 | N/A          | N/A       |
 |     39 |          2347 | gpt-5.4OpenAI · Proprietary                                             | 1465±4             |  63,194 | $2.50/$15    | 1.1M      |
 |     40 |          3155 | kimi-k2.6Moonshot · Modified MIT                                        | 1461±5             |  37,350 | $0.95/$4     | 262.1K    |
-|     41 |          2561 | qwen3.6-max-previewAlibaba · Proprietary                                | 1460±8             |   5,159 | $1.04/$6.24  | 262.1K    |
+|     41 |          2561 | qwen3.6-max-previewAlibaba · Proprietary                                | 1460±8             |   5,159 | $1.03/$6.16  | 262.1K    |
 |     42 |          3555 | grok-4.1SpaceXAI · Proprietary                                          | 1460±3             |  67,322 | N/A          | N/A       |
 |     43 |          3056 | Anthropicclaude-sonnet-5-highAnthropic · Proprietary                    | 1460±6             |  15,622 | $1/$5        | 1M        |
 |     44 |          2861 | gemini-3.5-flash-liteGoogle · Proprietary                               | 1460±8Preliminary  |   6,015 | $0.15/$1.25  | 1M        |
@@ -146,7 +146,7 @@
 |    136 |        126149 | qwen3.5-flashAlibaba · Proprietary                                      | 1397±4             |  57,925 | N/A          | N/A       |
 |    137 |        126154 | qwen3-vl-235b-a22b-thinkingAlibaba · Apache 2.0                         | 1396±7             |   7,931 | $0.40/$4     | 131.1K    |
 |    138 |        127152 | deepseek-v3-0324DeepSeek · MIT                                          | 1395±4             |  45,444 | $3/$4.50     | 32.8K     |
-|    139 |        127153 | qwen3.5-35b-a3bAlibaba · Apache 2.0                                     | 1395±4             |  28,909 | $0.15/$1     | 262.1K    |
+|    139 |        127153 | qwen3.5-35b-a3bAlibaba · Apache 2.0                                     | 1395±4             |  28,909 | $0.14/$1     | 262.1K    |
 |    140 |        117160 | Tencenthunyuan-vision-1.5-thinkingTencent · Proprietary                 | 1395±12            |   2,215 | N/A          | N/A       |
 |    141 |        129153 | Stepfunstep-3.5-flashStepFun · Apache 2.0                               | 1395±4             |  57,037 | $0.10/$0.30  | 262.1K    |
 |    142 |        126158 | amazon-nova-experimental-chat-12-10Amazon · Proprietary                 | 1394±10            |   3,675 | N/A          | N/A       |
