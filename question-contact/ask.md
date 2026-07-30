@@ -21,7 +21,7 @@ icon: messages-question
 问题标题：
 
 Cherry Studio 版本：
-操作系统与版本：
+操作系统与版本（例如 Windows、macOS 或 Linux）：
 使用的功能：
 服务商（Provider）与模型：
 
@@ -42,7 +42,7 @@ Cherry Studio 版本：
 
 * 保留模型名称、错误码、关键参数和完整报错；
 * 截图要覆盖发生问题的界面，不要只截弹窗的一小部分；
-* 必要时附上 [调用链中的请求与错误详情](questions.md#tong-guo-diao-yong-lian-cha-kan-qing-qiu-yu-cuo-wu-xiang-qing)；
+* 模型请求排查请使用 [调用链中的请求与错误详情](questions.md#tong-guo-diao-yong-lian-cha-kan-qing-qiu-yu-cuo-wu-xiang-qing)，不要沿用旧版 DevTools Network 教程；
 * 偶发问题请说明发生时间、操作顺序和当时的网络环境。
 
 {% hint style="warning" %}
