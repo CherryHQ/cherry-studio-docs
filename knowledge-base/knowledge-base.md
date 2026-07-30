@@ -46,6 +46,10 @@ icon: book-open-cover
 
 ![](../.gitbook/assets/cherry-knowledge-base-tutorial-add-source-v2-20260730.png)
 
+![](../.gitbook/assets/cherry-knowledge-base-tutorial-select-source-v2-20260730.png)
+
+![](../.gitbook/assets/cherry-knowledge-base-tutorial-vectorized-v2-20260730.png)
+
 单次添加数量和支持格式以对话框提示为准。如需批量导入网站内容，可以先整理成文件或目录。
 
 数据源会经历 **等待中 → 分块中 → 嵌入中 → 就绪**。出错时可查看原因并执行 **重新索引**。
@@ -62,6 +66,10 @@ icon: book-open-cover
 
 先用 **召回测试** 输入几个真实问题，查看返回片段、相关度和排序。如果结果不理想，再调整分段、Top K、重排模型或阈值。
 
+![](../.gitbook/assets/cherry-knowledge-base-tutorial-recall-v2-20260730.png)
+
+![](../.gitbook/assets/cherry-knowledge-base-tutorial-recall-result-v2-20260730.png)
+
 **成功标志**：数据源状态显示为“就绪”，并且召回测试能返回与问题相关的原文片段。只有文件上传成功但没有检索结果，不算知识库已经可用。
 
 ## 5. 在对话与工作中使用
@@ -69,6 +77,10 @@ icon: book-open-cover
 ### 普通对话
 
 在对话输入区打开知识库选择器，勾选目标知识库后再提问。回答下方会显示召回来源，便于回看原文。
+
+![](../.gitbook/assets/cherry-knowledge-base-tutorial-chat-select-v2-20260730.png)
+
+![](../.gitbook/assets/cherry-knowledge-base-tutorial-chat-answer-v2-20260730.png)
 
 ### 工作（Agent）
 
