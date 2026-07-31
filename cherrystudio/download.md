@@ -4,6 +4,10 @@ icon: download
 
 # 客户端下载
 
+{% hint style="info" %}
+需要下载历史版本、从 V1 升级到 V2，或升级后数据未显示并准备返回 V1？请先阅读[版本升级与降级](version-switching.md)，按兼容链路操作并保护原数据目录。
+{% endhint %}
+
 ## 选择稳定版还是 V2 Beta
 
 | 版本 | 适合谁 | 下载 |

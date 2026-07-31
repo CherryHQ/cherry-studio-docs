@@ -9,6 +9,7 @@
   * [Windows](cherry-studio/installation/windows.md)
   * [macOS](cherry-studio/installation/macos.md)
   * [Linux](cherry-studio/installation/linux.md)
+* [版本升级与降级](cherrystudio/version-switching.md)
 * [核心概念](advanced-basic/concepts-101.md)
 
 ## 常用功能
@@ -140,4 +141,3 @@
   * [搜索榜单](other/model_rank/search.md)
   * [视觉榜单](other/model_rank/vision.md)
   * [代码 / Web 开发榜单](other/model_rank/code-webdev.md)
-  * [文生图榜单](other/model_rank/text-to-image.md)
