@@ -87,20 +87,22 @@ Cherry Studio 是一款集多模型对话、智能体、知识库管理、AI 绘
 ## 第一次使用，从这里开始
 
 {% content-ref url="getting-started/quick-start.md" %}
-[quick-start.md](getting-started/quick-start.md)
+[快速开始](getting-started/quick-start.md)
 {% endcontent-ref %}
 
-按[快速开始](getting-started/quick-start.md)完成模型配置和第一次对话后，再根据需要查阅知识库、Agent 或其他功能。
+按快速开始完成模型配置和第一次对话后，再根据需要查阅知识库、Agent 或其他功能。
 
 ## 模型、费用与数据分别由谁负责？
 
-<p align="center">
-云端模型服务商 / 本地模型<br>
-↓<br>
-Cherry Studio<br>
-↓<br>
-对话 · 知识库 · Agent · 翻译 · 绘画
-</p>
+<p align="center"><strong>云端模型服务商 / 本地模型</strong></p>
+
+<p align="center">↓</p>
+
+<p align="center"><strong>Cherry Studio</strong></p>
+
+<p align="center">↓</p>
+
+<p align="center"><strong>对话 · 知识库 · Agent · 翻译 · 绘画</strong></p>
 
 * **模型来源**：可以使用 CherryIN 中当前可用的模型、自己的服务商 API Key，或本机运行的 Ollama / LM Studio。
 * **软件费用**：Cherry Studio 客户端开源；模型是否收费、如何计费以及可用额度由模型服务商决定。
