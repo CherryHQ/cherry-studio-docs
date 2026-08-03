@@ -2,7 +2,7 @@
 icon: robot
 ---
 
-# 工作（Agent）
+# 工作
 
 **工作**是 Cherry Studio 中专门运行 Agent 的页面。它让 AI 不仅能对话，还能读取工作区、调用工具并**自主完成多步骤任务**。
 
@@ -26,7 +26,7 @@ icon: robot
 
 工作页面的模型选择器会显示可用于对话的模型，并过滤嵌入、重排、图像生成等非对话模型。可选来源包括：
 
-* **[CherryIN](../pre-basic/providers/cherryin-1.md)**、[Anthropic](../pre-basic/providers/anthropic.md) 等支持 Anthropic 或兼容端点的 Provider
+* [**CherryIN**](../pre-basic/providers/cherryin-1.md)、[Anthropic](../pre-basic/providers/anthropic.md) 等支持 Anthropic 或兼容端点的 Provider
 * **Google / Gemini** 官方或自定义 Google 网关中的对话模型
 * 其他能由 Cherry Studio 本地 API 网关转换为 Agent 运行协议的对话模型
 
@@ -84,11 +84,11 @@ Agent 拥有读写文件、执行命令、调用外部 API 的真实能力，一
 
 创建向导包含三步：
 
-| 步骤 | 说明 |
-|---|---|
-| **基础信息** | 头像、名称、模型与描述；名称和模型为必填 |
+| 步骤       | 说明                      |
+| -------- | ----------------------- |
+| **基础信息** | 头像、名称、模型与描述；名称和模型为必填    |
 | **角色设定** | 编写系统提示词，定义 Agent 的身份和行为 |
-| **能力** | 选择创建后启用的技能；内置技能默认可用 |
+| **能力**   | 选择创建后启用的技能；内置技能默认可用     |
 
 完成向导后点击 **创建**。工作区在开始任务时从输入框下方的工作区选择器中设置，可选择已有工作区、添加本地文件夹，或选择不使用工作目录。
 
@@ -103,7 +103,7 @@ Agent 拥有读写文件、执行命令、调用外部 API 的真实能力，一
 * **基础设置**：头像、名称、主模型、规划模型、小模型、描述、权限模式与心跳
 * **提示词**：编辑系统提示词，决定 Agent 的角色与回应方式
 * **工具 → 内置工具**：查看并禁用不希望 Agent 使用的内置工具
-* **工具 → MCP**：挂载来自 [MCP 服务器](mcp/) 的外部工具
+* **工具 → MCP**：挂载来自 [MCP 服务器](mcp/README.md) 的外部工具
 * **工具 → 技能**：为 Agent 启用预先安装的 [技能](../pre-basic/settings/skills.md)
 * **高级设置**：环境变量等高级配置
 
@@ -113,12 +113,12 @@ Agent 拥有读写文件、执行命令、调用外部 API 的真实能力，一
 
 #### 权限模式的 4 种选择
 
-| 模式 | 行为 | 适用场景 |
-|---|---|---|
-| **普通模式**（默认）| 可自由读取文件；编辑文件或执行命令前会请求人工授权 | 日常对话型 Agent |
-| **计划模式** | 只能读取文件并制定计划，不能编辑或执行命令 | 让 Agent 给你"出方案"但你来执行 |
-| **自动编辑模式** | 可自由读写文件；执行命令前仍会请求授权 | 让 Agent 接管代码 / 文档编辑，但保留对命令的控制 |
-| **全自动模式** | 所有工具均无需人工授权 | 仅用于范围受控、明确需要无人确认的场景 |
+| 模式           | 行为                        | 适用场景                          |
+| ------------ | ------------------------- | ----------------------------- |
+| **普通模式**（默认） | 可自由读取文件；编辑文件或执行命令前会请求人工授权 | 日常对话型 Agent                   |
+| **计划模式**     | 只能读取文件并制定计划，不能编辑或执行命令     | 让 Agent 给你"出方案"但你来执行          |
+| **自动编辑模式**   | 可自由读写文件；执行命令前仍会请求授权       | 让 Agent 接管代码 / 文档编辑，但保留对命令的控制 |
+| **全自动模式**    | 所有工具均无需人工授权               | 仅用于范围受控、明确需要无人确认的场景           |
 
 {% hint style="danger" %}
 **全自动模式**会让 Agent 跳过所有人工确认，包括写文件、删除文件、执行命令、调用外部 API 等。这意味着 Agent 可以不经你过目就删除或改写 `工作目录` 内的任意文件，一旦范围设置过大将造成**不可恢复的数据丢失**。
@@ -129,7 +129,7 @@ Agent 拥有读写文件、执行命令、调用外部 API 的真实能力，一
 * **切勿**将整个磁盘、系统盘（`C:\`）、用户主目录（`C:\Users\...`、`~`）、桌面、下载、文档库或任何上级目录设为工作目录——历史上已多次出现 AI 在清理任务中误删整盘资料的情况。
 * 启用前先完成系统级备份，确保即便发生误删也能恢复。
 * 涉及删除、批量改名、递归处理等高危操作时，仍建议临时切回普通模式逐条确认。
-{% endhint %}
+  {% endhint %}
 
 {% hint style="info" %}
 所有 Agent 都具备任务管理、记忆和工作区能力；**权限模式**决定工具调用是否需要确认。[频道](agent-channels.md) 和[定时任务](scheduled-tasks.md)可以使用任意 Agent。
@@ -178,10 +178,32 @@ Agent 运行失败时会在对话中显示错误。请先展开错误信息，�
 
 * 把 Agent 接到 IM 平台（飞书 / Telegram / QQ / 微信 / Discord / Slack）→ [频道](agent-channels.md)
 * 让 Agent 定时自动执行任务 → [定时任务](scheduled-tasks.md)
-* 拓展工具能力 → [MCP 使用教程](mcp/)
+* 拓展工具能力 → [MCP 使用教程](mcp/README.md)
 
 ***
 
 ### 💡 获取帮助与提交反馈
 
 如果您在配置或使用过程中遇到任何疑问、Bug 或有功能改进建议，请参考 [反馈与建议](../question-contact/suggestions.md) 中提供的官方渠道。
+
+
+---
+
+# Agent Instructions
+This documentation is published with GitBook. GitBook is the documentation platform designed so that both humans and AI agents can read, navigate, and reason over technical content effectively. Learn more at gitbook.com.
+
+## Querying This Documentation
+If you need additional information that is not directly available in this page, you can query the documentation dynamically by asking a question.
+
+Perform an HTTP GET request on the current page URL with the `ask` query parameter, and the optional `goal` query parameter:
+
+```
+GET https://docs.cherryai.com.cnagent.md?ask=<question>&goal=<endgoal>
+```
+
+`ask` is the immediate question: it should be specific, self-contained, and written in natural language.
+`goal` is optional and describes the broader end goal you are ultimately trying to accomplish on behalf of the user. GitBook uses it to tailor the answer towards what is most useful for that goal.
+
+The response will contain a direct answer to the question and relevant excerpts and sources from the documentation.
+
+Use this mechanism when the answer is not explicitly present in the current page, you need clarification or additional context, or you want to retrieve related documentation sections.

@@ -7,11 +7,11 @@ icon: highlighter
 划词助手（Selection Assistant）让你在**任意应用中选中文字**后，通过浮动工具栏调用 AI 做翻译、解释、优化、总结等操作，无需把内容粘贴回 Cherry Studio。
 
 {% hint style="info" %}
-**与 [快捷助手](quick-assistant.md) 的区别**：
+**与** [**快捷助手**](quick-assistant.md) **的区别**：
 
 * **快捷助手**：用全局快捷键唤起一个**主动输入**窗口，你打字提问
 * **划词助手**：选中文字后**针对所选内容**弹出工具栏，一键执行预设操作
-{% endhint %}
+  {% endhint %}
 
 ### 平台支持
 
@@ -42,15 +42,15 @@ icon: highlighter
 
 划词助手提供 7 个内置操作，**默认启用 5 个**：翻译 / 解释 / 总结 / 搜索 / 复制。工具栏左侧的 **Cherry 图标不是操作按钮**——它只是工具栏的拖拽手柄，按住可移动整条工具栏。
 
-| 操作 | 默认启用 | 用途 |
-|---|---|---|
-| **翻译** | ✅ | 智能翻译：优先翻译为目标语言；若已是目标语言则翻译为备选语言 |
-| **解释** | ✅ | 让 AI 解释这段内容 |
-| **总结** | ✅ | 让 AI 用一段话总结所选内容 |
-| **搜索** | ✅ | 用所选文字调用搜索引擎查询（默认 Google，可在每项右侧 ⋯ 改） |
-| **复制** | ✅ | 复制选中文字 |
-| **优化** | 待启用 | 让 AI 改写得更通顺 / 更专业，需在设置中拖入启用区 |
-| **引用** | 待启用 | 把选中文字以引用形式发送到当前对话，需在设置中拖入启用区 |
+| 操作     | 默认启用 | 用途                                  |
+| ------ | ---- | ----------------------------------- |
+| **翻译** | ✅    | 智能翻译：优先翻译为目标语言；若已是目标语言则翻译为备选语言      |
+| **解释** | ✅    | 让 AI 解释这段内容                         |
+| **总结** | ✅    | 让 AI 用一段话总结所选内容                     |
+| **搜索** | ✅    | 用所选文字调用搜索引擎查询（默认 Google，可在每项右侧 ⋯ 改） |
+| **复制** | ✅    | 复制选中文字                              |
+| **优化** | 待启用  | 让 AI 改写得更通顺 / 更专业，需在设置中拖入启用区        |
+| **引用** | 待启用  | 把选中文字以引用形式发送到当前对话，需在设置中拖入启用区        |
 
 ### 自定义操作
 
@@ -64,9 +64,11 @@ icon: highlighter
 ### 工具栏 / 结果窗口外观
 
 工具栏：
+
 * **紧凑模式**：只显示图标，不显示文字，节省屏幕空间
 
 结果窗口（`功能窗口` 节）：
+
 * **跟随工具栏**：窗口贴着工具栏弹（默认开），关闭则始终居中
 * **记住大小**：本次手动调过的窗口尺寸，下次保留
 * **自动关闭**：点窗口外即关
@@ -100,3 +102,25 @@ icon: highlighter
 ### 💡 获取帮助与提交反馈
 
 如果您在配置或使用过程中遇到任何疑问、Bug 或有功能改进建议，请参考 [反馈与建议](../../question-contact/suggestions.md) 中提供的官方渠道。
+
+
+---
+
+# Agent Instructions
+This documentation is published with GitBook. GitBook is the documentation platform designed so that both humans and AI agents can read, navigate, and reason over technical content effectively. Learn more at gitbook.com.
+
+## Querying This Documentation
+If you need additional information that is not directly available in this page, you can query the documentation dynamically by asking a question.
+
+Perform an HTTP GET request on the current page URL with the `ask` query parameter, and the optional `goal` query parameter:
+
+```
+GET https://docs.cherryai.com.cnselection-assistant.md?ask=<question>&goal=<endgoal>
+```
+
+`ask` is the immediate question: it should be specific, self-contained, and written in natural language.
+`goal` is optional and describes the broader end goal you are ultimately trying to accomplish on behalf of the user. GitBook uses it to tailor the answer towards what is most useful for that goal.
+
+The response will contain a direct answer to the question and relevant excerpts and sources from the documentation.
+
+Use this mechanism when the answer is not explicitly present in the current page, you need clarification or additional context, or you want to retrieve related documentation sections.

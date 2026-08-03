@@ -13,10 +13,11 @@ icon: browsers
 
 {% hint style="info" %}
 **快捷助手 vs 划词助手**：两者是不同的功能。
+
 * **快捷助手**：通过快捷键唤起一个迷你窗口主动提问，不依赖你当前选中的内容。
 * **划词助手**：在任意应用内选中文字后，通过工具栏对所选文字做翻译/解释/改写。
 * 配置入口分别在 `设置 → 快捷助手` 与 `设置 → 划词助手`。
-{% endhint %}
+  {% endhint %}
 
 <figure><img src="../../.gitbook/assets/cherry-quick-assistant-settings-v2.png" alt="快捷助手设置"><figcaption><p>启用后的快捷助手设置，并提供实际窗口预览</p></figcaption></figure>
 
@@ -39,9 +40,9 @@ icon: browsers
    * **快速提问：** 向 AI 提问任何问题。
    * **文本翻译：** 输入需要翻译的文本。
    * **内容总结：** 输入长文本进行摘要。
-   *   **解释说明：** 输入需要解释的概念或术语。
+   * **解释说明：** 输入需要解释的概念或术语。
 
-       <figure><img src="../../.gitbook/assets/cherry-quick-assistant-window-v2.png" alt="快捷助手窗口"><figcaption><p>快捷助手窗口内置“回答此问题、文本翻译、内容总结、解释说明”等快捷操作</p></figcaption></figure>
+     <figure><img src="../../.gitbook/assets/cherry-quick-assistant-window-v2.png" alt="快捷助手窗口"><figcaption><p>快捷助手窗口内置“回答此问题、文本翻译、内容总结、解释说明”等快捷操作</p></figcaption></figure>
 3. **关闭：** 按下 <kbd>ESC</kbd> 键或点击快捷助手窗口外部的任意位置即可关闭。
 
 {% hint style="info" %}
@@ -59,3 +60,25 @@ icon: browsers
 ### 💡 获取帮助与提交反馈
 
 如果您在配置或使用过程中遇到任何疑问、Bug 或有功能改进建议，请参考 [反馈与建议](../../question-contact/suggestions.md) 中提供的官方渠道。
+
+
+---
+
+# Agent Instructions
+This documentation is published with GitBook. GitBook is the documentation platform designed so that both humans and AI agents can read, navigate, and reason over technical content effectively. Learn more at gitbook.com.
+
+## Querying This Documentation
+If you need additional information that is not directly available in this page, you can query the documentation dynamically by asking a question.
+
+Perform an HTTP GET request on the current page URL with the `ask` query parameter, and the optional `goal` query parameter:
+
+```
+GET https://docs.cherryai.com.cnquick-assistant.md?ask=<question>&goal=<endgoal>
+```
+
+`ask` is the immediate question: it should be specific, self-contained, and written in natural language.
+`goal` is optional and describes the broader end goal you are ultimately trying to accomplish on behalf of the user. GitBook uses it to tailor the answer towards what is most useful for that goal.
+
+The response will contain a direct answer to the question and relevant excerpts and sources from the documentation.
+
+Use this mechanism when the answer is not explicitly present in the current page, you need clarification or additional context, or you want to retrieve related documentation sections.

@@ -84,16 +84,16 @@ icon: message
 
 ### 常用工具
 
-| 名称 | 作用 |
-|---|---|
-| **上传附件** | 上传图片或文档；图片需模型支持视觉能力，文档会被解析为上下文 |
-| **快捷短语** | 调用预设模板，详见 [快捷短语](../../pre-basic/settings/quick-phrase.md) |
-| **网络搜索** | 把网页搜索结果作为上下文，需先在 [联网模式](../../pre-basic/websearch/) 中配置 |
-| **知识库** | 将已建立的 [知识库](../../knowledge-base/knowledge-base.md) 用作上下文 |
-| **MCP** | 启用 [MCP](../../advanced-basic/mcp/) 工具供模型调用 |
-| **思考** | 所选模型支持推理时可用 |
+| 名称       | 作用                                                                                                       |
+| -------- | -------------------------------------------------------------------------------------------------------- |
+| **上传附件** | 上传图片或文档；图片需模型支持视觉能力，文档会被解析为上下文                                                                           |
+| **快捷短语** | 调用预设模板，详见 [快捷短语](../../pre-basic/settings/quick-phrase.md)                       |
+| **网络搜索** | 把网页搜索结果作为上下文，需先在 [联网模式](../../pre-basic/websearch/README.md) 中配置                    |
+| **知识库**  | 将已建立的 [知识库](../../knowledge-base/knowledge-base.md) 用作上下文                    |
+| **MCP**  | 启用 [MCP](../../advanced-basic/mcp/README.md) 工具供模型调用                                |
+| **思考**   | 所选模型支持推理时可用                                                                                              |
 | **生成图片** | 所选对话模型支持生图时可用；专门的生图模型请使用 [绘画](drawing.md) |
-| **斜杠命令** | 仅在支持的 Agent 会话中出现；内置命令包括 `/clear`、`/compact`、`/context`、`/usage` 和 `/exit` |
+| **斜杠命令** | 仅在支持的 Agent 会话中出现；内置命令包括 `/clear`、`/compact`、`/context`、`/usage` 和 `/exit`                               |
 
 模型选择器是输入区中的独立控件，也可使用 `chat.model.select` 对应的快捷键打开。`/` 面板会按当前会话提供可用命令。
 
@@ -117,7 +117,7 @@ Token 信息仅为估算，不同模型的 Tokenizer 不同，实际计费以模
 
 ### 模型设置
 
-模型设置与助手设置当中的 `模型设置` 参数同步，详见 [助手设置](chat.md#bian-ji-zhu-shou)。
+模型设置与助手设置当中的 `模型设置` 参数同步，详见 [助手设置](#bian-ji-zhu-shou)。
 
 {% hint style="info" %}
 在对话设置当中，仅该模型设置作用于当前助手，其余设置作用于全局。如：设置消息样式为气泡后在任何助手的任何话题下都是气泡样式。
@@ -131,17 +131,19 @@ Token 信息仅为估算，不同模型的 Tokenizer 不同，实际计费以模
 
 {% tabs %}
 {% tab title="打开时" %}
+
 <figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 {% endtab %}
 
 {% tab title="关闭时" %}
+
 <figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 {% endtab %}
 {% endtabs %}
 
 #### <mark style="color:blue;">**`使用衬线字体`**</mark>：
 
-字体样式切换，现在你也可以通过 [自定义css](../../pre-basic/personalization-settings/) 来更换字体。
+字体样式切换，现在你也可以通过 [自定义css](../../pre-basic/personalization-settings/README.md) 来更换字体。
 
 #### <mark style="color:blue;">**`代码显示行号`**</mark>：
 
@@ -149,10 +151,12 @@ Token 信息仅为估算，不同模型的 Tokenizer 不同，实际计费以模
 
 {% tabs %}
 {% tab title="关闭时" %}
+
 <figure><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 {% endtab %}
 
 {% tab title="打开时" %}
+
 <figure><img src="../../.gitbook/assets/image (3) (1) (1).png" alt=""><figcaption></figcaption></figure>
 {% endtab %}
 {% endtabs %}
@@ -175,10 +179,12 @@ Token 信息仅为估算，不同模型的 Tokenizer 不同，实际计费以模
 
 {% tabs %}
 {% tab title="气泡" %}
+
 <figure><img src="../../.gitbook/assets/cherry-message-style-bubble.png" alt="Cherry Studio 气泡消息样式"><figcaption><p>气泡样式：用户消息在右侧气泡中显示</p></figcaption></figure>
 {% endtab %}
 
 {% tab title="简洁" %}
+
 <figure><img src="../../.gitbook/assets/cherry-message-style-plain.png" alt="Cherry Studio 简洁消息样式"><figcaption><p>简洁样式：用户与助手消息按角色纵向排列</p></figcaption></figure>
 {% endtab %}
 {% endtabs %}
@@ -189,10 +195,12 @@ Token 信息仅为估算，不同模型的 Tokenizer 不同，实际计费以模
 
 {% tabs %}
 {% tab title="Auto" %}
+
 <figure><img src="../../.gitbook/assets/cherry-code-style-auto.png" alt="Cherry Studio Auto 代码风格"><figcaption><p>Auto 代码风格</p></figcaption></figure>
 {% endtab %}
 
 {% tab title="Dracula" %}
+
 <figure><img src="../../.gitbook/assets/cherry-code-style-dracula.png" alt="Cherry Studio Dracula 代码风格"><figcaption><p>Dracula 代码风格</p></figcaption></figure>
 {% endtab %}
 {% endtabs %}
@@ -217,10 +225,12 @@ Token 信息仅为估算，不同模型的 Tokenizer 不同，实际计费以模
 
 {% tabs %}
 {% tab title="关闭时" %}
+
 <figure><img src="../../.gitbook/assets/image (4) (1).png" alt="" width="563"><figcaption></figcaption></figure>
 {% endtab %}
 
 {% tab title="打开时" %}
+
 <figure><img src="../../.gitbook/assets/image (6) (1).png" alt="" width="563"><figcaption></figcaption></figure>
 {% endtab %}
 {% endtabs %}
@@ -293,11 +303,12 @@ Token 信息仅为估算，不同模型的 Tokenizer 不同，实际计费以模
   * 适合创意写作等需要多样化表达的场景
 
 {% hint style="info" %}
-- 这两个参数可以独立使用或组合使用
-- 根据具体任务类型选择合适的参数值
-- 建议通过实验找到最适合特定应用场景的参数组合
-- 以上内容仅供参考和了解概念，所给参数范围不一定适合所有模型，具体可参考模型相关文档给出的参数建议。
-{% endhint %}
+
+* 这两个参数可以独立使用或组合使用
+* 根据具体任务类型选择合适的参数值
+* 建议通过实验找到最适合特定应用场景的参数组合
+* 以上内容仅供参考和了解概念，所给参数范围不一定适合所有模型，具体可参考模型相关文档给出的参数建议。
+  {% endhint %}
 
 #### <mark style="color:blue;">**`开启消息长度限制 (MaxToken)`**</mark>
 
@@ -314,7 +325,7 @@ Token 信息仅为估算，不同模型的 Tokenizer 不同，实际计费以模
 * 短文生成：800-2000
 * 代码生成：2000-3600
 * 长文生成：4000及以上 (需要模型本身支持)
-{% endhint %}
+  {% endhint %}
 
 {% hint style="warning" %}
 一般情况下模型生成的回答将被限制在 MaxToken 的范围内，当然也有可能会出现被截断（如写长代码时）或表达不完整等情况出现，特殊情况下也需要根据实际情况来灵活调整。
@@ -351,15 +362,38 @@ Token 信息仅为估算，不同模型的 Tokenizer 不同，实际计费以模
 {% endhint %}
 
 {% hint style="info" %}
+
 * 自定义参数优先级高于内置参数。即自定义参数如果与内置参数重复，则自定义参数会覆盖内置参数。
 
 > 如：自定义参数中设置 `model` 为 `gpt-4o` 后，在对话中无论选择哪个模型都使用的是 `gpt-4o` 模型。
 
 * 使用 <kbd>参数名称:undefined</kbd> 的设置可排除参数。
-{% endhint %}
+  {% endhint %}
 
 ***
 
 ### 💡 获取帮助与提交反馈
 
 如果您在配置或使用过程中遇到任何疑问、Bug 或有功能改进建议，请参考 [反馈与建议](../../question-contact/suggestions.md) 中提供的官方渠道。
+
+
+---
+
+# Agent Instructions
+This documentation is published with GitBook. GitBook is the documentation platform designed so that both humans and AI agents can read, navigate, and reason over technical content effectively. Learn more at gitbook.com.
+
+## Querying This Documentation
+If you need additional information that is not directly available in this page, you can query the documentation dynamically by asking a question.
+
+Perform an HTTP GET request on the current page URL with the `ask` query parameter, and the optional `goal` query parameter:
+
+```
+GET https://docs.cherryai.com.cnchat.md?ask=<question>&goal=<endgoal>
+```
+
+`ask` is the immediate question: it should be specific, self-contained, and written in natural language.
+`goal` is optional and describes the broader end goal you are ultimately trying to accomplish on behalf of the user. GitBook uses it to tailor the answer towards what is most useful for that goal.
+
+The response will contain a direct answer to the question and relevant excerpts and sources from the documentation.
+
+Use this mechanism when the answer is not explicitly present in the current page, you need clarification or additional context, or you want to retrieve related documentation sections.
