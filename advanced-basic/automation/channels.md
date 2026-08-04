@@ -1,0 +1,72 @@
+# 频道
+
+频道把一个 Agent 连接到外部消息平台。当前可配置飞书、Telegram、QQ、微信、Discord 和 Slack；各平台需要的机器人凭据和会话标识不同。
+
+{% hint style="success" %}
+推荐先在【工作】中告诉 Agent：“为当前 Agent 配置飞书频道，用于接收群消息并发送任务结果。”Agent 会按用途询问必要信息，比直接面对所有平台字段更快。需要精确修改时，再使用【设置】→【频道】。
+{% endhint %}
+
+## 手动配置路径
+
+【设置】→【频道】→选择平台→【添加】。
+
+图中：① 打开【频道】；② 选择平台；③ 点击【添加】。
+
+<figure><img src="../../.gitbook/assets/clipboard (4).png" alt="频道设置：左侧选择飞书等平台，右侧可添加频道"><figcaption></figcaption></figure>
+
+{% stepper %}
+{% step %}
+### 1. 准备平台账号
+
+按照平台规则创建机器人或应用。飞书和微信支持扫码相关流程时，可在启用频道后按界面提示完成；其他平台填写对应 Token 或应用凭据。
+{% endstep %}
+
+{% step %}
+### 2. 绑定 Agent 和工作区
+
+选择已经验证可用的 Agent，并为频道消息指定工作区。外部消息会在这个上下文中执行，不要选择包含无关敏感文件的目录。
+{% endstep %}
+
+{% step %}
+### 3. 限制消息来源
+
+填写允许的 Chat ID、频道 ID 或用户 ID。留空可能表示允许所有，具体以当前平台字段说明为准。可以先向机器人发送 `/whoami` 获取正确格式的标识。
+{% endstep %}
+
+{% step %}
+### 4. 选择权限模式并启用
+
+默认使用【继承智能体设置】。公开群、多人群或不可信来源应使用更严格的模式。启用后先发送无副作用的测试消息。
+{% endstep %}
+{% endstepper %}
+
+## 平台配置重点
+
+| 平台        | 主要凭据                    | 会话范围重点             |
+| --------- | ----------------------- | ------------------ |
+| 飞书 / Lark | App ID、App Secret，或扫码流程 | 聊天 ID 与国内/国际域名     |
+| Telegram  | Bot Token               | Chat ID            |
+| QQ        | App ID、Client Secret    | 私聊、群或频道标识格式        |
+| 微信        | 扫码登录或凭据路径               | 允许的用户 ID           |
+| Discord   | Bot Token               | 频道或私聊 ID           |
+| Slack     | Bot Token、App Token     | Socket Mode 与频道 ID |
+
+{% hint style="danger" %}
+机器人 Token、App Secret 和验证令牌等同账号密码。不要写进 Agent 长期记忆、任务提示词、截图或公开 Issue；泄露后应立即在平台端撤销并重新生成。
+{% endhint %}
+
+<details>
+
+<summary>定时任务选不到频道接收目标怎么办？</summary>
+
+先在对应平台主动给机器人发送一条消息，让 Cherry Studio 记录可用的 Chat ID，再回到定时任务选择通知目标。
+
+</details>
+
+<details>
+
+<summary>频道已连接但不回复怎么办？</summary>
+
+检查允许的会话 ID、绑定 Agent、工作区和权限模式，再查看频道日志。平台收到了消息但 Agent 未执行时，继续检查 API 网关和 Agent 任务状态。
+
+</details>

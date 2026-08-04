@@ -34,10 +34,10 @@ Cherry Studio 是一款集多模型对话、智能体、知识库管理、AI 绘
 #### **2. 智能体与自动化**
 
 * **智能体（Cherry Agent）**：可自主读取文件、运行命令、完成多步任务的 AI，详见 [智能体](advanced-basic/agent.md)。
-* **技能（Skill）**：为助手或智能体加装的"专业能力包"（如做小红书图文、画流程图），开箱即用，详见 [技能](pre-basic/settings/skills.md)。
-* **MCP**：通过 Model Context Protocol 接入外部工具与服务（数据库、Notion、GitHub 等），详见 [MCP 使用教程](advanced-basic/mcp/)。
-* **频道**：将智能体派驻到飞书 / 微信 / Telegram / Discord 等 IM 平台担任群机器人，详见 [频道](advanced-basic/agent-channels.md)。
-* **定时任务**：让智能体按计划自动运行（如每日新闻简报、每周汇总），详见 [定时任务](advanced-basic/scheduled-tasks.md)。
+* **技能（Skill）**：为助手或智能体加装的"专业能力包"（如做小红书图文、画流程图），开箱即用，详见 [技能](/broken/pages/tgdekmdz04XIhvqtGjIa)。
+* **MCP**：通过 Model Context Protocol 接入外部工具与服务（数据库、Notion、GitHub 等），详见 [MCP 使用教程](/broken/pages/xypQ48eulwEGImLNttzF)。
+* **频道**：将智能体派驻到飞书 / 微信 / Telegram / Discord 等 IM 平台担任群机器人，详见 [频道](/broken/pages/UbNiAoRqD0PpkxJGCUEn)。
+* **定时任务**：让智能体按计划自动运行（如每日新闻简报、每周汇总），详见 [定时任务](/broken/pages/CEjy3AjDD84FmqCpupam)。
 
 #### **3. 多种特色功能集成**
 

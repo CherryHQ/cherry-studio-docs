@@ -6,7 +6,7 @@
 
 <img src="../../.gitbook/assets/file.excalidraw (1).svg" alt="" class="gitbook-drawing">
 
-* 将生成的key复制，并打开CherryStudio的[服务商设置](broken-reference/)
+* 将生成的key复制，并打开CherryStudio的[服务商设置](https://github.com/CherryHQ/cherry-studio-docs/blob/main/pre-basic/providers/broken-reference/README.md)
 * 找到服务商OpenAI，填入刚刚获取到的key
 
 <figure><img src="../../.gitbook/assets/image (9) (2).png" alt=""><figcaption></figcaption></figure>

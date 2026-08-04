@@ -21,20 +21,20 @@ LM Studio 是一款流行的**本地大模型 GUI**，支持下载、量化并�
 
 ## 推荐用法
 
-| 场景 | 建议 |
-|---|---|
-| 隐私敏感对话 | 选小模型（8B 以下）本机跑，完全离线 |
-| Apple Silicon（M 系芯片）| LM Studio 用 MLX 后端，效率显著高于 llama.cpp |
-| 嵌入模型 | LM Studio 也可加载嵌入模型，用于 [全局记忆](../../advanced-basic/memory.md) 与知识库 |
+| 场景                   | 建议                                                                    |
+| -------------------- | --------------------------------------------------------------------- |
+| 隐私敏感对话               | 选小模型（8B 以下）本机跑，完全离线                                                   |
+| Apple Silicon（M 系芯片） | LM Studio 用 MLX 后端，效率显著高于 llama.cpp                                   |
+| 嵌入模型                 | LM Studio 也可加载嵌入模型，用于 [全局记忆](/broken/pages/vLGRwSy6YvFqXFxoqvsN) 与知识库 |
 
 ## 与 Ollama 的区别
 
-| | LM Studio | [Ollama](ollama.md) |
-|---|---|---|
-| 形态 | 图形界面 + Server | 命令行 / 后台服务 |
-| 模型管理 | GUI 浏览/下载 | `ollama pull` |
-| API | OpenAI 兼容 | OpenAI 兼容 |
-| 适合 | 偏好图形交互的用户 | 偏好命令行 / Docker 部署 |
+|      | LM Studio     | [Ollama](ollama.md) |
+| ---- | ------------- | ------------------- |
+| 形态   | 图形界面 + Server | 命令行 / 后台服务          |
+| 模型管理 | GUI 浏览/下载     | `ollama pull`       |
+| API  | OpenAI 兼容     | OpenAI 兼容           |
+| 适合   | 偏好图形交互的用户     | 偏好命令行 / Docker 部署   |
 
 两者都可接入 Cherry Studio，按个人偏好选择即可。
 

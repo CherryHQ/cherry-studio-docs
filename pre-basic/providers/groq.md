@@ -16,26 +16,26 @@ Groq（注意：不是 xAI 的 Grok）是一个以 **LPU 硬件加速、超低�
 
 ## 推荐用法
 
-| 模型 | 适合场景 |
-|---|---|
-| `llama-3.3-70b-versatile` | 通用对话，速度极快 |
-| `llama-3.1-8b-instant` | 简单任务，毫秒级响应 |
-| `mixtral-8x7b-32768` | 长上下文 |
-| `whisper-large-v3` | 语音转文字 |
+| 模型                        | 适合场景       |
+| ------------------------- | ---------- |
+| `llama-3.3-70b-versatile` | 通用对话，速度极快  |
+| `llama-3.1-8b-instant`    | 简单任务，毫秒级响应 |
+| `mixtral-8x7b-32768`      | 长上下文       |
+| `whisper-large-v3`        | 语音转文字      |
 
 ## 适用场景
 
-* **实时聊天机器人**：Groq 的"几乎瞬时响应"很适合 IM 接入（搭配 [频道](../../advanced-basic/agent-channels.md)）
+* **实时聊天机器人**：Groq 的"几乎瞬时响应"很适合 IM 接入（搭配 [频道](/broken/pages/UbNiAoRqD0PpkxJGCUEn)）
 * **大量并发**：每秒 token 数显著高于普通云推理
 * **不在乎模型最新**：Groq 主要托管 Llama 系等开源模型，没有 GPT-5 / Claude-4 这种闭源模型
 
 ## 区分 Grok vs Groq
 
-| | [Grok](grok.md) | Groq |
-|---|---|---|
-| 公司 | xAI（马斯克） | Groq Inc. |
-| 主打 | 自研大模型 + 联网 | LPU 硬件 + 开源模型推理 |
-| 模型 | `grok-4` 等自研 | `llama-3.x` 等开源 |
+|    | [Grok](grok.md) | Groq            |
+| -- | --------------- | --------------- |
+| 公司 | xAI（马斯克）        | Groq Inc.       |
+| 主打 | 自研大模型 + 联网      | LPU 硬件 + 开源模型推理 |
+| 模型 | `grok-4` 等自研    | `llama-3.x` 等开源 |
 
 {% hint style="warning" %}
 Grok（xAI）和 Groq 经常被混淆。在 Cherry Studio Provider 列表中是两个独立条目，请注意区分。

@@ -92,25 +92,28 @@
 
 ## 进阶教程 <a href="#advanced-basic" id="advanced-basic"></a>
 
-* [概念入门：助手 / 智能体 / 技能 / MCP / 频道](advanced-basic/concepts-101.md)
-* [MCP 使用教程](advanced-basic/mcp/README.md)
-  * [MCP 环境安装](advanced-basic/mcp/install.md)
-  * [配置和使用 MCP](advanced-basic/mcp/config.md)
-  * [自动安装 MCP](advanced-basic/mcp/auto-install.md)
-  * [内置 MCP 配置](advanced-basic/mcp/builtin.md)
-  * [配置 Dify 知识库](advanced-basic/mcp/dify.md)
-  * [常见问题](advanced-basic/mcp/faq.md)
-* [调用链使用教程](advanced-basic/trace.md)
-* [Code Tools 使用教程](advanced-basic/code-tools.md)
-* [API 服务器](advanced-basic/api-server.md)
-* [技能](pre-basic/settings/skills.md)
-* [频道](advanced-basic/agent-channels.md)
-* [定时任务](advanced-basic/scheduled-tasks.md)
-* [全局记忆](advanced-basic/memory.md)
-* [OpenClaw](advanced-basic/openclaw.md)
-* [快捷短语](pre-basic/settings/quick-phrase.md)
-* [Agent 案例](advanced-basic/agent-an-li/README.md)
-  * [金价暴跌看懵了？我用 Kimi K2.5 + Cherry Studio 做了个“复盘神器”（附 Agent 设计+完整教程）](advanced-basic/agent-an-li/gold-price-case.md)
+* [V2 进阶能力地图](advanced-basic/v2-capability-map.md)
+* [Agent 工作区](advanced-basic/agent-workspace/README.md)
+  * [创建并配置 Agent](advanced-basic/agent-workspace/create-agent.md)
+  * [工作目录、任务与文件](advanced-basic/agent-workspace/workspaces-tasks-files.md)
+  * [模型分工与 Agent 绘画](advanced-basic/agent-workspace/models-image.md)
+  * [工具、知识库、技能与 MCP](advanced-basic/agent-workspace/tools-knowledge-skills-mcp.md)
+  * [权限、记忆与后台任务](advanced-basic/agent-workspace/permissions-memory-background.md)
+* [技能与能力库](advanced-basic/skills.md)
+* [MCP 与外部工具](advanced-basic/mcp/README.md)
+  * [MCP 排错](advanced-basic/mcp/troubleshooting.md)
+* [自动化与外部触达](advanced-basic/automation/README.md)
+  * [频道](advanced-basic/automation/channels.md)
+  * [定时任务与心跳](advanced-basic/automation/scheduled-heartbeat.md)
+* [多窗口与高效工作台](advanced-basic/multi-window-workbench/README.md)
+  * [多窗口与标签页](advanced-basic/multi-window-workbench/multi-window-tabs.md)
+  * [输入工具栏与效率工具](advanced-basic/multi-window-workbench/composer-efficiency.md)
+* [Code CLI](advanced-basic/code-cli.md)
+* [API 网关](advanced-basic/api-gateway.md)
+* [调用链与开发者模式](advanced-basic/trace.md)
+* [Agent 实战](advanced-basic/agent-cases/README.md)
+  * [研究复盘工作流](advanced-basic/agent-cases/research-review.md)
+  * [自动日报工作流](advanced-basic/agent-cases/automated-daily-report.md)
 
 ## 项目贡献 <a href="#contribution" id="contribution"></a>
 
@@ -121,8 +124,8 @@
 
 * [常见问题](question-contact/questions.md)
 * [如何高效提问](question-contact/ask.md)
-* [知识科普](question-contact/knowledge.md)
-* [反馈 & 建议](question-contact/suggestions.md)
+* [AI 基础知识](question-contact/knowledge.md)
+* [问题反馈与功能建议](question-contact/suggestions.md)
 
 ## 联系我们 <a href="#contact-us" id="contact-us"></a>
 

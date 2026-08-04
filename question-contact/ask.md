@@ -2,43 +2,95 @@
 icon: messages-question
 ---
 
-# 高效提问方法
+# 如何高效提问
 
-Cherry Studio 是一个免费开源的项目，随着项目壮大，项目小组的工作量也日渐增多。为了减少沟通成本以及能够快速高效的解决您的问题，我们希望大家在提问之前尽可能按照以下步骤和方式来处理遇到的问题，为项目小组留出更多的时间放在项目的维护和开发上。感谢您的配合！
+一个容易回答的问题，不一定很长，但要让别人知道你在做什么、实际发生了什么，以及怎样才能看到同样的问题。
 
+### 先选合适入口
 
+| 你的情况         | 推荐入口                           |
+| ------------ | ------------------------------ |
+| 不确定是配置还是产品问题 | 【设置】→【关于我们】→【反馈】→【使用 Agent 提交】 |
+| 已确认是可复现缺陷    | GitHub Bug Report              |
+| 希望增加新能力      | GitHub Feature Request         |
+| 讨论用法或方案      | GitHub Discussion / Questions  |
+| 只需要查操作步骤     | 当前文档与 Cherry Assistant         |
 
-## 一、文档查阅和搜索
+Cherry Assistant 可以读取当前安装包信息，并在你同意后收集必要诊断。它会先展示脱敏后的预览，再提交反馈或生成诊断包；不需要你先学会看日志。
 
-大多数基础的问题仔细查阅文档基本都能帮你解决
+### 问题应包含什么
 
-* 软件的功能和使用问题可以到 [功能介绍](../cherrystudio/preview/) 文档里查看；
-* 高频问题会收录在 [常见问题](questions.md) 页面，可以先在常见问题页面查看是否有解决方案；
-* 比较复杂的问题可以直接通过搜索或在搜索框提问来解决；
-* 务必仔细阅读每一篇文档当中的提示框内容，可以帮你避免很多问题；
-* 在 GitHub 的 [Issue](https://github.com/CherryHQ/cherry-studio/issues) 页面查看或搜索是否有类似问题和解决方案。
+{% stepper %}
+{% step %}
+#### 1. 一句话说明目标
 
-## 二、网络搜索、提问AI
+例如：“我想让 Agent 在工作日早上把日报发到飞书群。”
+{% endstep %}
 
-模型的使用等跟客户端功能无关的问题（如模型报错、回答不符合预期、参数设置等问题）建议先在网络上搜索相关解决方案，或将报错内容和问题等描述给 AI 来寻找解决方案。
+{% step %}
+#### 2. 写出实际结果和期望结果
 
+实际结果：“任务运行成功，但飞书没有收到消息。”期望结果：“运行完成后，指定群收到一条日报。”
+{% endstep %}
 
-## 三、官方社群提问或在GitHub提出issue
+{% step %}
+#### 3. 提供最短复现步骤
 
-如果上述一、二两步并没有找到答案或者无法解决你的问题，可以到官方 [tg频道](https://t.me/CherryStudioAI)、[Discord频道](https://discord.com/invite/wez8HtpxqQ)、[QQ群 ](#user-content-fn-1)[^1] （[一键进群](https://qm.qq.com/cgi-bin/qm/qr?authKey=xe5nfGVZLMYnlJq%2F%2B4kN03YWcDBB2lnD7tc9rWus2mxS0JHUbOzk79cO7MYuqyGR\&k=UKVgl3YPHmwPaU8qeO1VG03NcUkACKsc\&noverify=0)）详细描述问题并寻求帮助。
+从能稳定出现问题的入口开始，用 3–6 步写清点击路径、选择内容和错误出现位置。
+{% endstep %}
 
-1. 如果是模型报错，请提供完整的界面截图以及控制台报错信息。敏感信息可以打码处理，但是模型名称、参数设置、报错内容务必保留在截图当中。控制台报错信息查看方法 [点击这里](questions.md#kong-zhi-tai-bao-cuo-cha-kan-fang-fa)。
-2. 如果是软件Bug，请提供<mark style="background-color:green;">具体的错误描述</mark>和<mark style="background-color:green;">详细的</mark>[<mark style="background-color:green;">复现</mark>](#user-content-fn-2)[^2]<mark style="background-color:green;">步骤</mark>，方便开发者调试和修复。如果是偶发问题无法复现，请尽可能详细描述问题出现时的相关场景、背景和配置参数等。\
-   除此之外你还需要将<mark style="background-color:green;">平台信息</mark>（Window、Mac或Linux）、<mark style="background-color:green;">软件版本号</mark>等信息一并列入问题描述当中。
+{% step %}
+#### 4. 补充环境
 
+写明操作系统、【设置】→【关于我们】中显示的版本、相关服务商或频道类型。不要公开 API Key 和账号凭据。
+{% endstep %}
 
+{% step %}
+#### 5. 添加截图、录屏或日志
 
-{% hint style="success" %}
-**求文档或提供文档建议**
+截图要包含错误和所在页面；日志只截相关时间段并先脱敏。模型输出问题应附上输入、模型和期望格式。
+{% endstep %}
+{% endstepper %}
 
-可以联系tg频道 `@Wangmouuu` 或 QQ（`1355873789`），也可以发送邮件至：`sunrise@cherry-ai.com`。
+### 可直接使用的模板
+
+```
+标题：Agent 定时任务运行成功，但飞书频道没有收到结果
+
+目标：工作日 09:00 把运营日报发送到指定飞书群。
+实际结果：运行历史显示成功，飞书无消息。
+期望结果：群内收到一条日报消息。
+
+复现步骤：
+1. 打开【设置】→【定时任务】。
+2. 选择日报任务并点击【运行】。
+3. 等待任务完成。
+4. 查看飞书群，没有新消息。
+
+环境：macOS / Cherry Studio【关于我们】中显示的版本 / 飞书频道。
+已经尝试：重新启用频道；在飞书中给机器人发送测试消息。
+附件：已遮挡凭据的频道状态截图、对应运行记录。
+```
+
+### 截图和日志要删掉什么
+
+{% hint style="danger" %}
+提交前删除 API Key、Authorization、Cookie、机器人 Token、App Secret、邮箱、完整本地路径、聊天内容和业务数据。密钥一旦公开，应立即到服务商或平台撤销。
 {% endhint %}
 
-[^1]: 群号：611659451
+### 让排查更快的小习惯
 
-[^2]: 即（错误）再次出现
+* 每次只复现一个问题；
+* 使用能出现问题的最小配置；
+* 说明问题是否稳定发生；
+* 不只写“不能用”，附上错误原文；
+* 不上传与问题无关的整份日志；
+* 发现相同 Issue 时补充环境和新线索，不重复创建。
+
+<details>
+
+<summary>可以直接让 Cherry Assistant 替我提交吗？</summary>
+
+可以。通过【反馈】进入 Cherry Assistant 后说明问题，并明确让它提交。它会征求诊断数据授权、展示脱敏预览，再按你选择的方式处理。只有你明确要求 GitHub 时才会走 GitHub Issue。
+
+</details>

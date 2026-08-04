@@ -2,27 +2,27 @@
 icon: box-check
 ---
 
-# 功能一览
+# 功能介绍
 
-Cherry Studio 是一款桌面级 AI 客户端，集成了**对话、智能体、绘画、翻译、知识库、笔记、文件管理**等核心能力，并通过 [API 服务器](../../advanced-basic/api-server.md)、[Cherry Agent](../../advanced-basic/agent.md)、[频道](../../advanced-basic/agent-channels.md)、[定时任务](../../advanced-basic/scheduled-tasks.md) 把 AI 能力延伸到自动化与跨平台场景。
+Cherry Studio 是一款桌面级 AI 客户端，集成了**对话、智能体、绘画、翻译、知识库、笔记、文件管理**等核心能力，并通过 [API 服务器](/broken/pages/VURFIGIavkyQJk3B3H2v)、[Cherry Agent](../../advanced-basic/agent.md)、[频道](/broken/pages/UbNiAoRqD0PpkxJGCUEn)、[定时任务](/broken/pages/CEjy3AjDD84FmqCpupam) 把 AI 能力延伸到自动化与跨平台场景。
 
 下表是本节涉及的主要功能与对应入口：
 
-| 功能 | 简述 | 入口 |
-|---|---|---|
-| [对话界面](chat.md) | 与各家模型对话，支持助手、话题、知识库、工具调用 | 顶部 Tab `首页` |
-| [助手库](assistants.md) | 浏览 / 添加 / 创建对话助手预设 | 启动台 → `助手库` |
+| 功能                                   | 简述                                    | 入口           |
+| ------------------------------------ | ------------------------------------- | ------------ |
+| [对话界面](chat.md)                      | 与各家模型对话，支持助手、话题、知识库、工具调用              | 顶部 Tab `首页`  |
+| [助手库](assistants.md)                 | 浏览 / 添加 / 创建对话助手预设                    | 启动台 → `助手库`  |
 | [智能体](../../advanced-basic/agent.md) | 可自主执行任务的 Cherry Agent —— 读文件、跑命令、多步推理 | 顶部 Tab `智能体` |
-| [绘画](drawing.md) | 接入文生图模型 | 启动台 → `绘画` |
-| [翻译](translation.md) | 双栏快速翻译 | 启动台 → `翻译` |
-| [小程序](app.md) | 客户端内运行 AI 厂商网页版 | 启动台 → `小程序` |
-| [知识库](knowledge-base.md) | 文档/网址/笔记向量化检索 | 启动台 → `知识库` |
-| [文件](files.md) | 集中查看对话、绘画、知识库等附件 | 启动台 → `文件` |
-| [笔记](notes.md) | 内置 Markdown 编辑器 | 顶部 Tab `笔记` |
-| [快捷助手](quick-assistant.md) | 全局快捷键唤起的迷你提问窗口 | 全局快捷键 |
-| [快捷助手](selection-assistant.md) | 在任意应用划词后通过浮动工具栏调用 AI | 全局快捷键 |
+| [绘画](drawing.md)                     | 接入文生图模型                               | 启动台 → `绘画`   |
+| [翻译](translation.md)                 | 双栏快速翻译                                | 启动台 → `翻译`   |
+| [小程序](app.md)                        | 客户端内运行 AI 厂商网页版                       | 启动台 → `小程序`  |
+| [知识库](knowledge-base.md)             | 文档/网址/笔记向量化检索                         | 启动台 → `知识库`  |
+| [文件](files.md)                       | 集中查看对话、绘画、知识库等附件                      | 启动台 → `文件`   |
+| [笔记](notes.md)                       | 内置 Markdown 编辑器                       | 顶部 Tab `笔记`  |
+| [快捷助手](quick-assistant.md)           | 全局快捷键唤起的迷你提问窗口                        | 全局快捷键        |
+| [快捷助手](selection-assistant.md)       | 在任意应用划词后通过浮动工具栏调用 AI                  | 全局快捷键        |
 
-更高阶能力请参考 [进阶教程](../../advanced-basic/) 一节。
+更高阶能力请参考 [进阶教程](https://github.com/CherryHQ/cherry-studio-docs/blob/main/advanced-basic/README.md) 一节。
 
 ***
 

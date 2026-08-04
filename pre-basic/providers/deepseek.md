@@ -17,21 +17,21 @@ DeepSeek 是国内主流大模型厂商之一，以 V3 / R1 系列在编程与�
 
 ## 推荐用法
 
-| 模型 | 适合场景 |
-|---|---|
-| `deepseek-chat`| 通用对话，性价比极高 |
-| `deepseek-reasoner`| 数学、代码、复杂推理。注意输出会带 `<thinking>` 思考块 |
+| 模型                  | 适合场景                               |
+| ------------------- | ---------------------------------- |
+| `deepseek-chat`     | 通用对话，性价比极高                         |
+| `deepseek-reasoner` | 数学、代码、复杂推理。注意输出会带 `<thinking>` 思考块 |
 
 ## 与全局记忆的搭配
 
-DeepSeek 自家没有嵌入模型。如果你要用 [全局记忆](../../advanced-basic/memory.md) 或知识库：
+DeepSeek 自家没有嵌入模型。如果你要用 [全局记忆](/broken/pages/vLGRwSy6YvFqXFxoqvsN) 或知识库：
 
 * 嵌入模型推荐用其他 Provider 的（如 [硅基流动](siliconcloud.md) 的 `bge-m3` 或 [OpenAI](openai.md) 的 `text-embedding-3-small`）
 * 对话模型仍可用 DeepSeek
 
 {% hint style="info" %}
-* DeepSeek 价格按 token 计费，缓存命中可大幅降价（参考其官方文档）
-* `deepseek-reasoner` 的思考内容默认会渲染在对话中，可在 [对话设置](../../cherrystudio/preview/chat.md#dui-hua-she-zhi) 中切换"思考内容自动折叠"
+- DeepSeek 价格按 token 计费，缓存命中可大幅降价（参考其官方文档）
+- `deepseek-reasoner` 的思考内容默认会渲染在对话中，可在 [对话设置](../../cherrystudio/preview/chat.md#dui-hua-she-zhi) 中切换"思考内容自动折叠"
 {% endhint %}
 
 ***

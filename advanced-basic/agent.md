@@ -16,9 +16,9 @@ icon: robot
 * "将 `~/Downloads` 中所有 PDF 整理为 Excel 清单"
 * "查询今日主流科技媒体头条，生成一份 5 条要点的简报"
 * "审阅指定的 Python 文件，给出改进建议并直接修改"
-* "每日早上 9 点自动执行以上任务"（结合 [定时任务](scheduled-tasks.md)）
+* "每日早上 9 点自动执行以上任务"（结合 [定时任务](/broken/pages/CEjy3AjDD84FmqCpupam)）
 
-> 推荐先阅读 [概念入门](concepts-101.md) 理清助手 / 智能体 / 技能 / MCP / 频道之间的关系。
+> 推荐先阅读 [概念入门](/broken/pages/RvI8u7jUuRxKp64EBA3Q) 理清助手 / 智能体 / 技能 / MCP / 频道之间的关系。
 
 ### 开始前的两项准备
 
@@ -26,13 +26,13 @@ icon: robot
 
 智能体依赖"工具调用"格式的对话方式，目前最成熟的实现是 Anthropic Claude 系列模型。因此需要一家提供该协议的模型服务商，推荐选项：
 
-* **[CherryIN](../pre-basic/providers/cherryin-1.md)**（最便捷）：单一账号即可同时支持普通对话与智能体
-* **[Anthropic 官方](../pre-basic/providers/anthropic.md)**：直接使用 Claude 账号
+* [**CherryIN**](../pre-basic/providers/cherryin-1.md)（最便捷）：单一账号即可同时支持普通对话与智能体
+* [**Anthropic 官方**](../pre-basic/providers/anthropic.md)：直接使用 Claude 账号
 * 其他主流 AI 网关（如 [OpenRouter](../pre-basic/providers/openrouter.md)）
 
 #### 2. 启用 API 服务器
 
-Cherry Studio 需要在本地运行一个内部服务以承载 Agent。操作上仅需在 `设置 → API 服务器` 中点击启动按钮即可，详见 [API 服务器](api-server.md)。
+Cherry Studio 需要在本地运行一个内部服务以承载 Agent。操作上仅需在 `设置 → API 服务器` 中点击启动按钮即可，详见 [API 服务器](/broken/pages/VURFIGIavkyQJk3B3H2v)。
 
 {% hint style="warning" %}
 **Token 消耗提示**：Agent 模式涉及多轮对话与工具调用，单次任务的 token 消耗显著高于普通对话。建议在 Provider 后台设置月度上限以避免超支。
@@ -54,7 +54,7 @@ Cherry Studio 需要在本地运行一个内部服务以承载 Agent。操作上
 
 ### 第 2 步：启用 API 服务器
 
-打开 `设置 → API 服务器`，确认端口与密钥后点击 ▶ 启动。详细说明见 [API 服务器](api-server.md)。
+打开 `设置 → API 服务器`，确认端口与密钥后点击 ▶ 启动。详细说明见 [API 服务器](/broken/pages/VURFIGIavkyQJk3B3H2v)。
 
 <figure><img src="../.gitbook/assets/cherry-api-server-running.png" alt=""><figcaption><p>API 服务器运行中，Agent 方可工作</p></figcaption></figure>
 
@@ -72,13 +72,13 @@ Cherry Studio 需要在本地运行一个内部服务以承载 Agent。操作上
 
 各字段说明：
 
-| 字段 | 说明 |
-|---|---|
-| **名称** | Agent 在列表中的显示名 |
-| **模型** | 选择上一步在 Anthropic 类型 Provider 下添加的对话模型 |
-| **自主模式** | 一个独立的开关。开启后会启用工作区 `soul.md` 自定义身份、自动注入任务管理工具，并禁用不适合无人值守的交互式工具。**[频道](agent-channels.md) 与 [定时任务](scheduled-tasks.md) 要求开启此项，并将权限模式设为全自动模式** |
-| **权限模式** | 控制 Agent 调用工具时是否需要人工授权，详见下表。默认 `普通模式` |
-| **工作目录** | Agent 可读写的本地目录。留空则自动创建默认目录 |
+| 字段       | 说明                                                                                                                                                                                       |
+| -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **名称**   | Agent 在列表中的显示名                                                                                                                                                                           |
+| **模型**   | 选择上一步在 Anthropic 类型 Provider 下添加的对话模型                                                                                                                                                    |
+| **自主模式** | 一个独立的开关。开启后会启用工作区 `soul.md` 自定义身份、自动注入任务管理工具，并禁用不适合无人值守的交互式工具。[**频道**](/broken/pages/UbNiAoRqD0PpkxJGCUEn) **与** [**定时任务**](/broken/pages/CEjy3AjDD84FmqCpupam) **要求开启此项，并将权限模式设为全自动模式** |
+| **权限模式** | 控制 Agent 调用工具时是否需要人工授权，详见下表。默认 `普通模式`                                                                                                                                                    |
+| **工作目录** | Agent 可读写的本地目录。留空则自动创建默认目录                                                                                                                                                               |
 
 填写完点击 **添加** 即完成创建。
 
@@ -93,18 +93,18 @@ Cherry Studio 需要在本地运行一个内部服务以承载 Agent。操作上
 * **基础设置**：头像、名称、模型、工作目录、自主模式、启用心跳、心跳间隔、描述
 * **提示词设置**：编辑系统提示词，决定 Agent 的角色与回话风格
 * **权限模式**：在 4 种权限策略之间切换（见下方表格）
-* **工具**：勾选 Agent 可使用的内置工具，及挂载来自 [MCP 服务器](mcp/) 的外部工具
-* **技能**：挂载预先安装的 [技能](../pre-basic/settings/skills.md)
+* **工具**：勾选 Agent 可使用的内置工具，及挂载来自 [MCP 服务器](/broken/pages/xypQ48eulwEGImLNttzF) 的外部工具
+* **技能**：挂载预先安装的 [技能](/broken/pages/tgdekmdz04XIhvqtGjIa)
 * **高级设置**：最大会话轮次数上限与环境变量两个配置
 
 #### 权限模式的 4 种选择
 
-| 模式 | 行为 | 适用场景 |
-|---|---|---|
-| **普通模式**（默认）| 可自由读取文件；编辑文件或执行命令前会请求人工授权 | 日常对话型 Agent |
-| **计划模式** | 只能读取文件并制定计划，不能编辑或执行命令 | 让 Agent 给你"出方案"但你来执行 |
-| **自动编辑模式** | 可自由读写文件；执行命令前仍会请求授权 | 让 Agent 接管代码 / 文档编辑，但保留对命令的控制 |
-| **全自动模式** | 所有工具均无需人工授权 | **频道与定时任务必须使用此模式，并同时开启自主模式**；自主决策的全自动场景 |
+| 模式           | 行为                        | 适用场景                                    |
+| ------------ | ------------------------- | --------------------------------------- |
+| **普通模式**（默认） | 可自由读取文件；编辑文件或执行命令前会请求人工授权 | 日常对话型 Agent                             |
+| **计划模式**     | 只能读取文件并制定计划，不能编辑或执行命令     | 让 Agent 给你"出方案"但你来执行                    |
+| **自动编辑模式**   | 可自由读写文件；执行命令前仍会请求授权       | 让 Agent 接管代码 / 文档编辑，但保留对命令的控制           |
+| **全自动模式**    | 所有工具均无需人工授权               | **频道与定时任务必须使用此模式，并同时开启自主模式**；自主决策的全自动场景 |
 
 {% hint style="warning" %}
 **全自动模式**会让 Agent 跳过所有人工确认，包括写文件、执行命令、调用外部 API 等。**请仅在受控环境下启用**，并将 `工作目录` 限制在你愿意被 Agent 修改的范围内。
@@ -135,7 +135,7 @@ Cherry Studio 需要在本地运行一个内部服务以承载 Agent。操作上
 
 #### 智能体页面提示"请启用 API 服务器以使用智能体功能"
 
-回 `设置 → API 服务器`，点击绿色 ▶ 启动按钮。详情见 [API 服务器](api-server.md)。
+回 `设置 → API 服务器`，点击绿色 ▶ 启动按钮。详情见 [API 服务器](/broken/pages/VURFIGIavkyQJk3B3H2v)。
 
 #### 创建 Agent 时下拉里没有模型
 
@@ -148,9 +148,9 @@ Cherry Studio 需要在本地运行一个内部服务以承载 Agent。操作上
 
 ### 下一步
 
-* 把 Agent 接到 IM 平台（飞书 / Telegram / QQ / 微信 / Discord / Slack）→ [频道](agent-channels.md)
-* 让 Agent 定时自动执行任务 → [定时任务](scheduled-tasks.md)
-* 拓展工具能力 → [MCP 使用教程](mcp/)
+* 把 Agent 接到 IM 平台（飞书 / Telegram / QQ / 微信 / Discord / Slack）→ [频道](/broken/pages/UbNiAoRqD0PpkxJGCUEn)
+* 让 Agent 定时自动执行任务 → [定时任务](/broken/pages/CEjy3AjDD84FmqCpupam)
+* 拓展工具能力 → [MCP 使用教程](/broken/pages/xypQ48eulwEGImLNttzF)
 
 ***
 

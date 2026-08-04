@@ -31,7 +31,7 @@ Cherry Studio 通过**两种方式**实现联网，根据你选的模型自动�
 
 开启对话联网后，AI 直接调用模型自身的搜索能力，**无需任何额外配置**。
 
-<figure><img src="../../.gitbook/assets/image (100) (1).png" alt=""><figcaption><p>模型名后的小地球图标</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (100).png" alt=""><figcaption><p>模型名后的小地球图标</p></figcaption></figure>
 
 在 `设置 → 模型服务` 中也能据此区分。
 
@@ -56,16 +56,16 @@ Cherry Studio 通过**两种方式**实现联网，根据你选的模型自动�
 
 打开 `设置 → 网络搜索` 添加并启用任意一家搜索服务。Cherry Studio 内置支持：
 
-| 搜索服务 | 类型 | 备注 |
-|---|---|---|
-| **Tavily** | 云端 | 老牌、免费额度足够日常用 [→ 注册教程](tavily.md) |
-| **Bocha (博查)** | 云端 | 国内访问友好，中文场景效果好 |
-| **Exa** | 云端 | 偏学术 / 技术内容 |
-| **Exa MCP** | 云端 | Exa 的 MCP 接口版 |
-| **Zhipu (智谱)** | 云端 | 智谱自家的搜索 API |
-| **Querit** | 云端 | 国内访问友好 |
-| **SearXNG** | 自部署 | 开源元搜索引擎，可完全本地化 [→ 部署教程](searxng.md) |
-| **Google / Bing / Baidu** | 本地浏览器 | 直接打开浏览器搜索页，**不读取内容回传给 AI**，仅作为辅助查找 |
+| 搜索服务                      | 类型    | 备注                                  |
+| ------------------------- | ----- | ----------------------------------- |
+| **Tavily**                | 云端    | 老牌、免费额度足够日常用 [→ 注册教程](tavily.md)    |
+| **Bocha (博查)**            | 云端    | 国内访问友好，中文场景效果好                      |
+| **Exa**                   | 云端    | 偏学术 / 技术内容                          |
+| **Exa MCP**               | 云端    | Exa 的 MCP 接口版                       |
+| **Zhipu (智谱)**            | 云端    | 智谱自家的搜索 API                         |
+| **Querit**                | 云端    | 国内访问友好                              |
+| **SearXNG**               | 自部署   | 开源元搜索引擎，可完全本地化 [→ 部署教程](searxng.md) |
+| **Google / Bing / Baidu** | 本地浏览器 | 直接打开浏览器搜索页，**不读取内容回传给 AI**，仅作为辅助查找  |
 
 #### 首次启用 Tavily（最常见的零配置选择）
 
@@ -75,11 +75,11 @@ Cherry Studio 通过**两种方式**实现联网，根据你选的模型自动�
 4. 在 Tavily 控制台创建 API Key
 5. 复制 Key 回填到 Cherry Studio
 
-<figure><img src="../../.gitbook/assets/image (102) (1).png" alt=""><figcaption><p>弹窗：去设置</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (102).png" alt=""><figcaption><p>弹窗：去设置</p></figcaption></figure>
 
 <figure><img src="../../.gitbook/assets/image (103).png" alt=""><figcaption><p>点击获取秘钥</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (103) (1).png" alt=""><figcaption><p>跳转获取秘钥</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (103).png" alt=""><figcaption><p>跳转获取秘钥</p></figcaption></figure>
 
 <figure><img src="../../.gitbook/assets/image (105).png" alt=""><figcaption><p>复制 API Key</p></figcaption></figure>
 

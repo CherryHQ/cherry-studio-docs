@@ -37,10 +37,10 @@ icon: books
 ## 与其他能力的组合
 
 * **知识库 + 助手**：给某个助手"挂载"知识库，它就专精这个领域
-* **知识库 + [Cherry Agent](../../advanced-basic/agent.md)**：让 Agent 在任务过程中自己查知识库
-* **知识库 + [频道](../../advanced-basic/agent-channels.md)**：把"会查公司文档"的 Agent 派到飞书群里值班
+* **知识库 +** [**Cherry Agent**](../../advanced-basic/agent.md)：让 Agent 在任务过程中自己查知识库
+* **知识库 +** [**频道**](/broken/pages/UbNiAoRqD0PpkxJGCUEn)：把"会查公司文档"的 Agent 派到飞书群里值班
 
-> 推荐先阅读 [概念入门](../../advanced-basic/concepts-101.md) 了解知识库与 Agent / MCP 等功能的关系。
+> 推荐先阅读 [概念入门](/broken/pages/RvI8u7jUuRxKp64EBA3Q) 了解知识库与 Agent / MCP 等功能的关系。
 
 ***
 

@@ -8,7 +8,7 @@ icon: head-side-gear
 **命名说明**：Cherry Studio 中有两个相关但不同的概念，请注意区分：
 
 * **本页（助手库）**：一个 **助手预设市场**，提供大量 "角色 + 提示词 + 参数" 模板，添加后会出现在对话页的助手列表中。本质上是 [对话助手](chat.md#zhu-shou-he-hua-ti) 的来源。入口：顶部 Tab `+` ➡️ 启动台 ➡️ `助手库`。
-* **Cherry Agent（智能体）**：一个能自主调用工具、访问文件、执行多步任务的智能体系统，依赖本地 [API 服务器](../../advanced-basic/api-server.md)。入口：顶部 Tab `智能体`。详见 [Cherry Agent](../../advanced-basic/agent.md)。
+* **Cherry Agent（智能体）**：一个能自主调用工具、访问文件、执行多步任务的智能体系统，依赖本地 [API 服务器](/broken/pages/VURFIGIavkyQJk3B3H2v)。入口：顶部 Tab `智能体`。详见 [Cherry Agent](../../advanced-basic/agent.md)。
 
 两者在 UI 中都涉及 "Agent" 字样，但 **是不同模块**。本页讲的是助手库（也就是助手预设市场）。
 {% endhint %}
@@ -68,11 +68,11 @@ icon: head-side-gear
 
 ### 何时使用助手库，何时使用 Cherry Agent？
 
-| 场景 | 推荐 |
-|---|---|
-| 个性化"角色"快速对话（写作、翻译、技术问答等） | **助手库** |
-| 让 AI 自主调用工具、读写文件、跨步骤完成任务 | **[Cherry Agent](../../advanced-basic/agent.md)** |
-| 定时执行、跨平台消息推送 | **Cherry Agent + [定时任务](../../advanced-basic/scheduled-tasks.md) + [频道](../../advanced-basic/agent-channels.md)** |
+| 场景                       | 推荐                                                                                                                   |
+| ------------------------ | -------------------------------------------------------------------------------------------------------------------- |
+| 个性化"角色"快速对话（写作、翻译、技术问答等） | **助手库**                                                                                                              |
+| 让 AI 自主调用工具、读写文件、跨步骤完成任务 | [**Cherry Agent**](../../advanced-basic/agent.md)                                                                    |
+| 定时执行、跨平台消息推送             | **Cherry Agent +** [**定时任务**](/broken/pages/CEjy3AjDD84FmqCpupam) **+** [**频道**](/broken/pages/UbNiAoRqD0PpkxJGCUEn) |
 
 ***
 
