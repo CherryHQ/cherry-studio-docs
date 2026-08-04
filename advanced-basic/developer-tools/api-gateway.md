@@ -1,12 +1,10 @@
-# API 网关
+# 🌉 API 网关
 
 API 网关把 Cherry Studio 已配置的模型能力通过 OpenAI 和 Anthropic 兼容的 HTTP API 提供给本机程序。它也是 Agent 运行所需的内部服务。
 
 路径：【设置】→【API 网关】。
 
-图中：① 打开【API 网关】；② 查看用途说明；③ 查看并控制运行状态；④ 管理 API 密钥和授权标头。
-
-<figure><img src="../.gitbook/assets/clipboard (7).png" alt="API 网关设置：包含运行状态、URL、端口、API 密钥和授权标头"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/clipboard (7).png" alt="API 网关的运行状态、地址、端口和密钥区域"><figcaption><p>启动前先检查端口；外部程序连接时再复制 URL 和授权信息。</p></figcaption></figure>
 
 ## Agent 使用与外部调用要区分
 

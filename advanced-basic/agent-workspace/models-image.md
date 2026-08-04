@@ -1,4 +1,4 @@
-# 模型分工与 Agent 绘画
+# 🎨 模型分工与 Agent 绘画
 
 一个 Agent 可以使用三种文本模型角色，并通过全局绘画模型调用【生成图片】工具。先用简单配置跑通任务，再按需要拆分模型角色。
 
@@ -10,7 +10,7 @@
 | Plan 模型  | 拆解复杂任务与制定计划      | 先与主模型相同，确认确有需要再拆分 |
 | Small 模型 | 简单判断、分类和格式化      | 先与主模型相同，避免过早增加变量  |
 
-配置路径：左侧导航【工作】→ 打开 Agent 菜单→编辑→【基础设置】。
+配置路径：左侧导航【工作】→ 打开 Agent 菜单→【编辑】→【基础】。
 
 {% hint style="warning" %}
 切换正在进行中的任务模型时，后续回复的连贯性可能变化。已经开始生成的回复不会因配置变化而中断，新模型从下一条消息开始使用。
@@ -30,7 +30,7 @@ Agent 绘画使用的是 Cherry Studio 的全局绘画模型，不是 Agent 的�
 {% step %}
 ### 2. 检查 Agent 的图片工具
 
-打开 Agent 编辑窗口→【工具】→【内置工具】，确认【生成图片】处于启用状态。
+打开 Agent 编辑窗口→【内置工具】，确认【生成图片】处于启用状态。
 {% endstep %}
 
 {% step %}
@@ -50,9 +50,7 @@ Agent 绘画使用的是 Cherry Studio 的全局绘画模型，不是 Agent 的�
 {% endstep %}
 {% endstepper %}
 
-图中：① 打开【默认模型】；② 确认当前页面；③ 找到【绘画模型】；④ 选择支持图片生成的模型。
-
-<figure><img src="../../.gitbook/assets/clipboard (3).png" alt="默认模型设置：绘画模型位于页面底部，可选择支持图片生成的模型"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/clipboard (17).png" alt="默认模型设置中的绘画模型选择"><figcaption></figcaption></figure>
 
 ## 常用写法
 

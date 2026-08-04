@@ -1,14 +1,8 @@
----
-icon: file-signature
----
-
-# 问题反馈与功能建议
+# 💡 问题反馈与功能建议
 
 Cherry Studio 提供三种反馈方式：由 Cherry Assistant 引导提交、前往 GitHub Issue、中文界面的反馈问卷。入口是【设置】→【关于我们】→【反馈】。
 
-图中：① 反馈方式选择；② 【使用 Agent 提交】；③ 【GitHub Issue】；④ 【反馈问卷】。
-
-<figure><img src="../.gitbook/assets/clipboard (8).png" alt="反馈方式选择：可使用 Agent 提交、创建 GitHub Issue 或填写反馈问卷"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/clipboard (8).png" alt="Cherry Studio 反馈方式选择，Agent 提交为推荐入口"><figcaption><p>不确定该怎样整理问题时，优先选择【使用 Agent 提交】。</p></figcaption></figure>
 
 ## 选哪一种
 
@@ -50,7 +44,7 @@ Cherry Studio 提供三种反馈方式：由 Cherry Assistant 引导提交、前
 
 Bug 报告应包含平台、当前版本、问题描述、复现步骤、期望结果和相关日志；功能建议应先讲清当前痛点，再说明期望方案和考虑过的替代办法。
 
-<table data-view="cards"><thead><tr><th></th><th></th></tr></thead><tbody><tr><td><a href="https://github.com/CherryHQ/cherry-studio/issues/new/choose">创建 Issue</a></td><td>选择 Bug、功能建议或讨论模板</td></tr><tr><td><a href="https://github.com/CherryHQ/cherry-studio/issues">搜索已有 Issue</a></td><td>查看是否已有相同问题</td></tr><tr><td><a href="https://github.com/CherryHQ/cherry-studio/discussions">Discussions</a></td><td>用法讨论和开放问题</td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>创建 Issue</strong></td><td>选择 Bug、功能建议或讨论模板</td><td><a href="https://github.com/CherryHQ/cherry-studio/issues/new/choose">https://github.com/CherryHQ/cherry-studio/issues/new/choose</a></td></tr><tr><td><strong>搜索已有 Issue</strong></td><td>查看是否已有相同问题</td><td><a href="https://github.com/CherryHQ/cherry-studio/issues">https://github.com/CherryHQ/cherry-studio/issues</a></td></tr><tr><td><strong>Discussions</strong></td><td>用法讨论和开放问题</td><td><a href="https://github.com/CherryHQ/cherry-studio/discussions">https://github.com/CherryHQ/cherry-studio/discussions</a></td></tr></tbody></table>
 
 {% hint style="danger" %}
 GitHub Issue 是公开内容。不要上传 API Key、机器人 Token、完整诊断包、私人聊天、公司数据或未脱敏日志。需要私密诊断时优先使用应用内 Agent 反馈流程。

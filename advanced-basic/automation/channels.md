@@ -1,4 +1,4 @@
-# 频道
+# 💬 频道
 
 频道把一个 Agent 连接到外部消息平台。当前可配置飞书、Telegram、QQ、微信、Discord 和 Slack；各平台需要的机器人凭据和会话标识不同。
 
@@ -10,9 +10,7 @@
 
 【设置】→【频道】→选择平台→【添加】。
 
-图中：① 打开【频道】；② 选择平台；③ 点击【添加】。
-
-<figure><img src="../../.gitbook/assets/clipboard (4).png" alt="频道设置：左侧选择飞书等平台，右侧可添加频道"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/clipboard (4).png" alt="频道设置中的平台列表和添加入口"><figcaption><p>先选择平台，再从右侧添加并配置频道。</p></figcaption></figure>
 
 {% stepper %}
 {% step %}

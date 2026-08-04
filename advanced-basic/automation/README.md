@@ -1,4 +1,8 @@
-# 自动化与外部触达
+---
+description: 频道、定时任务、心跳与运行记录
+---
+
+# ⚙️ 自动化与外部触达
 
 Cherry Studio 的自动化不是单独的一组“机器人设置”。Agent 负责完成工作，频道负责从外部平台收发消息，定时任务负责在指定时间启动 Agent，心跳则用于让 Agent 周期检查自己的持续工作。
 
@@ -11,7 +15,7 @@ Cherry Studio 的自动化不是单独的一组“机器人设置”。Agent 负
 | 定时任务  | 在明确时间运行 Agent   | 日报、周报、一次性提醒        |
 | 心跳    | Agent 按间隔检查持续工作 | 监控长流程、检查待处理事项      |
 
-图中：① 【频道】；② 【定时任务】；③ 绑定 Agent；④ 运行记录和通知目标。
+<figure><img src="../../.gitbook/assets/clipboard (4).png" alt="频道设置中的平台列表和添加入口"><figcaption><p>频道负责把 Agent 接到飞书、Telegram、QQ、微信、Discord 或 Slack。</p></figcaption></figure>
 
 ## 正确的配置顺序
 

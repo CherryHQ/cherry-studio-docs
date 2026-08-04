@@ -1,10 +1,6 @@
----
-icon: seal-question
----
+# ❓ 常见问题
 
-# 常见问题
-
-### 模型与连接
+## 模型与连接
 
 <details>
 
@@ -30,7 +26,7 @@ icon: seal-question
 
 </details>
 
-### Agent 与工具
+## Agent 与工具
 
 <details>
 
@@ -52,7 +48,7 @@ icon: seal-question
 
 <summary>已经安装技能，为什么 Agent 不使用？</summary>
 
-打开 Agent 编辑窗口→【工具】→【技能】确认已启用，然后新发一条消息。安装和绑定是两个步骤。
+打开 Agent 编辑窗口→【技能】确认已启用，然后新发一条消息。安装和绑定是两个步骤。
 
 </details>
 
@@ -60,17 +56,17 @@ icon: seal-question
 
 <summary>怎样让 Agent 生成图片？</summary>
 
-先在【设置】→【默认模型】→【绘画模型】选择可用模型，再到 Agent 编辑窗口→【工具】→【内置工具】确认【生成图片】已启用。回到【工作】直接描述图片即可。
+先在【设置】→【默认模型】→【绘画模型】选择可用模型，再到 Agent 编辑窗口→【内置工具】确认【生成图片】已启用。回到【工作】直接描述图片即可。
 
 </details>
 
-### MCP 与自动化
+## MCP 与自动化
 
 <details>
 
 <summary>MCP 服务器已启动，Agent 仍找不到工具怎么办？</summary>
 
-确认服务器详情中能看到工具，再检查 Agent【工具】→【MCP】是否绑定。配置改变从下一条消息生效；工具关闭或权限未批准也会阻止调用。
+确认服务器详情中能看到工具，再检查 Agent【MCP】是否绑定。配置改变从下一条消息生效；工具关闭或权限未批准也会阻止调用。
 
 </details>
 
@@ -90,7 +86,7 @@ icon: seal-question
 
 </details>
 
-### 数据与窗口
+## 数据与窗口
 
 <details>
 

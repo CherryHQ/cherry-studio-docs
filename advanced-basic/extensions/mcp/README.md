@@ -1,4 +1,4 @@
-# MCP 与外部工具
+# 🔌 MCP 与外部工具
 
 MCP 是让 Agent 使用外部工具和资源的连接方式。Cherry Studio 可以管理 MCP 服务器、内置服务器、服务市场和部分服务商入口，再把已连接的服务器绑定给指定 Agent。
 
@@ -14,10 +14,6 @@ MCP 是让 Agent 使用外部工具和资源的连接方式。Cherry Studio 可�
 ## 添加服务器
 
 路径：【设置】→【MCP】→【MCP 服务器】→【添加】。
-
-图中：① 打开【MCP】；② 进入【MCP 服务器】；③ 点击【添加】。
-
-<figure><img src="../../.gitbook/assets/clipboard (2).png" alt="MCP 设置页面：左侧为工具入口，中间为 MCP 服务器导航，右上角为添加服务器按钮"><figcaption></figcaption></figure>
 
 {% stepper %}
 {% step %}
@@ -41,7 +37,7 @@ MCP 是让 Agent 使用外部工具和资源的连接方式。Cherry Studio 可�
 {% step %}
 ### 4. 绑定到 Agent
 
-打开【工作】→ Agent 菜单→编辑→【工具】→【MCP】，启用该服务器。未启动的服务器无法正常绑定使用。
+打开【工作】→ Agent 菜单→【编辑】→【MCP】，启用该服务器。未启动的服务器无法正常绑定使用。
 {% endstep %}
 {% endstepper %}
 

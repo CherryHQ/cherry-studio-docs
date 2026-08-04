@@ -1,4 +1,8 @@
-# Agent 工作区
+---
+description: 从创建到交付的完整工作方式
+---
+
+# 🤖 Agent 工作区
 
 Agent 适合处理有明确目标、需要使用工具或文件、可能持续多个步骤的任务。入口是左侧导航【工作】，不是旧版教程中的顶部标签。
 
@@ -16,9 +20,7 @@ Agent 适合处理有明确目标、需要使用工具或文件、可能持续�
 | 输入区   | 发送目标、附件并调用工具      | 发起任务或追加要求         |
 | 右侧面板  | 查看状态、文件、子任务和消息流   | 跟踪长任务、检查产物或排错     |
 
-图中：① 打开【工作】；② 选择 Agent；③ 在顶部切换 Agent、模型和工作目录。
-
-<figure><img src="../../.gitbook/assets/clipboard (1).png" alt="Agent 工作区：左侧为 Agent 与任务列表，顶部可切换 Agent、模型和工作目录"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/clipboard (16).png" alt="Agent 工作区中的 Agent、模型、工作目录和右侧面板"><figcaption></figcaption></figure>
 
 ## 开始一个任务
 
