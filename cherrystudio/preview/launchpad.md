@@ -6,6 +6,8 @@ icon: grid
 
 启动台集中展示 Cherry Studio 的常用功能入口。点击顶部标签栏右侧的 **+**，即可打开新的启动台标签页；关闭最后一个标签页时，也会自动回到启动台。
 
+![启动台中的九个内置应用入口](../../.gitbook/assets/cherry-v2-launchpad-overview-zh-cn.png)
+
 ## 默认应用
 
 当前启动台包含 9 个内置应用：
