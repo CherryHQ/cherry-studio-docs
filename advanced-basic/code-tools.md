@@ -1,101 +1,84 @@
 ---
-description: Tools
+description: 安装、配置和启动 AI 编程 CLI 工具
 icon: code
 ---
 
-# Code Tools 使用教程
+# 编码搭档
 
-Code Tools 可以在 Cherry Studio 内直接启动和管理多种 AI 编程 CLI 工具，例如 Claude Code、Qwen Code、Gemini CLI、OpenAI Codex、iFlow CLI、GitHub Copilot CLI、Kimi CLI 和 OpenCode。本教程以 Cherry Studio v1.9.9 为例，引导你完成一次完整配置。
+编码搭档用于在 Cherry Studio 中安装、配置和启动 AI 编程 CLI 工具。不同工具可以使用 Cherry Studio 中已有的模型服务，也可以通过工具自己的账号登录。
 
-***
+## 打开编码搭档
 
-### 操作步骤
+点击顶部标签栏右侧的 **+** 打开启动台，然后选择 **编码搭档**。如果已经将它固定到侧边栏，也可以直接点击侧边栏入口。
 
-#### 1. 确认 Cherry Studio 版本
+当前支持以下工具：
 
-请先确认 Cherry Studio 已升级到当前正式版。你可以前往 [客户端下载](../cherrystudio/download.md)、[GitHub Releases](https://github.com/CherryHQ/cherry-studio/releases) 或 [官方网站](https://cherryai.com.cn/download) 下载安装包。
+- Claude Code
+- OpenAI Codex
+- Gemini CLI
+- OpenCode
+- Qwen Code
+- Kimi Code
+- Qoder CLI
+- GitHub Copilot CLI
+- OpenClaw
 
-#### 2. 进入 Code Tools 界面
+## 安装或更新 CLI
 
-顶部导航模式：点击界面顶部的 `+` 号打开启动台，然后点击 **Code**。
+1. 从左侧选择一个 CLI 工具。
+2. 查看页面顶部的版本状态。
+3. 如果显示 **未安装**，点击 **安装**。
+4. 如果检测到新版本，可以点击 **升级**。
 
-<figure><img src="../.gitbook/assets/cherry-code-tools-new-tab.png" alt=""><figcaption><p>点击顶部 + 打开启动台</p></figcaption></figure>
+Cherry Studio 也能识别部分已经安装在系统中的 CLI。安装或升级失败时，页面会保留错误信息，可展开查看详情后重试。
 
-<figure><img src="../.gitbook/assets/cherry-code-tools-launchpad-code.png" alt=""><figcaption><p>在启动台中点击 Code</p></figcaption></figure>
+## 配置服务商和模型
 
-{% hint style="info" %}
-左侧导航模式下，可直接点击左侧导航栏里的 **Code** 按钮进入该页面。
-{% endhint %}
+CLI 安装完成后，页面会显示与该工具兼容的服务商。
 
-#### 3. 选择 CLI 工具
+1. 找到要使用的服务商，点击 **配置**。
+2. 选择模型，并按需调整该工具的参数。
+3. 保存后点击 **启用**。
 
-根据你的需求和所持有的 API Key，选择一个要使用的 Code Agent 工具。目前支持以下几种：
+服务商列表会根据 CLI 支持的接口类型自动筛选。如果没有看到某个服务商，请先前往 **设置 → 模型服务**，确认服务商已经启用并配置了兼容端点。
 
-* **Claude Code**
-* **Qwen Code**
-* **Gemini CLI**
-* **OpenAI Codex**
-* **iFlow CLI**
-* **GitHub Copilot CLI**
-* **Kimi CLI**
-* **OpenCode**
+> **提示：** **Qoder CLI** 和 **GitHub Copilot CLI** 使用各自的登录流程，不需要在 Cherry Studio 中选择服务商或模型。首次使用前，请先按对应 CLI 的提示完成登录。
 
-<figure><img src="../.gitbook/assets/cherry-code-tools-cli-select.png" alt=""><figcaption><p>选择 Code Agent 工具</p></figcaption></figure>
+页面中的 **统一网关** 可以让外部 CLI 使用 Cherry Studio 已配置的模型。启用后需要保持 Cherry Studio 运行，否则 CLI 无法连接本地网关。
 
-#### 4. 选择 Agent 调用的模型
+## 启动 CLI
 
-在模型下拉列表中，选择与所选 CLI 工具兼容的模型。 _（详细的模型兼容性说明，请参考下方的“重要注意事项”）_
+完成安装和配置后：
 
-<figure><img src="../.gitbook/assets/cherry-code-tools-model-select.png" alt=""><figcaption><p>选择模型</p></figcaption></figure>
+1. 点击页面顶部的 **启动**。
+2. 点击 **选择文件夹**，指定 CLI 的工作目录。
+3. 如果页面列出了多个终端，选择要使用的终端应用。
+4. 再次点击 **启动**。
 
-#### 5. 指定工作目录
+CLI 会以所选文件夹作为工作目录，并按照自身权限访问其中的文件。启动前请确认目录中不包含不希望 CLI 读取或修改的敏感文件。
 
-点击 **选择目录** 按钮，为 Agent 指定一个工作目录。Agent 将拥有访问此目录下所有文件和子目录的权限，以便理解项目上下文、读取文件和执行代码。
+## 各工具的配置差异
 
-<figure><img src="../.gitbook/assets/cherry-code-tools-workdir.png" alt=""><figcaption><p>指定工作目录</p></figcaption></figure>
+| 工具 | 配置要点 |
+| --- | --- |
+| Claude Code | 使用支持 Anthropic Messages 接口的服务商 |
+| OpenAI Codex | 使用支持 OpenAI Responses 接口的服务商 |
+| Gemini CLI | 使用 Gemini 服务或兼容的 Gemini 接口 |
+| OpenCode | 可使用 Anthropic、OpenAI 兼容或 Gemini 接口 |
+| Qwen Code、Kimi Code | 使用 OpenAI 兼容接口 |
+| Qoder CLI、GitHub Copilot CLI | 通过 CLI 自带的账号登录流程认证 |
+| OpenClaw | 在编码搭档中配置模型、启动或停止网关，并打开 Dashboard |
 
-#### 6. 设置环境变量
+第三方 API 网关即使提供同名模型，也不一定兼容对应 CLI 的认证方式和接口协议。配置失败时，应优先检查服务商的端点类型，而不是只检查模型名称。
 
-* **自动配置**：你在第 4 步（模型）和第 5 步（工作目录）中的选择，会自动生成相应的环境变量。
-* **自定义添加**：如果你的 Agent 或项目需要其他特定的环境变量（例如 `PROXY_URL` 等），可以在此区域自定义添加。
+## 后续管理
 
-<figure><img src="../.gitbook/assets/cherry-code-tools-env-vars.png" alt=""><figcaption><p>环境变量配置</p></figcaption></figure>
+回到对应工具页面，可以升级或移除由 Cherry Studio 管理的 CLI。工具运行后，页面还会显示停止操作；OpenClaw 运行时可以从这里打开 Dashboard。
 
-#### 7. 更新选项
-
-* **内置可执行文件**：Cherry Studio 已集成上述 Code Agent 的可执行文件，通常无需手动安装 CLI。
-* **自动更新**：如果希望 CLI 工具始终保持最新版本，可以勾选 **检查更新并安装最新版本**。勾选后，每次启动时程序都会联网检查并更新可执行工具包。
-
-<figure><img src="../.gitbook/assets/cherry-code-tools-update-option.png" alt=""><figcaption><p>更新选项</p></figcaption></figure>
-
-#### 8. 启动 Agent
-
-所有配置完成后，点击 **启动** 按钮。Cherry Studio 会自动调用系统自带的 Terminal（终端）工具，并在其中加载好所有环境变量，然后运行你选择的 Code Agent。现在你可以在弹出的终端窗口中与 AI Agent 交互。
-
-<figure><img src="../.gitbook/assets/cherry-code-tools-terminal.png" alt=""><figcaption><p>在终端中运行 Code Agent</p></figcaption></figure>
-
-***
-
-### 重要注意事项
-
-1. **模型兼容性说明**：
-   * **Claude Code**：需要选择支持 Anthropic API Endpoint 格式的模型。优先使用 Claude 系列模型；部分官方平台也会提供 Claude Code 兼容模型，具体以模型下拉列表和服务商说明为准。
-   * **Qwen Code**：支持 OpenAI Chat Completions API 格式的模型，推荐使用 Qwen Coder 系列模型以获得更好的代码生成效果。
-   * **Gemini CLI**：需要选择 Google Gemini 系列模型。
-   * **OpenAI Codex**：需要选择 OpenAI / Codex 兼容的 GPT 系列模型，具体以当前账号和模型服务商支持为准。
-   * **iFlow CLI** / **GitHub Copilot CLI** / **Kimi CLI** / **OpenCode**：需选择与其平台协议相互兼容的 API 模型，通常由对应的服务商官方渠道或 API 聚合网关提供。
-   * **注意**：第三方网关（如 One API、New API 等）即使能转发同名模型，也不一定兼容对应 CLI 的认证方式、Endpoint 格式或工具调用协议。若启动失败，请优先使用该 CLI 官方支持的模型服务。
-2. **依赖与环境冲突**：
-   * Cherry Studio 内部集成了独立的 Node.js 运行环境、Code Agent 可执行文件及环境变量配置，旨在提供一个开箱即用的纯净环境。
-   * 如果你在启动 Agent 时遇到依赖冲突或奇怪的错误，可以考虑暂时 **卸载或禁用系统内已安装的相关依赖**（如全局安装的 Node.js 或特定工具链），以排除冲突。
-3. **API Token 消耗警告**：
-   * **Code Agent 对 API Token 的消耗量非常大**。在处理复杂任务时，Agent 为了思考、规划和生成代码，可能会产生大量请求，导致 Token 快速消耗。
-   * 请务必根据自己的 API 额度和预算，**量力而为**，密切关注 Token 使用情况，以防止预算超支。
-
-希望本教程能帮助你快速上手 Cherry Studio 强大的 Code Agent 功能！
+> **注意：** AI 编程 CLI 可能读取、修改或执行工作目录中的内容，并消耗较多模型额度。请在启动前确认工作目录、权限设置和服务商计费规则。
 
 ***
 
-### 💡 获取帮助与提交反馈
+### 获取帮助与提交反馈
 
-如果您在配置或使用过程中遇到任何疑问、Bug 或有功能改进建议，请参考 [反馈与建议](../question-contact/suggestions.md) 中提供的官方渠道。
+如果在配置或使用过程中遇到问题，或有功能改进建议，请通过[反馈与建议](../question-contact/suggestions.md)页面提供的官方渠道联系我们。

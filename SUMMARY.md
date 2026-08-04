@@ -101,7 +101,7 @@
   * [配置 Dify 知识库](advanced-basic/mcp/dify.md)
   * [常见问题](advanced-basic/mcp/faq.md)
 * [调用链使用教程](advanced-basic/trace.md)
-* [Code Tools 使用教程](advanced-basic/code-tools.md)
+* [编码搭档](advanced-basic/code-tools.md)
 * [API 服务器](advanced-basic/api-server.md)
 * [技能](pre-basic/settings/skills.md)
 * [频道](advanced-basic/agent-channels.md)
