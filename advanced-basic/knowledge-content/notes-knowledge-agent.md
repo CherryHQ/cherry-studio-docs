@@ -10,7 +10,7 @@ icon: note-sticky
 
 笔记支持文件夹、全文搜索和 Markdown 编辑，可在源码、实时预览和阅读模式之间切换。也可以导入 Markdown 文件或文件夹，并导出为 PDF、Word 等格式。
 
-<figure><img src="../../.gitbook/assets/clipboard (18).png" alt="笔记中的文件夹、新建、编辑预览和导出入口"><figcaption><p>笔记可以按文件夹整理，并在编辑、预览与导出之间切换。</p></figcaption></figure>
+<figure><img src="https://3562065924-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F0Ut5BptC3t8CtSU1UWpM%2Fuploads%2Fgit-blob-1556b2ada948cbeaa85cfc1baf7ce585d8fcdc4e%2Fcherry-v2-guide-notes-filled.png?alt=media" alt="笔记中按文件夹整理的差旅资料与出差审批流程正文"><figcaption><p>① 左侧按主题管理笔记；② 在中间工作区编辑和检查完整内容。</p></figcaption></figure>
 
 ### 应用案例：把制度笔记变成可查询资料
 
