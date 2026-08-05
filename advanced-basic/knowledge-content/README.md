@@ -7,6 +7,8 @@ icon: brain
 
 知识库、笔记、绘画和翻译不是彼此孤立的工具。它们分别负责整理资料、沉淀内容、制作视觉素材和处理多语言文件，并且都能继续交给 Agent 使用。
 
+<figure><img src="../../.gitbook/assets/clipboard (29).png" alt="资料进入知识库、通过召回测试、交给 Agent 并形成文字图片或译文的流程图"><figcaption><p>先用真实问题通过召回测试，再让 Agent 根据资料制作报告、译文或配图。</p></figcaption></figure>
+
 ## 四个入口怎么分工
 
 | 入口    | 适合做什么                  | 常见下一步          |
@@ -20,7 +22,7 @@ icon: brain
 如果目标是“用这些资料完成一份交付物”，直接在【工作】中告诉 Agent 资料在哪里、要产出什么。需要人工整理资料库、调整图片或逐段确认译文时，再进入对应模块。
 {% endhint %}
 
-<figure><img src="../../.gitbook/assets/clipboard (9).png" alt="新建知识库时的名称、嵌入模型和保存入口"><figcaption><p>新建知识库时先命名，再选择用于检索的嵌入模型。</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/clipboard (9) (1).png" alt="新建知识库时的名称、嵌入模型和保存入口"><figcaption><p>新建知识库时先命名，再选择用于检索的嵌入模型。</p></figcaption></figure>
 
 ## 从资料到交付物
 
@@ -44,4 +46,4 @@ icon: brain
 {% endstep %}
 {% endstepper %}
 
-<table data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>📚 构建知识库与召回测试</strong></td><td>从导入资料到验证检索</td><td><a href="https://app.gitbook.com/o/Cj2FUNM601oTkFwFFsXJ/s/0Ut5BptC3t8CtSU1UWpM/advanced-basic/knowledge-content/knowledge-base">https://app.gitbook.com/o/Cj2FUNM601oTkFwFFsXJ/s/0Ut5BptC3t8CtSU1UWpM/advanced-basic/knowledge-content/knowledge-base</a></td></tr><tr><td><strong>📝 笔记、知识库与 Agent</strong></td><td>让草稿、资料和任务顺畅流转</td><td><a href="https://app.gitbook.com/o/Cj2FUNM601oTkFwFFsXJ/s/0Ut5BptC3t8CtSU1UWpM/advanced-basic/knowledge-content/notes-knowledge-agent">https://app.gitbook.com/o/Cj2FUNM601oTkFwFFsXJ/s/0Ut5BptC3t8CtSU1UWpM/advanced-basic/knowledge-content/notes-knowledge-agent</a></td></tr><tr><td><strong>🖼️ 图片生成、编辑与增强</strong></td><td>从模板出发制作可用图片</td><td><a href="https://app.gitbook.com/o/Cj2FUNM601oTkFwFFsXJ/s/0Ut5BptC3t8CtSU1UWpM/advanced-basic/knowledge-content/painting-workflow">https://app.gitbook.com/o/Cj2FUNM601oTkFwFFsXJ/s/0Ut5BptC3t8CtSU1UWpM/advanced-basic/knowledge-content/painting-workflow</a></td></tr><tr><td><strong>🌐 文件、图片与长文翻译</strong></td><td>处理不同格式并复用历史结果</td><td><a href="https://app.gitbook.com/o/Cj2FUNM601oTkFwFFsXJ/s/0Ut5BptC3t8CtSU1UWpM/advanced-basic/knowledge-content/translation-workflow">https://app.gitbook.com/o/Cj2FUNM601oTkFwFFsXJ/s/0Ut5BptC3t8CtSU1UWpM/advanced-basic/knowledge-content/translation-workflow</a></td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>构建知识库与召回测试</strong></td><td>从导入资料到验证检索</td><td><a href="https://app.gitbook.com/o/Cj2FUNM601oTkFwFFsXJ/s/0Ut5BptC3t8CtSU1UWpM/advanced-basic/knowledge-content/knowledge-base">https://app.gitbook.com/o/Cj2FUNM601oTkFwFFsXJ/s/0Ut5BptC3t8CtSU1UWpM/advanced-basic/knowledge-content/knowledge-base</a></td></tr><tr><td><strong>笔记、知识库与 Agent</strong></td><td>让草稿、资料和任务顺畅流转</td><td><a href="https://app.gitbook.com/o/Cj2FUNM601oTkFwFFsXJ/s/0Ut5BptC3t8CtSU1UWpM/advanced-basic/knowledge-content/notes-knowledge-agent">https://app.gitbook.com/o/Cj2FUNM601oTkFwFFsXJ/s/0Ut5BptC3t8CtSU1UWpM/advanced-basic/knowledge-content/notes-knowledge-agent</a></td></tr><tr><td><strong>图片生成、编辑与增强</strong></td><td>从模板出发制作可用图片</td><td><a href="https://app.gitbook.com/o/Cj2FUNM601oTkFwFFsXJ/s/0Ut5BptC3t8CtSU1UWpM/advanced-basic/knowledge-content/painting-workflow">https://app.gitbook.com/o/Cj2FUNM601oTkFwFFsXJ/s/0Ut5BptC3t8CtSU1UWpM/advanced-basic/knowledge-content/painting-workflow</a></td></tr><tr><td><strong>文件、图片与长文翻译</strong></td><td>处理不同格式并复用历史结果</td><td><a href="https://app.gitbook.com/o/Cj2FUNM601oTkFwFFsXJ/s/0Ut5BptC3t8CtSU1UWpM/advanced-basic/knowledge-content/translation-workflow">https://app.gitbook.com/o/Cj2FUNM601oTkFwFFsXJ/s/0Ut5BptC3t8CtSU1UWpM/advanced-basic/knowledge-content/translation-workflow</a></td></tr></tbody></table>

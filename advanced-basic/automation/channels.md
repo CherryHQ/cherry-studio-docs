@@ -10,11 +10,11 @@ icon: comment-dots
 推荐先在【工作】中告诉 Agent：“为当前 Agent 配置飞书频道，用于接收群消息并发送任务结果。”Agent 会按用途询问必要信息，比直接面对所有平台字段更快。需要精确修改时，再使用【设置】→【频道】。
 {% endhint %}
 
+<figure><img src="../../.gitbook/assets/clipboard (4).png" alt="频道设置中的飞书、Telegram、QQ、微信、Discord 和 Slack 平台入口"><figcaption><p>先选择要接入的平台，再点击【添加】；不同平台需要准备的账号和凭据不同。</p></figcaption></figure>
+
 ## 手动配置路径
 
 【设置】→【频道】→选择平台→【添加】。
-
-<figure><img src="../../.gitbook/assets/clipboard (4).png" alt="频道设置中的平台列表和添加入口"><figcaption><p>先选择平台，再从右侧添加并配置频道。</p></figcaption></figure>
 
 {% stepper %}
 {% step %}
@@ -24,6 +24,8 @@ icon: comment-dots
 {% endstep %}
 
 {% step %}
+<figure><img src="../../.gitbook/assets/clipboard (3).png" alt="飞书频道配置中的 Agent、应用凭据、允许聊天范围和权限模式"><figcaption><p>先绑定经过测试的 Agent，并限制允许的聊天范围；凭据和权限只开放完成任务所需的部分。</p></figcaption></figure>
+
 ### 2. 绑定 Agent 和工作区
 
 选择已经验证可用的 Agent，并为频道消息指定工作区。外部消息会在这个上下文中执行，不要选择包含无关敏感文件的目录。

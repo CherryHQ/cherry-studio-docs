@@ -14,7 +14,7 @@ icon: newspaper
 * 已连接并限制消息范围的频道；
 * 一个工作日定时任务。
 
-<figure><img src="../../.gitbook/assets/clipboard (4).png" alt="频道设置中的平台列表和添加入口"><figcaption><p>日报先绑定经过测试的频道，再把它选作定时任务的通知目标。</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/clipboard (4) (1).png" alt="频道设置中的平台列表和添加入口"><figcaption><p>日报先绑定经过测试的频道，再把它选作定时任务的通知目标。</p></figcaption></figure>
 
 <figure><img src="../../.gitbook/assets/clipboard (14).png" alt="Agent 状态面板中的子任务、后台命令和上下文用量"><figcaption><p>首次自动运行后，从 Agent 状态和运行记录检查任务是否真正完成。</p></figcaption></figure>
 

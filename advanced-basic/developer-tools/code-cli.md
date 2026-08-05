@@ -6,6 +6,8 @@ icon: terminal
 
 【编码搭档】用于安装、配置和启动常见编程命令行工具。Cherry Studio 会识别自己的托管安装，也会检测系统登录环境中已经可用的 CLI；系统工具仍由原来的包管理器维护。
 
+<figure><img src="../../.gitbook/assets/clipboard (6).png" alt="编码搭档页面中的安装状态、版本检查和 Code CLI 提供方"><figcaption><p>先确认工具已经安装且版本可用，再配置模型连接和项目目录。</p></figcaption></figure>
+
 ## 页面能做什么
 
 * 检查工具是否安装以及是否有可用更新；

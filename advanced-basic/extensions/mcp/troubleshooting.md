@@ -6,6 +6,8 @@ icon: stethoscope
 
 MCP 问题通常出在四个环节：服务器没有启动、运行环境不完整、认证或地址错误、Agent 没有绑定。按顺序排查，比反复重装更快。
 
+<figure><img src="../../../.gitbook/assets/clipboard (34).png" alt="从服务器启动、运行环境、认证网络到 Agent 绑定和调用链的 MCP 排错流程图"><figcaption><p>按顺序检查，先确认服务器本身能运行，最后再看 Agent 调用链。</p></figcaption></figure>
+
 ## 快速判断
 
 | 现象               | 先检查                 | 常见原因                 |

@@ -7,6 +7,8 @@ icon: toolbox
 
 Cherry Studio 的主窗口由侧边栏、标签页和内容区组成。对话话题与 Agent 任务可以同时开在多个标签页，也可以拆成独立窗口；输入区工具栏则可以按使用习惯调整。
 
+<figure><img src="../../.gitbook/assets/clipboard (36).png" alt="标签页右键菜单中的固定标签页、从新窗口打开和关闭其他标签页"><figcaption><p>需要同时查看资料和任务时，把其中一个标签页从新窗口打开，主窗口继续保留全局线索。</p></figcaption></figure>
+
 ## 适合使用独立窗口的场景
 
 * 一边保留资料对话，一边运行 Agent 任务；
@@ -25,7 +27,7 @@ Cherry Studio 的主窗口由侧边栏、标签页和内容区组成。对话话
 | 回到主窗口  | 独立窗口顶部【回到主窗口】        | 把标签页重新接回主窗口    |
 | 自定义工具栏 | 输入区【+】→【自定义工具栏】      | 调整常用输入工具的位置    |
 
-<figure><img src="../../.gitbook/assets/clipboard (6).png" alt="标签页菜单中的从新窗口打开操作"><figcaption><p>在标签页菜单中选择【从新窗口打开】，即可把当前内容拆到独立窗口。</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/clipboard (6) (1).png" alt="标签页菜单中的从新窗口打开操作"><figcaption><p>在标签页菜单中选择【从新窗口打开】，即可把当前内容拆到独立窗口。</p></figcaption></figure>
 
 ## 推荐布局
 

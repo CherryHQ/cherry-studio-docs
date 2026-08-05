@@ -13,9 +13,9 @@ icon: file-lines
 * 知识库：提供制度、术语或历史资料；
 * 右侧【文件】：检查原稿与产物。
 
-<figure><img src="../../.gitbook/assets/clipboard (10).png" alt="知识库中的文件、文件夹、笔记和网址来源入口"><figcaption><p>制度、术语和历史资料可以作为知识库来源，原稿仍放在独立工作目录。</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/clipboard (10) (1).png" alt="知识库中的文件、文件夹、笔记和网址来源入口"><figcaption><p>制度、术语和历史资料可以作为知识库来源，原稿仍放在独立工作目录。</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/clipboard (11).png" alt="知识库召回测试的问题、返回片段和历史记录"><figcaption><p>正式审阅前，用真实问题检查知识库能否返回正确片段。</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/clipboard (11) (1).png" alt="知识库召回测试的问题、返回片段和历史记录"><figcaption><p>正式审阅前，用真实问题检查知识库能否返回正确片段。</p></figcaption></figure>
 
 ## 操作流程
 

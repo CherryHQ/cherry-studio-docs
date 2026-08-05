@@ -65,7 +65,7 @@ Agent 绘画使用的是 Cherry Studio 的全局绘画模型，不是 Agent 的�
 | 社交媒体图   | 平台比例、焦点、文字要求  | “正方形，中心主体，不生成文字”      |
 | 基于参考图修改 | 附件、要保留和要改变的部分 | “保留人物与构图，只替换背景和色调”    |
 
-<figure><img src="../../.gitbook/assets/clipboard (3).png" alt="Agent 对话中启用生成图片工具并选择绘画模型"><figcaption><p>绘画模型配置完成后，Agent 可以在任务里直接生成图片；需要模板化批量创作时再进入【绘画】。</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/clipboard (3) (1).png" alt="Agent 对话中启用生成图片工具并选择绘画模型"><figcaption><p>绘画模型配置完成后，Agent 可以在任务里直接生成图片；需要模板化批量创作时再进入【绘画】。</p></figcaption></figure>
 
 ## 选择建议
 

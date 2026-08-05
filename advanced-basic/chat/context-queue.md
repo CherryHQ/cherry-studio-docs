@@ -6,6 +6,8 @@ icon: layer-group
 
 对话越长，模型需要阅读的历史越多。上下文用量接近上限时，较早内容可能无法继续参与回答。与其不断追加一句“继续”，不如定期整理结论和未决问题。
 
+<figure><img src="../../.gitbook/assets/clipboard (5).png" alt="助手高级设置中的模型温度和上下文管理选项"><figcaption><p>需要改变回答风格或长对话处理方式时再调整高级设置；不确定时先保留当前值。</p></figcaption></figure>
+
 ## 管理长对话
 
 {% stepper %}

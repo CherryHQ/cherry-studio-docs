@@ -6,6 +6,8 @@ icon: shield-halved
 
 Agent 能执行文件、终端和网络操作，也能调用子智能体与后台任务。权限决定“是否要先问”，记忆决定“下次是否还知道”，右侧状态面板则告诉你“现在正在做什么”。
 
+<figure><img src="../../.gitbook/assets/clipboard (2).png" alt="Agent 可选的仅规划、默认、自动审批和完全访问权限模式"><figcaption><p>日常使用从默认权限开始；仅规划适合先看方案，完全访问只用于边界清楚且可恢复的任务。</p></figcaption></figure>
+
 ## 权限模式
 
 | 模式       | 行为            | 适用场景          | 注意事项             |

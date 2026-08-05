@@ -38,6 +38,8 @@ icon: wand-magic-sparkles
 {% endstep %}
 {% endstepper %}
 
+<figure><img src="../../.gitbook/assets/clipboard.png" alt="Agent 编辑窗口中的主模型、Plan 模型和 Small 模型设置"><figcaption><p>先选好主模型；只有任务确实需要规划分工或轻量处理时，再配置 Plan 模型和 Small 模型。</p></figcaption></figure>
+
 ## 创建后继续配置
 
 在 Agent 列表打开菜单并选择编辑，可以调整以下内容：

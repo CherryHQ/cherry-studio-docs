@@ -10,6 +10,8 @@ icon: graduation-cap
 需要某种工作方法时，先在【工作】中告诉 Agent 你的目标，并让它帮你查找或安装合适的技能。只有需要检查来源、批量管理或从本地导入时，再打开【设置】→【技能】。
 {% endhint %}
 
+<figure><img src="../../.gitbook/assets/clipboard (32).png" alt="根据任务需要选择知识库、技能、内置工具或 MCP 的关系图"><figcaption><p>重复使用的方法适合沉淀为技能；资料、内置操作和外部系统分别使用对应入口。</p></figcaption></figure>
+
 ## 安装技能
 
 手动路径：【设置】→【技能】。

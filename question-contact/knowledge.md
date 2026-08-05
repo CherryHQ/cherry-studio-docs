@@ -6,6 +6,8 @@ icon: book
 
 这页解释 Cherry Studio 中最常见的术语，帮助你判断应该改模型、改提示词，还是增加工具。
 
+<figure><img src="../.gitbook/assets/clipboard (30).png" alt="Agent、模型、知识库、技能、内置工具、MCP、API Key 和 Token 的关系图"><figcaption><p>Agent 组织任务，模型生成内容；知识库、技能和工具分别提供资料、方法和操作能力。</p></figcaption></figure>
+
 ## 模型服务、模型与 API Key
 
 * 模型服务：提供模型调用的厂商、云平台或本地运行环境；

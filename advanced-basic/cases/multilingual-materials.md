@@ -6,6 +6,8 @@ icon: globe
 
 市场团队收到一套包含文档、截图和产品术语的资料，需要翻译成另一种语言，同时保持名称、数字和格式一致。术语表和小范围试译能减少整份材料返工。
 
+<figure><img src="../../.gitbook/assets/clipboard (29).png" alt="资料经过知识库检索、Agent 整理并形成译文或内容交付物的工作流图"><figcaption><p>先确认资料检索准确，再由 Agent 统一术语和输出格式，最后人工核对关键内容。</p></figcaption></figure>
+
 ## 操作流程
 
 {% stepper %}

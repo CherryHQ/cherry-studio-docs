@@ -6,6 +6,8 @@ icon: book-open
 
 文档贡献包括修正错误路径、补充新功能教程、改善截图与示例、调整目录和翻译。目标不是“写得更多”，而是让读者按页面步骤能够完成任务。
 
+<figure><img src="../.gitbook/assets/clipboard (27).png" alt="从明确文档问题、完成小范围修改到预览和提交评审的贡献流程图"><figcaption><p>文档贡献同样要保持范围聚焦，预览通过后再提交 Change Request。</p></figcaption></figure>
+
 ## 选择提交方式
 
 * 已有 GitBook 编辑权限：在对应语言空间创建 Change Request；

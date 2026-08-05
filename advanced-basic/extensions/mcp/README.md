@@ -6,6 +6,8 @@ icon: network-wired
 
 MCP 是让 Agent 使用外部工具和资源的连接方式。Cherry Studio 可以管理 MCP 服务器、内置服务器、服务市场和部分服务商入口，再把已连接的服务器绑定给指定 Agent。
 
+<figure><img src="../../../.gitbook/assets/clipboard (12).png" alt="MCP 设置页面中的服务器列表、搜索和添加入口"><figcaption><p>在【设置】→【MCP】统一查看服务器状态；先让一个服务器单独运行正常，再绑定给 Agent。</p></figcaption></figure>
+
 ## 什么时候需要 MCP
 
 * Agent 需要调用 Cherry Studio 内置工具之外的服务；
@@ -14,6 +16,8 @@ MCP 是让 Agent 使用外部工具和资源的连接方式。Cherry Studio 可�
 * 需要把工具、资源或提示词以统一方式提供给模型。
 
 只需要固定流程时用技能，只需要检索 Cherry Studio 知识库时直接绑定知识库，不必为了“更高级”而额外搭建 MCP。
+
+<figure><img src="../../../.gitbook/assets/clipboard (10).png" alt="MCP 服务器的快速创建、从 JSON 导入和手动创建方式"><figcaption><p>有服务方提供的 JSON 时可直接导入；没有现成配置时再手动填写命令或地址。</p></figcaption></figure>
 
 ## 添加服务器
 

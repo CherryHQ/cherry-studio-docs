@@ -6,7 +6,9 @@ icon: lightbulb
 
 Cherry Studio 提供三种反馈方式：由 Cherry Assistant 引导提交、前往 GitHub Issue、中文界面的反馈问卷。入口是【设置】→【关于我们】→【反馈】。
 
-<figure><img src="../.gitbook/assets/clipboard (8).png" alt="Cherry Studio 反馈方式选择，Agent 提交为推荐入口"><figcaption><p>不确定该怎样整理问题时，优先选择【使用 Agent 提交】。</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/clipboard (28).png" alt="根据使用疑问、可复现问题、功能建议和材料整理需求选择反馈入口的流程图"><figcaption><p>不会整理材料时优先让 Agent 生成反馈草稿；公开提交前先删除隐私信息。</p></figcaption></figure>
+
+<figure><img src="../.gitbook/assets/clipboard (8).png" alt="应用内反馈窗口中的使用 Agent 提交、GitHub Issue 和反馈问卷"><figcaption><p>不确定问题类型时选择【使用 Agent 提交】；已整理好公开信息时再选择 GitHub Issue。</p></figcaption></figure>
 
 ## 选哪一种
 
@@ -15,6 +17,8 @@ Cherry Studio 提供三种反馈方式：由 Cherry Assistant 引导提交、前
 | 【使用 Agent 提交】  | 不确定问题类型、希望自动整理信息   | Cherry Assistant 诊断、脱敏预览，并在确认后提交或生成诊断包 |
 | 【GitHub Issue】 | 已确认要公开跟踪 Bug 或功能建议 | 打开官方 Issue 类型选择页                       |
 | 【反馈问卷】         | 中文用户提交一般反馈         | 打开官方飞书问卷                               |
+
+<figure><img src="../.gitbook/assets/clipboard (7).png" alt="Cherry Assistant 反馈 Agent 的对话区、模型选择和状态面板"><figcaption><p>在反馈 Agent 中说明目标、实际结果和复现步骤，再按提示决定是否提供诊断信息。</p></figcaption></figure>
 
 ## 推荐：使用 Agent 提交
 

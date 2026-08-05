@@ -8,7 +8,7 @@ API 网关把 Cherry Studio 已配置的模型能力通过 OpenAI 和 Anthropic 
 
 路径：【设置】→【API 网关】。
 
-<figure><img src="../../.gitbook/assets/clipboard (7).png" alt="API 网关的运行状态、地址、端口和密钥区域"><figcaption><p>启动前先检查端口；外部程序连接时再复制 URL 和授权信息。</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/clipboard (1).png" alt="API 网关设置中的运行状态、连接地址、端口和访问凭据"><figcaption><p>外部程序连接前先检查状态和端口；密钥只提供给可信的本机程序或受控网络。</p></figcaption></figure>
 
 ## Agent 使用与外部调用要区分
 

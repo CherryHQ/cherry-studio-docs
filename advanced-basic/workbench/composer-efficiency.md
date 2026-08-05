@@ -6,6 +6,8 @@ icon: keyboard
 
 当前的对话和 Agent 输入区使用统一工具面板。常用按钮可以固定到工具栏，不常用的能力仍可从【+】面板找到。
 
+<figure><img src="../../.gitbook/assets/clipboard (21).png" alt="对话输入区中的加号按钮、工具面板和自定义工具栏入口"><figcaption><p>从输入区【+】打开工具面板；常用工具固定到工具栏，不常用的能力仍可从这里找到。</p></figcaption></figure>
+
 ## 自定义输入工具栏
 
 路径：任意对话或 Agent 输入区→【+】→【自定义工具栏】。

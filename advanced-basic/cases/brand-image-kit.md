@@ -8,7 +8,7 @@ icon: images
 
 <figure><img src="../../.gitbook/assets/clipboard (17).png" alt="设置中的默认绘画模型选择"><figcaption><p>先配置并验证绘画模型，Agent 的【生成图片】和【绘画】工作流才有可用连接。</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/clipboard (3).png" alt="Agent 中的生成图片工具与绘画模型"><figcaption><p>先让 Agent 生成一张样图确认方向，再进入批量制作。</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/clipboard (3) (1).png" alt="Agent 中的生成图片工具与绘画模型"><figcaption><p>先让 Agent 生成一张样图确认方向，再进入批量制作。</p></figcaption></figure>
 
 ## 准备材料
 

@@ -34,15 +34,15 @@ icon: book-open
 {% endstep %}
 {% endstepper %}
 
-<figure><img src="../../.gitbook/assets/clipboard (9).png" alt="新建知识库时的名称、嵌入模型和保存入口"><figcaption><p>新建知识库时先填写名称并选择可用的嵌入模型。</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/clipboard (9) (1).png" alt="新建知识库时的名称、嵌入模型和保存入口"><figcaption><p>新建知识库时先填写名称并选择可用的嵌入模型。</p></figcaption></figure>
 
 图中：① 添加文件；② 添加文件夹；③ 添加笔记；④ 添加网址。
 
-<figure><img src="../../.gitbook/assets/clipboard (10).png" alt="知识库中的文件、文件夹、笔记和网址来源入口"><figcaption><p>知识库可以加入文件、文件夹、笔记和网址。</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/clipboard (10) (1).png" alt="知识库中的文件、文件夹、笔记和网址来源入口"><figcaption><p>知识库可以加入文件、文件夹、笔记和网址。</p></figcaption></figure>
 
 图中：① 召回测试入口；② 测试问题；③ 返回片段与相关度；④ 历史记录。
 
-<figure><img src="../../.gitbook/assets/clipboard (11).png" alt="知识库召回测试的问题、返回片段和历史记录"><figcaption><p>召回测试用于确认真实问题能否找到正确片段。</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/clipboard (11) (1).png" alt="知识库召回测试的问题、返回片段和历史记录"><figcaption><p>召回测试用于确认真实问题能否找到正确片段。</p></figcaption></figure>
 
 ## RAG 设置怎么理解
 
@@ -55,7 +55,7 @@ RAG 指“先检索资料，再让模型作答”。常见设置控制切分长�
 | 返回数量  | 一次提供多少候选片段     | 从少量结果开始  | 漏掉关键资料时增加，杂讯太多时减少   |
 | 相关度门槛 | 过滤不相干内容        | 用召回测试决定  | 无关结果多时提高，正确片段被过滤时降低 |
 
-<figure><img src="../../.gitbook/assets/clipboard (12).png" alt="知识库 RAG 的分段、返回和过滤设置"><figcaption><p>只有召回结果不稳定时，再按资料结构调整 RAG 设置。</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/clipboard (12) (1).png" alt="知识库 RAG 的分段、返回和过滤设置"><figcaption><p>只有召回结果不稳定时，再按资料结构调整 RAG 设置。</p></figcaption></figure>
 
 ### 应用案例：建立内部制度问答库
 

@@ -6,6 +6,8 @@ icon: compass
 
 一个容易回答的问题，不一定很长，但要让别人知道你在做什么、实际发生了什么，以及怎样才能看到同样的问题。
 
+<figure><img src="../.gitbook/assets/clipboard (28).png" alt="根据使用疑问、可复现问题和功能建议选择提问或反馈入口的流程图"><figcaption><p>先判断是使用疑问、可复现问题还是功能建议，再准备对应材料。</p></figcaption></figure>
+
 ## 先选合适入口
 
 | 你的情况         | 推荐入口                           |

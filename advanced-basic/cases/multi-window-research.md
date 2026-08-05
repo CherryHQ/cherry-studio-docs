@@ -42,7 +42,7 @@ icon: window-maximize
 {% endstep %}
 {% endstepper %}
 
-<figure><img src="../../.gitbook/assets/clipboard (6).png" alt="标签页菜单中的从新窗口打开操作"><figcaption><p>从标签页菜单把 Agent 任务拆到独立窗口。</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/clipboard (6) (1).png" alt="标签页菜单中的从新窗口打开操作"><figcaption><p>从标签页菜单把 Agent 任务拆到独立窗口。</p></figcaption></figure>
 
 ## 推荐组合与完成标准
 

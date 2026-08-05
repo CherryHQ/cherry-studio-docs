@@ -11,6 +11,8 @@ icon: comments
 如果任务需要连续读写本地文件、调用多种工具或长时间运行，改用【工作】中的 Agent。对话更适合讨论、比较和定稿，Agent 更适合执行。
 {% endhint %}
 
+<figure><img src="../../.gitbook/assets/clipboard (26).png" alt="对话进阶中从完整问题到比较、分支和产物的选择流程图"><figcaption><p>问题和输出要求先写完整；只有需要交叉验证时再增加模型比较或消息分支。</p></figcaption></figure>
+
 ## 按目标选择能力
 
 | 目标            | 推荐做法                  |
@@ -45,4 +47,4 @@ icon: comments
 {% endstep %}
 {% endstepper %}
 
-<table data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>🔀 多模型对比与消息分支</strong></td><td>比较答案，同时保留探索路径</td><td><a href="https://app.gitbook.com/o/Cj2FUNM601oTkFwFFsXJ/s/0Ut5BptC3t8CtSU1UWpM/advanced-basic/chat/model-compare-branches">https://app.gitbook.com/o/Cj2FUNM601oTkFwFFsXJ/s/0Ut5BptC3t8CtSU1UWpM/advanced-basic/chat/model-compare-branches</a></td></tr><tr><td><strong>🧵 长对话、上下文与排队消息</strong></td><td>让长对话保持清楚、可控</td><td><a href="https://app.gitbook.com/o/Cj2FUNM601oTkFwFFsXJ/s/0Ut5BptC3t8CtSU1UWpM/advanced-basic/chat/context-queue">https://app.gitbook.com/o/Cj2FUNM601oTkFwFFsXJ/s/0Ut5BptC3t8CtSU1UWpM/advanced-basic/chat/context-queue</a></td></tr><tr><td><strong>📦 产物、引用与导出</strong></td><td>检查并带走真正有用的结果</td><td><a href="https://app.gitbook.com/o/Cj2FUNM601oTkFwFFsXJ/s/0Ut5BptC3t8CtSU1UWpM/advanced-basic/chat/artifacts-export">https://app.gitbook.com/o/Cj2FUNM601oTkFwFFsXJ/s/0Ut5BptC3t8CtSU1UWpM/advanced-basic/chat/artifacts-export</a></td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>多模型对比与消息分支</strong></td><td>比较答案，同时保留探索路径</td><td><a href="https://app.gitbook.com/o/Cj2FUNM601oTkFwFFsXJ/s/0Ut5BptC3t8CtSU1UWpM/advanced-basic/chat/model-compare-branches">https://app.gitbook.com/o/Cj2FUNM601oTkFwFFsXJ/s/0Ut5BptC3t8CtSU1UWpM/advanced-basic/chat/model-compare-branches</a></td></tr><tr><td><strong>长对话、上下文与排队消息</strong></td><td>让长对话保持清楚、可控</td><td><a href="https://app.gitbook.com/o/Cj2FUNM601oTkFwFFsXJ/s/0Ut5BptC3t8CtSU1UWpM/advanced-basic/chat/context-queue">https://app.gitbook.com/o/Cj2FUNM601oTkFwFFsXJ/s/0Ut5BptC3t8CtSU1UWpM/advanced-basic/chat/context-queue</a></td></tr><tr><td><strong>产物、引用与导出</strong></td><td>检查并带走真正有用的结果</td><td><a href="https://app.gitbook.com/o/Cj2FUNM601oTkFwFFsXJ/s/0Ut5BptC3t8CtSU1UWpM/advanced-basic/chat/artifacts-export">https://app.gitbook.com/o/Cj2FUNM601oTkFwFFsXJ/s/0Ut5BptC3t8CtSU1UWpM/advanced-basic/chat/artifacts-export</a></td></tr></tbody></table>

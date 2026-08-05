@@ -6,6 +6,8 @@ icon: clock
 
 定时任务用于“在确定时间做一件事”，心跳用于“每隔一段时间检查是否有事要做”。二者都依赖可用的 Agent 和工作区。
 
+<figure><img src="../../.gitbook/assets/clipboard (25).png" alt="从触发条件到 Agent 执行、发送通知和查看运行记录的自动化流程图"><figcaption><p>先确认触发方式和通知目标，再让 Agent 创建；保存后立即测试一次。</p></figcaption></figure>
+
 ## 优先让 Agent 创建
 
 在【工作】中直接说明计划通常更快：

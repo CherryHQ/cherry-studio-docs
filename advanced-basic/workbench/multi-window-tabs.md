@@ -6,6 +6,8 @@ icon: window-restore
 
 对话话题、Agent 任务和普通标签页都能从当前窗口拆出。操作不会复制内容，只是改变显示位置。
 
+<figure><img src="../../.gitbook/assets/clipboard (36).png" alt="标签页右键菜单中的固定标签页、从新窗口打开和关闭其他标签页"><figcaption><p>右键目标标签页选择【从新窗口打开】；经常使用的页面可以先固定，避免误关。</p></figcaption></figure>
+
 ## 从话题或任务打开
 
 {% stepper %}
@@ -31,8 +33,6 @@ icon: window-restore
 ## 从标签页拆出
 
 右键主窗口顶部标签页，选择【从新窗口打开】。这个操作会把该标签页移到独立窗口，并从主窗口标签栏移除。
-
-<figure><img src="../../.gitbook/assets/clipboard (6).png" alt="标签页菜单中的从新窗口打开操作"><figcaption><p>右键目标标签页，再选择【从新窗口打开】。</p></figcaption></figure>
 
 ## 标签页常用操作
 

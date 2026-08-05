@@ -6,6 +6,8 @@ icon: code
 
 代码贡献从一个清楚的问题开始。修复缺陷前先确认能够复现；增加功能前先说明用户场景和预期行为。范围较大的改动，建议先在 GitHub Issue 或 Discussion 中对齐方向。
 
+<figure><img src="../.gitbook/assets/clipboard (27).png" alt="从说明问题、最小改动、本地验证到提交评审和合并的贡献流程图"><figcaption><p>一次贡献只解决一个清楚的问题，先完成本地验证，再提交评审。</p></figcaption></figure>
+
 ## 开始前
 
 <table data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>Cherry Studio 仓库</strong></td><td>源码、README 和开发入口</td><td><a href="https://github.com/CherryHQ/cherry-studio">https://github.com/CherryHQ/cherry-studio</a></td></tr><tr><td><strong>GitHub Issues</strong></td><td>缺陷、功能建议和待解决问题</td><td><a href="https://github.com/CherryHQ/cherry-studio/issues">https://github.com/CherryHQ/cherry-studio/issues</a></td></tr><tr><td><strong>贡献指南</strong></td><td>分支、测试、签署和评审要求</td><td><a href="https://github.com/CherryHQ/cherry-studio/blob/main/CONTRIBUTING.md">https://github.com/CherryHQ/cherry-studio/blob/main/CONTRIBUTING.md</a></td></tr><tr><td><strong>行为准则</strong></td><td>社区协作边界</td><td><a href="https://github.com/CherryHQ/cherry-studio/blob/main/CODE_OF_CONDUCT.md">https://github.com/CherryHQ/cherry-studio/blob/main/CODE_OF_CONDUCT.md</a></td></tr></tbody></table>

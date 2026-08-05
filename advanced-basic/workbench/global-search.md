@@ -6,6 +6,8 @@ icon: magnifying-glass
 
 全局搜索用于在一个入口里查找消息、对话、任务、助手、Agent 和知识库。它适合“记得内容，不记得放在哪里”的情况。
 
+<figure><img src="../../.gitbook/assets/clipboard (9).png" alt="全局搜索中的关键词、搜索类型和更新时间筛选"><figcaption><p>先输入有辨识度的关键词，再按对话、知识库等类型和更新时间缩小范围。</p></figcaption></figure>
+
 ## 使用方法
 
 {% stepper %}

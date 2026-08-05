@@ -6,9 +6,9 @@ icon: lock
 
 人事团队想让同事查询现行制度，但不希望 Agent 用常识补写答案。这个案例把资料范围、召回测试和回答规则放在一起；找不到内容时，Agent 应明确说明。
 
-<figure><img src="../../.gitbook/assets/clipboard (9).png" alt="新建知识库时的名称、嵌入模型和保存入口"><figcaption><p>为单一主题建立独立知识库，避免现行资料与过期资料混在一起。</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/clipboard (9) (1).png" alt="新建知识库时的名称、嵌入模型和保存入口"><figcaption><p>为单一主题建立独立知识库，避免现行资料与过期资料混在一起。</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/clipboard (12).png" alt="知识库 RAG 的分段、返回和过滤设置"><figcaption><p>只有召回结果不稳定时，再根据资料结构调整 RAG 设置。</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/clipboard (12) (1).png" alt="知识库 RAG 的分段、返回和过滤设置"><figcaption><p>只有召回结果不稳定时，再根据资料结构调整 RAG 设置。</p></figcaption></figure>
 
 ## 操作流程
 

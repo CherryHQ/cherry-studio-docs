@@ -6,6 +6,8 @@ icon: timeline
 
 调用链用于查看一次对话或 Agent 任务内部发生的模型请求、工具调用和 MCP 交互。它适合排错和性能分析，不是日常聊天必须开启的功能。
 
+<figure><img src="../../.gitbook/assets/clipboard (34).png" alt="从运行环境、认证网络到 Agent 绑定和调用链的 MCP 排错流程图"><figcaption><p>排查 MCP 调用时先确认服务器和认证，再用调用链判断请求是否进入 Agent 与工具执行阶段。</p></figcaption></figure>
+
 ## 开启方式
 
 {% stepper %}
