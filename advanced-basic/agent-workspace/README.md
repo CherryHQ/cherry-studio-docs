@@ -20,7 +20,7 @@ Agent 适合处理有明确目标、需要使用工具或文件、可能持续�
 | 输入区   | 发送目标、附件并调用工具      | 发起任务或追加要求         |
 | 右侧面板  | 查看状态、文件、子任务和消息流   | 跟踪长任务、检查产物或排错     |
 
-<figure><img src="../../.gitbook/assets/clipboard (16).png" alt="Agent 工作区中的 Agent、模型、工作目录和右侧面板"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/clipboard (16).png" alt="Agent 工作区中的 Agent、模型、工作目录和右侧面板"><figcaption><p>开始任务前先确认 Agent、模型、工作目录和右侧面板。</p></figcaption></figure>
 
 ## 开始一个任务
 

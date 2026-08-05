@@ -24,7 +24,7 @@
 {% endstep %}
 {% endstepper %}
 
-<figure><img src="../../.gitbook/assets/clipboard (22).png" alt="对话中的模型选择器和多个模型入口"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/clipboard (22).png" alt="对话中的模型选择器和多个模型入口"><figcaption><p>从模型选择器选择多个模型，再用同一个问题比较差异。</p></figcaption></figure>
 
 {% hint style="warning" %}
 一次选择多个模型会分别发起请求。涉及费用、速度或敏感资料时，先用短问题确认连接和效果，再处理长材料。
@@ -34,7 +34,7 @@
 
 找到想重新探索的那条消息，打开消息菜单并选择分支操作。新分支会保留此前上下文，之后的消息与原路线分开记录。使用分支管理器可以在不同路线之间切换、比较和返回。
 
-<figure><img src="../../.gitbook/assets/clipboard (20).png" alt="对话分支管理器中的新建和切换分支入口"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/clipboard (20).png" alt="对话分支管理器中的新建和切换分支入口"><figcaption><p>用独立分支追问不同假设，保留主线结论不被打乱。</p></figcaption></figure>
 
 ### 应用案例：评审两个发布方案
 

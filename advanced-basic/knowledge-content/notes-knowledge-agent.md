@@ -6,7 +6,7 @@
 
 笔记支持文件夹、全文搜索和 Markdown 编辑，可在源码、实时预览和阅读模式之间切换。也可以导入 Markdown 文件或文件夹，并导出为 PDF、Word 等格式。
 
-<figure><img src="../../.gitbook/assets/clipboard (18).png" alt="笔记中的文件夹、新建、编辑预览和导出入口"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/clipboard (18).png" alt="笔记中的文件夹、新建、编辑预览和导出入口"><figcaption><p>笔记可以按文件夹整理，并在编辑、预览与导出之间切换。</p></figcaption></figure>
 
 ## 内容怎样流转
 

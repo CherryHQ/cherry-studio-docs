@@ -4,7 +4,7 @@
 
 新建向导分为【基础信息】、【设定人格】、【技能】和【知识库】四步。名称与主模型是创建所需的基础项，其他内容可以之后补充。
 
-<figure><img src="../../.gitbook/assets/clipboard (19).png" alt="创建 Agent 的四步向导、主模型和用途说明"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/clipboard (19).png" alt="创建 Agent 的四步向导、主模型和用途说明"><figcaption><p>创建向导先完成名称和主模型，技能与知识库可按用途添加。</p></figcaption></figure>
 
 ## 四步怎么填写
 

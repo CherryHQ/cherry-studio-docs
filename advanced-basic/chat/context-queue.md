@@ -28,7 +28,7 @@
 
 模型仍在回复时，可以把下一条要求加入队列。适合追加一个明确的后续动作，例如“完成后再整理成三条结论”。如果新消息会改变正在执行的方向，应先停止当前生成，再重新说明目标。
 
-<figure><img src="../../.gitbook/assets/clipboard (21).png" alt="对话输入区的快捷面板和消息队列入口"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/clipboard (21).png" alt="对话输入区的快捷面板和消息队列入口"><figcaption><p>输入区的快捷面板集中放置附件、工具和排队消息。</p></figcaption></figure>
 
 {% hint style="info" %}
 队列不是自动化计划。它只负责当前话题里的后续消息；需要在固定时间运行，请使用【定时任务】。

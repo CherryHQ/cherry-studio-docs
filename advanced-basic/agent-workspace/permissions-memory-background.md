@@ -42,7 +42,7 @@ Agent 的记忆跟随 Agent，而不是跟随某个任务或工作目录。它�
 * 工具调用的成功、失败和数量；
 * 上下文用量和已声明产物。
 
-<figure><img src="../../.gitbook/assets/clipboard (14).png" alt="Agent 状态面板中的子任务、后台命令和上下文用量"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/clipboard (14).png" alt="Agent 状态面板中的子任务、后台命令和上下文用量"><figcaption><p>长任务可在【状态】中查看产物、子任务、后台命令和上下文用量。</p></figcaption></figure>
 
 ## 用户案例：持续维护项目规范
 

@@ -50,7 +50,7 @@ Agent 绘画使用的是 Cherry Studio 的全局绘画模型，不是 Agent 的�
 {% endstep %}
 {% endstepper %}
 
-<figure><img src="../../.gitbook/assets/clipboard (17).png" alt="默认模型设置中的绘画模型选择"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/clipboard (17).png" alt="默认模型设置中的绘画模型选择"><figcaption><p>在默认模型中选好绘画模型后，Agent 才能使用【生成图片】。</p></figcaption></figure>
 
 ## 常用写法
 
@@ -60,6 +60,16 @@ Agent 绘画使用的是 Cherry Studio 的全局绘画模型，不是 Agent 的�
 | 产品草图    | 视角、材质、背景、限制   | “等距视角，白色背景，不出现文字”     |
 | 社交媒体图   | 平台比例、焦点、文字要求  | “正方形，中心主体，不生成文字”      |
 | 基于参考图修改 | 附件、要保留和要改变的部分 | “保留人物与构图，只替换背景和色调”    |
+
+<figure><img src="../../.gitbook/assets/clipboard (3).png" alt="Agent 对话中启用生成图片工具并选择绘画模型"><figcaption><p>绘画模型配置完成后，Agent 可以在任务里直接生成图片；需要模板化批量创作时再进入【绘画】。</p></figcaption></figure>
+
+## 选择建议
+
+| 需求          | 建议做法              | 适用场景       | 注意事项         |
+| ----------- | ----------------- | ---------- | ------------ |
+| 偶尔为文档配一张图   | 在 Agent 中启用【生成图片】 | 报告、提案、笔记配图 | 先确认尺寸、风格和用途  |
+| 反复使用同一套画面参数 | 使用【绘画】模板          | 品牌图、系列封面   | 保存模板前先验证一次结果 |
+| 编辑已有图片      | 在【绘画】中提供参考图和修改要求  | 改色、扩图、局部调整 | 保留原图，避免不可逆覆盖 |
 
 ## 用户案例：一份发布稿配三张图
 

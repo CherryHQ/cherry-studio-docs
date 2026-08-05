@@ -6,11 +6,15 @@ description: 从目标出发选择当前能力
 
 进阶教程不按设置菜单逐项罗列，而是从“想完成什么工作”出发。先选最接近的目标，再进入对应教程。
 
+<figure><img src="../.gitbook/assets/clipboard (23).png" alt="从目标选择 Cherry Studio 工作入口的流程图"><figcaption><p>先选主入口完成最小任务；结果稳定后，再加入知识库、技能、MCP、频道或定时任务。</p></figcaption></figure>
+
 {% hint style="success" %}
 需要配置一套教程、频道、定时任务或扩展能力时，优先在【工作】中告诉 Agent 你的目标。Agent 可以帮助判断缺少什么并带你完成常见配置；需要核对账号、密钥或精确参数时，再到【设置】手动调整。
 {% endhint %}
 
-<figure><img src="../.gitbook/assets/clipboard (13).png" alt="Cherry Studio 启动台的九个主要入口"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/clipboard (13).png" alt="Cherry Studio 启动台的九个主要入口"><figcaption><p>左侧启动台提供九个主要入口，选择与任务最接近的一个开始。</p></figcaption></figure>
+
+图表说明：先按目标选择主要入口，流程稳定后再加入技能、MCP、频道或定时任务。
 
 ## 按目标选择入口
 
