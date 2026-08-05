@@ -6,8 +6,6 @@ icon: folder
 
 运营同事要把一批零散资料整理成索引、摘要和交付文件。为了避免误改原件，需要把 Agent 的工作目录、可修改范围和验收方式提前说清楚。
 
-<figure><img src="../../.gitbook/assets/clipboard (14).png" alt="Agent 状态面板中的任务进度、产物和后台操作"><figcaption><p>交付前同时核对文件和状态面板，不只看最后一句回复。</p></figcaption></figure>
-
 ## 适合的任务
 
 * 把零散资料整理成目录和索引；
