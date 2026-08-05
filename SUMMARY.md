@@ -5,8 +5,9 @@
 * [项目简介](README.md)
 * [客户端下载](cherrystudio/download.md)
 * [安装教程](cherry-studio/installation/README.md)
-  * [Windows](cherry-studio/installation/windows.md)
-  * [macOS](cherry-studio/installation/macos.md)
+  * [Windows 安装](cherry-studio/installation/windows.md)
+  * [macOS 安装](cherry-studio/installation/macos.md)
+  * [Linux](cherry-studio/installation/linux.md)
   * [升级与降级](cherry-studio/installation/upgrade-downgrade.md)
 * [功能介绍](cherrystudio/preview/README.md)
   * [启动台](cherrystudio/preview/launchpad.md)
@@ -143,6 +144,7 @@
 ## 问题 & 反馈 <a href="#question-contact" id="question-contact"></a>
 
 * [常见问题](question-contact/questions.md)
+* [版本升级与降级](question-contact/version-switching.md)
 * [如何高效提问](question-contact/ask.md)
 * [AI 基础知识](question-contact/knowledge.md)
 * [问题反馈与功能建议](question-contact/suggestions.md)

@@ -3,40 +3,28 @@ description: macOS 版本安装教程
 icon: apple
 ---
 
-# macOS
+# macOS 安装
 
-1. 首先到官网下载页面点击下载 Mac 版本，或点击下方直达
+## 1. 确认芯片类型并下载
 
-请注意下载 **自己 Mac 对应的芯片版本**
+打开[官方下载页](https://cherryai.com.cn/download/v2)。Apple 芯片（M 系列）选择 **macOS · ARM64**；Intel Mac 选择页面下方的 **Intel 芯片** 下载项。
 
-{% hint style="info" %}
-如果不知道自己的 Mac 应当使用什么芯片版本：
+![Cherry Studio 官方下载页的 macOS Apple 芯片下载选项](https://3562065924-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F0Ut5BptC3t8CtSU1UWpM%2Fuploads%2FLQNWYQOvDTEl1xeIG7o0%2Fcherry-v2-download-macos-zh-cn.jpg?alt=media\&token=c0daa78f-c48f-43e8-83ff-665bf321ed02)
 
-* 点击 Mac 左上角菜单栏 
-* 在展开菜单中点击关于本机
-* 在弹出窗口中查看处理器信息
+_官网默认显示 Apple 芯片下载选项_
 
-如果为 Intel 芯片则下载 Intel 版本安装包
+不确定芯片类型时，点击屏幕左上角 ** → 关于本机** 查看。
 
-如果为 Apple M\* 芯片则下载 Apple 芯片安装包
-{% endhint %}
+## 2. 安装应用
 
-{% embed url="https://cherryai.com.cn/download" %}
+1. 双击打开下载的 `.dmg` 文件；
+2. 将 Cherry Studio 拖到 **Applications（应用程序）** 文件夹；
+3. 从“应用程序”文件夹打开 Cherry Studio。
 
-2. 下载完成后点击这里
+## 首次启动提示
 
-<figure><img src="../../.gitbook/assets/Mac下载.png" alt=""><figcaption></figcaption></figure>
+如果 macOS 阻止打开应用，请先确认安装包来自官方渠道，再到“系统设置 → 隐私与安全性”中按提示允许打开。不要为来源不明的安装包关闭系统安全保护或执行终端命令。
 
-3. 拖拽图标安装
+## 下一步
 
-<figure><img src="../../.gitbook/assets/Mac拖拽安装.png" alt=""><figcaption></figcaption></figure>
-
-到启动台中寻找 Cherry Studio 图标并点击，能打开 Cherry Studio 主界面则安装成功。
-
-<figure><img src="../../.gitbook/assets/Mac安装成功.png" alt=""><figcaption></figcaption></figure>
-
-***
-
-### 💡 获取帮助与提交反馈
-
-如果您在配置或使用过程中遇到任何疑问、Bug 或有功能改进建议，请参考 [反馈与建议](../../question-contact/suggestions.md) 中提供的官方渠道。
+看到 Cherry Studio 主界面后，继续完成快速开始。
