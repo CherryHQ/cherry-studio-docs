@@ -2,169 +2,99 @@
 icon: square-info
 ---
 
-# 嵌入模型参考信息
+# 模型与检索设置
 
 {% hint style="info" %}
-为了防止出错，在本文档中部分模型的 max input 的值没有写成极限值，如：在官方给出的最大输入值为8k（未明确给出具体数值）时，本文档中给出的参考值为8191或8000等。（看不懂忽视，按照文档中的参考值填写即可）
+
+
+知识库质量由资料、解析、切分和检索共同决定。本章解释文件处理器、嵌入模型、重排序、Top K、阈值和 Chunk 参数各自影响什么。
+
+> 调优原则：先用召回测试建立基线，每次只改一项，重新索引后再用同一组问题比较。
+
+### 检索链路
+
+#### BM25 关键词检索
+
+不配置嵌入模型时，知识库仍能使用 BM25。它适合产品名、条款编号、专有名词和与原文用词接近的问题。
+
+#### 嵌入模型
+
+配置嵌入模型后，知识库会增加向量检索，用于匹配“表达不同但意思接近”的内容。嵌入模型可来自云端服务商，也可以使用本地模型。
+
+#### 重排序模型
+
+重排序会对已经找到的候选片段再次判断相关性。它通常能改善顺序，但会增加一次模型调用和等待时间。没有重排序模型时，相关度阈值不会参与同样的过滤流程。
+
+### 设置页面
+
+在知识库中打开设置，可以看到文件处理器、嵌入模型、重排序模型和 Top K。
+
+#### Top K
+
+Top K 决定最多取多少个候选片段交给后续步骤。不同版本和知识库可能显示不同当前值，因此不要把某个界面数值当成固定产品默认值。
+
+可从 6 左右作为人工调优起点：
+
+* 正确内容经常被漏掉时，适当增加。
+* 结果杂乱、回答容易混入无关内容时，适当减少。
+* 每次改变后用固定问题复测耗时和准确率。
+
+#### 相关度阈值
+
+阈值用于过滤低相关结果，并且与重排序配置有关。阈值过高会让有效片段消失；阈值过低会保留更多噪声。先确认重排序模型正常，再逐步调整。
+
+### Chunk 设置
+
+展开高级设置可以配置智能分段、分隔符、Chunk 大小和重叠。
+
+当前新建知识库界面会给出智能分段、双换行分隔符、Chunk 大小 1024 和重叠 200 的初始配置。它们适合先建立基线，不代表所有资料都应使用相同数值。
+
+设置变化只影响之后新添加的内容。现有资料需要【重新索引】才能使用新参数。
+
+### 本地嵌入模型
+
+打开【设置】→【本地模型】可下载当前提供的本地嵌入模型。
+
+本地嵌入适合隐私和离线要求较高的场景，但仍要确认文件解析、重排序和聊天模型是否也使用本地服务。
+
+### 更换嵌入模型
+
+已有资料时更换嵌入模型需要重建向量索引。先确认新模型可用并保留备份，再接受重建提示。若中途失败，恢复原模型设置后重新索引。
+
+不要在一次调优中同时更换嵌入模型、Chunk 大小和 Top K，否则无法判断变化来自哪里。
+
+### 三套起步方案
+
+#### 术语明确的小型资料库
+
+* 嵌入模型：不使用
+* 重排序：不使用
+* 重点：清理重复版本，用真实关键词做召回测试
+
+#### 表达多样的制度或知识手册
+
+* 嵌入模型：本地或云端嵌入
+* 重排序：先不使用，排序不稳定时再增加
+* 重点：保留条件与结论在同一 Chunk
+
+#### 大型研究资料库
+
+* 嵌入模型：使用
+* 重排序：候选较多时使用
+* 重点：按主题拆库、控制 Top K、维护回归问题集
+
+### 排错顺序
+
+1. 资料是否就绪、内容是否正确。
+2. Chunks 是否包含完整答案。
+3. BM25 是否能用原文关键词找到。
+4. 嵌入模型是否可用并已完成重新索引。
+5. 重排序和阈值是否过滤了有效结果。
+6. Top K 是否太小或太大。
 {% endhint %}
 
-### 火山-豆包
-
-[官方模型信息参考地址](https://console.volcengine.com/ark/region:ark+cn-beijing/model?feature=\&projectName=default\&vendor=Bytedance\&view=LIST_VIEW)
-
-| 名称                      | max input |
-| ----------------------- | --------- |
-| Doubao-embedding        | 4095      |
-| Doubao-embedding-vision | 8191      |
-| Doubao-embedding-large  | 4095      |
-
-### 阿里
-
-[官方模型信息参考地址](https://help.aliyun.com/zh/model-studio/user-guide/embedding?spm=a2c4g.11186623.0.i1)
-
-| 名称                      | max input |
-| ----------------------- | --------- |
-| text-embedding-v3       | 8192      |
-| text-embedding-v2       | 2048      |
-| text-embedding-v1       | 2048      |
-| text-embedding-async-v2 | 2048      |
-| text-embedding-async-v1 | 2048      |
-
-### OpenAI&#x20;
-
-[官方模型信息参考地址](https://platform.openai.com/docs/guides/embeddings#embedding-models)
-
-| 名称                     | max input |
-| ---------------------- | --------- |
-| text-embedding-3-small | 8191      |
-| text-embedding-3-large | 8191      |
-| text-embedding-ada-002 | 8191      |
-
-### 百度
-
-[官方模型信息参考地址](https://cloud.baidu.com/doc/WENXINWORKSHOP/s/om6070n97#%E8%AF%B7%E6%B1%82%E5%8F%82%E6%95%B0)
-
-| 名称           | max input |
-| ------------ | --------- |
-| Embedding-V1 | 384       |
-| tao-8k       | 8192      |
-
-### 智谱
-
-[官方模型信息参考地址](https://bigmodel.cn/console/modelcenter/square)
-
-| 名称          | max input |
-| ----------- | --------- |
-| embedding-2 | 1024      |
-| embedding-3 | 2048      |
-
-### 混元
-
-[官方模型信息参考地址](https://cloud.tencent.com/document/product/1729/102832)
-
-| 名称                | max input |
-| ----------------- | --------- |
-| hunyuan-embedding | 1024      |
-
-### 百川
-
-[官方模型信息参考地址](https://platform.baichuan-ai.com/docs/text-Embedding)
-
-| 名称                      | max input |
-| ----------------------- | --------- |
-| Baichuan-Text-Embedding | 512       |
-
-### together
-
-[官方模型信息参考地址](https://docs.together.ai/docs/serverless-models#embedding-models)
-
-| 名称                        | max input |
-| ------------------------- | --------- |
-| M2-BERT-80M-2K-Retrieval  | 2048      |
-| M2-BERT-80M-8K-Retrieval  | 8192      |
-| M2-BERT-80M-32K-Retrieval | 32768     |
-| UAE-Large-v1              | 512       |
-| BGE-Large-EN-v1.5         | 512       |
-| BGE-Base-EN-v1.5          | 512       |
-
-### Jina&#x20;
-
-[官方模型信息参考地址](https://jina.ai/models/jina-embedding-b-en-v1)
-
-| 名称                                 | max input |
-| ---------------------------------- | --------- |
-| jina-embedding-b-en-v1             | 512       |
-| jina-embeddings-v2-base-en         | 8191      |
-| jina-embeddings-v2-base-zh         | 8191      |
-| jina-embeddings-v2-base-de         | 8191      |
-| jina-embeddings-v2-base-code       | 8191      |
-| jina-embeddings-v2-base-es         | 8191      |
-| jina-colbert-v1-en                 | 8191      |
-| jina-reranker-v1-base-en           | 8191      |
-| jina-reranker-v1-turbo-en          | 8191      |
-| jina-reranker-v1-tiny-en           | 8191      |
-| jina-clip-v1                       | 8191      |
-| jina-reranker-v2-base-multilingual | 8191      |
-| reader-lm-1.5b                     | 256000    |
-| reader-lm-0.5b                     | 256000    |
-| jina-colbert-v2                    | 8191      |
-| jina-embeddings-v3                 | 8191      |
-
-### 硅基流动
-
-[官方模型信息参考地址](https://siliconflow.cn/zh-cn/models)
-
-| 名称                                    | max input |
-| ------------------------------------- | --------- |
-| BAAI/bge-m3                           | 8191      |
-| netease-youdao/bce-embedding-base\_v1 | 512       |
-| BAAI/bge-large-zh-v1.5                | 512       |
-| BAAI/bge-large-en-v1.5                | 512       |
-| Pro/BAAI/bge-m3                       | 8191      |
-
-### Gemini
-
-[官方模型信息参考地址](https://ai.google.dev/gemini-api/docs/models/gemini?hl=zh-cn#text-embedding)
-
-| 名称                 | max input |
-| ------------------ | --------- |
-| text-embedding-004 | 2048      |
-
-### nomic
-
-[官方模型信息参考地址](https://docs.nomic.ai/atlas/embeddings-and-retrieval/text-embedding)
-
-| 名称                    | max input |
-| --------------------- | --------- |
-| nomic-embed-text-v1   | 8192      |
-| nomic-embed-text-v1.5 | 8192      |
-| gte-multilingual-base | 8192      |
-
-### console
-
-[官方模型信息参考地址](https://console.upstage.ai/docs/capabilities/embeddings)
-
-| 名称                | max input |
-| ----------------- | --------- |
-| embedding-query   | 4000      |
-| embedding-passage | 4000      |
-
-### cohere
-
-[官方模型信息参考地址](https://docs.cohere.com/docs/models#embed)
-
-| 名称                            | max input |
-| ----------------------------- | --------- |
-| embed-english-v3.0            | 512       |
-| embed-english-light-v3.0      | 512       |
-| embed-multilingual-v3.0       | 512       |
-| embed-multilingual-light-v3.0 | 512       |
-| embed-english-v2.0            | 512       |
-| embed-english-light-v2.0      | 512       |
-| embed-multilingual-v2.0       | 256       |
-
-***
-
-### 💡 获取帮助与提交反馈
-
-如果您在配置或使用过程中遇到任何疑问、Bug 或有功能改进建议，请参考 [反馈与建议](../question-contact/suggestions.md) 中提供的官方渠道。
+| 参数       | 调大后的常见效果         | 调小后的常见效果        |
+| -------- | ---------------- | --------------- |
+| Chunk 大小 | 上下文更完整，但可能混入多个主题 | 更聚焦，但可能把条件和结论拆开 |
+| 重叠       | 相邻片段更容易保留跨边界语义   | 重复更少，但边界信息更容易丢失 |
+| 分隔符      | 按更粗的结构切分         | 按更细的结构切分        |

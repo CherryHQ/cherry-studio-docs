@@ -87,10 +87,10 @@
 
 ## 知识库教程 <a href="#knowledge-base" id="knowledge-base"></a>
 
-* [知识库教程](knowledge-base/knowledge-base.md)
-* [知识库数据](knowledge-base/data.md)
-* [嵌入模型](knowledge-base/emb-models-info.md)
-* [文档预处理](knowledge-base/document-preprocessing.md)
+* [知识库入门](knowledge-base/knowledge-base.md)
+* [数据、隐私与维护](knowledge-base/data.md)
+* [模型与检索设置](knowledge-base/emb-models-info.md)
+* [文档解析与 OCR](knowledge-base/document-preprocessing.md)
 
 ## 进阶教程 <a href="#advanced-basic" id="advanced-basic"></a>
 
