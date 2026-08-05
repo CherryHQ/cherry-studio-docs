@@ -9,6 +9,7 @@
   * [macOS 安装](cherry-studio/installation/macos.md)
   * [Linux](cherry-studio/installation/linux.md)
   * [升级与降级](cherry-studio/installation/upgrade-downgrade.md)
+  * [V1 升级到 V2：功能差异与迁移须知](cherry-studio/installation/v1-to-v2-migration.md)
 * [功能介绍](cherrystudio/preview/README.md)
   * [启动台](cherrystudio/preview/launchpad.md)
   * [对话界面](cherrystudio/preview/chat.md)
