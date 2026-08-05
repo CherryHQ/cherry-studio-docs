@@ -1,4 +1,8 @@
-# ✨ 创建 Agent 与模型分工
+---
+icon: wand-magic-sparkles
+---
+
+# 创建 Agent 与模型分工
 
 创建入口：左侧导航【工作】→【添加智能体】。
 

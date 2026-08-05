@@ -1,4 +1,8 @@
-# 🌉 API 网关
+---
+icon: bridge
+---
+
+# API 网关
 
 API 网关把 Cherry Studio 已配置的模型能力通过 OpenAI 和 Anthropic 兼容的 HTTP API 提供给本机程序。它也是 Agent 运行所需的内部服务。
 

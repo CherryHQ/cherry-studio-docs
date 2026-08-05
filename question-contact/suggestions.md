@@ -1,4 +1,8 @@
-# 💡 问题反馈与功能建议
+---
+icon: lightbulb
+---
+
+# 问题反馈与功能建议
 
 Cherry Studio 提供三种反馈方式：由 Cherry Assistant 引导提交、前往 GitHub Issue、中文界面的反馈问卷。入口是【设置】→【关于我们】→【反馈】。
 

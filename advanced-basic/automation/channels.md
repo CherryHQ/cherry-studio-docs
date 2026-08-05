@@ -1,4 +1,8 @@
-# 💬 频道
+---
+icon: comment-dots
+---
+
+# 频道
 
 频道把一个 Agent 连接到外部消息平台。当前可配置飞书、Telegram、QQ、微信、Discord 和 Slack；各平台需要的机器人凭据和会话标识不同。
 

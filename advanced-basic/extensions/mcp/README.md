@@ -1,4 +1,8 @@
-# 🔌 MCP 与外部工具
+---
+icon: network-wired
+---
+
+# MCP 与外部工具
 
 MCP 是让 Agent 使用外部工具和资源的连接方式。Cherry Studio 可以管理 MCP 服务器、内置服务器、服务市场和部分服务商入口，再把已连接的服务器绑定给指定 Agent。
 
