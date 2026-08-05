@@ -17,6 +17,8 @@ icon: file-lines
 
 <figure><img src="../../.gitbook/assets/clipboard (11) (1).png" alt="知识库召回测试的问题、返回片段和历史记录"><figcaption><p>正式审阅前，用真实问题检查知识库能否返回正确片段。</p></figcaption></figure>
 
+<figure><img src="../../.gitbook/assets/cherry-v2-guide-case-long-document-review.png" alt="Cherry Assistant 根据项目建议书内容给出范围、时间、预算、风险和验收五项审阅清单"><figcaption><p>① 输入原文和审阅标准；② 实际结果逐项指出缺口，并把不能确认的信息保留为待核对项。</p></figcaption></figure>
+
 ## 操作流程
 
 {% stepper %}

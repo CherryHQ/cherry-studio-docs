@@ -19,6 +19,8 @@ icon: folder
 
 <figure><img src="../../.gitbook/assets/clipboard (14).png" alt="Agent 状态面板中的子任务、后台命令和上下文用量"><figcaption><p>长任务先看【状态】面板是否正在执行、等待批准或已经完成。</p></figcaption></figure>
 
+<figure><img src="https://3562065924-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F0Ut5BptC3t8CtSU1UWpM%2Fuploads%2Fgit-blob-f5bee1202b5aed4675a5537b57f3a1fd9147cf23%2Fcherry-v2-guide-artifact-preview.png?alt=media" alt="Cherry Assistant 生成的发布前检查清单已经在对话中打开为网页预览"><figcaption><p>交付物生成后要真正打开检查。图中网页预览已经显示标题、检查项和建议，不是空白占位。</p></figcaption></figure>
+
 ## 操作流程
 
 {% stepper %}
