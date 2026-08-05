@@ -38,6 +38,8 @@ flowchart LR
 
 生成后不要立刻离开：先放大检查主体、边缘和多余元素，再从左侧历史切换版本。需要调整时，保留有效描述，只修改一个方向。
 
+<figure><img src="../../.gitbook/assets/cherry-v2-guide-painting-result.jpg" alt="使用 GPT-Image-2 express 生成的晨光工作台插画与历史记录"><figcaption><p>① 左侧保留本次生成的历史缩略图；② 中间显示完整成品；③ 放大检查后再下载、复制或继续编辑。</p></figcaption></figure>
+
 ## 完成一张可用图片
 
 {% stepper %}

@@ -21,6 +21,8 @@ icon: language
 
 选择【自动检测】作为源语言、【英文】作为目标语言，输入中文后点击【翻译】。结果出现后先核对“灰度”“监控指标”“回滚流程”等关键含义，再复制或保存到笔记。
 
+<figure><img src="../../.gitbook/assets/cherry-v2-guide-translation-result.png" alt="中文发布方案翻译为英文的完整结果"><figcaption><p>① 左侧保留原文；② 右侧显示译文。交付前逐项核对灰度发布、监控指标和回滚流程。</p></figcaption></figure>
+
 ### 结果出来后检查什么
 
 | 检查项   | 例子                 |

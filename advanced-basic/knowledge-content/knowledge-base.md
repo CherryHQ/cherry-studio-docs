@@ -36,13 +36,9 @@ icon: book-open
 
 <figure><img src="../../.gitbook/assets/clipboard (9) (1).png" alt="新建知识库时的名称、嵌入模型和保存入口"><figcaption><p>新建知识库时先填写名称并选择可用的嵌入模型。</p></figcaption></figure>
 
-图中：① 添加文件；② 添加文件夹；③ 添加笔记；④ 添加网址。
+<figure><img src="../../.gitbook/assets/cherry-v2-guide-knowledge-sources.png" alt="员工差旅制度知识库中已就绪的笔记来源与召回测试入口"><figcaption><p>① 三篇差旅资料均已就绪；② 点击顶部【召回测试】验证实际问题。</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/clipboard (10) (1).png" alt="知识库中的文件、文件夹、笔记和网址来源入口"><figcaption><p>知识库可以加入文件、文件夹、笔记和网址。</p></figcaption></figure>
-
-图中：① 召回测试入口；② 测试问题；③ 返回片段与相关度；④ 历史记录。
-
-<figure><img src="../../.gitbook/assets/clipboard (11) (1).png" alt="知识库召回测试的问题、返回片段和历史记录"><figcaption><p>召回测试用于确认真实问题能否找到正确片段。</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/cherry-v2-guide-knowledge-recall.png" alt="知识库对海外租车能否报销的召回测试结果"><figcaption><p>① 输入工作中真的会问到的问题；② 检查命中资料、片段内容和相关度。</p></figcaption></figure>
 
 ### 用真实问题验收召回结果
 

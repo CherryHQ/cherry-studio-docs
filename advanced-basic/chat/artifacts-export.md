@@ -12,6 +12,8 @@ icon: box-archive
 
 在【对话】中明确要求输出可预览的 HTML 后，点击消息里的产物即可在右侧打开预览。先核对页面内容和布局，再使用预览栏缩放、下载、最大化或切换到代码视图。
 
+<figure><img src="../../.gitbook/assets/cherry-v2-guide-artifact-preview.png" alt="对话中已生成的发布前检查页与右侧 HTML 预览"><figcaption><p>① 预览区用于核对完整内容；② 工具栏可缩放、下载、最大化或切换视图。</p></figcaption></figure>
+
 ```mermaid
 flowchart LR
     A[在对话中说明产物格式] --> B[打开右侧预览]
