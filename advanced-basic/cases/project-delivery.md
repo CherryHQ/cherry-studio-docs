@@ -6,8 +6,6 @@ icon: folder
 
 运营同事要把一批零散资料整理成索引、摘要和交付文件。为了避免误改原件，需要把 Agent 的工作目录、可修改范围和验收方式提前说清楚。
 
-<figure><img src="../../.gitbook/assets/clipboard (14).png" alt="Agent 状态面板中的任务进度、产物和后台操作"><figcaption><p>交付前同时核对文件和状态面板，不只看最后一句回复。</p></figcaption></figure>
-
 ## 适合的任务
 
 * 把零散资料整理成目录和索引；
@@ -18,6 +16,8 @@ icon: folder
 <figure><img src="../../.gitbook/assets/clipboard (16).png" alt="Agent 工作区中的 Agent、模型、工作目录和右侧面板"><figcaption><p>Agent 工作区把任务、模型、工作目录和交付文件放在同一页面。</p></figcaption></figure>
 
 <figure><img src="../../.gitbook/assets/clipboard (14).png" alt="Agent 状态面板中的子任务、后台命令和上下文用量"><figcaption><p>长任务先看【状态】面板是否正在执行、等待批准或已经完成。</p></figcaption></figure>
+
+<figure><img src="https://3562065924-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F0Ut5BptC3t8CtSU1UWpM%2Fuploads%2Fgit-blob-f5bee1202b5aed4675a5537b57f3a1fd9147cf23%2Fcherry-v2-guide-artifact-preview.png?alt=media" alt="Cherry Assistant 生成的发布前检查清单已经在对话中打开为网页预览"><figcaption><p>交付物生成后要真正打开检查。图中网页预览已经显示标题、检查项和建议，不是空白占位。</p></figcaption></figure>
 
 ## 操作流程
 

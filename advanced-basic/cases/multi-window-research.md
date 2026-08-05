@@ -44,6 +44,8 @@ icon: window-maximize
 
 <figure><img src="../../.gitbook/assets/clipboard (6) (1).png" alt="标签页菜单中的从新窗口打开操作"><figcaption><p>从标签页菜单把 Agent 任务拆到独立窗口。</p></figcaption></figure>
 
+<figure><img src="https://3562065924-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F0Ut5BptC3t8CtSU1UWpM%2Fuploads%2Fgit-blob-44f5c55e3e8d1d1d728067775cc8a07ccfb3f3cc%2Fcherry-v2-guide-case-multi-window-research.png?alt=media" alt="从主窗口拆出的独立 Cherry Studio 窗口中仍然显示完整的发布方案评审结果"><figcaption><p>① 独立窗口保留原问题；② 结果和后续操作完整保留，主窗口可以继续查资料或整理笔记。</p></figcaption></figure>
+
 ## 推荐组合与完成标准
 
 | 窗口    | 建议内容                              |

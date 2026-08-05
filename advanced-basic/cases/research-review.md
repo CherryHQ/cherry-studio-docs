@@ -10,6 +10,8 @@ icon: flask
 
 <figure><img src="../../.gitbook/assets/clipboard (20).png" alt="消息分支管理用于保留不同追问路线"><figcaption><p>把不同假设放进独立分支，最后回到主线汇总已经确认的结论。</p></figcaption></figure>
 
+<figure><img src="https://3562065924-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F0Ut5BptC3t8CtSU1UWpM%2Fuploads%2Fgit-blob-e7449e0f11e092748e672dbe97c7c0564276691f%2Fcherry-v2-guide-case-research-review.png?alt=media" alt="对发布方案提出统一检查要求后，Cherry Assistant 按安全、稳定性、监控、回滚、通知和验收给出实际评审结果"><figcaption><p>① 提问中写清检查维度和已知条件；② 结果按同一结构展开，方便继续比较、追问和人工核对。</p></figcaption></figure>
+
 ## 推荐组合
 
 * 【对话】多模型：找出共识、分歧和遗漏；
@@ -17,10 +19,6 @@ icon: flask
 * 知识库：检索内部资料；
 * 网页搜索或可信 MCP：补充外部来源；
 * 工作目录：保存原始材料和最终产物。
-
-<figure><img src="../../.gitbook/assets/clipboard (22).png" alt="对话中的多模型选择入口"><figcaption><p>用同一个问题比较多个模型，先找出共识、分歧和遗漏。</p></figcaption></figure>
-
-<figure><img src="../../.gitbook/assets/clipboard (20).png" alt="对话分支管理器中的新建和切换分支入口"><figcaption><p>需要验证另一条思路时，从关键消息创建分支，不必覆盖原讨论。</p></figcaption></figure>
 
 ## 操作流程
 

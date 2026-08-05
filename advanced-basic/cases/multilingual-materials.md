@@ -8,6 +8,8 @@ icon: globe
 
 <figure><img src="../../.gitbook/assets/clipboard (29).png" alt="资料经过知识库检索、Agent 整理并形成译文或内容交付物的工作流图"><figcaption><p>先确认资料检索准确，再由 Agent 统一术语和输出格式，最后人工核对关键内容。</p></figcaption></figure>
 
+<figure><img src="https://3562065924-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F0Ut5BptC3t8CtSU1UWpM%2Fuploads%2Fgit-blob-ee99f863bdfef7403502cdc2b4ad505c0cf66069%2Fcherry-v2-guide-translation-result.png?alt=media" alt="翻译页面把中文发布方案完整翻译成英文的实际结果"><figcaption><p>左侧保留原文，右侧显示实际译文。交付前可逐句核对灰度、监控指标和回滚流程等关键术语。</p></figcaption></figure>
+
 ## 操作流程
 
 {% stepper %}

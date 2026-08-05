@@ -8,6 +8,8 @@ icon: calendar-week
 
 <figure><img src="../../.gitbook/assets/clipboard (18).png" alt="笔记中的文件夹、新建、编辑预览和导出入口"><figcaption><p>按同一结构持续记录，周末整理时更容易核对状态和负责人。</p></figcaption></figure>
 
+<figure><img src="https://3562065924-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F0Ut5BptC3t8CtSU1UWpM%2Fuploads%2Fgit-blob-af2b16bd1259a4d59cbab0420062ec9a791a8e5c%2Fcherry-v2-guide-case-notes-weekly-report.png?alt=media" alt="笔记中已经填写完成事项、进行中工作、风险与阻塞和下周计划的第 32 周工作复盘"><figcaption><p>① 左侧保留原始记录和本周复盘；② 右侧周报已经有真实内容，可继续人工修改、预览和导出。</p></figcaption></figure>
+
 ## 操作流程
 
 {% stepper %}
