@@ -92,6 +92,13 @@
 * [数据、隐私与维护](knowledge-base/data.md)
 * [模型与检索设置](knowledge-base/emb-models-info.md)
 * [文档解析与 OCR](knowledge-base/document-preprocessing.md)
+* [创建知识库](knowledge-base/create.md)
+* [添加与整理资料](knowledge-base/sources.md)
+* [检查资料与召回](knowledge-base/recall-test.md)
+* [在对话中使用](knowledge-base/chat.md)
+* [与 Agent 一起使用](knowledge-base/agent.md)
+* [知识库应用案例](knowledge-base/cases.md)
+* [常见问题](knowledge-base/troubleshooting.md)
 
 ## 进阶教程 <a href="#advanced-basic" id="advanced-basic"></a>
 
