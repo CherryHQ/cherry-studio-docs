@@ -7,6 +7,7 @@
 * [安装教程](cherry-studio/installation/README.md)
   * [Windows](cherry-studio/installation/windows.md)
   * [macOS](cherry-studio/installation/macos.md)
+  * [升级与降级](cherry-studio/installation/upgrade-downgrade.md)
 * [功能介绍](cherrystudio/preview/README.md)
   * [启动台](cherrystudio/preview/launchpad.md)
   * [对话界面](cherrystudio/preview/chat.md)
