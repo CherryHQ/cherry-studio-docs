@@ -1,86 +1,134 @@
 ---
-icon: book-open-cover
+icon: compass
 ---
 
-# 知识库教程
+# 知识库入门
 
-知识库就像给 AI 配一本**专属参考书**：你把自己的文档、笔记、网页放进去，之后聊天时让 AI 翻这本书来回答。
-
-> 不知道知识库能做什么？先看 [知识库（功能介绍）](../cherrystudio/preview/knowledge-base.md) 的几个使用场景。
-
-本页带你走完完整流程：**添加嵌入模型 → 创建知识库 → 放资料 → 在对话中调用**。
-
-## 添加嵌入模型
-
-1. 在 `设置 → 模型服务` 中，找到你常用的 Provider（如 CherryIN、硅基流动、OpenAI 等）；
-2. 点击 **获取模型列表**，在顶部 Tab 切到 **嵌入** 分类；
-3. 选择需要的嵌入模型添加到我的模型列表（推荐 `bge-m3` 或 `text-embedding-3-small`）。
-
-<figure><img src="../.gitbook/assets/image.webp" alt=""><figcaption></figcaption></figure>
-
-## 创建知识库
-
-1. **入口**：顶部 Tab `+` → **启动台** → 点击 `知识库`（或在左侧栏布局下点击知识库图标）；
-2. **添加**：点击 **+ 添加**，开始创建知识库；
-3. **命名 + 选模型**：输入名称。嵌入模型**可选**——选一个（以 `bge-m3` 为例）即可用向量检索；**留空则创建纯 BM25（关键词）知识库**，之后也能在知识库的 RAG 设置里再补嵌入模型。
-
-<figure><img src="../.gitbook/assets/image-1.webp" alt=""><figcaption></figcaption></figure>
-
-<figure><img src="../.gitbook/assets/image-2.webp" alt=""><figcaption></figcaption></figure>
-
-## 添加文件并向量化
-
-1. 添加文件：点击添加文件的按钮，打开文件选择；
-2. 选择文件：选择支持的格式（PDF、DOCX、DOC、PPTX、XLSX、XLS、MD、TXT、CSV、HTML、EPUB 等），并打开；
-3. 向量化：系统会自动进行向量化处理，当显示完成时（绿色 ✓），代表向量化已完成。
-
-<figure><img src="../.gitbook/assets/image-3.webp" alt=""><figcaption></figcaption></figure>
-
-<figure><img src="../.gitbook/assets/image-4.webp" alt=""><figcaption></figcaption></figure>
-
-<figure><img src="../.gitbook/assets/image-5.webp" alt=""><figcaption></figcaption></figure>
-
-## 添加多种来源的数据
-
-除了文件，CherryStudio 还支持三种来源：
-
-1. **目录**：添加整个文件夹，目录下支持格式的文件会被自动向量化；
-2. **链接（URL）**：支持网址，如 [https://docs.siliconflow.cn/introduction](https://docs.siliconflow.cn/introduction)；
-3. **笔记**：把 Cherry Studio 里已有的笔记选进来作为知识库数据源。
+知识库把文件、笔记、目录或网页整理成可以反复检索的资料集合。先用召回测试确认系统能找到正确片段，再把知识库交给对话或 Agent 使用。
 
 {% hint style="info" %}
-提示：
-
-1. 导入文档里的插图暂不支持转为向量，需要时先手动转成文本。
-2. 用网址作来源不一定成功——有些网站有反爬机制（或需登录 / 授权），可能取不到内容。加完建议先用**召回测试**验证一下。
+如果只是临时处理一小段文字，直接粘贴到对话更快。资料会反复使用、答案必须以内部材料为准时，再建立知识库。
 {% endhint %}
 
-## 召回测试
+## 什么时候适合使用
 
-资料向量化完成后，用**召回测试**验证"真实问题能不能找到正确片段"：
+| 需求               | 建议做法        | 原因                     |
+| ---------------- | ----------- | ---------------------- |
+| 查询员工制度、产品手册、项目资料 | 建立知识库       | 资料会重复使用，需要稳定引用原文       |
+| 临时分析一个附件         | 在对话中直接上传    | 不需要长期维护和索引             |
+| 资料还在持续整理         | 先用【笔记】梳理    | 避免未确认内容被当成正式答案         |
+| 需要长期自动处理资料       | 建库后绑定 Agent | Agent 可以在任务中持续使用同一资料范围 |
 
-1. 打开知识库的 **召回测试**（页面右上角）；
-2. 输入一个你会真正问的问题；
-3. 查看返回的片段及其**相关度分数**，并可查看历史记录。
+## 一次回答经历什么
 
-召回不准时，先修资料或调 RAG 设置，别让 AI 猜。
+<figure><img src="../.gitbook/assets/clipboard (66).png" alt="从资料解析、分块、BM25 与向量检索到合并、重排和 Top K 的知识库检索架构图"><figcaption><p>资料先经过解析和切分，再用关键词或语义找出候选片段；聊天模型只负责基于召回内容组织回答。</p></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/image-7.webp" alt=""><figcaption></figcaption></figure>
+### 先认识这些词
 
-<figure><img src="../.gitbook/assets/image-8.webp" alt=""><figcaption></figcaption></figure>
+| 名称    | 在本任务中的含义                        |
+| ----- | ------------------------------- |
+| 知识库   | 围绕同一主题组织的一组资料和检索设置              |
+| 资料条目  | 导入的一个文件、笔记、目录中的文件或网页快照          |
+| Chunk | 资料切分后用于检索的小片段                   |
+| 召回    | 根据问题找出相关片段的过程                   |
+| 嵌入模型  | 把文字转换为向量，用于匹配不同表达但意思相近的内容；不是必选项 |
+| 重排模型  | 对候选片段再次评分和排序；也是可选项              |
 
-## 对话中引用知识库生成回复
+{% hint style="success" %}
+没有嵌入模型也能使用知识库，此时主要依靠 BM25 关键词检索。第一次体验可以先选【不使用】，把创建、导入和召回流程跑通。
+{% endhint %}
 
-1. 创建一个新的话题，在对话工具栏中，点击知识库，会展开已经创建的知识库列表，选择需要引用的知识库；
-2. 输入并发送问题，模型即返回通过检索结果生成的答案 ；
-3. 同时，引用的数据来源会附在答案下方，可快捷查看源文件。
+## 5 分钟完成第一次使用
 
-<figure><img src="../.gitbook/assets/image-9.webp" alt=""><figcaption></figcaption></figure>
+{% stepper %}
+{% step %}
+### 1. 创建一个边界清楚的知识库
 
-<figure><img src="../.gitbook/assets/image-10.webp" alt=""><figcaption></figcaption></figure>
+打开左侧导航【知识库】→ 点击知识库列表上方的新增按钮。名称使用“对象 + 用途”，例如【员工差旅制度】。
+{% endstep %}
 
-***
+{% step %}
+### 2. 选择检索方式
 
-### 获取帮助与提交反馈
+第一次体验可以把【嵌入模型】设为【不使用】。需要匹配口语问法或同义表达时，再配置嵌入模型。
+{% endstep %}
 
-如果您在配置或使用过程中遇到任何疑问、Bug 或有功能改进建议，请参考 [反馈与建议](../question-contact/suggestions.md) 中提供的官方渠道。
+{% step %}
+### 3. 添加资料
+
+进入知识库后点击添加资料按钮，选择【文件】、【笔记】、【目录】或【链接】。
+
+<figure><img src="../.gitbook/assets/clipboard (48).png" alt="知识库中的文件、笔记、目录和链接四种资料入口"><figcaption><p>按资料来源选择入口；不要为了减少操作把无关目录一起导入。</p></figcaption></figure>
+{% endstep %}
+
+{% step %}
+### 4. 等待资料变为就绪
+
+处理完成后，资料会出现在列表中。抽查正文和 Chunks，确认没有乱码、缺页或明显错序。
+
+<figure><img src="../.gitbook/assets/clipboard (49).png" alt="包含多条已处理资料的员工差旅制度知识库"><figcaption><p>资料就绪后仍要抽查内容；导入完成不等于检索质量已经合格。</p></figcaption></figure>
+{% endstep %}
+
+{% step %}
+### 5. 完成召回测试
+
+打开【召回测试】，输入一个你已经知道答案的真实问题，检查正确来源是否出现在前几条结果中。
+{% endstep %}
+
+{% step %}
+### 6. 进入对话或绑定 Agent
+
+召回稳定后，在对话输入区选择知识库；需要长期工作流时，在 Agent 编辑页绑定知识库。
+{% endstep %}
+{% endstepper %}
+
+## 推荐起点
+
+| 配置项    | 产品默认值 | 建议起点              | 作用             | 适用场景        | 注意事项               |
+| ------ | ----- | ----------------- | -------------- | ----------- | ------------------ |
+| 知识库范围  | —     | 一个明确主题            | 控制一起参与检索的资料    | 制度、产品、项目资料  | 权限或生命周期不同的内容应分开    |
+| 嵌入模型   | 不使用   | 先不使用              | 决定是否加入向量检索     | 口语问法与原文差异较大 | 云端模型的计费与数据处理取决于服务商 |
+| 测试问题   | —     | 3～5 个真实问题         | 建立长期回归基线       | 每次更新资料或设置后  | 不要只用资料标题和原句测试      |
+| 进入正式使用 | —     | 资料、Chunks、召回三项都通过 | 避免把解析或检索问题带入对话 | 所有知识库       | 聊天模型无法补回没有召回的关键信息  |
+
+## 怎样判断已经可以使用
+
+* 需要的资料都显示为可用状态，没有长期停在处理中或错误状态。
+* 随机打开一两条资料，正文和 Chunks 没有乱码、缺页或明显错序。
+* 用固定问题进行召回测试，正确来源能够稳定出现在前几条结果中。
+
+## 用户案例
+
+小林要让同事查询差旅制度。他创建【员工差旅制度】知识库，导入住宿、交通和审批三份资料，先不配置嵌入模型。三份资料就绪后，他用“北京住宿上限是多少”“5000 元以上谁审批”等问题测试。
+
+完成标准是：每个问题都能找到正确制度来源，片段同时包含适用条件和结论。只有达到这个标准后，他才把知识库绑定到负责员工问答的 Agent。
+
+## 常见问题
+
+<details>
+
+<summary>知识库和聊天模型有什么区别？</summary>
+
+知识库负责从你的资料中找片段，聊天模型负责理解问题并组织回答。召回阶段没有找到关键信息时，单纯更换聊天模型通常不能解决问题。
+
+</details>
+
+<details>
+
+<summary>资料导入成功后可以直接使用吗？</summary>
+
+还需要抽查正文和 Chunks，并完成召回测试。导入成功只代表处理流程结束，不代表结果完整或排序正确。
+
+</details>
+
+<details>
+
+<summary>修改分块设置后，旧资料会自动变化吗？</summary>
+
+不会。要让已有资料使用新分块设置，需要执行【重新索引】，再用同一组问题复测。
+
+</details>
+
+## 继续阅读
+
+<table data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>创建知识库</strong></td><td>确定名称边界和检索方式。</td><td><a href="https://app.gitbook.com/o/Cj2FUNM601oTkFwFFsXJ/s/0Ut5BptC3t8CtSU1UWpM/knowledge-base/create">https://app.gitbook.com/o/Cj2FUNM601oTkFwFFsXJ/s/0Ut5BptC3t8CtSU1UWpM/knowledge-base/create</a></td></tr><tr><td><strong>添加与整理资料</strong></td><td>导入文件、笔记、目录和网页。</td><td><a href="https://app.gitbook.com/o/Cj2FUNM601oTkFwFFsXJ/s/0Ut5BptC3t8CtSU1UWpM/knowledge-base/sources">https://app.gitbook.com/o/Cj2FUNM601oTkFwFFsXJ/s/0Ut5BptC3t8CtSU1UWpM/knowledge-base/sources</a></td></tr><tr><td><strong>检查资料与召回</strong></td><td>用固定问题验收检索质量。</td><td><a href="https://app.gitbook.com/o/Cj2FUNM601oTkFwFFsXJ/s/0Ut5BptC3t8CtSU1UWpM/knowledge-base/recall-test">https://app.gitbook.com/o/Cj2FUNM601oTkFwFFsXJ/s/0Ut5BptC3t8CtSU1UWpM/knowledge-base/recall-test</a></td></tr><tr><td><strong>模型与检索设置</strong></td><td>继续调整嵌入、重排和分块。</td><td><a href="https://app.gitbook.com/o/Cj2FUNM601oTkFwFFsXJ/s/0Ut5BptC3t8CtSU1UWpM/knowledge-base/emb-models-info">https://app.gitbook.com/o/Cj2FUNM601oTkFwFFsXJ/s/0Ut5BptC3t8CtSU1UWpM/knowledge-base/emb-models-info</a></td></tr></tbody></table>

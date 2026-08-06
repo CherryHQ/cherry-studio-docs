@@ -9,6 +9,9 @@
   * [macOS 安装](cherry-studio/installation/macos.md)
   * [Linux](cherry-studio/installation/linux.md)
   * [升级与降级](cherry-studio/installation/upgrade-downgrade.md)
+  * [功能差异](cherry-studio/installation/v1-v2-feature-differences.md)
+  * [V1 升级到 V2](cherry-studio/installation/v1-to-v2-migration.md)
+  * [V2 降级到 V1](cherry-studio/installation/v2-to-v1-downgrade.md)
 * [功能介绍](cherrystudio/preview/README.md)
   * [启动台](cherrystudio/preview/launchpad.md)
   * [对话-助手](cherrystudio/preview/chat.md)
@@ -90,10 +93,17 @@
 
 ## 知识库教程 <a href="#knowledge-base" id="knowledge-base"></a>
 
-* [知识库教程](knowledge-base/knowledge-base.md)
-* [知识库数据](knowledge-base/data.md)
-* [嵌入模型](knowledge-base/emb-models-info.md)
-* [文档预处理](knowledge-base/document-preprocessing.md)
+* [知识库入门](knowledge-base/knowledge-base.md)
+* [数据、隐私与维护](knowledge-base/data.md)
+* [模型与检索设置](knowledge-base/emb-models-info.md)
+* [文档解析与 OCR](knowledge-base/document-preprocessing.md)
+* [创建知识库](knowledge-base/create.md)
+* [添加与整理资料](knowledge-base/sources.md)
+* [检查资料与召回](knowledge-base/recall-test.md)
+* [在对话中使用](knowledge-base/chat.md)
+* [与 Agent 一起使用](knowledge-base/agent.md)
+* [知识库应用案例](knowledge-base/cases.md)
+* [常见问题](knowledge-base/troubleshooting.md)
 
 ## 进阶教程 <a href="#advanced-basic" id="advanced-basic"></a>
 

@@ -36,13 +36,24 @@ icon: book-open
 
 <figure><img src="../../.gitbook/assets/clipboard (9) (1).png" alt="新建知识库时的名称、嵌入模型和保存入口"><figcaption><p>新建知识库时先填写名称并选择可用的嵌入模型。</p></figcaption></figure>
 
-图中：① 添加文件；② 添加文件夹；③ 添加笔记；④ 添加网址。
+<figure><img src="https://3562065924-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F0Ut5BptC3t8CtSU1UWpM%2Fuploads%2Fgit-blob-9b55e8bfc279019611a137d7667c91533e6684eb%2Fcherry-v2-guide-knowledge-sources.png?alt=media" alt="员工差旅制度知识库中已就绪的笔记来源与召回测试入口"><figcaption><p>① 三篇差旅资料均已就绪；② 点击顶部【召回测试】验证实际问题。</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/clipboard (10) (1).png" alt="知识库中的文件、文件夹、笔记和网址来源入口"><figcaption><p>知识库可以加入文件、文件夹、笔记和网址。</p></figcaption></figure>
+<figure><img src="https://3562065924-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F0Ut5BptC3t8CtSU1UWpM%2Fuploads%2Fgit-blob-413972fdce3631aee8d1619db3a9936b2dfc3774%2Fcherry-v2-guide-knowledge-recall.png?alt=media" alt="知识库对海外租车能否报销的召回测试结果"><figcaption><p>① 输入工作中真的会问到的问题；② 检查命中资料、片段内容和相关度。</p></figcaption></figure>
 
-图中：① 召回测试入口；② 测试问题；③ 返回片段与相关度；④ 历史记录。
+### 用真实问题验收召回结果
 
-<figure><img src="../../.gitbook/assets/clipboard (11) (1).png" alt="知识库召回测试的问题、返回片段和历史记录"><figcaption><p>召回测试用于确认真实问题能否找到正确片段。</p></figcaption></figure>
+资料显示【就绪】后，用工作中真的会出现的问题测试一次。例如制度库可以问“海外租车能否报销？”，再检查返回内容是否来自正确资料，是否包含足够的上下文。
+
+| 看到的结果           | 下一步                     |
+| --------------- | ----------------------- |
+| 命中正确资料，片段足以回答问题 | 可以绑定给 Agent 使用          |
+| 命中资料正确，但片段被截断   | 先检查原文结构，再调整分段长度         |
+| 命中旧制度或无关资料      | 清理过期资料，补充更明确的标题和内容      |
+| 完全没有结果          | 检查资料状态和提问用词，不要先盲目增大返回数量 |
+
+{% hint style="info" %}
+召回测试通过后，再在 Agent 中验证完整问答。这样能分清是“没有找到资料”，还是“找到资料后回答得不好”。
+{% endhint %}
 
 ## RAG 设置怎么理解
 

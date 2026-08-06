@@ -18,6 +18,8 @@ icon: newspaper
 
 <figure><img src="../../.gitbook/assets/clipboard (14).png" alt="Agent 状态面板中的子任务、后台命令和上下文用量"><figcaption><p>首次自动运行后，从 Agent 状态和运行记录检查任务是否真正完成。</p></figcaption></figure>
 
+<figure><img src="https://3562065924-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F0Ut5BptC3t8CtSU1UWpM%2Fuploads%2Fgit-blob-b7bdae7ef46b33fe53006da754217349fced92e6%2Fcherry-v2-guide-case-daily-report-schedule.png?alt=media" alt="设置中已经保存并启用的每日项目进展简报定时任务和完整提示词"><figcaption><p>① 任务已经启用并显示下次运行时间；② 提示词明确四段结构、缺失数据处理和频道发送条件。</p></figcaption></figure>
+
 ## 配置步骤
 
 {% stepper %}
@@ -79,4 +81,8 @@ icon: newspaper
 
 {% hint style="warning" %}
 定时任务会在无人值守时执行。上线前保持最小文件范围和合适权限，避免把高风险写入或外部修改交给完全访问模式。
+{% endhint %}
+
+{% hint style="info" %}
+截图中的演示环境没有绑定外部频道，所以只展示已经保存并启用的任务。正式使用时还要点击【运行】，确认【运行历史】成功，并在测试频道看到一条真实消息后再投入日常运行。
 {% endhint %}

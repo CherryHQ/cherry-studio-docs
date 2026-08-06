@@ -8,6 +8,31 @@ icon: box-archive
 
 <figure><img src="../../.gitbook/assets/clipboard (26).png" alt="从写清问题、比较或分支探索到形成最终产物的对话选择流程图"><figcaption><p>到达最终产物后先检查内容、来源和文件，再决定复制、导出或交给 Agent 继续整理。</p></figcaption></figure>
 
+## 先预览，再交付
+
+在【对话】中明确要求输出可预览的 HTML 后，点击消息里的产物即可在右侧打开预览。先核对页面内容和布局，再使用预览栏缩放、下载、最大化或切换到代码视图。
+
+<figure><img src="https://3562065924-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F0Ut5BptC3t8CtSU1UWpM%2Fuploads%2Fgit-blob-f5bee1202b5aed4675a5537b57f3a1fd9147cf23%2Fcherry-v2-guide-artifact-preview.png?alt=media" alt="对话中已生成的发布前检查页与右侧 HTML 预览"><figcaption><p>① 预览区用于核对完整内容；② 工具栏可缩放、下载、最大化或切换视图。</p></figcaption></figure>
+
+```mermaid
+flowchart LR
+    A[在对话中说明产物格式] --> B[打开右侧预览]
+    B --> C{内容和布局是否完整}
+    C -- 否 --> D[回到对话补充修改要求]
+    D --> B
+    C -- 是 --> E[下载、复制或交给 Agent 保存]
+```
+
+预览的作用是提前发现缺项，而不是只确认“已经生成”。如果页面要交给同事使用，至少点开链接、按钮和下载文件各检查一次。
+
+{% hint style="info" %}
+如果结果只是代码块而没有出现预览，可在同一轮对话中补充“请输出一个完整、可直接预览的 HTML 产物”，并写清页面需要包含的区域。
+{% endhint %}
+
+### 应用案例：发布前检查页
+
+输入“把发布前检查清单做成一个可直接预览的完整 HTML 产物，包含上线准备、监控与验收、回滚条件三个区域”。预览打开后，先检查三部分是否完整，再下载或交给 Agent 保存到项目目录。
+
 ## 先做三项检查
 
 1. **内容**：数字、日期、专有名词和结论是否与原资料一致。

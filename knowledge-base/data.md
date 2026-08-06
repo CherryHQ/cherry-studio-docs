@@ -1,55 +1,161 @@
 ---
-icon: database
+icon: shield-halved
 ---
 
-# 知识库工作原理
+# 数据、隐私与维护
 
-本页面向希望了解知识库底层工作机制的用户。若只需要使用知识库，可直接参考 [知识库教程](knowledge-base.md)。
+知识库会保存导入资料的托管副本、解析文本、Chunks 和检索索引。数据是否离开本机，取决于解析、OCR、嵌入、重排和聊天各环节选择的服务。
 
-## 核心原理
+{% hint style="info" %}
+原文件留在本地，不代表整个知识库流程离线。只要其中一个处理环节使用云服务，就可能发送完成任务所需的文件、片段或查询。
+{% endhint %}
 
-加入知识库的文档会被**切分为小片段 → 由嵌入模型转换为数字向量 → 存入本地数据库**。提问时，知识库会将问题转换为同类向量，检索最相似的片段，并将这些片段提供给对话模型作为上下文。
+## 导入后保存什么
 
-<figure><img src="../.gitbook/assets/mermaid-diagram-1739241680067.png" alt=""><figcaption><p>知识库处理流程图</p></figcaption></figure>
+| 内容           | 用途          | 更新方式            |
+| ------------ | ----------- | --------------- |
+| 文件或目录中的文件副本  | 供知识库继续处理和展示 | 原文件更新后重新添加或替换   |
+| 网页和笔记快照      | 保留导入时的内容    | 来源更新后重新导入       |
+| 解析正文与 Chunks | 预览和检索       | 更换处理器或分块后重新索引   |
+| BM25 关键词索引   | 精确词语检索      | 重新索引时重建         |
+| 向量索引         | 语义检索        | 配置或更换嵌入模型后生成或重建 |
 
-## 详细一点
+<figure><img src="../.gitbook/assets/clipboard (49).png" alt="包含多条已处理资料的员工差旅制度知识库"><figcaption><p>资料列表中的条目是知识库托管和索引的对象，不是对原目录的实时同步视图。</p></figcaption></figure>
 
-1. **入库前的准备**
-   - 文档（PDF、Word、网页等）先经过 [文档预处理](document-preprocessing.md)（OCR 等），变成纯文本
-   - 纯文本被切成 200-500 字左右的小片段（chunk），方便检索
+## 一次查询可能经过哪些边界
 
-2. **嵌入与存储**
-   - 每个片段交给 [嵌入模型](emb-models-info.md) 处理，得到一组数字（向量）
-   - 这些数字 + 原文片段都存在 Cherry Studio 本地的数据库里（基于开源的 libSQL）
+<figure><img src="../.gitbook/assets/clipboard (66).png" alt="展示解析、关键词检索、向量检索、重排和回答之间数据流的知识库架构图"><figcaption><p>图中的解析、向量、重排和回答节点都可能选择本地或云端服务；逐项检查才能确定数据边界。</p></figcaption></figure>
 
-3. **查询**
-   - 你提问时，问题文本同样被嵌入模型转成数字
-   - 系统找出"和问题数字最像"的若干片段
-   - 这些片段连同问题一起送给对话模型，由它生成最终答案
+| 选择的能力   | 可能接收的内容       |
+| ------- | ------------- |
+| 云端文档处理器 | 用于解析的文件内容     |
+| 云端嵌入模型  | 资料片段和检索查询     |
+| 云端重排模型  | 查询和候选片段       |
+| 云端聊天模型  | 问题、对话上下文和召回片段 |
+| 本地对应能力  | 在本机完成相应处理     |
 
-## 数据存储位置
+{% hint style="danger" %}
+API Key、内部文档和带个人信息的日志都不应出现在公开截图或反馈中。删除或分享前先脱敏。
+{% endhint %}
 
-**所有数据保存在本地**，不会上传到云端（若使用的嵌入模型本身是云服务，文本片段会在嵌入处理过程中短暂经过该服务）。
+## 做一次完整的维护检查
 
-* **macOS**：`~/Library/Application Support/CherryStudio`
-* **Windows**：`%APPDATA%\CherryStudio`
-* **Linux**：`~/.config/CherryStudio`
+{% stepper %}
+{% step %}
+### 1. 记录当前配置
 
-## 数据隐私建议
+记录知识库名称、文件处理器、OCR、嵌入模型、重排模型和关键分块设置。迁移后用它们核对环境。
+{% endstep %}
 
-如资料涉及敏感信息（合同、医疗、内部代码等）：
+{% step %}
+### 2. 清理重复和旧版本
 
-* 使用**本地嵌入模型**（如通过 [Ollama](../pre-basic/providers/ollama.md) 或 [LM Studio](../pre-basic/providers/lm-studio.md) 运行 `bge-m3`），全流程离线
-* 对话模型同样建议选择本地部署
-* 可配合 [修改存储位置](../pre-basic/personalization-settings/storage.md) 将数据存放至加密磁盘
+同一制度只保留当前版本；需要历史审计时，在标题中明确年份或版本，避免检索时互相竞争。
+{% endstep %}
 
-## 延伸阅读
+{% step %}
+### 3. 检查异常条目
 
-* 向量数据库（libSQL / Turso）：[https://turso.tech/libsql](https://turso.tech/libsql)
-* 嵌入与检索增强生成：可查阅"vector embedding"、"RAG"相关资料
+处理【错误】或长期【处理中】的资料，抽查正文和 Chunks。应用中断导致索引未完成时，执行【重新索引】。
+{% endstep %}
 
-***
+{% step %}
+### 4. 创建合适的备份
 
-### 💡 获取帮助与提交反馈
+打开【设置】→【数据】。迁移设备或准备删除资料时使用包含知识库数据文件的完整备份。
+{% endstep %}
 
-如果您在配置或使用过程中遇到任何疑问、Bug 或有功能改进建议，请参考 [反馈与建议](../question-contact/suggestions.md) 中提供的官方渠道。
+{% step %}
+### 5. 在目标环境恢复并验收
+
+不要只确认恢复完成。检查知识库条目、正文、Chunks，并运行固定的召回问题。
+{% endstep %}
+
+{% step %}
+### 6. 保留可回退基线
+
+新处理器或模型先在少量资料上验证，再分批重新索引。确认新结果稳定前，不要删除最近的完整备份。
+{% endstep %}
+{% endstepper %}
+
+## 完整备份与精简备份
+
+| 备份方式 | 包含内容                     | 适用场景            | 限制          |
+| ---- | ------------------------ | --------------- | ----------- |
+| 完整备份 | 聊天、设置及知识库等数据文件           | 迁移设备、删除前保护、完整恢复 | 文件较大，耗时更长   |
+| 精简备份 | 主要是聊天记录和设置，跳过图片、知识库等数据文件 | 快速保留常用配置和聊天     | 不能单独恢复完整知识库 |
+
+{% hint style="warning" %}
+精简备份不是知识库删除前的恢复保障。重要迁移至少保留一份完整备份，并在目标环境实际完成召回测试。
+{% endhint %}
+
+## 更新和删除怎么处理
+
+### 来源内容更新
+
+1. 重新添加同名资料。
+2. 需要覆盖旧版本时选择【替换】；只有确实要并存时才选择【全部保留】。
+3. 等待资料变为就绪。
+4. 抽查正文和 Chunks。
+5. 运行固定的召回回归问题。
+
+### 处理设置更新
+
+只改变处理器、OCR、分块或模型设置时，对现有条目执行【重新索引】。修改配置本身不会自动重做旧资料。
+
+### 删除资料或知识库
+
+删除会移除知识库托管的内容和索引，但不会删除原路径中的文件或原笔记。操作前确认原始来源仍可找到、完整备份可用，并检查是否仍有 Agent 绑定该知识库。
+
+## 配置说明
+
+| 项目   | 推荐起点       | 验收方式        | 风险           |
+| ---- | ---------- | ----------- | ------------ |
+| 资料版本 | 同一用途只保留当前版 | 固定问题只命中正确版本 | 新旧规则混用       |
+| 云端服务 | 按敏感等级逐项确认  | 查看处理器和模型配置  | 文档或片段发送到外部服务 |
+| 备份   | 大改前创建完整备份  | 恢复后检查条目和召回  | 精简备份缺少知识库文件  |
+| 重新索引 | 分批处理代表性资料  | 同一问题集前后对比   | 一次性重建失去可用基线  |
+
+## 用户案例
+
+小林要把团队制度库迁移到新电脑。他先记录处理器和模型配置，创建完整备份，在新电脑恢复后检查三条资料的正文与 Chunks，并重复原来的五个召回问题。全部通过后，他才清理旧环境。
+
+完成标准是：资料数量和标题一致，关键问题仍命中同一来源，且团队确认所有云端服务符合数据要求。
+
+## 完全离线检查清单
+
+* 文档解析与 OCR 使用系统、本地或自托管能力。
+* 嵌入模型在本机运行。
+* 不使用云端重排，或使用本地重排能力。
+* 对话与 Agent 使用本地聊天模型。
+* 没有启用会把内容发送到外部系统的 MCP、网络搜索或频道。
+
+## 常见问题
+
+<details>
+
+<summary>修改原文件后，知识库会自动更新吗？</summary>
+
+不会。文件、网页和笔记都是按导入时内容建立资料。重新添加并替换，或按需要重新索引。
+
+</details>
+
+<details>
+
+<summary>使用本地嵌入模型就完全离线了吗？</summary>
+
+不一定。解析、OCR、重排或聊天中的任一环节使用云服务，都可能发送完成任务所需的内容。
+
+</details>
+
+<details>
+
+<summary>精简备份能恢复知识库吗？</summary>
+
+不能恢复完整知识库文件。迁移或删除前使用完整备份，并在恢复后实际验证资料与召回。
+
+</details>
+
+## 继续阅读
+
+<table data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>文档解析与 OCR</strong></td><td>了解本地与云端处理器的差异。</td><td><a href="https://app.gitbook.com/o/Cj2FUNM601oTkFwFFsXJ/s/0Ut5BptC3t8CtSU1UWpM/knowledge-base/document-preprocessing">https://app.gitbook.com/o/Cj2FUNM601oTkFwFFsXJ/s/0Ut5BptC3t8CtSU1UWpM/knowledge-base/document-preprocessing</a></td></tr><tr><td><strong>添加与整理资料</strong></td><td>替换来源并管理资料版本。</td><td><a href="https://app.gitbook.com/o/Cj2FUNM601oTkFwFFsXJ/s/0Ut5BptC3t8CtSU1UWpM/knowledge-base/sources">https://app.gitbook.com/o/Cj2FUNM601oTkFwFFsXJ/s/0Ut5BptC3t8CtSU1UWpM/knowledge-base/sources</a></td></tr><tr><td><strong>常见问题</strong></td><td>按失败层级快速定位问题。</td><td><a href="https://app.gitbook.com/o/Cj2FUNM601oTkFwFFsXJ/s/0Ut5BptC3t8CtSU1UWpM/knowledge-base/troubleshooting">https://app.gitbook.com/o/Cj2FUNM601oTkFwFFsXJ/s/0Ut5BptC3t8CtSU1UWpM/knowledge-base/troubleshooting</a></td></tr></tbody></table>
