@@ -2,256 +2,206 @@
 icon: message
 ---
 
-# 对话界面
+# 对话
 
-对话界面是 Cherry Studio 最常用的页面，但其结构包含**两个层次**：助手 → 话题。理解这一结构有助于更高效地使用各类对话功能。
+对话界面是 Cherry Studio 最常用的页面，但其结构包含**两个层次**：助手 → 对话。理解这一结构有助于更高效地使用各类对话功能。
 
-> 推荐先阅读 [概念入门](/broken/pages/RvI8u7jUuRxKp64EBA3Q) 了解助手 / 智能体 / 技能等相关概念。
+{% hint style="info" %}
+如果还分不清助手、智能体、技能等概念，可以先看下方的[助手库](#助手库)小节与 [智能体](../../advanced-basic/agent.md) 页面。
+{% endhint %}
 
-## 助手与话题的关系
+## 助手与对话的关系
 
 简单类比：
 
 * **助手 = 一个角色**（如"产品文档助理"、"代码 reviewer"）
-* **话题 = 与该角色的一段对话**（如周一讨论"重构方案"、周二讨论"bug 报告"）
+* **对话 = 与该角色的一段交流**（如周一讨论"重构方案"、周二讨论"bug 报告"）
 
-也就是说：**一个助手下可创建多个话题**，所有话题共用该助手的人设与参数（提示词、模型、温度等），无需每次重新设定 AI 的角色与风格。
+也就是说：**一个助手下可创建多个对话**，所有对话共用该助手的人设与参数（提示词、模型、温度等），无需每次重新设定 AI 的角色与风格。
 
 ### 助手
 
 助手为 AI 设定固定角色 —— 由系统提示词 + 模型参数预设组成。
 
 * **系统默认助手**：通用助手，未设特殊提示词，可直接使用
-* **更专项的助手**：在 [助手广场](assistants.md) 浏览现成预设，或自行创建
+* **更专项的助手**：在下方[助手库](#助手库)浏览现成预设，或自行创建
 
-### 话题
+### 对话
 
-每个助手下可创建多个话题（即多段独立对话）。话题之间相互独立，但共享所属助手的设置。
+每个助手下可创建多个对话（即多段独立聊天）。各对话之间相互独立，但共享所属助手的设置。
 
 适用场景示例：
 
-* 同一个"代码助手"下分别开"项目 A 重构"、"项目 B bug"两个话题，独立管理
-* 同一个"翻译助手"下开多个话题，分别处理不同文章
+* 同一个"代码助手"下分别开"项目 A 重构"、"项目 B bug"两个对话，独立管理
+* 同一个"翻译助手"下开多个对话，分别处理不同文章
 
-<figure><img src="../../.gitbook/assets/image (4) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/v2/assistant-conversation-list.png" alt=""><figcaption><p>每个助手下可展开多个对话（图中「市场营销」助手下展开了两个对话）</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (5) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+## 助手库
+
+助手列表里的助手从哪来？除了系统默认助手，你可以从**助手库**添加，或自己创建。助手库是一个**助手预设市场**，提供大量"角色 + 提示词 + 参数"模板，添加后就会出现在对话页的助手列表里。
+
+{% hint style="warning" %}
+**别和智能体搞混**：助手库产出的是上面说的[对话助手](#助手)（一个角色预设）；[智能体](../../advanced-basic/agent.md)（入口【启动台】→【工作】）则是另一套能自主调用工具、读写文件、跨步骤完成任务的系统。两者是不同的东西，配置入口也不同：助手在对话页管理，智能体在【工作】里。
+{% endhint %}
+
+### 进入助手库
+
+1. 在对话页左侧的助手列表顶部，点击**展示方式**图标（漏斗状），在弹出菜单中选择【管理助手】。
+2. 在打开的「管理助手」页面右上角，点击【助手库】按钮，即可进入助手预设市场。
+
+<figure><img src="../../.gitbook/assets/cherry-agents-store-writing.png" alt=""><figcaption><p>助手库 —— 按用途分类（带数量徽标）浏览助手卡片，顶部提供搜索框</p></figcaption></figure>
+
+### 在助手库中查找助手
+
+* **分类筛选**：按 `全部` / `精选` 与多个用途分类（职业、商业、工具、语言、办公、通用、写作、编程、情感、教育、创意、学术、设计、艺术、娱乐、生活 等）筛选，分类名旁的数字为该类的助手数量
+* **搜索**：顶部搜索框可在所有分类内按关键词查找
+* **预览**：点击助手卡片可看到该助手的系统提示词、推荐模型、参数预设
+
+### 添加到我的助手
+
+* 点击助手卡片上的**添加**按钮，即可把该预设加入你的助手列表
+* 之后在对话页助手列表中即可看到该助手
+
+### 创建自己的助手
+
+在「管理助手」页面右上角点击【新建助手】，会打开与[编辑助手](#bian-ji-zhu-shou)相同的对话框，可分标签页填写：
+
+* **基础**：头像、名称、描述、该助手的默认模型、分组
+* **模型**：温度、Top-P、最大 Token 数等模型参数（详见下方[助手设置](#zhu-shou-she-zhi)）
+* **提示词**：决定该助手的角色与行为；输入框右上角的闪电按钮即【AI 优化提示词】，可用[全局默认助手模型](../../pre-basic/settings/default-models.md)把当前内容改写得更结构化
+* **知识库**：关联已建好的[知识库](../../knowledge-base/knowledge-base.md)
+* **MCP**：为该助手启用 [MCP](../../advanced-basic/extensions/mcp/README.md) 工具
+
+<figure><img src="../../.gitbook/assets/cherry-agents-create-form.png" alt=""><figcaption><p>新建 / 编辑助手对话框，左侧为 基础 / 模型 / 提示词 / 知识库 / MCP 五个标签页</p></figcaption></figure>
+
+{% hint style="info" %}
+**模型选择**：既可以在**基础**标签页为助手指定一个默认模型，也可以随时在对话页面顶部的模型下拉菜单中临时切换。未指定助手默认模型时，将使用[全局默认对话模型](../../pre-basic/settings/default-models.md#mo-ren-zhu-shou-mo-xing)。
+{% endhint %}
+
+### 导入与管理
+
+「管理助手」页面右上角提供三个动作按钮：
+
+* **新建助手**：打开[编辑助手对话框](#bian-ji-zhu-shou)从零创建一个助手
+* **助手库**：进入上面介绍的助手预设市场
+* **导入助手**：打开「从外部导入」对话框，导入他人分享的助手
+
+「管理助手」页面本身用于集中管理已添加的助手，支持批量删除、批量导出。
+
+【从外部导入】对话框提供三种一次性导入方式，导入完成后助手即出现在你的助手列表中：
+
+* **文件上传**：拖入或选择一个 JSON 文件
+* **剪贴板**：直接粘贴助手的 JSON 文本
+* **URL 导入**：填入 JSON 链接（出于安全考虑，当前仅支持 GitHub Gist、raw.githubusercontent.com 等来源）
+
+<figure><img src="../../.gitbook/assets/cherry-agents-import-dialog.png" alt=""><figcaption><p>从外部导入对话框 —— 文件上传 / 剪贴板 / URL 导入</p></figcaption></figure>
+
+### 何时使用助手库，何时使用智能体？
+
+| 场景                       | 推荐                                                                                                                   |
+| ------------------------ | -------------------------------------------------------------------------------------------------------------------- |
+| 个性化"角色"快速对话（写作、翻译、技术问答等） | **助手库**                                                                                                              |
+| 让 AI 自主调用工具、读写文件、跨步骤完成任务 | [**智能体**](../../advanced-basic/agent.md)                                                                    |
+| 定时执行、跨平台消息推送             | **智能体 +** [**定时任务**](../../advanced-basic/automation/scheduled-heartbeat.md) **+** [**频道**](../../advanced-basic/automation/channels.md) |
 
 ## 对话框内按钮
 
-<figure><img src="../../.gitbook/assets/cherry-chat-input-toolbar-v199.png" alt=""><figcaption><p>Cherry Studio 对话框工具栏（v1.9.9 实拍）</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/v2/chat-input-toolbar.png" alt=""><figcaption><p>输入框工具栏默认只放 4 个常用工具，其余功能都在【+】输入快捷面板里</p></figcaption></figure>
 
-Cherry Studio 的对话框工具栏中的工具具体顺序可由你长按拖拽自行调整。
+输入框下方的工具栏**默认只显示 4 个常用工具**，其余功能收在末尾的 **【+】输入快捷面板** 中。想改默认显示哪些工具，点【+】→【自定义工具栏】。
 
-### 左侧工具
+### 默认工具栏
 
-| 图标                                                          | 名称          | 作用                                                           |
-| ----------------------------------------------------------- | ----------- | ------------------------------------------------------------ |
-| ![](../../.gitbook/assets/chat-tool-bar/new.png)            | **新话题**     | 在当前助手内创建一个新话题                                                |
-| ![](../../.gitbook/assets/chat-tool-bar/upload.png)         | **上传附件**    | 上传图片或文档；图片需模型支持视觉能力；文档会被自动解析为上下文                             |
-| ![](../../.gitbook/assets/chat-tool-bar/search.png)         | **网络搜索**    | 把网页搜索结果作为上下文返回给模型，需先在 [联网模式](../../pre-basic/websearch/) 中配置 |
-| ![](../../.gitbook/assets/chat-tool-bar/knowledge-base.png) | **知识库**     | 把一个已建好的 [知识库](../../knowledge-base/knowledge-base.md) 作为上下文  |
-| ![](../../.gitbook/assets/chat-tool-bar/mcp.png)            | **MCP 服务器** | 启用 [MCP](/broken/pages/xypQ48eulwEGImLNttzF) 工具供模型调用         |
-| ![](../../.gitbook/assets/chat-tool-bar/@.png)              | **提及模型**    | 临时切换接下来的回复模型，保留上下文                                           |
-| ![](../../.gitbook/assets/chat-tool-bar/quick-phrases.png)  | **快捷短语**    | 调用预设模板，详见 [快捷短语](/broken/pages/uMnxI9WpZielUdbcA5zU)         |
-| ![](../../.gitbook/assets/chat-tool-bar/clear-messages.png) | **清空消息**    | **删除**该话题下所有消息（不可恢复）                                         |
-| ![](../../.gitbook/assets/chat-tool-bar/expand.png)         | **展开 / 收起** | 让输入框变得更大或恢复，便于输入长文                                           |
-| ![](../../.gitbook/assets/chat-tool-bar/clear-context.png)  | **清除上下文**   | **保留消息**但让模型"忘掉"之前的对话（截断 token 上下文）                          |
+| 名称 | 作用 |
+| --- | --- |
+| **新对话** | 在当前助手内创建一个新对话 |
+| **网络搜索** | 把网页搜索结果作为上下文返回给模型，需先在 [联网模式](../../pre-basic/websearch/) 中配置；部分模型也可改用「模型内置」搜索 |
+| **知识库** | 把一个已建好的 [知识库](../../knowledge-base/knowledge-base.md) 作为上下文 |
+| **+（输入快捷面板）** | 打开下面这一组更多工具与操作 |
 
-{% hint style="warning" %}
-**"清空消息" vs "清除上下文"** 是两件不同的事：
+### 输入快捷面板（+）
 
-* **清空消息**：物理删除全部消息内容，不可恢复
-* **清除上下文**：消息仍在，只是让模型从此刻开始重新认识你，它不再会记得此前的对话
-{% endhint %}
+点击 **+**，或直接在输入框里输入 `/`，都会打开这个面板。面板支持 <kbd>↑</kbd><kbd>↓</kbd> 选择、<kbd>Tab</kbd> / <kbd>回车</kbd> 确认、<kbd>ESC</kbd> 关闭。
 
-### 右下角工具
-
-| 图标                                                     | 名称     | 作用                                                                   |
-| ------------------------------------------------------ | ------ | -------------------------------------------------------------------- |
-| ![](../../.gitbook/assets/chat-tool-bar/translate.png) | **翻译** | 将输入框内容直接翻译为目标语言（在 `设置 → 默认模型` 中配置默认翻译模型）                             |
-| ![](../../.gitbook/assets/chat-tool-bar/send.png)      | **发送** | 发送消息（默认 Enter；可在 [快捷键](../../pre-basic/settings/key-shortcut.md) 中改） |
-
-### 仅在符合条件时显示的工具
-
-下列工具不在默认工具栏中，**仅当所选模型 / 助手支持时才出现**：
-
-| 图标                                                       | 名称        | 作用                                                      |
-| -------------------------------------------------------- | --------- | ------------------------------------------------------- |
-| ![](../../.gitbook/assets/chat-tool-bar/image.png)       | **生成图片**  | 所选对话模型支持生图时出现。专门的生图模型请去 [绘画](drawing.md)                |
-| ![](../../.gitbook/assets/chat-tool-bar/think.png)       | **思考模式**  | 所选模型支持深度推理时出现（如 GPT-5 系列、Claude Opus4.8、Qwen-3.7-plus等） |
-| ![](../../.gitbook/assets/chat-tool-bar/url-context.png) | **网页上下文** | 所选模型支持原生 URL 输入时出现                                      |
-| ![](../../.gitbook/assets/chat-tool-bar/slash.png)       | **斜杠命令**  | 在 Cherry Agent 会话中出现，提供 `/clear`、`/exit` 等内置命令          |
-
-### 通过键盘触发的能力
-
-除了点击按钮，还可以直接在输入框中按特定键唤起对应面板：
-
-* **`@`**：唤起模型选择器（与上面"提及模型"按钮等价）
-* **`/`**：唤起斜杠命令面板，可快速插入快捷短语、翻译、工具调用等
-
-### 对话框右下角：Token 计数
-
-![](../../.gitbook/assets/chat-tool-bar/estimate-tokens.png)
-
-输入框右下角还显示 **预估 Token 数**，包含四个数值：`当前上下文数` / `最大上下文数`（∞ 表示无限）/ `当前上下文 Token 数` / `预估 Token 数`。
+| 名称 | 作用 |
+| --- | --- |
+| **上传附件** | 上传图片或文档；图片需模型支持视觉能力，文档会被解析为上下文 |
+| **生成图片** | 让当前对话模型生成图片；需先在【设置】→【默认模型】中配置画图模型。专门的生图请去 [绘画](drawing.md) |
+| **提示词管理** | 插入并管理预设提示词，详见 [输入工具栏与效率工具](../../advanced-basic/workbench/composer-efficiency.md) |
+| **MCP** | 查看并启用当前对话可用的 [MCP](../../advanced-basic/extensions/mcp/README.md) 服务器 |
+| **引用笔记** | 从[笔记](notes.md)中选一篇作为附件引用 |
+| **清除上下文** | **保留消息**，但让模型"忘掉"之前的对话（截断上下文） |
+| **自定义工具栏** | 选择默认工具栏上显示哪些工具 |
 
 {% hint style="info" %}
-此处仅为预估值，不同模型的 Tokenizer 不同，实际计费以模型提供商为准。
+**"清除上下文"不会删消息**：消息仍留在对话里，只是让模型从此刻起重新认识你，不再记得此前的内容。
 {% endhint %}
+
+### 输入框右侧
+
+* **展开 / 收起**（输入框右上角）：放大输入框，便于输入长文
+* **思考**（右下角下拉，显示为「默认」）：调整模型的推理强度，仅在所选模型支持推理时可调；不支持的模型会提示「当前模型不支持调整推理强度」
+* **发送**：发送消息（默认 <kbd>Enter</kbd>，可在[快捷键](../../pre-basic/settings/key-shortcut.md)中改）
+
+### 通过键盘触发
+
+输入框的提示里已经写明了两个快捷输入：
+
+* **`/`**：打开输入快捷面板，选择工具或操作（与点击 **+** 等价）
+* **`@`**：引用一个已有话题，把它的内容带进当前对话
+
+{% hint style="info" %}
+在【设置】→【外观】→【输入设置】中打开 **显示预估 Token 数** 后，输入框还会显示预估的 Token 消耗，供参考（不同模型分词方式不同，实际计费以模型提供商为准）。
+{% endhint %}
+
 
 ## 对话设置
 
-<figure><img src="../../.gitbook/assets/image (7) (1) (1).png" alt=""><figcaption></figcaption></figure>
+对话界面的**消息显示**与**输入相关**偏好现在统一放在 `设置 → 外观` 中，对所有助手的所有对话全局生效；**模型参数**则按助手单独设置。
 
-### 模型设置
+### 消息显示与输入设置
 
-模型设置与助手设置当中的 `模型设置` 参数同步，详见 [助手设置](chat.md#bian-ji-zhu-shou)。
+以下偏好都在 `设置 → 外观` 里调整，完整说明见 [外观](../../pre-basic/settings/display.md)：
 
-{% hint style="info" %}
-在对话设置当中，仅该模型设置作用于当前助手，其余设置作用于全局。如：设置消息样式为气泡后在任何助手的任何话题下都是气泡样式。
-{% endhint %}
+* **消息显示**：消息样式（气泡 / 简洁）、使用衬线字体、消息字体大小、思考内容自动折叠、显示消息大纲、代码显示行号 / 代码块可折叠 / 代码块可换行、代码风格、数学公式渲染等
+* **输入相关**：发送快捷键、显示预估 Token 数、Markdown 渲染输入消息、删除消息前确认等
 
-### 消息设置
+### 模型参数
 
-#### <mark style="color:blue;">**`消息分割线`**</mark>:
-
-使用分割线将消息正文与操作栏隔开。
-
-{% tabs %}
-{% tab title="打开时" %}
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
-{% endtab %}
-
-{% tab title="关闭时" %}
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
-{% endtab %}
-{% endtabs %}
-
-#### <mark style="color:blue;">**`使用衬线字体`**</mark>：
-
-字体样式切换，现在你也可以通过 [自定义css](../../pre-basic/personalization-settings/) 来更换字体。
-
-#### <mark style="color:blue;">**`代码显示行号`**</mark>：
-
-模型输出代码片段时显示代码块行号。
-
-{% tabs %}
-{% tab title="关闭时" %}
-<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
-{% endtab %}
-
-{% tab title="打开时" %}
-<figure><img src="../../.gitbook/assets/image (3) (1) (1).png" alt=""><figcaption></figcaption></figure>
-{% endtab %}
-{% endtabs %}
-
-#### <mark style="color:blue;">**`代码块可折叠`**</mark>：
-
-打开后，当代码片段中代码较长时，将自动折叠代码块。、
-
-#### <mark style="color:blue;">**`代码块可换行`**</mark>：
-
-打开后，当代码片段中但行代码较长时（超出窗口），将自动换行。
-
-#### <mark style="color:blue;">**`思考内容自动折叠`**</mark>：
-
-打开后，支持思考的模型在思考完成后会自动折叠思考过程。
-
-#### <mark style="color:blue;">**`消息样式`**</mark>：
-
-可切对话界面换为气泡样式或列表样式。
-
-#### <mark style="color:blue;">**`代码风格`**</mark>：
-
-可切换代码片段的显示风格。
-
-#### <mark style="color:blue;">**`数学公式引擎`**</mark>：
-
-* KaTeX 渲染速度更快，因为它是专门为性能优化设计的；
-* MathJax 渲染较慢，但功能更全面，支持更多的数学符号和命令。
-
-#### <mark style="color:blue;">**`消息字体大小`**</mark>：
-
-调整对话界面字体的大小。
-
-### 输入设置
-
-#### <mark style="color:blue;">**`显示预估 Token 数`**</mark>：
-
-在输入框显示输入文本预估消耗的Token数（非实际上下文消耗的Token，仅供参考）。
-
-#### <mark style="color:blue;">**`长文本粘贴为文件`**</mark>：
-
-当从其他地方复制长段文本粘贴到输入框时会自动显示为文件的样式，减少后续输入内容时的干扰。
-
-#### <mark style="color:blue;">**`Markdown 渲染输入消息`**</mark>：
-
-关闭时只渲染模型回复的消息，不渲染发送的消息。
-
-{% tabs %}
-{% tab title="关闭时" %}
-<figure><img src="../../.gitbook/assets/image (4) (1).png" alt="" width="563"><figcaption></figcaption></figure>
-{% endtab %}
-
-{% tab title="打开时" %}
-<figure><img src="../../.gitbook/assets/image (6) (1).png" alt="" width="563"><figcaption></figcaption></figure>
-{% endtab %}
-{% endtabs %}
-
-#### <mark style="color:blue;">**`快速敲击3次空格翻译`**</mark>：
-
-在对话界面输入框输入消息后，连敲三次空格可翻译输入的内容为英文。
-
-{% hint style="warning" %}
-注意：该操作会覆盖原文。
-{% endhint %}
-
-#### <mark style="color:blue;">**`目标语言`**</mark>：
-
-设置输入框翻译按钮以及快速敲击3次空格翻译的目标语言。
+温度、Top-P、最大 Token 数、流式输出、上下文管理、自定义参数等**模型参数是按助手设置的**，位于[编辑助手](#bian-ji-zhu-shou)对话框的「模型」标签页，具体见下方[助手设置](#zhu-shou-she-zhi)。
 
 ## 助手设置
 
-在助手界面选择需要设置的<mark style="background-color:yellow;">助手名称</mark>→在<mark style="background-color:yellow;">右键菜单中</mark>选对应设置
+在助手列表中**右键点击**需要设置的助手，在弹出菜单中选择【编辑助手】，即可打开助手编辑对话框。
 
 ### 编辑助手
 
 {% hint style="info" %}
-助手设置作用于该助手下的所有话题。
+助手设置作用于该助手下的所有对话。
 {% endhint %}
 
-<figure><img src="../../.gitbook/assets/image (6) (1) (1).png" alt=""><figcaption></figcaption></figure>
+编辑对话框左侧分为五个标签页：
 
-#### 提示词设置
+* **基础**：头像、名称、描述、该助手的默认模型、分组
+* **模型**：温度、Top-P、最大 Token 数、流式输出、上下文管理、自定义参数等模型参数
+* **提示词**：即 prompt，可以参照[智能体](../../advanced-basic/agent.md)页面的提示词写法来编辑内容
+* **知识库**：关联已建好的[知识库](../../knowledge-base/knowledge-base.md)
+* **MCP**：为该助手启用 [MCP](../../advanced-basic/extensions/mcp/README.md) 服务器
 
-#### <mark style="color:blue;">**`名称`**</mark>：
+<figure><img src="../../.gitbook/assets/image (6) (1) (1).png" alt=""><figcaption><p>编辑助手对话框（基础标签页）</p></figcaption></figure>
 
-可自定义方便辨识的助手名称。
+#### 默认模型（基础标签页）
 
-#### <mark style="color:blue;">**`提示词`**</mark>：
-
-即 prompt ，可以参照智能体页面的提示词写法来编辑内容。
-
-#### 模型设置
-
-#### <mark style="color:blue;">**`默认模型`**</mark>：
-
-可以为该助手固定一个默认模型，从智能体页面添加时或复制助手时初始模型为该模型。不设置该项初始模型则为全局初始模型(即 [默认助手模型](../../pre-basic/settings/default-models.md#mo-ren-zhu-shou-mo-xing) )。
+在「基础」标签页可为该助手固定一个默认模型；不设置时则跟随[全局默认对话模型](../../pre-basic/settings/default-models.md#mo-ren-zhu-shou-mo-xing)。
 
 {% hint style="info" %}
-助手的默认模型有两种，一为 [全局默认对话模型](../../pre-basic/settings/default-models.md#mo-ren-zhu-shou-mo-xing) ，另一为助手默认模型；助手的默认模型优先级高于全局默认对话模型。当不设置助手默认模型时，助手默认模型=全局默认对话模型。
+助手的默认模型优先级高于全局默认对话模型。当不设置助手默认模型时，助手默认模型 = 全局默认对话模型。你也可以随时在对话页面顶部的模型下拉菜单中临时切换模型。
 {% endhint %}
 
-#### <mark style="color:blue;">**`自动重置模型`**</mark>：
+#### 模型参数（模型标签页）
 
-打开时 - 当在该话题下使用过程中切换其他模型使用时，再次新建话题会将新话题的重置为助手的默认模型。当该项关闭时新建话题的模型会跟随上一话题所使用的模型。
-
-> 如助手的默认模型为gpt-3.5-turbo，我在该助手下创建话题1，在话题1的对话过程中切换了gpt-4o使用，此时：
->
-> 如果开启了自动重置：新建话题2时，话题2默认选择的模型为gpt-3.5-turbo;
->
-> 如果未开启自动重置：新建话题2时，话题2默认选择的模型为gpt-4o。
+以下参数都在「模型」标签页中调整。
 
 #### <mark style="color:blue;">**`温度 (Temperature)`**</mark> ：
 
@@ -295,13 +245,9 @@ Cherry Studio 的对话框工具栏中的工具具体顺序可由你长按拖拽
 - 以上内容仅供参考和了解概念，所给参数范围不一定适合所有模型，具体可参考模型相关文档给出的参数建议。
 {% endhint %}
 
-#### <mark style="color:blue;">**`上下文数量 (Context Window)`**</mark>
+#### <mark style="color:blue;">**`上下文管理`**</mark>
 
-要保留在上下文中的消息数量，数值越大，上下文越长，消耗的 token 越多：
-
-* 5-10：适合普通对话
-* \>10：需要更长记忆的复杂任务（例如：按照写作提纲分步生成长文的任务，需要确保生成的上下文逻辑连贯）
-* > 注意：消息数越多，token 消耗越大
+控制随请求一起发送给模型的历史上下文如何处理。开启后此助手使用自定义的上下文管理设置（如自动压缩较长历史、按阈值截断），关闭时跟随全局设置。上下文越长，模型记住的信息越多，但消耗的 token 也越多。
 
 #### <mark style="color:blue;">**`开启消息长度限制 (MaxToken)`**</mark>
 
@@ -362,6 +308,6 @@ Cherry Studio 的对话框工具栏中的工具具体顺序可由你长按拖拽
 
 ***
 
-### 💡 获取帮助与提交反馈
+### 获取帮助与提交反馈
 
 如果您在配置或使用过程中遇到任何疑问、Bug 或有功能改进建议，请参考 [反馈与建议](../../question-contact/suggestions.md) 中提供的官方渠道。

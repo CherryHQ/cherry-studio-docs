@@ -20,7 +20,6 @@ MiniMax 是国内大模型厂商之一，特点是有比较出色的**多模态�
 |---|---|
 | `abab6.5s-chat` / `MiniMax-Text-01` | 日常对话 |
 | `abab6.5-chat` | 高质量长文 |
-| 语音模型 | 配合 [语音功能](../settings/yu-yin-gong-neng.md) 使用 |
 
 {% hint style="info" %}
 * MiniMax 国内访问方便，新用户有一定免费额度
@@ -29,6 +28,6 @@ MiniMax 是国内大模型厂商之一，特点是有比较出色的**多模态�
 
 ***
 
-### 💡 获取帮助与提交反馈
+### 获取帮助与提交反馈
 
 如果您在配置或使用过程中遇到任何疑问、Bug 或有功能改进建议，请参考 [反馈与建议](../../question-contact/suggestions.md) 中提供的官方渠道。

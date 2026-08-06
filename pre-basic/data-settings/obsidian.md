@@ -87,19 +87,19 @@ Cherry Studio 支持与 Obsidian 联动，将完整对话或单条对话导出�
 
 ### 第二步：配置 Cherry Studio
 
-在 Cherry Studio &#x7684;_&#x8BBE;置_ → _数据设置_ → _Obsidian 配&#x7F6E;_&#x83DC;单中，输入在[第一步](obsidian.md#di-yi-bu)中获取到的`保管库`名与`文件夹`名：
+在 Cherry Studio 的【设置】→【数据】→【Obsidian 配置】中，只需选择 **默认 Obsidian 仓库**：Cherry Studio 会自动检测本机已有的 Obsidian 仓库，在下拉框里选中你要用的那个即可。
 
-<figure><img src="../../.gitbook/assets/image (129).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (129).png" alt=""><figcaption><p>【设置】→【数据】→【Obsidian 配置】：选择默认 Obsidian 仓库</p></figcaption></figure>
 
-`全局标签`处是可选的，可设定所有对话导出后在 Obsidian 中的标签，按需填写。
+{% hint style="info" %}
+这里只设置默认仓库。**具体存到哪个文件夹、加什么标签，是在每次导出时弹出的【配置笔记属性】对话框里选的**（见下一步），不需要在设置里预先填写。若下拉框提示"未找到 Obsidian 仓库"，请先确认本机已安装 Obsidian 并至少创建过一个仓库。
+{% endhint %}
 
 ### 第三步：导出对话
 
 #### 导出完整对话
 
 回到 Cherry Studio 的对话界面，右键点击对话，选&#x62E9;_&#x5BFC;出_，点&#x51FB;_&#x5BFC;出到 Obsidian_。
-
-<figure><img src="../../.gitbook/assets/image (138).png" alt=""><figcaption><p>导出完整对话</p></figcaption></figure>
 
 此时会弹出一个窗口，用于调整这条导出到 Obsidian 中的对话笔记的 **Properties（属性）**，以及导出到 Obsidian 中的**处理方式**。导出到 Obsidian 中的**处理方式**有以下三种可选：
 
@@ -131,6 +131,6 @@ Cherry Studio 支持与 Obsidian 联动，将完整对话或单条对话导出�
 
 ***
 
-### 💡 获取帮助与提交反馈
+### 获取帮助与提交反馈
 
 如果您在配置或使用过程中遇到任何疑问、Bug 或有功能改进建议，请参考 [反馈与建议](../../question-contact/suggestions.md) 中提供的官方渠道。

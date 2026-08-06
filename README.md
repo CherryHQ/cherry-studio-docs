@@ -35,7 +35,7 @@ Cherry Studio 是一款集多模型对话、智能体Agent、知识库管理、A
 
 * **智能体（Agent）**：可在 **工作** 页面中读取文件、运行命令并完成多步任务，详见 工作。
 * **技能（Skill）**：为助手或智能体加装的"专业能力包"（如做小红书图文、画流程图），开箱即用，详见 技能。
-* **MCP**：通过 Model Context Protocol 接入外部工具与服务（数据库、Notion、GitHub 等），详见 [MCP 使用教程](/broken/pages/xypQ48eulwEGImLNttzF)。
+* **MCP**：通过 Model Context Protocol 接入外部工具与服务（数据库、Notion、GitHub 等），详见 [MCP 使用教程](advanced-basic/extensions/mcp/README.md)。
 * **频道**：将智能体派驻到飞书 / 微信 / Telegram / Discord 等 IM 平台担任群机器人，详见 频道。
 * **定时任务**：让智能体按计划自动运行（如每日新闻简报、每周汇总），详见 定时任务。
 

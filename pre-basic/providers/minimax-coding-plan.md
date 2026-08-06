@@ -31,8 +31,6 @@
 如果列表较长，可以在顶部的搜索框输入 `mini` 快速定位。
 {% endhint %}
 
-<figure><img src="../../.gitbook/assets/image (11).png" alt=""><figcaption></figcaption></figure>
-
 #### 第二步：填写配置
 
 **不需要**修改复杂的 API 地址，使用默认配置即可，请参考以下说明填写：
@@ -57,17 +55,10 @@ Coding Plan 套餐仅支持特定的模型，选错模型将无法使用或产�
 * ✅ **推荐**：`MiniMax M2.1` (Coding Plan 指定主力模型)。
 {% endhint %}
 
-<figure><img src="../../.gitbook/assets/image (12).png" alt=""><figcaption></figcaption></figure>
-
 #### 第四步：保存并验证 <a href="#headingcab61b6e3e264a4b8e56bc83923488d2-di-si-bu-bao-cun-bing-yan-zheng-0" id="headingcab61b6e3e264a4b8e56bc83923488d2-di-si-bu-bao-cun-bing-yan-zheng-0"></a>
 
 1. 点击 API 密钥输入框旁边的 **检测 (Check)** 按钮。
-
-<figure><img src="../../.gitbook/assets/image (13).png" alt=""><figcaption></figcaption></figure>
-
 2. 如果显示绿色 **Success**，说明你的 Coding Plan 套餐已成功连接！
-
-<figure><img src="../../.gitbook/assets/image (14).png" alt=""><figcaption></figcaption></figure>
 
 ### 3. 用量与限制说明
 
@@ -100,6 +91,6 @@ Coding Plan 与普通 API 的计费模式完全不同，请务必理解以下机
 
 ***
 
-### 💡 获取帮助与提交反馈
+### 获取帮助与提交反馈
 
 如果您在配置或使用过程中遇到任何疑问、Bug 或有功能改进建议，请参考 [反馈与建议](../../question-contact/suggestions.md) 中提供的官方渠道。

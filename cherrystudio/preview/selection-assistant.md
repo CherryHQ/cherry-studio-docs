@@ -21,7 +21,7 @@ icon: highlighter
 
 ### 启用划词助手
 
-打开 `设置 → 划词助手`：
+打开【设置】→【划词助手】：
 
 <figure><img src="../../.gitbook/assets/cherry-selection-assistant.png" alt=""><figcaption><p>划词助手设置面板</p></figcaption></figure>
 
@@ -30,11 +30,11 @@ icon: highlighter
 
    <figure><img src="../../.gitbook/assets/cherry-selection-accessibility-dialog.png" alt=""><figcaption><p>首次启用时的辅助功能权限提示</p></figcaption></figure>
 
-   点击 **去设置** → 在弹出的系统设置「隐私与安全性 → 辅助功能」中找到 Cherry Studio 并打开开关 → 回到 Cherry Studio 再次启用。
-3. （可选）在 **工具栏 → 取词方式** 选择触发方式（不同平台可选项不同）：
+   点击 **去设置** → 在弹出的【系统设置】→【隐私与安全性】→【辅助功能】中找到 Cherry Studio 并打开开关 → 回到 Cherry Studio 再次启用。
+3. （可选）在【工具栏】→【取词方式】选择触发方式（不同平台可选项不同）：
    * **划词**：选中文字后立即弹出工具栏（默认）
    * **Ctrl 键**（仅 Windows）：选中文字后**再长按 Ctrl 键**才弹（避免误触）
-   * **快捷键**：选中文字后按快捷键再弹，快捷键在 `设置 → 快捷键` 中改
+   * **快捷键**：选中文字后按快捷键再弹，快捷键在【设置】→【快捷键】中改
 
 <figure><img src="../../.gitbook/assets/cherry-selection-toolbar-settings.png" alt=""><figcaption><p>启用后的设置面板：取词方式 / 紧凑模式 / 跟随工具栏…</p></figcaption></figure>
 
@@ -52,11 +52,11 @@ icon: highlighter
 | **优化** | 待启用 | 让 AI 改写得更通顺 / 更专业，需在设置中拖入启用区 |
 | **引用** | 待启用 | 把选中文字以引用形式发送到当前对话，需在设置中拖入启用区 |
 
-<figure><img src="../../.gitbook/assets/cherry-selection-actions-list.png" alt=""><figcaption><p>设置面板的「功能」区：上方为已启用，下方暂存区拖到上方即启用</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/cherry-selection-actions-list.png" alt=""><figcaption><p>设置面板的【功能】区：上方为已启用，下方暂存区拖到上方即启用</p></figcaption></figure>
 
 ### 自定义操作
 
-在 `设置 → 划词助手 → 功能` 中可：
+在【设置】→【划词助手】→【功能】中可：
 
 * **编辑**内置操作的提示词
 * **添加**自定义操作（命名 + 提示词 + 默认模型）
@@ -68,7 +68,7 @@ icon: highlighter
 工具栏：
 * **紧凑模式**：只显示图标，不显示文字，节省屏幕空间
 
-结果窗口（`功能窗口` 节）：
+结果窗口（【功能窗口】节）：
 * **跟随工具栏**：窗口贴着工具栏弹（默认开），关闭则始终居中
 * **记住大小**：本次手动调过的窗口尺寸，下次保留
 * **自动关闭**：点窗口外即关
@@ -77,11 +77,11 @@ icon: highlighter
 
 ### 搜索引擎
 
-划词助手内置的「搜索」操作可选预设引擎（Google、Bing、DuckDuckGo 等）。配置入口在 `设置 → 划词助手 → 功能`：找到 **搜索** 这条，点击行末右侧的齿轮图标弹出"搜索引擎"对话框，可在预设里挑或加自定义引擎，URL 中用 `{{queryString}}` 表示搜索词位置。
+划词助手内置的【搜索】操作可选预设引擎（Google、Bing、DuckDuckGo 等）。配置入口在【设置】→【划词助手】→【功能】：找到 **搜索** 这条，点击行末右侧的齿轮图标弹出【设置搜索引擎】对话框，可在预设里挑或加自定义引擎，URL 中用 `{{queryString}}` 表示搜索词位置。
 
 ### 应用筛选（高级）
 
-可在 `设置 → 划词助手 → 高级 → 应用筛选` 中设置 **黑名单 / 白名单**，让划词助手只在指定应用中生效（白名单）或不在指定应用中弹出（黑名单）。
+可在【设置】→【划词助手】→【高级】→【应用筛选】中设置 **黑名单 / 白名单**，让划词助手只在指定应用中生效（白名单）或不在指定应用中弹出（黑名单）。
 
 * **macOS**：填入应用的 Bundle ID（如 `com.google.Chrome`、`com.apple.mail`）
 * **Windows**：填入应用的可执行文件名（如 `chrome.exe`、`Cherry Studio.exe`）
@@ -92,13 +92,13 @@ icon: highlighter
 
 ### 提示与技巧
 
-* macOS 上若工具栏不出现，检查 `系统设置 → 隐私与安全性 → 辅助功能` 中 Cherry Studio 是否打勾
+* macOS 上若工具栏不出现，检查【系统设置】→【隐私与安全性】→【辅助功能】中 Cherry Studio 是否打勾
 * 频繁因误触选中文字而弹工具栏？切到 **Ctrl 键** 触发模式
 * 工具栏图标过多挤屏？开启 **紧凑模式**
 * 想做"翻译完直接朗读"等链式操作？把"翻译"结果复制后调用 [快捷助手](quick-assistant.md) 继续处理
 
 ***
 
-### 💡 获取帮助与提交反馈
+### 获取帮助与提交反馈
 
 如果您在配置或使用过程中遇到任何疑问、Bug 或有功能改进建议，请参考 [反馈与建议](../../question-contact/suggestions.md) 中提供的官方渠道。

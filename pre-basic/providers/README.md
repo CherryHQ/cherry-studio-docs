@@ -39,15 +39,16 @@ Cherry Studio 把 Provider 按协议分为以下几类，行为略有差异：
 * [OpenAI](openai.md)
 * [Google Gemini](google-gemini.md)
 * [Vertex AI](vertex-ai.md)
+* [Mistral](mistral.md)
+* [Perplexity](perplexity.md)
 * [GitHub Copilot](github-copilot.md)
 * [MiniMax Coding Plan](minimax-coding-plan.md)
 
 #### 国内厂商
 * [阿里云百炼](a-li-yun-bai-lian.md)
+* [智谱 ZhiPu](zhipu.md)
 * [硅基流动](siliconcloud.md)
 * [火山引擎（豆包）](doubao.md)
-* [华为云](huawei.md)
-* [无问芯穹](wu-wen-xin-qiong.md)
 * [PPIO 派欧云](ppio.md)
 * [ModelScope（魔搭）](modelscope.md)
 
@@ -69,6 +70,6 @@ Cherry Studio 内置 60+ Provider 模板，但**远多于本节文档已收录**
 
 ***
 
-### 💡 获取帮助与提交反馈
+### 获取帮助与提交反馈
 
 如果您在配置或使用过程中遇到任何疑问、Bug 或有功能改进建议，请参考 [反馈与建议](../../question-contact/suggestions.md) 中提供的官方渠道。

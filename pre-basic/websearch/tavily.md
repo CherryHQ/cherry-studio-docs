@@ -15,7 +15,7 @@ icon: binary-lock
 
 ### 二、tavily注册详细步骤
 
-访问上述官网，或者从cherry studio-设置-网络搜索-点击获取秘钥，会直接跳转到tavily登录注册页面。
+访问上述官网，或者从 cherry studio - 设置 - 网络搜索 - 点击「获取密钥」，会直接跳转到 tavily 登录注册页面。
 
 {% hint style="warning" %}
 如果是第一次使用，要先注册一个（Sign up）账号，才能登录（Log in）使用。默认跳转的是登录页面哦。
@@ -48,7 +48,7 @@ icon: binary-lock
 
 <figure><img src="../../.gitbook/assets/image (124).png" alt="" width="375"><figcaption><p>会提示你复制code到安全的地方，听劝照做，虽然不咋会用上</p></figcaption></figure>
 
-### 三、🎉注册成功🎉
+### 三、注册成功
 
 上面的步骤做完，就会进入下面的界面，说明你注册成功了，复制key到cherry studio就可以开始愉快的使用了。
 
@@ -56,6 +56,6 @@ icon: binary-lock
 
 ***
 
-### 💡 获取帮助与提交反馈
+### 获取帮助与提交反馈
 
 如果您在配置或使用过程中遇到任何疑问、Bug 或有功能改进建议，请参考 [反馈与建议](../../question-contact/suggestions.md) 中提供的官方渠道。

@@ -12,15 +12,11 @@
 
 <figure><img src="../../.gitbook/assets/image (159).png" alt=""><figcaption></figcaption></figure>
 
-4. 在 Cherry Studio 中填入密钥
-
-<figure><img src="../../.gitbook/assets/image (160).png" alt=""><figcaption></figcaption></figure>
+4. 在 Cherry Studio 中填入密钥（就是第 1 步那个服务商页面里的 API 密钥输入框）
 
 5. 点击管理按钮，并添加模型
 
 <figure><img src="../../.gitbook/assets/image (162).png" alt=""><figcaption></figcaption></figure>
-
-<figure><img src="../../.gitbook/assets/image (163).png" alt=""><figcaption></figcaption></figure>
 
 6. 在 Cherry Studio 中选择对应模型，即可对话
 
@@ -28,6 +24,6 @@
 
 ***
 
-### 💡 获取帮助与提交反馈
+### 获取帮助与提交反馈
 
 如果您在配置或使用过程中遇到任何疑问、Bug 或有功能改进建议，请参考 [反馈与建议](../../question-contact/suggestions.md) 中提供的官方渠道。

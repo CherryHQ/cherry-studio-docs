@@ -14,14 +14,14 @@ icon: grid
 
 | 应用 | 用途 |
 | --- | --- |
-| [对话](chat.md) | 与模型对话，管理助手和话题 |
+| [对话](chat.md) | 与模型对话，管理助手与对话列表 |
 | [工作](../../advanced-basic/agent.md) | 让智能体调用工具并完成多步骤任务 |
 | [绘画](drawing.md) | 使用图像模型生成和管理图片 |
 | [翻译](translation.md) | 翻译文本并对照查看原文和译文 |
 | [小程序](app.md) | 在 Cherry Studio 中使用网页应用 |
 | [知识库](knowledge-base.md) | 导入资料并进行检索和问答 |
 | [文件](files.md) | 查看和管理应用内使用的文件 |
-| [编码搭档](../../advanced-basic/developer-tools/code-cli.md) | 安装、配置和启动 AI 编程 CLI 工具 |
+| [编码搭档](code-cli.md) | 安装、配置和启动 AI 编程 CLI 工具 |
 | [笔记](notes.md) | 创建和整理 Markdown 笔记 |
 
 ## 调整应用顺序

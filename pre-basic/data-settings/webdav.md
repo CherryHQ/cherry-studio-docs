@@ -30,13 +30,11 @@ Cherry Studio 数据备份支持通过 WebDAV 的方式进行备份。你可以�
 
 <figure><img src="../../.gitbook/assets/image (43).png" alt=""><figcaption></figcaption></figure>
 
-6. 在 Cherry Studio 设置——数据设置中，填写 WebDAV 信息；
+6. 在 Cherry Studio【设置】→【数据】中，填写 WebDAV 信息；
 
 <figure><img src="../../.gitbook/assets/image (48).png" alt=""><figcaption></figcaption></figure>
 
-7. 选择备份或者恢复数据，并可以设置自动备份的时间周期。
-
-<figure><img src="../../.gitbook/assets/image (47).png" alt=""><figcaption></figcaption></figure>
+7. 在同一页面点【备份到 WebDAV】或【从 WebDAV 恢复】，也可以设置自动备份周期与最大备份数。
 
 {% hint style="success" %}
 WebDAV 服务门槛比较低的一般就是网盘：
@@ -58,6 +56,6 @@ WebDAV 服务门槛比较低的一般就是网盘：
 
 ***
 
-### 💡 获取帮助与提交反馈
+### 获取帮助与提交反馈
 
 如果您在配置或使用过程中遇到任何疑问、Bug 或有功能改进建议，请参考 [反馈与建议](../../question-contact/suggestions.md) 中提供的官方渠道。

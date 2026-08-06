@@ -4,64 +4,52 @@ icon: cloud-check
 
 # 模型服务设置
 
-当前页面仅做界面功能的介绍，配置教程可以参考基础教程中的 [服务商配置](../providers/) 教程。
+本页介绍 `设置 → 模型服务` 里单个服务商配置页的各项功能。配置某一家服务商的完整流程，见 [服务商配置](../providers/)。
 
 {% hint style="info" %}
-* 在使用内置服务商时只需要填写对应的秘钥即可。
-* 不同服务商对秘钥的叫法可能有所不同，秘钥、Key、API Key、令牌等都指的是同一个东西。
+* 内置服务商通常只需填对应的 **API 密钥**。
+* 不同服务商对密钥的叫法不同：密钥、Key、API Key、令牌，指的都是同一个东西。
 {% endhint %}
 
-### API 秘钥
+### API 密钥
 
-在 Cherry Studio 当中，单个服务商支持多 Key 轮询使用，轮询方式为从前到后列表循环的方式。
+填入服务商的 API 密钥即可。Cherry Studio 支持**一个服务商配置多个密钥、轮询使用**（按列表从前到后循环）。有两种管理方式：
 
-* 多 Key 用英文逗号隔开添加。如以下示例方式：
-
-<pre><code><strong>sk-xxxx1,sk-xxxx2,sk-xxxx3,sk-xxxx4
-</strong></code></pre>
+* **快速添加**：多个密钥用**英文逗号**隔开直接填入，如 `sk-xxx1,sk-xxx2,sk-xxx3`。
+* **API 密钥管理**：点 API 密钥输入框右侧的**钥匙图标按钮**（悬停显示「API 密钥管理」）即可进入——每个密钥是一个独立条目，可分别**编辑标签**、**启用 / 禁用**、**复制**、**删除**。
 
 {% hint style="warning" %}
-必须使用 **英文** 逗号。
+用逗号分隔多个密钥时，必须使用**英文**逗号。
 {% endhint %}
 
 ### API 地址
 
-在使用内置服务商时一般不需要填写 API 地址，如果需要修改请严格按照对应的官方文档给的地址填写。
+内置服务商一般无需填 API 地址（用默认即可）。如需修改，请按服务商官方文档填写。
 
-> 如果服务商给的地址为 <mark style="background-color:red;">https://xxx.xxx.com</mark><mark style="background-color:green;">/v1/chat/completions</mark> 这种格式，只需要填写根地址部分（<mark style="background-color:red;">https://xxx.xxx.com</mark>）即可。
->
-> Cherry Studio 会自动拼接剩余的路径（<mark style="background-color:green;">/v1/chat/completions</mark>），未按要求填写可能会导致无法正常使用。
+> 若服务商给的是 `https://xxx.com/v1/chat/completions` 这种完整地址，通常只填**根地址** `https://xxx.com` 即可，Cherry Studio 会自动补上 `/v1/chat/completions`。
 
 {% hint style="info" %}
-说明：大多数服务商的大语言模型路由是统一的，一般情况下不需要进行如下操作。如果服务商请求路由不是常规的 <mark style="background-color:green;">/v1/chat/completions</mark> 时，可在 API 地址栏手动输入 **完整的API地址**，并以 `#`结尾。
-
-即：
-
-* API地址使用 `#` 结尾时不执行拼接操作，只使用填入的地址。 <img src="../../.gitbook/assets/image (15).png" alt="" data-size="original">
+如果服务商的请求路径不是常规的 `/v1/chat/completions`，可在 API 地址栏填**完整地址并以 `#` 结尾**——以 `#` 结尾时不再自动拼接版本路径，只用你填的地址。
 {% endhint %}
 
 ### 添加模型
 
-一般情况下点击服务商配置页面最左下角的 `管理` 按钮会自动获取该服务商所有支持调用的模型，从获取列表中点击 `+` 号添加到模型列表即可。
-
-{% hint style="info" %}
-点击管理按钮时弹窗列表里的模型不会全部添加，需要点击模型右侧的 `+` ，添加到服务商配置页面的模型列表才可以在模型选择列表当中出现。
-{% endhint %}
+点服务商配置页的「**获取模型列表**」按钮，会拉取该服务商支持的模型；在弹出的「模型管理」列表里点模型右侧的 `+` 把它加入你的模型列表。**只有加入列表的模型**才会出现在各处的模型选择器里。
 
 ### 连通性检查
 
-点击API 秘钥输入框后的检查按钮即可测试是否成功配置。
+点「**检测**」按钮、选一个模型即可测试是否配置成功（配置多个密钥时，还可选择用哪个密钥检测）。若检测失败，请检查模型列表里是否有填错的或不受支持的模型。
 
-{% hint style="info" %}
-模型检查时默认使用模型列表已添加模型的最后一个对话模型，如果检查时有失败的情况请检查模型列表是否有错误的或不被支持的模型。
-{% endhint %}
+### API 设置（高级）
+
+部分服务商可在「**API 设置**」里开启特定能力，如：支持数组格式的 message content、Developer Message、`enable_thinking`（控制 Qwen3 等模型的思考）、`service_tier`（仅 OpenAI）等。一般无需改动。
 
 {% hint style="danger" %}
-配置成功后务必打开右上角的开关，否则该服务商仍处于未启用状态，无法在模型列表中找到对应模型。
+配置好后，务必打开服务商右上角的**启用开关**，否则该服务商仍未启用，其模型不会出现在模型选择列表里。
 {% endhint %}
 
 ***
 
-### 💡 获取帮助与提交反馈
+### 获取帮助与提交反馈
 
 如果您在配置或使用过程中遇到任何疑问、Bug 或有功能改进建议，请参考 [反馈与建议](../../question-contact/suggestions.md) 中提供的官方渠道。

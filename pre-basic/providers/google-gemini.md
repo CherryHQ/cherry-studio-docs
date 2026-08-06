@@ -11,7 +11,7 @@
 
 <figure><img src="../../.gitbook/assets/image (72).png" alt=""><figcaption></figcaption></figure>
 
-* 将生成的 key 复制，并打开 CherryStudio 的 [服务商设置](https://github.com/CherryHQ/cherry-studio-docs/blob/main/pre-basic/providers/broken-reference/README.md)
+* 将生成的 key 复制，并打开 CherryStudio 的 [模型服务设置](../settings/providers.md)
 * 找到服务商 Gemini，填入刚刚获取到的 key
 
 <figure><img src="../../.gitbook/assets/image (75).png" alt=""><figcaption></figcaption></figure>
@@ -24,6 +24,6 @@
 
 ***
 
-### 💡 获取帮助与提交反馈
+### 获取帮助与提交反馈
 
 如果您在配置或使用过程中遇到任何疑问、Bug 或有功能改进建议，请参考 [反馈与建议](../../question-contact/suggestions.md) 中提供的官方渠道。

@@ -13,9 +13,7 @@
 <figure><img src="../../.gitbook/assets/image (23).png" alt="" width="563"><figcaption></figcaption></figure>
 
 * 打开CherryStudio的服务商设置点击服务商列表最下方的`添加`
-* 输入备注名称，提供商选OpenAI，点击确定
-
-<figure><img src="../../.gitbook/assets/image (25).png" alt="" width="291"><figcaption></figcaption></figure>
+* 输入备注名称，提供商选 OpenAI，点击确定
 
 * 填入刚刚复制的key
 * 回到获取API Key的页面，在对应浏览器地址栏复制根地址，例：
@@ -35,6 +33,6 @@ OneAPI其他主题可能界面有所不同，但添加方法跟上述操作流�
 
 ***
 
-### 💡 获取帮助与提交反馈
+### 获取帮助与提交反馈
 
 如果您在配置或使用过程中遇到任何疑问、Bug 或有功能改进建议，请参考 [反馈与建议](../../question-contact/suggestions.md) 中提供的官方渠道。
