@@ -32,7 +32,7 @@ Cherry Studio 支持将话题导入 Notion 的数据库。
 
 <figure><img src="../../.gitbook/assets/复制密钥.png" alt=""><figcaption><p>点击复制密钥</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/填写密钥.png" alt=""><figcaption><p>将密钥填写到数据设置里</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/填写密钥.png" alt=""><figcaption><p>【设置】→【数据】→【Notion 设置】：密钥 / 数据库 ID / 页面标题字段名都在这一页填写</p></figcaption></figure>
 
 ## 第四步
 
@@ -50,18 +50,14 @@ Cherry Studio 支持将话题导入 Notion 的数据库。
 
 https://www.notion.so/\<long\_hash\_1>?v=\<long\_hash\_2>
 
-那么 Notion 数据库 ID 就是 `<long_hash_1>` 这部分
-
-<figure><img src="../../.gitbook/assets/填写数据库ID.png" alt=""><figcaption><p>填写数据库 ID 并点击检查</p></figcaption></figure>
+那么 Notion 数据库 ID 就是 `<long_hash_1>` 这部分，回到上面的 Notion 设置页填入并点击检查。
 
 ## 第六步
 
 填写 `页面标题字段名`：
 
-若你的网页时英文的，则填写 `Name`\
+若你的网页端是英文的，则填写 `Name`\
 若你的网页端是中文的，则填写 `名称`
-
-<figure><img src="../../.gitbook/assets/填写页面标题字段名.png" alt=""><figcaption><p>填写页面标题字段名</p></figcaption></figure>
 
 ## 第七步
 
@@ -73,6 +69,6 @@ https://www.notion.so/\<long\_hash\_1>?v=\<long\_hash\_2>
 
 ***
 
-### 💡 获取帮助与提交反馈
+### 获取帮助与提交反馈
 
 如果您在配置或使用过程中遇到任何疑问、Bug 或有功能改进建议，请参考 [反馈与建议](../../question-contact/suggestions.md) 中提供的官方渠道。

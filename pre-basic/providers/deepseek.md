@@ -24,7 +24,7 @@ DeepSeek 是国内主流大模型厂商之一，以 V3 / R1 系列在编程与�
 
 ## 与全局记忆的搭配
 
-DeepSeek 自家没有嵌入模型。如果你要用 [全局记忆](/broken/pages/vLGRwSy6YvFqXFxoqvsN) 或知识库：
+DeepSeek 自家没有嵌入模型。如果你要用知识库：
 
 * 嵌入模型推荐用其他 Provider 的（如 [硅基流动](siliconcloud.md) 的 `bge-m3` 或 [OpenAI](openai.md) 的 `text-embedding-3-small`）
 * 对话模型仍可用 DeepSeek
@@ -36,6 +36,6 @@ DeepSeek 自家没有嵌入模型。如果你要用 [全局记忆](/broken/pages
 
 ***
 
-### 💡 获取帮助与提交反馈
+### 获取帮助与提交反馈
 
 如果您在配置或使用过程中遇到任何疑问、Bug 或有功能改进建议，请参考 [反馈与建议](../../question-contact/suggestions.md) 中提供的官方渠道。

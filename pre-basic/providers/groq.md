@@ -25,7 +25,7 @@ Groq（注意：不是 xAI 的 Grok）是一个以 **LPU 硬件加速、超低�
 
 ## 适用场景
 
-* **实时聊天机器人**：Groq 的"几乎瞬时响应"很适合 IM 接入（搭配 [频道](/broken/pages/UbNiAoRqD0PpkxJGCUEn)）
+* **实时聊天机器人**：Groq 的"几乎瞬时响应"很适合 IM 接入（搭配 [频道](../../advanced-basic/automation/channels.md)）
 * **大量并发**：每秒 token 数显著高于普通云推理
 * **不在乎模型最新**：Groq 主要托管 Llama 系等开源模型，没有 GPT-5 / Claude-4 这种闭源模型
 
@@ -43,6 +43,6 @@ Grok（xAI）和 Groq 经常被混淆。在 Cherry Studio Provider 列表中是�
 
 ***
 
-### 💡 获取帮助与提交反馈
+### 获取帮助与提交反馈
 
 如果您在配置或使用过程中遇到任何疑问、Bug 或有功能改进建议，请参考 [反馈与建议](../../question-contact/suggestions.md) 中提供的官方渠道。

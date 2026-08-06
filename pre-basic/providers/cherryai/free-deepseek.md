@@ -5,7 +5,7 @@ Cherry Studio 用户现在可以通过内置的 **CherryIN** 服务免费体验 
 
 ***
 
-## 🚀 什么是 DeepSeek V3.2？
+## 什么是 DeepSeek V3.2？
 
 DeepSeek V3.2 基于 V3.2-Exp 迭代而来，采用 Mixture-of-Experts（MoE）架构，并引入 **DeepSeek Sparse Attention（DSA）** 稀疏注意力机制，在保持超大规模总参数的同时显著降低长上下文推理成本。
 
@@ -22,7 +22,7 @@ V3.2 同时发布了面向 API 的 **DeepSeek-V3.2-Speciale** 版本，在复杂
 
 ***
 
-## 📚 延续扎实的训练与对齐流程
+## 延续扎实的训练与对齐流程
 
 DeepSeek V3.2 沿用了 V3 系列成熟的训练流水线，并针对 Agent 场景做了关键扩展：
 
@@ -35,7 +35,7 @@ DeepSeek V3.2 沿用了 V3 系列成熟的训练流水线，并针对 Agent 场�
 
 ***
 
-## ⚙️ 旗舰级核心能力
+## 旗舰级核心能力
 
 DeepSeek V3.2 主打"与 GPT-5 水平相当"的综合能力，并在 Agent 与复杂推理上大幅强化：
 
@@ -49,7 +49,7 @@ DeepSeek V3.2 主打"与 GPT-5 水平相当"的综合能力，并在 Agent 与�
 
 ***
 
-## 💡 DeepSeek Sparse Attention：更长、更省
+## DeepSeek Sparse Attention：更长、更省
 
 DSA 是 V3.2 的核心技术升级，通过 **lightning indexer + 细粒度 token 选择** 实现：
 
@@ -65,7 +65,7 @@ DSA 是 V3.2 的核心技术升级，通过 **lightning indexer + 细粒度 toke
 
 ***
 
-## 🌟 开放、可用、生态友好
+## 开放、可用、生态友好
 
 - ⚡ DSA 带来的长上下文推理加速
 - 💰 通过 CherryIN 在 Cherry Studio 中**免费使用**
@@ -75,7 +75,7 @@ DSA 是 V3.2 的核心技术升级，通过 **lightning indexer + 细粒度 toke
 
 ***
 
-## 🧠 聚焦实用能力：代码与 Agent
+## 聚焦实用能力：代码与 Agent
 
 DeepSeek V3.2 在实际开发工作流中表现尤为出色：
 
@@ -86,7 +86,7 @@ DeepSeek V3.2 在实际开发工作流中表现尤为出色：
 
 ***
 
-## 🧭 如何在 Cherry Studio 中使用？
+## 如何在 Cherry Studio 中使用？
 
 1. 打开 Cherry Studio，进入 **设置 → 模型服务**。
 2. 找到 **CherryIN** 服务商并开启。
@@ -101,6 +101,6 @@ DeepSeek V3.2 在实际开发工作流中表现尤为出色：
 
 ***
 
-### 💡 获取帮助与提交反馈
+### 获取帮助与提交反馈
 
 如果您在配置或使用过程中遇到任何疑问、Bug 或有功能改进建议，请参考 [反馈与建议](../../../question-contact/suggestions.md) 中提供的官方渠道。

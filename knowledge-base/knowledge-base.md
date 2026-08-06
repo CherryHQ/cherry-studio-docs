@@ -22,7 +22,7 @@ icon: book-open-cover
 
 1. **入口**：顶部 Tab `+` → **启动台** → 点击 `知识库`（或在左侧栏布局下点击知识库图标）；
 2. **添加**：点击 **+ 添加**，开始创建知识库；
-3. **命名 + 选模型**：输入名称并选择嵌入模型（以 `bge-m3` 为例），即可完成创建。
+3. **命名 + 选模型**：输入名称。嵌入模型**可选**——选一个（以 `bge-m3` 为例）即可用向量检索；**留空则创建纯 BM25（关键词）知识库**，之后也能在知识库的 RAG 设置里再补嵌入模型。
 
 <figure><img src="../.gitbook/assets/image-1.webp" alt=""><figcaption></figcaption></figure>
 
@@ -31,7 +31,7 @@ icon: book-open-cover
 ## 添加文件并向量化
 
 1. 添加文件：点击添加文件的按钮，打开文件选择；
-2. 选择文件：选择支持的文件格式，如 pdf，docx，pptx，xlsx，txt，md，mdx 等，并打开；
+2. 选择文件：选择支持的格式（PDF、DOCX、DOC、PPTX、XLSX、XLS、MD、TXT、CSV、HTML、EPUB 等），并打开；
 3. 向量化：系统会自动进行向量化处理，当显示完成时（绿色 ✓），代表向量化已完成。
 
 <figure><img src="../.gitbook/assets/image-3.webp" alt=""><figcaption></figcaption></figure>
@@ -42,33 +42,28 @@ icon: book-open-cover
 
 ## 添加多种来源的数据
 
-CherryStudio 支持多种添加数据的方式：
+除了文件，CherryStudio 还支持三种来源：
 
-1. 文件夹目录：可以添加整个文件夹目录，该目录下支持格式的文件会被自动向量化；
-2. 网址链接：支持网址 url，如[https://docs.siliconflow.cn/introduction](https://docs.siliconflow.cn/introduction)；
-3. 站点地图：支持 xml 格式的站点地图，如[https://docs.siliconflow.cn/sitemap.xml](https://docs.siliconflow.cn/sitemap.xml)；
-4. 纯文本笔记：支持输入纯文本的自定义内容。
+1. **目录**：添加整个文件夹，目录下支持格式的文件会被自动向量化；
+2. **链接（URL）**：支持网址，如 [https://docs.siliconflow.cn/introduction](https://docs.siliconflow.cn/introduction)；
+3. **笔记**：把 Cherry Studio 里已有的笔记选进来作为知识库数据源。
 
 {% hint style="info" %}
 提示：
 
-1. 导入知识库的文档中的插图暂不支持转换为向量，需要手动转换为文本；
-2. 使用网址作为知识库来源时不一定会成功，有些网站有比较严格的反扒机制（或需要登录、授权等），因此该方式不一定能获取到准确内容。创建完成后建议先搜索测试一下。
-3. 一般网站都会提供sitemap，如CherryStudio的[sitemap](https://docs.cherry-ai.com/sitemap-pages.xml)，一般情况下在网站的根地址（即网址）后加/sitemap.xml可以获取到相关信息。如`aaa.com/sitemap.xml` 。
-4. 如果网站没提供sitemap或者网址比较杂可自行组合一个sitemap的xml文件使用，文件暂时需要使用公网可直接访问的直链的方式填入，本地文件链接不会被识别。
-
-> 1) 可以让AI生成sitemap文件或让AI写一个sitemap的HTML生成器工具；
-> 2) 直链可以使用oss直链或者网盘直链等方式来生成。如果没有现成工具也可到[ocoolAI](https://one.ocoolai.com/login)官网，登录后使用网站顶栏的免费文件上传工具来生成直链。
+1. 导入文档里的插图暂不支持转为向量，需要时先手动转成文本。
+2. 用网址作来源不一定成功——有些网站有反爬机制（或需登录 / 授权），可能取不到内容。加完建议先用**召回测试**验证一下。
 {% endhint %}
 
-## 搜索知识库
+## 召回测试
 
-当文件等资料向量化完成后，即可进行查询：
+资料向量化完成后，用**召回测试**验证"真实问题能不能找到正确片段"：
 
-1. 点击页面下方的搜索知识库按钮；
-2. 输入查询的内容；
-3. 呈现搜索的结果；
-4. 并显示该条结果的匹配分数。
+1. 打开知识库的 **召回测试**（页面右上角）；
+2. 输入一个你会真正问的问题；
+3. 查看返回的片段及其**相关度分数**，并可查看历史记录。
+
+召回不准时，先修资料或调 RAG 设置，别让 AI 猜。
 
 <figure><img src="../.gitbook/assets/image-7.webp" alt=""><figcaption></figcaption></figure>
 
@@ -86,6 +81,6 @@ CherryStudio 支持多种添加数据的方式：
 
 ***
 
-### 💡 获取帮助与提交反馈
+### 获取帮助与提交反馈
 
 如果您在配置或使用过程中遇到任何疑问、Bug 或有功能改进建议，请参考 [反馈与建议](../question-contact/suggestions.md) 中提供的官方渠道。

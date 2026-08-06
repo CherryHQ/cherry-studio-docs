@@ -1,0 +1,20 @@
+{
+  "file": "v2/ocr-overview.png",
+  "rawFile": ".context/cherry-user-guide/raw/ocr-overview.raw.png",
+  "pageId": "ocr",
+  "route": "/settings/ocr",
+  "selectors": [
+    "[data-ui~=\"part:select-trigger\"]"
+  ],
+  "uiTokens": [
+    "part:select-trigger"
+  ],
+  "gitSha": "release:2.0.0",
+  "locale": "zh-CN",
+  "theme": "light",
+  "viewport": {
+    "width": 997,
+    "height": 683
+  },
+  "capturedAt": "2026-08-05T13:25:44.542Z"
+}

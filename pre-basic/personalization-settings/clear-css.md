@@ -14,7 +14,7 @@ icon: trash-xmark
 <figure><img src="../../.gitbook/assets/image (125).png" alt=""><figcaption></figcaption></figure>
 
 * 然后手动输入`document.getElementById('user-defined-custom-css').remove()` ，复制粘贴大概率不会执行。
-* 输入完成后回车确认即可清除css设置，然后再次进入CherryStudio的显示设置当中，删除有问题的css代码。
+* 输入完成后回车确认即可清除css设置，然后再次进入 CherryStudio 的【外观】设置当中，删除有问题的css代码。
 
 ***
 
