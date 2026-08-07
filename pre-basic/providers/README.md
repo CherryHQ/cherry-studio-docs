@@ -61,7 +61,7 @@ Cherry Studio 把 Provider 按协议分为以下几类，行为略有差异：
 {% hint style="info" %}
 **没找到你用的 Provider 怎么办？**
 
-Cherry Studio 内置 60+ Provider 模板，但**远多于本节文档已收录**的数量。如果你用的是 Anthropic（Claude）、Azure OpenAI、DeepSeek 官方、Grok、Groq、LM Studio、OpenRouter、Mistral、Perplexity、Together 等，**它们都在 Provider 列表里**，直接添加密钥即可。本节文档将分批补齐这些 Provider 的专题页。
+Cherry Studio 内置 60+ Provider 模板，但 **远多于本节文档已收录** 的数量。如果你用的是 Anthropic（Claude）、Azure OpenAI、DeepSeek 官方、Grok、Groq、LM Studio、OpenRouter、Mistral、Perplexity、Together 等，**它们都在 Provider 列表里**，直接添加密钥即可。本节文档将分批补齐这些 Provider 的专题页。
 {% endhint %}
 
 ### API 密钥与 API 地址

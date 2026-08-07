@@ -7,7 +7,7 @@ icon: apple
 
 ## 1. 确认芯片类型并下载
 
-打开[官方下载页](https://cherryai.com.cn/download/v2)。Apple 芯片（M 系列）选择 **macOS · ARM64**；Intel Mac 选择页面下方的 **Intel 芯片** 下载项。
+打开 [官方下载页](https://cherryai.com.cn/download/v2)。Apple 芯片（M 系列）选择 **macOS · ARM64**；Intel Mac 选择页面下方的 **Intel 芯片** 下载项。
 
 ![Cherry Studio 官方下载页的 macOS Apple 芯片下载选项](https://3562065924-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F0Ut5BptC3t8CtSU1UWpM%2Fuploads%2FLQNWYQOvDTEl1xeIG7o0%2Fcherry-v2-download-macos-zh-cn.jpg?alt=media\&token=c0daa78f-c48f-43e8-83ff-665bf321ed02)
 

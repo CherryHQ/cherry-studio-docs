@@ -63,7 +63,7 @@ GLM-4.6V 的核心升级之一，是 **"视觉感知 → 可执行动作"** 的�
 ## 高效 MoE，开放可用
 
 - ⚡ MoE 稀疏激活：106B 总参数，仅激活约 12B
-- 💰 通过 CherryIN 在 Cherry Studio 中**免费使用**
+- 💰 通过 CherryIN 在 Cherry Studio 中 **免费使用**
 - 🖥️ 权重、推理代码与 MCP 工具已在 GitHub 与 Hugging Face 开源，MIT 许可
 
 ***

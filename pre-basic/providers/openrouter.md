@@ -1,6 +1,6 @@
 # OpenRouter
 
-OpenRouter 是一个**统一网关**，用一把 key 接入 200+ 家厂商的对话模型（GPT、Claude、Gemini、Llama、DeepSeek 等），按 token 转计费，适合多模型对比 / 没法一一注册各家账号的用户。
+OpenRouter 是一个 **统一网关**，用一把 key 接入 200+ 家厂商的对话模型（GPT、Claude、Gemini、Llama、DeepSeek 等），按 token 转计费，适合多模型对比 / 没法一一注册各家账号的用户。
 
 ## 获取 API Key
 
@@ -19,14 +19,14 @@ OpenRouter 是一个**统一网关**，用一把 key 接入 200+ 家厂商的对
 
 OpenRouter 的模型 ID 形如 `<vendor>/<model>`：
 
-| 模型 ID 示例                            | 实际是谁                      |
+| 模型 ID 示例 | 实际是谁 |
 | ----------------------------------- | ------------------------- |
-| `openai/gpt-4o`                     | OpenAI GPT-4o             |
-| `anthropic/claude-sonnet-4`         | Anthropic Claude Sonnet 4 |
-| `google/gemini-2.0-flash`           | Google Gemini Flash       |
-| `meta-llama/llama-3.3-70b-instruct` | Meta Llama 3.3 70B        |
-| `deepseek/deepseek-chat`            | DeepSeek V3               |
-| `x-ai/grok-4`                       | xAI Grok                  |
+| `openai/gpt-4o` | OpenAI GPT-4o |
+| `anthropic/claude-sonnet-4` | Anthropic Claude Sonnet 4 |
+| `google/gemini-2.0-flash` | Google Gemini Flash |
+| `meta-llama/llama-3.3-70b-instruct` | Meta Llama 3.3 70B |
+| `deepseek/deepseek-chat` | DeepSeek V3 |
+| `x-ai/grok-4` | xAI Grok |
 
 ## 适用场景
 

@@ -4,7 +4,7 @@ icon: terminal
 
 # 环境依赖
 
-环境依赖用来**管理 Cherry Studio 运行部分高级功能所需的二进制工具和运行时**。像 [MCP 服务](../../advanced-basic/extensions/mcp/)、[技能](../../advanced-basic/extensions/skills.md)、[Agent](../../advanced-basic/agent.md) 的一些能力，底层要调用 `uv`、`bun` 等命令行工具。Cherry Studio 把它们集中在这里，让你不必手动去命令行安装配置。
+环境依赖用来 **管理 Cherry Studio 运行部分高级功能所需的二进制工具和运行时**。像 [MCP 服务](../../advanced-basic/extensions/mcp/)、[技能](../../advanced-basic/extensions/skills.md)、[Agent](../../advanced-basic/agent.md) 的一些能力，底层要调用 `uv`、`bun` 等命令行工具。Cherry Studio 把它们集中在这里，让你不必手动去命令行安装配置。
 
 打开 `设置 → 环境依赖`：
 
@@ -29,7 +29,7 @@ icon: terminal
 | **RTK** | 压缩终端输出、减少 LLM token 消耗的 CLI 代理工具 |
 | **Lark CLI** | 飞书官方 CLI，覆盖消息 / 文档 / 多维表格 / 日历等 200+ 命令 |
 
-页面还以卡片列出 `gh`（GitHub CLI）、`ntn`（Notion CLI）、`pi` 等工具，可按需一键安装。（编程类 CLI 如 Claude Code / Codex 在[编码搭档](../../cherrystudio/preview/code-cli.md)页管理，不在此页。）
+页面还以卡片列出 `gh`（GitHub CLI）、`ntn`（Notion CLI）、`pi` 等工具，可按需一键安装。（编程类 CLI 如 Claude Code / Codex 在 [编码搭档](../../cherrystudio/preview/code-cli.md) 页管理，不在此页。）
 
 ### 添加工具
 
@@ -49,7 +49,7 @@ icon: terminal
 {% endhint %}
 
 {% hint style="warning" %}
-如果某个 MCP 服务或技能报错提示"找不到 uv / bun / 命令不存在"，先来这里确认对应工具是否已安装或为"内置"状态（安装状态会自动刷新；右上角那个按钮是**检查更新**，用于拉取工具的最新版本）。
+如果某个 MCP 服务或技能报错提示"找不到 uv / bun / 命令不存在"，先来这里确认对应工具是否已安装或为"内置"状态（安装状态会自动刷新；右上角那个按钮是 **检查更新**，用于拉取工具的最新版本）。
 {% endhint %}
 
 ***

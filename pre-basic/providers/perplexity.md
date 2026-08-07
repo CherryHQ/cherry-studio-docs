@@ -1,6 +1,6 @@
 # Perplexity
 
-Perplexity 的 **Sonar** 系列主打**搜索增强对话**——回答会结合实时联网检索，适合需要引用最新信息的场景。
+Perplexity 的 **Sonar** 系列主打 **搜索增强对话**——回答会结合实时联网检索，适合需要引用最新信息的场景。
 
 ## 获取 API Key
 
@@ -9,7 +9,7 @@ Perplexity 的 **Sonar** 系列主打**搜索增强对话**——回答会结合
 
 ## 在 Cherry Studio 中配置
 
-1. 打开 Cherry Studio 的[模型服务设置](../settings/providers.md)，在内置列表中找到 **Perplexity**
+1. 打开 Cherry Studio 的 [模型服务设置](../settings/providers.md)，在内置列表中找到 **Perplexity**
 2. 填入刚获取的 API Key
 3. 点击 **获取模型列表**，添加 Sonar 等模型，打开右上角服务商开关即可使用
 

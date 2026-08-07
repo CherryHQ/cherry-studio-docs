@@ -70,11 +70,11 @@ CherryStudio 支持通过 SearXNG 进行网络搜索，SearXNG 是一个可本�
 
 鉴于 Windows 下安装 Docker 是一件较为麻烦的事情，用户可以将 SearXNG 部署在服务器上，也可借此共享给其他人使用。但是很遗憾，SearXNG 自身暂不支持鉴权，导致他人可以通过技术手段扫描到并滥用你部署的实例。
 
-为此，Cherry Studio 目前已支持配置 [HTTP 基本认证（RFC7617）](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Guides/Authentication)，如果用户欲将自己部署的 SearXNG 暴露在公网环境下，请**务必**通过 Nginx 等反向代理软件配置 HTTP 基本认证。下面提供简要教程，需要你有基本的 Linux 运维知识。
+为此，Cherry Studio 目前已支持配置 [HTTP 基本认证（RFC7617）](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Guides/Authentication)，如果用户欲将自己部署的 SearXNG 暴露在公网环境下，请 **务必** 通过 Nginx 等反向代理软件配置 HTTP 基本认证。下面提供简要教程，需要你有基本的 Linux 运维知识。
 
 ### 部署 SearXNG
 
-类似地，仍然使用 Docker 部署。假设你已经按照[官方教程](https://docs.docker.com/engine/install)在服务器上安装好了最新版 Docker CE，以下提供一条龙命令，适用于 Debian 系统下全新安装：
+类似地，仍然使用 Docker 部署。假设你已经按照 [官方教程](https://docs.docker.com/engine/install) 在服务器上安装好了最新版 Docker CE，以下提供一条龙命令，适用于 Debian 系统下全新安装：
 
 ```bash
 sudo apt update
@@ -95,7 +95,7 @@ use_default_settings: true
 server:
   # base_url is defined in the SEARXNG_BASE_URL environment variable, see .env and docker-compose.yml
   secret_key: $(openssl rand -hex 32)
-  limiter: false  # can be disabled for a private instance
+  limiter: false # can be disabled for a private instance
   image_proxy: $IMAGE_PROXY
 ui:
   static_use_hash: true
@@ -215,8 +215,8 @@ server
     # root /data/www/default;
 
     # 如果配置了 SSL 应该有这两行
-    ssl_certificate    /path/to/your/cert/fullchain.pem;
-    ssl_certificate_key    /path/to/your/cert/privkey.pem;
+    ssl_certificate /path/to/your/cert/fullchain.pem;
+    ssl_certificate_key /path/to/your/cert/privkey.pem;
 
     # HSTS
     # add_header Strict-Transport-Security "max-age=31536000; includeSubDomains; preload";
@@ -238,8 +238,8 @@ server
         client_max_body_size 0;
     }
 
-    # access_log  ...;
-    # error_log  ...;
+    # access_log ...;
+    # error_log ...;
 }
 ```
 

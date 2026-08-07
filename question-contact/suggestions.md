@@ -12,11 +12,11 @@ Cherry Studio 提供三种反馈方式：由 Cherry Assistant 引导提交、前
 
 ## 选哪一种
 
-| 方式             | 适合情况               | 会发生什么                                  |
+| 方式 | 适合情况 | 会发生什么 |
 | -------------- | ------------------ | -------------------------------------- |
-| 【使用 Agent 提交】  | 不确定问题类型、希望自动整理信息   | Cherry Assistant 诊断、脱敏预览，并在确认后提交或生成诊断包 |
-| 【GitHub Issue】 | 已确认要公开跟踪 Bug 或功能建议 | 打开官方 Issue 类型选择页                       |
-| 【反馈问卷】         | 中文用户提交一般反馈         | 打开官方飞书问卷                               |
+| 【使用 Agent 提交】 | 不确定问题类型、希望自动整理信息 | Cherry Assistant 诊断、脱敏预览，并在确认后提交或生成诊断包 |
+| 【GitHub Issue】 | 已确认要公开跟踪 Bug 或功能建议 | 打开官方 Issue 类型选择页 |
+| 【反馈问卷】 | 中文用户提交一般反馈 | 打开官方飞书问卷 |
 
 <figure><img src="../.gitbook/assets/clipboard (7).png" alt="Cherry Assistant 反馈 Agent 的对话区、模型选择和状态面板"><figcaption><p>在反馈 Agent 中说明目标、实际结果和复现步骤，再按提示决定是否提供诊断信息。</p></figcaption></figure>
 

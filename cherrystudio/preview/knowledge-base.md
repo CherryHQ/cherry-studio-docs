@@ -4,7 +4,7 @@ icon: books
 
 # 知识库
 
-知识库就像给 AI 配一本**专属参考书**：你把自己的文档、笔记、网址塞进去，之后聊天时让 AI 翻这本书来回答你的问题。
+知识库就像给 AI 配一本 **专属参考书**：你把自己的文档、笔记、网址塞进去，之后聊天时让 AI 翻这本书来回答你的问题。
 
 <figure><img src="../../.gitbook/assets/v2/knowledge-base-empty.png" alt=""><figcaption><p>知识库：左栏是已建知识库列表（顶部 <code>+ 新建知识库</code>），右侧向选中的知识库添加文件 / 笔记 / 目录 / 链接数据源</p></figcaption></figure>
 
@@ -42,7 +42,7 @@ icon: books
 * **知识库 +** [**频道**](../../advanced-basic/automation/channels.md)：把"会查公司文档"的智能体派到飞书群里值班
 
 {% hint style="info" %}
-推荐先阅读[进阶能力地图](../../advanced-basic/capability-map.md)，了解知识库与智能体、MCP、频道等功能如何协同。
+推荐先阅读 [进阶能力地图](../../advanced-basic/capability-map.md)，了解知识库与智能体、MCP、频道等功能如何协同。
 {% endhint %}
 
 ***

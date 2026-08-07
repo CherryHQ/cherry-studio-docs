@@ -4,7 +4,7 @@ icon: list
 
 # 全部 Provider 快速参考
 
-Cherry Studio 内置 **60+ 家 Provider**，本页提供总览表，找到目标 Provider 后**按指引填写密钥即可使用**。已有专题文档的 Provider 提供跳转链接，其余按通用步骤（[Provider 总览](README.md)）配置。
+Cherry Studio 内置 **60+ 家 Provider**，本页提供总览表，找到目标 Provider 后 **按指引填写密钥即可使用**。已有专题文档的 Provider 提供跳转链接，其余按通用步骤（[Provider 总览](README.md)）配置。
 
 ## 使用步骤
 
@@ -23,7 +23,7 @@ Cherry Studio 内置 **60+ 家 Provider**，本页提供总览表，找到目标
 | **一个 key 通用 200 家** | [OpenRouter](openrouter.md) |
 | **完全本地、隐私敏感** | [Ollama](ollama.md) / [LM Studio](lm-studio.md) |
 | **企业合规** | [Azure OpenAI](azure-openai.md) / AWS Bedrock |
-| **使用[智能体](../../advanced-basic/agent.md)** | [Anthropic](anthropic.md) / [CherryIN](cherryin-1.md)（要支持 Anthropic 协议） |
+| **使用 [智能体](../../advanced-basic/agent.md)** | [Anthropic](anthropic.md) / [CherryIN](cherryin-1.md)（要支持 Anthropic 协议） |
 
 ## 国内大厂自营模型
 

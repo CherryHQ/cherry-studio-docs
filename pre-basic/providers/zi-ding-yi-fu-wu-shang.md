@@ -40,9 +40,9 @@ Cherry Studio 不仅集成了主流的 AI 模型服务，还赋予了您强大�
 3. **API 地址：**
    * 填写 AI 服务的 API 访问地址（Base URL）。
    * 请务必参考您的 AI 服务商提供的官方文档，获取正确的 API 地址。
-4.  **模型管理：**
+4. **模型管理：**
 
-    * 点击“+ 添加”按钮，手动添加此提供商下您想要使用的模型ID。例如 `gpt-3.5-turbo`、`gemini-pro` 等。
+    * 点击“+ 添加”按钮，手动添加此提供商下您想要使用的模型 ID。例如 `gpt-3.5-turbo`、`gemini-pro` 等。
 
     <figure><img src="../../.gitbook/assets/image (4) (5).png" alt=""><figcaption></figcaption></figure>
 
@@ -55,29 +55,29 @@ Cherry Studio 不仅集成了主流的 AI 模型服务，还赋予了您强大�
 
 ## 使用 vLLM 作为自定义 AI 服务商
 
-vLLM 是一个类似Ollama的快速且易于使用的 LLM 推理库。以下是如何将 vLLM 集成到 Cherry Studio 中的步骤：
+vLLM 是一个类似 Ollama 的快速且易于使用的 LLM 推理库。以下是如何将 vLLM 集成到 Cherry Studio 中的步骤：
 
-1.  **安装 vLLM：** 按照 vLLM 官方文档（[https://docs.vllm.ai/en/latest/getting\_started/quickstart.html](https://docs.vllm.ai/en/latest/getting_started/quickstart.html)）安装 vLLM。
+1. **安装 vLLM：** 按照 vLLM 官方文档（[https://docs.vllm.ai/en/latest/getting\_started/quickstart.html](https://docs.vllm.ai/en/latest/getting_started/quickstart.html)）安装 vLLM。
 
     ```sh
     pip install vllm # 如果你使用 pip
     uv pip install vllm # 如果你使用 uv
     ```
-2.  **启动 vLLM 服务：** 使用 vLLM 提供的 OpenAI 兼容接口启动服务。主要有两种方式，分别如下：
+2. **启动 vLLM 服务：** 使用 vLLM 提供的 OpenAI 兼容接口启动服务。主要有两种方式，分别如下：
 
-    * 使用`vllm.entrypoints.openai.api_server`启动
+    * 使用 `vllm.entrypoints.openai.api_server` 启动
 
     ```sh
     python -m vllm.entrypoints.openai.api_server --model gpt2
     ```
 
-    * 使用`uvicorn`启动
+    * 使用 `uvicorn` 启动
 
     ```sh
     vllm --model gpt2 --served-model-name gpt2
     ```
 
-确保服务成功启动，并监听在默认端口 `8000` 上。 当然， 您也可以通过参数`--port`指定 vLLM 服务的端口号。
+确保服务成功启动，并监听在默认端口 `8000` 上。 当然， 您也可以通过参数 `--port` 指定 vLLM 服务的端口号。
 
 3. **在 Cherry Studio 中添加 vLLM 服务商：**
    * 按照前面描述的步骤，在 Cherry Studio 中添加一个新的自定义 AI 服务商。
@@ -86,7 +86,7 @@ vLLM 是一个类似Ollama的快速且易于使用的 LLM 推理库。以下是�
 4. **配置 vLLM 服务商：**
    * **API 密钥：** 因为 vLLM 不需要 API 密钥，可以将此字段留空，或者填写任意内容。
    * **API 地址：** 填写 vLLM 服务的 API 地址。默认情况下，地址为： `http://localhost:8000/`（如果使用了不同的端口，请相应地修改）。
-   * **模型管理：** 添加您在 vLLM 中加载的模型名称。 在上面运行`python -m vllm.entrypoints.openai.api_server --model gpt2`的例子中, 应该在此处填入`gpt2`
+   * **模型管理：** 添加您在 vLLM 中加载的模型名称。 在上面运行 `python -m vllm.entrypoints.openai.api_server --model gpt2` 的例子中, 应该在此处填入 `gpt2`
 5. **开始对话：** 现在，您可以在 Cherry Studio 中选择 vLLM 服务商和 `gpt2` 模型，开始与 vLLM 驱动的 LLM 进行对话了！
 
 ## 提示与技巧

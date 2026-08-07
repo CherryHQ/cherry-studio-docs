@@ -10,13 +10,13 @@ icon: compass
 
 ## 先选合适入口
 
-| 你的情况         | 推荐入口                           |
+| 你的情况 | 推荐入口 |
 | ------------ | ------------------------------ |
 | 不确定是配置还是产品问题 | 【设置】→【关于我们】→【反馈】→【使用 Agent 提交】 |
-| 已确认是可复现缺陷    | GitHub Bug Report              |
-| 希望增加新能力      | GitHub Feature Request         |
-| 讨论用法或方案      | GitHub Discussion / Questions  |
-| 只需要查操作步骤     | 当前文档与 Cherry Assistant         |
+| 已确认是可复现缺陷 | GitHub Bug Report |
+| 希望增加新能力 | GitHub Feature Request |
+| 讨论用法或方案 | GitHub Discussion / Questions |
+| 只需要查操作步骤 | 当前文档与 Cherry Assistant |
 
 Cherry Assistant 可以读取当前安装包信息，并在你同意后收集必要诊断。它会先展示脱敏后的预览，再提交反馈或生成诊断包；不需要你先学会看日志。
 

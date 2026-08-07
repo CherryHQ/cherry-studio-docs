@@ -14,17 +14,17 @@ icon: map
 
 ## 第二步
 
-打开笔记本打开设置，并复制`笔记本ID`
+打开笔记本打开设置，并复制 `笔记本ID`
 
 <figure><img src="../../.gitbook/assets/siyuan-image-2.png" alt="" width="400"><figcaption><p>打开笔记本设置</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/siyuan-image-3.png" alt=""><figcaption><p>点击复制笔记本ID按钮</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/siyuan-image-3.png" alt=""><figcaption><p>点击复制笔记本 ID 按钮</p></figcaption></figure>
 
 ## 第三步
 
-复制笔记本ID填写到 Cherry Studio 设置里
+复制笔记本 ID 填写到 Cherry Studio 设置里
 
-<figure><img src="../../.gitbook/assets/siyuan-image-4.png" alt=""><figcaption><p>将笔记本ID填写到数据设置里</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/siyuan-image-4.png" alt=""><figcaption><p>将笔记本 ID 填写到数据设置里</p></figcaption></figure>
 
 ## 第四步
 

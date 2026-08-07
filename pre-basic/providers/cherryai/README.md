@@ -1,6 +1,6 @@
 # CherryAI（免费）
 
-**CherryAI** 是 Cherry Studio 官方内置的**免费模型**入口——无需自己去第三方平台注册、申请 key，打开就能用上一批免费额度的模型，适合刚上手、想先把功能跑通的用户。
+**CherryAI** 是 Cherry Studio 官方内置的 **免费模型** 入口——无需自己去第三方平台注册、申请 key，打开就能用上一批免费额度的模型，适合刚上手、想先把功能跑通的用户。
 
 ### 在哪里用
 
@@ -17,7 +17,7 @@
 * [智谱 GLM-4.5-Air](free-glm45air.md)
 * [Qwen3-8B](free-qwen.md)
 
-若需要更稳定、更强的模型，可选择 [CherryIN](../cherryin-1.md) 或其他[服务商](../README.md)。
+若需要更稳定、更强的模型，可选择 [CherryIN](../cherryin-1.md) 或其他 [服务商](../README.md)。
 
 ***
 

@@ -7,7 +7,7 @@ icon: windows
 
 ## 1. 选择安装包
 
-打开[官方下载页](https://cherryai.com.cn/download/v2)，选择 **Windows**。
+打开 [官方下载页](https://cherryai.com.cn/download/v2)，选择 **Windows**。
 
 ![Cherry Studio 官方下载页的 Windows 下载选项](https://3562065924-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F0Ut5BptC3t8CtSU1UWpM%2Fuploads%2FI5oqtsjL2dau2qnTeQS7%2Fcherry-v2-download-windows-zh-cn.jpg?alt=media\&token=c64dca98-15a9-4ae9-a6e2-82f026c61329)
 

@@ -9,7 +9,7 @@ Mistral AI 是欧洲开源大模型的代表，提供 Mistral / Codestral 等系
 
 ## 在 Cherry Studio 中配置
 
-1. 打开 Cherry Studio 的[模型服务设置](../settings/providers.md)，在内置列表中找到 **Mistral**
+1. 打开 Cherry Studio 的 [模型服务设置](../settings/providers.md)，在内置列表中找到 **Mistral**
 2. 填入刚获取的 API Key
 3. 点击 **获取模型列表**，添加你需要的模型，打开右上角服务商开关即可使用
 

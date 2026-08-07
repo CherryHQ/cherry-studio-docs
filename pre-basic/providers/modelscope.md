@@ -2,7 +2,7 @@
 
 ## 什么是 ModelScope？
 
-> ModelScope 是新一代开源模型即服务（MaaS）共享平台，致力于为泛 AI 开发者提供**灵活、易用、低成本**的一站式模型服务解决方案，让模型应用更简单！
+> ModelScope 是新一代开源模型即服务（MaaS）共享平台，致力于为泛 AI 开发者提供 **灵活、易用、低成本** 的一站式模型服务解决方案，让模型应用更简单！
 >
 > 通过 **API-Inference 服务化能力**，平台将开源模型标准化为可调用的 API 接口，开发者可轻量、快速地集成模型能力至各类 AI 应用，支持工具调用、原型开发等创新场景。
 
@@ -19,8 +19,8 @@
 ### 步骤 1：获取 ModelScope API 令牌
 
 1. **登录平台**
-   * 访问 [ModelScope 官网](https://modelscope.cn) → 点击右上角**登录** → 选择认证方式 ![登录界面](<../../.gitbook/assets/image (16).png>)
-2.  **创建访问令牌**
+   * 访问 [ModelScope 官网](https://modelscope.cn) → 点击右上角 **登录** → 选择认证方式 ![登录界面](<../../.gitbook/assets/image (16).png>)
+2. **创建访问令牌**
 
     * 进入 [**账户设置 → 访问令牌**](https://modelscope.cn/my/myaccesstoken)
     * 点击 **`新建令牌`** → 填写描述 → **复制生成的令牌**（_页面示例见下图_） ![新建令牌示例](../../.gitbook/assets/image-7.png)
@@ -35,16 +35,16 @@
 
 ### 步骤 3：调用模型 API
 
-1.  **查找支持 API 的模型**
+1. **查找支持 API 的模型**
 
     * 访问 [ModelScope 模型库](https://modelscope.cn/models)
     * 筛选条件：**勾选 `API-Inference`**（或认准模型卡片上的 `API` 图标） ![API 模型筛选](../../.gitbook/assets/image-3.png)
 
-    > API-Inference覆盖的模型范围，主要根据模型在魔搭社区中的关注程度（参考了点赞，下载等数据）来判断。因此，在能力更强，关注度更高的下一代开源模型发布之后，支持的模型清单也会持续迭代。
+    > API-Inference 覆盖的模型范围，主要根据模型在魔搭社区中的关注程度（参考了点赞，下载等数据）来判断。因此，在能力更强，关注度更高的下一代开源模型发布之后，支持的模型清单也会持续迭代。
 2. **获取模型 ID**
    * 进入目标模型详情页 → 复制 **Model ID**（格式如 `damo/nlp_structbert_sentiment-classification_chinese-base`） ![复制 Model ID](../../.gitbook/assets/image-5.png)
 3. **填入 Cherry Studio**
-   * 在模型服务配置页的 `模型 ID` 栏输入 ID → 选择任务类型 → 完成配置 ![填入模型ID](../../.gitbook/assets/image-6.png)
+   * 在模型服务配置页的 `模型 ID` 栏输入 ID → 选择任务类型 → 完成配置 ![填入模型 ID](../../.gitbook/assets/image-6.png)
 
 ***
 
@@ -62,7 +62,7 @@
 
 * 登录 ModelScope → 点击右上角 **`用户名`** → **`API 使用情况`** ![额度查看位置](../../.gitbook/assets/image-8.png)
 
-> ⚠️ 注意：推理 API-Inference 每天2000次的免费调用额度。更多调用需求可考虑使用阿里云百炼等云上服务。
+> ⚠️ 注意：推理 API-Inference 每天 2000 次的免费调用额度。更多调用需求可考虑使用阿里云百炼等云上服务。
 
 ***
 

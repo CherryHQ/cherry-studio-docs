@@ -9,12 +9,12 @@
 
 ## 在 Cherry Studio 中配置
 
-1. 打开 Cherry Studio 的[模型服务设置](../settings/providers.md)，在内置列表中找到 **ZhiPu（智谱）**
+1. 打开 Cherry Studio 的 [模型服务设置](../settings/providers.md)，在内置列表中找到 **ZhiPu（智谱）**
 2. 填入刚获取的 API Key
 3. 点击 **获取模型列表**，添加你需要的 GLM 模型，打开右上角服务商开关即可使用
 
 {% hint style="info" %}
-智谱模型自带 **联网搜索** 能力，具体以模型是否支持为准。更多平台文档见[智谱官方文档](https://docs.bigmodel.cn/)。
+智谱模型自带 **联网搜索** 能力，具体以模型是否支持为准。更多平台文档见 [智谱官方文档](https://docs.bigmodel.cn/)。
 {% endhint %}
 
 ***

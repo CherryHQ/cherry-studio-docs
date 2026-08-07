@@ -68,7 +68,7 @@ DSA 是 V3.2 的核心技术升级，通过 **lightning indexer + 细粒度 toke
 ## 开放、可用、生态友好
 
 - ⚡ DSA 带来的长上下文推理加速
-- 💰 通过 CherryIN 在 Cherry Studio 中**免费使用**
+- 💰 通过 CherryIN 在 Cherry Studio 中 **免费使用**
 - 🖥️ 开源权重、MIT 许可，vLLM、SGLang 等主流推理框架 Day-0 支持
 
 <figure><img src="../../../.gitbook/assets/deepseek-v3.2-cost-compare.png" alt=""><figcaption></figcaption></figure>

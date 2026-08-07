@@ -16,12 +16,12 @@ Groq（注意：不是 xAI 的 Grok）是一个以 **LPU 硬件加速、超低�
 
 ## 推荐用法
 
-| 模型                        | 适合场景       |
+| 模型 | 适合场景 |
 | ------------------------- | ---------- |
-| `llama-3.3-70b-versatile` | 通用对话，速度极快  |
-| `llama-3.1-8b-instant`    | 简单任务，毫秒级响应 |
-| `mixtral-8x7b-32768`      | 长上下文       |
-| `whisper-large-v3`        | 语音转文字      |
+| `llama-3.3-70b-versatile` | 通用对话，速度极快 |
+| `llama-3.1-8b-instant` | 简单任务，毫秒级响应 |
+| `mixtral-8x7b-32768` | 长上下文 |
+| `whisper-large-v3` | 语音转文字 |
 
 ## 适用场景
 
@@ -31,11 +31,11 @@ Groq（注意：不是 xAI 的 Grok）是一个以 **LPU 硬件加速、超低�
 
 ## 区分 Grok vs Groq
 
-|    | [Grok](grok.md) | Groq            |
+| | [Grok](grok.md) | Groq |
 | -- | --------------- | --------------- |
-| 公司 | xAI（马斯克）        | Groq Inc.       |
-| 主打 | 自研大模型 + 联网      | LPU 硬件 + 开源模型推理 |
-| 模型 | `grok-4` 等自研    | `llama-3.x` 等开源 |
+| 公司 | xAI（马斯克） | Groq Inc. |
+| 主打 | 自研大模型 + 联网 | LPU 硬件 + 开源模型推理 |
+| 模型 | `grok-4` 等自研 | `llama-3.x` 等开源 |
 
 {% hint style="warning" %}
 Grok（xAI）和 Groq 经常被混淆。在 Cherry Studio Provider 列表中是两个独立条目，请注意区分。

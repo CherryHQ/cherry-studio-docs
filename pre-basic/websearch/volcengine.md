@@ -66,7 +66,7 @@ icon: globe-pointer
 
 <figure><img src="../../.gitbook/assets/image (62).png" alt=""><figcaption></figcaption></figure>
 
-注意：如果没有 API key，就在弹窗右上角 - 「**创建 API Key**」，然后复制API key就行了。
+注意：如果没有 API key，就在弹窗右上角 - 「**创建 API Key**」，然后复制 API key 就行了。
 
 <figure><img src="../../.gitbook/assets/image (63).png" alt=""><figcaption></figcaption></figure>
 

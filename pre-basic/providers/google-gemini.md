@@ -1,13 +1,13 @@
 # Google Gemini
 
-## 获取APIKey
+## 获取 APIKey
 
 * 获取 Gemini 的 api key 前，你需要有一个 Google Cloud 项目（如果你已有，此过程可跳过）
 * 进入 [Google Cloud](https://console.cloud.google.com/projectcreate) 创建项目，填写项目名称并点击创建项目
 
 <figure><img src="../../.gitbook/assets/image (74).png" alt=""><figcaption></figcaption></figure>
 
-* 在官方 [API Key页面](https://aistudio.google.com/app/apikey?hl=zh-cn) 点击 `密钥 创建API密钥`
+* 在官方 [API Key 页面](https://aistudio.google.com/app/apikey?hl=zh-cn) 点击 `密钥 创建API密钥`
 
 <figure><img src="../../.gitbook/assets/image (72).png" alt=""><figcaption></figcaption></figure>
 

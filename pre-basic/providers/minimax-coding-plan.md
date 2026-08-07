@@ -14,7 +14,7 @@
 在开始之前，请确保你已经购买了套餐并获取了密钥：
 
 1. 登录 [**MiniMax 开放平台**](https://platform.minimaxi.com/)。
-2.  进入 [**Coding Plan** 页面](https://platform.minimaxi.com/subscribe/coding-plan?code=FYWiC6CtHy\&source=link)，确保套餐已生效。
+2. 进入 [**Coding Plan** 页面](https://platform.minimaxi.com/subscribe/coding-plan?code=FYWiC6CtHy\&source=link)，确保套餐已生效。
 
     <figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 3. 在 **Coding Plan** 中复制你的专属 `API Key`（以 `sk-` 开头）。
@@ -33,7 +33,7 @@
 
 #### 第二步：填写配置
 
-**不需要**修改复杂的 API 地址，使用默认配置即可，请参考以下说明填写：
+**不需要** 修改复杂的 API 地址，使用默认配置即可，请参考以下说明填写：
 
 <table><thead><tr><th width="128.20703125">参数项</th><th>填写说明</th></tr></thead><tbody><tr><td><strong>API Key</strong></td><td>粘贴你的 Coding Plan 专属密钥<br><em>(注意：必须是购买套餐后生成的 Key，不要有多余空格)</em></td></tr><tr><td><strong>API 地址</strong></td><td>保持默认 <code>https://api.minimaxi.com/v1</code></td></tr><tr><td><strong>开关</strong></td><td>点击右上角开关，确保为 <strong>绿色 (ON)</strong></td></tr></tbody></table>
 
@@ -65,7 +65,7 @@ Coding Plan 套餐仅支持特定的模型，选错模型将无法使用或产�
 Coding Plan 与普通 API 的计费模式完全不同，请务必理解以下机制：
 
 {% hint style="info" %}
-**额度刷新机制** Coding Plan 的额度是**周期性刷新**的。例如 Starter 套餐：**每 5 小时** 提供 **40 次** 对话额度。
+**额度刷新机制** Coding Plan 的额度是 **周期性刷新** 的。例如 Starter 套餐：**每 5 小时** 提供 **40 次** 对话额度。
 
 * **如果不回复了**：说明你当前 5 小时的额度已耗尽。
 * **解决办法**：休息几个小时，等待额度自动恢复即可，无需额外付费。

@@ -12,45 +12,45 @@
 
 ## 前 30 名
 
-|   排名 | 模型                                                                                                                                                        | 净改进率         | 确认成功率        | 赞踩比          | 可控性          | Bash 恢复率     | 工具幻觉率        |    会话数 |
+| 排名 | 模型 | 净改进率 | 确认成功率 | 赞踩比 | 可控性 | Bash 恢复率 | 工具幻觉率 | 会话数 |
 |-----:|:----------------------------------------------------------------------------------------------------------------------------------------------------------|:-------------|:-------------|:-------------|:-------------|:-------------|:-------------|-------:|
-|    1 | Claude Fable 5 (High) [<sup>1</sup>](https://www.anthropic.com/news/claude-fable-5-mythos-5)                                                              | 12.58%±2.19% | 10.26%±4.23% | 24.42%±7.82% | 12.93%±4.49% | 13.95%±1.22% | 1.32%±0.19%  | 23,807 |
-|    2 | Claude Opus 5 (Max) [<sup>1</sup>](https://www.anthropic.com/news/claude-opus-5)                                                                          | 11.88%±2.81% | 17.56%±4.69% | 25.63%±9.98% | 1.81%±7.26%  | 13.14%±1.15% | 1.27%±0.19%  |  7,253 |
-|    3 | Claude Opus 5 (High) [<sup>1</sup>](https://www.anthropic.com/news/claude-opus-5)                                                                         | 11.73%±1.66% | 16.60%±3.11% | 24.40%±6.28% | 5.49%±3.76%  | 10.85%±1.14% | 1.30%±0.19%  | 11,114 |
-|    4 | GPT 5.6 Sol (xHigh) [<sup>1</sup>](https://openai.com/index/gpt-5-6/)                                                                                     | 10.02%±1.63% | 8.61%±3.32%  | 21.90%±6.10% | 8.96%±3.09%  | 9.34%±1.18%  | 1.32%±0.19%  | 16,966 |
-|    5 | Kimi K3 (Max) [<sup>1</sup>](https://platform.kimi.ai/docs/guide/kimi-k3-quickstart)                                                                      | 9.91%±1.19%  | 14.23%±2.46% | 17.45%±4.26% | 9.67%±2.19%  | 6.86%±1.03%  | 1.32%±0.19%  | 19,586 |
-|    6 | Claude Opus 4.8 (Thinking) [<sup>1</sup>](https://www.anthropic.com/news/claude-opus-4-8)                                                                 | 9.43%±1.64%  | 8.75%±2.75%  | 21.05%±5.25% | 9.77%±2.74%  | 9.05%±2.26%  | 1.44%±3.34%  | 34,477 |
-|    7 | Claude Sonnet 5 (High) [<sup>1</sup>](https://www.anthropic.com/news/claude-sonnet-5)                                                                     | 8.57%±2.00%  | 7.95%±3.98%  | 16.12%±7.51% | 6.74%±4.10%  | 10.86%±0.97% | 1.18%±0.20%  | 24,657 |
-|    8 | GPT 5.5 (xHigh) [<sup>1</sup>](https://openai.com/index/introducing-gpt-5-5/)                                                                             | 8.49%±0.95%  | 5.82%±1.94%  | 12.91%±3.38% | 8.24%±1.73%  | 14.14%±1.19% | 1.32%±0.19%  | 43,122 |
-|    9 | Claude Opus 4.7 (Thinking) [<sup>1</sup>](https://www.anthropic.com/news/claude-opus-4-7)                                                                 | 8.19%±1.26%  | 6.19%±2.65%  | 11.20%±4.39% | 9.65%±2.47%  | 12.70%±1.12% | 1.20%±0.21%  | 35,471 |
-|   10 | GPT 5.5 (High) [<sup>1</sup>](https://openai.com/index/introducing-gpt-5-5/)                                                                              | 7.89%±0.88%  | 5.63%±1.76%  | 11.31%±3.13% | 9.18%±1.53%  | 12.03%±1.04% | 1.32%±0.19%  | 68,340 |
-|   11 | Claude Opus 4.7 [<sup>1</sup>](https://www.anthropic.com/news/claude-opus-4-7)                                                                            | 7.37%±1.31%  | 4.71%±2.72%  | 12.28%±4.45% | 8.87%±2.47%  | 9.74%±1.94%  | 1.26%±0.19%  | 36,013 |
-|   12 | GLM 5.2 (Max) [<sup>1</sup>](https://huggingface.co/zai-org/GLM-5.2)                                                                                      | 7.08%±0.96%  | 9.08%±1.94%  | 13.79%±3.42% | 5.96%±1.69%  | 5.23%±1.09%  | 1.32%±0.19%  | 43,277 |
-|   13 | Claude Opus 4.6 [<sup>1</sup>](https://www.anthropic.com/news/claude-opus-4-6)                                                                            | 6.47%±1.31%  | 3.42%±2.73%  | 10.12%±4.32% | 7.24%±2.40%  | 10.26%±2.04% | 1.32%±0.19%  | 35,194 |
-|   14 | Grok 4.5 [<sup>1</sup>](https://docs.x.ai/developers/models/grok-4.5)                                                                                     | 5.54%±1.34%  | 4.65%±2.94%  | 5.69%±4.70%  | 5.14%±2.54%  | 10.91%±1.24% | 1.32%±0.19%  | 24,139 |
-|   15 | GPT 5.5 [<sup>1</sup>](https://openai.com/index/introducing-gpt-5-5/)                                                                                     | 5.53%±0.82%  | 3.67%±1.73%  | 5.85%±2.84%  | 5.85%±1.47%  | 10.96%±1.04% | 1.32%±0.19%  | 69,358 |
-|   16 | GPT 5.4 (High) [<sup>1</sup>](https://platform.openai.com/docs/models/gpt-5.4)                                                                            | 5.11%±0.84%  | 4.87%±1.79%  | 3.48%±2.92%  | 6.53%±1.60%  | 9.36%±0.95%  | 1.32%±0.19%  | 68,634 |
-|   17 | GPT 5.6 Terra (xHigh)OpenAI · Proprietary                                                                                                                 | 3.53%±1.47%  | 0.31%±3.46%  | 4.52%±4.97%  | 3.29%±2.87%  | 8.84%±1.49%  | 1.32%±0.19%  |  9,378 |
-|   18 | GPT 5.6 Luna (xHigh)OpenAI · Proprietary                                                                                                                  | 3.47%±1.72%  | 0.31%±3.92%  | 4.78%±6.01%  | 0.62%±3.44%  | 10.94%±1.26% | 1.32%±0.19%  |  7,785 |
-|   19 | Claude Opus 4.8 [<sup>1</sup>](https://www.anthropic.com/news/claude-opus-4-8)                                                                            | 3.34%±1.94%  | 8.24%±2.82%  | 12.75%±5.00% | 8.39%±2.76%  | 9.22%±2.14%  | 21.90%±6.41% | 32,551 |
-|   20 | Claude Sonnet 4.6 [<sup>1</sup>](https://www.anthropic.com/news/claude-sonnet-4-6)                                                                        | 3.18%±1.20%  | 0.07%±2.76%  | 0.88%±3.88%  | 2.39%±2.33%  | 11.46%±1.50% | 1.23%±0.22%  | 35,966 |
-|   21 | Muse Spark 1.1 [<sup>1</sup>](https://ai.meta.com/blog/introducing-muse-spark-meta-model-api/)                                                            | 0.75%±0.72%  | 5.65%±1.67%  | 4.60%±2.20%  | 4.78%±1.38%  | 6.17%±1.22%  | 1.30%±0.19%  | 43,216 |
-|   22 | GLM 5.1 [<sup>1</sup>](https://huggingface.co/zai-org/GLM-5.1)                                                                                            | 0.44%±0.79%  | 1.04%±1.76%  | 0.54%±2.60%  | 0.15%±1.45%  | 0.28%±1.31%  | 0.50%±0.33%  | 62,635 |
-|   23 | Kimi K2.7 CodeMoonshot · Modified MIT                                                                                                                     | 0.44%±1.82%  | 4.73%±3.63%  | 3.42%±6.42%  | 3.71%±3.65%  | 3.56%±2.87%  | 1.32%±0.19%  | 10,359 |
-|   24 | Gemini 3.1 Pro Preview [<sup>1</sup>](https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-pro/)                            | 0.52%±0.70%  | 2.69%±1.54%  | 1.29%±2.21%  | 2.37%±1.24%  | 10.20%±1.34% | 1.26%±0.19%  | 72,585 |
-|   25 | Qwen3.7 MaxAlibaba · Proprietary                                                                                                                          | 0.53%±0.97%  | 1.95%±2.38%  | 5.89%±3.03%  | 0.20%±1.76%  | 4.61%±1.66%  | 0.80%±0.27%  | 20,914 |
-|   26 | DeepSeek V4 Pro [<sup>1</sup>](https://api-docs.deepseek.com/news/news260424)                                                                             | 0.78%±0.94%  | 3.61%±2.41%  | 5.37%±3.02%  | 0.39%±1.74%  | 4.77%±0.98%  | 0.72%±0.26%  | 21,459 |
-|   27 | Hy3 [<sup>1</sup>](https://huggingface.co/tencent/Hy3)                                                                                                    | 1.03%±1.88%  | 1.55%±3.99%  | 2.83%±6.51%  | 8.17%±3.49%  | 1.44%±2.58%  | 0.33%±0.52%  |  8,506 |
-|   28 | Gemini 3.5 Flash (High) [<sup>1</sup>](https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5/)                               | 1.03%±0.84%  | 3.60%±1.85%  | 3.56%±2.48%  | 0.97%±1.50%  | 2.35%±1.85%  | 1.87%±0.44%  | 45,993 |
-|   29 | Kimi K2.6 [<sup>1</sup>](https://www.kimi.com/blog/kimi-k2-6)                                                                                             | 1.09%±1.95%  | 3.10%±3.68%  | 1.58%±6.21%  | 4.90%±3.76%  | 6.56%±3.93%  | 1.32%±0.19%  | 10,436 |
-|   30 | gemini-3.6-flash [<sup>1</sup>](https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-6-flash-3-5-flash-lite-3-5-flash-cyber/) | 1.59%±2.68%  | 0.15%±6.40%  | 6.20%±8.38%  | 2.59%±6.28%  | 0.61%±3.18%  | 1.32%±0.19%  |  2,532 |
+| 1 | Claude Fable 5 (High) [<sup>1</sup>](https://www.anthropic.com/news/claude-fable-5-mythos-5) | 12.58%±2.19% | 10.26%±4.23% | 24.42%±7.82% | 12.93%±4.49% | 13.95%±1.22% | 1.32%±0.19% | 23,807 |
+| 2 | Claude Opus 5 (Max) [<sup>1</sup>](https://www.anthropic.com/news/claude-opus-5) | 11.88%±2.81% | 17.56%±4.69% | 25.63%±9.98% | 1.81%±7.26% | 13.14%±1.15% | 1.27%±0.19% | 7,253 |
+| 3 | Claude Opus 5 (High) [<sup>1</sup>](https://www.anthropic.com/news/claude-opus-5) | 11.73%±1.66% | 16.60%±3.11% | 24.40%±6.28% | 5.49%±3.76% | 10.85%±1.14% | 1.30%±0.19% | 11,114 |
+| 4 | GPT 5.6 Sol (xHigh) [<sup>1</sup>](https://openai.com/index/gpt-5-6/) | 10.02%±1.63% | 8.61%±3.32% | 21.90%±6.10% | 8.96%±3.09% | 9.34%±1.18% | 1.32%±0.19% | 16,966 |
+| 5 | Kimi K3 (Max) [<sup>1</sup>](https://platform.kimi.ai/docs/guide/kimi-k3-quickstart) | 9.91%±1.19% | 14.23%±2.46% | 17.45%±4.26% | 9.67%±2.19% | 6.86%±1.03% | 1.32%±0.19% | 19,586 |
+| 6 | Claude Opus 4.8 (Thinking) [<sup>1</sup>](https://www.anthropic.com/news/claude-opus-4-8) | 9.43%±1.64% | 8.75%±2.75% | 21.05%±5.25% | 9.77%±2.74% | 9.05%±2.26% | 1.44%±3.34% | 34,477 |
+| 7 | Claude Sonnet 5 (High) [<sup>1</sup>](https://www.anthropic.com/news/claude-sonnet-5) | 8.57%±2.00% | 7.95%±3.98% | 16.12%±7.51% | 6.74%±4.10% | 10.86%±0.97% | 1.18%±0.20% | 24,657 |
+| 8 | GPT 5.5 (xHigh) [<sup>1</sup>](https://openai.com/index/introducing-gpt-5-5/) | 8.49%±0.95% | 5.82%±1.94% | 12.91%±3.38% | 8.24%±1.73% | 14.14%±1.19% | 1.32%±0.19% | 43,122 |
+| 9 | Claude Opus 4.7 (Thinking) [<sup>1</sup>](https://www.anthropic.com/news/claude-opus-4-7) | 8.19%±1.26% | 6.19%±2.65% | 11.20%±4.39% | 9.65%±2.47% | 12.70%±1.12% | 1.20%±0.21% | 35,471 |
+| 10 | GPT 5.5 (High) [<sup>1</sup>](https://openai.com/index/introducing-gpt-5-5/) | 7.89%±0.88% | 5.63%±1.76% | 11.31%±3.13% | 9.18%±1.53% | 12.03%±1.04% | 1.32%±0.19% | 68,340 |
+| 11 | Claude Opus 4.7 [<sup>1</sup>](https://www.anthropic.com/news/claude-opus-4-7) | 7.37%±1.31% | 4.71%±2.72% | 12.28%±4.45% | 8.87%±2.47% | 9.74%±1.94% | 1.26%±0.19% | 36,013 |
+| 12 | GLM 5.2 (Max) [<sup>1</sup>](https://huggingface.co/zai-org/GLM-5.2) | 7.08%±0.96% | 9.08%±1.94% | 13.79%±3.42% | 5.96%±1.69% | 5.23%±1.09% | 1.32%±0.19% | 43,277 |
+| 13 | Claude Opus 4.6 [<sup>1</sup>](https://www.anthropic.com/news/claude-opus-4-6) | 6.47%±1.31% | 3.42%±2.73% | 10.12%±4.32% | 7.24%±2.40% | 10.26%±2.04% | 1.32%±0.19% | 35,194 |
+| 14 | Grok 4.5 [<sup>1</sup>](https://docs.x.ai/developers/models/grok-4.5) | 5.54%±1.34% | 4.65%±2.94% | 5.69%±4.70% | 5.14%±2.54% | 10.91%±1.24% | 1.32%±0.19% | 24,139 |
+| 15 | GPT 5.5 [<sup>1</sup>](https://openai.com/index/introducing-gpt-5-5/) | 5.53%±0.82% | 3.67%±1.73% | 5.85%±2.84% | 5.85%±1.47% | 10.96%±1.04% | 1.32%±0.19% | 69,358 |
+| 16 | GPT 5.4 (High) [<sup>1</sup>](https://platform.openai.com/docs/models/gpt-5.4) | 5.11%±0.84% | 4.87%±1.79% | 3.48%±2.92% | 6.53%±1.60% | 9.36%±0.95% | 1.32%±0.19% | 68,634 |
+| 17 | GPT 5.6 Terra (xHigh)OpenAI · Proprietary | 3.53%±1.47% | 0.31%±3.46% | 4.52%±4.97% | 3.29%±2.87% | 8.84%±1.49% | 1.32%±0.19% | 9,378 |
+| 18 | GPT 5.6 Luna (xHigh)OpenAI · Proprietary | 3.47%±1.72% | 0.31%±3.92% | 4.78%±6.01% | 0.62%±3.44% | 10.94%±1.26% | 1.32%±0.19% | 7,785 |
+| 19 | Claude Opus 4.8 [<sup>1</sup>](https://www.anthropic.com/news/claude-opus-4-8) | 3.34%±1.94% | 8.24%±2.82% | 12.75%±5.00% | 8.39%±2.76% | 9.22%±2.14% | 21.90%±6.41% | 32,551 |
+| 20 | Claude Sonnet 4.6 [<sup>1</sup>](https://www.anthropic.com/news/claude-sonnet-4-6) | 3.18%±1.20% | 0.07%±2.76% | 0.88%±3.88% | 2.39%±2.33% | 11.46%±1.50% | 1.23%±0.22% | 35,966 |
+| 21 | Muse Spark 1.1 [<sup>1</sup>](https://ai.meta.com/blog/introducing-muse-spark-meta-model-api/) | 0.75%±0.72% | 5.65%±1.67% | 4.60%±2.20% | 4.78%±1.38% | 6.17%±1.22% | 1.30%±0.19% | 43,216 |
+| 22 | GLM 5.1 [<sup>1</sup>](https://huggingface.co/zai-org/GLM-5.1) | 0.44%±0.79% | 1.04%±1.76% | 0.54%±2.60% | 0.15%±1.45% | 0.28%±1.31% | 0.50%±0.33% | 62,635 |
+| 23 | Kimi K2.7 CodeMoonshot · Modified MIT | 0.44%±1.82% | 4.73%±3.63% | 3.42%±6.42% | 3.71%±3.65% | 3.56%±2.87% | 1.32%±0.19% | 10,359 |
+| 24 | Gemini 3.1 Pro Preview [<sup>1</sup>](https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-pro/) | 0.52%±0.70% | 2.69%±1.54% | 1.29%±2.21% | 2.37%±1.24% | 10.20%±1.34% | 1.26%±0.19% | 72,585 |
+| 25 | Qwen3.7 MaxAlibaba · Proprietary | 0.53%±0.97% | 1.95%±2.38% | 5.89%±3.03% | 0.20%±1.76% | 4.61%±1.66% | 0.80%±0.27% | 20,914 |
+| 26 | DeepSeek V4 Pro [<sup>1</sup>](https://api-docs.deepseek.com/news/news260424) | 0.78%±0.94% | 3.61%±2.41% | 5.37%±3.02% | 0.39%±1.74% | 4.77%±0.98% | 0.72%±0.26% | 21,459 |
+| 27 | Hy3 [<sup>1</sup>](https://huggingface.co/tencent/Hy3) | 1.03%±1.88% | 1.55%±3.99% | 2.83%±6.51% | 8.17%±3.49% | 1.44%±2.58% | 0.33%±0.52% | 8,506 |
+| 28 | Gemini 3.5 Flash (High) [<sup>1</sup>](https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5/) | 1.03%±0.84% | 3.60%±1.85% | 3.56%±2.48% | 0.97%±1.50% | 2.35%±1.85% | 1.87%±0.44% | 45,993 |
+| 29 | Kimi K2.6 [<sup>1</sup>](https://www.kimi.com/blog/kimi-k2-6) | 1.09%±1.95% | 3.10%±3.68% | 1.58%±6.21% | 4.90%±3.76% | 6.56%±3.93% | 1.32%±0.19% | 10,436 |
+| 30 | gemini-3.6-flash [<sup>1</sup>](https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-6-flash-3-5-flash-lite-3-5-flash-cyber/) | 1.59%±2.68% | 0.15%±6.40% | 6.20%±8.38% | 2.59%±6.28% | 0.61%±3.18% | 1.32%±0.19% | 2,532 |
 
 ## 怎么看这张表
 
 * **排名 / 排名区间**：Arena AI 根据对战投票估算的相对名次；排名区间表示在置信范围内的名次波动。
 * **分数**：相对评分，适合比较同一时刻榜单中的模型。
 * **票数 / 会话数**：样本量参考；样本较少时，排名通常更容易波动。
-* **价格 $/百万Token**：输入 / 输出每百万 Token 的参考价格。
+* **价格 $/百万 Token**：输入 / 输出每百万 Token 的参考价格。
 * **上下文**：模型支持的最大上下文长度。
 
 ## 选模型时再确认三件事
@@ -61,4 +61,4 @@
 
 ## 数据来源
 
-数据来自 [Arena AI 官方Agent 智能体榜单](https://arena.ai/leaderboard/agent)，由 GitHub Actions 每天更新。模型价格、许可证和能力请以模型服务商官方信息为准。
+数据来自 [Arena AI 官方 Agent 智能体榜单](https://arena.ai/leaderboard/agent)，由 GitHub Actions 每天更新。模型价格、许可证和能力请以模型服务商官方信息为准。

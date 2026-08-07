@@ -1,6 +1,6 @@
 # LM Studio
 
-LM Studio 是一款流行的**本地大模型 GUI**，支持下载、量化并在本机推理各种开源模型。Cherry Studio 可作为前端连接到 LM Studio 的本地服务，在保留本地隐私的同时获得更好的对话体验。
+LM Studio 是一款流行的 **本地大模型 GUI**，支持下载、量化并在本机推理各种开源模型。Cherry Studio 可作为前端连接到 LM Studio 的本地服务，在保留本地隐私的同时获得更好的对话体验。
 
 ## 前置准备
 
@@ -16,25 +16,25 @@ LM Studio 是一款流行的**本地大模型 GUI**，支持下载、量化并�
 * 点击 **获取模型列表**，Cherry Studio 会自动拉取 LM Studio 已加载的模型
 
 {% hint style="info" %}
-**模型列表为空？** LM Studio 只暴露**已 `Load` 到内存**的模型，没 Load 的不会出现在列表里。回到 LM Studio 先 Load 模型再来"获取模型列表"。
+**模型列表为空？** LM Studio 只暴露 **已 `Load` 到内存** 的模型，没 Load 的不会出现在列表里。回到 LM Studio 先 Load 模型再来"获取模型列表"。
 {% endhint %}
 
 ## 推荐用法
 
-| 场景                   | 建议                                                                    |
+| 场景 | 建议 |
 | -------------------- | --------------------------------------------------------------------- |
-| 隐私敏感对话               | 选小模型（8B 以下）本机跑，完全离线                                                   |
-| Apple Silicon（M 系芯片） | LM Studio 用 MLX 后端，效率显著高于 llama.cpp                                   |
-| 嵌入模型                 | LM Studio 也可加载嵌入模型，用于知识库 |
+| 隐私敏感对话 | 选小模型（8B 以下）本机跑，完全离线 |
+| Apple Silicon（M 系芯片） | LM Studio 用 MLX 后端，效率显著高于 llama.cpp |
+| 嵌入模型 | LM Studio 也可加载嵌入模型，用于知识库 |
 
 ## 与 Ollama 的区别
 
-|      | LM Studio     | [Ollama](ollama.md) |
+| | LM Studio | [Ollama](ollama.md) |
 | ---- | ------------- | ------------------- |
-| 形态   | 图形界面 + Server | 命令行 / 后台服务          |
-| 模型管理 | GUI 浏览/下载     | `ollama pull`       |
-| API  | OpenAI 兼容     | OpenAI 兼容           |
-| 适合   | 偏好图形交互的用户     | 偏好命令行 / Docker 部署   |
+| 形态 | 图形界面 + Server | 命令行 / 后台服务 |
+| 模型管理 | GUI 浏览/下载 | `ollama pull` |
+| API | OpenAI 兼容 | OpenAI 兼容 |
+| 适合 | 偏好图形交互的用户 | 偏好命令行 / Docker 部署 |
 
 两者都可接入 Cherry Studio，按个人偏好选择即可。
 
