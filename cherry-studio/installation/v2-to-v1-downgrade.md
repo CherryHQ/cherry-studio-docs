@@ -99,8 +99,17 @@ V2 中新增的会话、Agent、设置和文件不会回到 V1。V2 备份也不
 
 </details>
 
+<details>
+
+<summary>降级后再次回到 V2，应该安装哪个版本？</summary>
+
+如果继续使用此前已完成迁移的 V2 数据，可以直接安装 V2.0.1。如果要把当前 V1 数据重新迁入 V2，仍须按 **V1.9.13 → V2.0.0（完成一次数据迁移）→ V2.0.1** 操作；V2.0.x 补丁版暂时不能代替 V2.0.0 执行首次或重新迁移。
+
+</details>
+
 ## 参考资料
 
 * [Cherry Studio V1 官方下载](https://cherryai.com.cn/download/v1)
 * [Cherry Studio V2 官方下载](https://cherryai.com.cn/download)
+* V2.0.0 中转版本：[GitCode 下载页](https://gitcode.com/CherryHQ/cherry-studio/releases/v2.0.0) · [GitHub 下载页](https://github.com/CherryHQ/cherry-studio/releases/tag/v2.0.0)
 * [问题反馈与功能建议](../../question-contact/suggestions.md)

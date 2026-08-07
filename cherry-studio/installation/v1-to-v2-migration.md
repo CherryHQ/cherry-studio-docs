@@ -1,5 +1,5 @@
 ---
-description: 备份 V1 数据，完成迁移向导，并检查 V2 中需要重新配置的项目。
+description: 备份 V1 数据，经过 V2.0.0 完成迁移，再升级 V2.0.1。
 icon: arrow-right-arrow-left
 ---
 
@@ -8,6 +8,18 @@ icon: arrow-right-arrow-left
 {% hint style="danger" %}
 迁移是单向的：V1 数据可以进入 V2，V2 新数据不会同步回 V1。升级前请同时保留 V1 完整备份和完全退出应用后复制的整个 V1 数据目录。
 {% endhint %}
+
+{% hint style="warning" %}
+保留数据的正确路径是：**V1.9.13 → V2.0.0（完成一次数据迁移）→ V2.0.1**。V2.0.x 补丁版暂时不能代替 V2.0.0 执行首次迁移。
+{% endhint %}
+
+## 根据当前情况选择
+
+| 当前情况           | 操作                                                 |
+| -------------- | -------------------------------------------------- |
+| 已在 V2.0.0 完成迁移 | 直接升级 V2.0.1，无需再次迁移。                                |
+| 仍在 V1，需要保留数据   | 按本页步骤先安装 V2.0.0，完成迁移并重启后再升级 V2.0.1。                |
+| 不需要 V1 数据      | 可以在 V2.0.1 选择【跳过迁移】，从默认配置开始；V1 数据不会迁入，不建议普通用户这样操作。 |
 
 ## 升级前确认
 
@@ -44,7 +56,7 @@ icon: arrow-right-arrow-left
 {% step %}
 ### 首次启动 V2 2.0.0
 
-从 [V2 官方下载](https://cherryai.com.cn/download) 获取匹配系统和芯片的安装包。完全退出 V1 后安装并启动 V2 2.0.0 系列。
+官网只提供最新版，首次迁移请从 [GitCode V2.0.0 下载页](https://gitcode.com/CherryHQ/cherry-studio/releases/v2.0.0) 或 [GitHub V2.0.0 下载页](https://github.com/CherryHQ/cherry-studio/releases/tag/v2.0.0) 获取匹配系统和芯片的安装包。完全退出 V1 后安装并启动正式版 V2.0.0。
 {% endstep %}
 
 {% step %}
@@ -57,6 +69,12 @@ icon: arrow-right-arrow-left
 ### 查看结果并重启
 
 迁移完成后先展开警告信息，再选择【重启应用】。
+{% endstep %}
+
+{% step %}
+### 升级到 V2.0.1
+
+确认 V2.0.0 已完成迁移并能正常重启后，再从 [V2 官方下载](https://cherryai.com.cn/download) 安装 V2.0.1。不要在迁移尚未完成时提前覆盖安装。
 {% endstep %}
 {% endstepper %}
 
@@ -106,4 +124,6 @@ icon: arrow-right-arrow-left
 
 * [Cherry Studio V2 官方下载](https://cherryai.com.cn/download)
 * [Cherry Studio V1 官方下载](https://cherryai.com.cn/download/v1)
+* V2.0.0 中转版本：[GitCode 下载页](https://gitcode.com/CherryHQ/cherry-studio/releases/v2.0.0) · [GitHub 下载页](https://github.com/CherryHQ/cherry-studio/releases/tag/v2.0.0)
+* [官方迁移设计说明](https://github.com/CherryHQ/cherry-studio/blob/main/src/main/data/migration/v2/README.md#version-compatibility-gate)
 * [问题反馈与功能建议](../../question-contact/suggestions.md)
