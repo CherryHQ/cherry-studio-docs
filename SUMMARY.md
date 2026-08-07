@@ -162,14 +162,11 @@
 * [AI 基础知识](question-contact/knowledge.md)
 * [问题反馈与功能建议](question-contact/suggestions.md)
 
-## 联系我们 <a href="#contact-us" id="contact-us"></a>
-
-* [商务合作](contact-us/questions.md)
-  * [Cherry Studio 开源许可协议](contact-us/questions/license.md)
-
 ## 关于 <a href="#about" id="about"></a>
 
+* [商务合作](contact-us/questions.md)
 * [隐私协议](about/privacypolicy.md)
+* [Cherry Studio 开源许可协议](contact-us/questions/license.md)
 
 ## 其他内容 <a href="#other" id="other"></a>
 
