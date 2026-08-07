@@ -1,6 +1,7 @@
 import os
 import re
 import time
+from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime
 from io import StringIO
 
@@ -31,10 +32,11 @@ LEADERBOARDS = [
         "slug": "agent",
         "url": f"{BASE_URL}/leaderboard/agent",
         "title": "Agent 智能体榜单",
-        "description": "评测模型在多轮工具调用 / 智能体任务上的综合表现，涵盖净改进率、确认成功率、赞踩比、可控性、Bash 恢复率、工具幻觉率等维度。",
+        "description": "本榜单评测模型在多轮工具调用 / 智能体任务上的综合表现，涵盖净改进率、确认成功率、赞踩比、可控性、Bash 恢复率、工具幻觉率等维度。",
         "model_col": 1,
         "preferred": [
             "Rank",
+            "Rank Spread",
             "Model",
             "Net Improvement",
             "Confirmed Success",
@@ -45,51 +47,94 @@ LEADERBOARDS = [
             "Sessions",
         ],
         "top_n": 30,
+        "how_to_read": [
+            "**排名 / 排名区间**：Arena AI 根据智能体任务对战投票估算的相对名次；排名区间表示在置信范围内的名次波动。",
+            "**净改进率**：相比基线在多轮工具调用 / 智能体任务中的净改进幅度。",
+            "**确认成功率**：任务完成后用户确认成功（赞）的比例。",
+            "**赞踩比**：用户对回答投“赞”与“踩”的比例，反映主观满意度。",
+            "**可控性**：模型遵循指令并保持稳定输出的能力。",
+            "**Bash 恢复率**：在 Bash / 命令行操作出错后能自我恢复的比例。",
+            "**工具幻觉率**：模型虚构或调用不存在工具的比例，越低越好。",
+            "**会话数**：样本量参考；样本较少时，排名通常更容易波动。",
+        ],
     },
     {
         "slug": "text",
         "url": f"{BASE_URL}/leaderboard/text",
         "title": "文本榜单",
-        "description": "Arena AI 最核心的文本对战榜单，根据人类盲投对战估算模型相对实力。",
+        "description": "本榜单是 Arena AI 最核心的文本对战榜单，根据人类盲投对战估算模型相对实力。",
         "model_col": 2,
         "preferred": ["Rank", "Rank Spread", "Model", "Score", "Votes", "Price $/M", "Context"],
         "top_n": 30,
+        "how_to_read": [
+            "**排名 / 排名区间**：Arena AI 根据对战投票估算的相对名次；排名区间表示在置信范围内的名次波动。",
+            "**分数**：相对评分，适合比较同一时刻榜单中的模型。",
+            "**票数 / 会话数**：样本量参考；样本较少时，排名通常更容易波动。",
+            "**价格 $/百万Token**：输入 / 输出每百万 Token 的参考价格。",
+            "**上下文**：模型支持的最大上下文长度。",
+        ],
     },
     {
         "slug": "search",
         "url": f"{BASE_URL}/leaderboard/search",
         "title": "搜索榜单",
-        "description": "评测模型在联网搜索 / 信息检索类任务上的表现。",
+        "description": "本榜单评测模型在联网搜索 / 信息检索类任务上的表现。",
         "model_col": 2,
         "preferred": ["Rank", "Rank Spread", "Model", "Score", "Votes", "Price $/M", "Context"],
         "top_n": 30,
+        "how_to_read": [
+            "**排名 / 排名区间**：Arena AI 根据对战投票估算的相对名次；排名区间表示在置信范围内的名次波动。",
+            "**分数**：相对评分，适合比较同一时刻榜单中的模型。",
+            "**票数 / 会话数**：样本量参考；样本较少时，排名通常更容易波动。",
+            "**价格 $/百万Token**：输入 / 输出每百万 Token 的参考价格。",
+            "**上下文**：模型支持的最大上下文长度。",
+        ],
     },
     {
         "slug": "vision",
         "url": f"{BASE_URL}/leaderboard/vision",
         "title": "视觉榜单",
-        "description": "评测多模态模型在图像理解类任务上的表现。",
+        "description": "本榜单评测多模态模型在图像理解类任务上的表现。",
         "model_col": 2,
         "preferred": ["Rank", "Rank Spread", "Model", "Score", "Votes", "Price $/M", "Context"],
         "top_n": 30,
+        "how_to_read": [
+            "**排名 / 排名区间**：Arena AI 根据对战投票估算的相对名次；排名区间表示在置信范围内的名次波动。",
+            "**分数**：相对评分，适合比较同一时刻榜单中的模型。",
+            "**票数 / 会话数**：样本量参考；样本较少时，排名通常更容易波动。",
+            "**价格 $/百万Token**：输入 / 输出每百万 Token 的参考价格。",
+            "**上下文**：模型支持的最大上下文长度。",
+        ],
     },
     {
         "slug": "code-webdev",
         "url": f"{BASE_URL}/leaderboard/code/webdev",
         "title": "代码 / Web 开发榜单",
-        "description": "评测模型在 Web 前端开发（HTML/CSS/JS）任务上的实际表现。",
+        "description": "本榜单评测模型在 Web 前端开发（HTML/CSS/JS）任务上的实际表现。",
         "model_col": 2,
         "preferred": ["Rank", "Rank Spread", "Model", "Score", "Votes", "Price $/M", "Context"],
         "top_n": 30,
+        "how_to_read": [
+            "**排名 / 排名区间**：Arena AI 根据对战投票估算的相对名次；排名区间表示在置信范围内的名次波动。",
+            "**分数**：相对评分，适合比较同一时刻榜单中的模型。",
+            "**票数 / 会话数**：样本量参考；样本较少时，排名通常更容易波动。",
+            "**价格 $/百万Token**：输入 / 输出每百万 Token 的参考价格。",
+            "**上下文**：模型支持的最大上下文长度。",
+        ],
     },
     {
         "slug": "text-to-image",
         "url": f"{BASE_URL}/leaderboard/text-to-image",
         "title": "文生图榜单",
-        "description": "评测文生图模型根据文本提示生成图像的能力。",
+        "description": "本榜单评测文生图模型根据文本提示生成图像的能力。",
         "model_col": 2,
         "preferred": ["Rank", "Rank Spread", "Model", "Score", "Votes"],
         "top_n": 30,
+        "how_to_read": [
+            "**排名 / 排名区间**：Arena AI 根据文生图对战投票估算的相对名次；排名区间表示在置信范围内的名次波动。",
+            "**分数**：相对评分，适合比较同一时刻榜单中的模型。",
+            "**票数**：样本量参考；样本较少时，排名通常更容易波动。",
+        ],
     },
 ]
 
@@ -162,6 +207,70 @@ def fetch_page_html(url, api_key):
     return None
 
 
+def parse_rank_spread(cell):
+    """
+    解析排名区间列。
+
+    实际 HTML 中该列并不是 '1-3' 这样的连字符文本，而是两个独立的
+    <span>（如 <span>1</span> 与 <span>5</span>），中间夹着一个无文本的
+    SVG 箭头图标。直接 get_text() 会把两端数字拼成 '15'（连字符丢失）。
+
+    这里改为提取单元格内所有带文本的 <span>，再用 '-' 连接，从而得到
+    '1-5' 这样的排名区间。
+    """
+    parts = [
+        s.get_text(strip=True)
+        for s in cell.find_all("span")
+        if s.get_text(strip=True)
+    ]
+    if parts:
+        return "-".join(parts)
+    # 兜底：若没有 span（极少数情况），退回单元格纯文本
+    return cell.get_text(strip=True)
+
+
+def parse_rank_cell(cell):
+    """
+    解析 agent 榜单的 Rank 单元格，将其拆分为 (主排名, 排名区间)。
+
+    该单元格结构特殊：外层 <div> 内含两个直接子元素——
+      1) <span class="text-text-primary ...">主排名</span>（大号数字）
+      2) <div class="text-text-tertiary ...">区间</div>（小字，内含两个
+         带文本的 <span> 夹着无文本的 SVG 箭头，如 1 <svg/> 6）
+
+    返回 (rank, rank_spread)。若结构不匹配则退回通用解析。
+    """
+    outer = cell.find("div", recursive=False) if cell.find("div") else None
+    if outer is not None:
+        children = outer.find_all(recursive=False)
+        # 期望结构：[主排名 span, 区间 div]
+        if len(children) == 2:
+            rank_el = children[0]
+            spread_el = children[1]
+            rank_text = rank_el.get_text(strip=True)
+            # 仅保留开头的数字部分
+            m = re.match(r"\d+", rank_text)
+            rank = m.group(0) if m else rank_text
+            # 区间 div 内两个带文本的 span 用 '-' 连接
+            spread_parts = [
+                s.get_text(strip=True)
+                for s in spread_el.find_all("span")
+                if s.get_text(strip=True)
+            ]
+            spread = "-".join(spread_parts) if spread_parts else ""
+            return rank, spread
+
+    # 结构不匹配，退回通用正排名解析
+    first_span = cell.find("span")
+    if first_span:
+        rank_text = first_span.get_text(strip=True)
+        m = re.match(r"\d+", rank_text)
+        return (m.group(0) if m else rank_text), ""
+    txt = cell.get_text(strip=True)
+    m = re.match(r"\d+", txt)
+    return (m.group(0) if m else txt), ""
+
+
 def parse_leaderboard_table(html, config):
     """
     解析页面 HTML 中的排行榜表格，返回 pandas DataFrame。
@@ -182,6 +291,17 @@ def parse_leaderboard_table(html, config):
 
     headers = [th.get_text(strip=True) for th in thead.find_all("th")]
 
+    # agent 等榜单没有独立的 "Rank Spread" 列：主排名与排名区间被放在
+    # 同一个 Rank 单元格里（大号数字为主排名，下方小字为区间）。
+    # 当配置的 preferred 需要 "Rank Spread" 但表头没有时，将其拆为两列。
+    needs_split_rank = (
+        "Rank Spread" in config.get("preferred", [])
+        and "Rank Spread" not in headers
+    )
+    if needs_split_rank and "Rank" in headers:
+        rank_pos = headers.index("Rank")
+        headers.insert(rank_pos + 1, "Rank Spread")
+
     tbody = table.find("tbody")
     if not tbody:
         print("  No <tbody> found.")
@@ -190,6 +310,7 @@ def parse_leaderboard_table(html, config):
     model_col = config["model_col"]
     # Rank 列在表头中的位置（用于只取排名数字、排除变化趋势等附加信息）
     rank_col = headers.index("Rank") if "Rank" in headers else None
+    spread_col = headers.index("Rank Spread") if "Rank Spread" in headers else None
 
     rows = []
     for tr in tbody.find_all("tr", recursive=False):
@@ -214,18 +335,29 @@ def parse_leaderboard_table(html, config):
                 else:
                     row_data.append(cell.get_text(strip=True))
             elif rank_col is not None and idx == rank_col:
-                # Rank 列：单元格内可能同时包含排名数字与变化趋势，
-                # 只取第一个排名数字（首个 <span>），排除附带的趋势数字。
-                first_span = cell.find("span")
-                if first_span:
-                    rank_text = first_span.get_text(strip=True)
-                    # 仅保留开头的数字部分，避免误带入其它文本
-                    m = re.match(r"\d+", rank_text)
-                    row_data.append(m.group(0) if m else rank_text)
+                if needs_split_rank:
+                    # agent 榜单：Rank 单元格拆成主排名 + 排名区间两列
+                    rank, spread = parse_rank_cell(cell)
+                    row_data.append(rank)
+                    row_data.append(spread)
                 else:
-                    txt = cell.get_text(strip=True)
-                    m = re.match(r"\d+", txt)
-                    row_data.append(m.group(0) if m else txt)
+                    # 通用榜单：单元格内可能同时包含排名数字与变化趋势，
+                    # 只取第一个排名数字（首个 <span>），排除附带的趋势数字。
+                    first_span = cell.find("span")
+                    if first_span:
+                        rank_text = first_span.get_text(strip=True)
+                        # 仅保留开头的数字部分，避免误带入其它文本
+                        m = re.match(r"\d+", rank_text)
+                        row_data.append(m.group(0) if m else rank_text)
+                    else:
+                        txt = cell.get_text(strip=True)
+                        m = re.match(r"\d+", txt)
+                        row_data.append(m.group(0) if m else txt)
+            elif spread_col is not None and headers[idx] == "Rank Spread":
+                # 排名区间列：单元格内是几个带文本的 <span> 夹着无文本的
+                # SVG 箭头（如 1 <svg/> 5），直接 get_text 会拼成 '15'，
+                # 用专门函数把这些 span 用 '-' 连接，得到 '1-5'。
+                row_data.append(parse_rank_spread(cell))
             else:
                 row_data.append(cell.get_text(strip=True))
         # 行的列数可能与表头数不完全一致（合并单元格等），按表头对齐截断/补齐
@@ -326,6 +458,10 @@ def generate_markdown(df, config, utc_now, beijing_now):
     title = config["title"]
     description = config["description"]
 
+    # 榜单专属的“怎么看这张表”说明
+    how_to_read = config.get("how_to_read", [])
+    how_to_read_lines = "\n".join(f"* {line}" for line in how_to_read)
+
     markdown_content = f"""# {title}
 
 本页展示 [Arena AI]({url}) 榜单前 {config['top_n']} 名的每日快照，方便快速了解近期模型表现。完整榜单、筛选项和最新变化请到 Arena AI 官网查看。
@@ -344,11 +480,7 @@ def generate_markdown(df, config, utc_now, beijing_now):
 
 ## 怎么看这张表
 
-* **排名 / 排名区间**：Arena AI 根据对战投票估算的相对名次；排名区间表示在置信范围内的名次波动。
-* **分数**：相对评分，适合比较同一时刻榜单中的模型。
-* **票数 / 会话数**：样本量参考；样本较少时，排名通常更容易波动。
-* **价格 $/百万Token**：输入 / 输出每百万 Token 的参考价格。
-* **上下文**：模型支持的最大上下文长度。
+{how_to_read_lines}
 
 ## 选模型时再确认三件事
 
@@ -358,7 +490,7 @@ def generate_markdown(df, config, utc_now, beijing_now):
 
 ## 数据来源
 
-数据来自 [Arena AI 官方{title}]({url})，由 GitHub Actions 每天更新。模型价格、许可证和能力请以模型服务商官方信息为准。
+数据来自 [Arena AI 官方 {title}]({url})，由 GitHub Actions 每天更新。模型价格、许可证和能力请以模型服务商官方信息为准。
 """
     return markdown_content
 
@@ -405,7 +537,9 @@ def main():
     updated_files = []
 
     # 1. 生成各子榜单
-    for cfg in LEADERBOARDS:
+    # 由于 free plan 并发上限为 5，这里将全部榜单分为多组、每组 3 个，
+    # 组内并发抓取，组间串行执行。
+    def process_leaderboard(cfg):
         print(f"\n=== Processing {cfg['slug']} ({cfg['url']}) ===")
         try:
             html = fetch_page_html(cfg["url"], api_key)
@@ -416,9 +550,19 @@ def main():
             with open(output_path, "w", encoding="utf-8") as f:
                 f.write(markdown_output)
             print(f"  Updated: {output_path}")
-            updated_files.append(output_path)
+            return output_path
         except Exception as e:
             print(f"  Failed to update {cfg['slug']}: {e}")
+            return None
+
+    groups = [LEADERBOARDS[i : i + 3] for i in range(0, len(LEADERBOARDS), 3)]
+    for group in groups:
+        with ThreadPoolExecutor(max_workers=len(group)) as executor:
+            futures = [executor.submit(process_leaderboard, cfg) for cfg in group]
+            for future in futures:
+                result = future.result()
+                if result:
+                    updated_files.append(result)
 
     # 2. 生成 / 更新目录页 README.md
     readme_path = os.path.join(OUTPUT_DIR, "README.md")
