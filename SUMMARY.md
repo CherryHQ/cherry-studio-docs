@@ -9,6 +9,7 @@
   * [macOS 安装](cherry-studio/installation/macos.md)
   * [Linux](cherry-studio/installation/linux.md)
   * [升级与降级](cherry-studio/installation/upgrade-downgrade.md)
+  * [破坏性更新提醒](cherry-studio/installation/v2-breaking-update-notice.md)
   * [功能差异](cherry-studio/installation/v1-v2-feature-differences.md)
   * [V1 升级到 V2](cherry-studio/installation/v1-to-v2-migration.md)
   * [V2 降级到 V1](cherry-studio/installation/v2-to-v1-downgrade.md)
