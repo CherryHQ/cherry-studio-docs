@@ -17,22 +17,23 @@ icon: arrow-right-arrow-left
 
 ## V1 数据迁移到 V2
 
-正确路径是：**V1.9.13 → V2.0.0（完成一次数据迁移）→ V2.0.1**。
+V2.0.2 已支持从 V1.9.13 直接迁移，不再需要 V2.0.0 中转。
 
-| 当前情况           | 应该怎么做                                        |
-| -------------- | -------------------------------------------- |
-| 已在 V2.0.0 完成迁移 | 可以直接升级 V2.0.1。                               |
-| 仍在 V1，需要保留数据   | 先安装并运行 V2.0.0，完成迁移后再升级 V2.0.1。               |
-| 不需要 V1 数据      | 可以在 V2.0.1 选择【跳过迁移】，但 V1 数据不会迁入；不建议普通用户这样操作。 |
+| 当前情况            | 应该怎么做                              |
+| --------------- | ---------------------------------- |
+| 仍在 V1，需要保留数据    | 将 V1 更新到 1.9.13，再直接安装 V2.0.2 完成迁移。 |
+| 已经在使用 V2        | 正常升级 V2.0.2，继续使用当前 V2 数据。          |
+| 之前迁移 V1 失败或遗漏数据 | 完整备份当前 V2 后，才可使用【重新迁移】。            |
+| 不需要 V1 数据       | 可以选择【忽略并使用默认值】，但 V1 数据不会迁入。        |
 
-{% hint style="warning" %}
-V2.0.1 不能代替 V2.0.0 执行首次迁移。V2.0.x 补丁版暂时仍受这一限制。
+{% hint style="danger" %}
+【设置】→【数据】中的【重新迁移】会永久删除当前 V2 数据，再从原始 V1 数据重新导入。它不会合并两边的数据；不是 V1 迁移失败或遗漏数据时，一定不要点击。
 {% endhint %}
 
 ## 下载入口
 
 * [V1 官方下载](https://cherryai.com.cn/download/v1)
-* V2.0.0 中转版本：[GitCode 下载页](https://gitcode.com/CherryHQ/cherry-studio/releases/v2.0.0) · [GitHub 下载页](https://github.com/CherryHQ/cherry-studio/releases/tag/v2.0.0)
-* [V2 最新版官方下载](https://cherryai.com.cn/download)
+* V2.0.2 发布页：[GitCode](https://gitcode.com/CherryHQ/cherry-studio/releases/v2.0.2) · [GitHub](https://github.com/CherryHQ/cherry-studio/releases/tag/v2.0.2)
+* [V2 官方下载](https://cherryai.com.cn/download)
 
 更多备份、迁移失败与数据库注意事项见[【升级与降级】](../cherry-studio/installation/upgrade-downgrade.md)。

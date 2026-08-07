@@ -11,21 +11,26 @@ icon: arrows-rotate
 V1 与 V2 的数据和备份格式不互通。V2 中新增的会话、Agent、设置和文件不会自动回写到 V1。
 {% endhint %}
 
-## 保留 V1 数据的升级路径
+## V2.0.2 升级与迁移
 
 {% hint style="warning" %}
-正确路径是：**V1.9.13 → V2.0.0（完成一次数据迁移）→ V2.0.1**。首次迁移不能直接安装 V2.0.1；V2.0.x 补丁版暂时不能代替 V2.0.0 执行首次迁移。
+需要保留 V1 数据时，正确路径是：**V1.9.13 → V2.0.2（直接完成数据迁移）**。不再需要先安装 V2.0.0。
 {% endhint %}
 
-| 当前情况           | 应该怎么做                                        |
-| -------------- | -------------------------------------------- |
-| 已在 V2.0.0 完成迁移 | 可以直接升级 V2.0.1。                               |
-| 仍在 V1，需要保留数据   | 先安装并运行 V2.0.0，完成迁移后再升级 V2.0.1。               |
-| 不需要 V1 数据      | 可以在 V2.0.1 选择【跳过迁移】，但 V1 数据不会迁入；不建议普通用户这样操作。 |
+| 当前情况            | 应该怎么做                                |
+| --------------- | ------------------------------------ |
+| 仍在 V1，需要保留数据    | 将 V1 更新到 1.9.13，再直接安装 V2.0.2 完成迁移。   |
+| 已经在使用 V2        | 正常升级 V2.0.2，继续使用当前 V2 数据；不要点击【重新迁移】。 |
+| 之前迁移 V1 失败或遗漏数据 | 完整备份当前 V2 后，才可在【设置】→【数据】使用【重新迁移】。    |
+| 不需要 V1 数据       | 可以选择【忽略并使用默认值】，但 V1 数据不会迁入。          |
+
+{% hint style="danger" %}
+【重新迁移】会永久删除当前 V2 数据，再从原始 V1 数据重新导入，不会合并或保留两边的数据。除非此前 V1 迁移失败或遗漏数据，否则一定不要点击。
+{% endhint %}
 
 ## 选择路径
 
-<table data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>破坏性更新提醒</strong></td><td>先确认迁移网关、数据不互通和回退限制。</td><td><a href="v2-breaking-update-notice.md">v2-breaking-update-notice.md</a></td></tr><tr><td><strong>功能差异</strong></td><td>了解界面、Agent、知识库等变化和升级后需要复核的项目。</td><td><a href="v1-v2-feature-differences.md">v1-v2-feature-differences.md</a></td></tr><tr><td><strong>V1 升级到 V2</strong></td><td>备份 V1 数据，经过 V2.0.0 完成迁移，再升级 V2.0.1。</td><td><a href="v1-to-v2-migration.md">v1-to-v2-migration.md</a></td></tr><tr><td><strong>V2 降级到 V1</strong></td><td>返回原 V1 数据，并了解什么时候才需要处理 V2 数据库。</td><td><a href="v2-to-v1-downgrade.md">v2-to-v1-downgrade.md</a></td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>破坏性更新提醒</strong></td><td>先确认数据不互通、重新迁移和回退限制。</td><td><a href="v2-breaking-update-notice.md">v2-breaking-update-notice.md</a></td></tr><tr><td><strong>功能差异</strong></td><td>了解界面、Agent、知识库等变化和升级后需要复核的项目。</td><td><a href="v1-v2-feature-differences.md">v1-v2-feature-differences.md</a></td></tr><tr><td><strong>V1 升级到 V2</strong></td><td>备份 V1 数据，直接使用 V2.0.2 完成迁移。</td><td><a href="v1-to-v2-migration.md">v1-to-v2-migration.md</a></td></tr><tr><td><strong>V2 降级到 V1</strong></td><td>返回原 V1 数据，并了解什么时候才需要处理 V2 数据库。</td><td><a href="v2-to-v1-downgrade.md">v2-to-v1-downgrade.md</a></td></tr></tbody></table>
 
 ## 切换前准备
 
@@ -41,4 +46,4 @@ V1 与 V2 的数据和备份格式不互通。V2 中新增的会话、Agent、�
 
 * [Cherry Studio V2 官方下载](https://cherryai.com.cn/download)
 * [Cherry Studio V1 官方下载](https://cherryai.com.cn/download/v1)
-* V2.0.0 中转版本：[GitCode 下载页](https://gitcode.com/CherryHQ/cherry-studio/releases/v2.0.0) · [GitHub 下载页](https://github.com/CherryHQ/cherry-studio/releases/tag/v2.0.0)
+* V2.0.2 发布页：[GitCode](https://gitcode.com/CherryHQ/cherry-studio/releases/v2.0.2) · [GitHub](https://github.com/CherryHQ/cherry-studio/releases/tag/v2.0.2)

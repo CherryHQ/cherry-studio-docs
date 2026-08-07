@@ -49,6 +49,10 @@ V2 中新增的会话、Agent、设置和文件不会回到 V1。V2 备份也不
 正常降级不需要删除数据库。保留 V2 数据可以方便以后返回 V2，也能避免误删尚未导出的内容。
 {% endhint %}
 
+{% hint style="danger" %}
+V2.0.2 中的【设置】→【数据】→【重新迁移】不是降级入口。它会永久删除当前 V2 数据，再从原始 V1 数据重新导入；除非此前 V1 迁移失败或遗漏数据，否则一定不要点击。
+{% endhint %}
+
 ## 什么时候才处理 V2 数据库
 
 只有以下情况才需要处理：
@@ -103,7 +107,7 @@ V2 中新增的会话、Agent、设置和文件不会回到 V1。V2 备份也不
 
 <summary>降级后再次回到 V2，应该安装哪个版本？</summary>
 
-如果继续使用此前已完成迁移的 V2 数据，可以直接安装 V2.0.1。如果要把当前 V1 数据重新迁入 V2，仍须按 **V1.9.13 → V2.0.0（完成一次数据迁移）→ V2.0.1** 操作；V2.0.x 补丁版暂时不能代替 V2.0.0 执行首次或重新迁移。
+如果继续使用此前的 V2 数据，可以直接安装 V2.0.2，且不要点击【重新迁移】。如果此前 V1 迁移失败或遗漏数据，可在完整备份当前 V2 后使用【设置】→【数据】→【重新迁移】；该操作会永久删除当前 V2 数据，再从 V1 重新导入。
 
 </details>
 
@@ -111,5 +115,5 @@ V2 中新增的会话、Agent、设置和文件不会回到 V1。V2 备份也不
 
 * [Cherry Studio V1 官方下载](https://cherryai.com.cn/download/v1)
 * [Cherry Studio V2 官方下载](https://cherryai.com.cn/download)
-* V2.0.0 中转版本：[GitCode 下载页](https://gitcode.com/CherryHQ/cherry-studio/releases/v2.0.0) · [GitHub 下载页](https://github.com/CherryHQ/cherry-studio/releases/tag/v2.0.0)
+* V2.0.2 发布页：[GitCode](https://gitcode.com/CherryHQ/cherry-studio/releases/v2.0.2) · [GitHub](https://github.com/CherryHQ/cherry-studio/releases/tag/v2.0.2)
 * [问题反馈与功能建议](../../question-contact/suggestions.md)
