@@ -5,7 +5,7 @@ icon: linux
 
 # Linux
 
-## 1. 选择安装包
+## 1. 下载安装包
 
 打开 [官方下载页](https://cherryai.com.cn/download/v2)，选择 **Linux**。官网会按系统和架构提供不同格式的安装包：
 
