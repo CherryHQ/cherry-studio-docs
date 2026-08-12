@@ -5,7 +5,7 @@ icon: windows
 
 # Windows 安装
 
-## 1. 选择安装包
+## 1. 下载安装包
 
 打开 [官方下载页](https://cherryai.com.cn/download/v2)，选择 **Windows**。
 
