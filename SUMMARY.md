@@ -3,8 +3,7 @@
 ## Cherry Studio
 
 * [项目简介](README.md)
-* [客户端下载](cherrystudio/download.md)
-* [安装教程](cherry-studio/installation/README.md)
+* [下载与安装教程](cherry-studio/installation/README.md)
   * [Windows 安装](cherry-studio/installation/windows.md)
   * [macOS 安装](cherry-studio/installation/macos.md)
   * [Linux](cherry-studio/installation/linux.md)
