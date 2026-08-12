@@ -5,7 +5,7 @@ icon: apple
 
 # macOS 安装
 
-## 1. 确认芯片类型并下载
+## 1. 确认芯片类型并下载安装包
 
 打开 [官方下载页](https://cherryai.com.cn/download/v2)。Apple 芯片（M 系列）选择 **macOS · ARM64**；Intel Mac 选择页面下方的 **Intel 芯片** 下载项。
 
