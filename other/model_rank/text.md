@@ -4,7 +4,7 @@
 
 本榜单是 Arena AI 最核心的文本对战榜单，根据人类盲投对战估算模型相对实力。
 
-> **数据更新时间**: 2026-08-14 09:04:30 UTC / 2026-08-14 17:04:30 CST (北京时间)
+> **数据更新时间**: 2026-08-16 08:23:54 UTC / 2026-08-16 16:23:54 CST (北京时间)
 
 {% hint style="info" %}
 排行榜反映特定评测和用户投票偏好，不等同于模型在你的任务中一定更好。选择模型时还要考虑价格、速度、上下文、工具调用、隐私和地区可用性。
@@ -22,7 +22,7 @@
 |    6 | 4-13   | claude-opus-4-7 [<sup>1</sup>](https://www.anthropic.com/news/claude-opus-4-7)                                                                                 | 1494 (±4)             | 61,419 | $5/$25         | 1M    |
 |    7 | 3-16   | claude-opus-5-high [<sup>1</sup>](https://www.anthropic.com/news/claude-opus-5)                                                                                | 1493 (±5)             | 20,030 | $5/$25         | 1M    |
 |    8 | 4-20   | qwen3.8-max [<sup>1</sup>](https://www.qwencloud.com/models/qwen3.8-max)                                                                                       | 1491 (±8)             |  7,004 | $2/$6          | 1M    |
-|    9 | 3-20   | gemini-3.7-flash-high [<sup>1</sup>](https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-3-7-flash/)                    | 1490 (±8) Preliminary |  5,744 | $0.19/$0.94    | 1M    |
+|    9 | 3-20   | gemini-3.7-flash-high [<sup>1</sup>](https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-3-7-flash/)                    | 1490 (±8) Preliminary |  5,744 | $0.75/$3.57    | 1M    |
 |   10 | 4-20   | claude-opus-5-max [<sup>1</sup>](https://www.anthropic.com/news/claude-opus-5)                                                                                 | 1489 (±7)             |  9,679 | $5/$25         | 1M    |
 |   11 | 4-20   | muse-spark-1.1 [<sup>1</sup>](https://ai.meta.com/blog/introducing-muse-spark-meta-model-api/)                                                                 | 1489 (±6)             | 16,928 | $1.25/$4.25    | N/A   |
 |   12 | 4-20   | kimi-k3-max [<sup>1</sup>](https://platform.kimi.ai/docs/guide/kimi-k3-quickstart)                                                                             | 1489 (±6)             | 11,969 | N/A            | N/A   |
