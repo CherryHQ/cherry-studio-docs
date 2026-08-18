@@ -4,7 +4,7 @@
 
 本榜单评测模型在 Web 前端开发（HTML/CSS/JS）任务上的实际表现。
 
-> **数据更新时间**: 2026-08-17 08:39:00 UTC / 2026-08-17 16:39:00 CST (北京时间)
+> **数据更新时间**: 2026-08-18 08:31:43 UTC / 2026-08-18 16:31:43 CST (北京时间)
 
 {% hint style="info" %}
 排行榜反映特定评测和用户投票偏好，不等同于模型在你的任务中一定更好。选择模型时还要考虑价格、速度、上下文、工具调用、隐私和地区可用性。
@@ -23,7 +23,7 @@
 |    7 | 5-7    | gpt-5.6-sol-xhigh (codex-harness) [<sup>1</sup>](https://openai.com/index/gpt-5-6/)                                                                                                              | 1622 (++8/-8)               |  8,595 | $5/$30         | 1.1M   |
 |    8 | 8-11   | gemini-3.7-flash-high [<sup>1</sup>](https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-3-7-flash/)                                                      | 1587 (++13/-13) Preliminary |  2,543 | $0.75/$3.57    | 1M     |
 |    9 | 8-11   | glm-5.2-max [<sup>1</sup>](https://huggingface.co/zai-org/GLM-5.2)                                                                                                                               | 1585 (++8/-8)               |  8,142 | $1.40/$4.40    | 1M     |
-|   10 | 8-12   | deepseek-v4-pro-high-20260813 [<sup>1</sup>](https://api-docs.deepseek.com/updates/#date-2026-08-13)                                                                                             | 1584 (++14/-14)             |  2,180 | N/A            | N/A    |
+|   10 | 8-12   | deepseek-v4-pro-high-20260813 [<sup>1</sup>](https://api-docs.deepseek.com/updates/#date-2026-08-13)                                                                                             | 1584 (++14/-14)             |  2,180 | $1.32/$3.96    | N/A    |
 |   11 | 8-12   | deepseek-v4-flash-high [<sup>1</sup>](https://api-docs.deepseek.com/updates/#date-2026-07-31)                                                                                                    | 1581 (++12/-12)             |  2,936 | $0.44/$1.32    | 1M     |
 |   12 | 10-15  | claude-opus-4-8-high [<sup>1</sup>](https://www.anthropic.com/news/claude-opus-4-8)                                                                                                              | 1564 (++7/-7)               | 11,060 | $5/$25         | 1M     |
 |   13 | 12-15  | claude-opus-4-7 [<sup>1</sup>](https://www.anthropic.com/news/claude-opus-4-7)                                                                                                                   | 1558 (++6/-6)               | 13,855 | $5/$25         | 1M     |
