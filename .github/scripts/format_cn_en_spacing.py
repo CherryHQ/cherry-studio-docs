@@ -190,7 +190,8 @@ def main(argv):
     for path in argv[1:]:
         if not path.lower().endswith('.md'):
             continue
-        if re.search(r'(^|/)(i18n|\.gitbook|\.github|scripts)(/|$)', path):
+        # other/model_rank/ 为排行榜脚本自动生成（含对齐空格），不在混排优化范围内
+        if re.search(r'(^|/)(i18n|\.gitbook|\.github|other/model_rank|scripts)(/|$)', path):
             continue
         if format_file(path):
             changed += 1

@@ -7,6 +7,7 @@ on:
       - master
     paths:
       - '**/*.md'
+      - '!other/model_rank/**'
       - '.github/scripts/format_cn_en_spacing.py'
       - '.github/workflows/format-spacing.yml'
   workflow_dispatch:
@@ -39,7 +40,9 @@ jobs:
         id: changed
         run: |
           set -euo pipefail
-          IGNORE_RE='(^|/)(i18n|\.gitbook|\.github|scripts)(/|$)'
+          # 忽略排行榜文件（other/model_rank/）：表格由 fetch_leaderboard.py 自动生成，
+          # 含大量对齐空格，与混排空格规则冲突，两个 workflow 不应互相改动
+          IGNORE_RE='(^|/)(i18n|\.gitbook|\.github|other/model_rank|scripts)(/|$)'
           FILTERED=""
 
           if [ "${{ github.event_name }}" = "push" ]; then
@@ -89,8 +92,13 @@ jobs:
           # 拉取最新的远程变更，防止运行期间有手动提交等情况
           git pull --rebase --autostash
 
-          # 仅暂存 Markdown 变更（脚本本身不会修改非 .md 文件）
-          git add -A -- '*.md'
+          # 仅暂存本次收集的 Markdown 文件（存在性过滤）：
+          # 不能用 `git add -A -- '*.md'`，否则会把 pull 拉入的排行榜并发更新等
+          # 无关 .md 变更一并提交
+          FILES="${{ steps.changed.outputs.files }}"
+          for f in $FILES; do
+            if [ -f "$f" ]; then echo "$f"; fi
+          done | xargs git add --
 
           if ! git diff --cached --quiet; then
             echo "Changes detected. Committing and pushing..."
