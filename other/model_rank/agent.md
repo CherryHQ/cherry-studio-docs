@@ -4,7 +4,7 @@
 
 本榜单评测模型在多轮工具调用 / 智能体任务上的综合表现，涵盖净改进率、确认成功率、赞踩比、可控性、Bash 恢复率、工具幻觉率等维度。
 
-> **数据更新时间**: 2026-08-20 08:33:33 UTC / 2026-08-20 16:33:33 CST (北京时间)
+> **数据更新时间**: 2026-08-21 08:35:38 UTC / 2026-08-21 16:35:38 CST (北京时间)
 
 {% hint style="info" %}
 排行榜反映特定评测和用户投票偏好，不等同于模型在你的任务中一定更好。选择模型时还要考虑价格、速度、上下文、工具调用、隐私和地区可用性。
@@ -32,18 +32,18 @@
 |   16 | 8-19   | Grok 4.5 [<sup>1</sup>](https://docs.x.ai/developers/models/grok-4.5)                                                                         | 6.17%±1.16%  | 5.47%±2.57%  | 5.62%±4.11%  | 7.17%±2.19%  | 11.45%±1.14% | 1.14%±0.16%  | 30,936 |
 |   17 | 10-19  | GLM 5.2 (Max) [<sup>1</sup>](https://huggingface.co/zai-org/GLM-5.2)                                                                          | 5.82%±0.87%  | 7.24%±1.87%  | 9.42%±2.99%  | 5.22%±1.53%  | 6.09%±1.11%  | 1.14%±0.16%  | 54,704 |
 |   18 | 11-23  | GPT 5.4 (High) [<sup>1</sup>](https://platform.openai.com/docs/models/gpt-5.4)                                                                | 4.98%±0.80%  | 4.62%±1.76%  | 3.08%±2.67%  | 6.55%±1.58%  | 9.52%±1.06%  | 1.14%±0.16%  | 73,465 |
-|   19 | 11-25  | GPT 5.6 Luna (xHigh) [<sup>1</sup>](https://openai.com/index/gpt-5-6/)                                                                        | 4.04%±1.87%  | 1.88%±4.26%  | 7.78%±6.41%  | 1.72%±3.79%  | 11.43%±1.47% | 1.14%±0.16%  |  8,796 |
+|   19 | 11-26  | GPT 5.6 Luna (xHigh) [<sup>1</sup>](https://openai.com/index/gpt-5-6/)                                                                        | 4.04%±1.87%  | 1.88%±4.26%  | 7.78%±6.41%  | 1.72%±3.79%  | 11.43%±1.47% | 1.14%±0.16%  |  8,796 |
 |   20 | 17-24  | Deepseek V4 Flash (High) (20260731)DeepSeek · MIT                                                                                             | 3.99%±0.79%  | 8.09%±1.89%  | 2.15%±2.64%  | 3.45%±1.50%  | 5.11%±0.64%  | 1.14%±0.16%  | 42,582 |
-|   21 | 18-25  | Gemini 3.7 Flash (High) [<sup>1</sup>](https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-3-7-flash/) | 3.32%±1.02%  | 9.96%±2.43%  | 0.04%±3.35%  | 2.65%±2.05%  | 2.93%±1.14%  | 1.10%±0.17%  | 18,109 |
-|   22 | 18-25  | GPT 5.6 Terra (xHigh) [<sup>1</sup>](https://openai.com/index/gpt-5-6/)                                                                       | 3.19%±1.19%  | 1.83%±2.92%  | 1.77%±3.95%  | 5.02%±2.39%  | 9.87%±1.23%  | 1.14%±0.16%  | 14,592 |
-|   23 | 19-25  | Claude Sonnet 4.6 [<sup>1</sup>](https://www.anthropic.com/news/claude-sonnet-4-6)                                                            | 2.88%±1.19%  | 0.65%±2.67%  | 0.99%±3.58%  | 1.81%±2.30%  | 11.21%±2.26% | 1.04%±0.20%  | 36,825 |
-|   24 | 17-29  | Claude Opus 4.8 [<sup>1</sup>](https://www.anthropic.com/news/claude-opus-4-8)                                                                | 2.51%±2.25%  | 7.78%±2.77%  | 13.68%±4.78% | 8.05%±2.79%  | 10.37%±1.94% | 27.34%±8.77% | 33,237 |
-|   25 | 24-29  | Muse Spark 1.1 [<sup>1</sup>](https://ai.meta.com/blog/introducing-muse-spark-meta-model-api/)                                                | 0.93%±0.61%  | 6.58%±1.43%  | 5.57%±1.82%  | 3.39%±1.16%  | 5.92%±1.12%  | 1.11%±0.16%  | 76,194 |
-|   26 | 20-35  | Kimi K2.7 Code [<sup>1</sup>](https://platform.kimi.ai/docs/guide/kimi-k2-7-code-quickstart)                                                  | 0.43%±2.07%  | 3.72%±4.42%  | 1.53%±6.94%  | 2.59%±4.69%  | 1.63%±2.61%  | 1.14%±0.16%  | 11,080 |
-|   27 | 24-32  | DeepSeek V4 Pro [<sup>1</sup>](https://api-docs.deepseek.com/news/news260424)                                                                 | 0.05%±0.88%  | 2.66%±2.21%  | 2.39%±2.82%  | 0.15%±1.66%  | 4.84%±0.94%  | 0.32%±0.25%  | 30,337 |
-|   28 | 24-32  | GLM 5.1 [<sup>1</sup>](https://huggingface.co/zai-org/GLM-5.1)                                                                                | 0.00%±0.75%  | 0.93%±1.69%  | 0.28%±2.27%  | 0.97%±1.40%  | 1.05%±1.41%  | 0.59%±0.45%  | 71,611 |
-|   29 | 26-34  | Gemini 3.5 Flash (High) [<sup>1</sup>](https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5/)                   | 0.68%±0.61%  | 0.11%±1.41%  | 0.64%±1.88%  | 0.50%±1.12%  | 2.48%±1.11%  | 0.12%±0.20%  | 94,056 |
-|   30 | 26-35  | Qwen3.7 MaxAlibaba · Proprietary                                                                                                              | 0.75%±0.85%  | 2.66%±2.19%  | 6.19%±2.55%  | 0.35%±1.51%  | 4.83%±1.54%  | 0.60%±0.23%  | 31,904 |
+|   21 | 18-26  | Gemini 3.7 Flash (High) [<sup>1</sup>](https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-3-7-flash/) | 3.32%±1.02%  | 9.96%±2.43%  | 0.04%±3.35%  | 2.65%±2.05%  | 2.93%±1.14%  | 1.10%±0.17%  | 18,109 |
+|   22 | 18-26  | GPT 5.6 Terra (xHigh) [<sup>1</sup>](https://openai.com/index/gpt-5-6/)                                                                       | 3.19%±1.19%  | 1.83%±2.92%  | 1.77%±3.95%  | 5.02%±2.39%  | 9.87%±1.23%  | 1.14%±0.16%  | 14,592 |
+|   23 | 19-26  | Claude Sonnet 4.6 [<sup>1</sup>](https://www.anthropic.com/news/claude-sonnet-4-6)                                                            | 2.88%±1.19%  | 0.65%±2.67%  | 0.99%±3.58%  | 1.81%±2.30%  | 11.21%±2.26% | 1.04%±0.20%  | 36,825 |
+|   24 | 17-30  | Claude Opus 4.8 [<sup>1</sup>](https://www.anthropic.com/news/claude-opus-4-8)                                                                | 2.51%±2.25%  | 7.78%±2.77%  | 13.68%±4.78% | 8.05%±2.79%  | 10.37%±1.94% | 27.34%±8.77% | 33,237 |
+|   25 | 20-29  | Muse Spark 1.2 (xHigh) [<sup>1</sup>](https://developer.meta.com/ai/models/muse-spark/)                                                       | 2.06%±1.14%  | 6.02%±2.87%  | 5.72%±3.62%  | 2.51%±2.23%  | 11.40%±1.27% | 1.13%±0.16%  | 17,033 |
+|   26 | 24-30  | Muse Spark 1.1 [<sup>1</sup>](https://ai.meta.com/blog/introducing-muse-spark-meta-model-api/)                                                | 0.93%±0.61%  | 6.58%±1.43%  | 5.57%±1.82%  | 3.39%±1.16%  | 5.92%±1.12%  | 1.11%±0.16%  | 76,194 |
+|   27 | 20-36  | Kimi K2.7 Code [<sup>1</sup>](https://platform.kimi.ai/docs/guide/kimi-k2-7-code-quickstart)                                                  | 0.43%±2.07%  | 3.72%±4.42%  | 1.53%±6.94%  | 2.59%±4.69%  | 1.63%±2.61%  | 1.14%±0.16%  | 11,080 |
+|   28 | 24-33  | DeepSeek V4 Pro [<sup>1</sup>](https://api-docs.deepseek.com/news/news260424)                                                                 | 0.05%±0.88%  | 2.66%±2.21%  | 2.39%±2.82%  | 0.15%±1.66%  | 4.84%±0.94%  | 0.32%±0.25%  | 30,337 |
+|   29 | 25-33  | GLM 5.1 [<sup>1</sup>](https://huggingface.co/zai-org/GLM-5.1)                                                                                | 0.00%±0.75%  | 0.93%±1.69%  | 0.28%±2.27%  | 0.97%±1.40%  | 1.05%±1.41%  | 0.59%±0.45%  | 71,611 |
+|   30 | 27-35  | Gemini 3.5 Flash (High) [<sup>1</sup>](https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5/)                   | 0.68%±0.61%  | 0.11%±1.41%  | 0.64%±1.88%  | 0.50%±1.12%  | 2.48%±1.11%  | 0.12%±0.20%  | 94,056 |
 
 ## 怎么看这张表
 
