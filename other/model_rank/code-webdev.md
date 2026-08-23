@@ -4,7 +4,7 @@
 
 本榜单评测模型在 Web 前端开发（HTML/CSS/JS）任务上的实际表现。
 
-> **数据更新时间**: 2026-08-22 08:23:46 UTC / 2026-08-22 16:23:46 CST (北京时间)
+> **数据更新时间**: 2026-08-23 08:24:15 UTC / 2026-08-23 16:24:15 CST (北京时间)
 
 {% hint style="info" %}
 排行榜反映特定评测和用户投票偏好，不等同于模型在你的任务中一定更好。选择模型时还要考虑价格、速度、上下文、工具调用、隐私和地区可用性。
@@ -22,7 +22,7 @@
 |    6 | 5-7    | claude-fable-5 [<sup>1</sup>](https://www.anthropic.com/news/claude-fable-5-mythos-5)                                                                                                            | 1626 (++8/-8)               |  8,382 | $10/$50        | 1M     |
 |    7 | 5-8    | gpt-5.6-sol-xhigh (codex-harness) [<sup>1</sup>](https://openai.com/index/gpt-5-6/)                                                                                                              | 1619 (++8/-8)               |  9,499 | $5/$30         | 1.1M   |
 |    8 | 6-13   | glm-5.3-max [<sup>1</sup>](https://z.ai/blog/glm-5.3)                                                                                                                                            | 1599 (++15/-15)             |  1,916 | $1.40/$4.40    | 1M     |
-|    9 | 8-13   | qwen3.8-27b [<sup>1</sup>](https://huggingface.co/Qwen/Qwen3.8-27B)                                                                                                                              | 1595 (++13/-13)             |  2,464 | $0.40/$3       | N/A    |
+|    9 | 8-13   | qwen3.8-27b [<sup>1</sup>](https://huggingface.co/Qwen/Qwen3.8-27B)                                                                                                                              | 1595 (++13/-13)             |  2,464 | $0.50/$3       | N/A    |
 |   10 | 8-13   | gemini-3.7-flash-high [<sup>1</sup>](https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-3-7-flash/)                                                      | 1587 (++13/-13) Preliminary |  2,552 | $0.75/$3.57    | 1M     |
 |   11 | 8-13   | glm-5.2-max [<sup>1</sup>](https://huggingface.co/zai-org/GLM-5.2)                                                                                                                               | 1582 (++8/-8)               |  8,775 | $1.40/$4.40    | 1M     |
 |   12 | 8-14   | deepseek-v4-pro-high-20260813 [<sup>1</sup>](https://api-docs.deepseek.com/updates/#date-2026-08-13)                                                                                             | 1582 (++12/-12)             |  2,869 | $1.32/$3.96    | N/A    |
