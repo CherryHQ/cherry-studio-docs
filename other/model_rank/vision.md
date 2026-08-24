@@ -4,7 +4,7 @@
 
 本榜单评测多模态模型在图像理解类任务上的表现。
 
-> **数据更新时间**: 2026-08-23 08:24:15 UTC / 2026-08-23 16:24:15 CST (北京时间)
+> **数据更新时间**: 2026-08-24 08:43:20 UTC / 2026-08-24 16:43:20 CST (北京时间)
 
 {% hint style="info" %}
 排行榜反映特定评测和用户投票偏好，不等同于模型在你的任务中一定更好。选择模型时还要考虑价格、速度、上下文、工具调用、隐私和地区可用性。
@@ -32,7 +32,7 @@
 |   16 | 6-29   | gpt-5.5-high [<sup>1</sup>](https://openai.com/index/introducing-gpt-5-5/)                                                                                     | 1282 (±7)  | 19,406 | $5/$30         | 1.1M  |
 |   17 | 6-31   | grok-4.5 [<sup>1</sup>](https://docs.x.ai/developers/models/grok-4.5)                                                                                          | 1282 (±9)  |  5,722 | $2/$6          | 500K  |
 |   18 | 6-31   | muse-spark-1.1 [<sup>1</sup>](https://ai.meta.com/blog/introducing-muse-spark-meta-model-api/)                                                                 | 1281 (±9)  |  6,142 | $1.25/$4.25    | 1M    |
-|   19 | 6-31   | gpt-5.6-sol-xhigh [<sup>1</sup>](https://openai.com/index/gpt-5-6/)                                                                                            | 1281 (±10) |  5,164 | $5/$30         | N/A   |
+|   19 | 6-31   | gpt-5.6-sol-xhigh [<sup>1</sup>](https://openai.com/index/gpt-5-6/)                                                                                            | 1281 (±10) |  5,164 | $4/$20         | N/A   |
 |   20 | 6-31   | gpt-5.4 [<sup>1</sup>](https://platform.openai.com/docs/models/gpt-5.4)                                                                                        | 1280 (±7)  | 21,227 | $1.25/$7.50    | 1.1M  |
 |   21 | 7-31   | gpt-5.4-high [<sup>1</sup>](https://platform.openai.com/docs/models/gpt-5.4)                                                                                   | 1280 (±7)  | 22,515 | $1.25/$7.50    | 1.1M  |
 |   22 | 7-31   | claude-opus-4-8 [<sup>1</sup>](https://www.anthropic.com/news/claude-opus-4-8)                                                                                 | 1278 (±8)  | 13,354 | $5/$25         | 1M    |
@@ -43,7 +43,7 @@
 |   27 | 10-38  | claude-sonnet-5-high [<sup>1</sup>](https://www.anthropic.com/news/claude-sonnet-5)                                                                            | 1271 (±9)  |  7,862 | $2/$10         | 1M    |
 |   28 | 15-36  | gemini-3-flash [<sup>1</sup>](https://blog.google/products/gemini/gemini-3-flash)                                                                              | 1271 (±5)  | 36,437 | $0.50/$3       | 1M    |
 |   29 | 10-41  | gemini-3.5-flash-lite [<sup>1</sup>](https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-6-flash-3-5-flash-lite-3-5-flash-cyber/) | 1270 (±12) |  3,165 | $0.15/$1.25    | 1M    |
-|   30 | 16-41  | gpt-5.6-terra-xhigh [<sup>1</sup>](https://openai.com/index/gpt-5-6/)                                                                                          | 1266 (±10) |  5,094 | $2.50/$15      | N/A   |
+|   30 | 16-41  | gpt-5.6-terra-xhigh [<sup>1</sup>](https://openai.com/index/gpt-5-6/)                                                                                          | 1266 (±10) |  5,094 | $2/$12         | N/A   |
 
 ## 怎么看这张表
 

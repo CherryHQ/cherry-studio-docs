@@ -4,7 +4,7 @@
 
 本榜单评测模型在联网搜索 / 信息检索类任务上的表现。
 
-> **数据更新时间**: 2026-08-22 08:23:46 UTC / 2026-08-22 16:23:46 CST (北京时间)
+> **数据更新时间**: 2026-08-24 08:43:20 UTC / 2026-08-24 16:43:20 CST (北京时间)
 
 {% hint style="info" %}
 排行榜反映特定评测和用户投票偏好，不等同于模型在你的任务中一定更好。选择模型时还要考虑价格、速度、上下文、工具调用、隐私和地区可用性。
@@ -28,7 +28,7 @@
 |   12 | 8-16   | gpt-5.1-search [<sup>1</sup>](https://openai.com/index/gpt-5-1/)                                                    | 1199 (±5)  |  60,019 | $0.63/$5       | 400K   |
 |   13 | 8-16   | gemini-3-flash-grounding [<sup>1</sup>](https://ai.google.dev/gemini-api/docs/google-search)                        | 1197 (±5)  | 125,928 | N/A            | N/A    |
 |   14 | 9-16   | gpt-5.4-search [<sup>1</sup>](https://platform.openai.com/docs/models/gpt-5.4)                                      | 1196 (±5)  |  87,364 | $2.50/$15      | 1.1M   |
-|   15 | 12-17  | grok-4.20-beta1 [<sup>1</sup>](https://grok.com)                                                                    | 1189 (±6)  |  53,877 | N/A            | N/A    |
+|   15 | 12-17  | grok-4.20-beta1 [<sup>1</sup>](https://grok.com/)                                                                   | 1189 (±6)  |  53,877 | N/A            | N/A    |
 |   16 | 12-17  | claude-sonnet-5-search [<sup>1</sup>](https://www.anthropic.com/news/claude-sonnet-5)                               | 1188 (±6)  |  17,604 | $2/$10         | 1M     |
 |   17 | 15-20  | claude-opus-4-5-search [<sup>1</sup>](https://www.anthropic.com/news/claude-opus-4-5)                               | 1179 (±6)  |  61,611 | $5/$25         | 200K   |
 |   18 | 17-21  | gpt-5.2-search-non-reasoning [<sup>1</sup>](https://openai.com/index/introducing-gpt-5-2/)                          | 1173 (±5)  |  75,752 | $0.88/$7       | 400K   |
