@@ -55,11 +55,11 @@ icon: graduation-cap
 
 <figure><img src="https://raw.githubusercontent.com/SiinXu/cherry-studio-docs/2446b25878f69e98f33d50623a3c4cf5e836680a/.gitbook/assets/cherry-guide-skills-global-toggle.png" alt="技能设置页中的全局启用开关和已安装技能列表"><figcaption><p>① 卡片右侧开关控制技能是否对所有 Agent 可选；关闭后，Agent 编辑窗口不会再显示该技能。</p></figcaption></figure>
 
-| 状态       | 作用                       | 什么时候使用                    |
+| 状态 | 作用 | 什么时候使用 |
 | -------- | ------------------------ | ------------------------- |
-| 全局启用     | 让技能出现在 Agent 的可选技能目录中    | 技能来源可信，仍可能被一个或多个 Agent 使用 |
-| 全局关闭     | 暂停所有 Agent 使用该技能，但保留安装内容 | 临时停用、排错或等待安全检查            |
-| Agent 启用 | 只让当前 Agent 加载该技能         | 流程与当前 Agent 的长期职责相符       |
+| 全局启用 | 让技能出现在 Agent 的可选技能目录中 | 技能来源可信，仍可能被一个或多个 Agent 使用 |
+| 全局关闭 | 暂停所有 Agent 使用该技能，但保留安装内容 | 临时停用、排错或等待安全检查 |
+| Agent 启用 | 只让当前 Agent 加载该技能 | 流程与当前 Agent 的长期职责相符 |
 
 <figure><img src="https://raw.githubusercontent.com/SiinXu/cherry-studio-docs/2446b25878f69e98f33d50623a3c4cf5e836680a/.gitbook/assets/cherry-guide-skill-github-source.png" alt="技能在线搜索中选择 GitHub 并粘贴 SKILL.md 链接"><figcaption></figcaption></figure>
 
@@ -67,12 +67,12 @@ icon: graduation-cap
 
 ### 技能、提示词和 MCP 怎么选
 
-| 需要             | 应选择         | 原因            |
+| 需要 | 应选择 | 原因 |
 | -------------- | ----------- | ------------- |
-| 一句临时要求         | 当前任务提示词     | 不必增加长期配置      |
-| 多次复用同一流程       | 技能          | 能同时保存说明、模板和资源 |
-| 设定 Agent 的长期角色 | Agent 系统提示词 | 每个任务都需要遵守     |
-| 访问数据库或外部服务     | MCP         | 技能本身不提供连接能力   |
+| 一句临时要求 | 当前任务提示词 | 不必增加长期配置 |
+| 多次复用同一流程 | 技能 | 能同时保存说明、模板和资源 |
+| 设定 Agent 的长期角色 | Agent 系统提示词 | 每个任务都需要遵守 |
+| 访问数据库或外部服务 | MCP | 技能本身不提供连接能力 |
 
 ### 用户案例：团队周报技能
 
