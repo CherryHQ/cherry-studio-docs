@@ -18,11 +18,11 @@ icon: folder-open
 
 ### 选择嵌入方式
 
-| 选择 | 适合场景 | 检索方式 | 前置条件 |
+| 选择     | 适合场景          | 检索方式          | 前置条件         |
 | ------ | ------------- | ------------- | ------------ |
-| 不使用 | 第一次体验、关键词明确 | BM25 关键词检索 | 无 |
-| 云端嵌入模型 | 用户问法与资料原文差异较大 | BM25 + 向量混合检索 | 对应模型服务可正常调用 |
-| 本地嵌入模型 | 希望在本机完成向量化 | BM25 + 本地向量检索 | 先在【本地模型】完成下载 |
+| 不使用    | 第一次体验、关键词明确   | BM25 关键词检索    | 无            |
+| 云端嵌入模型 | 用户问法与资料原文差异较大 | BM25 + 向量混合检索 | 对应模型服务可正常调用  |
+| 本地嵌入模型 | 希望在本机完成向量化    | BM25 + 本地向量检索 | 先在【本地模型】完成下载 |
 
 ## 创建步骤
 
@@ -44,7 +44,7 @@ icon: folder-open
 
 选择可用的云端或本地嵌入模型；暂时不需要语义检索时，选择【不使用】。
 
-<figure><img src="../.gitbook/assets/clipboard (43).png" alt="填写员工差旅制度名称并选择嵌入模型的知识库创建表单"><figcaption><p>名称决定资料边界；嵌入模型决定是否加入向量检索。</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/clipboard (33).png" alt="填写员工差旅制度名称并选择嵌入模型的知识库创建表单"><figcaption><p>名称决定资料边界；嵌入模型决定是否加入向量检索。</p></figcaption></figure>
 {% endstep %}
 
 {% step %}
@@ -80,11 +80,11 @@ icon: folder-open
 
 ## 配置说明
 
-| 配置项 | 产品默认值 | 建议起点 | 作用 | 适用场景 | 注意事项 |
+| 配置项    | 产品默认值 | 建议起点        | 作用         | 适用场景        | 注意事项               |
 | ------ | ----- | ----------- | ---------- | ----------- | ------------------ |
-| 名称 | 空 | 对象 + 用途 | 区分资料边界 | 所有知识库 | 权限或生命周期不同的资料应分开 |
-| 嵌入模型 | 不使用 | 第一次体验先不使用 | 决定是否加入向量检索 | 口语问法、同义表达较多 | 云端模型的计费和数据处理取决于服务商 |
-| 本地嵌入模型 | 未下载 | 有本地处理需求时再下载 | 在本机完成向量化 | 离线或隐私要求较高 | 仍需单独检查解析、重排和聊天模型 |
+| 名称     | 空     | 对象 + 用途     | 区分资料边界     | 所有知识库       | 权限或生命周期不同的资料应分开    |
+| 嵌入模型   | 不使用   | 第一次体验先不使用   | 决定是否加入向量检索 | 口语问法、同义表达较多 | 云端模型的计费和数据处理取决于服务商 |
+| 本地嵌入模型 | 未下载   | 有本地处理需求时再下载 | 在本机完成向量化   | 离线或隐私要求较高   | 仍需单独检查解析、重排和聊天模型   |
 
 ## 预期结果
 
@@ -126,4 +126,4 @@ icon: folder-open
 
 ## 继续阅读
 
-<table data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>添加与整理资料</strong></td><td>导入内容并处理同名冲突。</td><td><a href="https://app.gitbook.com/o/Cj2FUNM601oTkFwFFsXJ/s/0Ut5BptC3t8CtSU1UWpM/knowledge-base/sources">https://app.gitbook.com/o/Cj2FUNM601oTkFwFFsXJ/s/0Ut5BptC3t8CtSU1UWpM/knowledge-base/sources</a></td></tr><tr><td><strong>检查资料与召回</strong></td><td>用真实问题验收结果。</td><td><a href="https://app.gitbook.com/o/Cj2FUNM601oTkFwFFsXJ/s/0Ut5BptC3t8CtSU1UWpM/knowledge-base/recall-test">https://app.gitbook.com/o/Cj2FUNM601oTkFwFFsXJ/s/0Ut5BptC3t8CtSU1UWpM/knowledge-base/recall-test</a></td></tr><tr><td><strong>模型与检索设置</strong></td><td>了解嵌入、重排和重建。</td><td><a href="https://app.gitbook.com/o/Cj2FUNM601oTkFwFFsXJ/s/0Ut5BptC3t8CtSU1UWpM/knowledge-base/emb-models-info">https://app.gitbook.com/o/Cj2FUNM601oTkFwFFsXJ/s/0Ut5BptC3t8CtSU1UWpM/knowledge-base/emb-models-info</a></td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>添加与整理资料</strong></td><td>导入内容并处理同名冲突。</td><td><a href="sources.md">sources.md</a></td></tr><tr><td><strong>检查资料与召回</strong></td><td>用真实问题验收结果。</td><td><a href="recall-test.md">recall-test.md</a></td></tr><tr><td><strong>模型与检索设置</strong></td><td>了解嵌入、重排和重建。</td><td><a href="emb-models-info.md">emb-models-info.md</a></td></tr></tbody></table>

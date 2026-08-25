@@ -49,7 +49,7 @@ Cherry Studio 支持与 Obsidian 联动，将完整对话或单条对话导出�
 只有第一种方式会附带 Properties（属性），后两种方式不会附带 Properties（属性）。
 {% endhint %}
 
-<figure><img src="../../.gitbook/assets/image (144).png" alt=""><figcaption><p>配置笔记属性</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (137).png" alt=""><figcaption><p>配置笔记属性</p></figcaption></figure>
 
 <figure><img src="../../.gitbook/assets/image (145).png" alt=""><figcaption><p>选择路径</p></figcaption></figure>
 
@@ -61,7 +61,7 @@ Cherry Studio 支持与 Obsidian 联动，将完整对话或单条对话导出�
 
 对于单条对话的导出，则点击对话下方&#x7684;_&#x4E09;条杠菜单_，选&#x62E9;_&#x5BFC;出_，点&#x51FB;_&#x5BFC;出到 Obsidian_：
 
-<figure><img src="../../.gitbook/assets/image (147).png" alt=""><figcaption><p>导出单条对话</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (141).png" alt=""><figcaption><p>导出单条对话</p></figcaption></figure>
 
 之后也会弹出与导出完整对话时一样的窗口，要求你配置 **笔记属性** 与 **笔记的处理方式**，一样按照 [上方的教程](obsidian.md#dao-chu-wan-zheng-dui-hua) 完成即可。
 

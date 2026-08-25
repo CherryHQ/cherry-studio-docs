@@ -12,12 +12,12 @@ icon: robot
 
 ## 普通对话与 Agent 的区别
 
-| 普通对话 | Agent |
+| 普通对话         | Agent           |
 | ------------ | --------------- |
 | 每次消息前临时选择知识库 | 在 Agent 配置中长期绑定 |
-| 适合即时问答和短比较 | 适合多步研究与文件交付 |
-| 主要使用召回片段回答 | 可搜索资料，并按权限管理知识库 |
-| 当前对话决定资料范围 | Agent 配置决定可访问范围 |
+| 适合即时问答和短比较   | 适合多步研究与文件交付     |
+| 主要使用召回片段回答   | 可搜索资料，并按权限管理知识库 |
+| 当前对话决定资料范围   | Agent 配置决定可访问范围 |
 
 ## 配置一名只读知识库 Agent
 
@@ -67,10 +67,10 @@ icon: robot
 
 ## 知识库搜索与管理
 
-| 能力 | 可以做什么 | 适用任务 | 默认建议 |
+| 能力    | 可以做什么          | 适用任务        | 默认建议        |
 | ----- | -------------- | ----------- | ----------- |
-| 知识库搜索 | 搜索、列出和读取已绑定知识库 | 问答、研究、总结、比较 | 保持启用 |
-| 知识库管理 | 添加、删除或刷新知识库文档 | 经批准的资料维护 | 默认关闭，按需临时开启 |
+| 知识库搜索 | 搜索、列出和读取已绑定知识库 | 问答、研究、总结、比较 | 保持启用        |
+| 知识库管理 | 添加、删除或刷新知识库文档  | 经批准的资料维护    | 默认关闭，按需临时开启 |
 
 {% hint style="warning" %}
 绑定知识库只是授予访问范围，不会复制出另一份知识库。资料更新或重新索引后，Agent 下次搜索会使用更新后的内容。
@@ -100,12 +100,12 @@ icon: robot
 
 ## 配置说明
 
-| 配置项 | 推荐起点 | 何时增加 | 风险控制 |
+| 配置项   | 推荐起点       | 何时增加         | 风险控制          |
 | ----- | ---------- | ------------ | ------------- |
-| 绑定知识库 | 1 个任务相关库 | 确有跨库比较需求 | 在提示词中写清每个库的用途 |
-| 知识库搜索 | 开启 | 只要任务需要查资料 | 验收来源是否来自绑定范围 |
-| 知识库管理 | 关闭 | 明确需要添加、删除或刷新 | 逐项批准，并先备份重要资料 |
-| 输出要求 | 事实、推断、建议分开 | 需要生成报告或文件 | 每条事实保留来源名称 |
+| 绑定知识库 | 1 个任务相关库   | 确有跨库比较需求     | 在提示词中写清每个库的用途 |
+| 知识库搜索 | 开启         | 只要任务需要查资料    | 验收来源是否来自绑定范围  |
+| 知识库管理 | 关闭         | 明确需要添加、删除或刷新 | 逐项批准，并先备份重要资料 |
+| 输出要求  | 事实、推断、建议分开 | 需要生成报告或文件    | 每条事实保留来源名称    |
 
 ## 用户案例
 
@@ -149,4 +149,4 @@ icon: robot
 
 ## 继续阅读
 
-<table data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>在对话中使用</strong></td><td>完成一次即时、带来源的问答。</td><td><a href="https://app.gitbook.com/o/Cj2FUNM601oTkFwFFsXJ/s/0Ut5BptC3t8CtSU1UWpM/knowledge-base/chat">https://app.gitbook.com/o/Cj2FUNM601oTkFwFFsXJ/s/0Ut5BptC3t8CtSU1UWpM/knowledge-base/chat</a></td></tr><tr><td><strong>数据、隐私与维护</strong></td><td>理解权限、云端服务和备份边界。</td><td><a href="https://app.gitbook.com/o/Cj2FUNM601oTkFwFFsXJ/s/0Ut5BptC3t8CtSU1UWpM/knowledge-base/data">https://app.gitbook.com/o/Cj2FUNM601oTkFwFFsXJ/s/0Ut5BptC3t8CtSU1UWpM/knowledge-base/data</a></td></tr><tr><td><strong>知识库应用案例</strong></td><td>参考售后与研究工作流。</td><td><a href="https://app.gitbook.com/o/Cj2FUNM601oTkFwFFsXJ/s/0Ut5BptC3t8CtSU1UWpM/knowledge-base/cases">https://app.gitbook.com/o/Cj2FUNM601oTkFwFFsXJ/s/0Ut5BptC3t8CtSU1UWpM/knowledge-base/cases</a></td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>在对话中使用</strong></td><td>完成一次即时、带来源的问答。</td><td><a href="chat.md">chat.md</a></td></tr><tr><td><strong>数据、隐私与维护</strong></td><td>理解权限、云端服务和备份边界。</td><td><a href="data.md">data.md</a></td></tr><tr><td><strong>知识库应用案例</strong></td><td>参考售后与研究工作流。</td><td><a href="cases.md">cases.md</a></td></tr></tbody></table>

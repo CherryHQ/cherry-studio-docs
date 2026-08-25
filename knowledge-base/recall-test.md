@@ -40,7 +40,7 @@ icon: flask
 
 确认来源正确，片段同时包含回答所需的条件和结论。
 
-<figure><img src="../.gitbook/assets/clipboard (63).png" alt="召回测试中的命中来源、相关度、片段内容和排序"><figcaption><p>不要只看有没有结果，还要检查来源、片段完整度和顺序。</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/clipboard (47).png" alt="召回测试中的命中来源、相关度、片段内容和排序"><figcaption><p>不要只看有没有结果，还要检查来源、片段完整度和顺序。</p></figcaption></figure>
 {% endstep %}
 
 {% step %}
@@ -58,14 +58,14 @@ icon: flask
 
 ## 怎样读结果
 
-| 现象 | 说明 | 下一步 |
+| 现象            | 说明                    | 下一步                    |
 | ------------- | --------------------- | ---------------------- |
-| 正确来源排在前面，片段完整 | 召回基本合格 | 再测试几种不同问法 |
-| 完全没有正确结果 | 资料未就绪、内容缺失、问法差异大或阈值过高 | 依次检查资料、正文、Chunks 和检索设置 |
-| 来源正确但片段缺少关键句 | 解析或分块边界不理想 | 查看 Chunks，调整后重新索引 |
-| 旧版本和新版本同时出现 | 同名资料被全部保留 | 删除旧条目或用【替换】重新导入 |
-| 正确项经常靠后 | 候选较多或排序不稳定 | 清理资料，考虑嵌入或重排模型 |
-| 召回正确但聊天回答不准 | 问题更可能在提示词或聊天模型 | 保留召回设置，调整提问和聊天模型 |
+| 正确来源排在前面，片段完整 | 召回基本合格                | 再测试几种不同问法              |
+| 完全没有正确结果      | 资料未就绪、内容缺失、问法差异大或阈值过高 | 依次检查资料、正文、Chunks 和检索设置 |
+| 来源正确但片段缺少关键句  | 解析或分块边界不理想            | 查看 Chunks，调整后重新索引      |
+| 旧版本和新版本同时出现   | 同名资料被全部保留             | 删除旧条目或用【替换】重新导入        |
+| 正确项经常靠后       | 候选较多或排序不稳定            | 清理资料，考虑嵌入或重排模型         |
+| 召回正确但聊天回答不准   | 问题更可能在提示词或聊天模型        | 保留召回设置，调整提问和聊天模型       |
 
 {% hint style="warning" %}
 聊天模型无法补回召回阶段没有找到的关键资料。召回结果不合格时，不要先靠反复更换聊天模型排错。
@@ -73,7 +73,7 @@ icon: flask
 
 ## 调优闭环
 
-<figure><img src="../.gitbook/assets/clipboard (65).png" alt="用固定问题检查召回、定位问题、单项调整、重新索引并复测的质量调优闭环"><figcaption><p>固定问题 → 检查结果 → 定位层级 → 单项调整 → 必要时重新索引 → 复测。</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/clipboard (58).png" alt="用固定问题检查召回、定位问题、单项调整、重新索引并复测的质量调优闭环"><figcaption><p>固定问题 → 检查结果 → 定位层级 → 单项调整 → 必要时重新索引 → 复测。</p></figcaption></figure>
 
 推荐顺序：
 
@@ -83,16 +83,16 @@ icon: flask
 4. 候选大致正确但顺序不稳时，再考虑重排模型。
 5. 调整后重新索引，并重复同一组测试。
 
-<figure><img src="../.gitbook/assets/clipboard (62).png" alt="知识库高级设置中的智能分段、分隔符、分段大小和重叠大小"><figcaption><p>片段不完整时再检查分块设置；修改只影响新资料，旧资料需要重新索引。</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/clipboard (52).png" alt="知识库高级设置中的智能分段、分隔符、分段大小和重叠大小"><figcaption><p>片段不完整时再检查分块设置；修改只影响新资料，旧资料需要重新索引。</p></figcaption></figure>
 
 ## 配置说明
 
-| 配置项 | 产品默认值 | 建议起点 | 作用 | 适用场景 | 注意事项 |
+| 配置项    | 产品默认值        | 建议起点     | 作用         | 适用场景       | 注意事项              |
 | ------ | ------------ | -------- | ---------- | ---------- | ----------------- |
-| 测试问题数量 | — | 3～5 个 | 建立可重复的质量基线 | 所有知识库 | 覆盖精确事实、条件规则和易混淆问题 |
-| Top K | 6，可选 1～50 | 先保留 6 | 控制最终片段数量 | 覆盖与噪声之间取舍 | 调大可能占用更多上下文 |
-| 相似度阈值 | 0.0，仅配置重排后显示 | 从 0.0 开始 | 过滤重排后的低分结果 | 重排后仍有噪声 | 设得过高会移除正确片段 |
-| 复测方式 | — | 每轮只改一项 | 判断设置变化来自哪里 | 调优、更新资料或模型 | 修改分块或模型后先重新索引 |
+| 测试问题数量 | —            | 3～5 个    | 建立可重复的质量基线 | 所有知识库      | 覆盖精确事实、条件规则和易混淆问题 |
+| Top K  | 6，可选 1～50    | 先保留 6    | 控制最终片段数量   | 覆盖与噪声之间取舍  | 调大可能占用更多上下文       |
+| 相似度阈值  | 0.0，仅配置重排后显示 | 从 0.0 开始 | 过滤重排后的低分结果 | 重排后仍有噪声    | 设得过高会移除正确片段       |
+| 复测方式   | —            | 每轮只改一项   | 判断设置变化来自哪里 | 调优、更新资料或模型 | 修改分块或模型后先重新索引     |
 
 ## 预期结果
 
@@ -135,4 +135,4 @@ icon: flask
 
 ## 继续阅读
 
-<table data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>模型与检索设置</strong></td><td>调整嵌入、重排、Top K 和分块。</td><td><a href="https://app.gitbook.com/o/Cj2FUNM601oTkFwFFsXJ/s/0Ut5BptC3t8CtSU1UWpM/knowledge-base/emb-models-info">https://app.gitbook.com/o/Cj2FUNM601oTkFwFFsXJ/s/0Ut5BptC3t8CtSU1UWpM/knowledge-base/emb-models-info</a></td></tr><tr><td><strong>文档解析与 OCR</strong></td><td>处理正文缺失、乱码和扫描内容。</td><td><a href="https://app.gitbook.com/o/Cj2FUNM601oTkFwFFsXJ/s/0Ut5BptC3t8CtSU1UWpM/knowledge-base/document-preprocessing">https://app.gitbook.com/o/Cj2FUNM601oTkFwFFsXJ/s/0Ut5BptC3t8CtSU1UWpM/knowledge-base/document-preprocessing</a></td></tr><tr><td><strong>在对话中使用</strong></td><td>召回合格后把知识库用于提问。</td><td><a href="https://app.gitbook.com/o/Cj2FUNM601oTkFwFFsXJ/s/0Ut5BptC3t8CtSU1UWpM/knowledge-base/chat">https://app.gitbook.com/o/Cj2FUNM601oTkFwFFsXJ/s/0Ut5BptC3t8CtSU1UWpM/knowledge-base/chat</a></td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>模型与检索设置</strong></td><td>调整嵌入、重排、Top K 和分块。</td><td><a href="emb-models-info.md">emb-models-info.md</a></td></tr><tr><td><strong>文档解析与 OCR</strong></td><td>处理正文缺失、乱码和扫描内容。</td><td><a href="document-preprocessing.md">document-preprocessing.md</a></td></tr><tr><td><strong>在对话中使用</strong></td><td>召回合格后把知识库用于提问。</td><td><a href="chat.md">chat.md</a></td></tr></tbody></table>

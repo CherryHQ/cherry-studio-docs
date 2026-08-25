@@ -12,27 +12,27 @@ icon: shield-halved
 
 ## 导入后保存什么
 
-| 内容 | 用途 | 更新方式 |
+| 内容           | 用途          | 更新方式            |
 | ------------ | ----------- | --------------- |
-| 文件或目录中的文件副本 | 供知识库继续处理和展示 | 原文件更新后重新添加或替换 |
-| 网页和笔记快照 | 保留导入时的内容 | 来源更新后重新导入 |
-| 解析正文与 Chunks | 预览和检索 | 更换处理器或分块后重新索引 |
-| BM25 关键词索引 | 精确词语检索 | 重新索引时重建 |
-| 向量索引 | 语义检索 | 配置或更换嵌入模型后生成或重建 |
+| 文件或目录中的文件副本  | 供知识库继续处理和展示 | 原文件更新后重新添加或替换   |
+| 网页和笔记快照      | 保留导入时的内容    | 来源更新后重新导入       |
+| 解析正文与 Chunks | 预览和检索       | 更换处理器或分块后重新索引   |
+| BM25 关键词索引   | 精确词语检索      | 重新索引时重建         |
+| 向量索引         | 语义检索        | 配置或更换嵌入模型后生成或重建 |
 
 <figure><img src="../.gitbook/assets/clipboard (49).png" alt="包含多条已处理资料的员工差旅制度知识库"><figcaption><p>资料列表中的条目是知识库托管和索引的对象，不是对原目录的实时同步视图。</p></figcaption></figure>
 
 ## 一次查询可能经过哪些边界
 
-<figure><img src="../.gitbook/assets/clipboard (66).png" alt="展示解析、关键词检索、向量检索、重排和回答之间数据流的知识库架构图"><figcaption><p>图中的解析、向量、重排和回答节点都可能选择本地或云端服务；逐项检查才能确定数据边界。</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/clipboard (50).png" alt="展示解析、关键词检索、向量检索、重排和回答之间数据流的知识库架构图"><figcaption><p>图中的解析、向量、重排和回答节点都可能选择本地或云端服务；逐项检查才能确定数据边界。</p></figcaption></figure>
 
-| 选择的能力 | 可能接收的内容 |
+| 选择的能力   | 可能接收的内容       |
 | ------- | ------------- |
-| 云端文档处理器 | 用于解析的文件内容 |
-| 云端嵌入模型 | 资料片段和检索查询 |
-| 云端重排模型 | 查询和候选片段 |
-| 云端聊天模型 | 问题、对话上下文和召回片段 |
-| 本地对应能力 | 在本机完成相应处理 |
+| 云端文档处理器 | 用于解析的文件内容     |
+| 云端嵌入模型  | 资料片段和检索查询     |
+| 云端重排模型  | 查询和候选片段       |
+| 云端聊天模型  | 问题、对话上下文和召回片段 |
+| 本地对应能力  | 在本机完成相应处理     |
 
 {% hint style="danger" %}
 API Key、内部文档和带个人信息的日志都不应出现在公开截图或反馈中。删除或分享前先脱敏。
@@ -80,10 +80,10 @@ API Key、内部文档和带个人信息的日志都不应出现在公开截图�
 
 ## 完整备份与精简备份
 
-| 备份方式 | 包含内容 | 适用场景 | 限制 |
+| 备份方式 | 包含内容                     | 适用场景            | 限制          |
 | ---- | ------------------------ | --------------- | ----------- |
-| 完整备份 | 聊天、设置及知识库等数据文件 | 迁移设备、删除前保护、完整恢复 | 文件较大，耗时更长 |
-| 精简备份 | 主要是聊天记录和设置，跳过图片、知识库等数据文件 | 快速保留常用配置和聊天 | 不能单独恢复完整知识库 |
+| 完整备份 | 聊天、设置及知识库等数据文件           | 迁移设备、删除前保护、完整恢复 | 文件较大，耗时更长   |
+| 精简备份 | 主要是聊天记录和设置，跳过图片、知识库等数据文件 | 快速保留常用配置和聊天     | 不能单独恢复完整知识库 |
 
 {% hint style="warning" %}
 精简备份不是知识库删除前的恢复保障。重要迁移至少保留一份完整备份，并在目标环境实际完成召回测试。
@@ -109,12 +109,12 @@ API Key、内部文档和带个人信息的日志都不应出现在公开截图�
 
 ## 配置说明
 
-| 项目 | 推荐起点 | 验收方式 | 风险 |
+| 项目   | 推荐起点       | 验收方式        | 风险           |
 | ---- | ---------- | ----------- | ------------ |
-| 资料版本 | 同一用途只保留当前版 | 固定问题只命中正确版本 | 新旧规则混用 |
-| 云端服务 | 按敏感等级逐项确认 | 查看处理器和模型配置 | 文档或片段发送到外部服务 |
-| 备份 | 大改前创建完整备份 | 恢复后检查条目和召回 | 精简备份缺少知识库文件 |
-| 重新索引 | 分批处理代表性资料 | 同一问题集前后对比 | 一次性重建失去可用基线 |
+| 资料版本 | 同一用途只保留当前版 | 固定问题只命中正确版本 | 新旧规则混用       |
+| 云端服务 | 按敏感等级逐项确认  | 查看处理器和模型配置  | 文档或片段发送到外部服务 |
+| 备份   | 大改前创建完整备份  | 恢复后检查条目和召回  | 精简备份缺少知识库文件  |
+| 重新索引 | 分批处理代表性资料  | 同一问题集前后对比   | 一次性重建失去可用基线  |
 
 ## 用户案例
 
@@ -158,4 +158,4 @@ API Key、内部文档和带个人信息的日志都不应出现在公开截图�
 
 ## 继续阅读
 
-<table data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>文档解析与 OCR</strong></td><td>了解本地与云端处理器的差异。</td><td><a href="https://app.gitbook.com/o/Cj2FUNM601oTkFwFFsXJ/s/0Ut5BptC3t8CtSU1UWpM/knowledge-base/document-preprocessing">https://app.gitbook.com/o/Cj2FUNM601oTkFwFFsXJ/s/0Ut5BptC3t8CtSU1UWpM/knowledge-base/document-preprocessing</a></td></tr><tr><td><strong>添加与整理资料</strong></td><td>替换来源并管理资料版本。</td><td><a href="https://app.gitbook.com/o/Cj2FUNM601oTkFwFFsXJ/s/0Ut5BptC3t8CtSU1UWpM/knowledge-base/sources">https://app.gitbook.com/o/Cj2FUNM601oTkFwFFsXJ/s/0Ut5BptC3t8CtSU1UWpM/knowledge-base/sources</a></td></tr><tr><td><strong>常见问题</strong></td><td>按失败层级快速定位问题。</td><td><a href="https://app.gitbook.com/o/Cj2FUNM601oTkFwFFsXJ/s/0Ut5BptC3t8CtSU1UWpM/knowledge-base/troubleshooting">https://app.gitbook.com/o/Cj2FUNM601oTkFwFFsXJ/s/0Ut5BptC3t8CtSU1UWpM/knowledge-base/troubleshooting</a></td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>文档解析与 OCR</strong></td><td>了解本地与云端处理器的差异。</td><td><a href="document-preprocessing.md">document-preprocessing.md</a></td></tr><tr><td><strong>添加与整理资料</strong></td><td>替换来源并管理资料版本。</td><td><a href="sources.md">sources.md</a></td></tr><tr><td><strong>常见问题</strong></td><td>按失败层级快速定位问题。</td><td><a href="troubleshooting.md">troubleshooting.md</a></td></tr></tbody></table>

@@ -30,7 +30,7 @@ icon: circle-question
 
 确认问题需要的条件和结论位于可理解的片段中；不要让页眉、页脚和目录占满结果。
 
-<figure><img src="../.gitbook/assets/clipboard (62).png" alt="知识库高级设置中的智能分段、分隔符、分段大小和重叠大小"><figcaption><p>正文正确但片段不完整时，再调整分块，并重新索引旧资料。</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/clipboard (52).png" alt="知识库高级设置中的智能分段、分隔符、分段大小和重叠大小"><figcaption><p>正文正确但片段不完整时，再调整分块，并重新索引旧资料。</p></figcaption></figure>
 {% endstep %}
 
 {% step %}
@@ -38,7 +38,7 @@ icon: circle-question
 
 检查来源名称、相关度和片段内容。完全没有正确片段与正确片段排序靠后，是两类不同问题。
 
-<figure><img src="../.gitbook/assets/clipboard (63).png" alt="召回测试中显示来源名称、相关度和命中片段的结果列表"><figcaption><p>先证明检索层返回了正确证据，再调整对话提示词。</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/clipboard (47).png" alt="召回测试中显示来源名称、相关度和命中片段的结果列表"><figcaption><p>先证明检索层返回了正确证据，再调整对话提示词。</p></figcaption></figure>
 {% endstep %}
 
 {% step %}
@@ -234,13 +234,13 @@ icon: circle-question
 
 ## 配置说明：诊断基线
 
-| 项目 | 推荐起点 | 只在什么情况下调整 |
+| 项目    | 推荐起点          | 只在什么情况下调整        |
 | ----- | ------------- | ---------------- |
-| Top K | 6 | 正确片段被截掉或噪声过多 |
+| Top K | 6             | 正确片段被截掉或噪声过多     |
 | 相似度阈值 | 配置重排后从 0.0 开始 | 低分噪声明显，且正确片段仍有余量 |
-| Chunk | 保留默认智能分段 | 条件与结论被切开或片段过长 |
-| 嵌入模型 | BM25 不足时再增加 | 口语问法、同义表达无法稳定命中 |
-| 重排模型 | 候选正确但顺序不稳时增加 | 不用于修复解析错误或缺失正文 |
+| Chunk | 保留默认智能分段      | 条件与结论被切开或片段过长    |
+| 嵌入模型  | BM25 不足时再增加   | 口语问法、同义表达无法稳定命中  |
+| 重排模型  | 候选正确但顺序不稳时增加  | 不用于修复解析错误或缺失正文   |
 
 ## 用户案例
 
@@ -254,4 +254,4 @@ icon: circle-question
 
 ## 继续阅读
 
-<table data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>文档解析与 OCR</strong></td><td>解决扫描、错序和表格丢失。</td><td><a href="https://app.gitbook.com/o/Cj2FUNM601oTkFwFFsXJ/s/0Ut5BptC3t8CtSU1UWpM/knowledge-base/document-preprocessing">https://app.gitbook.com/o/Cj2FUNM601oTkFwFFsXJ/s/0Ut5BptC3t8CtSU1UWpM/knowledge-base/document-preprocessing</a></td></tr><tr><td><strong>模型与检索设置</strong></td><td>理解嵌入、重排、阈值和重建。</td><td><a href="https://app.gitbook.com/o/Cj2FUNM601oTkFwFFsXJ/s/0Ut5BptC3t8CtSU1UWpM/knowledge-base/emb-models-info">https://app.gitbook.com/o/Cj2FUNM601oTkFwFFsXJ/s/0Ut5BptC3t8CtSU1UWpM/knowledge-base/emb-models-info</a></td></tr><tr><td><strong>数据、隐私与维护</strong></td><td>确认备份与云端服务边界。</td><td><a href="https://app.gitbook.com/o/Cj2FUNM601oTkFwFFsXJ/s/0Ut5BptC3t8CtSU1UWpM/knowledge-base/data">https://app.gitbook.com/o/Cj2FUNM601oTkFwFFsXJ/s/0Ut5BptC3t8CtSU1UWpM/knowledge-base/data</a></td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>文档解析与 OCR</strong></td><td>解决扫描、错序和表格丢失。</td><td><a href="document-preprocessing.md">document-preprocessing.md</a></td></tr><tr><td><strong>模型与检索设置</strong></td><td>理解嵌入、重排、阈值和重建。</td><td><a href="emb-models-info.md">emb-models-info.md</a></td></tr><tr><td><strong>数据、隐私与维护</strong></td><td>确认备份与云端服务边界。</td><td><a href="data.md">data.md</a></td></tr></tbody></table>

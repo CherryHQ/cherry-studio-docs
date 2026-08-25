@@ -12,12 +12,12 @@ icon: comments
 
 ## 使用前提
 
-| 检查项 | 合格状态 |
+| 检查项   | 合格状态             |
 | ----- | ---------------- |
-| 聊天模型 | 支持工具调用 |
-| 知识库资料 | 至少一条资料已就绪 |
-| 当前消息 | 没有同时附加文件 |
-| 召回质量 | 关键问题能找到正确来源和完整片段 |
+| 聊天模型  | 支持工具调用           |
+| 知识库资料 | 至少一条资料已就绪        |
+| 当前消息  | 没有同时附加文件         |
+| 召回质量  | 关键问题能找到正确来源和完整片段 |
 
 {% hint style="warning" %}
 当前消息带有附件时，知识库选择会被禁用。先移除附件，再从输入区选择知识库。
@@ -63,13 +63,13 @@ icon: comments
 
 用相同问题检查知识库返回的片段。召回错误先修资料、解析或检索；召回正确再调整提示词和聊天模型。
 
-<figure><img src="../.gitbook/assets/clipboard (63).png" alt="召回测试中展示相关度、来源名称和命中片段的结果列表"><figcaption><p>对话回答不理想时，召回结果能帮助判断问题在检索层还是回答层。</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/clipboard (47).png" alt="召回测试中展示相关度、来源名称和命中片段的结果列表"><figcaption><p>对话回答不理想时，召回结果能帮助判断问题在检索层还是回答层。</p></figcaption></figure>
 {% endstep %}
 {% endstepper %}
 
 ## 回答是怎样形成的
 
-<figure><img src="../.gitbook/assets/clipboard (66).png" alt="从资料解析、关键词和向量检索到合并重排并交给对话回答的知识库架构图"><figcaption><p>聊天模型看到的是最终召回片段，不是自动阅读知识库中的全部资料。</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/clipboard (50).png" alt="从资料解析、关键词和向量检索到合并重排并交给对话回答的知识库架构图"><figcaption><p>聊天模型看到的是最终召回片段，不是自动阅读知识库中的全部资料。</p></figcaption></figure>
 
 ## 推荐提问模板
 
@@ -91,21 +91,21 @@ icon: comments
 
 ## 选择一个还是多个知识库
 
-| 情况 | 建议 | 原因 |
+| 情况        | 建议             | 原因              |
 | --------- | -------------- | --------------- |
-| 单一制度或产品问题 | 只选一个库 | 减少无关片段竞争 |
-| 跨部门或跨产品比较 | 选择多个库并说明各自用途 | 帮助模型保持来源边界 |
-| 多库结果混杂 | 拆成多个问题分别验证 | 先确认每个库都能独立召回 |
-| 需要长期多步研究 | 改用绑定知识库的 Agent | 更适合持续搜索、整理和交付文件 |
+| 单一制度或产品问题 | 只选一个库          | 减少无关片段竞争        |
+| 跨部门或跨产品比较 | 选择多个库并说明各自用途   | 帮助模型保持来源边界      |
+| 多库结果混杂    | 拆成多个问题分别验证     | 先确认每个库都能独立召回    |
+| 需要长期多步研究  | 改用绑定知识库的 Agent | 更适合持续搜索、整理和交付文件 |
 
 ## 配置说明
 
-| 配置项 | 推荐起点 | 作用 | 注意事项 |
+| 配置项   | 推荐起点        | 作用        | 注意事项         |
 | ----- | ----------- | --------- | ------------ |
-| 知识库数量 | 1 个 | 控制资料范围 | 只在确有跨库需求时增加 |
-| 提问范围 | 明确写“只根据知识库” | 减少常识补全 | 重要结论仍需核对来源 |
-| 输出格式 | 表格或分项列表 | 方便逐条验收 | 要求“未说明”而不是猜测 |
-| 回归问题 | 与召回测试使用同一问题 | 区分检索和回答问题 | 每轮只改变一个变量 |
+| 知识库数量 | 1 个         | 控制资料范围    | 只在确有跨库需求时增加  |
+| 提问范围  | 明确写“只根据知识库” | 减少常识补全    | 重要结论仍需核对来源   |
+| 输出格式  | 表格或分项列表     | 方便逐条验收    | 要求“未说明”而不是猜测 |
+| 回归问题  | 与召回测试使用同一问题 | 区分检索和回答问题 | 每轮只改变一个变量    |
 
 ## 把对话内容沉淀回知识库
 
@@ -147,4 +147,4 @@ Cherry Studio 可以把消息、话题或笔记保存到知识库。保存前删
 
 ## 继续阅读
 
-<table data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>检查资料与召回</strong></td><td>先确认正确片段能够稳定命中。</td><td><a href="https://app.gitbook.com/o/Cj2FUNM601oTkFwFFsXJ/s/0Ut5BptC3t8CtSU1UWpM/knowledge-base/recall-test">https://app.gitbook.com/o/Cj2FUNM601oTkFwFFsXJ/s/0Ut5BptC3t8CtSU1UWpM/knowledge-base/recall-test</a></td></tr><tr><td><strong>与 Agent 一起使用</strong></td><td>让知识库参与多步任务和文件交付。</td><td><a href="https://app.gitbook.com/o/Cj2FUNM601oTkFwFFsXJ/s/0Ut5BptC3t8CtSU1UWpM/knowledge-base/agent">https://app.gitbook.com/o/Cj2FUNM601oTkFwFFsXJ/s/0Ut5BptC3t8CtSU1UWpM/knowledge-base/agent</a></td></tr><tr><td><strong>知识库应用案例</strong></td><td>复用制度、售后和研究案例。</td><td><a href="https://app.gitbook.com/o/Cj2FUNM601oTkFwFFsXJ/s/0Ut5BptC3t8CtSU1UWpM/knowledge-base/cases">https://app.gitbook.com/o/Cj2FUNM601oTkFwFFsXJ/s/0Ut5BptC3t8CtSU1UWpM/knowledge-base/cases</a></td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>检查资料与召回</strong></td><td>先确认正确片段能够稳定命中。</td><td><a href="recall-test.md">recall-test.md</a></td></tr><tr><td><strong>与 Agent 一起使用</strong></td><td>让知识库参与多步任务和文件交付。</td><td><a href="agent.md">agent.md</a></td></tr><tr><td><strong>知识库应用案例</strong></td><td>复用制度、售后和研究案例。</td><td><a href="cases.md">cases.md</a></td></tr></tbody></table>

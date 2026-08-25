@@ -67,12 +67,12 @@ icon: lightbulb
 
 ### 推荐配置
 
-| 项目 | 起点 | 何时调整 |
+| 项目   | 起点         | 何时调整              |
 | ---- | ---------- | ----------------- |
-| 检索 | 先用 BM25 | 员工问法与制度措辞差异大时增加嵌入 |
-| 重排 | 先不使用 | 正确候选已出现但顺序不稳定时启用 |
-| 资料版本 | 只保留当前版 | 历史审计需要并存时在名称中写明年份 |
-| 回答要求 | 结论、条件、来源分开 | 资料未说明时明确标记 |
+| 检索   | 先用 BM25    | 员工问法与制度措辞差异大时增加嵌入 |
+| 重排   | 先不使用       | 正确候选已出现但顺序不稳定时启用  |
+| 资料版本 | 只保留当前版     | 历史审计需要并存时在名称中写明年份 |
+| 回答要求 | 结论、条件、来源分开 | 资料未说明时明确标记        |
 
 ### 验收问题
 
@@ -97,11 +97,11 @@ icon: lightbulb
 
 ### 资料边界
 
-| 知识库或资料组 | 内容 | 维护原则 |
+| 知识库或资料组 | 内容            | 维护原则          |
 | ------- | ------------- | ------------- |
-| 官方手册 | 规格、保修边界、标准步骤 | 保留型号和文档版本 |
-| 故障代码 | 一条故障一个小节 | 标注适用固件和设备型号 |
-| 审核案例 | 已确认原因与解决方案的案例 | 未审核聊天记录不得直接导入 |
+| 官方手册    | 规格、保修边界、标准步骤  | 保留型号和文档版本     |
+| 故障代码    | 一条故障一个小节      | 标注适用固件和设备型号   |
+| 审核案例    | 已确认原因与解决方案的案例 | 未审核聊天记录不得直接导入 |
 
 不同型号规则差异明显时，按型号拆成独立知识库，避免相同故障码互相竞争。
 
@@ -134,7 +134,7 @@ icon: lightbulb
 * 访谈笔记标明受访者角色、日期和是否可引用。
 * 网页资料记录抓取日期，因为知识库保存的是导入快照。
 
-<figure><img src="../.gitbook/assets/clipboard (65).png" alt="从提出真实问题、检查召回、定位问题到只调整一项并重新索引复测的知识库质量闭环图"><figcaption><p>研究库先用固定问题验证来源覆盖，再交给 Agent 做跨文档归纳。</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/clipboard (58).png" alt="从提出真实问题、检查召回、定位问题到只调整一项并重新索引复测的知识库质量闭环图"><figcaption><p>研究库先用固定问题验证来源覆盖，再交给 Agent 做跨文档归纳。</p></figcaption></figure>
 
 ### Agent 提示词
 
@@ -153,16 +153,16 @@ icon: lightbulb
 
 ## 配置说明：可复用设计表
 
-| 项目 | 要回答的问题 |
+| 项目   | 要回答的问题                 |
 | ---- | ---------------------- |
-| 目标 | 用户最终要做出什么判断或交付什么结果？ |
-| 边界 | 哪些资料应该一起检索，哪些必须分开？ |
-| 来源 | 文件、笔记、目录和网页怎样更新？ |
-| 解析 | 哪类文档最容易出现 OCR、表格或顺序问题？ |
-| 检索 | BM25 是否足够？何时需要嵌入和重排？ |
-| 验收问题 | 哪 3～10 个问题代表真实使用？ |
-| 失败处理 | 无结果、冲突版本和无资料支持时怎么办？ |
-| 维护 | 谁负责替换资料、重新索引和备份？ |
+| 目标   | 用户最终要做出什么判断或交付什么结果？    |
+| 边界   | 哪些资料应该一起检索，哪些必须分开？     |
+| 来源   | 文件、笔记、目录和网页怎样更新？       |
+| 解析   | 哪类文档最容易出现 OCR、表格或顺序问题？ |
+| 检索   | BM25 是否足够？何时需要嵌入和重排？   |
+| 验收问题 | 哪 3～10 个问题代表真实使用？      |
+| 失败处理 | 无结果、冲突版本和无资料支持时怎么办？    |
+| 维护   | 谁负责替换资料、重新索引和备份？       |
 
 {% hint style="warning" %}
 不要把“导入了很多资料”当成完成标准。资料越多，重复版本、权限混合和噪声竞争越需要被显式管理。
@@ -196,4 +196,4 @@ icon: lightbulb
 
 ## 继续阅读
 
-<table data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>知识库入门</strong></td><td>先跑通创建、导入、召回和使用。</td><td><a href="https://app.gitbook.com/o/Cj2FUNM601oTkFwFFsXJ/s/0Ut5BptC3t8CtSU1UWpM/knowledge-base/knowledge-base">https://app.gitbook.com/o/Cj2FUNM601oTkFwFFsXJ/s/0Ut5BptC3t8CtSU1UWpM/knowledge-base/knowledge-base</a></td></tr><tr><td><strong>与 Agent 一起使用</strong></td><td>配置多步研究和资料权限。</td><td><a href="https://app.gitbook.com/o/Cj2FUNM601oTkFwFFsXJ/s/0Ut5BptC3t8CtSU1UWpM/knowledge-base/agent">https://app.gitbook.com/o/Cj2FUNM601oTkFwFFsXJ/s/0Ut5BptC3t8CtSU1UWpM/knowledge-base/agent</a></td></tr><tr><td><strong>常见问题</strong></td><td>从症状定位资料、召回或回答问题。</td><td><a href="https://app.gitbook.com/o/Cj2FUNM601oTkFwFFsXJ/s/0Ut5BptC3t8CtSU1UWpM/knowledge-base/troubleshooting">https://app.gitbook.com/o/Cj2FUNM601oTkFwFFsXJ/s/0Ut5BptC3t8CtSU1UWpM/knowledge-base/troubleshooting</a></td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>知识库入门</strong></td><td>先跑通创建、导入、召回和使用。</td><td><a href="knowledge-base.md">knowledge-base.md</a></td></tr><tr><td><strong>与 Agent 一起使用</strong></td><td>配置多步研究和资料权限。</td><td><a href="agent.md">agent.md</a></td></tr><tr><td><strong>常见问题</strong></td><td>从症状定位资料、召回或回答问题。</td><td><a href="troubleshooting.md">troubleshooting.md</a></td></tr></tbody></table>

@@ -12,27 +12,27 @@ icon: compass
 
 ## 什么时候适合使用
 
-| 需求 | 建议做法 | 原因 |
+| 需求               | 建议做法        | 原因                     |
 | ---------------- | ----------- | ---------------------- |
-| 查询员工制度、产品手册、项目资料 | 建立知识库 | 资料会重复使用，需要稳定引用原文 |
-| 临时分析一个附件 | 在对话中直接上传 | 不需要长期维护和索引 |
-| 资料还在持续整理 | 先用【笔记】梳理 | 避免未确认内容被当成正式答案 |
-| 需要长期自动处理资料 | 建库后绑定 Agent | Agent 可以在任务中持续使用同一资料范围 |
+| 查询员工制度、产品手册、项目资料 | 建立知识库       | 资料会重复使用，需要稳定引用原文       |
+| 临时分析一个附件         | 在对话中直接上传    | 不需要长期维护和索引             |
+| 资料还在持续整理         | 先用【笔记】梳理    | 避免未确认内容被当成正式答案         |
+| 需要长期自动处理资料       | 建库后绑定 Agent | Agent 可以在任务中持续使用同一资料范围 |
 
 ## 一次回答经历什么
 
-<figure><img src="../.gitbook/assets/clipboard (66).png" alt="从资料解析、分块、BM25 与向量检索到合并、重排和 Top K 的知识库检索架构图"><figcaption><p>资料先经过解析和切分，再用关键词或语义找出候选片段；聊天模型只负责基于召回内容组织回答。</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/clipboard (50).png" alt="从资料解析、分块、BM25 与向量检索到合并、重排和 Top K 的知识库检索架构图"><figcaption><p>资料先经过解析和切分，再用关键词或语义找出候选片段；聊天模型只负责基于召回内容组织回答。</p></figcaption></figure>
 
 ### 先认识这些词
 
-| 名称 | 在本任务中的含义 |
+| 名称    | 在本任务中的含义                        |
 | ----- | ------------------------------- |
-| 知识库 | 围绕同一主题组织的一组资料和检索设置 |
-| 资料条目 | 导入的一个文件、笔记、目录中的文件或网页快照 |
-| Chunk | 资料切分后用于检索的小片段 |
-| 召回 | 根据问题找出相关片段的过程 |
-| 嵌入模型 | 把文字转换为向量，用于匹配不同表达但意思相近的内容；不是必选项 |
-| 重排模型 | 对候选片段再次评分和排序；也是可选项 |
+| 知识库   | 围绕同一主题组织的一组资料和检索设置              |
+| 资料条目  | 导入的一个文件、笔记、目录中的文件或网页快照          |
+| Chunk | 资料切分后用于检索的小片段                   |
+| 召回    | 根据问题找出相关片段的过程                   |
+| 嵌入模型  | 把文字转换为向量，用于匹配不同表达但意思相近的内容；不是必选项 |
+| 重排模型  | 对候选片段再次评分和排序；也是可选项              |
 
 {% hint style="success" %}
 没有嵌入模型也能使用知识库，此时主要依靠 BM25 关键词检索。第一次体验可以先选【不使用】，把创建、导入和召回流程跑通。
@@ -84,12 +84,12 @@ icon: compass
 
 ## 推荐起点
 
-| 配置项 | 产品默认值 | 建议起点 | 作用 | 适用场景 | 注意事项 |
+| 配置项    | 产品默认值 | 建议起点              | 作用             | 适用场景        | 注意事项               |
 | ------ | ----- | ----------------- | -------------- | ----------- | ------------------ |
-| 知识库范围 | — | 一个明确主题 | 控制一起参与检索的资料 | 制度、产品、项目资料 | 权限或生命周期不同的内容应分开 |
-| 嵌入模型 | 不使用 | 先不使用 | 决定是否加入向量检索 | 口语问法与原文差异较大 | 云端模型的计费与数据处理取决于服务商 |
-| 测试问题 | — | 3～5 个真实问题 | 建立长期回归基线 | 每次更新资料或设置后 | 不要只用资料标题和原句测试 |
-| 进入正式使用 | — | 资料、Chunks、召回三项都通过 | 避免把解析或检索问题带入对话 | 所有知识库 | 聊天模型无法补回没有召回的关键信息 |
+| 知识库范围  | —     | 一个明确主题            | 控制一起参与检索的资料    | 制度、产品、项目资料  | 权限或生命周期不同的内容应分开    |
+| 嵌入模型   | 不使用   | 先不使用              | 决定是否加入向量检索     | 口语问法与原文差异较大 | 云端模型的计费与数据处理取决于服务商 |
+| 测试问题   | —     | 3～5 个真实问题         | 建立长期回归基线       | 每次更新资料或设置后  | 不要只用资料标题和原句测试      |
+| 进入正式使用 | —     | 资料、Chunks、召回三项都通过 | 避免把解析或检索问题带入对话 | 所有知识库       | 聊天模型无法补回没有召回的关键信息  |
 
 ## 怎样判断已经可以使用
 
@@ -131,4 +131,4 @@ icon: compass
 
 ## 继续阅读
 
-<table data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>创建知识库</strong></td><td>确定名称边界和检索方式。</td><td><a href="https://app.gitbook.com/o/Cj2FUNM601oTkFwFFsXJ/s/0Ut5BptC3t8CtSU1UWpM/knowledge-base/create">https://app.gitbook.com/o/Cj2FUNM601oTkFwFFsXJ/s/0Ut5BptC3t8CtSU1UWpM/knowledge-base/create</a></td></tr><tr><td><strong>添加与整理资料</strong></td><td>导入文件、笔记、目录和网页。</td><td><a href="https://app.gitbook.com/o/Cj2FUNM601oTkFwFFsXJ/s/0Ut5BptC3t8CtSU1UWpM/knowledge-base/sources">https://app.gitbook.com/o/Cj2FUNM601oTkFwFFsXJ/s/0Ut5BptC3t8CtSU1UWpM/knowledge-base/sources</a></td></tr><tr><td><strong>检查资料与召回</strong></td><td>用固定问题验收检索质量。</td><td><a href="https://app.gitbook.com/o/Cj2FUNM601oTkFwFFsXJ/s/0Ut5BptC3t8CtSU1UWpM/knowledge-base/recall-test">https://app.gitbook.com/o/Cj2FUNM601oTkFwFFsXJ/s/0Ut5BptC3t8CtSU1UWpM/knowledge-base/recall-test</a></td></tr><tr><td><strong>模型与检索设置</strong></td><td>继续调整嵌入、重排和分块。</td><td><a href="https://app.gitbook.com/o/Cj2FUNM601oTkFwFFsXJ/s/0Ut5BptC3t8CtSU1UWpM/knowledge-base/emb-models-info">https://app.gitbook.com/o/Cj2FUNM601oTkFwFFsXJ/s/0Ut5BptC3t8CtSU1UWpM/knowledge-base/emb-models-info</a></td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>创建知识库</strong></td><td>确定名称边界和检索方式。</td><td><a href="create.md">create.md</a></td></tr><tr><td><strong>添加与整理资料</strong></td><td>导入文件、笔记、目录和网页。</td><td><a href="sources.md">sources.md</a></td></tr><tr><td><strong>检查资料与召回</strong></td><td>用固定问题验收检索质量。</td><td><a href="recall-test.md">recall-test.md</a></td></tr><tr><td><strong>模型与检索设置</strong></td><td>继续调整嵌入、重排和分块。</td><td><a href="emb-models-info.md">emb-models-info.md</a></td></tr></tbody></table>

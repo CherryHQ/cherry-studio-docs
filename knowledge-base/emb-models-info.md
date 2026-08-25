@@ -12,17 +12,17 @@ icon: gears
 
 ## 先理解检索链路
 
-<figure><img src="../.gitbook/assets/clipboard (66).png" alt="从资料解析、分块、BM25 与向量检索到合并、重排和 Top K 的知识库检索架构图"><figcaption><p>BM25 始终可以单独工作；配置嵌入模型后加入向量检索，重排是候选合并后的可选步骤。</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/clipboard (50).png" alt="从资料解析、分块、BM25 与向量检索到合并、重排和 Top K 的知识库检索架构图"><figcaption><p>BM25 始终可以单独工作；配置嵌入模型后加入向量检索，重排是候选合并后的可选步骤。</p></figcaption></figure>
 
 图中每一层都会影响最终结果：资料内容决定“有没有答案”，解析与分段决定“答案是否完整”，检索和重排决定“正确片段能否排到前面”。
 
 ### 三种常见组合
 
-| 组合 | 实际检索方式 | 适合什么资料 | 什么时候升级 |
+| 组合          | 实际检索方式               | 适合什么资料          | 什么时候升级               |
 | ----------- | -------------------- | --------------- | -------------------- |
-| 不使用嵌入模型 | 仅 BM25 关键词检索 | 条款编号、产品名、专有名词较多 | 换一种说法就难以命中时，加入嵌入模型 |
-| 嵌入模型 | BM25 与向量检索并行，再合并候选结果 | 用户问法与资料原文差异较大 | 正确片段能出现但排序不稳时，加入重排模型 |
-| 嵌入模型 + 重排模型 | 混合检索后再次评分和排序 | 候选片段相似、需要稳定排序 | 先保持阈值为 0.0，再根据噪声逐步调整 |
+| 不使用嵌入模型     | 仅 BM25 关键词检索         | 条款编号、产品名、专有名词较多 | 换一种说法就难以命中时，加入嵌入模型   |
+| 嵌入模型        | BM25 与向量检索并行，再合并候选结果 | 用户问法与资料原文差异较大   | 正确片段能出现但排序不稳时，加入重排模型 |
+| 嵌入模型 + 重排模型 | 混合检索后再次评分和排序         | 候选片段相似、需要稳定排序   | 先保持阈值为 0.0，再根据噪声逐步调整 |
 
 {% hint style="success" %}
 不配置嵌入模型，知识库也能工作。只有选择重排模型后，设置面板才会显示【相似度阈值】。
@@ -34,16 +34,16 @@ icon: gears
 
 默认区域包含【文档处理】、【嵌入模型】、【重排模型】和【Top K】。第一次测试建议先保留 Top K 为 6，并暂时不提高相似度阈值。
 
-<figure><img src="../.gitbook/assets/clipboard (61).png" alt="知识库设置中的文档处理、嵌入模型、重排模型和 Top K"><figcaption><p>先确认模型和 Top K，再进入【高级设置】检查分块。</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/clipboard (51).png" alt="知识库设置中的文档处理、嵌入模型、重排模型和 Top K"><figcaption><p>先确认模型和 Top K，再进入【高级设置】检查分块。</p></figcaption></figure>
 
 ### 推荐起点
 
-| 配置项 | 界面初始值 | 建议起点 | 作用与注意事项 |
+| 配置项   | 界面初始值        | 建议起点             | 作用与注意事项                               |
 | ----- | ------------ | ---------------- | ------------------------------------- |
-| 嵌入模型 | 不使用 | 关键词能稳定命中时先不使用 | 加入后会同时进行关键词与向量检索；云端模型的计费和数据处理方式取决于服务商 |
-| 重排模型 | 不使用 | 正确片段能召回但排序不稳时再启用 | 会增加一次模型评分和等待时间 |
-| Top K | 6，可选 1～50 | 先保留 6 | 太小可能漏掉答案，太大会带来更多噪声并占用对话上下文 |
-| 相似度阈值 | 0.0，仅配置重排后显示 | 从 0.0 开始 | 只过滤重排后的低分结果；设得过高可能把正确片段一起移除 |
+| 嵌入模型  | 不使用          | 关键词能稳定命中时先不使用    | 加入后会同时进行关键词与向量检索；云端模型的计费和数据处理方式取决于服务商 |
+| 重排模型  | 不使用          | 正确片段能召回但排序不稳时再启用 | 会增加一次模型评分和等待时间                        |
+| Top K | 6，可选 1～50    | 先保留 6            | 太小可能漏掉答案，太大会带来更多噪声并占用对话上下文            |
+| 相似度阈值 | 0.0，仅配置重排后显示 | 从 0.0 开始         | 只过滤重排后的低分结果；设得过高可能把正确片段一起移除           |
 
 ## 用固定问题建立基线
 
@@ -61,7 +61,7 @@ icon: gears
 
 打开【召回测试】，逐个输入准备好的问题，记录命中来源、片段内容、顺序和耗时。
 
-<figure><img src="../.gitbook/assets/clipboard (63).png" alt="召回测试中的命中来源、相关度、片段内容和排序"><figcaption><p>不要只看“有没有结果”，还要确认来源正确、片段完整且排序合理。</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/clipboard (47).png" alt="召回测试中的命中来源、相关度、片段内容和排序"><figcaption><p>不要只看“有没有结果”，还要确认来源正确、片段完整且排序合理。</p></figcaption></figure>
 {% endstep %}
 
 {% step %}
@@ -91,14 +91,14 @@ icon: gears
 
 展开【高级设置】，可以看到【智能分段】、【分隔符】、【分段大小】和【重叠大小】。
 
-<figure><img src="../.gitbook/assets/clipboard (62).png" alt="知识库高级设置中的智能分段、分隔符、分段大小和重叠大小"><figcaption><p>通用资料可从智能分段开启、分段大小 1024、重叠大小 200 开始。</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/clipboard (52).png" alt="知识库高级设置中的智能分段、分隔符、分段大小和重叠大小"><figcaption><p>通用资料可从智能分段开启、分段大小 1024、重叠大小 200 开始。</p></figcaption></figure>
 
-| 配置项 | 界面初始值 | 什么时候调整 | 常见副作用 |
+| 配置项  | 界面初始值       | 什么时候调整                     | 常见副作用              |
 | ---- | ----------- | -------------------------- | ------------------ |
-| 智能分段 | 开启 | 资料有清晰标题和段落结构时保持开启 | 关闭后仅按分隔符切分 |
-| 分隔符 | `\n\n` | 资料有稳定的自定义段落边界时调整 | 关闭智能分段时，分隔符不能为空 |
-| 分段大小 | 1024 tokens | 一个片段混入多个主题时减小；条件与结论总被拆开时增大 | 太大增加噪声，太小丢失上下文 |
-| 重叠大小 | 200 tokens | 关键信息经常跨片段边界时小幅增加 | 必须小于分段大小，过大会产生重复内容 |
+| 智能分段 | 开启          | 资料有清晰标题和段落结构时保持开启          | 关闭后仅按分隔符切分         |
+| 分隔符  | `\n\n`      | 资料有稳定的自定义段落边界时调整           | 关闭智能分段时，分隔符不能为空    |
+| 分段大小 | 1024 tokens | 一个片段混入多个主题时减小；条件与结论总被拆开时增大 | 太大增加噪声，太小丢失上下文     |
+| 重叠大小 | 200 tokens  | 关键信息经常跨片段边界时小幅增加           | 必须小于分段大小，过大会产生重复内容 |
 
 {% hint style="warning" %}
 分块设置只影响之后新添加的内容。要让已有资料使用新设置，请在资料行菜单中执行【重新索引】，再用同一组问题复测。
@@ -114,11 +114,11 @@ icon: gears
 
 需要在本机完成嵌入时，可打开【设置】→【本地模型】，在【嵌入模型】区域下载可用模型，然后回到知识库设置中选择它。
 
-<figure><img src="../.gitbook/assets/clipboard (64).png" alt="本地模型设置中的嵌入模型下载入口"><figcaption><p>先完成本地模型下载，再回到知识库选择并建立索引。</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/clipboard (35).png" alt="本地模型设置中的嵌入模型下载入口"><figcaption><p>先完成本地模型下载，再回到知识库选择并建立索引。</p></figcaption></figure>
 
 ## 调优闭环
 
-<figure><img src="../.gitbook/assets/clipboard (65).png" alt="用固定问题进行召回测试、定位问题、单项调整、重新索引并复测的知识库质量调优闭环"><figcaption><p>固定问题 → 检查结果 → 定位层级 → 单项调整 → 必要时重新索引 → 复测。</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/clipboard (58).png" alt="用固定问题进行召回测试、定位问题、单项调整、重新索引并复测的知识库质量调优闭环"><figcaption><p>固定问题 → 检查结果 → 定位层级 → 单项调整 → 必要时重新索引 → 复测。</p></figcaption></figure>
 
 每次只保留能稳定改善固定测试问题的修改。如果结果没有改善，就恢复上一组设置，而不是继续叠加更多改动。
 
@@ -169,4 +169,4 @@ icon: gears
 
 ## 继续阅读
 
-<table data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>知识库入门</strong></td><td>先建立知识库工作的整体认识。</td><td><a href="https://app.gitbook.com/o/Cj2FUNM601oTkFwFFsXJ/s/0Ut5BptC3t8CtSU1UWpM/knowledge-base/knowledge-base">https://app.gitbook.com/o/Cj2FUNM601oTkFwFFsXJ/s/0Ut5BptC3t8CtSU1UWpM/knowledge-base/knowledge-base</a></td></tr><tr><td><strong>文档解析与 OCR</strong></td><td>正文缺失或识别错误时，从资料处理层排查。</td><td><a href="https://app.gitbook.com/o/Cj2FUNM601oTkFwFFsXJ/s/0Ut5BptC3t8CtSU1UWpM/knowledge-base/document-preprocessing">https://app.gitbook.com/o/Cj2FUNM601oTkFwFFsXJ/s/0Ut5BptC3t8CtSU1UWpM/knowledge-base/document-preprocessing</a></td></tr><tr><td><strong>添加与整理资料</strong></td><td>了解重新索引、资料状态和内容维护。</td><td><a href="https://app.gitbook.com/o/Cj2FUNM601oTkFwFFsXJ/s/0Ut5BptC3t8CtSU1UWpM/knowledge-base/sources">https://app.gitbook.com/o/Cj2FUNM601oTkFwFFsXJ/s/0Ut5BptC3t8CtSU1UWpM/knowledge-base/sources</a></td></tr><tr><td><strong>检查资料与召回</strong></td><td>继续练习召回测试和结果判断。</td><td><a href="https://app.gitbook.com/o/Cj2FUNM601oTkFwFFsXJ/s/0Ut5BptC3t8CtSU1UWpM/knowledge-base/recall-test">https://app.gitbook.com/o/Cj2FUNM601oTkFwFFsXJ/s/0Ut5BptC3t8CtSU1UWpM/knowledge-base/recall-test</a></td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>知识库入门</strong></td><td>先建立知识库工作的整体认识。</td><td><a href="knowledge-base.md">knowledge-base.md</a></td></tr><tr><td><strong>文档解析与 OCR</strong></td><td>正文缺失或识别错误时，从资料处理层排查。</td><td><a href="document-preprocessing.md">document-preprocessing.md</a></td></tr><tr><td><strong>添加与整理资料</strong></td><td>了解重新索引、资料状态和内容维护。</td><td><a href="sources.md">sources.md</a></td></tr><tr><td><strong>检查资料与召回</strong></td><td>继续练习召回测试和结果判断。</td><td><a href="recall-test.md">recall-test.md</a></td></tr></tbody></table>

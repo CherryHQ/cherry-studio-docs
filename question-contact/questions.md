@@ -4,7 +4,7 @@ icon: circle-question
 
 # 常见问题
 
-## 模型与连接
+### 模型与连接
 
 <details>
 
@@ -30,7 +30,7 @@ icon: circle-question
 
 </details>
 
-## Agent 与工具
+### Agent 与工具
 
 <details>
 
@@ -64,7 +64,7 @@ icon: circle-question
 
 </details>
 
-## MCP 与自动化
+### MCP 与自动化
 
 <details>
 
@@ -90,7 +90,7 @@ icon: circle-question
 
 </details>
 
-## 数据与窗口
+### 数据与窗口
 
 <details>
 
@@ -109,5 +109,5 @@ icon: circle-question
 </details>
 
 {% hint style="info" %}
-没有找到对应问题时，打开【设置】→【关于我们】→【反馈】，优先选择【使用 Agent 提交】。Cherry Assistant 会帮助检查当前状态、整理可复现信息并在提交前给你确认。
+没有找到对应问题时，打开侧栏【帮助】→【问题反馈】。需要团队查看私密日志或调用链时选择【上传诊断包】；不确定问题类型时选择【求助问题反馈助手】整理复现信息。
 {% endhint %}

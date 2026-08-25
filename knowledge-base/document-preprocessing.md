@@ -12,16 +12,16 @@ icon: file-lines
 
 ## 先判断资料类型
 
-| 资料类型 | 推荐起点 | 必查内容 |
+| 资料类型                 | 推荐起点      | 必查内容          |
 | -------------------- | --------- | ------------- |
-| Markdown、TXT、HTML | 默认读取 | 标题层级、编码、换行 |
-| 可复制文字的 PDF、DOCX、PPTX | 先用默认处理 | 段落顺序、页眉页脚、表格 |
-| 扫描 PDF、截图、图片型页面 | 本地或系统 OCR | 识别语言、金额、日期、编号 |
-| 多栏、公式或复杂表格 PDF | 专用文档处理器 | 阅读顺序、表格结构、脚注 |
+| Markdown、TXT、HTML    | 默认读取      | 标题层级、编码、换行    |
+| 可复制文字的 PDF、DOCX、PPTX | 先用默认处理    | 段落顺序、页眉页脚、表格  |
+| 扫描 PDF、截图、图片型页面      | 本地或系统 OCR | 识别语言、金额、日期、编号 |
+| 多栏、公式或复杂表格 PDF       | 专用文档处理器   | 阅读顺序、表格结构、脚注  |
 
 ## 解析在检索链路中的位置
 
-<figure><img src="../.gitbook/assets/clipboard (66).png" alt="资料经过解析与 OCR、切分、关键词和向量检索后进入回答的知识库检索架构图"><figcaption><p>解析错误会继续传到分块和召回；下游模型无法恢复从正文中已经丢失的内容。</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/clipboard (50).png" alt="资料经过解析与 OCR、切分、关键词和向量检索后进入回答的知识库检索架构图"><figcaption><p>解析错误会继续传到分块和召回；下游模型无法恢复从正文中已经丢失的内容。</p></figcaption></figure>
 
 ## 配置并验收一份样本文档
 
@@ -51,7 +51,7 @@ icon: file-lines
 
 确认关键条件与结论没有被拆散；页眉、页脚和目录不要大量重复占用片段。
 
-<figure><img src="../.gitbook/assets/clipboard (62).png" alt="知识库高级设置中的智能分段、分隔符、分段大小和重叠大小"><figcaption><p>正文正确后再检查分块；解析错误不能靠增大 Chunk 修复。</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/clipboard (52).png" alt="知识库高级设置中的智能分段、分隔符、分段大小和重叠大小"><figcaption><p>正文正确后再检查分块；解析错误不能靠增大 Chunk 修复。</p></figcaption></figure>
 {% endstep %}
 
 {% step %}
@@ -73,12 +73,12 @@ icon: file-lines
 
 ## 处理器与 OCR 怎么选
 
-| 选择 | 适用情况 | 优点 | 注意事项 |
+| 选择           | 适用情况         | 优点               | 注意事项               |
 | ------------ | ------------ | ---------------- | ------------------ |
-| 默认读取 | 文本型常见格式 | 配置少、速度快 | 复杂排版和扫描页可能丢失内容 |
-| System OCR | 系统支持且图片清晰 | 无需额外 API Key、速度快 | 准确率取决于操作系统、语言和图像质量 |
-| 本地 PaddleOCR | 需要离线识别 | 文档不离开本机 | 首次使用前需要下载本地模型 |
-| 云端或自托管处理器 | 双栏、复杂表格、公式较多 | 版面分析能力通常更强 | 云端方案会接收用于处理的文档内容 |
+| 默认读取         | 文本型常见格式      | 配置少、速度快          | 复杂排版和扫描页可能丢失内容     |
+| System OCR   | 系统支持且图片清晰    | 无需额外 API Key、速度快 | 准确率取决于操作系统、语言和图像质量 |
+| 本地 PaddleOCR | 需要离线识别       | 文档不离开本机          | 首次使用前需要下载本地模型      |
+| 云端或自托管处理器    | 双栏、复杂表格、公式较多 | 版面分析能力通常更强       | 云端方案会接收用于处理的文档内容   |
 
 {% hint style="danger" %}
 敏感资料使用云端文档处理器前，先确认服务条款、数据保留策略和账号权限。完全离线需要解析、OCR、嵌入、重排和聊天各环节都使用本地能力。
@@ -86,22 +86,22 @@ icon: file-lines
 
 ## 典型问题怎么定位
 
-| 表现 | 先检查 | 处理方向 |
+| 表现       | 先检查           | 处理方向                        |
 | -------- | ------------- | --------------------------- |
-| 正文为空或很短 | 文件是否为扫描件 | 启用 OCR 或更换处理器 |
-| 双栏文字交错 | 正文阅读顺序 | 使用擅长版面分析的处理器 |
-| 表格变成零散文字 | 表头、行列关系 | 更换处理器，或把关键规则整理成 Markdown 笔记 |
-| 页眉页脚反复出现 | Chunks 中的重复噪声 | 清理源文件或换解析器，不要只提高 Top K |
-| OCR 数字出错 | 金额、日期、编号 | 提高图像清晰度并人工核对高风险字段 |
+| 正文为空或很短  | 文件是否为扫描件      | 启用 OCR 或更换处理器               |
+| 双栏文字交错   | 正文阅读顺序        | 使用擅长版面分析的处理器                |
+| 表格变成零散文字 | 表头、行列关系       | 更换处理器，或把关键规则整理成 Markdown 笔记 |
+| 页眉页脚反复出现 | Chunks 中的重复噪声 | 清理源文件或换解析器，不要只提高 Top K      |
+| OCR 数字出错 | 金额、日期、编号      | 提高图像清晰度并人工核对高风险字段           |
 
 ## 配置说明
 
-| 配置项 | 推荐起点 | 何时调整 | 调整后动作 |
+| 配置项         | 推荐起点           | 何时调整            | 调整后动作       |
 | ----------- | -------------- | --------------- | ----------- |
-| 文件处理器 | 先用默认处理 | 正文错序、表格丢失、扫描页为空 | 重新索引样本文档 |
-| OCR | 清晰扫描件优先本地或系统能力 | 图片型页面没有文字或错字较多 | 重新索引并核对关键字段 |
-| Chunk 大小与重叠 | 先保留知识库默认设置 | 条件与结论被切开 | 每轮只改一项并重新索引 |
-| 验收问题 | 3～5 个真实问题 | 更换处理器、OCR 或分块后 | 使用同一问题集比较 |
+| 文件处理器       | 先用默认处理         | 正文错序、表格丢失、扫描页为空 | 重新索引样本文档    |
+| OCR         | 清晰扫描件优先本地或系统能力 | 图片型页面没有文字或错字较多  | 重新索引并核对关键字段 |
+| Chunk 大小与重叠 | 先保留知识库默认设置     | 条件与结论被切开        | 每轮只改一项并重新索引 |
+| 验收问题        | 3～5 个真实问题      | 更换处理器、OCR 或分块后  | 使用同一问题集比较   |
 
 ## 用户案例
 
@@ -137,4 +137,4 @@ icon: file-lines
 
 ## 继续阅读
 
-<table data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>添加与整理资料</strong></td><td>选择来源并检查处理状态。</td><td><a href="https://app.gitbook.com/o/Cj2FUNM601oTkFwFFsXJ/s/0Ut5BptC3t8CtSU1UWpM/knowledge-base/sources">https://app.gitbook.com/o/Cj2FUNM601oTkFwFFsXJ/s/0Ut5BptC3t8CtSU1UWpM/knowledge-base/sources</a></td></tr><tr><td><strong>检查资料与召回</strong></td><td>用固定问题验收解析与分块。</td><td><a href="https://app.gitbook.com/o/Cj2FUNM601oTkFwFFsXJ/s/0Ut5BptC3t8CtSU1UWpM/knowledge-base/recall-test">https://app.gitbook.com/o/Cj2FUNM601oTkFwFFsXJ/s/0Ut5BptC3t8CtSU1UWpM/knowledge-base/recall-test</a></td></tr><tr><td><strong>数据、隐私与维护</strong></td><td>确认本地与云端的数据边界。</td><td><a href="https://app.gitbook.com/o/Cj2FUNM601oTkFwFFsXJ/s/0Ut5BptC3t8CtSU1UWpM/knowledge-base/data">https://app.gitbook.com/o/Cj2FUNM601oTkFwFFsXJ/s/0Ut5BptC3t8CtSU1UWpM/knowledge-base/data</a></td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>添加与整理资料</strong></td><td>选择来源并检查处理状态。</td><td><a href="sources.md">sources.md</a></td></tr><tr><td><strong>检查资料与召回</strong></td><td>用固定问题验收解析与分块。</td><td><a href="recall-test.md">recall-test.md</a></td></tr><tr><td><strong>数据、隐私与维护</strong></td><td>确认本地与云端的数据边界。</td><td><a href="data.md">data.md</a></td></tr></tbody></table>
