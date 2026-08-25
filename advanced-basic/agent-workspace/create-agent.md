@@ -12,11 +12,11 @@ icon: wand-magic-sparkles
 
 ### 运行模式怎么选
 
-| 运行模式 | 主要特点 | 模型配置 | 权限与限制 |
+| 运行模式               | 主要特点                | 模型配置                 | 权限与限制                                |
 | ------------------ | ------------------- | -------------------- | ------------------------------------ |
-| 【增强：Claude Agent】 | 能力面完整，适合复杂、多步骤任务 | 主模型、Plan 模型、Small 模型 | 支持全部权限模式与心跳检测 |
-| 【快速：Pi】 | 响应快、开销低，适合日常文件和编码任务 | 只配置主模型 | 不提供【仅规划】；新建时默认【智能批准】 |
-| 【DeepSeek Harness】 | 兼容多种模型服务，支持目标驱动执行 | 只配置主模型 | 不提供【智能批准】和心跳检测；支持 `/compact`、`/goal` |
+| 【增强：Claude Agent】  | 能力面完整，适合复杂、多步骤任务    | 主模型、Plan 模型、Small 模型 | 支持全部权限模式与心跳检测                        |
+| 【快速：Pi】            | 响应快、开销低，适合日常文件和编码任务 | 只配置主模型               | 不提供【仅规划】；新建时默认【智能批准】                 |
+| 【DeepSeek Harness】 | 兼容多种模型服务，支持目标驱动执行   | 只配置主模型               | 不提供【智能批准】和心跳检测；支持 `/compact`、`/goal` |
 
 {% hint style="warning" %}
 运行模式创建后不可更改。如果目标、模型兼容性或权限需求发生根本变化，请新建一个 Agent，而不是继续修改旧 Agent。
@@ -50,14 +50,12 @@ icon: wand-magic-sparkles
 {% endstep %}
 {% endstepper %}
 
-<figure><img src="../../.gitbook/assets/clipboard.png" alt="Agent 编辑窗口中的主模型、Plan 模型和 Small 模型设置"><figcaption><p>先选好主模型；只有任务确实需要规划分工或轻量处理时，再配置 Plan 模型和 Small 模型。</p></figcaption></figure>
+<figure><img src="https://3562065924-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F0Ut5BptC3t8CtSU1UWpM%2Fuploads%2Fgit-blob-90e09b4900c4d4ac6751921289d6b83d2945072b%2Fclipboard.png?alt=media" alt="Agent 编辑窗口中的主模型、Plan 模型和 Small 模型设置"><figcaption><p>先选好主模型；只有任务确实需要规划分工或轻量处理时，再配置 Plan 模型和 Small 模型。</p></figcaption></figure>
 
 ### 创建后继续配置
 
 在 Agent 列表打开菜单并选择编辑，可以调整以下内容：
 
-*
-*
 * 【基础】：查看运行模式，并调整该模式支持的模型、权限和心跳设置；
 * 【提示词】：角色说明、处理规则和行为边界；
 * 【内置工具】：文件、搜索、图片、通知、定时任务、记忆、子智能体和工作流等；
@@ -72,13 +70,13 @@ icon: wand-magic-sparkles
 
 ### 推荐起点
 
-| 配置项 | 产品默认值 | 建议起点 | 作用 | 适用场景 | 注意事项 |
+| 配置项             | 产品默认值                         | 建议起点                    | 作用             | 适用场景               | 注意事项                               |
 | --------------- | ----------------------------- | ----------------------- | -------------- | ------------------ | ---------------------------------- |
-| 运行模式 | 【增强：Claude Agent】 | 不确定时先用【增强：Claude Agent】 | 决定模型分工、权限和工具范围 | 所有 Agent | 创建后不可切换 |
-| 主模型 | 使用创建时选择的模型 | 选择一个已验证能稳定调用工具的模型 | 主要推理和执行 | 所有 Agent | 选择器会按运行模式过滤不兼容模型 |
-| Plan / Small 模型 | 与主模型相同 | 先保持与主模型一致 | 任务拆解、简单判断和格式化 | 仅【增强：Claude Agent】 | Pi 与 DeepSeek Harness 不显示这两个字段 |
-| 权限模式 | Claude/DSH 为【逐次确认】；Pi 为【智能批准】 | 真实项目目录优先使用【逐次确认】 | 决定工具是否需要批准 | 文件、终端和网络任务 | 【完全访问】可能删除文件或访问网络 |
-| 心跳检测 | 支持的运行模式初始开启，间隔 30 分钟 | 没有持续任务时可关闭 | 让 Agent 定期检查工作 | Claude Agent、Pi | DeepSeek Harness 不提供心跳检测；固定时间用定时任务 |
+| 运行模式            | 【增强：Claude Agent】             | 不确定时先用【增强：Claude Agent】 | 决定模型分工、权限和工具范围 | 所有 Agent           | 创建后不可切换                            |
+| 主模型             | 使用创建时选择的模型                    | 选择一个已验证能稳定调用工具的模型       | 主要推理和执行        | 所有 Agent           | 选择器会按运行模式过滤不兼容模型                   |
+| Plan / Small 模型 | 与主模型相同                        | 先保持与主模型一致               | 任务拆解、简单判断和格式化  | 仅【增强：Claude Agent】 | Pi 与 DeepSeek Harness 不显示这两个字段     |
+| 权限模式            | Claude/DSH 为【逐次确认】；Pi 为【智能批准】 | 真实项目目录优先使用【逐次确认】        | 决定工具是否需要批准     | 文件、终端和网络任务         | 【完全访问】可能删除文件或访问网络                  |
+| 心跳检测            | 支持的运行模式初始开启，间隔 30 分钟          | 没有持续任务时可关闭              | 让 Agent 定期检查工作 | Claude Agent、Pi    | DeepSeek Harness 不提供心跳检测；固定时间用定时任务 |
 
 ### 用户案例：合同检查 Agent
 
@@ -91,13 +89,3 @@ icon: wand-magic-sparkles
 创建向导只保留常用步骤。创建完成后打开 Agent 编辑窗口，可在【基础】【内置工具】【知识库】【MCP】【技能】和【高级】中继续配置；具体标签会随运行模式能力变化。
 
 </details>
-
-<details>
-
-<summary>为什么创建时没有看到 MCP 和权限的完整设置？</summary>
-
-创建向导只保留常用步骤。创建完成后打开 Agent 编辑窗口，可在【基础】【内置工具】【知识库】【MCP】【技能】和【高级】中继续配置。
-
-</details>
-
-<figure><img src="https://raw.githubusercontent.com/SiinXu/cherry-studio-docs/2446b25878f69e98f33d50623a3c4cf5e836680a/.gitbook/assets/cherry-guide-agent-runtime-picker.png" alt="创建 Agent 时选择 Claude Agent、Pi 或 DeepSeek Harness 运行模式"><figcaption></figcaption></figure>
