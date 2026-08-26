@@ -89,6 +89,19 @@ vLLM 是一个类似 Ollama 的快速且易于使用的 LLM 推理库。以下�
    * **模型管理：** 添加您在 vLLM 中加载的模型名称。 在上面运行 `python -m vllm.entrypoints.openai.api_server --model gpt2` 的例子中, 应该在此处填入 `gpt2`
 5. **开始对话：** 现在，您可以在 Cherry Studio 中选择 vLLM 服务商和 `gpt2` 模型，开始与 vLLM 驱动的 LLM 进行对话了！
 
+## 使用 Synthorai 作为自定义 AI 服务商
+
+Synthorai（[synthorai.io](https://synthorai.io)）是一个 OpenAI/Anthropic 协议兼容的 LLM 网关，一个 API 密钥即可调用 Claude、GPT、Gemini、GLM、Kimi、DeepSeek、Qwen 等 11 家上游共 122 个模型，按上游成本价计费不加价。以下是接入步骤：
+
+1. **按照前面描述的步骤**，在 Cherry Studio 中添加一个新的自定义 AI 服务商。
+   * **提供商名称：** `Synthorai`
+   * **提供商类型：** 选择 `OpenAI`。
+2. **配置 Synthorai 服务商：**
+   * **API 密钥：** 前往 [synthorai.io](https://synthorai.io) 注册账号并创建 API 密钥（新用户注册即送 10 次调用额度，最多 $1，无需绑卡）。
+   * **API 地址：** 填写 `https://synthorai.io`。
+   * **模型管理：** 参考 [API 文档](https://synthorai.io/docs) 添加需要的模型 ID，例如 `claude-opus-5`、`gpt-5.6`、`glm-5.2` 等。
+3. **开始对话：** 完成配置并点击“检查”验证通过后，即可在 Cherry Studio 中选择 Synthorai 服务商下的模型开始对话。
+
 ## 提示与技巧
 
 * **仔细阅读文档：** 在添加自定义服务商之前，请务必仔细阅读您所使用的 AI 服务商的官方文档，了解 API 密钥、访问地址、模型名称等关键信息。
