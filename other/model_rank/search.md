@@ -4,7 +4,7 @@
 
 本榜单评测模型在联网搜索 / 信息检索类任务上的表现。
 
-> **数据更新时间**: 2026-08-25 08:37:12 UTC / 2026-08-25 16:37:12 CST (北京时间)
+> **数据更新时间**: 2026-08-27 18:47:29 UTC / 2026-08-28 02:47:29 CST (北京时间)
 
 {% hint style="info" %}
 排行榜反映特定评测和用户投票偏好，不等同于模型在你的任务中一定更好。选择模型时还要考虑价格、速度、上下文、工具调用、隐私和地区可用性。
@@ -38,7 +38,7 @@
 |   22 | 19-23  | grok-4-fast-search [<sup>1</sup>](https://x.ai/news/grok-4-fast)                                                    | 1171 (±5)  |  41,794 | $0.20/$0.50    | 2M     |
 |   23 | 20-24  | grok-4.3 [<sup>1</sup>](https://docs.x.ai/developers/models/grok-4.3)                                               | 1165 (±5)  |  91,483 | $1.25/$2.50    | 1M     |
 |   24 | 23-24  | claude-sonnet-4-5-search [<sup>1</sup>](https://www.anthropic.com/news/claude-sonnet-4-5)                           | 1158 (±5)  | 127,378 | $1.50/$7.50    | 1M     |
-|   25 | 25-29  | claude-opus-4-1-search [<sup>1</sup>](https://www.anthropic.com/news/claude-opus-4-1)                               | 1148 (±5)  |  76,933 | $7.50/$37.50   | 200K   |
+|   25 | 25-29  | claude-opus-4-1-search [<sup>1</sup>](https://www.anthropic.com/news/claude-opus-4-1)                               | 1148 (±5)  |  76,933 | $15/$75        | 200K   |
 |   26 | 25-29  | o3-search [<sup>1</sup>](https://platform.openai.com/docs/guides/tools-web-search?api-mode=responses)               | 1144 (±5)  |  20,644 | $1/$4          | 200K   |
 |   27 | 25-30  | gemini-2.5-pro-grounding [<sup>1</sup>](https://ai.google.dev/gemini-api/docs/google-search)                        | 1142 (±5)  |  83,404 | $0.63/$5       | 1M     |
 |   28 | 25-31  | grok-4-search [<sup>1</sup>](https://docs.x.ai/docs/guides/live-search)                                             | 1142 (±6)  |  19,108 | $3/$15         | N/A    |
