@@ -4,7 +4,7 @@
 
 本榜单评测多模态模型在图像理解类任务上的表现。
 
-> **数据更新时间**: 2026-08-28 19:51:35 UTC / 2026-08-29 03:51:35 CST (北京时间)
+> **数据更新时间**: 2026-08-29 13:34:33 UTC / 2026-08-29 21:34:33 CST (北京时间)
 
 {% hint style="info" %}
 排行榜反映特定评测和用户投票偏好，不等同于模型在你的任务中一定更好。选择模型时还要考虑价格、速度、上下文、工具调用、隐私和地区可用性。
@@ -40,7 +40,7 @@
 |   24 | 8-32   | gemini-3.1-pro-preview [<sup>1</sup>](https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-pro/)                                 | 1278 (±6)  | 39,412 | $1/$6          | 1M    |
 |   25 | 6-33   | gpt-5.5-instant [<sup>1</sup>](https://openai.com/index/gpt-5-5-instant)                                                                                       | 1278 (±9)  |  7,225 | $5/$30         | 1.1M  |
 |   26 | 9-33   | claude-sonnet-4-6 [<sup>1</sup>](https://www.anthropic.com/news/claude-sonnet-4-6)                                                                             | 1275 (±6)  | 25,610 | $1.50/$7.50    | 1M    |
-|   27 | 6-42   | glm-5.3-flash [<sup>1</sup>](https://z.ai/blog/glm-5.3)                                                                                                        | 1273 (±17) |  1,389 | $0.07/$0.25    | 1.3M  |
+|   27 | 6-42   | glm-5.3-flash [<sup>1</sup>](https://z.ai/blog/glm-5.3)                                                                                                        | 1273 (±17) |  1,389 | $0.15/$0.50    | 1M    |
 |   28 | 11-34  | gemini-3-flash [<sup>1</sup>](https://blog.google/products/gemini/gemini-3-flash)                                                                              | 1272 (±5)  | 36,747 | $0.50/$3       | 1M    |
 |   29 | 15-39  | claude-sonnet-5-high [<sup>1</sup>](https://www.anthropic.com/news/claude-sonnet-5)                                                                            | 1267 (±8)  |  8,522 | $2/$10         | 1M    |
 |   30 | 12-42  | gemini-3.5-flash-lite [<sup>1</sup>](https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-6-flash-3-5-flash-lite-3-5-flash-cyber/) | 1266 (±11) |  3,886 | $0.15/$1.25    | 1M    |
