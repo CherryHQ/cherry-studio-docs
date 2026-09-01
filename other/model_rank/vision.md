@@ -4,7 +4,7 @@
 
 本榜单评测多模态模型在图像理解类任务上的表现。
 
-> **数据更新时间**: 2026-08-31 15:48:18 UTC / 2026-08-31 23:48:18 CST (北京时间)
+> **数据更新时间**: 2026-09-01 13:25:31 UTC / 2026-09-01 21:25:31 CST (北京时间)
 
 {% hint style="info" %}
 排行榜反映特定评测和用户投票偏好，不等同于模型在你的任务中一定更好。选择模型时还要考虑价格、速度、上下文、工具调用、隐私和地区可用性。
@@ -32,8 +32,8 @@
 |   16 | 6-31   | gemini-3.5-flash-medium [<sup>1</sup>](https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5/)                                    | 1283 (±8)  |  8,261 | $0.75 / $4.50  | 1M    |
 |   17 | 5-32   | gpt-5.6-sol-xhigh [<sup>1</sup>](https://openai.com/index/gpt-5-6/)                                                                                            | 1282 (±9)  |  5,837 | $4 / $20       | N/A   |
 |   18 | 6-32   | grok-4.5 [<sup>1</sup>](https://docs.x.ai/developers/models/grok-4.5)                                                                                          | 1282 (±9)  |  6,401 | $2 / $6        | 500K  |
-|   19 | 6-31   | gpt-5.4-high [<sup>1</sup>](https://platform.openai.com/docs/models/gpt-5.4)                                                                                   | 1281 (±7)  | 23,263 | $2.50 / $15    | 1.1M  |
-|   20 | 6-32   | gpt-5.4 [<sup>1</sup>](https://platform.openai.com/docs/models/gpt-5.4)                                                                                        | 1281 (±7)  | 21,245 | $2.50 / $15    | 1.1M  |
+|   19 | 6-31   | gpt-5.4-high [<sup>1</sup>](https://platform.openai.com/docs/models/gpt-5.4)                                                                                   | 1281 (±7)  | 23,263 | $1.25 / $7.50  | 1.1M  |
+|   20 | 6-32   | gpt-5.4 [<sup>1</sup>](https://platform.openai.com/docs/models/gpt-5.4)                                                                                        | 1281 (±7)  | 21,245 | $1.25 / $7.50  | 1.1M  |
 |   21 | 6-32   | claude-opus-4-8 [<sup>1</sup>](https://www.anthropic.com/news/claude-opus-4-8)                                                                                 | 1279 (±7)  | 13,980 | $5 / $25       | 1M    |
 |   22 | 6-32   | muse-spark-1.1 [<sup>1</sup>](https://ai.meta.com/blog/introducing-muse-spark-meta-model-api/)                                                                 | 1279 (±9)  |  6,769 | $1.25 / $4.25  | 1M    |
 |   23 | 7-32   | gpt-5.2-chat-latest-20260210 [<sup>1</sup>](https://developers.openai.com/api/docs/models/gpt-5.2-chat-latest)                                                 | 1279 (±7)  | 15,446 | $1.75 / $14    | 128K  |
