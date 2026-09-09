@@ -4,7 +4,7 @@
 
 本榜单评测文生图模型根据文本提示生成图像的能力。
 
-> **数据更新时间**: 2026-09-01 13:25:31 UTC / 2026-09-01 21:25:31 CST (北京时间)
+> **数据更新时间**: 2026-09-09 12:41:37 UTC / 2026-09-09 20:41:37 CST (北京时间)
 
 {% hint style="info" %}
 排行榜反映特定评测和用户投票偏好，不等同于模型在你的任务中一定更好。选择模型时还要考虑价格、速度、上下文、工具调用、隐私和地区可用性。
@@ -14,36 +14,36 @@
 
 |   排名 | 排名区间   | 模型                                                                                                                                                                             | 分数                     |      票数 |
 |-----:|:-------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-----------------------|--------:|
-|    1 | 1-1    | gpt-image-2 (medium) [<sup>1</sup>](https://x.com/OpenAI/status/2046665696898412887?s=20)                                                                                      | 1382 (±4)              |  75,014 |
-|    2 | 2-3    | mai-image-2.6-preview [<sup>1</sup>](https://microsoft.ai/news/mai-image-2-6-launches-at-no-2-on-arena-ahead-of-google-meta-and-xai/)                                          | 1331 (±8)              |   6,418 |
-|    3 | 2-4    | grok-imagine-image-2.0 (low) [<sup>1</sup>](https://x.ai/news/grok-imagine-image-2)                                                                                            | 1316 (±12) Preliminary |   2,675 |
-|    4 | 3-4    | reve-2.1 [<sup>1</sup>](http://reve.com/)                                                                                                                                      | 1302 (±8)              |   7,580 |
-|    5 | 5-6    | muse-image [<sup>1</sup>](https://ai.meta.com/blog/introducing-muse-image-muse-video-msl/)                                                                                     | 1281 (±6)              |  22,691 |
-|    6 | 5-7    | reve-2.0 [<sup>1</sup>](http://reve.com/)                                                                                                                                      | 1270 (±6)              |  14,631 |
-|    7 | 6-10   | gemini-3.1-flash-image (nano-banana-2) [web-search] [<sup>1</sup>](https://aistudio.google.com/prompts/new_chat?model=gemini-3.1-flash-image)                                  | 1263 (±5)              |  36,392 |
-|    8 | 7-11   | seedream-5.0-pro [<sup>1</sup>](https://seed.bytedance.com/en/seedream5_0_pro)                                                                                                 | 1258 (±5)              |  48,174 |
-|    9 | 7-12   | qwen-image-3.0-pro [<sup>1</sup>](https://www.qwencloud.com/try-ai?scene=image&models=qwen-image-3.0-pro)                                                                      | 1255 (±7)              |  10,927 |
-|   10 | 7-11   | mai-image-2.5 [<sup>1</sup>](https://microsoft.ai/news/introducing-mai-image-2-5/)                                                                                             | 1254 (±4)              |  56,737 |
-|   11 | 8-12   | gemini-3.1-flash-lite-image (nano-banana-2-lite) [<sup>1</sup>](https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-omni-flash-nano-banana-2-lite/) | 1251 (±6)              |  16,381 |
-|   12 | 10-13  | gemini-3-pro-image-2k (nano-banana-pro) [<sup>1</sup>](https://ai.studio/banana)                                                                                               | 1245 (±3)              | 146,806 |
-|   13 | 12-14  | gpt-image-1.5-high-fidelity [<sup>1</sup>](https://platform.openai.com/docs/models/gpt-image-1.5)                                                                              | 1239 (±3)              | 148,079 |
-|   14 | 13-14  | gemini-3-pro-image-preview (nano-banana-pro) [<sup>1</sup>](https://ai.studio/banana)                                                                                          | 1232 (±5)              |  82,738 |
-|   15 | 15-15  | ideogram-4.0-quality [<sup>1</sup>](https://ideogram.ai/blog/4.0/)                                                                                                             | 1204 (±5)              |  36,647 |
-|   16 | 16-19  | qwen-image-2.0-pro-2026-06-22 [<sup>1</sup>](https://bailian.console.alibabacloud.com/cn-beijing?tab=api#/api/?type=model&url=2975126)                                         | 1191 (±6)              |  12,013 |
-|   17 | 16-19  | uni-1.1-max [<sup>1</sup>](https://lumalabs.ai/api)                                                                                                                            | 1188 (±6)              |  13,468 |
-|   18 | 16-21  | uni-1.1 [<sup>1</sup>](https://lumalabs.ai/api)                                                                                                                                | 1183 (±5)              |  32,214 |
-|   19 | 16-21  | mai-image-2 [<sup>1</sup>](https://microsoft.ai/news/introducing-MAI-Image-2)                                                                                                  | 1183 (±5)              |  49,180 |
-|   20 | 18-25  | Cosmos3-Super-Text2Image (Agentic) [<sup>1</sup>](https://huggingface.co/nvidia/Cosmos3-Super-Text2Image)                                                                      | 1172 (±9)              |   4,598 |
-|   21 | 20-22  | grok-imagine-image [<sup>1</sup>](https://docs.x.ai/developers/model-capabilities/images/generation)                                                                           | 1171 (±3)              | 229,148 |
-|   22 | 18-27  | recraft-v4.1-utility-pro [<sup>1</sup>](https://www.recraft.ai/blog/recraft-v4-1-more-beautiful-by-nature)                                                                     | 1169 (±11)             |   2,519 |
-|   23 | 21-26  | flux-2-max [<sup>1</sup>](https://bfl.ai/models/flux-2)                                                                                                                        | 1162 (±4)              | 117,324 |
-|   24 | 21-28  | grok-imagine-image-pro [<sup>1</sup>](https://docs.x.ai/developers/model-capabilities/images/generation)                                                                       | 1161 (±4)              |  93,631 |
-|   25 | 22-29  | flux-2-flex [<sup>1</sup>](https://bfl.ai/models/flux-2)                                                                                                                       | 1157 (±3)              | 149,295 |
-|   26 | 21-33  | Cosmos3-Super-Text2Image [<sup>1</sup>](https://huggingface.co/nvidia/Cosmos3-Super-Text2Image)                                                                                | 1156 (±7)              |   7,625 |
-|   27 | 24-31  | flux-2-pro [<sup>1</sup>](https://bfl.ai/models/flux-2)                                                                                                                        | 1155 (±3)              | 183,024 |
-|   28 | 23-32  | reve-v1.5 [<sup>1</sup>](https://app.reve.com/)                                                                                                                                | 1154 (±4)              |  36,762 |
-|   29 | 25-33  | hunyuan-image-3.0 [<sup>1</sup>](https://hunyuan.tencent.com/image/en?tabIndex=0)                                                                                              | 1151 (±3)              | 173,101 |
-|   30 | 26-33  | gemini-2.5-flash-image-preview (nano-banana) [<sup>1</sup>](https://ai.studio/banana)                                                                                          | 1150 (±2)              | 836,062 |
+|    1 | 1-2    | gpt-image-2.5-sunburst [<sup>1</sup>](https://openai.com/index/introducing-chatgpt-images-2-5/)                                                                                | 1421 (±13) Preliminary |   3,149 |
+|    2 | 1-2    | gpt-image-2.5-flare [<sup>1</sup>](https://openai.com/index/introducing-chatgpt-images-2-5/)                                                                                   | 1399 (±13) Preliminary |   2,856 |
+|    3 | 3-3    | gpt-image-2 (medium) [<sup>1</sup>](https://x.com/OpenAI/status/2046665696898412887?s=20)                                                                                      | 1381 (±4)              |  78,731 |
+|    4 | 4-5    | mai-image-2.6 [<sup>1</sup>](https://microsoft.ai/news/mai-image-2-6-launches-at-no-2-on-arena-ahead-of-google-meta-and-xai/)                                                  | 1331 (±7)              |  11,213 |
+|    5 | 4-6    | grok-imagine-image-2.0 (low) [<sup>1</sup>](https://x.ai/news/grok-imagine-image-2)                                                                                            | 1315 (±12) Preliminary |   2,681 |
+|    6 | 5-6    | reve-2.1 [<sup>1</sup>](http://reve.com/)                                                                                                                                      | 1301 (±8)              |   7,573 |
+|    7 | 7-8    | muse-image [<sup>1</sup>](https://ai.meta.com/blog/introducing-muse-image-muse-video-msl/)                                                                                     | 1277 (±6)              |  26,045 |
+|    8 | 7-9    | reve-2.0 [<sup>1</sup>](http://reve.com/)                                                                                                                                      | 1270 (±6)              |  14,632 |
+|    9 | 8-13   | gemini-3.1-flash-image (nano-banana-2) [web-search] [<sup>1</sup>](http://aistudio.google.com/prompts/new_chat?model=gemini-3.1-flash-image)                                   | 1261 (±5)              |  41,957 |
+|   10 | 9-13   | seedream-5.0-pro [<sup>1</sup>](https://seed.bytedance.com/en/seedream5_0_pro)                                                                                                 | 1257 (±4)              |  62,443 |
+|   11 | 9-14   | qwen-image-3.0-pro [<sup>1</sup>](https://www.qwencloud.com/try-ai?scene=image&models=qwen-image-3.0-pro)                                                                      | 1254 (±7)              |  10,920 |
+|   12 | 9-13   | mai-image-2.5 [<sup>1</sup>](https://microsoft.ai/news/introducing-mai-image-2-5/)                                                                                             | 1254 (±4)              |  57,250 |
+|   13 | 9-14   | gemini-3.1-flash-lite-image (nano-banana-2-lite) [<sup>1</sup>](https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-omni-flash-nano-banana-2-lite/) | 1250 (±6)              |  16,371 |
+|   14 | 12-14  | gemini-3-pro-image-2k (nano-banana-pro) [<sup>1</sup>](https://ai.studio/banana)                                                                                               | 1246 (±3)              | 152,220 |
+|   15 | 15-16  | gpt-image-1.5-high-fidelity [<sup>1</sup>](https://platform.openai.com/docs/models/gpt-image-1.5)                                                                              | 1239 (±3)              | 151,702 |
+|   16 | 15-16  | gemini-3-pro-image-preview (nano-banana-pro) [<sup>1</sup>](https://ai.studio/banana)                                                                                          | 1232 (±5)              |  82,737 |
+|   17 | 17-17  | ideogram-4.0-quality [<sup>1</sup>](https://ideogram.ai/blog/4.0/)                                                                                                             | 1204 (±4)              |  42,169 |
+|   18 | 18-21  | qwen-image-2.0-pro-2026-06-22 [<sup>1</sup>](https://bailian.console.alibabacloud.com/cn-beijing?tab=api#/api/?type=model&url=2975126)                                         | 1191 (±6)              |  12,005 |
+|   19 | 18-21  | uni-1.1-max [<sup>1</sup>](https://lumalabs.ai/api)                                                                                                                            | 1188 (±6)              |  13,469 |
+|   20 | 18-22  | mai-image-2 [<sup>1</sup>](https://microsoft.ai/news/introducing-MAI-Image-2)                                                                                                  | 1183 (±5)              |  49,198 |
+|   21 | 18-22  | uni-1.1 [<sup>1</sup>](https://lumalabs.ai/api)                                                                                                                                | 1181 (±5)              |  33,836 |
+|   22 | 22-24  | grok-imagine-image [<sup>1</sup>](https://docs.x.ai/developers/model-capabilities/images/generation)                                                                           | 1171 (±3)              | 236,623 |
+|   23 | 20-28  | recraft-v4.1-utility-pro [<sup>1</sup>](https://www.recraft.ai/blog/recraft-v4-1-more-beautiful-by-nature)                                                                     | 1169 (±11)             |   2,516 |
+|   24 | 22-28  | Cosmos3-Super-Text2Image (Agentic) [<sup>1</sup>](https://huggingface.co/nvidia/Cosmos3-Super-Text2Image)                                                                      | 1167 (±8)              |   7,424 |
+|   25 | 23-28  | flux-2-max [<sup>1</sup>](https://bfl.ai/models/flux-2)                                                                                                                        | 1162 (±4)              | 117,339 |
+|   26 | 23-29  | grok-imagine-image-pro [<sup>1</sup>](https://docs.x.ai/developers/model-capabilities/images/generation)                                                                       | 1161 (±4)              |  93,639 |
+|   27 | 23-31  | flux-2-flex [<sup>1</sup>](https://bfl.ai/models/flux-2)                                                                                                                       | 1157 (±3)              | 149,288 |
+|   28 | 27-33  | flux-2-pro [<sup>1</sup>](https://bfl.ai/models/flux-2)                                                                                                                        | 1154 (±3)              | 188,083 |
+|   29 | 26-35  | reve-v1.5 [<sup>1</sup>](https://app.reve.com/)                                                                                                                                | 1154 (±4)              |  36,748 |
+|   30 | 23-35  | Cosmos3-Super-Text2Image [<sup>1</sup>](https://huggingface.co/nvidia/Cosmos3-Super-Text2Image)                                                                                | 1154 (±7)              |  12,499 |
 
 ## 怎么看这张表
 
