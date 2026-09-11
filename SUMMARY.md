@@ -19,6 +19,7 @@
   * [绘画](cherrystudio/preview/drawing.md)
   * [翻译](cherrystudio/preview/translation.md)
   * [小程序](cherrystudio/preview/app.md)
+    * [生成式小程序](cherrystudio/preview/generative-mini-apps.md)
   * [知识库](cherrystudio/preview/knowledge-base.md)
   * [文件](cherrystudio/preview/files.md)
   * [编码搭档](cherrystudio/preview/code-cli.md)
