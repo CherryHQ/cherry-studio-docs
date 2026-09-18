@@ -4,7 +4,7 @@
 
 本榜单评测模型在联网搜索 / 信息检索类任务上的表现。
 
-> **数据更新时间**: 2026-09-17 13:00:54 UTC / 2026-09-17 21:00:54 CST (北京时间)
+> **数据更新时间**: 2026-09-18 12:39:55 UTC / 2026-09-18 20:39:55 CST (北京时间)
 
 {% hint style="info" %}
 排行榜反映特定评测和用户投票偏好，不等同于模型在你的任务中一定更好。选择模型时还要考虑价格、速度、上下文、工具调用、隐私和地区可用性。
@@ -18,7 +18,7 @@
 |    2 | 1-2    | claude-opus-4-6-search [<sup>1</sup>](https://www.anthropic.com/news/claude-opus-4-6)                               | 1253 (±5)  | 134,699 | $5/$25         | 1M     |
 |    3 | 3-5    | gpt-5.5-search [<sup>1</sup>](https://openai.com/index/introducing-gpt-5-5/)                                        | 1242 (±5)  |  89,873 | $5/$30         | 1.1M   |
 |    4 | 3-6    | claude-opus-4-7 [<sup>1</sup>](https://www.anthropic.com/news/claude-opus-4-7)                                      | 1233 (±5)  |  91,394 | $5/$25         | 1M     |
-|    5 | 3-7    | claude-fable-5 [<sup>1</sup>](https://www.anthropic.com/news/claude-fable-5-mythos-5)                               | 1230 (±8)  |  41,795 | $10/$50        | 1M     |
+|    5 | 3-7    | claude-fable-5-high [<sup>1</sup>](https://www.anthropic.com/news/claude-fable-5-mythos-5)                          | 1230 (±8)  |  41,795 | $10/$50        | 1M     |
 |    6 | 4-8    | ernie-5.1 [<sup>1</sup>](https://ernie.baidu.com/blog/posts/ernie-5.1-0508-release/)                                | 1227 (±10) |   3,788 | $0.56/$2.54    | 119K   |
 |    7 | 5-8    | claude-sonnet-4-6-search [<sup>1</sup>](https://www.anthropic.com/news/claude-sonnet-4-6)                           | 1221 (±5)  | 134,905 | $1.50/$7.50    | 1M     |
 |    8 | 6-13   | grok-4.5 [<sup>1</sup>](https://docs.x.ai/developers/models/grok-4.5)                                               | 1213 (±7)  |  31,505 | $2/$6          | 500K   |

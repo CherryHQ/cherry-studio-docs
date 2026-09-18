@@ -4,7 +4,7 @@
 
 本榜单评测文生图模型根据文本提示生成图像的能力。
 
-> **数据更新时间**: 2026-09-17 13:00:54 UTC / 2026-09-17 21:00:54 CST (北京时间)
+> **数据更新时间**: 2026-09-18 12:39:55 UTC / 2026-09-18 20:39:55 CST (北京时间)
 
 {% hint style="info" %}
 排行榜反映特定评测和用户投票偏好，不等同于模型在你的任务中一定更好。选择模型时还要考虑价格、速度、上下文、工具调用、隐私和地区可用性。
@@ -22,7 +22,7 @@
 |    6 | 5-6    | reve-2.1 [<sup>1</sup>](http://reve.com/)                                                                                                                                      | 1301 (±8)              |   7,573 |
 |    7 | 7-8    | muse-image [<sup>1</sup>](https://ai.meta.com/blog/introducing-muse-image-muse-video-msl/)                                                                                     | 1277 (±6)              |  26,045 |
 |    8 | 7-9    | reve-2.0 [<sup>1</sup>](http://reve.com/)                                                                                                                                      | 1270 (±6)              |  14,632 |
-|    9 | 8-13   | gemini-3.1-flash-image (nano-banana-2) [web-search] [<sup>1</sup>](http://aistudio.google.com/prompts/new_chat?model=gemini-3.1-flash-image)                                   | 1261 (±5)              |  41,957 |
+|    9 | 8-13   | gemini-3.1-flash-image (nano-banana-2) [web-search] [<sup>1</sup>](https://aistudio.google.com/prompts/new_chat?model=gemini-3.1-flash-image)                                  | 1261 (±5)              |  41,957 |
 |   10 | 9-13   | seedream-5.0-pro [<sup>1</sup>](https://seed.bytedance.com/en/seedream5_0_pro)                                                                                                 | 1257 (±4)              |  62,443 |
 |   11 | 9-14   | qwen-image-3.0-pro [<sup>1</sup>](https://www.qwencloud.com/try-ai?scene=image&models=qwen-image-3.0-pro)                                                                      | 1254 (±7)              |  10,920 |
 |   12 | 9-13   | mai-image-2.5 [<sup>1</sup>](https://microsoft.ai/news/introducing-mai-image-2-5/)                                                                                             | 1254 (±4)              |  57,250 |
