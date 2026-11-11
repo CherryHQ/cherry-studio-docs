@@ -150,6 +150,7 @@
   * [多语言资料整理](advanced-basic/cases/multilingual-materials.md)
   * [频道与定时日报](advanced-basic/cases/automated-daily-report.md)
   * [多窗口研究工作台](advanced-basic/cases/multi-window-research.md)
+  * [跨模型交叉复核重要产出](advanced-basic/cases/multi-model-cross-review.md)
 
 ## 项目贡献 <a href="#contribution" id="contribution"></a>
 
