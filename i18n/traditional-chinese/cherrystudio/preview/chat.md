@@ -1,7 +1,7 @@
 ---
 icon: message
 ---
-# 對話介面
+# 对话界面
 
 
 {% hint style="warning" %}
@@ -29,37 +29,37 @@ icon: message
 
 ## 對話框內按鈕
 
-<figure><img src="../../.gitbook/assets/對話介面/對話框.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/对话界面/对话框.png" alt=""><figcaption></figcaption></figure>
 
-![](../../.gitbook/assets/對話介面/新話題.png) `新話題` 在當前助手下建立一個新話題。
+![](../../.gitbook/assets/对话界面/新话题.png) `新話題` 在當前助手下建立一個新話題。
 
-![](../../.gitbook/assets/對話介面/上傳圖片或文檔.png) `上傳圖片或文檔` 上傳圖片需要模型支援，上傳文檔會自動解析為文字作為上下文提供給模型。
+![](../../.gitbook/assets/对话界面/上传图片或文档.png) `上傳圖片或文檔` 上傳圖片需要模型支援，上傳文檔會自動解析為文字作為上下文提供給模型。
 
-![](../../.gitbook/assets/對話介面/網路搜尋.png) `網路搜尋` 須在設置中配置網路搜尋相關資訊，搜尋結果作為上下文返回給大模型，詳見 [聯網模式](../../websearch/)。
+![](../../.gitbook/assets/对话界面/网络搜索.png) `網路搜尋` 須在設置中配置網路搜尋相關資訊，搜尋結果作為上下文返回給大模型，詳見 [聯網模式](../../websearch/)。
 
-![](../../.gitbook/assets/對話介面/知識庫.png) `知識庫` 開啟知識庫，詳見 [知識庫教程](../../knowledge-base/knowledge-base.md)。
+![](../../.gitbook/assets/对话界面/知识库.png) `知識庫` 開啟知識庫，詳見 [知識庫教程](../../knowledge-base/knowledge-base.md)。
 
-![](<../../.gitbook/assets/對話介面/MCP 伺服器.png>) `MCP 伺服器` 開啟 MCP 伺服器功能，詳見 [MCP 使用教程](../../advanced-basic/mcp/)。
+![](<../../.gitbook/assets/对话界面/MCP 服务器.png>) `MCP 伺服器` 開啟 MCP 伺服器功能，詳見 [MCP 使用教程](../../advanced-basic/mcp/)。
 
-![](../../.gitbook/assets/對話介面/生成圖片.png) `生成圖片` 只有選擇的 **對話模型** 支援生圖時才會顯示。（非對話生圖模型請前往 [繪圖](./drawing.md)）
+![](../../.gitbook/assets/对话界面/生成图片.png) `生成圖片` 只有選擇的 **對話模型** 支援生圖時才會顯示。（非對話生圖模型請前往 [繪圖](./drawing.md)）
 
-![](../../.gitbook/assets/對話介面/選擇模型.png) `選擇模型` 對於接下來的對話，切換成指定的模型，保留上下文。
+![](../../.gitbook/assets/对话界面/选择模型.png) `選擇模型` 對於接下來的對話，切換成指定的模型，保留上下文。
 
-![](../../.gitbook/assets/對話介面/快捷短語.png) `快捷短語` 需要先在設置中預設常用短語，在此處調用，直接輸入，支援變量。
+![](../../.gitbook/assets/对话界面/快捷短语.png) `快捷短語` 需要先在設置中預設常用短語，在此處調用，直接輸入，支援變量。
 
-![](../../.gitbook/assets/對話介面/清空消息.png) `清空消息` 刪除該話題下所有內容。
+![](../../.gitbook/assets/对话界面/清空消息.png) `清空消息` 刪除該話題下所有內容。
 
-![](../../.gitbook/assets/對話介面/展開.png) `展開` 讓對話框變得更大，以便輸入長文。
+![](../../.gitbook/assets/对话界面/展开.png) `展開` 讓對話框變得更大，以便輸入長文。
 
-![](../../.gitbook/assets/對話介面/清除上下文.png) `清除上下文` 在不刪除內容的情況下，截斷模型能獲得的上下文，也就是說模型將「忘記」之前的對話內容。
+![](../../.gitbook/assets/对话界面/清除上下文.png) `清除上下文` 在不刪除內容的情況下，截斷模型能獲得的上下文，也就是說模型將「忘記」之前的對話內容。
 
-![](<../../.gitbook/assets/對話介面/預估 Token 數.png>) `預估 Token 數` 顯示預估 Token 數，四個數據分別為 `當前上下文數` 、 `最大上下文數` （ ∞ 表示無限上下文）、 `當前輸入框內消息字數` 、 `預估 Token 數` 。
+![](<../../.gitbook/assets/对话界面/预估 Token 数.png>) `預估 Token 數` 顯示預估 Token 數，四個數據分別為 `當前上下文數` 、 `最大上下文數` （ ∞ 表示無限上下文）、 `當前輸入框內消息字數` 、 `預估 Token 數` 。
 
 {% hint style="info" %}
 此功能僅用於預估 Token 數，實際 Token 數每個模型都是不一樣的，請以模型提供商的數據為準。
 {% endhint %}
 
-![](../../.gitbook/assets/對話介面/翻譯.png) `翻譯` 將當前輸入框內內容翻譯成英文。
+![](../../.gitbook/assets/对话界面/翻译.png) `翻譯` 將當前輸入框內內容翻譯成英文。
 
 ## 對話設置
 
@@ -121,7 +121,7 @@ icon: message
 
 #### <mark style="color:blue;">**`消息樣式`**</mark>：
 
-可切對話介面換為氣泡樣式或列表樣式。
+可切对话界面換為氣泡樣式或列表樣式。
 
 #### <mark style="color:blue;">**`代碼風格`**</mark>：
 
@@ -134,7 +134,7 @@ icon: message
 
 #### <mark style="color:blue;">**`消息字體大小`**</mark>：
 
-調整對話介面字體的大小。
+調整对话界面字體的大小。
 
 ### 輸入設置
 
@@ -162,7 +162,7 @@ icon: message
 
 #### <mark style="color:blue;">**`快速敲擊3次空白翻譯`**</mark>：
 
-在對話介面輸入框輸入消息後，連敲三次空白可翻譯輸入的內容為英文。
+在对话界面輸入框輸入消息後，連敲三次空白可翻譯輸入的內容為英文。
 
 {% hint style="warning" %}
 注意：該操作會覆蓋原文。

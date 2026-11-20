@@ -35,7 +35,7 @@
   * [Google Gemini](pre-basic/providers/google-gemini.md)
   * [Vertex AI](pre-basic/providers/vertex-ai.md)
   * [OpenAI](pre-basic/providers/openai.md)
-  * [OneAPI](pre-basic/providers/oneapi.md)
+  * [OneAPI](pre-basic/providers/oneapi/oneapi.md)
   * [NewAPI](pre-basic/providers/newapi.md)
   * [ModelScope (Мода)](pre-basic/providers/modelscope.md)
   * [Ollama](pre-basic/providers/ollama.md)
