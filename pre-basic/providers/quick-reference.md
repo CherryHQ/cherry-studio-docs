@@ -79,6 +79,7 @@ Cherry Studio 内置 **60+ 家 Provider**，本页提供总览表，找到目标
 | **ocoolAI** | 国内聚合 | [ocoolai.com](https://one.ocoolai.com/) | — |
 | **Poe** | Quora 旗下 AI 集市 | [poe.com](https://poe.com/) | — |
 | **Vercel AI Gateway** | Vercel 旗下网关 | [vercel.com/ai](https://vercel.com/ai) | — |
+| **Wallaby** | 海外开发者向 Kimi K3.1 Pro 推理云，OpenAI 兼容、预充值按量计费 | [wallabytoken.com](https://wallabytoken.com/) | — |
 
 ## 超低延迟 / 高吞吐推理服务
 
