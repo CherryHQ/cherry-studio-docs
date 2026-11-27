@@ -103,7 +103,13 @@ Cherry Studio 是一款集多模型对话、智能体 Agent、知识库管理、
 
 ### Star History
 
-![Star History](https://urlscan.io/liveshot/?width=1300\&height=620\&url=https://cherrystarhistory.ocool.online/)
+<a href="https://star-history.dera.page/#CherryHQ/cherry-studio&Date">
+ <picture>
+   <source media="(prefers-color-scheme: dark)" srcset="https://star-history.dera.page/svg?repos=CherryHQ/cherry-studio&type=Date&theme=dark" />
+   <source media="(prefers-color-scheme: light)" srcset="https://star-history.dera.page/svg?repos=CherryHQ/cherry-studio&type=Date" />
+   <img alt="Star History Chart" src="https://star-history.dera.page/svg?repos=CherryHQ/cherry-studio&type=Date" />
+ </picture>
+</a>
 
 ## 关注我们的社交账号
 
